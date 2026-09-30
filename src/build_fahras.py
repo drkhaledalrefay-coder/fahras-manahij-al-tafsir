@@ -453,7 +453,7 @@ def check_html(html: str) -> None:
             raise SystemExit(f"forbidden markup: {token}")
     urls = re.findall(r"(?:href|src)\s*=\s*[\"'](https?://[^\"']+)", html, flags=re.I)
     urls += re.findall(r"url\(\s*[\"']?(https?://[^)\"']+)", html, flags=re.I)
-    allowed = ("fonts.googleapis.com", "tafsir.net", "dorar.net")
+    allowed = ("fonts.googleapis.com", "tafsir.net", "dorar.net", "quran.com")
     bad = [url for url in urls if not any(a in url for a in allowed)]
     if bad:
         raise SystemExit("unexpected external URL: " + ", ".join(bad))

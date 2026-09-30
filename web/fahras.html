@@ -2022,11 +2022,11 @@ select optgroup {
         </div>
         <p class="verse-text" id="verse-text" lang="ar"></p>
       </div>
-      <p class="verse-dorar"><a href="https://dorar.net/tafseer" target="_blank" rel="noopener">لشرح الآية: الموسوعة التفسيرية — الدرر السنية</a></p>
+      <p class="verse-dorar"><a id="dorar-link" href="https://dorar.net/tafseer/2" target="_blank" rel="noopener">موسوعة التفسير — الدرر السنية (صفحة السورة)</a></p>
       <div id="empty-banner" class="banner" hidden>لم يُصنَّف بعد</div>
       <p id="filter-empty" class="filter-empty" hidden>لا توجد مواضع لهذا المنهج في هذه الآية لدى هذا المفسِّر</p>
       <div id="match-banner" class="match-banner" hidden></div>
-      <a class="tafsir-link" id="tafsir-net-link" href="https://tafsir.net" target="_blank" rel="noopener" title="يفتح الآية في موقع مركز تفسير (خارج الصفحة)">افتح الآية في موقع مركز تفسير</a>
+      <a class="tafsir-link" id="tafsir-net-link" href="https://quran.com" target="_blank" rel="noopener" title="اقرأ هذه الآية في منصة القرآن الكريم (quran.com)">اقرأ هذه الآية في تفسير الطبري — منصة القرآن الكريم (quran.com)</a>
       <details class="disclose" id="results-disclose">
         <summary id="results-summary">ملخص النتائج</summary>
         <div class="disclose-body">
@@ -2600,6 +2600,7 @@ select optgroup {
     if (el.verseText) {
       el.verseText.textContent = verse || label;
     }
+    updateExternalLinks();
   }
 
   function activeTafsir() {
@@ -2945,14 +2946,55 @@ select optgroup {
   }
 
   function windowAyahParts(w) {
-    var surah = w.surah;
-    var ayah = w.ayah_number;
+    var surah = w && w.surah;
+    var ayah = w && w.ayah_number;
     if (surah == null || ayah == null) {
-      var parts = String(w.ayah || "").split(":");
+      var parts = String((w && w.ayah) || "").split(":");
       surah = parseInt(parts[0], 10);
       ayah = parseInt(parts[1], 10);
     }
+    if (surah == null || isNaN(surah) || ayah == null || isNaN(ayah)) {
+      var fromKey = parseWindowKey((w && (w.id || w.window_id)) || state.windowId);
+      if (fromKey) return fromKey;
+    }
     return { surah: surah, ayah: ayah };
+  }
+
+  /** Parse surah/ayah from keys like 2_255, 2_255_tafsir, 8_1 (strip non-numeric suffix). */
+  function parseWindowKey(wid) {
+    var m = String(wid || "").match(/^(\d+)_(\d+)/);
+    if (!m) return null;
+    return { surah: parseInt(m[1], 10), ayah: parseInt(m[2], 10) };
+  }
+
+  var QURAN_TAFSIR_SLUGS = {
+    al_tabari: "ar-tafsir-al-tabari",
+    ibn_kathir: "ar-tafsir-ibn-kathir",
+    al_baghawi: "ar-tafsir-al-baghawi",
+    al_saadi: "ar-tafseer-al-saddi"
+  };
+
+  function updateExternalLinks() {
+    var w = currentWindow() || {};
+    var parts = windowAyahParts(w);
+    if (parts.surah == null || isNaN(parts.surah) || parts.ayah == null || isNaN(parts.ayah)) {
+      parts = parseWindowKey(state.windowId) || parts;
+    }
+    var dorar = document.getElementById("dorar-link") || document.querySelector(".verse-dorar a");
+    if (dorar && parts.surah != null && !isNaN(parts.surah)) {
+      dorar.href = "https://dorar.net/tafseer/" + parts.surah;
+      dorar.textContent = "موسوعة التفسير — الدرر السنية (صفحة السورة)";
+    }
+    var link = document.getElementById("tafsir-net-link");
+    if (link && parts.surah != null && !isNaN(parts.surah) && parts.ayah != null && !isNaN(parts.ayah)) {
+      var tid = state.tafsirId || (tafsirMeta().id);
+      var slug = QURAN_TAFSIR_SLUGS[tid] || ("ar-tafsir-" + String(tid).replace(/_/g, "-"));
+      var tName = (activeTafsir() && activeTafsir().name) || tafsirMeta().name || "التفسير";
+      var label = "اقرأ هذه الآية في " + tName + " — منصة القرآن الكريم (quran.com)";
+      link.href = "https://quran.com/ar/" + parts.surah + ":" + parts.ayah + "/tafsirs/" + slug;
+      link.textContent = label;
+      link.title = label;
+    }
   }
 
   function sourceIdFor(w) {
@@ -4457,6 +4499,7 @@ select optgroup {
     }
     saveChoice();
     loadWindow(state.windowId);
+    updateExternalLinks();
   }
 
   function switchAnnotator(ann) {
