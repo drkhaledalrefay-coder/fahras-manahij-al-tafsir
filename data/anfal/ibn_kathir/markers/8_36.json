@@ -1,0 +1,236 @@
+{
+  "window_id": "8_36",
+  "ayah": "8:36",
+  "span_count": 14,
+  "family_counts": {
+    "QURAN": 5,
+    "SIRA": 1,
+    "SAHABA": 1,
+    "TABIIN": 2,
+    "NUZUL": 3,
+    "HADITH": 1,
+    "EDITOR": 5
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 210,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 356,
+          "end": 363,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 779,
+          "end": 787,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 810,
+          "end": 895,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 906,
+          "end": 956,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 1091,
+          "end": 1096,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 1158,
+          "end": 1165,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1216,
+          "end": 1234,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "name": "الضحاك",
+          "role": "SPEAKER",
+          "start": 1297,
+          "end": 1303,
+          "span_id": "s012"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 1305,
+          "end": 1312,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "سبب نزول",
+          "start": 1428,
+          "end": 1436,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1541,
+          "end": 1576,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1902,
+          "end": 2023,
+          "span_id": "s014"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 376,
+      "end": 391,
+      "text": "¬أي المنهزمون.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 637,
+      "end": 667,
+      "text": "¬أي أدرك فيكم مكروهًا بالقتل.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 957,
+      "end": 1077,
+      "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق ابن إسحاق به، ولكنه مرسل وهذه المراسيل وما يتلوها من مراسيل أخرى يقوي بعضها بعضًا.¥",
+      "attached_span_id": "s009",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1237,
+      "end": 1289,
+      "text": "¬أخرجه الطبري عن مجاهد وقتادة والسدي بأسانيد ثابتة.¥",
+      "attached_span_id": "s011",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1321,
+      "end": 1394,
+      "text": "¬أخرجه الطبري بسند ضعيف فيه إبهام شيخ الطبري، ويشهد له ما سبق من الآثار.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

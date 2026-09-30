@@ -1,0 +1,29 @@
+TASK (Cline): Write the public JSON Schema and its documentation for approved tafsir annotations. Work in the repo folder tafsir-integrity. Create ONLY these new files: schema/annotation.schema.json, schema/example_approved.json, docs/DATA_FORMAT.md. Do NOT edit any other file (another agent is editing src/methods_template.html right now). Do NOT commit.
+
+GOAL: A tafsir-independent, UI-independent format that any Quran app, database, REST API, research dataset or MCP server can consume WITHOUT AI. Ibn Kathir is only the first tafsir; nothing may be hard-coded to it.
+
+RECORD SHAPE (JSON Schema draft 2020-12; all fields below required unless marked optional):
+{
+ "annotation_id": string, e.g. "ibn_kathir-2_255_tafsir-m13",
+ "quran": {"surah": int 1..114, "ayah": int >=1, "ayah_end": optional int},
+ "tafsir": {"id": string slug, "name": string},
+ "source": {"source_id": string, "sha256": string|null (sha256 of the pinned source file), "start_char": int >=0, "end_char": int > start_char},
+ "labels": {"source_method": array of enum M_QURAN M_SUNNAH M_SAHABA M_TABIIN M_LUGHA M_QIRAAT M_NUZUL M_SIRA M_ISRAILIYYAT M_RAY (minItems 0 — a pure takhrij/content passage may have no method; but source_method and content_type together must not both be empty: express with anyOf minItems 1),"content_type": array of enum C_FIQH C_BALAGHA C_SHIR C_FADAIL C_TAKHRIJ C_NUZUL C_ISRAILIYYAT C_TAFSIR},
+ "text": string — MUST equal source[start_char:end_char] exactly (Python slicing, Unicode code points),
+ "verification": {"text_fidelity": enum exact|partial|modified|not_found, "strict_match": bool, "normalized_match": bool},
+ "ai_proposal": {"start_char": int, "end_char": int, "labels": same shape as labels, "certainty": enum explicit|strong|weak|insufficient, "score": int 0..100, "route": enum auto_candidate|specialist},
+ "review": {"status": enum ai_proposed|under_review|approved|rejected, "reviewer_role": string, "reviewed_at": date-time, "changes": array of {"at": date-time, "action": string, "from": any, "to": any}}
+}
+additionalProperties: false at every object level.
+
+docs/DATA_FORMAT.md (Arabic first, short English section after), explain simply:
+1. The three layers never mixed: source text (pinned, sha256) / AI proposal / human-approved annotation.
+2. Offsets are the truth; "text" is a convenience copy that consumers can re-verify with one line of code (give Python and JavaScript one-liners).
+3. Only status "approved" is publishable; ai_proposed is never content.
+4. How to add another tafsir (al-Tabari, al-Baghawi, Ibn Ashur): new tafsir.id + source_id + sha256, same schema.
+5. Method and content labels table (code → Arabic name): M_QURAN قرآن بالقرآن، M_SUNNAH سنة، M_SAHABA صحابة، M_TABIIN تابعون، M_LUGHA لغة وغريب، M_QIRAAT قراءات، M_NUZUL أسباب نزول، M_SIRA مغازي وسير، M_ISRAILIYYAT إسرائيليات، M_RAY رأي واجتهاد؛ C_FIQH فقه وأحكام، C_BALAGHA بلاغة، C_SHIR شعر، C_FADAIL فضائل، C_TAKHRIJ تخريج وحكم حديثي، C_NUZUL أسباب نزول، C_ISRAILIYYAT إسرائيليات، C_TAFSIR بيان معنى.
+6. License note: Ibn Kathir text from Tafsir Center open data, CC BY 4.0 (attribution required).
+
+schema/example_approved.json: ONE example record. Build it from real data: open data/v2/verified/codex/2_255_tafsir.json, take move m20 (start, end, primary/secondary, content_tags, certainty, score, route), and take "text" by slicing the source the offsets refer to (find which file in data/ the offsets index into — check src/build_methods.py — and verify the slice equals the move's "text" field). Set review.status "approved", reviewer_role "tafsir_specialist", reviewed_at "2026-09-28T12:00:00Z", changes [].
+
+GATES: validate the example against the schema (python: pip jsonschema if missing, or write a tiny check); confirm example text == source slice. Report both results and the file list. Do not commit.

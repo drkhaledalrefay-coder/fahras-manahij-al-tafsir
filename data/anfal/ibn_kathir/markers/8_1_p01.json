@@ -1,0 +1,301 @@
+{
+  "window_id": "8_1_p01",
+  "ayah": "8:1",
+  "span_count": 15,
+  "family_counts": {
+    "QURAN": 1,
+    "RAY": 2,
+    "SAHABA": 4,
+    "HADITH": 6,
+    "ISNAD": 2,
+    "TABIIN": 2,
+    "NUZUL": 1,
+    "EDITOR": 5
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 183,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 316,
+          "end": 326,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 351,
+          "end": 359,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 378,
+          "end": 383,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 404,
+          "end": 409,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 404,
+          "end": 449,
+          "stripped": "حدثنا سعيد بن سليمان، أخبرنا هشيم، أخبرنا أبو",
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 426,
+          "end": 432,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 439,
+          "end": 445,
+          "span_id": "s006"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "name": "سعيد بن جبير",
+          "role": "SPEAKER",
+          "start": 458,
+          "end": 470,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 476,
+          "end": 479,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 529,
+          "end": 536,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 688,
+          "end": 696,
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 703,
+          "end": 707,
+          "span_id": "s009"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 728,
+          "end": 736,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 781,
+          "end": 799,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 883,
+          "end": 888,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1193,
+          "end": 1226,
+          "stripped": "عن أبي صالح، عن ابن عباس أنه قال:",
+          "span_id": "s012"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1209,
+          "end": 1217,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 541,
+      "end": 668,
+      "text": "¬أخرج البخاري المعلق والموصول بسنده ومتنه (الصحيح، التفسير باب قوله: {يَسْأَلُونَكَ عَنِ الْأَنْفَالِ. . .} [الأنفال] ح 4645).¥",
+      "attached_span_id": "s008",
+      "grading": [
+        "صحيح",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 826,
+      "end": 872,
+      "text": "¬أخرجه ابن أبي حاتم بسند ثابت من طريق علي به.¥",
+      "attached_span_id": "s010",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 999,
+      "end": 1177,
+      "text": "¬ذكرهم كلهم ابن أبي حاتم بحذف السند، وقول مجاهد وعطاء، وهو ابن أبي رباح، وقتادة وعبد الرحمن بن زيد أخرجه الطبري بأسانيد صحيحة إليهم، وقول عطاء الخراساني أخرجه في تفسيره بتحقيقي.¥",
+      "attached_span_id": "s011",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1243,
+      "end": 1292,
+      "text": "¬سنده ضعيف لضعف الكلبي وأبي صالح ويتقوى بما سبق.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1309,
+      "end": 1430,
+      "text": "¬وهو الصحابي الجليل الشاعر لبيد بن ربيعة - رضي الله عنه -، والبيت ورد في ديوانه 2/ 11 ومجاز القرآن 1/ 240 وتفسير الطبري.¥",
+      "attached_span_id": "s013",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 404,
+      "end": 449,
+      "span_id": "s006",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 1193,
+      "end": 1226,
+      "span_id": "s012",
+      "marker": "عن…عن"
+    }
+  ]
+}

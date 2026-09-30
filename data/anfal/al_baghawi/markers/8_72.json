@@ -1,0 +1,212 @@
+{
+  "window_id": "8_72",
+  "ayah": "8:72",
+  "span_count": 12,
+  "family_counts": {
+    "QURAN": 11,
+    "LUGHA": 4,
+    "HADITH": 1,
+    "SAHABA": 1,
+    "QIRAAT": 1,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 718,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 719,
+          "end": 736,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 738,
+          "end": 775,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 776,
+          "end": 781,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 842,
+          "end": 925,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 942,
+          "end": 974,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1002,
+          "end": 1007,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1037,
+          "end": 1049,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1050,
+          "end": 1055,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1135,
+          "end": 1176,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1261,
+          "end": 1274,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1777,
+          "end": 1859,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1881,
+          "end": 1901,
+          "span_id": "s009"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 1902,
+          "end": 1905,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2016,
+          "end": 2054,
+          "span_id": "s011"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2055,
+          "end": 2060,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2120,
+          "end": 2197,
+          "span_id": "s012"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2237,
+          "end": 2274,
+          "span_id": "s012"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1644,
+      "end": 1685,
+      "text": "¬انظر: الطبري: 14/ 68 بتحقيق محمود شاكر.¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

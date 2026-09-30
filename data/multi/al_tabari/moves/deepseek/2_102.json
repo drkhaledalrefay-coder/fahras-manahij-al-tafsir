@@ -1,0 +1,83 @@
+{
+  "window": "2_102",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s288", "s289", "s290", "s291", "s292", "s293", "s294"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s291", "s293", "s294"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_RAY"],
+      "rationale_ar": "تقدير المؤلف محذوفًا في الجملة، وبيان أن المراد اتباع السحر المنسوب إلى سليمان مع تبرئته، وأن الشياطين علَّموه الناس."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": ["s295", "s296", "s297", "s298", "s299", "s300", "s301", "s302", "s303"],
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s295", "s301", "s302"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": ["قتادة"]},
+      "alternatives": ["M_SAHABA"],
+      "rationale_ar": "نقل الطبري تأويل قتادة للآية بإسناده إليه، وحاشية المحقق تعزوه إلى تفسير ابن أبي حاتم."
+    },
+    {
+      "move_id": "m03",
+      "span_ids": ["s304", "s305", "s306", "s307", "s308"],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s304", "s307", "s308"],
+      "author_verdict_span_ids": ["s307"],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_LUGHA"],
+      "rationale_ar": "إحالة المؤلف إلى نقاش سابق في معنى اللفظ وتوجيهه، وإقراره بأنه بيّن الصواب فيه، فالتفصيل خارج النافذة."
+    },
+    {
+      "move_id": "m04",
+      "span_ids": ["s309", "s310"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s309", "s310"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_RAY"],
+      "rationale_ar": "تفسير لغوي مباشر للفظ في الآية: بيان معنى الموصول، وتحديد المراد به وهو السحر."
+    },
+    {
+      "move_id": "m05",
+      "span_ids": ["s311", "s312", "s313"],
+      "primary": "M_TABIIN",
+      "secondary": ["M_LUGHA"],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s311", "s312", "s313"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": ["ابن إسحاق"]},
+      "alternatives": ["M_LUGHA"],
+      "rationale_ar": "خبر بإسناد عن ابن إسحاق يشرح اللفظ بالمعنى نفسه، فنُقل عن تابعي مع تفسير لفظي."
+    },
+    {
+      "move_id": "m06",
+      "span_ids": ["s314", "s315", "s316", "s317", "s318", "s319", "s320", "s321", "s322", "s323", "s324", "s325", "s326", "s327"],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s315", "s317", "s322", "s327"],
+      "author_verdict_span_ids": ["s322", "s327"],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_QURAN", "M_ISRAILIYYAT"],
+      "rationale_ar": "جواب المؤلف عن اعتراضين: وجود السحر قبل سليمان، وسبب تخصيص اليهود بعهده، مع إحالة إلى آثار سابقة غير معزوّة لأهل الكتاب."
+    }
+  ]
+}

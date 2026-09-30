@@ -1,0 +1,189 @@
+{
+  "window_id": "8_28",
+  "ayah": "8:28",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 2,
+    "HADITH": 9,
+    "ISNAD": 2,
+    "SAHABA": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 61,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 250,
+          "end": 261,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 319,
+          "end": 330,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 404,
+          "end": 414,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 550,
+          "end": 560,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 598,
+          "end": 608,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 598,
+          "end": 660,
+          "stripped": "حدثنا يحيى بن يحيى، حدثنا عبد الله بن",
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 631,
+          "end": 641,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 672,
+          "end": 746,
+          "stripped": "عن أبي الأسود عن عروة عن عائشة أن النبي صلى",
+          "span_id": "s006"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "عائشة",
+          "name": "عائشة",
+          "role": "NARRATOR",
+          "start": 713,
+          "end": 721,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن النبي",
+          "start": 723,
+          "end": 737,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "النبي",
+          "role": "SPEAKER",
+          "start": 729,
+          "end": 737,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 740,
+          "end": 772,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1040,
+          "end": 1081,
+          "span_id": "s008"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 531,
+      "end": 549,
+      "text": "¬في \"ب\" (ذرقويه).¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 903,
+      "end": 1038,
+      "text": "¬أخرجه المصنف في شرح السنة: 13/ 35، وفيه ابن لهيعة، وهو سيئ الحفظ، وللحديث شواهد يتقوى بها، عند أحمد: 6/ 409، والترمذي في البر والصلة.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 598,
+      "end": 660,
+      "span_id": "s006",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 672,
+      "end": 746,
+      "span_id": "s006",
+      "marker": "عن…عن"
+    }
+  ]
+}

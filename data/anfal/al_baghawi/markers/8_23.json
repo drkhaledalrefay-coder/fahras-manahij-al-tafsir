@@ -1,0 +1,72 @@
+{
+  "window_id": "8_23",
+  "ayah": "8:23",
+  "span_count": 5,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 1,
+    "HADITH": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 54,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 55,
+          "end": 60,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 111,
+          "end": 132,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 202,
+          "end": 235,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 331,
+          "end": 363,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

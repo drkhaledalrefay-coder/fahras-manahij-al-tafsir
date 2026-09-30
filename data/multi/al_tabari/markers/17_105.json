@@ -1,0 +1,108 @@
+{
+  "window_id": "17_105",
+  "ayah": "17:105",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 4,
+    "QIRAAT": 2,
+    "HADITH": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 21,
+          "end": 32,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 34,
+          "end": 233,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 164,
+          "end": 169,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأه",
+          "start": 164,
+          "end": 171,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 475,
+          "end": 503,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 556,
+          "end": 574,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 588,
+          "end": 638,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 674,
+          "end": 692,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

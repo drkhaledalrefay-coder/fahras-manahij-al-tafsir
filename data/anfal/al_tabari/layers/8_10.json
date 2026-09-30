@@ -1,0 +1,140 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_10.txt",
+  "ayah": "8:10",
+  "surah": 8,
+  "ayah_number": 10,
+  "source_char_length": 1619,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 176,
+      "kind": "author"
+    },
+    {
+      "start": 176,
+      "end": 180,
+      "kind": "layout"
+    },
+    {
+      "start": 180,
+      "end": 435,
+      "kind": "author"
+    },
+    {
+      "start": 435,
+      "end": 464,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 464,
+      "end": 487,
+      "kind": "author"
+    },
+    {
+      "start": 487,
+      "end": 503,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 503,
+      "end": 865,
+      "kind": "author"
+    },
+    {
+      "start": 865,
+      "end": 888,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 888,
+      "end": 1040,
+      "kind": "author"
+    },
+    {
+      "start": 1040,
+      "end": 1044,
+      "kind": "layout"
+    },
+    {
+      "start": 1044,
+      "end": 1460,
+      "kind": "author"
+    },
+    {
+      "start": 1460,
+      "end": 1518,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1518,
+      "end": 1519,
+      "kind": "author"
+    },
+    {
+      "start": 1519,
+      "end": 1523,
+      "kind": "layout"
+    },
+    {
+      "start": 1523,
+      "end": 1579,
+      "kind": "author"
+    },
+    {
+      "start": 1579,
+      "end": 1614,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1614,
+      "end": 1615,
+      "kind": "author"
+    },
+    {
+      "start": 1615,
+      "end": 1619,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 9,
+    "layout": 5,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 1438,
+    "layout": 20,
+    "apparatus": 161
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 5
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 161
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 5
+    },
+    "footnote_open": 5,
+    "footnote_close": 5,
+    "footnotes_closed": 5,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

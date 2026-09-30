@@ -1,0 +1,54 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_47.txt",
+  "ayah": "8:47",
+  "surah": 8,
+  "ayah_number": 47,
+  "source_char_length": 2013,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 1932,
+      "kind": "author"
+    },
+    {
+      "start": 1932,
+      "end": 2012,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2012,
+      "end": 2013,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "layout": 0,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 1933,
+    "layout": 0,
+    "apparatus": 80
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 80
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "window_id": "8_52",
+  "ayah": "8:52",
+  "span_count": 4,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 2,
+    "SAHABA": 1,
+    "HADITH": 1,
+    "NUZUL": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 25,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 79,
+          "end": 87,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 161,
+          "end": 174,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 301,
+          "end": 333,
+          "span_id": "s003"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 361,
+          "end": 370,
+          "span_id": "s003"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 361,
+          "end": 378,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 423,
+          "end": 452,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 453,
+          "end": 458,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 459,
+          "end": 562,
+          "span_id": "s004"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

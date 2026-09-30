@@ -1,0 +1,254 @@
+{
+  "window_id": "8_46",
+  "ayah": "8:46",
+  "span_count": 17,
+  "family_counts": {
+    "QURAN": 5,
+    "LUGHA": 1,
+    "TABIIN": 3,
+    "HADITH": 5,
+    "ISNAD": 1,
+    "QIRAAT": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 0,
+          "end": 17,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 19,
+          "end": 70,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 89,
+          "end": 103,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 104,
+          "end": 109,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 135,
+          "end": 157,
+          "span_id": "s002"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 164,
+          "end": 172,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 197,
+          "end": 206,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "name": "قتادة",
+          "role": "SPEAKER",
+          "start": 540,
+          "end": 548,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 717,
+          "end": 749,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1104,
+          "end": 1136,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1572,
+          "end": 1618,
+          "span_id": "s013"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1619,
+          "end": 1630,
+          "span_id": "s013"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1884,
+          "end": 1947,
+          "stripped": "عن موسى بن عقبة، عن سالم أبي النضر مولى",
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 2058,
+          "end": 2063,
+          "span_id": "s014"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن رسول الله",
+          "start": 2069,
+          "end": 2083,
+          "span_id": "s014"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2085,
+          "end": 2117,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 807,
+      "end": 1030,
+      "text": "¬أخرجه البخاري في الاستسقاء، باب قول النبي صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: نصرت بالصبا: 2/ 520، وفي بدء الخلق، والأنبياء، ومسلم في الاستسقاء، باب في ريح الصبا والدَّبُور برقم (900): 2/ 617، والمصنف في شرح السنة: 4/ 387.¥",
+      "attached_span_id": "s010",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1263,
+      "end": 1546,
+      "text": "¬أخرجه أبو داود في الجهاد، باب في أي وقت يستحب اللقاء؟: 4/ 7، والترمذي في السير، باب ما جاء في الساعة التي يستحب فيها القتال: 5/ 238، وقال: حديث حسن صحيح، والحاكم: 2/ 116، وصححه على شرط مسلم، ووافقه الذهبي، والإمام أحمد في المسند: 5/ 444 - 445، وعزاه المنذري في مختصر السنن للنسائي.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "صحيح",
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2554,
+      "end": 2767,
+      "text": "¬أخرجه البخاري في الجهاد، باب كان النبي صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إذا لم يقاتل أول النهار. . . 6/ 130، ومسلم في الجهاد والسير، باب كراهية تمني لقاء العدو (1742) 3/ 1362، والمصنف في شرح السنة: 11/ 38 - 39.¥",
+      "attached_span_id": "s016",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1884,
+      "end": 1947,
+      "span_id": "s013",
+      "marker": "عن…عن"
+    }
+  ]
+}

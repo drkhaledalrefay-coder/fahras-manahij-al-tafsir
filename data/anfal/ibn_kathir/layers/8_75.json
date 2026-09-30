@@ -1,0 +1,177 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_75.txt",
+  "ayah": "8:75",
+  "surah": 8,
+  "ayah_number": 75,
+  "source_char_length": 3323,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 795,
+      "kind": "author"
+    },
+    {
+      "start": 795,
+      "end": 808,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 808,
+      "end": 1033,
+      "kind": "author"
+    },
+    {
+      "start": 1033,
+      "end": 1040,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1040,
+      "end": 1154,
+      "kind": "author"
+    },
+    {
+      "start": 1154,
+      "end": 1204,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1204,
+      "end": 1248,
+      "kind": "author"
+    },
+    {
+      "start": 1248,
+      "end": 1489,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1489,
+      "end": 1823,
+      "kind": "author"
+    },
+    {
+      "start": 1823,
+      "end": 1876,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1876,
+      "end": 2316,
+      "kind": "author"
+    },
+    {
+      "start": 2316,
+      "end": 2322,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2322,
+      "end": 2323,
+      "kind": "author"
+    },
+    {
+      "start": 2323,
+      "end": 2341,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2341,
+      "end": 2456,
+      "kind": "author"
+    },
+    {
+      "start": 2456,
+      "end": 2740,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2740,
+      "end": 2757,
+      "kind": "author"
+    },
+    {
+      "start": 2757,
+      "end": 2762,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2762,
+      "end": 2763,
+      "kind": "author"
+    },
+    {
+      "start": 2763,
+      "end": 2808,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2808,
+      "end": 2918,
+      "kind": "author"
+    },
+    {
+      "start": 2918,
+      "end": 3149,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3149,
+      "end": 3323,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 12,
+    "layout": 0,
+    "apparatus": 11
+  },
+  "char_totals": {
+    "author": 2370,
+    "layout": 0,
+    "apparatus": 953
+  },
+  "apparatus_subtype_counts": {
+    "verse_ref": 1,
+    "editor_bracket": 3,
+    "footnote": 7
+  },
+  "apparatus_subtype_chars": {
+    "verse_ref": 13,
+    "editor_bracket": 18,
+    "footnote": 922
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 7,
+    "footnote_close": 7,
+    "footnotes_closed": 7,
+    "bracket_total": 4,
+    "bracket_pattern_classes": {
+      "verse_ref": 1,
+      "other_bracket": 3
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[التوبة: 100]": 1
+    },
+    "other_brackets": {
+      "[الحشر]": 1,
+      "[عليه]": 1,
+      "[ذوي]": 1
+    }
+  }
+}

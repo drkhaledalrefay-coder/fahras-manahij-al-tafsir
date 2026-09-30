@@ -1,0 +1,34 @@
+# 234 MB source DB — re-downloadable; sha256 pinned in data/raw/manifest.json
+data/raw/tafsircenter/quran.db
+quran.db
+.env
+.env.*
+*.key
+__pycache__/
+*.pyc
+.uv-cache/
+# headless Chrome profiles created by deck/build_deck.mjs
+deck/.chrome-*/
+deck/official/
+deck/registration/
+
+# never track browser profiles or decks built on the official branded template
+**/.chrome-*/
+deck/pitch/*.pptx
+deck/pitch/*.pdf
+deck/pitch/idea_khaled*
+
+# local capture / scratch (not submission assets)
+deck/shots/
+deck/video/opening/full/concat.txt
+deck/video/opening/full/qa_list.txt
+
+# local editor config, scratch scripts, and personal notes
+.claude/
+_*.py
+_*/
+*khaled*
+REVIEW_khaled.md
+deck/video/VIDEO-BRIEF.md
+deck/pitch/_pdf_preview/
+deck/pitch/_check_*/

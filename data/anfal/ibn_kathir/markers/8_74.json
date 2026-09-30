@@ -1,0 +1,338 @@
+{
+  "window_id": "8_74",
+  "ayah": "8:74",
+  "span_count": 22,
+  "family_counts": {
+    "QURAN": 7,
+    "HADITH": 7,
+    "ISNAD": 2,
+    "LUGHA": 1,
+    "RAY": 1,
+    "EDITOR": 7
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 172,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 559,
+          "end": 761,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 768,
+          "end": 781,
+          "text": "[التوبة: 100]",
+          "via": "apparatus",
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 788,
+          "end": 1005,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1079,
+          "end": 1097,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1483,
+          "end": 1488,
+          "span_id": "s008"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1495,
+          "end": 1533,
+          "stripped": "عن شريك، عن عاصم، عن أبي وائل، عن جرير",
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1539,
+          "end": 1552,
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1555,
+          "end": 1573,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1696,
+          "end": 1701,
+          "span_id": "s011"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1710,
+          "end": 1769,
+          "stripped": "عن تميم بن سلمة، عن عبد الرحمن بن هلال، عن جرير، عن النبي -",
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "النبي",
+          "role": "SPEAKER",
+          "start": 1762,
+          "end": 1767,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1770,
+          "end": 1788,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1888,
+          "end": 1898,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1900,
+          "end": 1971,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1972,
+          "end": 1975,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2007,
+          "end": 2030,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 3208,
+          "end": 3218,
+          "span_id": "s022"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1127,
+      "end": 1177,
+      "text": "¬تقدم تخريجه وصحته في تفسير سورة الأعراف آية 187.¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1221,
+      "end": 1462,
+      "text": "¬أخرجه الطبراني من حديث علي - رضي الله عنه - (ح 874) قال الهيثمي: ورجاله رجال الصحيح غير محمد بن ميمون الخياط وقد وثق (مجمع الزوائد 10/ 279)، وأخرجه الطبراني في (المعجم الكبير 3/ 19 ح 2519)، من حديث أبي قرصافه وجابر، ويشهد له الحديث السابق.¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1796,
+      "end": 1849,
+      "text": "¬تقدم تخريجه وثبوته في تفسير الآية 72 من هذه السورة.¥",
+      "attached_span_id": "s011",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2296,
+      "end": 2314,
+      "text": "¬الزيادة من \"مح\".¥",
+      "attached_span_id": "s016",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2429,
+      "end": 2713,
+      "text": "¬قول ابن عباس أخرجه ابن أبي حاتم وابن الجوزي من طريقين يقوي أحدهما الآخر (نواسخ القرآن ص 353)، وقول قتادة أخرجه الطبري والنحاس بسند صحيح من طريق معمر وسعيد بن أبي عروبة عنه (الناسخ والمنسوخ 2/ 394) وقول عكرمة أخرجه ابن الجوزي بسند حسن من طريق حبيب بن الزبير عنه (نواسخ القرآن ص 355).¥",
+      "attached_span_id": "s017",
+      "grading": [
+        "صحيح",
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2736,
+      "end": 2781,
+      "text": "¬كذا في (عم) و (حم) و (مح) وفي الأصل: \"ذكر\".¥",
+      "attached_span_id": "s019",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2891,
+      "end": 3122,
+      "text": "¬أخرجه أبو داود من حديث أبي أمامة - رضي الله عنه - (السنن، الوصايا، باب في الوصية للوارث ح 2870)، وقال الألباني: حسن صحيح (صحيح سنن أبي داود ح 2494). وأخرجه الترمذي وقال: حسن صحيح (السنن، الوصايا، باب ما جاء لا وصية لوارث ح 2120).¥",
+      "attached_span_id": "s021",
+      "grading": [
+        "صحيح",
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1495,
+      "end": 1533,
+      "span_id": "s008",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 1710,
+      "end": 1769,
+      "span_id": "s011",
+      "marker": "عن…عن"
+    }
+  ]
+}

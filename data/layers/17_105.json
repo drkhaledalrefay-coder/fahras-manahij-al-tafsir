@@ -1,0 +1,37 @@
+{
+  "source": "tafsircenter",
+  "source_file": "data/raw/tafsircenter/17_105.txt",
+  "ayah": "17:105",
+  "surah": 17,
+  "ayah_number": 105,
+  "source_char_length": 570,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 172,
+      "layer": "author"
+    },
+    {
+      "start": 172,
+      "end": 185,
+      "layer": "verse_ref"
+    },
+    {
+      "start": 185,
+      "end": 570,
+      "layer": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "footnote": 0,
+    "verse_ref": 1,
+    "editor_bracket": 0
+  },
+  "char_totals": {
+    "author": 557,
+    "footnote": 0,
+    "verse_ref": 13,
+    "editor_bracket": 0
+  }
+}

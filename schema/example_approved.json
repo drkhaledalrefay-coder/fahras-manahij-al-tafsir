@@ -1,0 +1,48 @@
+{
+  "annotation_id": "ibn_kathir-2_255_tafsir-m20",
+  "quran": {
+    "surah": 2,
+    "ayah": 255
+  },
+  "tafsir": {
+    "id": "ibn_kathir",
+    "name": "تفسير ابن كثير"
+  },
+  "source": {
+    "source_id": "ibn_kathir_2_255",
+    "sha256": "7dfc6ccbd2f8548234621a6a62337d5d27d992a5f33f89b78750a2963196b986",
+    "start_char": 23720,
+    "end_char": 23786
+  },
+  "labels": {
+    "source_method": [
+      "M_TABIIN"
+    ],
+    "content_type": []
+  },
+  "text": "، وقال السدي: السموات والأرض في جوف الكرسي، والكرسي بين يدي العرش ",
+  "verification": {
+    "text_fidelity": "exact",
+    "strict_match": true,
+    "normalized_match": true
+  },
+  "ai_proposal": {
+    "start_char": 23720,
+    "end_char": 23786,
+    "labels": {
+      "source_method": [
+        "M_TABIIN"
+      ],
+      "content_type": []
+    },
+    "certainty": "explicit",
+    "score": 100,
+    "route": "auto_candidate"
+  },
+  "review": {
+    "status": "approved",
+    "reviewer_role": "tafsir_specialist",
+    "reviewed_at": "2026-09-28T12:00:00Z",
+    "changes": []
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "window_id": "8_31",
+  "ayah": "8:31",
+  "span_count": 6,
+  "family_counts": {
+    "QURAN": 4,
+    "HADITH": 2,
+    "QIRAAT": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7,
+          "end": 152,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 154,
+          "end": 158,
+          "span_id": "s002"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 203,
+          "end": 221,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 225,
+          "end": 252,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 289,
+          "end": 362,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 577,
+          "end": 595,
+          "span_id": "s006"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 609,
+          "end": 612,
+          "span_id": "s006"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

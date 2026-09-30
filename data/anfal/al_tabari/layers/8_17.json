@@ -1,0 +1,625 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_17.txt",
+  "ayah": "8:17",
+  "surah": 8,
+  "ayah_number": 17,
+  "source_char_length": 9245,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 219,
+      "kind": "author"
+    },
+    {
+      "start": 219,
+      "end": 223,
+      "kind": "layout"
+    },
+    {
+      "start": 223,
+      "end": 671,
+      "kind": "author"
+    },
+    {
+      "start": 671,
+      "end": 686,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 686,
+      "end": 937,
+      "kind": "author"
+    },
+    {
+      "start": 937,
+      "end": 944,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 944,
+      "end": 945,
+      "kind": "author"
+    },
+    {
+      "start": 945,
+      "end": 961,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 961,
+      "end": 1016,
+      "kind": "author"
+    },
+    {
+      "start": 1016,
+      "end": 1041,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1041,
+      "end": 1247,
+      "kind": "author"
+    },
+    {
+      "start": 1247,
+      "end": 1251,
+      "kind": "layout"
+    },
+    {
+      "start": 1251,
+      "end": 1485,
+      "kind": "author"
+    },
+    {
+      "start": 1485,
+      "end": 1489,
+      "kind": "layout"
+    },
+    {
+      "start": 1489,
+      "end": 1529,
+      "kind": "author"
+    },
+    {
+      "start": 1529,
+      "end": 1533,
+      "kind": "layout"
+    },
+    {
+      "start": 1533,
+      "end": 1548,
+      "kind": "author"
+    },
+    {
+      "start": 1548,
+      "end": 1552,
+      "kind": "layout"
+    },
+    {
+      "start": 1552,
+      "end": 1836,
+      "kind": "author"
+    },
+    {
+      "start": 1836,
+      "end": 1988,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1988,
+      "end": 1989,
+      "kind": "author"
+    },
+    {
+      "start": 1989,
+      "end": 1993,
+      "kind": "layout"
+    },
+    {
+      "start": 1993,
+      "end": 2082,
+      "kind": "author"
+    },
+    {
+      "start": 2082,
+      "end": 2086,
+      "kind": "layout"
+    },
+    {
+      "start": 2086,
+      "end": 2298,
+      "kind": "author"
+    },
+    {
+      "start": 2298,
+      "end": 2395,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2395,
+      "end": 2396,
+      "kind": "author"
+    },
+    {
+      "start": 2396,
+      "end": 2400,
+      "kind": "layout"
+    },
+    {
+      "start": 2400,
+      "end": 2527,
+      "kind": "author"
+    },
+    {
+      "start": 2527,
+      "end": 2714,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2714,
+      "end": 2715,
+      "kind": "author"
+    },
+    {
+      "start": 2715,
+      "end": 2719,
+      "kind": "layout"
+    },
+    {
+      "start": 2719,
+      "end": 3118,
+      "kind": "author"
+    },
+    {
+      "start": 3118,
+      "end": 3137,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3137,
+      "end": 3274,
+      "kind": "author"
+    },
+    {
+      "start": 3274,
+      "end": 3399,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3399,
+      "end": 3400,
+      "kind": "author"
+    },
+    {
+      "start": 3400,
+      "end": 3404,
+      "kind": "layout"
+    },
+    {
+      "start": 3404,
+      "end": 3412,
+      "kind": "author"
+    },
+    {
+      "start": 3412,
+      "end": 3448,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3448,
+      "end": 3649,
+      "kind": "author"
+    },
+    {
+      "start": 3649,
+      "end": 3665,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3665,
+      "end": 3852,
+      "kind": "author"
+    },
+    {
+      "start": 3852,
+      "end": 4021,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4021,
+      "end": 4022,
+      "kind": "author"
+    },
+    {
+      "start": 4022,
+      "end": 4026,
+      "kind": "layout"
+    },
+    {
+      "start": 4026,
+      "end": 4278,
+      "kind": "author"
+    },
+    {
+      "start": 4278,
+      "end": 4291,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4291,
+      "end": 4388,
+      "kind": "author"
+    },
+    {
+      "start": 4388,
+      "end": 4409,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 4409,
+      "end": 4410,
+      "kind": "author"
+    },
+    {
+      "start": 4410,
+      "end": 4440,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4440,
+      "end": 4602,
+      "kind": "author"
+    },
+    {
+      "start": 4602,
+      "end": 4719,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4719,
+      "end": 4720,
+      "kind": "author"
+    },
+    {
+      "start": 4720,
+      "end": 4724,
+      "kind": "layout"
+    },
+    {
+      "start": 4724,
+      "end": 4934,
+      "kind": "author"
+    },
+    {
+      "start": 4934,
+      "end": 4952,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4952,
+      "end": 4997,
+      "kind": "author"
+    },
+    {
+      "start": 4997,
+      "end": 5028,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5028,
+      "end": 5029,
+      "kind": "author"
+    },
+    {
+      "start": 5029,
+      "end": 5033,
+      "kind": "layout"
+    },
+    {
+      "start": 5033,
+      "end": 5229,
+      "kind": "author"
+    },
+    {
+      "start": 5229,
+      "end": 5257,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5257,
+      "end": 5283,
+      "kind": "author"
+    },
+    {
+      "start": 5283,
+      "end": 5316,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5316,
+      "end": 5386,
+      "kind": "author"
+    },
+    {
+      "start": 5386,
+      "end": 5415,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5415,
+      "end": 5447,
+      "kind": "author"
+    },
+    {
+      "start": 5447,
+      "end": 5494,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5494,
+      "end": 5692,
+      "kind": "author"
+    },
+    {
+      "start": 5692,
+      "end": 5755,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5755,
+      "end": 5756,
+      "kind": "author"
+    },
+    {
+      "start": 5756,
+      "end": 5760,
+      "kind": "layout"
+    },
+    {
+      "start": 5760,
+      "end": 6166,
+      "kind": "author"
+    },
+    {
+      "start": 6166,
+      "end": 6276,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6276,
+      "end": 6277,
+      "kind": "author"
+    },
+    {
+      "start": 6277,
+      "end": 6281,
+      "kind": "layout"
+    },
+    {
+      "start": 6281,
+      "end": 6671,
+      "kind": "author"
+    },
+    {
+      "start": 6671,
+      "end": 6673,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6673,
+      "end": 6674,
+      "kind": "author"
+    },
+    {
+      "start": 6674,
+      "end": 6678,
+      "kind": "layout"
+    },
+    {
+      "start": 6678,
+      "end": 6831,
+      "kind": "author"
+    },
+    {
+      "start": 6831,
+      "end": 6899,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6899,
+      "end": 6950,
+      "kind": "author"
+    },
+    {
+      "start": 6950,
+      "end": 6979,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6979,
+      "end": 7082,
+      "kind": "author"
+    },
+    {
+      "start": 7082,
+      "end": 7218,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 7218,
+      "end": 7219,
+      "kind": "author"
+    },
+    {
+      "start": 7219,
+      "end": 7223,
+      "kind": "layout"
+    },
+    {
+      "start": 7223,
+      "end": 7810,
+      "kind": "author"
+    },
+    {
+      "start": 7810,
+      "end": 8110,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8110,
+      "end": 8111,
+      "kind": "author"
+    },
+    {
+      "start": 8111,
+      "end": 8115,
+      "kind": "layout"
+    },
+    {
+      "start": 8115,
+      "end": 8265,
+      "kind": "author"
+    },
+    {
+      "start": 8265,
+      "end": 8282,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8282,
+      "end": 8302,
+      "kind": "author"
+    },
+    {
+      "start": 8302,
+      "end": 8317,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8317,
+      "end": 8403,
+      "kind": "author"
+    },
+    {
+      "start": 8403,
+      "end": 8415,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8415,
+      "end": 8534,
+      "kind": "author"
+    },
+    {
+      "start": 8534,
+      "end": 8538,
+      "kind": "layout"
+    },
+    {
+      "start": 8538,
+      "end": 8794,
+      "kind": "author"
+    },
+    {
+      "start": 8794,
+      "end": 8904,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8904,
+      "end": 8905,
+      "kind": "author"
+    },
+    {
+      "start": 8905,
+      "end": 8909,
+      "kind": "layout"
+    },
+    {
+      "start": 8909,
+      "end": 9241,
+      "kind": "author"
+    },
+    {
+      "start": 9241,
+      "end": 9245,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 54,
+    "layout": 22,
+    "apparatus": 33
+  },
+  "char_totals": {
+    "author": 7064,
+    "layout": 88,
+    "apparatus": 2093
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 31,
+    "editor_bracket": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 2065,
+    "editor_bracket": 28
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 22
+    },
+    "footnote_open": 31,
+    "footnote_close": 31,
+    "footnotes_closed": 31,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[به من]": 1,
+      "[يقتلونهم ويأسِرونهم]": 1
+    }
+  }
+}

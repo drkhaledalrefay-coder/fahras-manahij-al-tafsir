@@ -1,0 +1,289 @@
+{
+  "window_id": "8_43",
+  "ayah": "8:43",
+  "span_count": 15,
+  "family_counts": {
+    "QURAN": 6,
+    "TABIIN": 2,
+    "HADITH": 4,
+    "ISNAD": 2,
+    "RAY": 1,
+    "LUGHA": 3,
+    "EDITOR": 5
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 188,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 195,
+          "end": 200,
+          "span_id": "s002"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 249,
+          "end": 267,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 547,
+          "end": 552,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 547,
+          "end": 576,
+          "stripped": "حدثنا أبي، حدثنا يوسف بن موسى",
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 558,
+          "end": 563,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 643,
+          "end": 648,
+          "span_id": "s008"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 660,
+          "end": 692,
+          "stripped": "عن سهل السراج، عن الحسن في قوله:",
+          "span_id": "s008"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "SPEAKER",
+          "start": 678,
+          "end": 683,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 693,
+          "end": 742,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 865,
+          "end": 869,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 940,
+          "end": 982,
+          "span_id": "s011"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 983,
+          "end": 986,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1021,
+          "end": 1048,
+          "span_id": "s012"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1049,
+          "end": 1052,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1079,
+          "end": 1115,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1116,
+          "end": 1119,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1160,
+          "end": 1222,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 300,
+      "end": 355,
+      "text": "¬أخرجه الطبري بسند صحيح من طريق ابن أبي نجيح عن مجاهد.¥",
+      "attached_span_id": "s002",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 386,
+      "end": 436,
+      "text": "¬أخرجه الطبري من طريق سلمة بن الفضل عن ابن إسحاق.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 491,
+      "end": 522,
+      "text": "¬ذكره الطبري بصيغه: زعم بعضهم.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 587,
+      "end": 642,
+      "text": "¬كذا في تفسير ابن أبي حاتم، وفي (مح): السدي وهو تصحيف.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 753,
+      "end": 852,
+      "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه، وسنده حسن، وقد استغربه الحافظ ابن كثير لأنه خالف التصريح بالمنام.¥",
+      "attached_span_id": "s009",
+      "grading": [
+        "حسن",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 547,
+      "end": 576,
+      "span_id": "s006",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 660,
+      "end": 692,
+      "span_id": "s008",
+      "marker": "عن…عن"
+    }
+  ]
+}

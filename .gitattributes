@@ -1,0 +1,3 @@
+# Byte-exact storage: offsets and sha256 pins depend on untouched line endings.
+data/** -text
+reports/** -text

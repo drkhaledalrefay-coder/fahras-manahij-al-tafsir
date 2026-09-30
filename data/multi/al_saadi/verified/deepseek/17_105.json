@@ -1,0 +1,204 @@
+{
+  "window_id": "17_105",
+  "ayah": "17:105",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/al_saadi/17_105.txt",
+  "source_sha256": "598d65f463e979e21f137f416c620202513844b27af43f95752821806f9dac24",
+  "window_start": 0,
+  "window_end": 402,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s001",
+        "s002",
+        "s003"
+      ],
+      "start": 0,
+      "end": 246,
+      "text": "{وَبِالْحَقِّ أَنْزَلْنَاهُ وَبِالْحَقِّ نَزَلَ وَمَا أَرْسَلْنَاكَ إِلَّا مُبَشِّرًا وَنَذِيرًا (105)}.\n{105} أي: وبالحقِّ أنزلنا هذا القرآن الكريم لأمر العبادِ ونهيهم وثوابهم وعقابهم، {وبالحقِّ نزل}؛ أي: بالصدق والعدل والحفظ من كلِّ شيطان رجيم.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s002",
+        "s003"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح المؤلف بالحق في الإنزال والنزول: الصدق والعدل والحفظ من الشيطان.",
+      "marker_hits": [
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 105,
+          "end": 110
+        },
+        {
+          "span_id": "s002",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 111,
+          "end": 114
+        },
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 186,
+          "end": 200
+        },
+        {
+          "span_id": "s003",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 202,
+          "end": 205
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s004"
+      ],
+      "start": 246,
+      "end": 327,
+      "text": " {وما أرْسَلْناك إلاَّ مبشِّراً}: من أطاع الله بالثواب العاجل والآجل، {ونَذيراً}:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s004"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "بيّن مصرف البشارة والنذارة: ثواب الطائعين وعقاب العاصين.",
+      "marker_hits": [
+        {
+          "span_id": "s004",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 247,
+          "end": 278
+        },
+        {
+          "span_id": "s004",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 316,
+          "end": 326
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s005"
+      ],
+      "start": 327,
+      "end": 402,
+      "text": " لمن عصى الله بالعقاب العاجل والآجل، ويلزم من ذلك بيانُ ما يبشِّر به وينذر.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s005"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استنتاج المؤلف لزوم تفصيل متعلَّق البشارة والإنذار.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [],
+      "flags": [
+        "rule_ray_unmeasured"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 0,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "17_105",
+    "annotator": "deepseek",
+    "move_count": 3,
+    "auto_candidate": 2,
+    "specialist": 1,
+    "by_primary": {
+      "M_LUGHA": 2,
+      "M_RAY": 1
+    },
+    "by_certainty": {
+      "explicit": 1,
+      "strong": 2
+    },
+    "flag_count": 1
+  }
+}

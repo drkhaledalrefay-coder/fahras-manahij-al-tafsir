@@ -1,0 +1,272 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_70.txt",
+  "ayah": "8:70",
+  "surah": 8,
+  "ayah_number": 70,
+  "source_char_length": 5078,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 96,
+      "kind": "author"
+    },
+    {
+      "start": 96,
+      "end": 280,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 280,
+      "end": 419,
+      "kind": "author"
+    },
+    {
+      "start": 419,
+      "end": 423,
+      "kind": "layout"
+    },
+    {
+      "start": 423,
+      "end": 960,
+      "kind": "author"
+    },
+    {
+      "start": 960,
+      "end": 964,
+      "kind": "layout"
+    },
+    {
+      "start": 964,
+      "end": 1034,
+      "kind": "author"
+    },
+    {
+      "start": 1034,
+      "end": 1038,
+      "kind": "layout"
+    },
+    {
+      "start": 1038,
+      "end": 1055,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1055,
+      "end": 1056,
+      "kind": "author"
+    },
+    {
+      "start": 1056,
+      "end": 1083,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1083,
+      "end": 1087,
+      "kind": "layout"
+    },
+    {
+      "start": 1087,
+      "end": 1134,
+      "kind": "author"
+    },
+    {
+      "start": 1134,
+      "end": 1176,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1176,
+      "end": 1508,
+      "kind": "author"
+    },
+    {
+      "start": 1508,
+      "end": 1832,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1832,
+      "end": 1833,
+      "kind": "author"
+    },
+    {
+      "start": 1833,
+      "end": 1837,
+      "kind": "layout"
+    },
+    {
+      "start": 1837,
+      "end": 2134,
+      "kind": "author"
+    },
+    {
+      "start": 2134,
+      "end": 2138,
+      "kind": "layout"
+    },
+    {
+      "start": 2138,
+      "end": 2406,
+      "kind": "author"
+    },
+    {
+      "start": 2406,
+      "end": 2448,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2448,
+      "end": 2617,
+      "kind": "author"
+    },
+    {
+      "start": 2617,
+      "end": 2724,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2724,
+      "end": 2725,
+      "kind": "author"
+    },
+    {
+      "start": 2725,
+      "end": 2729,
+      "kind": "layout"
+    },
+    {
+      "start": 2729,
+      "end": 3020,
+      "kind": "author"
+    },
+    {
+      "start": 3020,
+      "end": 3058,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3058,
+      "end": 3218,
+      "kind": "author"
+    },
+    {
+      "start": 3218,
+      "end": 3351,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3351,
+      "end": 3352,
+      "kind": "author"
+    },
+    {
+      "start": 3352,
+      "end": 3356,
+      "kind": "layout"
+    },
+    {
+      "start": 3356,
+      "end": 3682,
+      "kind": "author"
+    },
+    {
+      "start": 3682,
+      "end": 3747,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3747,
+      "end": 3748,
+      "kind": "author"
+    },
+    {
+      "start": 3748,
+      "end": 3752,
+      "kind": "layout"
+    },
+    {
+      "start": 3752,
+      "end": 4489,
+      "kind": "author"
+    },
+    {
+      "start": 4489,
+      "end": 4493,
+      "kind": "layout"
+    },
+    {
+      "start": 4493,
+      "end": 5014,
+      "kind": "author"
+    },
+    {
+      "start": 5014,
+      "end": 5073,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5073,
+      "end": 5074,
+      "kind": "author"
+    },
+    {
+      "start": 5074,
+      "end": 5078,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 20,
+    "layout": 12,
+    "apparatus": 11
+  },
+  "char_totals": {
+    "author": 3992,
+    "layout": 48,
+    "apparatus": 1038
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 10,
+    "editor_bracket": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 1021,
+    "editor_bracket": 17
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 13
+    },
+    "footnote_open": 10,
+    "footnote_close": 10,
+    "footnotes_closed": 10,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[ذكرُ من قال ذلك]": 1
+    }
+  }
+}

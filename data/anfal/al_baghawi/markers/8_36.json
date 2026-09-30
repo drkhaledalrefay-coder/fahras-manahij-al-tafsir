@@ -1,0 +1,163 @@
+{
+  "window_id": "8_36",
+  "ayah": "8:36",
+  "span_count": 9,
+  "family_counts": {
+    "QURAN": 7,
+    "LUGHA": 1,
+    "NUZUL": 2,
+    "SIRA": 2,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 210,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 211,
+          "end": 228,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 230,
+          "end": 315,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 316,
+          "end": 321,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 387,
+          "end": 399,
+          "span_id": "s004"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 415,
+          "end": 427,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 991,
+          "end": 1003,
+          "span_id": "s007"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم أحد",
+          "start": 1050,
+          "end": 1062,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1180,
+          "end": 1234,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1318,
+          "end": 1337,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1357,
+          "end": 1379,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1390,
+          "end": 1419,
+          "span_id": "s009"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 893,
+      "end": 954,
+      "text": "¬انظر: سيرة ابن هشام: 1/ 671، أسباب النزول للواحدي، ص (271).¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1087,
+      "end": 1154,
+      "text": "¬انظر: الطبري: 13/ 531، أسباب النزول ص (272)، الدر المنثور: 4/ 63.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

@@ -1,0 +1,6 @@
+DELTA (same scope/rules as brief_fahras_redesign.txt; edit only src/fahras_template.html; rebuild; keep all gates). Reviewer saw the light screenshot: highlights are visually NOISY — every line has a heavy dashed box plus a wavy/patterned underline (because every passage is «مقترح آلي»). Make the reading calm:
+1. Default highlight = soft tinted background only + ONE thin (1.5px) underline in the method's pattern (solid/dashed/dotted/double). No box/border around highlights by default. No wavy underlines (replace wavy with a different simple pattern).
+2. «مقترح آلي» state = the default look above (it is the normal state). «معتمد» = add a small ✓ badge at the highlight start (non-source, data-nonsource) and a thin solid outline only on hover/selection. «قيد المراجعة» = thin dotted outline. Selected highlight = 2px outline in violet (#6150EA) on light, turquoise on dark.
+3. Line-height of the tafsir text must not be pushed apart by highlight padding: highlights use box-decoration-break: clone, padding ≤ 2px vertical.
+4. Show in the legend how each state looks.
+Re-run all gates (build, node --check, fidelity 12/12 in DOM) and re-take the same 6 screenshots into deck/pitch/shots_v2/ (overwrite). Do not commit.

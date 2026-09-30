@@ -1,0 +1,19 @@
+TASK (Cline): Build a one-command export tool that turns what the specialist approved in the review UI into a clean, verified approved.json for Quran apps. Work in this repo (tafsir-integrity). Create ONLY: src/export_approved.py, tests/test_export_approved.py, tests/fixtures/ui_export_sample.json. You may add a short section at the END of docs/DATA_FORMAT.md titled «أداة التصدير» (usage, Arabic, 10 lines max). Do NOT edit anything else. Do NOT commit.
+
+INPUT: a JSON file the specialist copies from the review UI button «تصدير المعتمد» — either a JSON array of records or an object with an "annotations" array. Each record follows schema/annotation.schema.json (read it and schema/example_approved.json first).
+
+USAGE:
+  python src/export_approved.py INPUT.json --out approved.json [--include-rejected]
+
+WHAT IT DOES (deterministic, no AI, no network, stdlib + jsonschema only):
+1. Load records; keep only review.status == "approved" (unless --include-rejected, which still never includes ai_proposed/under_review).
+2. Validate each record against schema/annotation.schema.json (Draft 2020-12).
+3. Re-verify fidelity from the pinned source, independent of the UI: map source.source_id "<tafsir_id>_<surah>_<ayah>" to data/raw/tafsircenter/<surah>_<ayah>.txt (keep this mapping in ONE small function so other tafsirs can be added later); read with open(path, encoding="utf-8", newline=""); check sha256 of the file bytes == source.sha256 (when not null); check text == src[start_char:end_char]; check end_char > start_char.
+4. Any record failing 2 or 3 is NOT written; it is listed in the report with the reason.
+5. Write --out as a JSON array (UTF-8, ensure_ascii=False, indent 2), sorted by quran.surah, quran.ayah, source.start_char. Duplicate annotation_id: keep the one with the latest review.reviewed_at, report the duplicate.
+6. Print an Arabic summary: عدد المدخل، المعتمد المكتوب، المرفوض بسبب المخطط، المرفوض بسبب عدم المطابقة، المكرر. Exit code 0 if all approved records passed, 1 if any were dropped.
+
+FIXTURE tests/fixtures/ui_export_sample.json: 4 records built from schema/example_approved.json: (a) the valid approved example; (b) same but status ai_proposed (must be skipped); (c) same but text with one letter changed (must be dropped: fidelity); (d) same but an extra unknown field (must be dropped: schema).
+TESTS (pytest or unittest): run the tool on the fixture → exactly 1 written, correct counts, exit code 1.
+
+GATES: python -m pytest tests/test_export_approved.py -q (or python -m unittest); then python src/export_approved.py tests/fixtures/ui_export_sample.json --out C:/tmp/approved_test.json and paste the printed summary. Do not commit.

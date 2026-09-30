@@ -1,0 +1,173 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_28.txt",
+  "ayah": "8:28",
+  "surah": 8,
+  "ayah_number": 28,
+  "source_char_length": 1427,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 135,
+      "kind": "author"
+    },
+    {
+      "start": 135,
+      "end": 139,
+      "kind": "layout"
+    },
+    {
+      "start": 139,
+      "end": 207,
+      "kind": "author"
+    },
+    {
+      "start": 207,
+      "end": 235,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 235,
+      "end": 689,
+      "kind": "author"
+    },
+    {
+      "start": 689,
+      "end": 693,
+      "kind": "layout"
+    },
+    {
+      "start": 693,
+      "end": 874,
+      "kind": "author"
+    },
+    {
+      "start": 874,
+      "end": 901,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 901,
+      "end": 913,
+      "kind": "author"
+    },
+    {
+      "start": 913,
+      "end": 926,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 926,
+      "end": 927,
+      "kind": "author"
+    },
+    {
+      "start": 927,
+      "end": 961,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 961,
+      "end": 1027,
+      "kind": "author"
+    },
+    {
+      "start": 1027,
+      "end": 1050,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1050,
+      "end": 1051,
+      "kind": "author"
+    },
+    {
+      "start": 1051,
+      "end": 1055,
+      "kind": "layout"
+    },
+    {
+      "start": 1055,
+      "end": 1291,
+      "kind": "author"
+    },
+    {
+      "start": 1291,
+      "end": 1407,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1407,
+      "end": 1408,
+      "kind": "author"
+    },
+    {
+      "start": 1408,
+      "end": 1422,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1422,
+      "end": 1423,
+      "kind": "author"
+    },
+    {
+      "start": 1423,
+      "end": 1427,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 11,
+    "layout": 5,
+    "apparatus": 7
+  },
+  "char_totals": {
+    "author": 1152,
+    "layout": 20,
+    "apparatus": 255
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 5,
+    "editor_bracket": 1,
+    "verse_ref": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 228,
+    "editor_bracket": 13,
+    "verse_ref": 14
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 5
+    },
+    "footnote_open": 5,
+    "footnote_close": 5,
+    "footnotes_closed": 5,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 1,
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[الأنبياء: 35]": 1
+    },
+    "other_brackets": {
+      "[وهو مشتمِلٌ]": 1
+    }
+  }
+}

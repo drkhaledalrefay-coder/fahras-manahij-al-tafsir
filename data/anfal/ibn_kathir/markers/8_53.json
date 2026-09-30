@@ -1,0 +1,76 @@
+{
+  "window_id": "8_53",
+  "ayah": "8:53",
+  "span_count": 4,
+  "family_counts": {
+    "QURAN": 4,
+    "LUGHA": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 154,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 257,
+          "end": 261,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 257,
+          "end": 262,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 258,
+          "end": 268,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 270,
+          "end": 446,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 447,
+          "end": 458,
+          "text": "[الرعد: 11]",
+          "via": "apparatus",
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

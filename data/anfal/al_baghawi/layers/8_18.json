@@ -1,0 +1,71 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_18.txt",
+  "ayah": "8:18",
+  "surah": 8,
+  "ayah_number": 18,
+  "source_char_length": 736,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 399,
+      "kind": "author"
+    },
+    {
+      "start": 399,
+      "end": 412,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 412,
+      "end": 413,
+      "kind": "author"
+    },
+    {
+      "start": 413,
+      "end": 432,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 432,
+      "end": 736,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 3,
+    "layout": 0,
+    "apparatus": 2
+  },
+  "char_totals": {
+    "author": 704,
+    "layout": 0,
+    "apparatus": 32
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 13,
+    "footnote": 19
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[وَاعْلَمُوا]": 1
+    }
+  }
+}

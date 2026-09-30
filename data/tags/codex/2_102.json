@@ -1,0 +1,62 @@
+{
+  "annotator": "codex",
+  "ayah": "2:102",
+  "units": [
+    {
+      "unit_id": "u01",
+      "span_ids": ["s262", "s263", "s264", "s265", "s266", "s267", "s268", "s269"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.55,
+      "reason_ar": "نُسب خبر الملكين إلى الرسول هنا، لكن الترجيح اللاحق يرجعه إلى مصدر آخر؛ لذلك بقي تصنيف المصدر محتملًا."
+    },
+    {
+      "unit_id": "u02",
+      "span_ids": ["s270", "s271", "s272"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.87,
+      "reason_ar": "رجح المفسر نسبة الخبر إلى طريق آخر وذكر إسناده تمهيدًا للرواية."
+    },
+    {
+      "unit_id": "u03",
+      "span_ids": ["s273", "s274", "s275", "s276"],
+      "source_tags": ["S_TABIIN"],
+      "content_tags": ["C_ISRAILIYYAT", "C_TAFSIR"],
+      "confidence": 0.88,
+      "reason_ar": "هذا خبر تفسيري منقول عن كعب؛ وصرح المفسر لاحقًا بأن مأخذه من كتب بني إسرائيل."
+    },
+    {
+      "unit_id": "u04",
+      "span_ids": ["s277", "s278", "s279", "s280", "s281", "s282"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ", "C_ISRAILIYYAT"],
+      "confidence": 0.82,
+      "reason_ar": "قارن طرق الرواية وحكم بترجيح أحدها ثم صرح بأن أصل الخبر من كتب بني إسرائيل."
+    },
+    {
+      "unit_id": "u05",
+      "span_ids": ["s283", "s284", "s285", "s286", "s287", "s288"],
+      "source_tags": ["S_SAHABA"],
+      "content_tags": ["C_TAFSIR", "C_TAKHRIJ"],
+      "confidence": 0.54,
+      "reason_ar": "أثر عن صحابي، لكن آخر span يجمع ختام المتن مع بداية الحكم على الإسناد فلا يمكن فصلهما."
+    },
+    {
+      "unit_id": "u06",
+      "span_ids": ["s289", "s290", "s291"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.53,
+      "reason_ar": "يجمع أول span تقويم الطريق السابق وبدء طريق جديد؛ والجمع اضطراري بسبب حدوده."
+    },
+    {
+      "unit_id": "u07",
+      "span_ids": ["s292"],
+      "source_tags": ["S_SAHABA"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.83,
+      "reason_ar": "بداية قول مستقل منسوب إلى صحابي يبيّن هوية الملكين، وينتهي النص المختار قبل استكماله."
+    }
+  ]
+}

@@ -1,0 +1,1496 @@
+<meta charset="utf-8">
+<title>فهرس تفسير ابن كثير — نموذج تجريبي</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --ink: #17201e;
+  --muted: #5b6b67;
+  --line: #d9e0dd;
+  --primary: #1f5f5b;
+  --agreed: #9a6b00;
+  --agreed-bg: #fdf3d7;
+  --review: #b4461f;
+  --review-bg: #fbe6dc;
+  --approved: #2f7a4b;
+  --approved-bg: #e3f3e8;
+  --ok: #2f7a4b;
+  --warn: #b4461f;
+  --diff-a: #9a6b00;
+  --diff-a-bg: #fdf3d7;
+  --diff-b: #1f5f5b;
+  --diff-b-bg: #e4f1ef;
+  --finding-bg: #f7efe2;
+  --quran-bg: rgba(31, 95, 91, 0.08);
+  --focus: #1f5f5b;
+  --gutter: 16px;
+  --radius: 10px;
+  --shadow: 0 1px 0 rgba(23, 32, 30, 0.04);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514;
+    --surface: #172120;
+    --ink: #e6ecea;
+    --muted: #9aaba6;
+    --line: #2a3633;
+    --primary: #7eb6b1;
+    --agreed: #e0b45a;
+    --agreed-bg: #3a2e14;
+    --review: #e08a6a;
+    --review-bg: #3a221a;
+    --approved: #7ec99a;
+    --approved-bg: #1a3326;
+    --ok: #7ec99a;
+    --warn: #e08a6a;
+    --diff-a: #e0b45a;
+    --diff-a-bg: #3a2e14;
+    --diff-b: #7eb6b1;
+    --diff-b-bg: #1a2e2c;
+    --finding-bg: #2a2418;
+    --quran-bg: rgba(126, 182, 177, 0.14);
+    --focus: #7eb6b1;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1514;
+  --surface: #172120;
+  --ink: #e6ecea;
+  --muted: #9aaba6;
+  --line: #2a3633;
+  --primary: #7eb6b1;
+  --agreed: #e0b45a;
+  --agreed-bg: #3a2e14;
+  --review: #e08a6a;
+  --review-bg: #3a221a;
+  --approved: #7ec99a;
+  --approved-bg: #1a3326;
+  --ok: #7ec99a;
+  --warn: #e08a6a;
+  --diff-a: #e0b45a;
+  --diff-a-bg: #3a2e14;
+  --diff-b: #7eb6b1;
+  --diff-b-bg: #1a2e2c;
+  --finding-bg: #2a2418;
+  --quran-bg: rgba(126, 182, 177, 0.14);
+  --focus: #7eb6b1;
+  --shadow: none;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 28px var(--gutter) 48px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.45rem, 4vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.site-header .subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  max-width: 42em;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.toggle input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--primary);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.section .note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.step .n {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fact {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.fact .value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fact .label {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.fact .sub {
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.fact.finding {
+  grid-column: 1 / -1;
+  background: var(--finding-bg);
+  border-color: var(--agreed);
+  gap: 8px;
+}
+
+.fact.finding .finding-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--agreed);
+}
+
+.fact.finding ul {
+  margin: 0;
+  padding-inline-start: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fact.finding li {
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.fact.finding .example {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+.legend-item strong {
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.field select,
+.field input[type="search"],
+.field input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 44px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.chip:hover,
+.chip.is-active {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--agreed-bg);
+}
+
+.results-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.card.is-hidden {
+  display: none;
+}
+
+.card-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge.agreed {
+  color: var(--agreed);
+  background: var(--agreed-bg);
+}
+
+.badge.needs_review,
+.badge.rejected {
+  color: var(--review);
+  background: var(--review-bg);
+}
+
+.badge.approved {
+  color: var(--approved);
+  background: var(--approved-bg);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.84rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.tag-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.tag-group-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.unit-text {
+  font-family: "Amiri", "Traditional Arabic", "Scheherazade New", serif;
+  font-size: 1.22rem;
+  line-height: 2;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.quran {
+  background: var(--quran-bg);
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.meta-line,
+.integrity-line {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+}
+
+.integrity-line .ok {
+  color: var(--ok);
+}
+
+.integrity-line .warn {
+  color: var(--warn);
+}
+
+.integrity-line .minor {
+  color: var(--agreed);
+}
+
+.integrity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diff-panel {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 10px;
+}
+
+.diff-panel.is-open {
+  display: flex;
+}
+
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.diff-table th,
+.diff-table td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: right;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.diff-table th {
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.diff-table .kind {
+  color: var(--muted);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.hl-a {
+  color: var(--diff-a);
+  background: var(--diff-a-bg);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 600;
+}
+
+.hl-b {
+  color: var(--diff-b);
+  background: var(--diff-b-bg);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 600;
+}
+
+.diff-help {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+details.why {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+details.why > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  list-style-position: outside;
+}
+
+details.why[open] > summary {
+  margin-bottom: 10px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.why-panel {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.why-panel h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.why-panel p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.review-reasons {
+  margin: 0;
+  padding-inline-start: 1.2em;
+  color: var(--review);
+  font-size: 0.92rem;
+}
+
+.reviewer-box {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.page.reviewer-on .reviewer-box {
+  display: flex;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.btn.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn.ok {
+  background: var(--approved-bg);
+  border-color: var(--approved);
+  color: var(--approved);
+}
+
+.btn.warn {
+  background: var(--review-bg);
+  border-color: var(--review);
+  color: var(--review);
+}
+
+.apparatus details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.apparatus summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.apparatus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.app-item {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-item .layer {
+  font-size: 0.84rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.app-item .text {
+  font-family: "Amiri", "Traditional Arabic", serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.export-box {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+}
+
+.export-box.is-open {
+  display: flex;
+}
+
+.export-box textarea {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 10px;
+  resize: vertical;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.85rem;
+  direction: ltr;
+  text-align: left;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.empty {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .facts {
+    grid-template-columns: 1fr;
+  }
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+
+<div class="page stack" id="app" dir="rtl" lang="ar">
+  <div class="site-header">
+    <h1>فهرس تفسير ابن كثير — نموذج تجريبي</h1>
+    <p class="subtitle">نصّ ابن كثير كما هو، مقسّم إلى وحدات موسومة، مع بيان حالة كل وحدة ومطابقتها للأصل.</p>
+    <div class="top-bar">
+      <label class="toggle">
+        <input type="checkbox" id="reviewerMode" />
+        <span>وضع المراجع</span>
+      </label>
+      <button type="button" class="btn" id="exportBtn" hidden>تصدير قرارات المراجع</button>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="how-title">
+    <h2 id="how-title">كيف يعمل؟</h2>
+    <div class="steps">
+      <div class="step"><div class="n">١</div><p>نأخذ النص آلياً من مصدر موثّق دون أن يكتبه أحد.</p></div>
+      <div class="step"><div class="n">٢</div><p>نفصل كلام ابن كثير عن حواشي المحقق.</p></div>
+      <div class="step"><div class="n">٣</div><p>فاحصان آليان يضعان الوسوم دون أن يلمسا النص.</p></div>
+      <div class="step"><div class="n">٤</div><p>نطابق كل وحدة مع الأصل، والمتخصص يعتمد.</p></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="facts-title">
+    <h2 id="facts-title">ماذا أثبتت التجربة؟</h2>
+    <p class="note">نتائج تجربة أولى صغيرة</p>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <section class="section" aria-labelledby="legend-title">
+    <h2 id="legend-title">معاني الحالات</h2>
+    <div class="legend">
+      <div class="legend-item"><span aria-hidden="true">🟡</span><div><strong>مقترح</strong> — اتفق الفاحصان (لم يراجعه متخصص بعد)</div></div>
+      <div class="legend-item"><span aria-hidden="true">🟠</span><div><strong>بانتظار المتخصص</strong> — اختلاف أو ثقة منخفضة أو وسم حساس</div></div>
+      <div class="legend-item"><span aria-hidden="true">🟢</span><div><strong>معتمد</strong> — اعتمده المراجع في هذه الصفحة</div></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="filters-title">
+    <h2 id="filters-title">تصفية النتائج</h2>
+    <div class="filters">
+      <div class="filters-grid">
+        <div class="field">
+          <label for="filterAyah">الآية</label>
+          <select id="filterAyah">
+            <option value="">الكل</option>
+            <option value="2_255">البقرة ٢٥٥</option>
+            <option value="17_105">الإسراء ١٠٥</option>
+            <option value="2_102">البقرة ١٠٢</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filterSource">وسم المصدر</label>
+          <select id="filterSource"><option value="">الكل</option></select>
+        </div>
+        <div class="field">
+          <label for="filterContent">وسم المحتوى</label>
+          <select id="filterContent"><option value="">الكل</option></select>
+        </div>
+        <div class="field">
+          <label for="filterStatus">الحالة</label>
+          <select id="filterStatus">
+            <option value="">الكل</option>
+            <option value="agreed">مقترح</option>
+            <option value="needs_review">بانتظار المتخصص</option>
+            <option value="approved">معتمد</option>
+            <option value="rejected">مرفوض</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filterCross">المطابقة مع المصدر الثاني</label>
+          <select id="filterCross">
+            <option value="">الكل</option>
+            <option value="identical">مطابق</option>
+            <option value="minor">فروق طفيفة</option>
+            <option value="different">فروق</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="filterSearch">بحث في النص</label>
+          <input type="search" id="filterSearch" placeholder="ابحث في نص الوحدات…" autocomplete="off" />
+        </div>
+      </div>
+      <div class="chips" id="exampleChips">
+        <button type="button" class="chip" data-example="hadith">كل الأحاديث في آية الكرسي</button>
+        <button type="button" class="chip" data-example="isra">الإسرائيليات في هاروت وماروت</button>
+        <button type="button" class="chip" data-example="review">ما يحتاج مراجعة</button>
+      </div>
+      <div class="results-meta">
+        <div id="resultsCount">النتائج: ٠ وحدة</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="results-title">
+    <h2 id="results-title">الوحدات</h2>
+    <div class="cards" id="cards"></div>
+    <div class="empty" id="empty" hidden>لا توجد وحدات مطابقة للتصفية الحالية.</div>
+  </section>
+
+  <section class="section apparatus" aria-labelledby="apparatus-title">
+    <h2 id="apparatus-title">ما عزلناه من حواشي المحقق</h2>
+    <p class="note">عُزلت هذه العبارات لأنها من المحقق أو مجهولة النسبة، حتى لا تُنسب إلى ابن كثير.</p>
+    <div id="apparatus"></div>
+  </section>
+
+  <div class="export-box" id="exportBox">
+    <div class="top-bar">
+      <strong>قرارات المراجع (JSON)</strong>
+      <button type="button" class="btn primary" id="copyDecisions">نسخ</button>
+    </div>
+    <textarea id="exportText" readonly dir="ltr"></textarea>
+    <p class="note" id="copyStatus" aria-live="polite"></p>
+  </div>
+
+  <div class="site-footer">
+    <div>النص: مركز تفسير للدراسات القرآنية (CC BY 4.0) · المصدر الثاني للمطابقة: quran.com</div>
+    <div>نموذج تجريبي: لم يعتمد متخصص أي وحدة بعد.</div>
+  </div>
+</div>
+
+<script type="application/json" id="data">__INDEX_DATA_JSON__</script>
+<script>
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "tafsir-index-reviewer-decisions-v1";
+  var data = JSON.parse(document.getElementById("data").textContent);
+  var decisions = {};
+  var app = document.getElementById("app");
+  var cardsEl = document.getElementById("cards");
+  var emptyEl = document.getElementById("empty");
+  var countEl = document.getElementById("resultsCount");
+  var exportBox = document.getElementById("exportBox");
+  var exportText = document.getElementById("exportText");
+  var copyStatus = document.getElementById("copyStatus");
+  var exportBtn = document.getElementById("exportBtn");
+  var reviewerMode = document.getElementById("reviewerMode");
+
+  var filterAyah = document.getElementById("filterAyah");
+  var filterSource = document.getElementById("filterSource");
+  var filterContent = document.getElementById("filterContent");
+  var filterStatus = document.getElementById("filterStatus");
+  var filterCross = document.getElementById("filterCross");
+  var filterSearch = document.getElementById("filterSearch");
+
+  var ayahById = {};
+  var allUnits = [];
+  data.ayat.forEach(function (a) {
+    ayahById[a.id] = a;
+    a.units.forEach(function (u) {
+      allUnits.push(u);
+    });
+  });
+
+  function toEastern(n) {
+    return String(n).replace(/[0-9]/g, function (d) {
+      return "٠١٢٣٤٥٦٧٨٩"[Number(d)];
+    });
+  }
+
+  function pctAr(x) {
+    return toEastern(Number(x).toFixed(1).replace(/\.0$/, "")) + "٪";
+  }
+
+  function stripSearch(s) {
+    return String(s || "")
+      .replace(/[\u064B-\u065F\u0670]/g, "")
+      .replace(/\u0640/g, "");
+  }
+
+  function confWord(c) {
+    if (c >= 0.8) return "عالية";
+    if (c >= 0.6) return "متوسطة";
+    return "منخفضة";
+  }
+
+  function statusMeta(status) {
+    if (status === "approved") {
+      return { emoji: "🟢", label: "معتمد", cls: "approved" };
+    }
+    if (status === "rejected") {
+      return { emoji: "🟠", label: "مرفوض", cls: "rejected" };
+    }
+    if (status === "agreed") {
+      return { emoji: "🟡", label: "مقترح", cls: "agreed" };
+    }
+    return { emoji: "🟠", label: "بانتظار المتخصص", cls: "needs_review" };
+  }
+
+  function effectiveStatus(unit) {
+    var d = decisions[unit.id];
+    if (d && d.decision) return d.decision;
+    return unit.status;
+  }
+
+  function loadDecisions() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") decisions = parsed;
+    } catch (e) {
+      decisions = {};
+    }
+  }
+
+  function saveDecisions() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(decisions));
+    } catch (e) {
+      /* storage may throw in sandboxed viewers */
+    }
+  }
+
+  function tagLabel(id) {
+    var t = data.tags[id];
+    return t ? t.label_ar : id;
+  }
+
+  function tagTitle(id) {
+    var t = data.tags[id];
+    return t ? t.explain_ar : id;
+  }
+
+  function unitHasTag(unit, tagId, layer) {
+    function has(list) {
+      return (list || []).indexOf(tagId) !== -1;
+    }
+    if (unit.tags_display === "shared") {
+      return layer === "source" ? has(unit.source_tags) : has(unit.content_tags);
+    }
+    var a = unit.annotators.first;
+    var b = unit.annotators.second;
+    if (layer === "source") return has(a.source_tags) || has(b.source_tags);
+    return has(a.content_tags) || has(b.content_tags);
+  }
+
+  function highlightQuran(text) {
+    var esc = String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    esc = esc.replace(/([﴿{][^﴾}]*[﴾}])/g, '<span class="quran">$1</span>');
+    return esc;
+  }
+
+  function renderTagChips(ids) {
+    return (ids || [])
+      .map(function (id) {
+        return (
+          '<span class="tag" title="' +
+          tagTitle(id).replace(/"/g, "&quot;") +
+          '">' +
+          tagLabel(id) +
+          "</span>"
+        );
+      })
+      .join("");
+  }
+
+  function renderFacts() {
+    var s = data.summary;
+    var afterParts = ["2_255", "17_105", "2_102"]
+      .map(function (k) {
+        var row = s.cross_source_after[k];
+        return row.label_ar + ": " + pctAr(row.pct);
+      })
+      .join(" · ");
+    var typos = s.source_a_suspect_typos || [];
+    var typoItems = typos
+      .map(function (t) {
+        return (
+          "<li><strong>" +
+          t.ayah_label_ar +
+          "</strong>: مركز تفسير «" +
+          escText(t.a_word) +
+          "» · quran.com «" +
+          escText(t.b_word) +
+          "»</li>"
+        );
+      })
+      .join("");
+    var finding =
+      '<div class="fact finding">' +
+      '<p class="finding-title">المطابقة كشفت فروقاً بحرف واحد بين النسختين (' + toEastern(typos.length) + ')</p>' +
+      '<p class="note">بعضها خطأ طباعي ظاهر، وبعضها اختلاف طبعات أو إملاء. لا يحكم النظام أيّ النسختين أصح؛ يحسمها المتخصص بالرجوع إلى المطبوع.</p>' +
+      '<p class="example">أوضحها: في حديث «أي آية في القرآن أعظم؟» جاءت في نسخة مركز تفسير «القرن» — خطأ طباعي في النسخة الرقمية لا في كلام ابن كثير.</p>' +
+      (typoItems
+        ? "<details><summary>اعرض الفروق كلها</summary><ul>" + typoItems + "</ul></details>"
+        : "<p class=\"note\">لم تُرصد فروق حرفية في هذه النافذة.</p>") +
+      "</div>";
+    var html =
+      '<div class="fact"><div class="value">' +
+      pctAr(s.verbatim_pct) +
+      '</div><div class="label">سلامة النص حرفاً بحرف</div></div>' +
+      '<div class="fact"><div class="value">' +
+      pctAr(s.source_tag_agreement_pct) +
+      '</div><div class="label">اتفاق وسوم المصدر بين الفاحصين</div></div>' +
+      '<div class="fact"><div class="value">' +
+      pctAr(s.content_tag_agreement_pct) +
+      '</div><div class="label">اتفاق وسوم المحتوى بين الفاحصين</div></div>' +
+      '<div class="fact"><div class="value">' +
+      toEastern(Object.keys(s.cross_source_after).length) +
+      ' آيات</div><div class="label">مطابقة المصدرين بعد عزل الحواشي</div><div class="sub">' +
+      afterParts +
+      "</div></div>" +
+      finding;
+    document.getElementById("facts").innerHTML = html;
+  }
+
+  function escText(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function kindLabelAr(kind) {
+    if (kind === "variant") return "كلمة مختلفة";
+    if (kind === "missing_in_b") return "غير موجود في المصدر الثاني";
+    if (kind === "extra_in_b") return "زائد في المصدر الثاني";
+    return kind;
+  }
+
+  function crossBadge(unit) {
+    var n = (unit.diffs || []).length;
+    if (unit.cross_source === "identical") {
+      return '<span class="ok">✅ مطابق للمصدر الثاني</span>';
+    }
+    if (unit.cross_source === "minor") {
+      return (
+        '<span class="minor">🔎 فروق طفيفة مع المصدر الثاني (' +
+        toEastern(n) +
+        ")</span>"
+      );
+    }
+    return (
+      '<span class="warn">⚠️ فروق مع المصدر الثاني (' + toEastern(n) + ")</span>"
+    );
+  }
+
+  function renderDiffTable(unit) {
+    var rows = (unit.diffs || [])
+      .map(function (d) {
+        var a = d.a_words && d.a_words.length
+          ? '<span class="hl-a">' + escText(d.a_words.join(" ")) + "</span>"
+          : "—";
+        var b = d.b_words && d.b_words.length
+          ? '<span class="hl-b">' + escText(d.b_words.join(" ")) + "</span>"
+          : "—";
+        return (
+          "<tr><td>" +
+          a +
+          "</td><td>" +
+          b +
+          '</td><td class="kind">' +
+          kindLabelAr(d.kind) +
+          "</td></tr>"
+        );
+      })
+      .join("");
+    if (!rows) return "";
+    return (
+      '<div class="diff-panel" data-diff-panel>' +
+      '<table class="diff-table"><thead><tr>' +
+      "<th>نسخة مركز تفسير</th><th>المصدر الثاني (quran.com)</th><th>نوع الفرق</th>" +
+      "</tr></thead><tbody>" +
+      rows +
+      "</tbody></table>" +
+      '<p class="diff-help">الفروق لا تعني خطأ ابن كثير؛ قد تكون خطأً طباعياً في إحدى النسختين أو اختلاف طبعات، ويحسمها المتخصص بالرجوع إلى المطبوع.</p>' +
+      "</div>"
+    );
+  }
+
+  function fillTagSelects() {
+    var sourceIds = [];
+    var contentIds = [];
+    Object.keys(data.tags).forEach(function (id) {
+      if (data.tags[id].layer === "source") sourceIds.push(id);
+      else contentIds.push(id);
+    });
+    function fill(sel, ids) {
+      ids.forEach(function (id) {
+        var opt = document.createElement("option");
+        opt.value = id;
+        opt.textContent = data.tags[id].label_ar;
+        sel.appendChild(opt);
+      });
+    }
+    fill(filterSource, sourceIds);
+    fill(filterContent, contentIds);
+  }
+
+  function renderApparatus() {
+    var root = document.getElementById("apparatus");
+    var order = ["2_255", "17_105", "2_102"];
+    root.innerHTML = order
+      .map(function (id) {
+        var a = ayahById[id];
+        if (!a) return "";
+        var items = (a.apparatus || [])
+          .map(function (item) {
+            var layerLabel =
+              item.layer === "footnote" ? "حاشية محقق" : "إضافة بين معقوفين";
+            return (
+              '<div class="app-item"><div class="layer">' +
+              layerLabel +
+              " — المحارف " +
+              toEastern(item.start) +
+              "–" +
+              toEastern(item.end) +
+              '</div><div class="text">' +
+              highlightQuran(item.text) +
+              "</div></div>"
+            );
+          })
+          .join("");
+        if (!items) {
+          items = '<p class="note">لا توجد حواشي معزولة داخل نافذة هذه الآية في النموذج.</p>';
+        }
+        return (
+          "<details><summary>" +
+          a.label_ar +
+          " — " +
+          toEastern((a.apparatus || []).length) +
+          " عبارة</summary><div class=\"apparatus-list\">" +
+          items +
+          "</div></details>"
+        );
+      })
+      .join("");
+  }
+
+  function renderWhy(unit) {
+    var labels = data.annotator_labels;
+    function panel(key, ann) {
+      return (
+        '<div class="why-panel"><h4>' +
+        labels[key] +
+        "</h4><div class=\"tag-row\">" +
+        renderTagChips(ann.source_tags.concat(ann.content_tags)) +
+        "</div><p>الثقة: <strong>" +
+        confWord(ann.confidence) +
+        "</strong></p><p>" +
+        (ann.reason_ar || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;") +
+        "</p></div>"
+      );
+    }
+    var reasons = "";
+    if (unit.reasons && unit.reasons.length) {
+      reasons =
+        '<ul class="review-reasons">' +
+        unit.reasons
+          .map(function (r) {
+            return "<li>" + r + "</li>";
+          })
+          .join("") +
+        "</ul>";
+    }
+    return (
+      '<details class="why"><summary>لماذا هذه الوسوم؟</summary><div class="why-grid">' +
+      panel("first", unit.annotators.first) +
+      panel("second", unit.annotators.second) +
+      "</div>" +
+      reasons +
+      "</details>"
+    );
+  }
+
+  function renderCard(unit) {
+    var ayah = ayahById[unit.ayah_id];
+    var status = effectiveStatus(unit);
+    var sm = statusMeta(status);
+    var tagsHtml = "";
+    if (unit.tags_display === "shared") {
+      tagsHtml =
+        '<div class="tag-row">' +
+        renderTagChips(unit.source_tags.concat(unit.content_tags)) +
+        "</div>";
+    } else {
+      tagsHtml =
+        '<div class="tag-groups">' +
+        '<div><div class="tag-group-label">' +
+        data.annotator_labels.first +
+        '</div><div class="tag-row">' +
+        renderTagChips(
+          unit.annotators.first.source_tags.concat(unit.annotators.first.content_tags)
+        ) +
+        "</div></div>" +
+        '<div><div class="tag-group-label">' +
+        data.annotator_labels.second +
+        '</div><div class="tag-row">' +
+        renderTagChips(
+          unit.annotators.second.source_tags.concat(unit.annotators.second.content_tags)
+        ) +
+        "</div></div></div>";
+    }
+
+    var verbatim = unit.verbatim_ok
+      ? '<span class="ok">✅ مطابق لنسخة مركز تفسير حرفاً بحرف</span>'
+      : '<span class="warn">⚠️ غير مطابق لنسخة مركز تفسير</span>';
+    var hasDiffs = unit.cross_source !== "identical" && (unit.diffs || []).length > 0;
+    var diffBtn = hasDiffs
+      ? '<button type="button" class="btn" data-diff-toggle>اعرض الفروق</button>'
+      : "";
+
+    var card = document.createElement("article");
+    card.className = "card";
+    card.dataset.unitId = unit.id;
+    card.innerHTML =
+      '<div class="card-top"><span class="badge ' +
+      sm.cls +
+      '">' +
+      sm.emoji +
+      " " +
+      sm.label +
+      "</span>" +
+      tagsHtml +
+      '</div><div class="unit-text">' +
+      highlightQuran(unit.text) +
+      '</div><p class="meta-line">ابن كثير — ' +
+      ayah.surah_name_ar +
+      " " +
+      toEastern(ayah.ayah_number) +
+      " — المحارف من " +
+      toEastern(unit.start) +
+      " إلى " +
+      toEastern(unit.end) +
+      '</p><div class="integrity-block"><p class="integrity-line">' +
+      verbatim +
+      crossBadge(unit) +
+      diffBtn +
+      "</p>" +
+      renderDiffTable(unit) +
+      "</div>" +
+      renderWhy(unit) +
+      '<div class="reviewer-box">' +
+      '<button type="button" class="btn ok" data-act="approved">اعتماد</button>' +
+      '<button type="button" class="btn warn" data-act="rejected">رفض</button>' +
+      '<button type="button" class="btn" data-act="needs_review">إعادة للمراجعة</button>' +
+      "</div>";
+
+    card.querySelectorAll("[data-act]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var act = btn.getAttribute("data-act");
+        if (act === "needs_review") {
+          delete decisions[unit.id];
+        } else {
+          decisions[unit.id] = { decision: act, at: new Date().toISOString() };
+        }
+        saveDecisions();
+        applyFilters();
+        if (exportBox.classList.contains("is-open")) refreshExport();
+      });
+    });
+    var toggle = card.querySelector("[data-diff-toggle]");
+    var panel = card.querySelector("[data-diff-panel]");
+    if (toggle && panel) {
+      toggle.addEventListener("click", function () {
+        var open = panel.classList.toggle("is-open");
+        toggle.textContent = open ? "اخفِ الفروق" : "اعرض الفروق";
+      });
+    }
+    return card;
+  }
+
+  function buildCards() {
+    cardsEl.innerHTML = "";
+    allUnits.forEach(function (u) {
+      cardsEl.appendChild(renderCard(u));
+    });
+  }
+
+  function matchesFilters(unit) {
+    var ayah = filterAyah.value;
+    var source = filterSource.value;
+    var content = filterContent.value;
+    var status = filterStatus.value;
+    var cross = filterCross.value;
+    var q = stripSearch(filterSearch.value.trim());
+    if (ayah && unit.ayah_id !== ayah) return false;
+    if (source && !unitHasTag(unit, source, "source")) return false;
+    if (content && !unitHasTag(unit, content, "content")) return false;
+    if (status && effectiveStatus(unit) !== status) return false;
+    if (cross && unit.cross_source !== cross) return false;
+    if (q && stripSearch(unit.text).indexOf(q) === -1) return false;
+    return true;
+  }
+
+  function applyFilters() {
+    var visible = 0;
+    var cards = cardsEl.querySelectorAll(".card");
+    cards.forEach(function (card) {
+      var unit = allUnits.find(function (u) {
+        return u.id === card.dataset.unitId;
+      });
+      var ok = matchesFilters(unit);
+      card.classList.toggle("is-hidden", !ok);
+      if (ok) {
+        visible += 1;
+        var status = effectiveStatus(unit);
+        var sm = statusMeta(status);
+        var badge = card.querySelector(".badge");
+        badge.className = "badge " + sm.cls;
+        badge.textContent = sm.emoji + " " + sm.label;
+      }
+    });
+    countEl.textContent = "النتائج: " + toEastern(visible) + " وحدة";
+    emptyEl.hidden = visible !== 0;
+  }
+
+  function setExample(name) {
+    filterAyah.value = "";
+    filterSource.value = "";
+    filterContent.value = "";
+    filterStatus.value = "";
+    filterCross.value = "";
+    filterSearch.value = "";
+    document.querySelectorAll(".chip").forEach(function (c) {
+      c.classList.toggle("is-active", c.getAttribute("data-example") === name);
+    });
+    if (name === "hadith") {
+      filterAyah.value = "2_255";
+      filterSource.value = "S_SUNNAH";
+    } else if (name === "isra") {
+      filterAyah.value = "2_102";
+      filterContent.value = "C_ISRAILIYYAT";
+    } else if (name === "review") {
+      filterStatus.value = "needs_review";
+    }
+    applyFilters();
+  }
+
+  function refreshExport() {
+    exportText.value = JSON.stringify(decisions, null, 2);
+  }
+
+  reviewerMode.addEventListener("change", function () {
+    app.classList.toggle("reviewer-on", reviewerMode.checked);
+    exportBtn.hidden = !reviewerMode.checked;
+    if (!reviewerMode.checked) {
+      exportBox.classList.remove("is-open");
+      copyStatus.textContent = "";
+    }
+  });
+
+  exportBtn.addEventListener("click", function () {
+    exportBox.classList.add("is-open");
+    refreshExport();
+  });
+
+  document.getElementById("copyDecisions").addEventListener("click", function () {
+    refreshExport();
+    var text = exportText.value;
+    function fallback() {
+      exportText.focus();
+      exportText.select();
+      copyStatus.textContent = "حدّد النص وانسخه يدوياً إن لزم.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () {
+          copyStatus.textContent = "تم نسخ القرارات.";
+        },
+        fallback
+      );
+    } else {
+      fallback();
+    }
+  });
+
+  [filterAyah, filterSource, filterContent, filterStatus, filterCross].forEach(function (el) {
+    el.addEventListener("change", function () {
+      document.querySelectorAll(".chip").forEach(function (c) {
+        c.classList.remove("is-active");
+      });
+      applyFilters();
+    });
+  });
+  filterSearch.addEventListener("input", function () {
+    document.querySelectorAll(".chip").forEach(function (c) {
+      c.classList.remove("is-active");
+    });
+    applyFilters();
+  });
+
+  document.getElementById("exampleChips").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-example]");
+    if (!btn) return;
+    setExample(btn.getAttribute("data-example"));
+  });
+
+  loadDecisions();
+  renderFacts();
+  fillTagSelects();
+  renderApparatus();
+  buildCards();
+  applyFilters();
+})();
+</script>

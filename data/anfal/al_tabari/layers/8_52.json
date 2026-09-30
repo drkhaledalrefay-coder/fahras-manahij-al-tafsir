@@ -1,0 +1,117 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_52.txt",
+  "ayah": "8:52",
+  "surah": 8,
+  "ayah_number": 52,
+  "source_char_length": 1014,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 189,
+      "kind": "author"
+    },
+    {
+      "start": 189,
+      "end": 193,
+      "kind": "layout"
+    },
+    {
+      "start": 193,
+      "end": 371,
+      "kind": "author"
+    },
+    {
+      "start": 371,
+      "end": 400,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 400,
+      "end": 421,
+      "kind": "author"
+    },
+    {
+      "start": 421,
+      "end": 425,
+      "kind": "layout"
+    },
+    {
+      "start": 425,
+      "end": 517,
+      "kind": "author"
+    },
+    {
+      "start": 517,
+      "end": 534,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 534,
+      "end": 535,
+      "kind": "author"
+    },
+    {
+      "start": 535,
+      "end": 539,
+      "kind": "layout"
+    },
+    {
+      "start": 539,
+      "end": 696,
+      "kind": "author"
+    },
+    {
+      "start": 696,
+      "end": 700,
+      "kind": "layout"
+    },
+    {
+      "start": 700,
+      "end": 1010,
+      "kind": "author"
+    },
+    {
+      "start": 1010,
+      "end": 1014,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 7,
+    "layout": 6,
+    "apparatus": 2
+  },
+  "char_totals": {
+    "author": 944,
+    "layout": 24,
+    "apparatus": 46
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 46
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 6
+    },
+    "footnote_open": 2,
+    "footnote_close": 2,
+    "footnotes_closed": 2,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

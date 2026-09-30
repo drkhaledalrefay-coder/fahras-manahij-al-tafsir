@@ -1,0 +1,226 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_12.txt",
+  "ayah": "8:12",
+  "surah": 8,
+  "ayah_number": 12,
+  "source_char_length": 4356,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 540,
+      "kind": "author"
+    },
+    {
+      "start": 540,
+      "end": 632,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 632,
+      "end": 890,
+      "kind": "author"
+    },
+    {
+      "start": 890,
+      "end": 910,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 910,
+      "end": 1384,
+      "kind": "author"
+    },
+    {
+      "start": 1384,
+      "end": 1451,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1451,
+      "end": 1520,
+      "kind": "author"
+    },
+    {
+      "start": 1520,
+      "end": 1665,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1665,
+      "end": 1847,
+      "kind": "author"
+    },
+    {
+      "start": 1847,
+      "end": 1856,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1856,
+      "end": 2003,
+      "kind": "author"
+    },
+    {
+      "start": 2003,
+      "end": 2065,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2065,
+      "end": 2301,
+      "kind": "author"
+    },
+    {
+      "start": 2301,
+      "end": 2371,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2371,
+      "end": 2566,
+      "kind": "author"
+    },
+    {
+      "start": 2566,
+      "end": 2574,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2574,
+      "end": 2701,
+      "kind": "author"
+    },
+    {
+      "start": 2701,
+      "end": 2765,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2765,
+      "end": 2937,
+      "kind": "author"
+    },
+    {
+      "start": 2937,
+      "end": 2991,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2991,
+      "end": 3057,
+      "kind": "author"
+    },
+    {
+      "start": 3057,
+      "end": 3079,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3079,
+      "end": 3174,
+      "kind": "author"
+    },
+    {
+      "start": 3174,
+      "end": 3214,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3214,
+      "end": 3242,
+      "kind": "author"
+    },
+    {
+      "start": 3242,
+      "end": 3307,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3307,
+      "end": 3409,
+      "kind": "author"
+    },
+    {
+      "start": 3409,
+      "end": 3604,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3604,
+      "end": 3748,
+      "kind": "author"
+    },
+    {
+      "start": 3748,
+      "end": 3810,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3810,
+      "end": 4287,
+      "kind": "author"
+    },
+    {
+      "start": 4287,
+      "end": 4355,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4355,
+      "end": 4356,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 17,
+    "layout": 0,
+    "apparatus": 16
+  },
+  "char_totals": {
+    "author": 3313,
+    "layout": 0,
+    "apparatus": 1043
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 14,
+    "verse_ref": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 1026,
+    "verse_ref": 17
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 14,
+    "footnote_close": 14,
+    "footnotes_closed": 14,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "verse_ref": 2
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[محمد: 4]": 1,
+      "[يس: 69]": 1
+    },
+    "other_brackets": {}
+  }
+}

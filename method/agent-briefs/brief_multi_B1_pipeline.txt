@@ -1,0 +1,17 @@
+TASK B1: Make the deterministic v2 pipeline (markers → packets → verify) run on the new tafsirs in data/multi/<tafsir_id>/, with the Ibn Kathir outputs staying BYTE-IDENTICAL. No AI, no network. Do NOT commit.
+
+READ: src/v2_markers.py, src/v2_packets.py, src/v2_verify.py, src/v2_selftest.py, method/classifier_prompt_v2.md, reports/multi/A_sources.md, data/multi/*/windows/*.json and data/multi/*/layers/*.json (layers have kinds: author, layout "<br>", apparatus footnote/verse_ref/editor_bracket/unknown_marker).
+
+CHANGES
+1. Add a base-dir parameter to the three scripts: `--base data/v2` (default — current behaviour, unchanged paths) or `--base data/multi/<tafsir_id>`. Under a base they read <base>/windows and write <base>/markers, <base>/packets, and verify reads <base>/moves/<annotator>/ and writes <base>/verified/<annotator>/ and <base>/summary.md (for data/v2 keep writing reports/v2_summary.md exactly as now).
+2. Add `--tafsir-name` (default «ابن كثير») used wherever packets/labels mention the author, so packets for al-Tabari say «الطبري» etc. Mapping: al_tabari→الطبري، al_saadi→السعدي، al_baghawi→البغوي. Do NOT change markers logic/lists (run 1 must be untuned) — only paths and names.
+3. Layout vs apparatus: in packets, "<br>" layout must NOT be shown as an editor footnote and must NOT make a span "editor-only". Apparatus (footnote, verse_ref, editor_bracket, unknown_marker) is labeled حاشية/إضافة المحقق as for Ibn Kathir.
+4. Run for each of al_tabari, al_saadi, al_baghawi: markers → packets. (No moves yet; verify is run later after classification.)
+5. Add a script src/multi_run_verify.py that runs verify for every tafsir base and every annotator folder present, idempotent.
+6. Update reports/multi/PROGRESS.md with B1 steps done + exact commands for the next stage.
+
+REGRESSION GATE (mandatory, paste output):
+- Before editing, copy hashes: sha256 of every file in data/v2/markers, data/v2/packets, data/v2/verified/codex, reports/v2_summary.md, web/methods.html.
+- After: python src/v2_markers.py ; python src/v2_packets.py ; python src/v2_verify.py ; python src/v2_selftest.py → all those hashes must be identical. If anything differs, fix until identical.
+- Report per new window: packet span count, marker counts by family.
+Do not commit.

@@ -1,0 +1,28 @@
+TASK: Make the new page (web/fahras.html) self-explanatory for a non-technical reviewer. Edit ONLY src/fahras_template.html (and src/build_fahras.py if needed), rebuild with python src/build_fahras.py. Keep every verified behaviour (offset fidelity, non-author guard, compare-before-approve, statuses, exports, secondary dots, side-by-side). Do NOT touch src/methods_template.html, src/build_methods.py, web/methods.html, data/, src/v2_*.py. Do NOT commit.
+
+PROBLEMS REPORTED BY THE OWNER (screenshots):
+1. Native <select> dropdowns (verse, annotator) open with near-invisible option text (light text on white). Fix: set color-scheme on the selects per theme and give option/optgroup explicit background+color from tokens; verify readable in dark AND light.
+2. Annotator selector shows raw «codex / deepseek / mimo». Show Arabic: «النموذج أ — Codex»، «النموذج ب — DeepSeek»، «النموذج ج — MiMo» (map; unknown ids fall back to the raw id). Label the control «النموذج الذي اقترح التمييزات» with an ⓘ tooltip: «نفس المنهج ونفس المدقق؛ بدّل النموذج لترى هل تتغير النتائج».
+3. Owner does not understand many buttons. Every control must have a clear Arabic label AND a title tooltip AND an entry in a help panel.
+4. The drawer repeats the flow text twice (a stepper line and «المسار: …» paragraph). Keep ONE stepper.
+
+CHANGES
+A. Header reorganised into two labelled rows:
+   - «القراءة»: التفسير (segmented) · الآية (select) · النموذج (select) · «اعرض الأصل بجانبه» · المظهر (rename to «فاتح/داكن»).
+   - «المراجعة»: «ابدأ المراجعة» (toggle; when on it reads «إنهاء المراجعة») · a single «تصدير ▾» menu containing: «تصدير هذا الموضع (JSON)»، «تصدير كل المعتمد (JSON)»، «تصدير سجل التعديلات»، «تصدير لأداة Label Studio (للباحثين)». Remove the separate export buttons and the Label Studio button from the drawer.
+   - Rename «العلامات الآلية فقط» → «علامات النص فقط (بلا ذكاء اصطناعي)» with tooltip «يعرض ما يلتقطه البرنامج من عبارات مثل «قال ابن عباس» دون اقتراحات النموذج». Move it into the methods panel as a small switch.
+   - Remove «وضع المتخصص» as a separate button if it duplicates «ابدأ المراجعة» (keep one control).
+B. A «؟ دليل الواجهة» button (top, always visible) opening a side panel (in-page, closable, Esc closes) with sections and one line per control:
+   1. القراءة: التفسير، الآية، النموذج، اعرض الأصل بجانبه، فاتح/داكن.
+   2. لوحة المناهج: الألوان، أساسي/مساعد، النقاط، الخط المتقطع، مستويات اليقين (صريح/مستنتج بقوة/مستنتج بضعف/امتناع)، «مرشح للقبول» vs «بانتظار المتخصص»، علامات النص فقط.
+   3. جدول النتائج: حروف، فقرات، تحركات(=مواضع مقترحة)، مرشّح للقبول، للمتخصص، أعلام(=تنبيهات القواعد)، امتناع، توزيع المناهج؛ والفرق بين التشغيل ١ و٢ إن وُجد.
+   4. درج الموضع (عند الضغط على تمييز): لماذا؟ والدليل، «وميض الدليل» (يضيء الكلمات التي استند إليها)، الوسوم، الحدود، المقارنة والاعتماد.
+   5. أدوات المراجعة: +كلمة قبل / −أول كلمة / +كلمة بعد / −آخر كلمة، دمج مع السابق/التالي، توسيع إلى الجملة، استعادة اقتراح الآلة، تغيير المنهج، حذف، «امتناع» (=لا يصلح وسمه بمنهج)، يحتاج تعديل، رفض، قارن بالمصدر، اعتماد.
+   6. التصدير: ماذا يحتوي كل ملف ولمن.
+   7. قواعد الأمانة: النص لا يُعدَّل؛ حاشية المحقق لا تُوسم؛ لا يُنشر إلا المعتمد.
+C. Drawer reorganised into titled sections in this order: «لماذا هذا التمييز؟» (rationale + certainty + score parts + وميض الدليل) · «الوسوم» (primary, secondary chips, content chips) · «حدود التمييز» (rename buttons: «+ كلمة قبل»، «− أول كلمة»، «+ كلمة بعد»، «− آخر كلمة»، merge, extend, restore) · «المقارنة والاعتماد» (قارن بالمصدر → اعتماد / يحتاج تعديل / رفض / امتناع). Each button has a title tooltip. Destructive «حذف» stays visually distinct and needs an in-page confirm step.
+D. Methods panel: a one-line caption at top «اضغط منهجاً لتلوين مواضعه؛ التعبئة = أساسي، النقاط والخط المتقطع = مساعد».
+E. Results strip: header cells get tooltips (e.g. «تحركات = مواضع مقترحة من النموذج»، «أعلام = تنبيهات من مدقق القواعد»).
+F. Everything works at 390px (header rows wrap; help panel full-screen on phone), both themes, visible focus, no side-stripe borders >1px, no alert/confirm/prompt.
+
+GATES (paste): python src/build_fahras.py ; node --check on extracted inline script ; grep no confirm(/alert(/prompt( ; python check span text == raw[start:end] for all embedded windows ; list every control with its final Arabic label + tooltip ; git status shows frozen IK files unchanged. Do not commit.

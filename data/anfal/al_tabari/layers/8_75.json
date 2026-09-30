@@ -1,0 +1,272 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_75.txt",
+  "ayah": "8:75",
+  "surah": 8,
+  "ayah_number": 75,
+  "source_char_length": 3480,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 115,
+      "kind": "author"
+    },
+    {
+      "start": 115,
+      "end": 119,
+      "kind": "layout"
+    },
+    {
+      "start": 119,
+      "end": 512,
+      "kind": "author"
+    },
+    {
+      "start": 512,
+      "end": 516,
+      "kind": "layout"
+    },
+    {
+      "start": 516,
+      "end": 796,
+      "kind": "author"
+    },
+    {
+      "start": 796,
+      "end": 817,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 817,
+      "end": 858,
+      "kind": "author"
+    },
+    {
+      "start": 858,
+      "end": 881,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 881,
+      "end": 882,
+      "kind": "author"
+    },
+    {
+      "start": 882,
+      "end": 886,
+      "kind": "layout"
+    },
+    {
+      "start": 886,
+      "end": 1021,
+      "kind": "author"
+    },
+    {
+      "start": 1021,
+      "end": 1025,
+      "kind": "layout"
+    },
+    {
+      "start": 1025,
+      "end": 1375,
+      "kind": "author"
+    },
+    {
+      "start": 1375,
+      "end": 1396,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1396,
+      "end": 1482,
+      "kind": "author"
+    },
+    {
+      "start": 1482,
+      "end": 1486,
+      "kind": "layout"
+    },
+    {
+      "start": 1486,
+      "end": 1525,
+      "kind": "author"
+    },
+    {
+      "start": 1525,
+      "end": 1529,
+      "kind": "layout"
+    },
+    {
+      "start": 1529,
+      "end": 1545,
+      "kind": "author"
+    },
+    {
+      "start": 1545,
+      "end": 1549,
+      "kind": "layout"
+    },
+    {
+      "start": 1549,
+      "end": 1775,
+      "kind": "author"
+    },
+    {
+      "start": 1775,
+      "end": 1788,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1788,
+      "end": 1790,
+      "kind": "author"
+    },
+    {
+      "start": 1790,
+      "end": 1802,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1802,
+      "end": 1803,
+      "kind": "author"
+    },
+    {
+      "start": 1803,
+      "end": 1883,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1883,
+      "end": 1884,
+      "kind": "author"
+    },
+    {
+      "start": 1884,
+      "end": 1888,
+      "kind": "layout"
+    },
+    {
+      "start": 1888,
+      "end": 2847,
+      "kind": "author"
+    },
+    {
+      "start": 2847,
+      "end": 2925,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2925,
+      "end": 2964,
+      "kind": "author"
+    },
+    {
+      "start": 2964,
+      "end": 3124,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3124,
+      "end": 3125,
+      "kind": "author"
+    },
+    {
+      "start": 3125,
+      "end": 3129,
+      "kind": "layout"
+    },
+    {
+      "start": 3129,
+      "end": 3380,
+      "kind": "author"
+    },
+    {
+      "start": 3380,
+      "end": 3384,
+      "kind": "layout"
+    },
+    {
+      "start": 3384,
+      "end": 3462,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 3462,
+      "end": 3463,
+      "kind": "author"
+    },
+    {
+      "start": 3463,
+      "end": 3475,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3475,
+      "end": 3476,
+      "kind": "author"
+    },
+    {
+      "start": 3476,
+      "end": 3480,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 20,
+    "layout": 12,
+    "apparatus": 10
+  },
+  "char_totals": {
+    "author": 2934,
+    "layout": 48,
+    "apparatus": 498
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 7,
+    "verse_ref": 2,
+    "editor_bracket": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 395,
+    "verse_ref": 25,
+    "editor_bracket": 78
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 13
+    },
+    "footnote_open": 7,
+    "footnote_close": 7,
+    "footnotes_closed": 7,
+    "bracket_total": 3,
+    "bracket_pattern_classes": {
+      "verse_ref": 2,
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[الأنفال: 75]": 1,
+      "[الأحزاب: 6]": 1
+    },
+    "other_brackets": {
+      "[آخر تفسيرِ سورةِ \"الأنفالِ\". والحمد لله وحدَه، وصلى الله على سيدنا محمد وآله]": 1
+    }
+  }
+}

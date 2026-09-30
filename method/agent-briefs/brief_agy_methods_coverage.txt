@@ -1,0 +1,12 @@
+RESEARCH/REVIEW TASK. Do NOT edit any existing file; do not commit/push/delete. Write ONLY method/METHODS_COVERAGE.md.
+Inputs (read them fully; PDF text may need OCR — use Python PyMuPDF text first, and render pages to images and read them visually if text is missing):
+- <REFERENCES>/lمشجرات_وخرائط_كتاب_مناهج_المُفسّرين.pdf (mind maps of a book on commentators' methods)
+- <REFERENCES>/ (reference images, not in repo)
+- Our taxonomy: method/taxonomy.md, method/design_v2.md, method/classifier_prompt_v2.md, docs/DATA_FORMAT.md (method labels M_QURAN, M_SUNNAH, M_SAHABA, M_TABIIN, M_LUGHA, M_QIRAAT, M_NUZUL, M_SIRA, M_ISRAILIYYAT, M_RAY; content labels C_FIQH, C_BALAGHA, C_SHIR, C_FADAIL, C_TAKHRIJ, C_NUZUL, C_ISRAILIYYAT, C_TAFSIR).
+DELIVER in METHODS_COVERAGE.md (Arabic, ≤ 900 words):
+1. The book's structure: the classification of tafsir methods/sources it presents (main branches and sub-branches), with page numbers. Quote section titles exactly (short quotes only).
+2. Coverage table: each category in the book → our matching label (method or content) → status: مغطّى / مغطّى جزئياً / غير مغطّى → note.
+3. Gaps: categories we do not cover (e.g. الناسخ والمنسوخ، الإعراب، المناسبات، أحكام فقهية، العقيدة والرد على المخالفين، التفسير الإشاري، التفسير العلمي…), each with: is it a METHOD (source of interpretation) or a CONTENT type? can it be detected with textual markers? how sensitive (needs specialist)?
+4. Recommendation: which (at most 3–4) additions are worth adding for the build days with al-Tabari, and which stay on the roadmap; proposed label code + Arabic name + 2–3 textual markers each.
+5. What the two images show (describe briefly) and how they relate.
+Never invent page numbers or quotes; if unreadable, say so.

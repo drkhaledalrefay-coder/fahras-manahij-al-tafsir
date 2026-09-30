@@ -1,0 +1,393 @@
+{
+  "window_id": "8_33",
+  "ayah": "8:33",
+  "span_count": 32,
+  "family_counts": {
+    "QURAN": 2,
+    "HADITH": 3,
+    "NUZUL": 2,
+    "SAHABA": 3,
+    "SIRA": 1,
+    "TABIIN": 3,
+    "LUGHA": 2,
+    "EDITOR": 11
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 0,
+          "end": 17,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 19,
+          "end": 73,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 423,
+          "end": 455,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1430,
+          "end": 1462,
+          "span_id": "s010"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 1592,
+          "end": 1601,
+          "span_id": "s010"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 1592,
+          "end": 1609,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1839,
+          "end": 1852,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 2276,
+          "end": 2288,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "أبو موسى الأشعري",
+          "name": "أبو موسى الأشعري",
+          "role": "SPEAKER",
+          "start": 2299,
+          "end": 2324,
+          "span_id": "s017"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2488,
+          "end": 2520,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    },
+    {
+      "span_id": "s021",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "name": "قتادة",
+          "role": "SPEAKER",
+          "start": 3257,
+          "end": 3265,
+          "span_id": "s021"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 3282,
+          "end": 3290,
+          "span_id": "s021"
+        }
+      ]
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 3351,
+          "end": 3356,
+          "span_id": "s022"
+        }
+      ]
+    },
+    {
+      "span_id": "s023",
+      "markers": []
+    },
+    {
+      "span_id": "s024",
+      "markers": []
+    },
+    {
+      "span_id": "s025",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 3719,
+          "end": 3727,
+          "span_id": "s025"
+        }
+      ]
+    },
+    {
+      "span_id": "s026",
+      "markers": []
+    },
+    {
+      "span_id": "s027",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 3872,
+          "end": 3885,
+          "span_id": "s027"
+        }
+      ]
+    },
+    {
+      "span_id": "s028",
+      "markers": []
+    },
+    {
+      "span_id": "s029",
+      "markers": []
+    },
+    {
+      "span_id": "s030",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 4180,
+          "end": 4188,
+          "span_id": "s030"
+        }
+      ]
+    },
+    {
+      "span_id": "s031",
+      "markers": []
+    },
+    {
+      "span_id": "s032",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 626,
+      "end": 723,
+      "text": "¬جاء السياق في الطبري هكذا: \"وقال حين نعى عليهم سوء أعمالهم: \"وما كان الله ليعذبهم. . \" وهو أتم.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1025,
+      "end": 1066,
+      "text": "¬أخرجه الطبري في التفسير: 13/ 512 - 513.¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1807,
+      "end": 1831,
+      "text": "¬الطبري: 13/ 510 - 511.¥",
+      "attached_span_id": "s011",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2125,
+      "end": 2143,
+      "text": "¬الطبري: 13/ 511.¥",
+      "attached_span_id": "s014",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2595,
+      "end": 2744,
+      "text": "¬أخرجه الترمذي في التفسير: 8/ 472 - 473 مرفوعا وقال: \"هذا حديث غريب وإسماعيل بن إبراهيم يضعف في الحديث\". وأخرجه الطبري موقوفا على أبي موسى: 13/ 513.¥",
+      "attached_span_id": "s017",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2898,
+      "end": 2916,
+      "text": "¬الطبري: 13/ 511.¥",
+      "attached_span_id": "s018",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3229,
+      "end": 3247,
+      "text": "¬الطبري: 13/ 512.¥",
+      "attached_span_id": "s020",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3502,
+      "end": 3520,
+      "text": "¬الطبري: 13/ 514.¥",
+      "attached_span_id": "s023",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3825,
+      "end": 3843,
+      "text": "¬الطبري: 13/ 515.¥",
+      "attached_span_id": "s026",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3973,
+      "end": 3991,
+      "text": "¬الطبري: 13/ 516.¥",
+      "attached_span_id": "s028",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 4257,
+      "end": 4782,
+      "text": "¬قال الطبري رحمه الله: 13/ 517 \"وأولى هذه الأقوال عندي في ذلك بالصواب، قول من قال: تأويله: \"وما كان الله ليعذبهم وأنت فيهم\" يا محمد، وبين أظهرهم مقيم، حتى أخرجك من بين أظهرهم، لأني لا أهلك قرية وفيها نبيها - \"وما كان الله معذبهم وهم يستغفرون\"، من ذنوبهم وكفرهم، ولكنهم لا يستغفرون من ذلك، بل هم مصرون عليه، فهم للعذاب مستحقون ثم قيل: \"وما لهم ألا يعذبهم الله وهم يصدون عن المسجد الحرام\" بمعنى: وما شأنهم، وما يمنعهم أن يعذبهم الله وهم لا يستغفرون الله من كفرهم فيؤمنوا به، وهم يصدون المؤمنين بالله ورسوله عن المسجد الحرام\"؟.¥",
+      "attached_span_id": "s031",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

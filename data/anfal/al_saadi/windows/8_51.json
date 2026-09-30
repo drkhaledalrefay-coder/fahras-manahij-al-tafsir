@@ -1,0 +1,40 @@
+{
+  "window_id": "8_51",
+  "tafsir_id": "al_saadi",
+  "ayah": "8:51",
+  "surah": 8,
+  "ayah_number": 51,
+  "source": "tafsircenter",
+  "source_file": "data/anfal/al_saadi/raw/8_51.txt",
+  "source_sha256": "cbc6db6ac21180d9dc6f4839bb8ddf9a82b7183afb14d39eca6906266befad76",
+  "window_start": 0,
+  "window_end": 198,
+  "window_text": "{ذَلِكَ بِمَا قَدَّمَتْ أَيْدِيكُمْ وَأَنَّ اللَّهَ لَيْسَ بِظَلَّامٍ لِلْعَبِيدِ (51)}.\n{51} ذلك العذاب حصل لكم غير ظلم ولا جور من ربكم، وإنما هو بما قدَّمت أيديكم من المعاصي التي أثرت لكم ما أثرت.",
+  "span_count": 2,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 88,
+      "text": "{ذَلِكَ بِمَا قَدَّمَتْ أَيْدِيكُمْ وَأَنَّ اللَّهَ لَيْسَ بِظَلَّامٍ لِلْعَبِيدِ (51)}."
+    },
+    {
+      "id": "s002",
+      "start": 88,
+      "end": 198,
+      "text": "\n{51} ذلك العذاب حصل لكم غير ظلم ولا جور من ربكم، وإنما هو بما قدَّمت أيديكم من المعاصي التي أثرت لكم ما أثرت."
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s002",
+    "start_index": 0,
+    "end_index": 1,
+    "char_length": 198,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

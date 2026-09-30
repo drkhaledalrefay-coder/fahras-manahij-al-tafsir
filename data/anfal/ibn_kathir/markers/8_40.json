@@ -1,0 +1,318 @@
+{
+  "window_id": "8_40",
+  "ayah": "8:40",
+  "span_count": 15,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 2,
+    "HADITH": 16,
+    "ISNAD": 3,
+    "SIRA": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 100,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 110,
+          "end": 210,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 211,
+          "end": 214,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 375,
+          "end": 380,
+          "span_id": "s004"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 375,
+          "end": 410,
+          "stripped": "حدثنا أبي، حدثنا أبان العطار، حدثنا",
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 386,
+          "end": 391,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 405,
+          "end": 410,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "SIRA",
+          "marker": "خرج رسول الله",
+          "start": 582,
+          "end": 595,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 598,
+          "end": 616,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 694,
+          "end": 712,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1386,
+          "end": 1404,
+          "span_id": "s006"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 1456,
+          "end": 1460,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1648,
+          "end": 1666,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1888,
+          "end": 1906,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1983,
+          "end": 2001,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2181,
+          "end": 2199,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2410,
+          "end": 2428,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2673,
+          "end": 2691,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2798,
+          "end": 2816,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 3058,
+          "end": 3076,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 3155,
+          "end": 3173,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 3229,
+          "end": 3308,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 3434,
+          "end": 3438,
+          "span_id": "s013"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 3439,
+          "end": 3480,
+          "stripped": "عن يونس بن عبد الأعلى، عن ابن وهب، عن عبد",
+          "span_id": "s013"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 3502,
+          "end": 3533,
+          "stripped": "عن أبيه، عن عروة بن الزبير، أنه",
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2465,
+      "end": 2506,
+      "text": "¬كذا في تفسير الطبري، وفي الأصل: توامرت.¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3309,
+      "end": 3429,
+      "text": "¬أخرجه الطبري بسنده ومتنه، وصحح سنده الأستاذ محمود شاكر ولقد أشار إلى كتاب عروة في السيرة، وعزم أن يجمعه - رحمه الله -.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3594,
+      "end": 3698,
+      "text": "¬أخرجه الطبري عن يونس بسنده مختصرًا على مطلع كتاب عروة. والسند الأول أقوى، وصححه الحافظ ابن كثير أيضًا.¥",
+      "attached_span_id": "s014",
+      "grading": [
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 375,
+      "end": 410,
+      "span_id": "s004",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 3439,
+      "end": 3480,
+      "span_id": "s013",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 3502,
+      "end": 3533,
+      "span_id": "s013",
+      "marker": "عن…عن"
+    }
+  ]
+}

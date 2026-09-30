@@ -1,0 +1,131 @@
+{
+  "window_id": "8_69",
+  "ayah": "8:69",
+  "span_count": 6,
+  "family_counts": {
+    "QURAN": 2,
+    "HADITH": 5,
+    "SAHABA": 2,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 26,
+          "end": 121,
+          "span_id": "s001"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 204,
+          "end": 236,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 293,
+          "end": 321,
+          "span_id": "s002"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "جابر",
+          "name": "جابر",
+          "role": "NARRATOR",
+          "start": 349,
+          "end": 355,
+          "span_id": "s002"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن النبي",
+          "start": 379,
+          "end": 393,
+          "span_id": "s002"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 396,
+          "end": 428,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 650,
+          "end": 661,
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "أبو هريرة",
+          "name": "أبو هريرة",
+          "role": "SPEAKER",
+          "start": 890,
+          "end": 905,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 914,
+          "end": 934,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 497,
+      "end": 648,
+      "text": "¬أخرجه البخاري في التيمم: 1/ 435 - 436، وفي المساجد، والجهاد، ومسلم في المساجد ومواضع الصلاة، برقم (521): 1/ 370 - 371، والمصنف في شرح السنة: 13/ 196.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1063,
+      "end": 1223,
+      "text": "¬أخرجه البخاري في فرض الخمس، باب \"لم تحل الغنائم لأحد من قبلنا. . . \" 6/ 220، ومسلم مطولا، واللفظ له، في الجهاد، باب تحليل الغنائم. . . (1747): 3/ 1366 - 1367.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

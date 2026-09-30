@@ -1,0 +1,123 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_10.txt",
+  "ayah": "8:10",
+  "surah": 8,
+  "ayah_number": 10,
+  "source_char_length": 2701,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 948,
+      "kind": "author"
+    },
+    {
+      "start": 948,
+      "end": 954,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 954,
+      "end": 1202,
+      "kind": "author"
+    },
+    {
+      "start": 1202,
+      "end": 1212,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1212,
+      "end": 1757,
+      "kind": "author"
+    },
+    {
+      "start": 1757,
+      "end": 1768,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1768,
+      "end": 2004,
+      "kind": "author"
+    },
+    {
+      "start": 2004,
+      "end": 2012,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2012,
+      "end": 2258,
+      "kind": "author"
+    },
+    {
+      "start": 2258,
+      "end": 2299,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2299,
+      "end": 2599,
+      "kind": "author"
+    },
+    {
+      "start": 2599,
+      "end": 2605,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2605,
+      "end": 2701,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 7,
+    "layout": 0,
+    "apparatus": 6
+  },
+  "char_totals": {
+    "author": 2619,
+    "layout": 0,
+    "apparatus": 82
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 4,
+    "verse_ref": 1,
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 30,
+    "verse_ref": 11,
+    "footnote": 41
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 5,
+    "bracket_pattern_classes": {
+      "other_bracket": 4,
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[القصص: 43]": 1
+    },
+    "other_brackets": {
+      "[محمد]": 1,
+      "[آل عمران]": 1,
+      "[التوبة]": 1,
+      "[غافر]": 1
+    }
+  }
+}

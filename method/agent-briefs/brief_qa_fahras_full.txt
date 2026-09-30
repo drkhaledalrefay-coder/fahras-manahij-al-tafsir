@@ -1,0 +1,23 @@
+FULL QA TEST of web/fahras.html. TEST ONLY: do NOT edit any file in src/, web/, data/, deck/ (except writing your outputs). Do NOT commit. Outputs: deck/qa/QA_REPORT.md and screenshots in deck/qa/shots/.
+Setup: python -m http.server 8791 --directory web ; drive the page with headless Chrome via Python (use playwright if installed: `pip install playwright` then `python -m playwright install chromium`; otherwise Chrome DevTools Protocol with C:/Program Files/Google/Chrome/Application/chrome.exe). Capture console errors for every step.
+
+Run EVERY test below in: (a) light desktop 1440×900, (b) dark desktop 1440×900, (c) light phone 390×844. Mark PASS/FAIL with evidence (screenshot file or DOM value).
+T1 Load: no console errors; title «فهرس مناهج التفسير»; no horizontal scroll (document.documentElement.scrollWidth <= clientWidth).
+T2 Tafsir dropdown: switch ابن كثير → الطبري → السعدي → البغوي; text changes; highlights present (count > 0 except where data has none → an empty-state sentence visible).
+T3 Verse dropdown: all 3 verses for each tafsir (12 combinations): page renders, highlight count reported.
+T4 Model dropdown: shows only annotators available for the window; al_tabari 2:255 default = MiMo; ابن كثير shows Codex + DeepSeek and switching changes highlight count.
+T5 Methods panel: click one method → only its passages emphasised; «الكل» / «لا شيء» work; counts «أساسي n · مساعد m» match number of highlights.
+T6 Highlight click → drawer «لماذا هذا التمييز؟» opens with rationale, certainty, evidence; «وميض الدليل» works; close works (button + Esc).
+T7 «اعرض الأصل بجانبه»: for ALL 12 tafsir×verse windows the banner says «✅ الصفحتان متطابقتان حرفاً بحرف» (report any mismatch with offset).
+T8 In-page fidelity self-test result in DOM = PASS 12/12.
+T9 «ابدأ المراجعة»: review tools appear; select a few words in author text → method palette → add highlight → «قارن بالمصدر» shows exact slice + ✅ → «اعتماد» enabled only after compare → status becomes «معتمد» (✓ badge visible). Try selecting inside an editor footnote (text starting with ¬) → refused with the Arabic message.
+T10 Boundary tools: «+ كلمة قبل», «− أول كلمة», «+ كلمة بعد», «− آخر كلمة», «توسيع إلى الجملة التالية», «استعادة اقتراح الآلة» each change start/end as expected and keep fidelity.
+T11 «تصدير ▾»: each export opens a panel with JSON; the approved-record JSON validates against schema/annotation.schema.json (python jsonschema) and its "text" equals the raw source slice.
+T12 Help «؟ دليل الواجهة»: opens, all tabs (incl. «كيف يعمل الموقع», «المصادر والتراخيص») readable; Esc closes.
+T13 Text size «أ− / أ+»: changes tafsir text size; persists after reload.
+T14 Theme toggle: switches light/dark; all text readable (sample 10 text elements, compute contrast ≥ 4.5:1).
+T15 Collapsed sections («ملخص النتائج», «طابور المراجعة») open/close; counts shown.
+T16 Keyboard: Tab reaches header controls with visible focus ring; Esc closes drawer/help.
+T17 Visual sanity: highlights are soft backgrounds + thin underline (no heavy boxes); no overlapping/clipped text in the 9 screenshots you save (light/dark/phone × Ibn Kathir, al-Tabari side-by-side, drawer open).
+
+QA_REPORT.md (≤ 400 words): table test × mode → PASS/FAIL, list of FAILs with exact steps to reproduce + screenshot file, console errors list, overall verdict «جاهز / غير جاهز».

@@ -1,0 +1,220 @@
+{
+  "window_id": "8_18",
+  "ayah": "8:18",
+  "span_count": 14,
+  "family_counts": {
+    "QURAN": 7,
+    "QIRAAT": 6,
+    "HADITH": 1,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 28,
+          "end": 88,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 118,
+          "end": 128,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 278,
+          "end": 324,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 524,
+          "end": 568,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 569,
+          "end": 582,
+          "text": "[الأنفال: 14]",
+          "via": "apparatus",
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 633,
+          "end": 636,
+          "span_id": "s009"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 641,
+          "end": 646,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 654,
+          "end": 663,
+          "span_id": "s010"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 666,
+          "end": 669,
+          "span_id": "s010"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 678,
+          "end": 681,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 842,
+          "end": 846,
+          "span_id": "s011"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 857,
+          "end": 860,
+          "span_id": "s011"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 873,
+          "end": 882,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1098,
+          "end": 1128,
+          "span_id": "s014"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 427,
+      "end": 469,
+      "text": "¬فى النسخ: \"و\". والمثبت ما يقتضيه السياق.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 602,
+      "end": 614,
+      "text": "¬تقدم ص 74.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 746,
+      "end": 812,
+      "text": "¬قرأ بها ابن كثير ونافع وأبو عمرو. ينظر السبعة في القراءات ص 304.¥",
+      "attached_span_id": "s010",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 883,
+      "end": 946,
+      "text": "¬قرأ بها ابن عامر وحمزة والكسائى وأبو بكر وعاصم. السابق ص 305.¥",
+      "attached_span_id": "s011",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

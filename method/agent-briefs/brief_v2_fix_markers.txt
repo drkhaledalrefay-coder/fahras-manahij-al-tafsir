@@ -1,0 +1,17 @@
+TASK: Fix false-negative attribution markers (Sahabah / Tabi'in) in the v2 marker layer and verifier. Edit ONLY src/v2_markers.py, src/v2_verify.py, method/markers_v2.md. Another agent is editing src/methods_template.html — do not touch it or any UI file. Do NOT modify data/raw, data/spans*, data/layers, data/v2/moves. Do NOT commit.
+
+EVIDENCE (reviewer inspected data/v2/verified/codex/2_255_tafsir.json): six moves the classifier labeled correctly were downgraded to score 59 with rule_M_SAHABA_missing_marker / rule_M_TABIIN_missing_marker because the marker layer missed Ibn Kathir's actual phrasing:
+- m20: «وقال السدي: السموات والأرض في جوف الكرسي…» — verb BEFORE the name. Current rule expects the name followed by «قال».
+- m14: «وروي عن سعيد بن جبير مثله» — pattern «روي عن X» / «رُوي عن X» / «وروي عن X» not covered.
+- m21: «وقال الضحاك: عن ابن عباس: …» — a Tabi'i transmitting a Companion's saying; the Companion (last name before the statement) is the speaker.
+- m13, m17: chains «حدثنا … عن … عن ابن عباس … قال:» — the ISNAD rule flags every name in the chain as a narrator; but the TERMINAL name of the chain immediately before «قال» / «في قوله» / «أنه قال» / the quoted statement is the SOURCE (speaker), not merely a narrator.
+- m28: «وروى ابن جرير من طريق جويبر، عن الحسن…» — «من طريق X عن Y» where Y is the source.
+
+FIX
+1. Attribution markers must accept both orders and these forms (normalized, tashkeel-insensitive): «(و)?قال X», «X قال», «عن X قال», «عن X أنه قال», «عن X في قوله», «(و)?روي عن X», «وكذا قال X», «وهكذا قال X», «ونحوه عن X», «مثله عن X», «وهو قول X», «قاله X», «من طريق … عن X». Keep the Companion and Tabi'i name lists; extend Tabi'i list with: الضحاك، السدي، الحسن البصري، أبو مالك، زيد بن أسلم، ابن جريج، محمد بن كعب القرظي، إبراهيم النخعي، الشعبي، علي بن أبي طلحة (as transmitter note), and Companions with: أبو موسى الأشعري، عبد الله بن عمرو، أبو أمامة.
+2. ISNAD handling: within a detected chain, mark all names as narrators EXCEPT the terminal source name (the last name before the statement marker); emit it as a SPEAKER marker with family SAHABA or TABIIN by list membership. If the terminal name is the Prophet ﷺ, emit HADITH instead.
+3. Verifier: M_SAHABA / M_TABIIN pass the marker rule when a SPEAKER marker of the right family exists in the move's evidence spans OR in the span immediately preceding the first evidence span (attributions often sit one span before the quoted words). Keep the rule that a name appearing ONLY as a mid-chain narrator does not satisfy it.
+4. Keep the "rule_editor_only_evidence" check, but it must not fire when an author-layer SPEAKER marker exists.
+5. Re-run: python src/v2_markers.py ; python src/v2_verify.py — do NOT re-run the classifier; data/v2/moves stays as is.
+
+GATES: paste before/after for moves m13, m14, m17, m20, m21, m28 (score, flags, route); new per-family marker counts per window; reports/v2_summary.md totals before/after. Make sure no move that previously passed now fails without reason (list any changes). Do not commit.

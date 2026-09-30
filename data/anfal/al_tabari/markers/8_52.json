@@ -1,0 +1,137 @@
+{
+  "window_id": "8_52",
+  "ayah": "8:52",
+  "span_count": 11,
+  "family_counts": {
+    "QURAN": 4,
+    "ISNAD": 1,
+    "SAHABA": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 28,
+          "end": 188,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 598,
+          "end": 632,
+          "stripped": "عن جابر، عن عامر ومجاهد وعطاء:",
+          "span_id": "s007"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "جابر",
+          "name": "جابر",
+          "role": "NARRATOR",
+          "start": 601,
+          "end": 605,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 633,
+          "end": 658,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 708,
+          "end": 744,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 853,
+          "end": 876,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 371,
+      "end": 400,
+      "text": "¬في ص، ت 1، ت 2، س: \"فعلنا\".¥",
+      "attached_span_id": "s002",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 517,
+      "end": 534,
+      "text": "¬تقدم في 5/ 237.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 598,
+      "end": 632,
+      "span_id": "s007",
+      "marker": "عن…عن"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+=== PROJECT CONTEXT (read first; applies to every task below) ===
+
+PROJECT: AI-assisted indexing of tafsir by interpretive methodology, for an Islamic AI hackathon (Track: knowledge & verification tools). Registration closes tomorrow; the 3-day build is Oct 4–6. Judges: idea-screening weights = problem fit 25%, reliability/scientific-integrity plan 20%, appropriate AI use 15%, feasibility in 3 days 15%, originality 15%, team 10%.
+
+CLARIFIED PRODUCT (from the team):
+- ONE tafsir source: Tafsir Ibn Kathir, digital text from Tafsir Center (Hugging Face dataset tafsircenter/tafsir-mcp-data, table tafsir_katheer, license CC BY 4.0). Not comparing tafsirs against each other.
+- UI: the tafsir page on one side; on the other side a methodology index panel (Qur'an-by-Qur'an, Sunnah, Sahabah, Tabi'in, language/gharib, qira'at, sabab al-nuzul, maghazi/sirah, isra'iliyyat, ra'y/ijtihad...). Selecting a methodology color-highlights every passage of that type on the tafsir page (some printed books already color-code like this).
+- The AI performs the indexing. THE CORE CHALLENGE: prove why the AI chose a label, and define exactly when the case goes back to a human specialist.
+- B2B vision: an open-source tool given to centers like Tafsir Center; their specialist confirms/corrects using the same color workflow. Reference works that adjudicated disputed cases (e.g. whether a report is a Companion's or a Successor's statement, marfu' vs mawquf, hadith grading) should be usable as evidence.
+
+ALREADY BUILT (reuse, do not redesign from scratch):
+- Code-only download of the source, sha256-pinned; the AI never writes or retypes text. Text is cut by CODE into numbered spans; annotators return span IDs + tags only; units are rebuilt from the pinned source and verified verbatim (100% in pilot).
+- The digital text embeds the EDITOR's apparatus inline: footnotes delimited ¬...¥ (hadith takhrij and gradings like «وسنده صحيح», manuscript variants), verse refs like [النساء: 166], and other [ ... ] insertions of uncertain provenance. Code already separates author vs editor layers. KEY IDEA: editor footnotes are NOT Ibn Kathir's words, but they are ready-made scholarly adjudication (hadith grading, source identification) usable as an EVIDENCE layer.
+- Ibn Kathir's own introduction adopts the known hierarchy of the best methods of tafsir (Qur'an by Qur'an, then Sunnah, then Sahabah, then Tabi'in) — a methodological authority from the author himself (verify wording and location in the source before quoting).
+- Pilot: 3 ayat (2:255, 17:105, 2:102), 143 spans; two annotators from different model families agreed on source/method tag on 91% of spans, content tag 69%; disagreements and sensitive tags routed to a specialist queue. Existing taxonomy: method/taxonomy.md (read it). Existing two-pane review screen and searchable index: web/app.html.
+- Tools available: frontier models via CLI agents (several families), Python stdlib pipeline, static HTML/JSON front end. No GPU cluster. Small budget.
+
+HARD CONSTRAINTS:
+- The model must never be the source of text. Classification must be evidence-grounded: every label cites the span IDs that constitute its evidence.
+- The system must be able to refuse to classify.
+- Do not claim novelty or cite a reference work unless verified; mark anything unverified as "غير مؤكد".
+- Distinguish what must be done for the HACKATHON (3 days) from the ROADMAP.

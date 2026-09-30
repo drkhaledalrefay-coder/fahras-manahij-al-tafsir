@@ -1,0 +1,25 @@
+TASK B2: You are the single CLASSIFIER in an evidence-grounded tafsir methodology index. Classify the windows of ONE tafsir, given as TAFSIR below. Do NOT commit. Write ONLY the output files listed; modify nothing else. Do not run any other script except the validation command.
+
+TAFSIR = al_baghawi
+
+READ FIRST: method/classifier_prompt_v2.md (instructions, definitions, certainty rules, OUTPUT SCHEMA) and method/design_v2.md section 1. The prompt was written for Ibn Kathir: wherever it says «ابن كثير», read it as "the author of this tafsir" (the packet states the tafsir name). Apply every rule unchanged.
+
+INPUT → OUTPUT (same file names):
+- if TAFSIR = ibn_kathir: data/v2/packets/{17_105,2_255_tafsir,2_102}.json → data/v2/moves/deepseek/<same name>.json
+- otherwise: data/multi/TAFSIR/packets/{17_105,2_255,2_102}.json → data/multi/TAFSIR/moves/deepseek/<same name>.json
+
+ONLY WINDOW: classify ONLY the window 17_105 (input packets/17_105.json → moves/deepseek/17_105.json). Ignore the other windows.
+RESUME RULE: if an output file already exists AND loads as JSON AND every span ID in it exists in its packet, SKIP that window. Otherwise (re)write it. Do windows smallest-first (17_105, then 2_102, then 2_255).
+
+NON-NEGOTIABLE RULES
+1. Refer to text ONLY by span IDs from the packet. Never copy, retype, or paraphrase the Arabic source. rationale_ar ≤ 25 words, your own words, no quotation longer than 4 consecutive source words.
+2. Classify FUNCTION, not words: a verse quoted inside a hadith is not M_QURAN; a Companion/Successor name inside an isnad is not M_SAHABA/M_TABIIN; strangeness alone is not M_ISRAILIYYAT; historical background without a revelation link is not M_NUZUL.
+3. Every move cites evidence_span_ids. No evidence → certainty "insufficient".
+4. Spans labeled حاشية/إضافة المحقق are NOT the author's words: they may support attribution or hadith grading only, never create a method.
+5. Pure takhrij → primary null with content_tags ["C_TAKHRIJ"].
+6. Moves must not overlap; they need not cover every span.
+7. Be conservative with "explicit".
+
+VALIDATE (run and paste output): python -c that loads each written file and checks every span ID exists in its packet and moves do not overlap.
+
+FINAL MESSAGE (≤ 250 words): per window — number of moves, count per primary method, count per certainty; the 2 hardest cases and why.

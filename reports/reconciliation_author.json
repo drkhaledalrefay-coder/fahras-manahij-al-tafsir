@@ -1,0 +1,566 @@
+{
+  "ayahs": [
+    {
+      "ayah": "2:255",
+      "surah": 2,
+      "ayah_number": 255,
+      "length_a_full": 27301,
+      "length_a_author": 22205,
+      "length_b": 21450,
+      "similarity_ratio_l1_before": 0.874407,
+      "similarity_ratio_l1_after": 0.977747,
+      "exact_match_l1_author": false,
+      "word_diff_l1_regions": [
+        {
+          "op": "delete",
+          "a_word_pos": 0,
+          "b_word_pos": 0,
+          "a_text": "الله لا إله إلا هو الحي القيوم لا تأخذه سنة ولا نوم له ما في السماوات وما في الأرض من ذا الذي يشفع عنده إلا بإذنه يعلم ما بين أيديهم وما خلفهم ولا يحيطون بشيء من علمه إلا بما شاء وسع كرسيه السماوات والأرض ولا يئوده حفظهما وهو العلي العظيم",
+          "b_text": ""
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 56,
+          "b_word_pos": 6,
+          "a_text": "وقد",
+          "b_text": "قد"
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 117,
+          "b_word_pos": 67,
+          "a_text": "",
+          "b_text": "أبي"
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 226,
+          "b_word_pos": 177,
+          "a_text": "",
+          "b_text": "قال"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 236,
+          "b_word_pos": 188,
+          "a_text": "أنسي",
+          "b_text": "إنسي"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 239,
+          "b_word_pos": 191,
+          "a_text": "قال",
+          "b_text": "قلت"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 244,
+          "b_word_pos": 196,
+          "a_text": "يده",
+          "b_text": ""
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 269,
+          "b_word_pos": 220,
+          "a_text": "بلغنى",
+          "b_text": "بلغني"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 282,
+          "b_word_pos": 233,
+          "a_text": "أبي",
+          "b_text": ""
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 296,
+          "b_word_pos": 246,
+          "a_text": "",
+          "b_text": "صلى الله عليه وسلم"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 340,
+          "b_word_pos": 294,
+          "a_text": "الحاكم",
+          "b_text": ""
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 346,
+          "b_word_pos": 299,
+          "a_text": "آخر",
+          "b_text": "أخرى"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 391,
+          "b_word_pos": 344,
+          "a_text": "الله",
+          "b_text": ""
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 404,
+          "b_word_pos": 356,
+          "a_text": "الحي القيوم",
+          "b_text": ""
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 434,
+          "b_word_pos": 384,
+          "a_text": "الأسقع",
+          "b_text": "الأسفع"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 444,
+          "b_word_pos": 394,
+          "a_text": "القرطيسي",
+          "b_text": "القراطيسي"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 465,
+          "b_word_pos": 415,
+          "a_text": "الأسقع",
+          "b_text": "الأسفع"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 470,
+          "b_word_pos": 420,
+          "a_text": "الأسقع",
+          "b_text": "الأسفع"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 474,
+          "b_word_pos": 424,
+          "a_text": "يقولإن",
+          "b_text": "يقول إن"
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 480,
+          "b_word_pos": 431,
+          "a_text": "",
+          "b_text": "جاءهم"
+        }
+      ],
+      "word_diff_l1_region_count": 20,
+      "editor_bracket_count": 4,
+      "editor_brackets": [
+        {
+          "start": 6739,
+          "end": 6787,
+          "text": "[والغول في لغة العرب: الجانّ إذا تبدَى في الليل]"
+        },
+        {
+          "start": 20527,
+          "end": 20533,
+          "text": "[مريم]"
+        },
+        {
+          "start": 20743,
+          "end": 20750,
+          "text": "[النجم]"
+        },
+        {
+          "start": 21500,
+          "end": 21506,
+          "text": "[مريم]"
+        }
+      ]
+    },
+    {
+      "ayah": "17:105",
+      "surah": 17,
+      "ayah_number": 105,
+      "length_a_full": 570,
+      "length_a_author": 557,
+      "length_b": 550,
+      "similarity_ratio_l1_before": 0.976842,
+      "similarity_ratio_l1_after": 0.964856,
+      "exact_match_l1_author": false,
+      "word_diff_l1_regions": [
+        {
+          "op": "insert",
+          "a_word_pos": 26,
+          "b_word_pos": 26,
+          "a_text": "",
+          "b_text": "النساء 166"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 43,
+          "b_word_pos": 45,
+          "a_text": "وصل",
+          "b_text": "ووصل"
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 67,
+          "b_word_pos": 69,
+          "a_text": "",
+          "b_text": "القوي"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 71,
+          "b_word_pos": 74,
+          "a_text": "الملأ",
+          "b_text": "الملإ"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 80,
+          "b_word_pos": 83,
+          "a_text": "مبشرا ونذيرا",
+          "b_text": ""
+        }
+      ],
+      "word_diff_l1_region_count": 5,
+      "editor_bracket_count": 0,
+      "editor_brackets": []
+    },
+    {
+      "ayah": "2:102",
+      "surah": 2,
+      "ayah_number": 102,
+      "length_a_full": 55756,
+      "length_a_author": 37842,
+      "length_b": 37212,
+      "similarity_ratio_l1_before": 0.803646,
+      "similarity_ratio_l1_after": 0.948928,
+      "exact_match_l1_author": false,
+      "word_diff_l1_regions": [
+        {
+          "op": "replace",
+          "a_word_pos": 0,
+          "b_word_pos": 0,
+          "a_text": "واتبعوا ما تتلو الشياطين على ملك سليمان وما كفر سليمان ولكن الشياطين كفروا يعلمون الناس السحر وما أنزل على الملكين ببابل هاروت وماروت وما يعلمان من أحد حتى يقولا إنما نحن فتنة فلا تكفر فيتعلمون منهما ما يفرقون به بين المرء وزوجه وما هم بضارين به من أحد إلا بإذن الله ويتعلمون ما يضرهم ولا ينفعهم ولقد علموا لمن اشتراه ما له في الآخرة من خلاق ولبئس ما شروا به أنفسهم لو كانوا يعلمون وقال",
+          "b_text": "قال"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 121,
+          "b_word_pos": 47,
+          "a_text": "وأن",
+          "b_text": "أوان"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 151,
+          "b_word_pos": 77,
+          "a_text": "أخفاه منا",
+          "b_text": "وأخفاه عنا"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 159,
+          "b_word_pos": 85,
+          "a_text": "تعالى",
+          "b_text": ""
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 184,
+          "b_word_pos": 109,
+          "a_text": "",
+          "b_text": "أي"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 186,
+          "b_word_pos": 112,
+          "a_text": "تتلوا",
+          "b_text": "تتلو"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 240,
+          "b_word_pos": 166,
+          "a_text": "أخرجته",
+          "b_text": "أخرجه"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 246,
+          "b_word_pos": 172,
+          "a_text": "سحروا",
+          "b_text": "سحرا"
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 301,
+          "b_word_pos": 227,
+          "a_text": "",
+          "b_text": "حدثنا"
+        },
+        {
+          "op": "insert",
+          "a_word_pos": 354,
+          "b_word_pos": 281,
+          "a_text": "",
+          "b_text": "لها"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 357,
+          "b_word_pos": 285,
+          "a_text": "ولبسه",
+          "b_text": "فلبسه"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 369,
+          "b_word_pos": 297,
+          "a_text": "لها",
+          "b_text": ""
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 401,
+          "b_word_pos": 328,
+          "a_text": "فقرءوها",
+          "b_text": "وقرؤوها"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 428,
+          "b_word_pos": 355,
+          "a_text": "فأنزل",
+          "b_text": "وأنزل"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 456,
+          "b_word_pos": 383,
+          "a_text": "بينما",
+          "b_text": "بينا"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 519,
+          "b_word_pos": 446,
+          "a_text": "فيجئ",
+          "b_text": "فيجيء"
+        },
+        {
+          "op": "delete",
+          "a_word_pos": 537,
+          "b_word_pos": 464,
+          "a_text": "قال",
+          "b_text": ""
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 556,
+          "b_word_pos": 482,
+          "a_text": "ألا",
+          "b_text": "أفلا"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 569,
+          "b_word_pos": 495,
+          "a_text": "فقال",
+          "b_text": "فقالوا"
+        },
+        {
+          "op": "replace",
+          "a_word_pos": 571,
+          "b_word_pos": 497,
+          "a_text": "سحر",
+          "b_text": "سحره"
+        }
+      ],
+      "word_diff_l1_region_count": 20,
+      "editor_bracket_count": 14,
+      "editor_brackets": [
+        {
+          "start": 15156,
+          "end": 15169,
+          "text": "[قال القرطبي "
+        },
+        {
+          "start": 15191,
+          "end": 15215,
+          "text": ": \"ما\" نافية، (ومعطوفة) "
+        },
+        {
+          "start": 15233,
+          "end": 15271,
+          "text": " على قوله: {وَمَا كَفَرَ سُلَيْمَانُ}]"
+        },
+        {
+          "start": 19965,
+          "end": 19979,
+          "text": "[وحكى القرطبي "
+        },
+        {
+          "start": 20001,
+          "end": 20035,
+          "text": " عن ابن عباس، وابن أبزى (والضحاك) "
+        },
+        {
+          "start": 20049,
+          "end": 20181,
+          "text": "، والحسن البصري أنهم قرءوا: {الْمَلَكَيْنِ} بكسر اللام؛ قال ابن أبزى: وهما داود، وسليمان. قال القرطبي: فعلى هذا تكون ما نافية أيضًا]"
+        },
+        {
+          "start": 20318,
+          "end": 20332,
+          "text": "[قال ابن جرير "
+        },
+        {
+          "start": 20364,
+          "end": 20566,
+          "text": ": حدثني يونس، أخبرنا ابن وهب، أخبرنا الليث، عن يحيى بن سعيد، عن القاسم بن محمد، وسأله رجل عن قول الله: {يُعَلِّمُونَ النَّاسَ السِّحْرَ وَمَا أُنْزِلَ عَلَى الْمَلَكَيْنِ بِبَابِلَ هَارُوتَ وَمَارُوتَ}]"
+        },
+        {
+          "start": 21095,
+          "end": 21110,
+          "text": "[وحكاه القرطبي "
+        },
+        {
+          "start": 21132,
+          "end": 21203,
+          "text": " عن علي، وابن مسعود، وابن عباس، وابن عمر وكعب الأحبار، والسدي، والكلبي]"
+        },
+        {
+          "start": 31334,
+          "end": 31368,
+          "text": "[وأنزلت الشهوة والشيطان في قلوبهم]"
+        },
+        {
+          "start": 44796,
+          "end": 44860,
+          "text": "[فاقشعررت وخفت، ثم رجعت إليهما؛ وقلت: قد فعلت، فقالا: فما رأيت؟]"
+        },
+        {
+          "start": 44882,
+          "end": 45038,
+          "text": "[قلت: لم أر شيئًا. فقالا: كذبت، لم تفعلي؛ ارجعي إلى بلادك ولا تكفري؛ فإنك على رأس أمرك؛ فأربت وأبيت؛ فقالا: اذهبي إلى التنور فبولي فيه، فذهبت إليه فبلت فيه]"
+        },
+        {
+          "start": 53420,
+          "end": 53565,
+          "text": "[ورجح شيخنا أبو الحجاج المزي فتح النون، وراجعته فثبت على ذلك، والمشهور عند النحاة الكسر، واحتج به بعضهم على جواز كون فاعل \"نعم\" مضمرًا؛ وهو قليل]"
+        }
+      ]
+    }
+  ],
+  "source_a": {
+    "source": "tafsircenter",
+    "dataset": "tafsircenter/tafsir-mcp-data",
+    "dataset_api_url": "https://huggingface.co/api/datasets/tafsircenter/tafsir-mcp-data",
+    "license": "cc-by-4.0",
+    "cardData": {
+      "license": "cc-by-4.0",
+      "language": [
+        "ar",
+        "en",
+        "bn"
+      ],
+      "tags": [
+        "quran",
+        "tafsir",
+        "islamic",
+        "arabic-nlp",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "size_categories": [
+        "1K<n<10K"
+      ],
+      "pretty_name": "Tafsir MCP — Quranic Database"
+    },
+    "data_file": "quran.db",
+    "table": "tafsir_katheer",
+    "columns": [
+      "sura",
+      "aya",
+      "tafsir"
+    ],
+    "edition_publisher_metadata": {
+      "from_card_readme": "Tafsir al-Quran al-Azim (Ibn Kathir); sourced from Tafsir Center for Quranic Studies (tafsir.net). No print-edition identifier in DB schema.",
+      "db_edition_fields": "none found in table schema"
+    },
+    "extracted": {
+      "2_255": {
+        "surah": 2,
+        "ayah": 255,
+        "path": "data/raw/tafsircenter/2_255.txt",
+        "char_length": 27301,
+        "sha256": "7dfc6ccbd2f8548234621a6a62337d5d27d992a5f33f89b78750a2963196b986"
+      },
+      "17_105": {
+        "surah": 17,
+        "ayah": 105,
+        "path": "data/raw/tafsircenter/17_105.txt",
+        "char_length": 570,
+        "sha256": "779492c5a161c0896dc5de4bb88bb2ac73d09aeacd730a6c3dd8bb516a37ff65"
+      },
+      "2_102": {
+        "surah": 2,
+        "ayah": 102,
+        "path": "data/raw/tafsircenter/2_102.txt",
+        "char_length": 55756,
+        "sha256": "5e095e0c45bbb1858fac5823f7145d06e6d9ea04d3e65b00132b70c0b10852e9"
+      }
+    }
+  },
+  "source_b": {
+    "source": "quran_com",
+    "used": "primary",
+    "resources_url": "https://api.quran.com/api/v4/resources/tafsirs",
+    "resource": {
+      "id": 14,
+      "name": "Tafsir Ibn Kathir",
+      "author_name": "Hafiz Ibn Kathir",
+      "language_name": "arabic",
+      "slug": "ar-tafsir-ibn-kathir",
+      "translated_name": {
+        "name": "Tafsir Ibn Kathir",
+        "language_name": "english"
+      }
+    },
+    "by_ayah_resource_fields": {
+      "resource_id": 14,
+      "resource_name": "ابن كثير",
+      "language_id": 9,
+      "slug": "ar-tafsir-ibn-kathir",
+      "source_edition_field": "none present in API response"
+    },
+    "extracted": {
+      "2_255": {
+        "surah": 2,
+        "ayah": 255,
+        "path": "data/raw/quran_com/2_255.txt",
+        "char_length": 21450,
+        "sha256": "bd5c46734a122a454af432ac769a69fbc070114ef7038b73a675ff02d6f708f3"
+      },
+      "17_105": {
+        "surah": 17,
+        "ayah": 105,
+        "path": "data/raw/quran_com/17_105.txt",
+        "char_length": 550,
+        "sha256": "c8504d16f53dd1164d10b00219dcf9bb93a21645aa29a5fbd47e146645c1930f"
+      },
+      "2_102": {
+        "surah": 2,
+        "ayah": 102,
+        "path": "data/raw/quran_com/2_102.txt",
+        "char_length": 37212,
+        "sha256": "e96f63862a03a4448b6dc3dca4f5e20fbb6a59c21f87ecc50e703856f696acd9"
+      }
+    }
+  },
+  "notes": "Author-layer reconciliation strips footnote (¬…¥), verse_ref, and editor_bracket ranges from Source A before L1 comparison with Source B."
+}

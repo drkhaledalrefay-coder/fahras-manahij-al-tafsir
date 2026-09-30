@@ -1,0 +1,220 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_39.txt",
+  "ayah": "8:39",
+  "surah": 8,
+  "ayah_number": 39,
+  "source_char_length": 3770,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 348,
+      "kind": "author"
+    },
+    {
+      "start": 348,
+      "end": 392,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 392,
+      "end": 789,
+      "kind": "author"
+    },
+    {
+      "start": 789,
+      "end": 929,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 929,
+      "end": 1038,
+      "kind": "author"
+    },
+    {
+      "start": 1038,
+      "end": 1106,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1106,
+      "end": 1200,
+      "kind": "author"
+    },
+    {
+      "start": 1200,
+      "end": 1312,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1312,
+      "end": 1446,
+      "kind": "author"
+    },
+    {
+      "start": 1446,
+      "end": 1537,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1537,
+      "end": 1644,
+      "kind": "author"
+    },
+    {
+      "start": 1644,
+      "end": 1703,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1703,
+      "end": 1797,
+      "kind": "author"
+    },
+    {
+      "start": 1797,
+      "end": 1928,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1928,
+      "end": 2015,
+      "kind": "author"
+    },
+    {
+      "start": 2015,
+      "end": 2032,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2032,
+      "end": 2126,
+      "kind": "author"
+    },
+    {
+      "start": 2126,
+      "end": 2189,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2189,
+      "end": 2398,
+      "kind": "author"
+    },
+    {
+      "start": 2398,
+      "end": 2440,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2440,
+      "end": 2661,
+      "kind": "author"
+    },
+    {
+      "start": 2661,
+      "end": 2705,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2705,
+      "end": 2942,
+      "kind": "author"
+    },
+    {
+      "start": 2942,
+      "end": 2953,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2953,
+      "end": 3004,
+      "kind": "author"
+    },
+    {
+      "start": 3004,
+      "end": 3016,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 3016,
+      "end": 3163,
+      "kind": "author"
+    },
+    {
+      "start": 3163,
+      "end": 3171,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 3171,
+      "end": 3601,
+      "kind": "author"
+    },
+    {
+      "start": 3601,
+      "end": 3769,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3769,
+      "end": 3770,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 16,
+    "layout": 0,
+    "apparatus": 15
+  },
+  "char_totals": {
+    "author": 2760,
+    "layout": 0,
+    "apparatus": 1010
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 12,
+    "verse_ref": 2,
+    "editor_bracket": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 979,
+    "verse_ref": 23,
+    "editor_bracket": 8
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 12,
+    "footnote_close": 12,
+    "footnotes_closed": 12,
+    "bracket_total": 3,
+    "bracket_pattern_classes": {
+      "verse_ref": 2,
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[التوبة: 5]": 1,
+      "[التوبة: 11]": 1
+    },
+    "other_brackets": {
+      "[البقرة]": 1
+    }
+  }
+}

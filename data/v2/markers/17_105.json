@@ -1,0 +1,122 @@
+{
+  "window_id": "17_105",
+  "ayah": "17:105",
+  "span_count": 6,
+  "family_counts": {
+    "LUGHA": 4,
+    "QURAN": 7
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 67,
+          "end": 70,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 85,
+          "end": 98,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 89,
+          "end": 98,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 100,
+          "end": 171,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 172,
+          "end": 185,
+          "text": "[النساء: 166]",
+          "via": "apparatus",
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 186,
+          "end": 189,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 262,
+          "end": 283,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 284,
+          "end": 287,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 447,
+          "end": 468,
+          "span_id": "s006"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 469,
+          "end": 472,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 481,
+          "end": 511,
+          "span_id": "s006"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

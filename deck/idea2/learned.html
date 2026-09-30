@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>فهرس مناهج التفسير — ماذا تعلّمنا؟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#12183F; --violet:#6150EA; --mint:#2EF2C2; --white:#F2F4FF; --muted:#C2C8ED; --panel:#1B2252; --line:#535C91; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; width:1080px; height:1920px; overflow:hidden; }
+    body { background:var(--navy); color:var(--white); font-family:'Readex Pro',sans-serif; opacity:0; }
+    body.ready { opacity:1; }
+    .page { width:1080px; height:1920px; padding:34px 56px 25px; display:flex; flex-direction:column; gap:15px; background:radial-gradient(circle at 12% 2%, #25225e 0, transparent 22%), var(--navy); }
+    h1,h2,p { margin:0; }
+    header { position:relative; padding-bottom:12px; border-bottom:2px solid var(--line); }
+    .eyebrow { color:var(--mint); font-size:28px; font-weight:600; margin-bottom:3px; }
+    h1 { font-size:49px; line-height:1.25; font-weight:700; letter-spacing:-1.5px; }
+    .title-mark { color:var(--mint); }
+    .intro { margin-top:4px; font-size:28px; line-height:1.4; color:var(--muted); }
+    .section-title { display:flex; align-items:center; gap:16px; margin-bottom:10px; font-size:35px; font-weight:700; line-height:1.25; }
+    .section-title::after { content:""; height:2px; background:var(--line); flex:1; }
+    .a-grid { display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+    .card { min-height:155px; padding:13px 19px 12px; background:var(--panel); border:1px solid #444D83; border-radius:20px; }
+    .card-head { display:flex; align-items:center; gap:10px; color:var(--mint); margin-bottom:4px; font-size:28px; font-weight:600; }
+    .card svg { width:32px; height:32px; flex:none; stroke:currentColor; fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+    .card p { font-size:28px; line-height:1.38; }
+    .card strong { font-weight:600; color:var(--white); }
+    .results { background:#1B2252; border:1px solid #444D83; border-radius:20px; padding:11px 25px 10px; }
+    .results .section-title { margin-bottom:5px; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:28px; line-height:1.32; text-align:center; }
+    th { color:var(--mint); font-weight:600; padding:3px 4px 5px; border-bottom:1px solid var(--line); }
+    td { padding:3px 4px; border-bottom:1px solid #3A4376; }
+    tr:last-child td { border-bottom:0; }
+    th:first-child,td:first-child { text-align:right; width:27%; }
+    .results-note { color:var(--muted); font-size:28px; line-height:1.35; margin-top:4px; }
+    .screen-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .screen-card { min-width:0; }
+    .shot-wrap { position:relative; border:1.5px solid #BEC5EE; border-radius:18px; overflow:hidden; background:#070D32; height:220px; }
+    .shot-wrap img { display:block; width:100%; height:100%; object-fit:cover; object-position:right top; }
+    .shot-wrap::after { content:""; position:absolute; inset:0; pointer-events:none; box-shadow:inset 0 0 0 1px #ffffff33; border-radius:17px; }
+    .model-mask { position:absolute; top:39px; left:126px; width:96px; height:24px; display:grid; place-items:center; background:#12183F; border:1px solid #535C91; border-radius:12px; font-size:16px; color:var(--white); white-space:nowrap; }
+    .pin { position:absolute; display:grid; place-items:center; width:45px; height:45px; border-radius:50%; color:var(--navy); background:var(--mint); font-size:29px; font-weight:700; box-shadow:0 2px 12px #070D32; }
+    .p1 { top:57px; right:33px; } .p2 { bottom:19px; right:34px; } .p3 { bottom:19px; left:38px; }
+    .p4 { top:70px; left:80px; } .p5 { top:120px; right:62px; } .p6 { top:120px; right:170px; }
+    .shot-label { margin:5px 0 4px; color:var(--muted); font-size:28px; font-weight:600; }
+    .steps { display:flex; flex-direction:column; gap:4px; }
+    .step { display:flex; align-items:flex-start; gap:10px; font-size:28px; line-height:1.38; }
+    .step b { flex:none; display:grid; place-items:center; width:37px; height:37px; border-radius:50%; background:var(--mint); color:var(--navy); font-weight:700; font-size:25px; margin-top:1px; }
+    .step span { flex:1; }
+    .step em { color:var(--mint); font-style:normal; }
+    .difference { background:linear-gradient(115deg,#302775,#22265f); border-radius:20px; padding:12px 22px; }
+    .difference .section-title { margin-bottom:5px; }
+    .difference p { font-size:28px; line-height:1.4; }
+    .difference strong { color:var(--mint); font-weight:600; }
+    footer { margin-top:auto; border-top:2px solid var(--line); padding-top:7px; text-align:center; }
+    footer p { font-size:28px; line-height:1.4; }
+    footer .final-line { color:var(--mint); font-weight:600; }
+  </style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <p class="eyebrow">فهرس مناهج التفسير</p>
+    <h1>ماذا تعلّمنا<span class="title-mark">؟</span></h1>
+    <p class="intro">تجربة قابلة للفحص، وصفحة تُظهر الدليل في النص.</p>
+  </header>
+
+  <section aria-label="ماذا فعلنا">
+    <h2 class="section-title">ماذا فعلنا</h2>
+    <div class="a-grid">
+      <article class="card"><div class="card-head"><svg viewBox="0 0 32 32"><path d="M16 5v22M16 8c-4-3-8-3-12-2v20c4-1 8-1 12 2 4-3 8-3 12-2V6c-4-1-8-1-12 2Z"/></svg>منهج واحد</div><p>أربعة تفاسير: ابن كثير · الطبري · السعدي · البغوي. <strong>٣ آيات</strong> بلا ضبط لتفسير بعينه.</p></article>
+      <article class="card"><div class="card-head"><svg viewBox="0 0 32 32"><path d="M7 10h17l-4-4m4 4-4 4M25 22H8l4-4m-4 4 4 4"/></svg>النموذج قابل للاستبدال</div><p>نموذجان مختلفان على ابن كثير أعطيا نتائج متقاربة: <strong>٢٣/١٩ و٢٦/١٨</strong>.</p></article>
+      <article class="card"><div class="card-head"><svg viewBox="0 0 32 32"><path d="M16 3 5 8v8c0 7 5 11 11 13 6-2 11-6 11-13V8L16 3Z"/><path d="m10 16 4 4 8-8"/></svg>راجعنا أنفسنا</div><p>وجدنا المدقق متساهلاً؛ فشدّدناه عاماً لكل التفاسير، ونشرنا النتيجتين.</p></article>
+      <article class="card"><div class="card-head"><svg viewBox="0 0 32 32"><path d="M6 4h17l4 4v20H6zM10 12h13M10 17h13M10 22h8"/></svg>النص محفوظ</div><p>كل موضع مطابق للمصدر حرفاً بحرف، وحواشي المحقق مفصولة عن كلام المفسِّر.</p></article>
+    </div>
+  </section>
+
+  <section class="results" aria-label="النتائج">
+    <h2 class="section-title">النتائج <span style="font-weight:400;color:var(--muted)">(التشغيل الثاني)</span></h2>
+    <table><thead><tr><th>التفسير</th><th>مواضع</th><th>قبول آلي</th><th>للمتخصص</th></tr></thead><tbody>
+      <tr><td>ابن كثير</td><td>42</td><td>23</td><td>19</td></tr>
+      <tr><td>الطبري</td><td>31</td><td>18</td><td>13</td></tr>
+      <tr><td>البغوي</td><td>39</td><td>29</td><td>10</td></tr>
+      <tr><td>السعدي</td><td>24</td><td>15</td><td>9</td></tr>
+    </tbody></table>
+    <p class="results-note">أرقام تجربة أولى؛ الدقة تُقاس بعيّنة المتخصص.</p>
+  </section>
+
+  <section aria-label="كيف تعمل الصفحة">
+    <h2 class="section-title">كيف تعمل الصفحة</h2>
+    <div class="screen-grid">
+      <div class="screen-card">
+        <div class="shot-wrap"><img src="fahras_ibn_kathir.png" alt="لقطة حقيقية من صفحة فهرس مناهج التفسير: ابن كثير"><span class="model-mask">النموذج أ</span><i class="pin p1">١</i><i class="pin p2">٢</i><i class="pin p3">٣</i></div>
+        <p class="shot-label">القراءة والتحقق</p>
+        <div class="steps">
+          <div class="step"><b>١</b><span>اختر التفسير والآية.</span></div>
+          <div class="step"><b>٢</b><span>لوحة المناهج: اضغط منهجاً فتتلوّن مواضعه.</span></div>
+          <div class="step"><b>٣</b><span>اضغط أي تمييز: <em>«لماذا هذا التمييز؟»</em> والدليل ودرجة اليقين.</span></div>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="shot-wrap"><img src="fahras_tabari.png" alt="لقطة حقيقية من صفحة فهرس مناهج التفسير: الطبري"><span class="model-mask">النموذج ب</span><i class="pin p4">٤</i><i class="pin p5">٥</i><i class="pin p6">٦</i></div>
+        <p class="shot-label">المراجعة والتصدير</p>
+        <div class="steps">
+          <div class="step"><b>٤</b><span><em>«اعرض الأصل بجانبه»</em>: الأصل حرفاً بحرف.</span></div>
+          <div class="step"><b>٥</b><span><em>«ابدأ المراجعة»</em>: قلم التمييز للمتخصص، ثم «قارن بالمصدر» و«اعتماد».</span></div>
+          <div class="step"><b>٦</b><span><em>«تصدير ▾»</em>: ملف JSON معتمد لتطبيقات القرآن.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="difference" aria-label="الفرق عن المواقع الكبرى">
+    <h2 class="section-title">الفرق عن المواقع الكبرى</h2>
+    <p>المواقع الكبرى تعرض ماذا قيل عن الآية؛ <strong>نحن نكشف كيف فسّرها المفسِّر في نصه، بالدليل.</strong></p>
+  </section>
+
+  <footer>
+    <p class="final-line">الآلة تقترح، والمتخصص يحكم، والنص لا يتغيّر حرفاً.</p>
+    <p>لم ندرّب نموذجاً؛ بنينا منهجاً يعمل مع أي نموذج.</p>
+  </footer>
+</main>
+<script>document.fonts.ready.then(() => { document.body.classList.add('ready'); });</script>
+</body>
+</html>

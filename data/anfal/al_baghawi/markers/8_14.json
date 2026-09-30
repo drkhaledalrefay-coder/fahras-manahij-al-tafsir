@@ -1,0 +1,138 @@
+{
+  "window_id": "8_14",
+  "ayah": "8:14",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 4,
+    "LUGHA": 2,
+    "SAHABA": 1,
+    "HADITH": 3,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 10,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 11,
+          "end": 16,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 104,
+          "end": 116,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 126,
+          "end": 150,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 151,
+          "end": 156,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 227,
+          "end": 245,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 268,
+          "end": 281,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 314,
+          "end": 346,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 487,
+          "end": 507,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 509,
+          "end": 541,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 648,
+      "end": 912,
+      "text": "¬أخرجه الترمذي في تفسير سورة الأنفال: 8/ 471 - 472 وقال: هذا حديث حسن، والإمام أحمد في المسند: 1/ 314. وعزاه السيوطي: للفريابي، وابن أبي شيبة، وعبد بن حميد، وأبي يعلى، وابن جرير وابن المنذر، وابن أبي حاتم، والطبراني، وأبي الشيخ وابن مردويه. (الدر المنثور: 4/ 28).¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

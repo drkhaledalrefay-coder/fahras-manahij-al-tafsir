@@ -1,0 +1,268 @@
+{
+  "window_id": "8_22",
+  "ayah": "8:22",
+  "span_count": 16,
+  "family_counts": {
+    "QURAN": 11,
+    "LUGHA": 3,
+    "ISNAD": 1,
+    "SAHABA": 1,
+    "RAY": 1,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 90,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 202,
+          "end": 227,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 228,
+          "end": 231,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 272,
+          "end": 296,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 297,
+          "end": 300,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 328,
+          "end": 403,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 668,
+          "end": 717,
+          "span_id": "s008"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 718,
+          "end": 721,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 722,
+          "end": 765,
+          "stripped": "عن سماع الحق {البكم} عن فهمه ولهذا قال:",
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 735,
+          "end": 746,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 766,
+          "end": 793,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 925,
+          "end": 1024,
+          "span_id": "s011"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 1025,
+          "end": 1038,
+          "text": "[البقرة: 171]",
+          "via": "apparatus",
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1068,
+          "end": 1141,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 1142,
+          "end": 1156,
+          "text": "[الأعراف: 179]",
+          "via": "apparatus",
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1223,
+          "end": 1231,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 1505,
+          "end": 1508,
+          "span_id": "s016"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 442,
+      "end": 465,
+      "text": "¬ذكره الطبري بدون سند.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 546,
+      "end": 602,
+      "text": "¬أخرجه الطبري من طريق سلمة بن الفضل عن ابن إسحاق بنحوه.¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1239,
+      "end": 1427,
+      "text": "¬قول ابن عباس أخرجه البخاري (الصحيح، التفسير، سورة الأنفال، باب {إِنَّ شَرَّ الدَّوَابِّ عِنْدَ اللَّهِ الصُّمُّ. . .} ح 4646)، وقول مجاهد أخرجه الطبري بسند حسن من طريق، ابن أبي نجيح عنه.¥",
+      "attached_span_id": "s014",
+      "grading": [
+        "صحيح",
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1480,
+      "end": 1503,
+      "text": "¬تكرر قبل ثمانية سطور.¥",
+      "attached_span_id": "s015",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 722,
+      "end": 765,
+      "span_id": "s009",
+      "marker": "عن…عن"
+    }
+  ]
+}

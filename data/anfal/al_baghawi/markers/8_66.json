@@ -1,0 +1,119 @@
+{
+  "window_id": "8_66",
+  "ayah": "8:66",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 1,
+    "ISNAD": 1,
+    "QIRAAT": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 232,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 233,
+          "end": 238,
+          "span_id": "s002"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 262,
+          "end": 342,
+          "stripped": "عن قتال العشرة وفي المائة عن قتال الألف، وقرأ أبو",
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 330,
+          "end": 335,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 414,
+          "end": 419,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 454,
+          "end": 519,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 538,
+          "end": 637,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 897,
+          "end": 902,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 1056,
+          "end": 1061,
+          "span_id": "s007"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": [
+    {
+      "start": 262,
+      "end": 342,
+      "span_id": "s002",
+      "marker": "عن…عن"
+    }
+  ]
+}

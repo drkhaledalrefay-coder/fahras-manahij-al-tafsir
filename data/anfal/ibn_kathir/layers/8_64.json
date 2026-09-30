@@ -1,0 +1,93 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_64.txt",
+  "ayah": "8:64",
+  "surah": 8,
+  "ayah_number": 64,
+  "source_char_length": 1152,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 387,
+      "kind": "author"
+    },
+    {
+      "start": 387,
+      "end": 393,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 393,
+      "end": 394,
+      "kind": "author"
+    },
+    {
+      "start": 394,
+      "end": 685,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 685,
+      "end": 822,
+      "kind": "author"
+    },
+    {
+      "start": 822,
+      "end": 927,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 927,
+      "end": 981,
+      "kind": "author"
+    },
+    {
+      "start": 981,
+      "end": 1074,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1074,
+      "end": 1152,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 5,
+    "layout": 0,
+    "apparatus": 4
+  },
+  "char_totals": {
+    "author": 657,
+    "layout": 0,
+    "apparatus": 495
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 6,
+    "footnote": 489
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[شوذب]": 1
+    }
+  }
+}

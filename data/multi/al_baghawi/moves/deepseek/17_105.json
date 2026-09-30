@@ -1,0 +1,22 @@
+{
+  "window": "17_105",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s001"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s001"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": ["M_RAY"],
+      "rationale_ar": "بيّن مرجع الضمير في الإنزال بأنه القرآن، وعيّن من يُبشَّر ومن يُنذَر: المطيعون والعاصون."
+    }
+  ]
+}

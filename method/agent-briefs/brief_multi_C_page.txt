@@ -1,0 +1,21 @@
+TASK C: Build the NEW page «فهرس مناهج التفسير» with a selector across four tafsirs. The existing Ibn Kathir page is the frozen reference: do NOT edit src/methods_template.html, src/build_methods.py or web/methods.html. Do NOT touch data/ (read only). Another agent is writing data/**/moves/deepseek/ right now — your build must tolerate those files being absent or partial. Do NOT commit.
+
+CREATE
+- src/fahras_template.html — start as a COPY of src/methods_template.html (keep all its verified behaviour: source-run offsets with data-abs-start, fidelity refusal, non-author guard, compare-before-approve, 4 statuses, content labels, merge/extend/restore, exports, queue, no confirm/alert/prompt, no textarea over source).
+- src/build_fahras.py → web/fahras.html (single self-contained file; embed data as the old build does).
+
+DATA TO EMBED (read-only)
+- ibn_kathir: windows data/v2/windows/*, layers as the old build uses, moves from data/v2/verified/<annotator>/ for annotators present (codex, deepseek).
+- al_tabari / al_saadi / al_baghawi: data/multi/<id>/windows/*, data/multi/<id>/layers/*, verified moves from data/multi/<id>/verified/<annotator>/ if present. If no verified moves yet, show the text with «لم يُصنَّف بعد» and still allow specialist mode.
+- Raw source per window for the «الأصل» view: data/raw/tafsircenter/<file> (IK) and data/raw/tafsircenter/<id>/<file>, plus the window's source_sha256.
+
+FEATURES
+1. Title and <title>: «فهرس مناهج التفسير». Header selector (segmented control, RTL): ابن كثير · الطبري · السعدي · البغوي, then the verse selector (آية الكرسي ٢:٢٥٥ · البقرة ١٠٢ · الإسراء ١٠٥), then an annotator selector «المصنّف الآلي» shown only when >1 annotator exists for that tafsir (codex / deepseek). Remember the choice per viewer in localStorage wrapped in try/catch; also support a bare #hash token like #al_tabari.
+2. Per-tafsir results strip (compact table, tabular numbers): window chars, spans, moves, auto_candidate, specialist, flags, refusals (insufficient), and method distribution as small colored counts. A note under it: «التشغيل الأول بلا أي ضبط على هذا التفسير — نفس المنهج ونفس القواعد».
+3. «اعرض الأصل بجانبه» (show original side by side): splits the reading area into two panes. Pane A: the raw source text for the window exactly as stored (plain text, no colors; "<br>" shown as a visible line break, never parsed as HTML — never use innerHTML for source), with the sha256 (first 12 chars) and «مصدر: مركز تفسير — بيانات مفتوحة CC BY 4.0». Pane B: the annotated page. Synchronized scrolling (proportional by abs offset of the top-visible run). Clicking a highlight in B outlines the same abs range in A. A banner at the top computes, by string equality over the window, whether the concatenated source runs rendered in B equal the raw source slice: «✅ الصفحتان متطابقتان حرفاً بحرف» or the first differing offset. Plus a link «افتح الآية في موقع مركز تفسير» to https://tafsir.net (new tab; plain <a href>).
+4. Layout vs apparatus: "<br>" (layout) is ALLOWED inside a specialist highlight (it is a paragraph break); apparatus (footnote ¬…¥, verse_ref, editor_bracket, unknown_marker) is refused as today. Render <br> as a non-source line break element (data-nonsource="1") so offsets stay exact.
+5. Reviewer onboarding: a visible primary button «ابدأ المراجعة» (turns on specialist mode), a 3-step dismissible first-time guide (١ حدّد كلمات من النص لتضيف تمييزاً ٢ اضغط أي تمييز لتعدّل حدوده أو منهجه ٣ «قارن بالمصدر» ثم «اعتماد»), and a persistent hint line in specialist mode «حدّد كلمات لتضيف تمييزاً».
+6. Exports: same record shape as today, but tafsir.id/name, source.source_id "<tafsir_id>_<s>_<a>", sha256 come from the selected tafsir's data (no hard-coded Ibn Kathir). Must validate against schema/annotation.schema.json.
+7. Keep the page design language of web/methods.html; RTL; phone width 390px OK (panes stack; selector wraps); no side-stripe borders >1px; visible focus.
+
+GATES (paste output): python src/build_fahras.py ; node --check on the extracted inline script ; grep no confirm(/alert(/prompt( and no innerHTML assignment of source text ; git status shows methods_template.html, build_methods.py, web/methods.html unchanged ; a python check that for every window embedded, every span text == raw[start:end]. Update reports/multi/PROGRESS.md (stage C). Do not commit.

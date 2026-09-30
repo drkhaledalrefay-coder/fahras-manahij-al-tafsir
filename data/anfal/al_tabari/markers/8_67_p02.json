@@ -1,0 +1,205 @@
+{
+  "window_id": "8_67_p02",
+  "ayah": "8:67",
+  "span_count": 12,
+  "family_counts": {
+    "HADITH": 4,
+    "RAY": 1,
+    "NUZUL": 2,
+    "QURAN": 2,
+    "EDITOR": 7
+  },
+  "spans": [
+    {
+      "span_id": "s106",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8514,
+          "end": 8532,
+          "span_id": "s106"
+        },
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 8572,
+          "end": 8575,
+          "span_id": "s106"
+        }
+      ]
+    },
+    {
+      "span_id": "s107",
+      "markers": []
+    },
+    {
+      "span_id": "s108",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 8777,
+          "end": 8793,
+          "span_id": "s108"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8797,
+          "end": 8815,
+          "span_id": "s108"
+        }
+      ]
+    },
+    {
+      "span_id": "s109",
+      "markers": []
+    },
+    {
+      "span_id": "s110",
+      "markers": []
+    },
+    {
+      "span_id": "s111",
+      "markers": []
+    },
+    {
+      "span_id": "s112",
+      "markers": []
+    },
+    {
+      "span_id": "s113",
+      "markers": []
+    },
+    {
+      "span_id": "s114",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9072,
+          "end": 9090,
+          "span_id": "s114"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 9093,
+          "end": 9098,
+          "span_id": "s114"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 9093,
+          "end": 9106,
+          "span_id": "s114"
+        }
+      ]
+    },
+    {
+      "span_id": "s115",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9120,
+          "end": 9197,
+          "span_id": "s115"
+        }
+      ]
+    },
+    {
+      "span_id": "s116",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9209,
+          "end": 9228,
+          "span_id": "s116"
+        }
+      ]
+    },
+    {
+      "span_id": "s117",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8703,
+      "end": 8774,
+      "text": "¬زيادة من مسلم والترمذي وأحمد وابن أبي حاتم. وعند البيهقي: \"بيكائكما\".¥",
+      "attached_span_id": "s107",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8854,
+      "end": 8880,
+      "text": "¬في م، ت 2، س: \"لأصحابي\".¥",
+      "attached_span_id": "s109",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8884,
+      "end": 8897,
+      "text": "¬في ص: \"في\".¥",
+      "attached_span_id": "s110",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8905,
+      "end": 8921,
+      "text": "¬في ص: \"أحدهم\".¥",
+      "attached_span_id": "s111",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8950,
+      "end": 8988,
+      "text": "¬في صحيح مسلم وسنن البيهقي: \"عذابهم\".¥",
+      "attached_span_id": "s112",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9017,
+      "end": 9045,
+      "text": "¬في م، ومسند أحمد: \"لشجرة\".¥",
+      "attached_span_id": "s113",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9257,
+      "end": 9542,
+      "text": "¬أخرجه الترمذى (3081) عن ابن بشار به، وأخرجه مسلم (1763)، والطحاوي في المشكل (3309) وابن أبي حاتم في تفسيره 5/ 1662، 1730، وابن حبان (4793)، وأبو نعيم في الدلائل (408)، والبيهقى 6/ 321 وفي الدلائل 3/ 51 - 53 من طريق عمر بن يونس به. وتقدم من طريق ابن المبارك عن عكرمة <br>بن عمار ص 51.¥",
+      "attached_span_id": "s116",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

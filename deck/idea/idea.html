@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>فهرس مناهج التفسير</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#00062c; --paper:#f2f4ff; --muted:#a9b2da; --violet:#6251eb; --teal:#2feec3; --blue:#39a0fd; --amber:#ffc857; --red:#ff6b6b; }
+    * { box-sizing:border-box; }
+    html, body { margin:0; width:1080px; height:1350px; overflow:hidden; }
+    body { background:var(--navy); color:var(--paper); font-family:'Readex Pro', sans-serif; }
+    .canvas { position:relative; width:1080px; height:1350px; padding:46px 58px 30px; overflow:hidden; background:radial-gradient(circle at 50% 38%, #0b1752 0%, #00062c 67%); }
+    .stars { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:.055; }
+    .content { position:relative; z-index:1; }
+    .eyebrow { display:flex; align-items:center; gap:13px; color:var(--teal); font-size:23px; font-weight:600; letter-spacing:.02em; margin-bottom:12px; }
+    .eyebrow svg { flex:none; }
+    h1 { margin:0; display:inline-block; font-size:72px; line-height:1.36; font-weight:700; letter-spacing:-.045em; background:linear-gradient(95deg,#6251eb 2%,#3fb0d6 53%,#2feec3 98%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .subtitle { margin:6px 0 20px; color:var(--paper); font-size:32px; line-height:1.65; font-weight:500; }
+    .app { position:relative; height:570px; border:1px solid rgba(169,178,218,.26); background:#07113b; border-radius:30px; padding:22px; box-shadow:0 25px 75px rgba(0,0,0,.30), inset 0 1px rgba(255,255,255,.06); }
+    .app-top { height:38px; display:flex; justify-content:space-between; align-items:flex-start; color:var(--muted); font-size:20px; padding:0 8px; }
+    .app-top .micro { display:flex; align-items:center; gap:8px; }
+    .app-top .micro span { width:7px; height:7px; background:var(--teal); border-radius:50%; box-shadow:0 0 12px var(--teal); }
+    .panels { display:grid; grid-template-columns: 598px 1fr; gap:17px; height:483px; }
+    .panel { background:#0d1949; border:1px solid rgba(169,178,218,.19); border-radius:21px; overflow:hidden; }
+    .panel-head { height:65px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; background:rgba(255,255,255,.028); border-bottom:1px solid rgba(169,178,218,.15); }
+    .panel-head h2 { margin:0; font-size:27px; font-weight:600; }
+    .panel-head small { color:var(--muted); font-size:18px; }
+    .tafsir { position:relative; padding:19px 24px; }
+    .source-text { font-family:'Amiri', serif; font-size:30px; line-height:1.48; color:#f5f3ff; text-align:right; margin:0 0 10px; }
+    .source-text mark { color:inherit; box-decoration-break:clone; -webkit-box-decoration-break:clone; border-radius:6px; padding:0 3px; }
+    .source-text .quran { background:rgba(98,81,235,.38); box-shadow:inset 0 -3px 0 var(--violet); }
+    .source-text .meaning { background:rgba(47,238,195,.18); box-shadow:inset 0 -3px 0 var(--teal); }
+    .tag-row { display:flex; gap:9px; margin-top:4px; }
+    .tag { display:inline-flex; align-items:center; gap:7px; padding:5px 11px; border-radius:9px; font-size:18px; font-weight:600; }
+    .tag::before { content:''; width:8px; height:8px; border-radius:2px; background:currentColor; }
+    .tag.violet { background:rgba(98,81,235,.21); color:#c5bfff; }
+    .tag.teal { background:rgba(47,238,195,.13); color:var(--teal); }
+    .method { padding-bottom:14px; }
+    .method-list { padding:12px 18px 8px; }
+    .method-row { height:49px; display:flex; align-items:center; gap:12px; color:#e8ebff; font-size:21px; white-space:nowrap; }
+    .method-row .swatch { width:15px; height:15px; border-radius:5px; flex:none; background:var(--c); box-shadow:0 0 13px color-mix(in srgb,var(--c), transparent 52%); }
+    .method-row .name { flex:1; }
+    .toggle { width:37px; height:22px; border-radius:20px; background:#29345f; border:1px solid #48527d; position:relative; flex:none; }
+    .toggle::after { content:''; position:absolute; top:3px; left:3px; width:14px; height:14px; background:#8790b9; border-radius:50%; }
+    .method-row.on .toggle { background:rgba(47,238,195,.28); border-color:var(--teal); }
+    .method-row.on .toggle::after { left:18px; background:var(--teal); }
+    .explain { position:absolute; bottom:16px; right:47px; width:510px; min-height:109px; background:#f4f5ff; border-radius:17px; color:#10204d; padding:13px 18px 14px; box-shadow:0 16px 37px rgba(0,0,0,.36); border:2px solid #cfc8ff; }
+    .explain::before { content:''; position:absolute; right:55px; top:-13px; border-right:13px solid transparent; border-left:13px solid transparent; border-bottom:13px solid #cfc8ff; }
+    .explain h3 { margin:0 0 4px; font-size:21px; color:#3427a0; }
+    .explain p { margin:0; font-size:19px; line-height:1.4; font-weight:500; }
+    .explain b { color:#148b75; }
+    .process-title { display:flex; align-items:center; gap:17px; margin:26px 0 14px; font-size:26px; color:var(--muted); }
+    .process-title::after { content:''; height:1px; flex:1; background:rgba(169,178,218,.25); }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .step { position:relative; min-height:267px; padding:16px 19px 14px; border-radius:20px; background:#0c1747; border:1px solid rgba(169,178,218,.22); }
+    .step-top { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .icon { display:grid; place-items:center; width:45px; height:45px; border-radius:12px; background:color-mix(in srgb,var(--accent),transparent 84%); color:var(--accent); }
+    .step-no { color:var(--accent); font-size:23px; font-weight:700; }
+    .step h3 { margin:0 0 7px; font-size:29px; line-height:1.35; font-weight:600; }
+    .step p { margin:0; color:#d7ddf7; font-size:30px; line-height:1.43; }
+    .footer { margin-top:21px; text-align:center; color:var(--muted); font-size:23px; }
+    .footer strong { color:var(--teal); font-weight:500; }
+  </style>
+</head>
+<body>
+<main class="canvas">
+  <svg class="stars" aria-hidden="true"><defs><pattern id="starfield" width="114" height="114" patternUnits="userSpaceOnUse"><path d="M57 39 L61 53 L75 57 L61 61 L57 75 L53 61 L39 57 L53 53 Z M57 47 L67 57 L57 67 L47 57 Z" fill="#fff"/></pattern></defs><rect width="1080" height="1350" fill="url(#starfield)"/></svg>
+  <div class="content">
+    <div class="eyebrow"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" aria-hidden="true"><path d="M12.5 1.5 15.3 9.7 23.5 12.5l-8.2 2.8-2.8 8.2-2.8-8.2-8.2-2.8 8.2-2.8 2.8-8.2Z" stroke="currentColor" stroke-width="1.5"/></svg> فكرة المشروع في صورة</div>
+    <h1>فهرس مناهج التفسير</h1>
+    <p class="subtitle">كيف فسّر ابن كثير هذه الآية؟ بالقرآن؟ بالحديث؟ بقول صحابي؟</p>
+    <section class="app" aria-label="تصور للتطبيق">
+      <div class="app-top"><span>مثال من تفسير ابن كثير</span><span class="micro"><span></span>نص محفوظ كما هو</span></div>
+      <div class="panels">
+        <article class="panel tafsir">
+          <div class="panel-head"><h2>صفحة التفسير</h2><small>الآية ١٠٥ · الإسراء</small></div>
+          <div style="padding:19px 0 0">
+            <p class="source-text" id="ibn-kathir-line-1">يقول تعالى مخبرًا عن كتابه العزيز وهو القرآن المجيد أنه بالحق نزل، أي: متضمنًا للحق، كما قال تعالى: <mark class="quran">{لَكِنِ اللَّهُ يَشْهَدُ بِمَا أَنْزَلَ إِلَيْكَ أَنْزَلَهُ بِعِلْمِهِ}</mark></p>
+            <p class="source-text" id="ibn-kathir-line-2">وقوله: {وَبِالْحَقِّ نَزَلَ} <mark class="meaning">أي: وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه</mark></p>
+            <div class="tag-row"><span class="tag violet">قرآن بقرآن</span><span class="tag teal">بيان المعنى / الرأي</span></div>
+          </div>
+        </article>
+        <aside class="panel method">
+          <div class="panel-head"><h2>لوحة المناهج</h2><small>إظهار</small></div>
+          <div class="method-list">
+            <div class="method-row on" style="--c:#6251eb"><span class="swatch"></span><span class="name">قرآن بقرآن</span><span class="toggle"></span></div>
+            <div class="method-row" style="--c:#39a0fd"><span class="swatch"></span><span class="name">سنة</span><span class="toggle"></span></div>
+            <div class="method-row" style="--c:#2feec3"><span class="swatch"></span><span class="name">صحابة</span><span class="toggle"></span></div>
+            <div class="method-row" style="--c:#57ceb5"><span class="swatch"></span><span class="name">تابعون</span><span class="toggle"></span></div>
+            <div class="method-row" style="--c:#ffc857"><span class="swatch"></span><span class="name">لغة</span><span class="toggle"></span></div>
+            <div class="method-row" style="--c:#e8a85a"><span class="swatch"></span><span class="name">أسباب نزول</span><span class="toggle"></span></div>
+            <div class="method-row" style="--c:#ff6b6b"><span class="swatch"></span><span class="name">إسرائيليات</span><span class="toggle"></span></div>
+            <div class="method-row on" style="--c:#2feec3"><span class="swatch"></span><span class="name">رأي</span><span class="toggle"></span></div>
+          </div>
+        </aside>
+      </div>
+      <div class="explain"><h3>لماذا هذا الوسم؟</h3><p>الدليل: «كما قال تعالى» + آية تبيّن المعنى <b>· اليقين: صريح ✓</b></p></div>
+    </section>
+    <div class="process-title">من الاقتراح إلى الحكم العلمي</div>
+    <section class="steps" aria-label="خطوات العمل">
+      <article class="step" style="--accent:#6251eb"><div class="step-top"><span class="icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 16.5 11.5 25.5 14l-9 2.5L14 25.5l-2.5-9L2.5 14l9-2.5L14 2.5Z" stroke="currentColor" stroke-width="2"/></svg></span><span class="step-no">١</span></div><h3>الذكاء الاصطناعي يقترح</h3><p>يلوّن النص ويذكر دليله منه، ولا يغيّر حرفًا.</p></article>
+      <article class="step" style="--accent:#39a0fd"><div class="step-top"><span class="icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="m6 14 5 5L22 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2.5 24 6v7c0 6-4 10-10 12-6-2-10-6-10-12V6l10-3.5Z" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="step-no">٢</span></div><h3>النظام يتحقق</h3><p>علامات نصية وقواعد ويقين: صريح، قوي، ضعيف، امتناع.</p></article>
+      <article class="step" style="--accent:#2feec3"><div class="step-top"><span class="icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="m5 20 13-13 3 3L8 23H5v-3ZM16 9l3 3M4 25h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="step-no">٣</span></div><h3>المتخصص يحكم</h3><p>يمدّ التمييز أو يقصّره، يغيّر لونه، يحذفه، ويضيف ما فات.</p></article>
+    </section>
+    <footer class="footer">النص من المصدر دون تغيير حرف <strong>·</strong> الآلة ترتّب، والعالِم يحكم.</footer>
+  </div>
+</main>
+<script>document.fonts.ready.then(() => { document.title = 'ready'; });</script>
+</body>
+</html>

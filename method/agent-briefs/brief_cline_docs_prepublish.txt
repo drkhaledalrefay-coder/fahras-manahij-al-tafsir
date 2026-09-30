@@ -1,0 +1,18 @@
+TASK: Pre-publish documentation cleanup. Edit ONLY: README.md, ATTRIBUTION.md, method/research_quranpedia.md, and create docs/AI_DISCLOSURE.md and docs/RUN.md. Do NOT touch src/, web/, data/, deck/, .claude/, tests/. Do NOT commit.
+
+Facts to use (do not invent):
+- Project: «فهرس مناهج التفسير» — indexes the interpretive METHOD inside a commentator's own tafsir text; AI proposes labels by span IDs only; deterministic verifier scores/routes; specialist approves; source pinned by sha256; letter-for-letter verification.
+- Decision: the build days lead with al-Tabari (d. 310 AH); Ibn Kathir, al-Baghawi, al-Saadi are kept only as evidence the method generalizes.
+- Adopted sentence (put verbatim in README under «المرجعية العلمية»): «تفهرس الأداة منهج المفسِّر في نصه وتُسند كل شاهد إلى موضعه؛ ولا تستخدم هذه المتون لإصدار شرح مستقل للآيات، بل تقصر أي شرح أو جواب شرعي على مصادر القرون الثلاثة الأولى أو منصة dorar.net/tafseer، مع إظهار المرجع والامتناع عند غياب الدليل.»
+- Data: Tafsir Center for Quranic Studies open dataset tafsircenter/tafsir-mcp-data (dataset card CC BY 4.0); their DATA_SOURCES.md requires attribution and asks permission for commercial redistribution → state clearly: this repository is non-commercial research/education, with attribution. Code license MIT.
+- Run 2 numbers (moves/auto/specialist): Ibn Kathir Codex 42/23/19 · Ibn Kathir DeepSeek 44/26/18 · al-Tabari 31/18/13 (DeepSeek + MiMo for 2:255) · al-Baghawi 39/29/10 · al-Saadi 24/15/9. These are routing counts, not accuracy.
+- AI models used for DATA (classification): Codex (OpenAI, model gpt-6-sol) on Ibn Kathir; DeepSeek V4.1 Flash (via Cline) on all four; MiMo V2.6 Flash (via Cline) on al-Tabari 2:255. AI tools used for DEVELOPMENT (code/docs/research, not data labels): Claude (Anthropic) as supervisor, Cursor (Grok models), Grok, Codex, Cline, Antigravity. Human specialist approval: not yet performed on the pilot (example «approved» record is illustrative).
+
+CHANGES
+1. README.md: rewrite the run section → point to docs/RUN.md; describe the current pages (web/fahras.html main page with 4 tafsirs; web/methods.html frozen reference); add «المرجعية العلمية» section with the adopted sentence; add results table (Run 2, labeled «أعداد توجيه وليست دقة»); link docs/AI_DISCLOSURE.md, docs/DATA_FORMAT.md, ATTRIBUTION.md; placeholder line «الرابط الحي: (يُضاف عند النشر)». No personal names, no personal file paths.
+2. docs/RUN.md: exact commands in order to rebuild everything from the repo (read the scripts to get them right): source extraction needs quran.db → explain it is downloaded from the dataset and passed via --db (no personal path); multi_fetch → multi_layers → multi_spans → multi_windows → v2_markers/v2_packets (--base) → classification (external, describe) → v2_verify / multi_run_verify → build_fahras / build_methods → tests (python src/v2_selftest.py; python -m unittest discover -s tests -p "test_*.py").
+3. docs/AI_DISCLOSURE.md: table of the models/tools above, what each did, and limitations.
+4. ATTRIBUTION.md: add the non-commercial/attribution note from Tafsir Center DATA_SOURCES.md; keep existing entries.
+5. method/research_quranpedia.md: remove any phone number, Telegram handle, email address or personal name of the site's owner/contacts (replace with «[بيانات تواصل محذوفة]»); keep the analysis.
+6. Scan the files you edited for "C:/Users" or "C:\\Users" or "Khale" and remove them.
+REPORT: list of changes per file; confirm grep shows no personal paths/contacts in the edited files. Do not commit.

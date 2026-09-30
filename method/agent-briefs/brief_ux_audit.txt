@@ -1,0 +1,9 @@
+READ-ONLY UX AUDIT (no edits, no commit). Target: web/fahras.html (serve with: python -m http.server 8797 --directory web, open http://localhost:8797/fahras.html; use headless Chrome screenshots at 1440×900 and 390×844, both color schemes, if you can). Source: src/fahras_template.html.
+You have design skills installed (impeccable, frontend-design, high-end-visual-design) — apply their heuristics.
+Personas: (A) tafsir specialist reviewing AI highlights; (B) researcher/student who wants "where did the commentator use hadith in this verse"; (C) ordinary reader on a phone; (D) competition judge with 60 seconds.
+DELIVER in your final message (Arabic, ≤ 800 words):
+1. A score 1–5 per area: first 10 seconds clarity, visual hierarchy, readability of long Arabic text, color system (10 method colors: distinguishable? contrast? color-blind safe? not color-only?), navigation, progressive disclosure, specialist workflow efficiency, mobile, accessibility, trust signals, brand consistency with the challenge identity (navy #12183F, violet #6150EA, turquoise #2EF2C2, off-white #F2F4FF).
+2. The top 10 problems ranked by impact on personas D then B then A then C, each with the exact element/selector and a concrete fix (effort S/M).
+3. A proposed default first screen (ASCII wireframe) for persona D/B: what shows, what hides behind «ابدأ المراجعة».
+4. What NOT to change (things that already work and protect trust).
+Touch no files.

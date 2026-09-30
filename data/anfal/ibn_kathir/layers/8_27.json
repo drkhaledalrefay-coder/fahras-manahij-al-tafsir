@@ -1,0 +1,181 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_27.txt",
+  "ayah": "8:27",
+  "surah": 8,
+  "ayah_number": 27,
+  "source_char_length": 3794,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 124,
+      "kind": "author"
+    },
+    {
+      "start": 124,
+      "end": 151,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 151,
+      "end": 152,
+      "kind": "author"
+    },
+    {
+      "start": 152,
+      "end": 247,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 247,
+      "end": 925,
+      "kind": "author"
+    },
+    {
+      "start": 925,
+      "end": 1161,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1161,
+      "end": 1423,
+      "kind": "author"
+    },
+    {
+      "start": 1423,
+      "end": 1498,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1498,
+      "end": 1594,
+      "kind": "author"
+    },
+    {
+      "start": 1594,
+      "end": 1669,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1669,
+      "end": 2077,
+      "kind": "author"
+    },
+    {
+      "start": 2077,
+      "end": 2213,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2213,
+      "end": 2647,
+      "kind": "author"
+    },
+    {
+      "start": 2647,
+      "end": 2702,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2702,
+      "end": 3036,
+      "kind": "author"
+    },
+    {
+      "start": 3036,
+      "end": 3076,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3076,
+      "end": 3161,
+      "kind": "author"
+    },
+    {
+      "start": 3161,
+      "end": 3222,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3222,
+      "end": 3418,
+      "kind": "author"
+    },
+    {
+      "start": 3418,
+      "end": 3469,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3469,
+      "end": 3617,
+      "kind": "author"
+    },
+    {
+      "start": 3617,
+      "end": 3654,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3654,
+      "end": 3730,
+      "kind": "author"
+    },
+    {
+      "start": 3730,
+      "end": 3793,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3793,
+      "end": 3794,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 13,
+    "layout": 0,
+    "apparatus": 12
+  },
+  "char_totals": {
+    "author": 2843,
+    "layout": 0,
+    "apparatus": 951
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 11
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 27,
+    "footnote": 924
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 11,
+    "footnote_close": 11,
+    "footnotes_closed": 11,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[قال عبد الله بن أبي قتادة]": 1
+    }
+  }
+}

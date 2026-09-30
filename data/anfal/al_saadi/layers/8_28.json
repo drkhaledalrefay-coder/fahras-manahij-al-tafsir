@@ -1,0 +1,54 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/anfal/al_saadi/raw/8_28.txt",
+  "ayah": "8:28",
+  "surah": 8,
+  "ayah_number": 28,
+  "source_char_length": 539,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 176,
+      "kind": "author"
+    },
+    {
+      "start": 176,
+      "end": 193,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 193,
+      "end": 539,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "layout": 0,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 522,
+    "layout": 0,
+    "apparatus": 17
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 17
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

@@ -1,0 +1,30 @@
+TASK: Add five review-workflow features to the specialist interface. Edit ONLY src/methods_template.html (and src/build_methods.py only if it must embed extra data), then rebuild with: python src/build_methods.py. Do NOT touch data/, src/v2_*.py, deck/, method/, schema/, docs/. Do NOT commit.
+
+NON-NEGOTIABLE PRINCIPLE (keep): the source text is never typed into. The specialist edits highlights only (offsets start/end in the pinned source). No textarea / contenteditable over source text anywhere. Keep the existing fidelity check, the compare-before-approve gating, and the non-author (editor apparatus ¬…¥) refusal.
+
+CONTEXT: The page shows Ibn Kathir's text (right) and a methods panel; AI proposals ("moves") carry primary method, secondary, content_tags, certainty, score, route (auto_candidate|specialist), flags, evidence_span_ids, rationale_ar. There is a specialist mode with a smart highlighter and a log. Read the template first.
+
+FEATURES
+1. REVIEW QUEUE with filters. A panel/tab «طابور المراجعة» listing every move (all windows): window/verse, method, status, certainty, score, route, fidelity/flags badge. Filters (combinable): verse/window, status, method, content label, has-warning. Counts per status at top. Clicking a row scrolls to and selects that highlight.
+2. FOUR STATUSES per move: AI_PROPOSED (initial) → UNDER_REVIEW (set automatically on first specialist edit or on «يحتاج تعديل») → APPROVED | REJECTED. Buttons in the highlight drawer: «اعتماد» (existing gating stays: only after Compare for current boundaries), «يحتاج تعديل», «رفض». Arabic display names: مقترح من الآلة / قيد المراجعة / معتمد / مرفوض. AI_PROPOSED is never shown as approved content. Status changes are appended to the existing specialist log with timestamp.
+3. SECOND LABEL GROUP «نوع المحتوى» alongside methods, multi-select chips in the drawer (add/remove, with a small search box filtering chips): C_FIQH فقه وأحكام، C_BALAGHA بلاغة، C_SHIR شعر، C_FADAIL فضائل، C_TAKHRIJ تخريج وحكم حديثي، C_NUZUL أسباب نزول (content)، C_ISRAILIYYAT إسرائيليات (content)، C_TAFSIR بيان معنى. Initialize from the move's content_tags. A move may have several methods (primary + secondary) and several content labels — never assume one label. Label changes (added/removed) are logged.
+4. BOUNDARY BUTTONS in the drawer: «دمج مع السابق» / «دمج مع التالي» (merge this highlight with the adjacent highlight of the same window: union of ranges, keep this move's labels, mark the other as merged-into, log it), «توسيع إلى الجملة السابقة» / «توسيع إلى الجملة التالية» (extend to the previous/next sentence boundary: . ؟ ! ؛ or line break, in author text only), and «استعادة اقتراح الآلة» (restore original AI start/end/labels/status; log it). All go through the existing guard + fidelity check.
+5. EXPORT: buttons «تصدير الموضع الحالي» and «تصدير المعتمد» — open a textarea+copy panel (no downloads, no alert/confirm/prompt). Each record exactly this shape (text is sliced from the pinned source by offsets, never from UI):
+{
+ "annotation_id": "<tafsir_id>-<window>-<move_id>",
+ "quran": {"surah": n, "ayah": n},
+ "tafsir": {"id": "ibn_kathir", "name": "تفسير ابن كثير"},
+ "source": {"source_id": "<tafsir_id>_<surah>_<ayah>", "sha256": "<if available in data, else null>", "start_char": n, "end_char": n},
+ "labels": {"source_method": ["M_..."], "content_type": ["C_..."]},
+ "text": "<exact source slice>",
+ "verification": {"text_fidelity": "exact", "strict_match": true, "normalized_match": true},
+ "ai_proposal": {"start_char": n, "end_char": n, "labels": {...}, "certainty": "...", "score": n, "route": "..."},
+ "review": {"status": "approved|rejected|under_review|ai_proposed", "reviewer_role": "tafsir_specialist", "reviewed_at": "<ISO>", "changes": [ ...log entries for this move... ]}
+}
+Keep tafsir_id/name/source_id as data, not hard-coded logic.
+
+ALSO FIX: the trim-to-author-text offer currently uses window.confirm(), which returns false inside the published artifact frame. Replace every confirm/alert/prompt in the page with an in-page inline prompt (message + «قصّ إلى كلام المؤلف» / «إلغاء» buttons).
+
+DESIGN: keep the existing palette and typography; RTL; works at 390px width (queue collapses to a list, drawer full-width); no side-stripe borders >1px; visible focus; all new text Arabic.
+
+GATES: python src/build_methods.py ; extract the inline script and run node --check ; grep that no confirm( / alert( / prompt( remain and no textarea/contenteditable wraps source text ; report where each feature lives and paste one exported approved record from a manual run in your final message. Do not commit.

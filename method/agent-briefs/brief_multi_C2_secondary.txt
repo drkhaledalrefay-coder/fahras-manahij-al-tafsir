@@ -1,0 +1,16 @@
+TASK C2 (delta on the NEW page only): show secondary methods visually. Edit ONLY src/fahras_template.html (and src/build_fahras.py if needed), rebuild with python src/build_fahras.py. Do NOT touch src/methods_template.html, src/build_methods.py, web/methods.html, data/. Do NOT commit.
+
+A move/highlight has primary (may be null for pure takhrij) and secondary[] methods. Today only the primary color shows; secondary is visible only in the drawer.
+
+1. Fill color = primary method (unchanged). Null primary keeps its current neutral style.
+2. Secondary dots: at the START edge of each highlight (RTL start), render one small round dot per secondary method in that method's color (data-nonsource="1", aria-hidden, user-select:none, not counted in offsets). Tooltip/title and the drawer list their names. Max 3 dots, then «+n».
+3. Method filter in the panel:
+   - highlights where the selected method is PRIMARY: full color (as today);
+   - highlights where it is SECONDARY only: lighter tint of that method color + 1px dashed underline in that color;
+   - others: dimmed as today.
+4. Panel counts per method: «أساسي n · مساعد m» (counts for the current tafsir + verse + annotator).
+5. Legend line under the panel: «التعبئة = المنهج الأساسي · النقاط = مناهج مساعدة · الخط المتقطع = منهج مساعد».
+6. Specialist editing: in the drawer, allow adding/removing secondary methods with chips (same style as content labels); changes logged as label_add/label_remove with field "secondary"; export labels.source_method = [primary, ...secondary] without duplicates (primary first).
+7. Must work in both themes and at 390px; no side-stripe borders >1px; offsets/fidelity checks unaffected.
+
+GATES: python src/build_fahras.py ; node --check on extracted inline script ; verify via a python check that every span text == raw[start:end] still holds for embedded windows ; git status shows the frozen IK files unchanged. Report where dots are rendered and how offset mapping ignores them. Do not commit.

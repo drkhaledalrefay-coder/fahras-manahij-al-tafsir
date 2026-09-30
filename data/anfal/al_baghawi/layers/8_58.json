@@ -1,0 +1,105 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_58.txt",
+  "ayah": "8:58",
+  "surah": 8,
+  "ayah_number": 58,
+  "source_char_length": 1935,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 452,
+      "kind": "author"
+    },
+    {
+      "start": 452,
+      "end": 467,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 467,
+      "end": 468,
+      "kind": "author"
+    },
+    {
+      "start": 468,
+      "end": 492,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 492,
+      "end": 1006,
+      "kind": "author"
+    },
+    {
+      "start": 1006,
+      "end": 1016,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1016,
+      "end": 1017,
+      "kind": "author"
+    },
+    {
+      "start": 1017,
+      "end": 1036,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1036,
+      "end": 1673,
+      "kind": "author"
+    },
+    {
+      "start": 1673,
+      "end": 1934,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1934,
+      "end": 1935,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 6,
+    "layout": 0,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 1606,
+    "layout": 0,
+    "apparatus": 329
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 2,
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 25,
+    "footnote": 304
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[يَتَوَهَّمُوا]": 1,
+      "[سُلَيْمِ]": 1
+    }
+  }
+}

@@ -1,0 +1,21 @@
+TASK: Verifier RUN 2 — close the self-trust gaps found by review, tafsir-agnostic. Edit ONLY src/v2_verify.py, src/v2_markers.py (marker list additions below), method/markers_v2.md, method/design_v2.md (a short "Run 2 verifier" note), src/build_fahras.py + src/fahras_template.html (results strip only). Do NOT touch data/**/moves, data/raw, src/methods_template.html, src/build_methods.py, web/methods.html. Do NOT re-run any classifier. Do NOT commit.
+
+FINDINGS TO FIX (from a read-only review of src/v2_verify.py):
+1. Marker credit for M_RAY/others can come from classifier-claimed author_verdict_span_ids alone (e.g. Saadi 2_102 m01, m08 got marker 25 with no matching marker).
+2. function_evidence 45 is granted whenever evidence IDs are valid (or move spans are substituted); the "evidence outside move" branch is unreachable.
+3. M_RAY reaches 75 = auto with marker 0.
+4. Claimed certainty, references and verdict IDs are trusted without content checks.
+
+RULES (generic — must not mention or special-case any tafsir):
+A. Marker 25 only if a marker of the family mapped to the move's primary method occurs in AUTHOR text inside the move's evidence spans (keep the existing SAHABA/TABIIN preceding-span speaker rule). Claimed author_verdict_span_ids earn marker credit ONLY if those spans contain a real RAY verdict marker.
+B. Add RAY verdict markers: «والأظهر»، «والظاهر»، «والصحيح»، «قلت»، «والله أعلم»، «والراجح»، «وهذا أولى»، «والمعنى» (tashkeel-insensitive). For LUGHA keep «أي:» as a gloss marker.
+C. Evidence spans must lie inside the move's span_ids OR be the immediately preceding span; otherwise flag rule_evidence_outside_move and function_evidence 0.
+D. M_RAY → ALWAYS route specialist (flag rule_ray_unmeasured) until measured precision exists.
+E. certainty "explicit" claimed without a matching marker → downgrade to "strong" and flag rule_explicit_without_marker.
+F. Keep everything else (caps, sensitive-method routing, editor-only rule).
+
+OUTPUTS: run 1 stays for the record. Before changing anything, snapshot current results: copy reports/v2_summary.md → reports/run1_v2_summary.md and each data/multi/<id>/summary.md → data/multi/<id>/run1_summary.md, and copy each verified/<annotator>/ folder to verified_run1/<annotator>/. Then re-run: python src/v2_markers.py ; python src/v2_verify.py ; python src/multi_run_verify.py (markers for multi too: python src/v2_markers.py --base data/multi/<id> --tafsir-name ...). Note: IK packets must stay as committed (do NOT re-run v2_packets for data/v2).
+
+PAGE: in the fahras results strip show Run 2 numbers, with a small line «التشغيل ١ (قبل تشديد المدقق): آلي X · مختص Y» from the run1 snapshot, and the note «التشغيل ٢: تشديد المدقق عاماً لكل التفاسير — لا ضبط على تفسير بعينه». Rebuild python src/build_fahras.py.
+
+GATES (paste): python src/v2_selftest.py (update fixture expectations only where a rule above deliberately changes them, list each); before/after table per tafsir × annotator (moves, auto, specialist, flags); list of every move whose route changed with the rule that changed it (counts per rule is fine if >40); node --check on fahras inline script; git status shows web/methods.html unchanged. Do not commit.

@@ -1,0 +1,85 @@
+{
+  "window_id": "8_17_p02",
+  "ayah": "8:17",
+  "span_count": 7,
+  "family_counts": {
+    "HADITH": 2,
+    "QURAN": 2,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s110",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 8538,
+          "end": 8545,
+          "span_id": "s110"
+        }
+      ]
+    },
+    {
+      "span_id": "s111",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8606,
+          "end": 8658,
+          "span_id": "s111"
+        }
+      ]
+    },
+    {
+      "span_id": "s112",
+      "markers": []
+    },
+    {
+      "span_id": "s113",
+      "markers": []
+    },
+    {
+      "span_id": "s114",
+      "markers": []
+    },
+    {
+      "span_id": "s115",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8917,
+          "end": 8948,
+          "span_id": "s115"
+        }
+      ]
+    },
+    {
+      "span_id": "s116",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9003,
+          "end": 9033,
+          "span_id": "s116"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8794,
+      "end": 8904,
+      "text": "¬سيرة ابن هشام 2/ 206، وأخرجه ابن أبي حاتم فى تفسيره 5/ 1674 من طريق سلمة عن ابن إسحاق عن محمد، عن عروة قوله.¥",
+      "attached_span_id": "s113",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

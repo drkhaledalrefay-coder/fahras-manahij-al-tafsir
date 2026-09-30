@@ -1,0 +1,65 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/anfal/al_saadi/raw/8_43.txt",
+  "ayah": "8:43",
+  "surah": 8,
+  "ayah_number": 43,
+  "source_char_length": 721,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 471,
+      "kind": "author"
+    },
+    {
+      "start": 471,
+      "end": 530,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 530,
+      "end": 561,
+      "kind": "author"
+    },
+    {
+      "start": 561,
+      "end": 578,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 578,
+      "end": 721,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 3,
+    "layout": 0,
+    "apparatus": 2
+  },
+  "char_totals": {
+    "author": 645,
+    "layout": 0,
+    "apparatus": 76
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 76
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 2,
+    "footnote_close": 2,
+    "footnotes_closed": 2,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

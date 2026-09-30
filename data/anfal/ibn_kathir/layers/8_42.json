@@ -1,0 +1,252 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_42.txt",
+  "ayah": "8:42",
+  "surah": 8,
+  "ayah_number": 42,
+  "source_char_length": 6649,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 335,
+      "kind": "author"
+    },
+    {
+      "start": 335,
+      "end": 343,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 343,
+      "end": 344,
+      "kind": "author"
+    },
+    {
+      "start": 344,
+      "end": 386,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 386,
+      "end": 1125,
+      "kind": "author"
+    },
+    {
+      "start": 1125,
+      "end": 1200,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1200,
+      "end": 1342,
+      "kind": "author"
+    },
+    {
+      "start": 1342,
+      "end": 1396,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1396,
+      "end": 1655,
+      "kind": "author"
+    },
+    {
+      "start": 1655,
+      "end": 1677,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1677,
+      "end": 1695,
+      "kind": "author"
+    },
+    {
+      "start": 1695,
+      "end": 1754,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1754,
+      "end": 2023,
+      "kind": "author"
+    },
+    {
+      "start": 2023,
+      "end": 2043,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2043,
+      "end": 2653,
+      "kind": "author"
+    },
+    {
+      "start": 2653,
+      "end": 2683,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2683,
+      "end": 2944,
+      "kind": "author"
+    },
+    {
+      "start": 2944,
+      "end": 2957,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2957,
+      "end": 3142,
+      "kind": "author"
+    },
+    {
+      "start": 3142,
+      "end": 3171,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3171,
+      "end": 3687,
+      "kind": "author"
+    },
+    {
+      "start": 3687,
+      "end": 3710,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3710,
+      "end": 4589,
+      "kind": "author"
+    },
+    {
+      "start": 4589,
+      "end": 4646,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4646,
+      "end": 5228,
+      "kind": "author"
+    },
+    {
+      "start": 5228,
+      "end": 5346,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5346,
+      "end": 5573,
+      "kind": "author"
+    },
+    {
+      "start": 5573,
+      "end": 5585,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5585,
+      "end": 5594,
+      "kind": "author"
+    },
+    {
+      "start": 5594,
+      "end": 5628,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5628,
+      "end": 5811,
+      "kind": "author"
+    },
+    {
+      "start": 5811,
+      "end": 5851,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5851,
+      "end": 6365,
+      "kind": "author"
+    },
+    {
+      "start": 6365,
+      "end": 6379,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 6379,
+      "end": 6422,
+      "kind": "author"
+    },
+    {
+      "start": 6422,
+      "end": 6470,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6470,
+      "end": 6649,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 19,
+    "layout": 0,
+    "apparatus": 18
+  },
+  "char_totals": {
+    "author": 5951,
+    "layout": 0,
+    "apparatus": 698
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 16,
+    "verse_ref": 1
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 8,
+    "footnote": 676,
+    "verse_ref": 14
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 16,
+    "footnote_close": 16,
+    "footnotes_closed": 16,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 1,
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[الأنعام: 122]": 1
+    },
+    "other_brackets": {
+      "[مخبرًا]": 1
+    }
+  }
+}

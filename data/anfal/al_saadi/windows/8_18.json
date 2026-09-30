@@ -1,0 +1,46 @@
+{
+  "window_id": "8_18",
+  "tafsir_id": "al_saadi",
+  "ayah": "8:18",
+  "surah": 8,
+  "ayah_number": 18,
+  "source": "tafsircenter",
+  "source_file": "data/anfal/al_saadi/raw/8_18.txt",
+  "source_sha256": "21aa58aa4e59a08514a3050836fed2155824557244d6426cb6b027c37d16a892",
+  "window_start": 0,
+  "window_end": 204,
+  "window_text": "{ذَلِكُمْ وَأَنَّ اللَّهَ مُوهِنُ كَيْدِ الْكَافِرِينَ (18)}.\n{18} {ذلكم}: النصر من الله لكم، {وأنَّ الله موهنُ كيدِ الكافرين}؛ أي: مُضْعِفُ كلَّ مكر وكيد يكيدون به الإسلام وأهله، وجاعلُ مكرهم محيقاً بهم.",
+  "span_count": 3,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 61,
+      "text": "{ذَلِكُمْ وَأَنَّ اللَّهَ مُوهِنُ كَيْدِ الْكَافِرِينَ (18)}."
+    },
+    {
+      "id": "s002",
+      "start": 61,
+      "end": 127,
+      "text": "\n{18} {ذلكم}: النصر من الله لكم، {وأنَّ الله موهنُ كيدِ الكافرين}؛"
+    },
+    {
+      "id": "s003",
+      "start": 127,
+      "end": 204,
+      "text": " أي: مُضْعِفُ كلَّ مكر وكيد يكيدون به الإسلام وأهله، وجاعلُ مكرهم محيقاً بهم."
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s003",
+    "start_index": 0,
+    "end_index": 2,
+    "char_length": 204,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

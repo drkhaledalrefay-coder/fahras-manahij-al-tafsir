@@ -1,0 +1,248 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_31.txt",
+  "ayah": "8:31",
+  "surah": 8,
+  "ayah_number": 31,
+  "source_char_length": 4174,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 174,
+      "kind": "author"
+    },
+    {
+      "start": 174,
+      "end": 178,
+      "kind": "layout"
+    },
+    {
+      "start": 178,
+      "end": 540,
+      "kind": "author"
+    },
+    {
+      "start": 540,
+      "end": 544,
+      "kind": "layout"
+    },
+    {
+      "start": 544,
+      "end": 690,
+      "kind": "author"
+    },
+    {
+      "start": 690,
+      "end": 694,
+      "kind": "layout"
+    },
+    {
+      "start": 694,
+      "end": 721,
+      "kind": "author"
+    },
+    {
+      "start": 721,
+      "end": 782,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 782,
+      "end": 817,
+      "kind": "author"
+    },
+    {
+      "start": 817,
+      "end": 821,
+      "kind": "layout"
+    },
+    {
+      "start": 821,
+      "end": 1150,
+      "kind": "author"
+    },
+    {
+      "start": 1150,
+      "end": 1154,
+      "kind": "layout"
+    },
+    {
+      "start": 1154,
+      "end": 1196,
+      "kind": "author"
+    },
+    {
+      "start": 1196,
+      "end": 1200,
+      "kind": "layout"
+    },
+    {
+      "start": 1200,
+      "end": 1216,
+      "kind": "author"
+    },
+    {
+      "start": 1216,
+      "end": 1220,
+      "kind": "layout"
+    },
+    {
+      "start": 1220,
+      "end": 1471,
+      "kind": "author"
+    },
+    {
+      "start": 1471,
+      "end": 1613,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1613,
+      "end": 2061,
+      "kind": "author"
+    },
+    {
+      "start": 2061,
+      "end": 2065,
+      "kind": "layout"
+    },
+    {
+      "start": 2065,
+      "end": 2443,
+      "kind": "author"
+    },
+    {
+      "start": 2443,
+      "end": 2447,
+      "kind": "layout"
+    },
+    {
+      "start": 2447,
+      "end": 2475,
+      "kind": "author"
+    },
+    {
+      "start": 2475,
+      "end": 2540,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2540,
+      "end": 2541,
+      "kind": "author"
+    },
+    {
+      "start": 2541,
+      "end": 2545,
+      "kind": "layout"
+    },
+    {
+      "start": 2545,
+      "end": 2846,
+      "kind": "author"
+    },
+    {
+      "start": 2846,
+      "end": 2862,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2862,
+      "end": 2863,
+      "kind": "author"
+    },
+    {
+      "start": 2863,
+      "end": 2888,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2888,
+      "end": 3257,
+      "kind": "author"
+    },
+    {
+      "start": 3257,
+      "end": 3361,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3361,
+      "end": 3362,
+      "kind": "author"
+    },
+    {
+      "start": 3362,
+      "end": 3366,
+      "kind": "layout"
+    },
+    {
+      "start": 3366,
+      "end": 3559,
+      "kind": "author"
+    },
+    {
+      "start": 3559,
+      "end": 3833,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3833,
+      "end": 4170,
+      "kind": "author"
+    },
+    {
+      "start": 4170,
+      "end": 4174,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 19,
+    "layout": 13,
+    "apparatus": 7
+  },
+  "char_totals": {
+    "author": 3435,
+    "layout": 52,
+    "apparatus": 687
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 6,
+    "editor_bracket": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 671,
+    "editor_bracket": 16
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 13
+    },
+    "footnote_open": 6,
+    "footnote_close": 6,
+    "footnotes_closed": 6,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[يا رسولَ اللهِ]": 1
+    }
+  }
+}

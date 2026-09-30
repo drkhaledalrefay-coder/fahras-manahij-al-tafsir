@@ -1,0 +1,164 @@
+{
+  "window_id": "8_27_p02",
+  "ayah": "8:27",
+  "span_count": 11,
+  "family_counts": {
+    "HADITH": 1,
+    "TABIIN": 1,
+    "QURAN": 6,
+    "QIRAAT": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s108",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 7149,
+          "end": 7155,
+          "span_id": "s108"
+        }
+      ]
+    },
+    {
+      "span_id": "s109",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "ابن زيد",
+          "name": "ابن زيد",
+          "role": "SPEAKER",
+          "start": 7176,
+          "end": 7184,
+          "span_id": "s109"
+        }
+      ]
+    },
+    {
+      "span_id": "s110",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7196,
+          "end": 7224,
+          "span_id": "s110"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7233,
+          "end": 7257,
+          "span_id": "s110"
+        }
+      ]
+    },
+    {
+      "span_id": "s111",
+      "markers": []
+    },
+    {
+      "span_id": "s112",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 7332,
+          "end": 7336,
+          "span_id": "s112"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7338,
+          "end": 7389,
+          "span_id": "s112"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 7390,
+          "end": 7403,
+          "text": "[النساء: 142]",
+          "via": "apparatus",
+          "span_id": "s112"
+        }
+      ]
+    },
+    {
+      "span_id": "s113",
+      "markers": []
+    },
+    {
+      "span_id": "s114",
+      "markers": []
+    },
+    {
+      "span_id": "s115",
+      "markers": []
+    },
+    {
+      "span_id": "s116",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7802,
+          "end": 7830,
+          "span_id": "s116"
+        }
+      ]
+    },
+    {
+      "span_id": "s117",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7882,
+          "end": 7906,
+          "span_id": "s117"
+        }
+      ]
+    },
+    {
+      "span_id": "s118",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7444,
+      "end": 7460,
+      "text": "¬في م: \"أمنهم\".¥",
+      "attached_span_id": "s113",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7527,
+      "end": 7616,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 5/ 1685 من طريق أصبغ، عن ابن زيد إلى قوله: يظهرون الإيمان.¥",
+      "attached_span_id": "s114",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7925,
+      "end": 7942,
+      "text": "¬بعده فى م: \"و\".¥",
+      "attached_span_id": "s117",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

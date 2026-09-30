@@ -1,0 +1,82 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_30.txt",
+  "ayah": "8:30",
+  "surah": 8,
+  "ayah_number": 30,
+  "source_char_length": 5640,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 248,
+      "kind": "author"
+    },
+    {
+      "start": 248,
+      "end": 264,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 264,
+      "end": 265,
+      "kind": "author"
+    },
+    {
+      "start": 265,
+      "end": 290,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 290,
+      "end": 5212,
+      "kind": "author"
+    },
+    {
+      "start": 5212,
+      "end": 5318,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5318,
+      "end": 5640,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 5493,
+    "layout": 0,
+    "apparatus": 147
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 2
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 16,
+    "footnote": 131
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 2,
+    "footnote_close": 2,
+    "footnotes_closed": 2,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[عَلَى قَوْلِهِ]": 1
+    }
+  }
+}

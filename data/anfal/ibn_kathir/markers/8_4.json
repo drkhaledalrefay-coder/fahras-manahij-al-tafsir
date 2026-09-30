@@ -1,0 +1,412 @@
+{
+  "window_id": "8_4",
+  "ayah": "8:4",
+  "span_count": 29,
+  "family_counts": {
+    "QURAN": 10,
+    "LUGHA": 4,
+    "HADITH": 10,
+    "ISNAD": 1,
+    "TABIIN": 1,
+    "EDITOR": 6
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 106,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 116,
+          "end": 154,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 155,
+          "end": 158,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 238,
+          "end": 243,
+          "span_id": "s005"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 270,
+          "end": 275,
+          "span_id": "s005"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 286,
+          "end": 291,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 381,
+          "end": 386,
+          "span_id": "s007"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 398,
+          "end": 493,
+          "stripped": "عن خالد بن يزيد السكسكي، عن سعيد بن أبي هلال، عن محمد بن أبي الجهم، عن الحارث بن مالك الأنصاري،",
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1322,
+          "end": 1332,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1334,
+          "end": 1372,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 1403,
+          "end": 1407,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1594,
+          "end": 1629,
+          "span_id": "s016"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1630,
+          "end": 1633,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 1665,
+          "end": 1678,
+          "span_id": "s017"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1669,
+          "end": 1678,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1680,
+          "end": 1753,
+          "span_id": "s018"
+        }
+      ]
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1765,
+          "end": 1779,
+          "span_id": "s019"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1780,
+          "end": 1783,
+          "span_id": "s019"
+        }
+      ]
+    },
+    {
+      "span_id": "s020",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "name": "الضحاك",
+          "role": "SPEAKER",
+          "start": 1826,
+          "end": 1833,
+          "span_id": "s020"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1843,
+          "end": 1878,
+          "span_id": "s020"
+        }
+      ]
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 2065,
+          "end": 2074,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن رسول الله",
+          "start": 2077,
+          "end": 2089,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2092,
+          "end": 2110,
+          "span_id": "s022"
+        }
+      ]
+    },
+    {
+      "span_id": "s023",
+      "markers": []
+    },
+    {
+      "span_id": "s024",
+      "markers": []
+    },
+    {
+      "span_id": "s025",
+      "markers": []
+    },
+    {
+      "span_id": "s026",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 2454,
+          "end": 2458,
+          "span_id": "s026"
+        }
+      ]
+    },
+    {
+      "span_id": "s027",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 2513,
+          "end": 2526,
+          "span_id": "s027"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2529,
+          "end": 2547,
+          "span_id": "s027"
+        }
+      ]
+    },
+    {
+      "span_id": "s028",
+      "markers": []
+    },
+    {
+      "span_id": "s029",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 298,
+      "end": 369,
+      "text": "¬كذا في (عم) و (مح) والمعجم الكبير للطبراني وفي الأصل صحف إلى: \"يزيد\".¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 826,
+      "end": 1299,
+      "text": "¬أخرجه الطبراني بسنده ومتنه (المعجم الكبير 3/ 266) قال الهيثمي: رواه الطبراني وفيه ابن لهيعة، وفيه من يحتاج إلى الكشف عنه (المجمع 1/ 57)، وأخرجه البزار من طريق يوسف بن عطية عن ثابت عن أنس بنحوه ثم قال: تفرد به يوسف وهو لين الحديث. قال الحافظ ابن حجر: وله شاهد من حديث حارثة نفسه في المعجم الكبير، ولكنه قال: عن الحارث بن مالك، وفي إسناده ابن لهيعة، وله طرق ذكرتها في ترجمة الحارث بن مالك من كتابي الصحابة (مختصر زوائد مسند البزار 1/ 76 ح 23)، ويقصد بكتاب الصحابة: الإصابة.¥",
+      "attached_span_id": "s011",
+      "grading": [
+        "سنده",
+        "إسناده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1509,
+      "end": 1584,
+      "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق أبي سنان سعيد بن سنان عن عمرو بن مرة.¥",
+      "attached_span_id": "s015",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1991,
+      "end": 2053,
+      "text": "¬أخرجه ابن أبي حاتم بسند صحيح من طريق سلمة بن نبيط عن الضحاك.¥",
+      "attached_span_id": "s021",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2319,
+      "end": 2430,
+      "text": "¬صحيح البخاري، بدء الخلق، باب صفة الجنة (ح 3256)، وصحيح مسلم، الجنة، باب إحلال الرضوان على أهل الجنة (ح 2831).¥",
+      "attached_span_id": "s025",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2662,
+      "end": 3100,
+      "text": "¬أخرجه الإمام أحمد من طريق عطية به (المسند 17/ 302 ح 11206) وضعفه محققوه، وكذا أخرجه أبو داود، السنن، الحروف والقراءات (ح 3987)، والترمذي في سننه، المناقب، باب مناقب أبي بكر الصديق (ح 3658)، وابن ماجه في سننه، المقدمة، باب فضائل أصحاب رسول الله - صلى الله عليه وسلم - (ح 96)، وهذا الحديث يتقوى شقه الأول بما تقدم في الصحيحين، وأما الشق الثاني فيشهد له حديث: أصحابي كالنجوم ... أورده الألباني في السلسلة الصحيحة، فيكون الحديث حسنًا لغيره.¥",
+      "attached_span_id": "s028",
+      "grading": [
+        "صحيح",
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 398,
+      "end": 493,
+      "span_id": "s007",
+      "marker": "عن…عن"
+    }
+  ]
+}

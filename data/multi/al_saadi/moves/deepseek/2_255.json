@@ -1,0 +1,158 @@
+{
+  "window": "2_255",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s001", "s002"],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": ["C_FADAIL"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s002"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": ["صحيح مسلم"],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "خبر نبوي في فضل الآية؛ وحاشية المحقق عيّنت مصدره ودرجته دون أن تنشئ منهجاً."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": ["s003", "s004", "s005"],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s004", "s005"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح المؤلف معاني الألوهية والحياة والقيومية وما يتبعها من صفات الأفعال."
+    },
+    {
+      "move_id": "m03",
+      "span_ids": ["s006", "s007"],
+      "primary": "M_QURAN",
+      "secondary": ["M_LUGHA"],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": ["s007"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": ["19:93"],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح النعاس والنوم، واستدل بآية عموم العبودية على ملكه سبحانه."
+    },
+    {
+      "move_id": "m04",
+      "span_ids": ["s008", "s009", "s010"],
+      "primary": "M_QURAN",
+      "secondary": ["M_RAY"],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": ["s009", "s010"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": ["39:44"],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيّن تفرد الملك بالشفاعة، وعزّزه بآية اختصاص الشفاعة له، واستنتج شرط التوحيد."
+    },
+    {
+      "move_id": "m05",
+      "span_ids": ["s011", "s012"],
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": ["s012"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": ["40:19"],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "توسع في سعة العلم بالمستقبل والماضي، واستشهد بآية إحاطة العلم بالسرائر."
+    },
+    {
+      "move_id": "m06",
+      "span_ids": ["s013", "s014"],
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s013", "s014"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": ["2:32"],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "أورد قول أعلام الخلق في قصور علمهم؛ فكان بياناً بآية أخرى."
+    },
+    {
+      "move_id": "m07",
+      "span_ids": ["s015"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s015"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسّر الثقل بالمعنى اللغوي، وبيّن سعة الكرسي وحفظ العوالم بالأسباب."
+    },
+    {
+      "move_id": "m08",
+      "span_ids": ["s016", "s017"],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s016", "s017"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "كشف المؤلف معاني العلو والعظمة وما يجمعه اسم العظيم من أوصاف الكمال."
+    },
+    {
+      "move_id": "m09",
+      "span_ids": ["s018"],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": ["C_FADAIL"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s018"],
+      "author_verdict_span_ids": ["s018"],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": ["M_SUNNAH"],
+      "rationale_ar": "ختَم بحكم بفضل الآية وحثّ المتدبر؛ ولا قراءة مختلفة في الموضع."
+    }
+  ]
+}

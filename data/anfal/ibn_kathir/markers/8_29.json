@@ -1,0 +1,185 @@
+{
+  "window_id": "8_29",
+  "ayah": "8:29",
+  "span_count": 9,
+  "family_counts": {
+    "QURAN": 6,
+    "SAHABA": 2,
+    "LUGHA": 3,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 175,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 183,
+          "end": 191,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 254,
+          "end": 266,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 528,
+          "end": 536,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 538,
+          "end": 550,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 652,
+          "end": 664,
+          "span_id": "s006"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 665,
+          "end": 668,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 1065,
+          "end": 1069,
+          "span_id": "s007"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 1065,
+          "end": 1070,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1066,
+          "end": 1076,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1078,
+          "end": 1275,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 274,
+      "end": 428,
+      "text": "¬ذكرهم ابن أبي حاتم بحذف السند إلا قول ابن عباس فأخرجه بسند ثابت من طريق ابن أبي طلحة عنه، وأما قول مجاهد والسدي وقتادة فأخرجه الطبري بأسانيد ثابتة عنهم.¥",
+      "attached_span_id": "s002",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 458,
+      "end": 513,
+      "text": "¬أخرجه الطبري بسند صحيح من طريق ابن أبي نجيح عن مجاهد.¥",
+      "attached_span_id": "s003",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 556,
+      "end": 608,
+      "text": "¬أخرجه الطبري بسند ضعيف من طريق العوفي عن ابن عباس.¥",
+      "attached_span_id": "s004",
+      "grading": [
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 692,
+      "end": 785,
+      "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق ابن إسحاق عن محمد بن جعفر بن الزبير، عن عروة بن الزبير.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

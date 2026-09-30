@@ -1,0 +1,156 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_18.txt",
+  "ayah": "8:18",
+  "surah": 8,
+  "ayah_number": 18,
+  "source_char_length": 1207,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 89,
+      "kind": "author"
+    },
+    {
+      "start": 89,
+      "end": 93,
+      "kind": "layout"
+    },
+    {
+      "start": 93,
+      "end": 427,
+      "kind": "author"
+    },
+    {
+      "start": 427,
+      "end": 469,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 469,
+      "end": 480,
+      "kind": "author"
+    },
+    {
+      "start": 480,
+      "end": 484,
+      "kind": "layout"
+    },
+    {
+      "start": 484,
+      "end": 569,
+      "kind": "author"
+    },
+    {
+      "start": 569,
+      "end": 582,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 582,
+      "end": 602,
+      "kind": "author"
+    },
+    {
+      "start": 602,
+      "end": 614,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 614,
+      "end": 615,
+      "kind": "author"
+    },
+    {
+      "start": 615,
+      "end": 619,
+      "kind": "layout"
+    },
+    {
+      "start": 619,
+      "end": 746,
+      "kind": "author"
+    },
+    {
+      "start": 746,
+      "end": 812,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 812,
+      "end": 883,
+      "kind": "author"
+    },
+    {
+      "start": 883,
+      "end": 946,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 946,
+      "end": 993,
+      "kind": "author"
+    },
+    {
+      "start": 993,
+      "end": 997,
+      "kind": "layout"
+    },
+    {
+      "start": 997,
+      "end": 1203,
+      "kind": "author"
+    },
+    {
+      "start": 1203,
+      "end": 1207,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 10,
+    "layout": 6,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 987,
+    "layout": 24,
+    "apparatus": 196
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 4,
+    "verse_ref": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 183,
+    "verse_ref": 13
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 6
+    },
+    "footnote_open": 4,
+    "footnote_close": 4,
+    "footnotes_closed": 4,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[الأنفال: 14]": 1
+    },
+    "other_brackets": {}
+  }
+}

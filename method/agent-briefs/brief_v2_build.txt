@@ -1,0 +1,81 @@
+TASK: Build v2 — methodology indexing of Tafsir Ibn Kathir with an evidence-grounded pipeline and a specialist "smart highlighter" UI. Python stdlib for the pipeline; vanilla HTML/CSS/JS single-file page. Do NOT commit. Do NOT modify data/raw/, data/spans*/, data/layers/, data/tags/ (read-only). Do NOT touch deck/ (another agent works there). Work in this repo (tafsir-integrity).
+
+READ FIRST (in order): method/agent-briefs/brief_v2_context.txt, method/design_v2.md (the approved design — follow it), method/research_v2_novelty_references.md, method/taxonomy.md, src/layers.py, src/spans_author.py, src/normalize.py, src/app_template.html (visual identity to reuse).
+
+THE PRODUCT IN ONE SENTENCE: Ibn Kathir's page on one side, a methodology panel on the other; the AI proposes colored highlights (each with evidence and a certainty level), and the specialist corrects them with a smart highlighter — stretch, shrink, recolor, delete, or add — while the source text never changes.
+
+====================================================================
+PART 1 — Pipeline (code, zero model tokens)
+====================================================================
+1. src/v2_windows.py -> data/v2/windows/<id>.json
+   Three windows from AUTHOR-layer spans (reuse data/spans_author/*.json; do not re-cut):
+   - 2_255_tafsir: Ibn Kathir's phrase-by-phrase commentary on Ayat al-Kursi (NOT the fada'il hadith section). Find by code: start at the first author span whose normalized text contains «لا تأخذه سنه» (ignore tashkeel; ta marbuta may appear as ه or ة) preceded in the same or previous span by «وقوله»; end at the span that finishes commentary on «العلي العظيم» or after 110 spans, whichever first. Report the chosen range and first/last 80 chars.
+   - 17_105: all spans.
+   - 2_102: the existing pilot window (data/spans_pilot/2_102.json span ids).
+   Each window stores: window id, ayah, span list (id,start,end,text), plus the editor apparatus ranges (footnote/editor_bracket/verse_ref from data/layers) that fall inside the window range, with text and offsets.
+
+2. src/v2_markers.py -> data/v2/markers/<id>.json
+   Deterministic marker detection per span (normalized match, keep original offsets). Marker families (extend sensibly, document each regex in method/markers_v2.md):
+   - QURAN: {…} or ﴿…﴾ quotation; «كما قال تعالى» «وقال تعالى» «قوله تعالى»; adjacent verse_ref layer [سورة: n].
+   - HADITH: «قال رسول الله» «أن النبي» «أن رسول الله» «رواه» «أخرجه» «في الصحيح» «حدثنا» «أخبرنا» and ﷺ / صلى الله عليه وسلم.
+   - SAHABA: Companion names list (at least: ابن عباس، ابن مسعود، علي، عمر، أبو بكر، عثمان، أبي بن كعب، أبو هريرة، عائشة، ابن عمر، أنس، جابر، أبو ذر، أبو سعيد، معاذ) followed within 3 words by «قال» / «في قوله» / «يقول».
+   - TABIIN: names list (مجاهد، قتادة، الحسن، سعيد بن جبير، عكرمة، الضحاك، السدي، عطاء، الربيع، أبو العالية، ابن زيد، كعب الأحبار*) with the same «قال» proximity. (*Kaab also triggers ISRAILIYYAT.)
+   - ISNAD: chains «عن X عن Y» / «حدثنا X حدثنا Y» — mark the chain range so names inside it are flagged as narrators, not speakers.
+   - LUGHA: «أي:» «معناه» «يقال» «والعرب تقول» «في اللغة» «قال الشاعر» «وأنشد» «كقول».
+   - QIRAAT: «قرأ» «قراءة» «وفي قراءة» «قرأه».
+   - NUZUL: «نزلت في» «سبب نزول» «فأنزل الله» «فنزلت».
+   - SIRA: «يوم بدر» «غزوة» «يوم أحد» «خرج رسول الله».
+   - ISRAILIYYAT: «كعب الأحبار» «وهب بن منبه» «أهل الكتاب» «بني إسرائيل» «الإسرائيليات» «من كتبهم».
+   - RAY/VERDICT (author's own judgment): «والصحيح» «والظاهر» «والأقرب» «وأقرب» «قلت» «والله أعلم» «وهذا إسناد» «غريب» «فيه نظر».
+   - EDITOR evidence: footnote texts attached to the nearest preceding author span, tagged editor_footnote; detect grading words inside them («صحيح» «حسن» «ضعيف» «سنده») — evidence only, never a method by itself.
+
+3. src/v2_packets.py -> data/v2/packets/<id>.json and method/classifier_prompt_v2.md
+   A self-contained input packet for ONE classifier model per window: definitions (from design_v2.md section 1, in Arabic), certainty-level rules, the span list, per-span marker hits, editor-footnote evidence (clearly labeled "حاشية المحقق — ليست من كلام ابن كثير"), and the exact output JSON schema below. The prompt must say: return span IDs only, never text; refuse (certainty "insufficient") when evidence is missing; one primary method per move (or null for pure takhrij), optional secondary methods.
+   OUTPUT SCHEMA the classifier must return:
+   { "window": "...", "moves": [ { "move_id": "m01", "span_ids": [...], "primary": "M_QURAN|M_SUNNAH|M_SAHABA|M_TABIIN|M_LUGHA|M_QIRAAT|M_NUZUL|M_SIRA|M_ISRAILIYYAT|M_RAY|null", "secondary": [], "content_tags": [], "certainty": "explicit|strong|weak|insufficient", "evidence_span_ids": [...], "author_verdict_span_ids": [...], "references": {"verses": [], "hadith": [], "persons": []}, "alternatives": [], "rationale_ar": "≤25 words, no quotes >4 words" } ] }
+
+4. src/v2_verify.py -> data/v2/verified/<annotator>/<id>.json
+   Reads data/v2/moves/<annotator>/<id>.json (to be produced LATER by a classifier run — NOT by you), and:
+   - validates IDs, contiguity, non-overlap; rebuilds text from the pinned source and asserts verbatim;
+   - rule checks from design_v2.md (e.g. M_QURAN needs a QURAN marker in evidence spans and is flagged if the only verse sits inside a hadith quotation; M_SAHABA/M_TABIIN flagged if the name appears only inside an ISNAD range; M_ISRAILIYYAT needs an ISRAILIYYAT marker or author verdict; M_NUZUL needs a NUZUL marker; editor footnotes support attribution/grading only);
+   - computes the auditable score per design_v2.md: marker 25 + function evidence 45 + attribution 15 + boundary completeness 15; cap 59 if no function evidence; downgrade certainty when a rule fails;
+   - assigns route: auto_candidate (explicit/strong, score ≥ 75, no rule flag) or specialist (everything else, plus all M_ISRAILIYYAT, M_NUZUL, M_QIRAAT, Sahabi/Tabi'i ambiguity, mixed spans);
+   - writes a per-window summary and reports/v2_summary.md.
+   Provide src/v2_selftest.py with a HAND-WRITTEN fixture tests/fixtures/moves_fixture.json (clearly marked FIXTURE, 3–4 moves on 17_105) to prove verify + scoring work. The fixture must never be loaded by the UI.
+
+====================================================================
+PART 2 — UI: web/methods.html (single file, built by src/build_methods.py from src/methods_template.html)
+====================================================================
+Reuse the visual identity and page contract of src/app_template.html (navy base, violet→teal gradient only on the page title, Readex Pro UI, Amiri text, dark-first tokens with light theme blocks, <meta charset="utf-8"> + viewport meta first, no <html>/<head>/<body>/<!DOCTYPE>, only Google Fonts external, localStorage in try/catch, no alert/confirm/prompt, no side-stripe borders, works at 380px).
+
+LAYOUT
+- Header: «فهرس مناهج التفسير — تفسير ابن كثير» + one-line explainer + window selector (آية الكرسي / الإسراء ١٠٥ / البقرة ١٠٢).
+- Two regions side by side (stacked on mobile):
+  • RIGHT: «صفحة التفسير» — the full window text exactly as in the source; editor apparatus dimmed with a small label «حاشية المحقق» on hover; highlights drawn over the text.
+  • LEFT: «لوحة المناهج» — one row per method with color swatch, pattern sample, Arabic name, count, and a toggle; «الكل» / «لا شيء»; certainty legend (صريح / مستنتج بقوة / مستنتج بضعف / امتناع); filters by certainty and route (مرشح للقبول / بانتظار المتخصص).
+- 10 method colors distinguishable on navy and on light paper, each paired with a distinct underline/pattern style (never color alone). Weak/insufficient drawn with dashed outline and lower fill.
+- Overlapping methods on the same text: layered underline stripes + small count badge.
+
+"لماذا هذا الوسم؟" DRAWER (click a highlight): method (primary/secondary), certainty, route, score with 4-part breakdown, evidence spans (flash-highlight them in the page), marker hits, author's verdict spans, editor-footnote evidence in a separate box titled «حاشية المحقق — دليل مساعد لا من كلام ابن كثير», alternatives, rationale, review status.
+
+SMART HIGHLIGHTER (the core — specialist corrections)
+- Toggle «وضع المتخصص». In this mode:
+  • A selected highlight shows start/end handles. Stretch or shrink by dragging, and by buttons/keyboard: «+كلمة قبل» «−كلمة من البداية» «+كلمة بعد» «−كلمة من النهاية». Boundaries snap to WORD boundaries of the source text (character offsets into the pinned source) and may cross span boundaries.
+  • «تغيير المنهج»: recolor to another method (and set primary/secondary).
+  • «حذف»: remove a wrong highlight (kept in the log as rejected).
+  • «إضافة تمييز»: select any text on the page with mouse/touch; a small palette appears to assign method + certainty; creates a highlight with origin: specialist.
+  • «اعتماد» (approve as is), «امتناع» (mark insufficient), and a note field per highlight.
+- Every action is logged: {window, highlight_id, origin (ai|specialist), action, before:{start,end,method,certainty}, after:{...}, note, at}. The AI's original proposal is never overwritten; the specialist's version is a separate layer. Show a small «ما تغيّر» line under the highlight (e.g. «وُسّع ٣ كلمات بعدُ · غُيّر المنهج من الصحابة إلى السنة»).
+- Events in memory + localStorage (try/catch). «تصدير سجل المتخصص» shows a read-only textarea with the JSON + copy button (navigator.clipboard in the click handler, fallback select).
+- «طابور المتخصص» collapsible list of specialist-routed highlights, ordered by score ascending; clicking scrolls to it.
+- The page text is NEVER edited: highlights only store offsets; render only from the source string.
+
+EMPTY STATE: if data/v2/verified/* does not exist yet, render the text with a markers-only view (toggle «العلامات الآلية فقط» shows detected markers as thin underlines) and the message «لم يُشغَّل المصنّف بعد». Do NOT fabricate classifications.
+
+====================================================================
+GATES (run and paste output)
+====================================================================
+python src/v2_windows.py ; python src/v2_markers.py ; python src/v2_packets.py ; python src/v2_selftest.py ; python src/build_methods.py
+Checks: windows verbatim (span text == source slice); marker counts per family per window; packets exist; selftest passes; web/methods.html has no <html/<head/<body/<!DOCTYPE, only fonts.googleapis.com external, starts with <meta charset="utf-8">; inline JS passes node --check; side-stripe borders (border-inline-start/-right/-left wider than 1px) = 0.
+
+REPORT: chosen 2:255 range (first/last 80 chars), marker counts per family per window, files created, anything you could not do. Do not commit.

@@ -1,0 +1,684 @@
+{
+  "window_id": "2_102",
+  "ayah": "2:102",
+  "annotator": "codex",
+  "source_file": "data/raw/tafsircenter/2_102.txt",
+  "source_sha256": "5e095e0c45bbb1858fac5823f7145d06e6d9ea04d3e65b00132b70c0b10852e9",
+  "window_start": 25901,
+  "window_end": 29364,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s262",
+        "s263",
+        "s264",
+        "s265",
+        "s266",
+        "s267",
+        "s268",
+        "s269"
+      ],
+      "start": 25901,
+      "end": 26223,
+      "text": " قال: ما قلت لك إلا ما سمعت من رسول الله - صلى الله عليه وسلم -. أو قال: قال لي رسول الله - صلى الله عليه وسلم -: إن الملائكة قالت: يا رب!، كيف صبرك على بني آدم في الخطايا والذنوب؟ قال: إني ابتليتهم وعافيتكم. قالوا: لو كنا مكانهم ما عصيناك. قال: فاختاروا ملكين منكم. قال: فلم يألوا جهدًا أن يختاروا، فاختاروا هاروت وماروت.",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "insufficient",
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s263",
+        "s264",
+        "s269"
+      ],
+      "author_verdict_span_ids": [
+        "s270",
+        "s271",
+        "s282"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SUNNAH",
+        "M_ISRAILIYYAT"
+      ],
+      "rationale_ar": "ورد الخبر مرفوعا ثم رجح المؤلف رجوعه إلى مصدر آخر؛ فلا تثبت نسبته النبوية.",
+      "marker_hits": [
+        {
+          "span_id": "s263",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 25993,
+          "end": 26011
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s270",
+        "s271",
+        "s272"
+      ],
+      "start": 26223,
+      "end": 26506,
+      "text": "\r\nوهذان أيضًا غريبان جدًّا. وأقرب (ما في)  هذا أنه من رواية عبد الله بن عمر، عن كعب الأحبار، لا عن النبي - صلى الله عليه وسلم -، كما قال عبد الرزاق في \"تفسيره\" ، عن الثوري، عن موسى بن عقبة، عن سالم، عن ابن عمر، عن كعب الأحبار؛",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s270",
+        "s271"
+      ],
+      "author_verdict_span_ids": [
+        "s270",
+        "s271"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عمر",
+          "كعب الأحبار"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "رجح المؤلف أصل الرواية ورفض نسبتها إلى النبي.",
+      "marker_hits": [
+        {
+          "span_id": "s270",
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 26237,
+          "end": 26241
+        },
+        {
+          "span_id": "s270",
+          "family": "RAY",
+          "marker": "وأقرب",
+          "start": 26251,
+          "end": 26256
+        },
+        {
+          "span_id": "s271",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 26323,
+          "end": 26361
+        },
+        {
+          "span_id": "s271",
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 26326,
+          "end": 26337
+        },
+        {
+          "span_id": "s271",
+          "family": "TABIIN",
+          "marker": "كعب الأحبار",
+          "start": 26326,
+          "end": 26337,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s271",
+          "family": "HADITH",
+          "marker": "النبي",
+          "start": 26345,
+          "end": 26350,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s271",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 26353,
+          "end": 26371
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 26265,
+          "end": 26288,
+          "text": "¬في (ن): \"ما يكون في\".¥",
+          "attached_span_id": "s270",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 26406,
+          "end": 26440,
+          "text": "¬(1/ 53) وقد مضى تخريجه منذ قليل.¥",
+          "attached_span_id": "s271",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s273",
+        "s274",
+        "s275",
+        "s276"
+      ],
+      "start": 26506,
+      "end": 26809,
+      "text": " قال: ذكرت الملائكة أعمال بني آدم، وما يأتون من الذنوب، فقيل لهم: اختاروا منكم اثنين، فاختاروا هاروت وماروت؛ فقال لهما: إني أرسل إلى بني آدم رسلًا، وليس بيني وبينكم رسول، انزلا لا تشركا بي شيئًا، ولا تزنيا، ولا تشربا الخمر، قال كعب: فوالله ما أمسيا من يومهما الذي أهبطا فيه حتى استكملا جميع ما نهيا عنه.",
+      "primary": "M_ISRAILIYYAT",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s273",
+        "s275",
+        "s276"
+      ],
+      "author_verdict_span_ids": [
+        "s282"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "كعب الأحبار"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "مادة تفسيرية منقولة عن كعب في خبر الملكين، مع تعيين المؤلف لمصدرها.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s277",
+        "s278",
+        "s279",
+        "s280",
+        "s281"
+      ],
+      "start": 26809,
+      "end": 27714,
+      "text": "\r\nرواه ابن جرير من طريقين؛ عن عبد الرزاق، به.\r\nورواه ابن أبي حاتم، عن أحمد بن عصام، عن مؤمل، عن سفيان الثوري، به.\r\nورواه ابن جرير أيضًا: حدثني المثنى، حدثنا المعلَّى - وهو ابن أسد -، حدثنا عبد العزيز بن المختار، عن موسى بن عقبة، حدثني سالم أنه سمع عبد الله يحدث عن كعب الأحبار ... فذكره.\r\nفهذا أصح وأثبت إلى عبد الله بن عمر من الإسنادين المتقدمين، وسالم أثبت  في أبيه من مولاه نافع؛",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s277",
+        "s279",
+        "s280",
+        "s281"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "مقارنة طرق النقل وتقوية إسناد بعينه دون تفسير جديد.",
+      "marker_hits": [
+        {
+          "span_id": "s277",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 26811,
+          "end": 26815
+        },
+        {
+          "span_id": "s279",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 26925,
+          "end": 26929
+        },
+        {
+          "span_id": "s279",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 26960,
+          "end": 26965
+        },
+        {
+          "span_id": "s279",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 26992,
+          "end": 26997
+        },
+        {
+          "span_id": "s279",
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 27074,
+          "end": 27085
+        },
+        {
+          "span_id": "s279",
+          "family": "TABIIN",
+          "marker": "كعب الأحبار",
+          "start": 27074,
+          "end": 27085,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 27168,
+          "end": 27691,
+          "text": "¬وهكذا قال أهل العلم. قال ابن معين: \"يقولون: إن نافعًا لم يحدث حتى مات سالم\" وقال ابن المديني، كما في \"التمهيد\" (13/ 282) لابن عبد البر، عن الأحاديث التي اختلف فيها نافع وسالم: \"القول فيها قول سالم\". وقال النسائي: \"سالم أجل من نافع\". وقال الطحاوي في \"شرح المعاني\" (1/ 378): \"وسالم أثبت من نافع وأحفظ\".\r\nوذكر أبو داود في \"سننه\" (3434) أن سالمًا [وقع في \"المطبوعة\": الزهري. وهو خطأ] اختلف مع نافع في أربعة أحاديث. وذكر النسائي أنها ثلاثة، رجح النسائي فيها قول نافع. ورجح ابن المديني قول سالم. وانظر \"فتح الباري\" (5/ 51، 52).¥",
+          "attached_span_id": "s280",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s282"
+      ],
+      "start": 27714,
+      "end": 27783,
+      "text": " فدار الحديث ورجع إلى نقل كعب الأحبار عن كتب بني إسرائيل، والله أعلم.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s282"
+      ],
+      "author_verdict_span_ids": [
+        "s282"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "كعب الأحبار"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "حسم المؤلف منشأ الخبر برده إلى كتب بني إسرائيل.",
+      "marker_hits": [
+        {
+          "span_id": "s282",
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 27740,
+          "end": 27751
+        },
+        {
+          "span_id": "s282",
+          "family": "ISRAILIYYAT",
+          "marker": "كتب بني إسرائيل",
+          "start": 27755,
+          "end": 27770
+        },
+        {
+          "span_id": "s282",
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 27759,
+          "end": 27770
+        },
+        {
+          "span_id": "s282",
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 27772,
+          "end": 27782
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s283",
+        "s284",
+        "s285",
+        "s286",
+        "s287",
+        "s288"
+      ],
+      "start": 27783,
+      "end": 28539,
+      "text": "\r\n\r\nذكر الآثار الواردة في ذلك عن الصحابة والتابعين رضي الله عنهم أجمعين:\r\nقال ابن جرير : حدثني المثنى، حدثنا الحجاج، حدثنا حماد، عن خالد الحذاء، عن عمير بن سعيد؛ قال: سمعت عليًا - رضي الله عنه - يقول: كانت الزهرة امرأةً جميلةً من أهل فارس، وإنها خاصمت إلى الملكين هاروت وماروت، فراوداها عن نفسها، فأبت (عليهما)  إلا أن يعلماها الكلام الذي إذا تكلم به (أحد)  يعرج به إلى السماء؛ فعلماها فتكلمت به، فعرجت إلى السماء، فمسخت كوكبًا.\r\nوهذا الإسناد (رجاله ثقات) ",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s285",
+        "s286",
+        "s287",
+        "s288"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "علي بن أبي طالب"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل قول علي في تفسير قصة الملكين، لا مجرد ذكره في السند.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 27870,
+          "end": 28012,
+          "text": "¬في \"تفسيره\" (1683) والمثنى هو ابن إبراهيم، والحجاج هو ابن منهال، وحماد هو ابن سلمة، وخالد هو ابن مهران الحذاء، ورجاله ثقات كما قال ابن كثير.¥",
+          "attached_span_id": "s283",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 28236,
+          "end": 28261,
+          "text": "¬لم يقع في رواية الطبري.¥",
+          "attached_span_id": "s286",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 28307,
+          "end": 28440,
+          "text": "¬كذا في (ع) و (ك) و (ن) و (ى). ووقع في (ج) و (ل): \"المتكلم\"، وأشار ناسخ (ن) في الحاشية إلى هذه الكلمة. ووقع في (ز) و (ض): \"تكلم به\".¥",
+          "attached_span_id": "s287",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 28539,
+          "end": 28679,
+          "text": "¬في (ج): \"جيد ورجاله ثقات\"، وكتب الناسخ لفظة: \"جيد\" بخط دقيق فوق السطر، وكأنها من تصرفه أو لعل ابن كثير كان كتبها ثم ضرب عليها. والله أعلم.¥",
+          "attached_span_id": "s288",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [
+        "rule_M_SAHABA_missing_marker",
+        "rule_editor_only_evidence"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s289"
+      ],
+      "start": 28679,
+      "end": 28716,
+      "text": "، وهو غريب جدًّا.\r\nوقال ابن أبي حاتم ",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s289"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "حكم على الإسناد وغرابة الخبر دون إضافة بيان للآية.",
+      "marker_hits": [
+        {
+          "span_id": "s289",
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 28685,
+          "end": 28689
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 28716,
+          "end": 28991,
+          "text": "¬في \"تفسيره\" (1008).\r\nوأخرجه الحاكم في \"المستدرك\" (2/ 265، 266)؛ وأبو الشيخ في \"كتاب العظمة\" (698/ 19) من طريق يعلى بن عبيد، حدثنا إسماعيل بن أبي خالد، عن عمير بن سعيد، عن علي به؛ وأخرجه ابن أبي الدنيا في \"العقوبات\" (223) من طريق جرير بن عبد الحميد، عن إسماعيل به وسنده قوي.¥",
+          "attached_span_id": "s289",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s290",
+        "s291",
+        "s292"
+      ],
+      "start": 28991,
+      "end": 29364,
+      "text": " حدثنا الفضل بن شاذان، حدثنا محمد بن عيسى، حدثنا إبراهيم بن موسى، حدثنا أبو معاوية، عن (ابن أبي خالد) ، عن عمير بن سعيد، عن علي (- رضي الله عنه -) . قال: هما ملكان من ملائكة السماء؛",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s291",
+        "s292"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "علي بن أبي طالب"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل تفسيرا موجزا عن علي، مع انتهاء النافذة عقب أول عبارة من قوله.",
+      "marker_hits": [
+        {
+          "span_id": "s291",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 29278,
+          "end": 29313
+        },
+        {
+          "span_id": "s291",
+          "family": "SAHABA",
+          "marker": "علي",
+          "start": 29298,
+          "end": 29301,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 29093,
+          "end": 29276,
+          "text": "¬كذا في (ج) و (ع) و (ك) و (ى). ووقع في (ض): \"ابن أبي حاتم\"؛ وفي (ز): \"عن خالد\" و (ل) و (ن): \"عن أبي خالد\" وكل هذا خطأ. والصواب: ما أثبته، وهو إسماعيل بن أبي خالد، أحد الثقات الأثبات.¥",
+          "attached_span_id": "s290",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 29321,
+          "end": 29330,
+          "text": "¬من (ن).¥",
+          "attached_span_id": "s291",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [
+        "rule_M_SAHABA_name_only_in_isnad",
+        "rule_M_SAHABA_missing_marker"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_102",
+    "annotator": "codex",
+    "move_count": 8,
+    "auto_candidate": 4,
+    "specialist": 4,
+    "by_primary": {
+      "None": 3,
+      "M_RAY": 2,
+      "M_ISRAILIYYAT": 1,
+      "M_SAHABA": 2
+    },
+    "by_certainty": {
+      "insufficient": 1,
+      "explicit": 5,
+      "weak": 2
+    },
+    "flag_count": 4
+  }
+}

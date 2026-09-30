@@ -1,0 +1,30 @@
+{
+  "annotator": "grok",
+  "ayah": "17:105",
+  "units": [
+    {
+      "unit_id": "u01",
+      "span_ids": ["s001", "s002", "s003", "s004"],
+      "source_tags": ["S_QURAN", "S_RAY"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.88,
+      "reason_ar": "شرح معنى النزول بالحق بالاستشهاد بآية أخرى ثم بيان تضمنه علم الله وأحكامه"
+    },
+    {
+      "unit_id": "u02",
+      "span_ids": ["s005"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.8,
+      "reason_ar": "تفسير جملة الوصول المحفوظ بلا زيادة ولا نقص، مع صفات الناقل دون آية مسوقة"
+    },
+    {
+      "unit_id": "u03",
+      "span_ids": ["s006"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.9,
+      "reason_ar": "بيان وظيفة الرسول تبشيرًا للمطيع وإنذارًا للعاصي"
+    }
+  ]
+}

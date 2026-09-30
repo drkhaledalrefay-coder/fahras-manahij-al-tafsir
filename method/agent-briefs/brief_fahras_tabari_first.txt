@@ -1,0 +1,7 @@
+DELTA on the new page (edit only src/fahras_template.html and, if needed, src/build_fahras.py; rebuild with set PYTHONIOENCODING=utf-8 && python src/build_fahras.py; keep ALL existing gates incl. fidelity 12/12; do NOT touch frozen IK files, data/, deck/; do NOT commit).
+Decision: the project leads with al-Tabari.
+1. Default tafsir on first load (no hash, no saved choice) = الطبري; order in the tafsir dropdown: الطبري · ابن كثير · البغوي · السعدي. Keep #hash and saved-choice behaviour.
+2. Under the verse block add a small line + link: «لشرح الآية: الموسوعة التفسيرية — الدرر السنية» → https://dorar.net/tafseer (plain <a href>, new tab, rel="noopener"). Add a short note in the help panel «كيف يعمل الموقع» and «المصادر والتراخيص»: «الأداة تفهرس منهج المفسِّر ولا تُصدر شرحاً للآيات؛ الشرح يُحال إلى مصادر القرون الثلاثة الأولى أو منصة الدرر».
+3. In the tafsir dropdown, show a subtle tag next to non-leading tafsirs: «(للمقارنة المنهجية)».
+4. Security fix from audit: in the «لماذا هذا التمييز؟» drawer, marker phrases / any source-derived text must be inserted with textContent (or escaped), never raw innerHTML.
+GATES: build; node --check; fidelity self-test 12/12 in DOM (headless); first load shows الطبري; grep shows no innerHTML assignment containing source-derived strings in openWhy/drawer code. Report changes. Do not commit.

@@ -1,0 +1,104 @@
+{
+ "ayat": {
+  "17_105": {
+   "source_sha256_matches_manifest": true,
+   "spans": 6,
+   "annotators": {
+    "grok": {
+     "units": 3,
+     "validation_errors": [],
+     "all_units_verbatim": true,
+     "low_conf_units": 0
+    },
+    "codex": {
+     "units": 3,
+     "validation_errors": [],
+     "all_units_verbatim": true,
+     "low_conf_units": 0
+    }
+   },
+   "agreement": {
+    "boundary_f1": 1.0,
+    "boundaries_grok": 2,
+    "boundaries_codex": 2,
+    "boundaries_shared": 2,
+    "span_source_exact": 1.0,
+    "span_content_exact": 1.0,
+    "span_both_exact": 1.0,
+    "span_source_jaccard": 1.0,
+    "span_content_jaccard": 1.0,
+    "specialist_queue_spans": 0,
+    "auto_accept_spans": 6
+   }
+  },
+  "2_255": {
+   "source_sha256_matches_manifest": true,
+   "spans": 106,
+   "annotators": {
+    "grok": {
+     "units": 13,
+     "validation_errors": [],
+     "all_units_verbatim": true,
+     "low_conf_units": 3
+    },
+    "codex": {
+     "units": 13,
+     "validation_errors": [],
+     "all_units_verbatim": true,
+     "low_conf_units": 2
+    }
+   },
+   "agreement": {
+    "boundary_f1": 1.0,
+    "boundaries_grok": 12,
+    "boundaries_codex": 12,
+    "boundaries_shared": 12,
+    "span_source_exact": 0.906,
+    "span_content_exact": 0.651,
+    "span_both_exact": 0.575,
+    "span_source_jaccard": 0.915,
+    "span_content_jaccard": 0.825,
+    "specialist_queue_spans": 45,
+    "auto_accept_spans": 61
+   }
+  },
+  "2_102": {
+   "source_sha256_matches_manifest": true,
+   "spans": 31,
+   "annotators": {
+    "grok": {
+     "units": 7,
+     "validation_errors": [],
+     "all_units_verbatim": true,
+     "low_conf_units": 2
+    },
+    "codex": {
+     "units": 7,
+     "validation_errors": [],
+     "all_units_verbatim": true,
+     "low_conf_units": 3
+    }
+   },
+   "agreement": {
+    "boundary_f1": 0.667,
+    "boundaries_grok": 6,
+    "boundaries_codex": 6,
+    "boundaries_shared": 4,
+    "span_source_exact": 0.903,
+    "span_content_exact": 0.774,
+    "span_both_exact": 0.774,
+    "span_source_jaccard": 0.903,
+    "span_content_jaccard": 0.839,
+    "specialist_queue_spans": 30,
+    "auto_accept_spans": 1
+   }
+  }
+ },
+ "totals": {
+  "spans": 143,
+  "span_source_exact": 0.909,
+  "span_content_exact": 0.692,
+  "span_both_exact": 0.636,
+  "specialist_queue_spans": 75
+ }
+}

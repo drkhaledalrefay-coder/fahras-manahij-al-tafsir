@@ -1,0 +1,62 @@
+{
+  "annotator": "grok",
+  "ayah": "2:102",
+  "units": [
+    {
+      "unit_id": "u01",
+      "span_ids": ["s262", "s263", "s264", "s265", "s266", "s267", "s268", "s269"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.82,
+      "reason_ar": "رواية تُنسب إلى النبي في اختيار الملكين، والنافذة تبدأ من ختامها"
+    },
+    {
+      "unit_id": "u02",
+      "span_ids": ["s270", "s271"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.74,
+      "reason_ar": "حكم بغرابة الرواية وأن الأقرب نسبتها لكعب لا إلى النبي، مع إحالة مصدر"
+    },
+    {
+      "unit_id": "u03",
+      "span_ids": ["s272", "s273", "s274", "s275", "s276"],
+      "source_tags": ["S_TABIIN"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.84,
+      "reason_ar": "قول كعب في هبوط الملكين وما نُهيا عنه، وابن عمر راوٍ في السند فقط"
+    },
+    {
+      "unit_id": "u04",
+      "span_ids": ["s277", "s278", "s279", "s280", "s281", "s282"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ", "C_ISRAILIYYAT"],
+      "confidence": 0.88,
+      "reason_ar": "تخريج الطرق وترجيح سند سالم، ثم تصريح بعودة النقل إلى كتب أهل الكتاب"
+    },
+    {
+      "unit_id": "u05",
+      "span_ids": ["s283", "s284", "s285", "s286", "s287", "s288"],
+      "source_tags": ["S_SAHABA"],
+      "content_tags": ["C_TAFSIR", "C_TAKHRIJ"],
+      "confidence": 0.55,
+      "reason_ar": "أثر علي في مسخ الزهرة، وآخره حكم بتوثيق الرجال فلا ينفصل عن المتن"
+    },
+    {
+      "unit_id": "u06",
+      "span_ids": ["s289"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.5,
+      "reason_ar": "يجمع حكم الغرابة على السند السابق مع بداية إسناد الرواية التالية"
+    },
+    {
+      "unit_id": "u07",
+      "span_ids": ["s290", "s291", "s292"],
+      "source_tags": ["S_SAHABA"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.76,
+      "reason_ar": "قول علي في تحديد طبيعة الملكين، والنافذة تنقطع قبل تمام الخبر"
+    }
+  ]
+}

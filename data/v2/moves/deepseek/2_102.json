@@ -1,0 +1,109 @@
+{
+  "window": "2_102",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s262", "s263", "s264", "s265", "s266", "s267", "s268", "s269"],
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "insufficient",
+      "evidence_span_ids": ["s262", "s263", "s269"],
+      "author_verdict_span_ids": ["s270", "s271"],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_SUNNAH", "M_ISRAILIYYAT"],
+      "rationale_ar": "أول الخبر مقطوع فلم يتعين قائله، والمؤلف يرجح رجوع المادة إلى كعب لا إلى النبي، فالامتناع أولى."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": ["s270", "s271"],
+      "primary": "M_RAY",
+      "secondary": ["M_ISRAILIYYAT"],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s270", "s271"],
+      "author_verdict_span_ids": ["s270", "s271"],
+      "references": {"verses": [], "hadith": [], "persons": ["عبد الله بن عمر", "كعب الأحبار"]},
+      "alternatives": [],
+      "rationale_ar": "ترجيح المؤلف أن الخبر من رواية ابن عمر عن كعب، فهو اجتهاد في نسبة المادة لا نقل مفسر."
+    },
+    {
+      "move_id": "m03",
+      "span_ids": ["s272", "s273", "s274", "s275", "s276"],
+      "primary": "M_ISRAILIYYAT",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": ["s272", "s275", "s276"],
+      "author_verdict_span_ids": ["s282"],
+      "references": {"verses": [], "hadith": [], "persons": ["كعب الأحبار", "عبد الله بن عمر"]},
+      "alternatives": [],
+      "rationale_ar": "مادة منقولة بسند ينتهي إلى كعب عن ابن عمر في خبر اختيار الملكين، وعين المؤلف مصدرها الإسرائيلي."
+    },
+    {
+      "move_id": "m04",
+      "span_ids": ["s277", "s278", "s279", "s280", "s281"],
+      "primary": null,
+      "secondary": [],
+      "content_tags": ["C_TAKHRIJ"],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s277", "s278", "s279", "s280"],
+      "author_verdict_span_ids": ["s280"],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "سرد طرق ابن جرير وابن أبي حاتم وتفضيل إسناد سالم، تخريج محض دون بيان جديد للآية."
+    },
+    {
+      "move_id": "m05",
+      "span_ids": ["s282"],
+      "primary": "M_RAY",
+      "secondary": ["M_ISRAILIYYAT"],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s282"],
+      "author_verdict_span_ids": ["s282"],
+      "references": {"verses": [], "hadith": [], "persons": ["كعب الأحبار"]},
+      "alternatives": [],
+      "rationale_ar": "ترجيح المؤلف أن الخبر انتهى إلى كعب منقولا عن مصادر بني إسرائيل، لا إلى النبي."
+    },
+    {
+      "move_id": "m06",
+      "span_ids": ["s283", "s284", "s285", "s286", "s287", "s288"],
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s285", "s286", "s288"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": ["علي بن أبي طالب"]},
+      "alternatives": [],
+      "rationale_ar": "أثر مروي عن علي في بيان قصة الملكين، وهو مادة تفسيرية لا ذكر عارض في السند."
+    },
+    {
+      "move_id": "m07",
+      "span_ids": ["s289"],
+      "primary": null,
+      "secondary": [],
+      "content_tags": ["C_TAKHRIJ"],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s289"],
+      "author_verdict_span_ids": ["s288", "s289"],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "حكم المؤلف على الإسناد بالثقة وعلى المتن بالغرابة، تقييم حديثي لا تفسير للآية."
+    },
+    {
+      "move_id": "m08",
+      "span_ids": ["s290", "s291", "s292"],
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": ["s291", "s292"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": ["علي بن أبي طالب"]},
+      "alternatives": [],
+      "rationale_ar": "أول قول لعلي في الملكين، والنافذة تنتهي قبل تمام الأثر فيبقى الحد مفتوحا."
+    }
+  ]
+}

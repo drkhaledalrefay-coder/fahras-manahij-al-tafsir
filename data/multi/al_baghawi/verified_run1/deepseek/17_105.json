@@ -1,0 +1,91 @@
+{
+  "window_id": "17_105",
+  "ayah": "17:105",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/al_baghawi/17_105.txt",
+  "source_sha256": "c81bf8c8176adb462c5780a09f68ccc05734fdad14fb985476c34b5b03629456",
+  "window_start": 0,
+  "window_end": 173,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s001"
+      ],
+      "start": 0,
+      "end": 173,
+      "text": "قَوْلُهُ عَزَّ وَجَلَّ: {وَبِالْحَقِّ أَنْزَلْنَاهُ وَبِالْحَقِّ نَزَلَ} يَعْنِي الْقُرْآنَ {وَمَا أَرْسَلْنَاكَ إِلَّا مُبَشِّرًا} لِلْمُطِيعِينَ {وَنَذِيرًا} لِلْعَاصِينَ.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s001"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "بيّن مرجع الضمير في الإنزال بأنه القرآن، وعيّن من يُبشَّر ومن يُنذَر: المطيعون والعاصون.",
+      "marker_hits": [
+        {
+          "span_id": "s001",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24,
+          "end": 72
+        },
+        {
+          "span_id": "s001",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 92,
+          "end": 131
+        },
+        {
+          "span_id": "s001",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 147,
+          "end": 159
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "17_105",
+    "annotator": "deepseek",
+    "move_count": 1,
+    "auto_candidate": 1,
+    "specialist": 0,
+    "by_primary": {
+      "M_LUGHA": 1
+    },
+    "by_certainty": {
+      "strong": 1
+    },
+    "flag_count": 0
+  }
+}

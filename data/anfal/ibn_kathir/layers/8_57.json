@@ -1,0 +1,65 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_57.txt",
+  "ayah": "8:57",
+  "surah": 8,
+  "ayah_number": 57,
+  "source_char_length": 786,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 298,
+      "kind": "author"
+    },
+    {
+      "start": 298,
+      "end": 543,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 543,
+      "end": 730,
+      "kind": "author"
+    },
+    {
+      "start": 730,
+      "end": 785,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 785,
+      "end": 786,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 3,
+    "layout": 0,
+    "apparatus": 2
+  },
+  "char_totals": {
+    "author": 486,
+    "layout": 0,
+    "apparatus": 300
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 300
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 2,
+    "footnote_close": 2,
+    "footnotes_closed": 2,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

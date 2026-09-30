@@ -1,0 +1,233 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_21.txt",
+  "ayah": "8:21",
+  "surah": 8,
+  "ayah_number": 21,
+  "source_char_length": 2117,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 104,
+      "kind": "author"
+    },
+    {
+      "start": 104,
+      "end": 108,
+      "kind": "layout"
+    },
+    {
+      "start": 108,
+      "end": 441,
+      "kind": "author"
+    },
+    {
+      "start": 441,
+      "end": 455,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 455,
+      "end": 541,
+      "kind": "author"
+    },
+    {
+      "start": 541,
+      "end": 555,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 555,
+      "end": 682,
+      "kind": "author"
+    },
+    {
+      "start": 682,
+      "end": 709,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 709,
+      "end": 912,
+      "kind": "author"
+    },
+    {
+      "start": 912,
+      "end": 930,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 930,
+      "end": 931,
+      "kind": "author"
+    },
+    {
+      "start": 931,
+      "end": 968,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 968,
+      "end": 998,
+      "kind": "author"
+    },
+    {
+      "start": 998,
+      "end": 1011,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1011,
+      "end": 1024,
+      "kind": "author"
+    },
+    {
+      "start": 1024,
+      "end": 1028,
+      "kind": "layout"
+    },
+    {
+      "start": 1028,
+      "end": 1248,
+      "kind": "author"
+    },
+    {
+      "start": 1248,
+      "end": 1328,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1328,
+      "end": 1329,
+      "kind": "author"
+    },
+    {
+      "start": 1329,
+      "end": 1333,
+      "kind": "layout"
+    },
+    {
+      "start": 1333,
+      "end": 1474,
+      "kind": "author"
+    },
+    {
+      "start": 1474,
+      "end": 1627,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1627,
+      "end": 1628,
+      "kind": "author"
+    },
+    {
+      "start": 1628,
+      "end": 1632,
+      "kind": "layout"
+    },
+    {
+      "start": 1632,
+      "end": 1657,
+      "kind": "author"
+    },
+    {
+      "start": 1657,
+      "end": 1670,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1670,
+      "end": 1671,
+      "kind": "author"
+    },
+    {
+      "start": 1671,
+      "end": 1683,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1683,
+      "end": 1742,
+      "kind": "author"
+    },
+    {
+      "start": 1742,
+      "end": 1746,
+      "kind": "layout"
+    },
+    {
+      "start": 1746,
+      "end": 1752,
+      "kind": "author"
+    },
+    {
+      "start": 1752,
+      "end": 1783,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1783,
+      "end": 2113,
+      "kind": "author"
+    },
+    {
+      "start": 2113,
+      "end": 2117,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 17,
+    "layout": 7,
+    "apparatus": 11
+  },
+  "char_totals": {
+    "author": 1677,
+    "layout": 28,
+    "apparatus": 412
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 9,
+    "editor_bracket": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 381,
+    "editor_bracket": 31
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 7
+    },
+    "footnote_open": 9,
+    "footnote_close": 9,
+    "footnotes_closed": 9,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[عن الاستماعِ لها]": 1,
+      "[إسحاقُ، ثنا]": 1
+    }
+  }
+}

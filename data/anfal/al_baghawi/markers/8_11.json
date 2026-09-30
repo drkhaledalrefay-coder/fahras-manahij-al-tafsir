@@ -1,0 +1,226 @@
+{
+  "window_id": "8_11",
+  "ayah": "8:11",
+  "span_count": 14,
+  "family_counts": {
+    "QURAN": 11,
+    "QIRAAT": 3,
+    "LUGHA": 6,
+    "SIRA": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 30,
+          "span_id": "s001"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 31,
+          "end": 36,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 150,
+          "end": 157,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 150,
+          "end": 159,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 152,
+          "end": 169,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 265,
+          "end": 270,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 375,
+          "end": 382,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 375,
+          "end": 384,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 377,
+          "end": 394,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 435,
+          "end": 440,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 567,
+          "end": 574,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 567,
+          "end": 576,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 569,
+          "end": 586,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 666,
+          "end": 676,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 685,
+          "end": 693,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 897,
+          "end": 964,
+          "span_id": "s009"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 1004,
+          "end": 1016,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1850,
+          "end": 1867,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1971,
+          "end": 2012,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2027,
+          "end": 2059,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2085,
+          "end": 2116,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

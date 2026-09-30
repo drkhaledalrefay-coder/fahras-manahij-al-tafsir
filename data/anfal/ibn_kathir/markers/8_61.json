@@ -1,0 +1,335 @@
+{
+  "window_id": "8_61",
+  "ayah": "8:61",
+  "span_count": 16,
+  "family_counts": {
+    "QURAN": 7,
+    "LUGHA": 4,
+    "HADITH": 6,
+    "ISNAD": 1,
+    "SAHABA": 2,
+    "TABIIN": 1,
+    "NUZUL": 1,
+    "RAY": 3,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 110,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 214,
+          "end": 231,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 232,
+          "end": 235,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 242,
+          "end": 254,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 255,
+          "end": 258,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 289,
+          "end": 306,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 307,
+          "end": 310,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 417,
+          "end": 435,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 526,
+          "end": 531,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 593,
+          "end": 598,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 617,
+          "end": 660,
+          "stripped": "عن إياس بن عمرو الأسلمي، عن علي بن أبي طالب",
+          "span_id": "s006"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "علي",
+          "name": "علي",
+          "role": "NARRATOR",
+          "start": 645,
+          "end": 648,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 684,
+          "end": 697,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 700,
+          "end": 718,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 966,
+          "end": 971,
+          "span_id": "s010"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 973,
+          "end": 980,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "فيه نظر",
+          "start": 1053,
+          "end": 1060,
+          "span_id": "s011"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1118,
+          "end": 1126,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1225,
+          "end": 1298,
+          "span_id": "s012"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 1299,
+          "end": 1311,
+          "text": "[التوبة: 29]",
+          "via": "apparatus",
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "فيه نظر",
+          "start": 1732,
+          "end": 1739,
+          "span_id": "s014"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1892,
+          "end": 1910,
+          "span_id": "s014"
+        },
+        {
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 1958,
+          "end": 1968,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1978,
+          "end": 2005,
+          "span_id": "s015"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2006,
+          "end": 2009,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 774,
+      "end": 788,
+      "text": "¬أي: المسالم.¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 796,
+      "end": 958,
+      "text": "¬أخرجه عبد الله في زوائد أبيه بسنده ومتنه (المسند 2/ 106 ح 695)، وضعفه محققوه بسبب فضيل بن سليمان وهو: صدوق كثير الخطأ. وقال الهيثمي: رجاله ثقات (المجمع 7/ 234).¥",
+      "attached_span_id": "s009",
+      "grading": [
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 991,
+      "end": 1046,
+      "text": "¬أخرجه الطبري بسند صحيح من طريق ابن أبي نجيح عن مجاهد.¥",
+      "attached_span_id": "s010",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1318,
+      "end": 1729,
+      "text": "¬ذكرهم ابن أبي حاتم بحذف السند إلا قول ابن عباس، وقول ابن عباس وعطاء الخراساني هو قول واحد أخرجه ابن أبي حاتم وابن الجوزي (نواسخ القرآن: 167)، كلاهما بسند ضعيف من طريق عطاء الخراساني عن ابن عباس. وقول عكرمة والحسن البصري أخرجه ابن الجوزي بسند حسن من طريق يزيد النحوي عنهما (نواسخ القرآن: 168)، وقول قتادة أخرجه الطبري بسند صحيح من طريق سعيد بن أبي عروبة عنه، وقول السدي أخرجه الطبري بسند حسن من طريق أسباط عنه.¥",
+      "attached_span_id": "s013",
+      "grading": [
+        "صحيح",
+        "حسن",
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 617,
+      "end": 660,
+      "span_id": "s006",
+      "marker": "عن…عن"
+    }
+  ]
+}

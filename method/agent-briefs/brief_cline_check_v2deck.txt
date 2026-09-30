@@ -1,0 +1,6 @@
+VERIFICATION TASK (read-only on the deck; write only deck/pitch/CHECK_v2.md and PNGs under deck/pitch/_check_v2/). Do NOT modify any .pptx. Do NOT commit.
+Input: deck/pitch/idea_Orchestrator_v2.pptx (12 slides). Compare with deck/pitch/idea_Orchestrator_notes.pptx (same deck before text additions).
+1. Convert idea_Orchestrator_v2.pptx to PDF (PowerPoint COM via PowerShell: $p=New-Object -ComObject PowerPoint.Application; $d=$p.Presentations.Open(<abs path>,$true,$false,$false); $d.SaveAs(<abs pdf>,32); $d.Close(); $p.Quit()  — or LibreOffice soffice --headless --convert-to pdf if available), then render slides 2, 4, 7, 9, 10 to PNG (python + PyMuPDF, dpi 80) into deck/pitch/_check_v2/.
+2. For each of those slides check and report: is the newly added line fully visible (not cut off, not overlapping other text/images, not outside the slide)? font size ≥ 12pt? text direction correct (Arabic RTL, no reversed brackets/Latin tokens)? consistent style with neighbouring text?
+3. With python-pptx confirm: slide count 12; for every slide the number of shapes and pictures equals the "before" deck; no text removed (every "before" text is a substring of an "after" text on the same slide).
+Write CHECK_v2.md: a table slide | new line visible? | overlap? | min font | bidi OK? | verdict (OK / FIX: what exactly), plus the structural check result. Keep it ≤ 250 words.

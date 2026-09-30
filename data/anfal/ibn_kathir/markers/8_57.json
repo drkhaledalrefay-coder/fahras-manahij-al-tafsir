@@ -1,0 +1,143 @@
+{
+  "window_id": "8_57",
+  "ayah": "8:57",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 4,
+    "LUGHA": 3,
+    "SAHABA": 1,
+    "TABIIN": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 104,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 108,
+          "end": 148,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 149,
+          "end": 152,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 178,
+          "end": 212,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 213,
+          "end": 216,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 233,
+          "end": 241,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 546,
+          "end": 551,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 643,
+          "end": 670,
+          "span_id": "s005"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 676,
+          "end": 681,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 298,
+      "end": 543,
+      "text": "¬ذكرهم ابن أبي حاتم بحذف السند إلا قول ابن عباس أسنده بسند ضعيف من طريق الضحاك عن ابن عباس، ويتقوى بأقوال التابعين التي تليه كما يتقوى برواية الطبري بسند ثابت من طريق ابن أبي طلحة عن ابن عباس، وقول السدي أخرجه الطبري بسند حسن من طريق أسباط عنه.¥",
+      "attached_span_id": "s004",
+      "grading": [
+        "حسن",
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 730,
+      "end": 785,
+      "text": "¬أخرجه الطبري وابن أبي حاتم بسند حسن من طريق عن السدي.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

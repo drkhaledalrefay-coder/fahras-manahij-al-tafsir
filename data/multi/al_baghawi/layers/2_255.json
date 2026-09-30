@@ -1,0 +1,159 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/raw/tafsircenter/al_baghawi/2_255.txt",
+  "ayah": "2:255",
+  "surah": 2,
+  "ayah_number": 255,
+  "source_char_length": 12667,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 1022,
+      "kind": "author"
+    },
+    {
+      "start": 1022,
+      "end": 1191,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1191,
+      "end": 1677,
+      "kind": "author"
+    },
+    {
+      "start": 1677,
+      "end": 1822,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1822,
+      "end": 4678,
+      "kind": "author"
+    },
+    {
+      "start": 4678,
+      "end": 4853,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4853,
+      "end": 5597,
+      "kind": "author"
+    },
+    {
+      "start": 5597,
+      "end": 5832,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5832,
+      "end": 6231,
+      "kind": "author"
+    },
+    {
+      "start": 6231,
+      "end": 6245,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6245,
+      "end": 7876,
+      "kind": "author"
+    },
+    {
+      "start": 7876,
+      "end": 8028,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8028,
+      "end": 9998,
+      "kind": "author"
+    },
+    {
+      "start": 9998,
+      "end": 10500,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 10500,
+      "end": 11314,
+      "kind": "author"
+    },
+    {
+      "start": 11314,
+      "end": 11434,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 11434,
+      "end": 11435,
+      "kind": "author"
+    },
+    {
+      "start": 11435,
+      "end": 11449,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 11449,
+      "end": 11846,
+      "kind": "author"
+    },
+    {
+      "start": 11846,
+      "end": 12134,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 12134,
+      "end": 12667,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 11,
+    "layout": 0,
+    "apparatus": 10
+  },
+  "char_totals": {
+    "author": 10853,
+    "layout": 0,
+    "apparatus": 1814
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 9,
+    "editor_bracket": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 1694,
+    "editor_bracket": 120
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 9,
+    "footnote_close": 9,
+    "footnotes_closed": 9,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[وَمَلَكٌ عَلَى صُورَةِ سَيِّدِ الطَّيْرِ وَهُوَ النَّسْرُ يَسْأَلُ الرِّزْقَ لِلطَّيْرِ مِنَ السَّنَةِ إِلَى السَّنَةِ]": 1
+    }
+  }
+}

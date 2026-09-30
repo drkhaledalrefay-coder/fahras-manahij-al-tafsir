@@ -1,0 +1,170 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_50.txt",
+  "ayah": "8:50",
+  "surah": 8,
+  "ayah_number": 50,
+  "source_char_length": 2366,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 394,
+      "kind": "author"
+    },
+    {
+      "start": 394,
+      "end": 479,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 479,
+      "end": 615,
+      "kind": "author"
+    },
+    {
+      "start": 615,
+      "end": 695,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 695,
+      "end": 836,
+      "kind": "author"
+    },
+    {
+      "start": 836,
+      "end": 885,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 885,
+      "end": 954,
+      "kind": "author"
+    },
+    {
+      "start": 954,
+      "end": 993,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 993,
+      "end": 1096,
+      "kind": "author"
+    },
+    {
+      "start": 1096,
+      "end": 1153,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1153,
+      "end": 1178,
+      "kind": "author"
+    },
+    {
+      "start": 1178,
+      "end": 1234,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1234,
+      "end": 1338,
+      "kind": "author"
+    },
+    {
+      "start": 1338,
+      "end": 1402,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1402,
+      "end": 1659,
+      "kind": "author"
+    },
+    {
+      "start": 1659,
+      "end": 1668,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1668,
+      "end": 1824,
+      "kind": "author"
+    },
+    {
+      "start": 1824,
+      "end": 1837,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1837,
+      "end": 2175,
+      "kind": "author"
+    },
+    {
+      "start": 2175,
+      "end": 2214,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2214,
+      "end": 2258,
+      "kind": "author"
+    },
+    {
+      "start": 2258,
+      "end": 2307,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2307,
+      "end": 2366,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 12,
+    "layout": 0,
+    "apparatus": 11
+  },
+  "char_totals": {
+    "author": 1826,
+    "layout": 0,
+    "apparatus": 540
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 10,
+    "verse_ref": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 527,
+    "verse_ref": 13
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 10,
+    "footnote_close": 10,
+    "footnotes_closed": 10,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[الأنعام: 93]": 1
+    },
+    "other_brackets": {}
+  }
+}

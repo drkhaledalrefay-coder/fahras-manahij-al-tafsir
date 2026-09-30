@@ -1,0 +1,16 @@
+READ-ONLY DIAGNOSIS (no edits, no commit). You are reviewing the deterministic verifier src/v2_verify.py of a tafsir methodology index (design: method/design_v2.md; markers: method/markers_v2.md, src/v2_markers.py).
+
+EVIDENCE: data/multi/al_saadi/verified/deepseek/2_102.json — all 12 moves routed auto_candidate. Examples:
+- m01 primary M_RAY, marker_hits only ['QURAN'] → marker part 25 (total 100).
+- m08 primary M_RAY, marker_hits [] → marker part 25 (total 100).
+- m03/m04/m10 M_RAY with no RAY marker → total 75 → auto_candidate (threshold ≥75).
+Across al_saadi all 24 moves are auto; M_RAY is 9 of them. Design intent: marker points should reflect a marker supporting THIS move's method/function; without function evidence cap 59; RAY/opinion is the least marker-anchored method.
+
+QUESTIONS (answer each with file:line evidence):
+1. Exactly how is the marker part (25) computed — does any family hit (e.g. QURAN) or a hit in an adjacent/preceding span give credit to an M_RAY or M_LUGHA move? Why does m08 get 25 with empty marker_hits?
+2. How is function_evidence 45 granted — is it just "evidence_span_ids non-empty"? If so, the classifier can always self-grant 45.
+3. Is M_RAY able to reach auto_candidate without any author-verdict marker? Should it (design_v2 intent)?
+4. Propose the minimal, tafsir-agnostic fix (not tuned to any tafsir): method→marker-family compatibility table, what counts for RAY (e.g. author-verdict markers like «والصحيح»، «والأظهر»، «قلت»، «والله أعلم»، «أي:» gloss for LUGHA), and whether RAY should always route to specialist until measured. Estimate how the Ibn Kathir codex results (reports/v2_summary.md: 32 auto/10 spec) and the new tafsirs would change.
+5. Any other place where the verifier trusts the classifier's own claims.
+
+Deliver the answer in your final message (≤ 500 words). Touch no files.

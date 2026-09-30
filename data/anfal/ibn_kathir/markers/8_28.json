@@ -1,0 +1,276 @@
+{
+  "window_id": "8_28",
+  "ayah": "8:28",
+  "span_count": 17,
+  "family_counts": {
+    "QURAN": 15,
+    "LUGHA": 2,
+    "HADITH": 5,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 106,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 116,
+          "end": 177,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 178,
+          "end": 181,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 289,
+          "end": 302,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 293,
+          "end": 302,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 304,
+          "end": 392,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 409,
+          "end": 456,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 457,
+          "end": 471,
+          "text": "[الأنبياء: 35]",
+          "via": "apparatus",
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 473,
+          "end": 483,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 474,
+          "end": 483,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 485,
+          "end": 643,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 657,
+          "end": 667,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 658,
+          "end": 667,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 669,
+          "end": 772,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 779,
+          "end": 792,
+          "text": "[التغابن: 14]",
+          "via": "apparatus",
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 802,
+          "end": 843,
+          "span_id": "s008"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 844,
+          "end": 847,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 1157,
+          "end": 1166,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1182,
+          "end": 1200,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1556,
+          "end": 1574,
+          "span_id": "s015"
+        },
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 1622,
+          "end": 1631,
+          "span_id": "s015"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1638,
+          "end": 1656,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1412,
+      "end": 1534,
+      "text": "¬صحيح البخاري، الإيمان، باب حلاوة الإيمان (ح 16) وصحيح مسلم، الإيمان، باب بيان خصال من اتصف بهن وجد حلاوة الإيمان (ح 67).¥",
+      "attached_span_id": "s014",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1748,
+      "end": 1901,
+      "text": "¬صحيح البخاري، الإيمان، باب وجوب محبة رسول الله - صلى الله عليه وسلم - (ح 14 - 15)، وصحيح مسلم، الإيمان، باب حب رسول الله - صلى الله عليه وسلم - (ح 69).¥",
+      "attached_span_id": "s016",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

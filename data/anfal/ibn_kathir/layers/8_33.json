@@ -1,0 +1,181 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_33.txt",
+  "ayah": "8:33",
+  "surah": 8,
+  "ayah_number": 33,
+  "source_char_length": 4329,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 777,
+      "kind": "author"
+    },
+    {
+      "start": 777,
+      "end": 892,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 892,
+      "end": 1283,
+      "kind": "author"
+    },
+    {
+      "start": 1283,
+      "end": 1335,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1335,
+      "end": 1336,
+      "kind": "author"
+    },
+    {
+      "start": 1336,
+      "end": 1349,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1349,
+      "end": 1679,
+      "kind": "author"
+    },
+    {
+      "start": 1679,
+      "end": 1726,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1726,
+      "end": 1791,
+      "kind": "author"
+    },
+    {
+      "start": 1791,
+      "end": 1847,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1847,
+      "end": 1964,
+      "kind": "author"
+    },
+    {
+      "start": 1964,
+      "end": 2083,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2083,
+      "end": 2537,
+      "kind": "author"
+    },
+    {
+      "start": 2537,
+      "end": 2581,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2581,
+      "end": 2633,
+      "kind": "author"
+    },
+    {
+      "start": 2633,
+      "end": 2861,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2861,
+      "end": 2907,
+      "kind": "author"
+    },
+    {
+      "start": 2907,
+      "end": 3044,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3044,
+      "end": 3420,
+      "kind": "author"
+    },
+    {
+      "start": 3420,
+      "end": 3457,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3457,
+      "end": 3817,
+      "kind": "author"
+    },
+    {
+      "start": 3817,
+      "end": 3948,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3948,
+      "end": 4171,
+      "kind": "author"
+    },
+    {
+      "start": 4171,
+      "end": 4328,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4328,
+      "end": 4329,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 13,
+    "layout": 0,
+    "apparatus": 12
+  },
+  "char_totals": {
+    "author": 3193,
+    "layout": 0,
+    "apparatus": 1136
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 11,
+    "verse_ref": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 1123,
+    "verse_ref": 13
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 11,
+    "footnote_close": 11,
+    "footnotes_closed": 11,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[الأنفال: 34]": 1
+    },
+    "other_brackets": {}
+  }
+}

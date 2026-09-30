@@ -1,0 +1,239 @@
+{
+  "window_id": "8_70",
+  "ayah": "8:70",
+  "span_count": 17,
+  "family_counts": {
+    "QURAN": 8,
+    "QIRAAT": 1,
+    "NUZUL": 1,
+    "SIRA": 2,
+    "HADITH": 3,
+    "RAY": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 321,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 322,
+          "end": 339,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 341,
+          "end": 410,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 411,
+          "end": 416,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 510,
+          "end": 522,
+          "span_id": "s004"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 598,
+          "end": 610,
+          "span_id": "s004"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 690,
+          "end": 702,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 965,
+          "end": 997,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1318,
+          "end": 1338,
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1340,
+          "end": 1372,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 1468,
+          "end": 1473,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1914,
+          "end": 1931,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2043,
+          "end": 2090,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2107,
+          "end": 2150,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2168,
+          "end": 2187,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2200,
+          "end": 2227,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 864,
+      "end": 878,
+      "text": "¬ساقط من \"ب\".¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2270,
+      "end": 2284,
+      "text": "¬ساقط من \"ب\".¥",
+      "attached_span_id": "s015",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2595,
+      "end": 2914,
+      "text": "¬أخرجه الواحدي في أسباب النزول عن الكلبي ص (276)، والطبري: 14/ 73، والحاكم في المستدرك: 3/ 324 عن عائشة وقال: صحيح على شرط مسلم، ولم يخرجاه، قال الهيثمي في مجمع الزوائد: 7/ 28: \"رواه الطبراني في الأوسط والكبير باختصار، ورجال الأوسط رجال الصحيح غير ابن إسحاق وقد صرح بالسماع وفي الصحيح بعضه\" وانظر: الكافي الشاف ص (71).¥",
+      "attached_span_id": "s016",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

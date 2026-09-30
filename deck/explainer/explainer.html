@@ -1,0 +1,543 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>فهرس مناهج التفسير</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;700&family=Amiri:wght@400;700&display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --base: #00062c;
+  --surface: #0e143d;
+  --glass: rgba(255,255,255,.045);
+  --line: rgba(255,255,255,.12);
+  --ink: #f2f4ff;
+  --sub: #a9b2da;
+  --violet: #6251eb;
+  --teal: #2feec3;
+  --blue: #39a0fd;
+  --amber: #ffc857;
+  --red: #ff6b6b;
+  --m-quran: #9b82ff;
+  --m-sunnah: #2feec3;
+  --m-sahaba: #ffc857;
+  --m-tabiin: #39a0fd;
+  --m-lugha: #ff8a5b;
+  --m-qiraat: #f472b6;
+  --m-nuzul: #4ade80;
+  --m-sira: #d4a574;
+  --m-isra: #ff6b6b;
+  --m-ray: #c4c9e8;
+  --font-ui: "Readex Pro", "Segoe UI", Tahoma, sans-serif;
+  --font-quote: "Amiri", "Traditional Arabic", "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --base: #eee9f7;
+    --surface: #ffffff;
+    --glass: rgba(18,24,63,.045);
+    --line: rgba(18,24,63,.12);
+    --ink: #12183f;
+    --sub: #2c3775;
+    --violet: #6250eb;
+    --teal: #0f9e7e;
+    --amber: #9a6b00;
+    --red: #c23b3b;
+    --m-quran: #6250eb;
+    --m-sunnah: #0f9e7e;
+    --m-sahaba: #9a6b00;
+    --m-tabiin: #1d6fb8;
+    --m-lugha: #c45c2a;
+    --m-qiraat: #c02674;
+    --m-nuzul: #15803d;
+    --m-sira: #8b6914;
+    --m-isra: #c23b3b;
+    --m-ray: #4a5590;
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --base: #eee9f7;
+  --surface: #ffffff;
+  --glass: rgba(18,24,63,.045);
+  --line: rgba(18,24,63,.12);
+  --ink: #12183f;
+  --sub: #2c3775;
+  --violet: #6250eb;
+  --teal: #0f9e7e;
+  --amber: #9a6b00;
+  --red: #c23b3b;
+  --m-quran: #6250eb;
+  --m-sunnah: #0f9e7e;
+  --m-sahaba: #9a6b00;
+  --m-tabiin: #1d6fb8;
+  --m-lugha: #c45c2a;
+  --m-qiraat: #c02674;
+  --m-nuzul: #15803d;
+  --m-sira: #8b6914;
+  --m-isra: #c23b3b;
+  --m-ray: #4a5590;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 18.5px; overflow-x: clip; scroll-behavior: smooth; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--base);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9;
+  font-synthesis: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+::selection { background: rgba(98, 81, 235, .35); }
+
+.page {
+  width: min(100%, 792px);
+  margin-inline: auto;
+  padding: 40px 16px 64px;
+  overflow-wrap: break-word;
+}
+h1, h2 { text-wrap: balance; }
+h1 {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 0 0.7rem;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 7.4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  h1 {
+    background-image: linear-gradient(to left, #6251eb 0%, #3fb0d6 52%, #2feec3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@media (forced-colors: active) {
+  h1 {
+    background: none;
+    color: LinkText;
+    -webkit-text-fill-color: currentColor;
+  }
+}
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.38rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+p { margin: 0 0 1rem; }
+.lead {
+  margin: 0 0 1.25rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.9;
+}
+figure { margin: 0; }
+.hero-fig { margin-top: 0.35rem; }
+.hero-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.toc { margin: 1.75rem 0 0; padding-bottom: 0.25rem; }
+.toc p {
+  margin: 0 0 0.35rem;
+  color: var(--sub);
+  font-weight: 500;
+}
+.page ol, .page ul { margin: 0.35rem 0 1rem; padding-inline-start: 1.45rem; }
+.page li { margin: 0.3rem 0; }
+.page li::marker { color: var(--teal); }
+ol { list-style-type: decimal; }
+ol { list-style-type: arabic-indic; }
+.toc ol { margin-bottom: 0; }
+.toc a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+.toc a:hover { color: var(--teal); }
+.page > section { margin-top: 2.7rem; scroll-margin-top: 16px; }
+.page > section > :last-child { margin-bottom: 0; }
+
+.amiri, .tafsir, .closing { font-family: var(--font-quote); }
+.tafsir {
+  margin: 0.75rem 0 0;
+  font-size: 1.28rem;
+  font-weight: 400;
+  line-height: 1.9;
+}
+blockquote { quotes: none; }
+blockquote::before, blockquote::after { content: none; }
+.quote-box {
+  margin: 0.4rem 0 0;
+  padding: 14px 16px;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  font-weight: 500;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--glass);
+  font-weight: 500;
+  line-height: 1.45;
+}
+.chips li::marker { content: none; }
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  flex: none;
+  border-radius: 50%;
+}
+.dot.quran { background: var(--m-quran); }
+.dot.sunnah { background: var(--m-sunnah); }
+.dot.sahaba { background: var(--m-sahaba); }
+.dot.tabiin { background: var(--m-tabiin); }
+.dot.lugha { background: var(--m-lugha); }
+.dot.qiraat { background: var(--m-qiraat); }
+.dot.nuzul { background: var(--m-nuzul); }
+.dot.sira { background: var(--m-sira); }
+.dot.isra { background: var(--m-isra); }
+.dot.ray { background: var(--m-ray); }
+
+.key {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 16px;
+}
+.key > :first-child { margin-top: 0; }
+.key > :last-child { margin-bottom: 0; }
+.key h2 { margin-bottom: 0.85rem; }
+
+.table-wrap {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 1.1rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1.7;
+}
+th, td {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  text-align: start;
+  vertical-align: top;
+}
+th { font-weight: 700; background: var(--glass); }
+td:empty::before { content: "—"; color: var(--sub); }
+.score {
+  margin: 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.flow { display: flex; flex-direction: column; margin: 0.3rem 0 0.2rem; }
+.step {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--base);
+}
+.n { flex: none; color: var(--teal); font-weight: 700; }
+.join {
+  display: block;
+  width: 1px;
+  height: 12px;
+  margin-inline: auto;
+  background: var(--line);
+}
+.step.slot {
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  border-style: dashed;
+  border-color: var(--violet);
+  text-align: center;
+}
+.slot-name { font-weight: 700; }
+.slot-note { color: var(--sub); font-size: 0.95rem; line-height: 1.6; }
+
+.note { color: var(--sub); }
+.notice { margin-top: 0.25rem; }
+.notice strong { color: var(--amber); font-weight: 700; }
+
+.closing {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 1.32rem;
+  line-height: 1.9;
+}
+.closing p { margin: 0 0 0.85rem; text-wrap: balance; }
+.closing .verse { font-weight: 700; font-size: 1.48rem; }
+.closing p:last-child { margin-bottom: 0; }
+</style>
+<div class="page" dir="rtl" lang="ar">
+  <h1>فهرس مناهج التفسير</h1>
+  <p class="lead">كيف فسّر ابن كثير هذه الآية؟ بالقرآن؟ بالحديث؟ بقول صحابي؟ — أداة تجيب عن هذا السؤال من نص التفسير نفسه، بالدليل.</p>
+  <figure class="hero-fig">
+    <img src="idea.png" width="2160" height="2700" alt="رسم الفكرة: صفحة من تفسير ابن كثير بجانب لوحة المناهج، مع تمييز ملوّن في النص وسبب الوسم، وثلاث خطوات هي اقتراح الذكاء الاصطناعي ثم التحقق ثم حكم المتخصص.">
+  </figure>
+
+  <nav class="toc" aria-label="محتويات الصفحة">
+    <p>في هذه الصفحة</p>
+    <ol>
+      <li><a href="#idea">الفكرة في سطرين</a></li>
+      <li><a href="#problem">المشكلة</a></li>
+      <li><a href="#what">ماذا نبني</a></li>
+      <li><a href="#ai">دور الذكاء الاصطناعي</a></li>
+      <li><a href="#proof">كيف نعرف أنه أصاب؟</a></li>
+      <li><a href="#specialist">متى نرجع للمتخصص؟ وقلم التمييز الذكي</a></li>
+      <li><a href="#reference">المرجع المُحكِّم (مقترح قيد النقاش)</a></li>
+      <li><a href="#model">الجانب التقني: النموذج قابل للاستبدال، والضمانات ثابتة</a></li>
+      <li><a href="#centers">لمراكز التفسير</a></li>
+      <li><a href="#new">هل الفكرة جديدة؟</a></li>
+      <li><a href="#done">ما أنجزناه</a></li>
+      <li><a href="#plan">الخطة</a></li>
+      <li><a href="#open">أسئلة للفريق</a></li>
+    </ol>
+  </nav>
+
+  <section id="idea">
+    <h2>الفكرة في سطرين</h2>
+    <p>صفحة تفسير ابن كثير بجانب لوحة المناهج؛ اختيار منهج يلوّن مواضعه في النص.</p>
+    <p>الذكاء الاصطناعي يقترح، والمتخصص يحكم، والنص لا يتغيّر.</p>
+  </section>
+
+  <section id="problem">
+    <h2>المشكلة</h2>
+    <p>الباحث لا يستطيع أن يسأل: «أين استدل ابن كثير بالحديث في هذه الآية؟» إلا بقراءة الصفحات كلها.</p>
+    <p>وإجابات الذكاء الاصطناعي عن القرآن لا يمكن تتبّع مصدرها.</p>
+    <p>معيار نجاح المسار نفسه:</p>
+    <blockquote class="quote-box">«أظهر المصدر وحالة الدليل بصورة واضحة وقابلة للتتبع، وميّز بين ما تؤيده المصادر وما يتطلب مزيداً من التحقق»</blockquote>
+  </section>
+
+  <section id="what">
+    <h2>ماذا نبني</h2>
+    <p>مصدر واحد: تفسير ابن كثير من البيانات المفتوحة لمركز تفسير (<span dir="ltr" lang="en">CC BY 4.0</span>).</p>
+    <p>المناهج العشرة:</p>
+    <ul class="chips" aria-label="المناهج العشرة">
+      <li><span class="dot quran" aria-hidden="true"></span>قرآن بالقرآن</li>
+      <li><span class="dot sunnah" aria-hidden="true"></span>سنة</li>
+      <li><span class="dot sahaba" aria-hidden="true"></span>صحابة</li>
+      <li><span class="dot tabiin" aria-hidden="true"></span>تابعون</li>
+      <li><span class="dot lugha" aria-hidden="true"></span>لغة وغريب</li>
+      <li><span class="dot qiraat" aria-hidden="true"></span>قراءات</li>
+      <li><span class="dot nuzul" aria-hidden="true"></span>أسباب نزول</li>
+      <li><span class="dot sira" aria-hidden="true"></span>مغازي وسير</li>
+      <li><span class="dot isra" aria-hidden="true"></span>إسرائيليات</li>
+      <li><span class="dot ray" aria-hidden="true"></span>رأي واجتهاد</li>
+    </ul>
+  </section>
+
+  <section id="ai">
+    <h2>دور الذكاء الاصطناعي</h2>
+    <p>يرتّب ولا يكتب: يُرجع أرقام أجزاء قطّعها البرنامج، لا نصاً، فلا يستطيع تغيير حرف.</p>
+    <p>يحكم على «وظيفة» الموضع لا على كلماته: الآية داخل حديث ليست «قرآناً بقرآن»، والصحابي في الإسناد ليس «قول صحابي».</p>
+  </section>
+
+  <section id="proof">
+    <div class="key">
+      <h2>كيف نعرف أنه أصاب؟</h2>
+      <p>ثلاث طبقات أدلة:</p>
+      <ol>
+        <li>علامات نصية يلتقطها البرنامج بلا ذكاء اصطناعي: <span class="amiri">«كما قال تعالى»</span>، <span class="amiri">«رواه البخاري»</span>، <span class="amiri">«قال ابن عباس»</span>، <span class="amiri">«قال الشاعر»</span>، <span class="amiri">«كعب الأحبار»</span>.</li>
+        <li>حكم النموذج على الوظيفة مع الإشارة إلى جزء الدليل برقمه.</li>
+        <li>المرجعية المنهجية: ترتيب ابن كثير نفسه في مقدمته.
+          <blockquote class="tafsir">«أصح الطرق أن يُفسَّر القرآن بالقرآن… فإن أعياك ذلك فعليك بالسنة… ثم أقوال الصحابة… ثم التابعين»</blockquote>
+        </li>
+      </ol>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th scope="col">درجة اليقين</th>
+            <th scope="col">الملاحظة</th>
+          </tr>
+          <tr>
+            <th scope="row"><span aria-hidden="true">🟢</span> صريح</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row"><span aria-hidden="true">🟡</span> مستنتج بقوة</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row"><span aria-hidden="true">🟠</span> مستنتج بضعف</th>
+            <td>يذهب للمتخصص</td>
+          </tr>
+          <tr>
+            <th scope="row">امتناع</th>
+            <td>لا يصنّف</td>
+          </tr>
+        </table>
+      </div>
+      <p class="score">درجة الثقة محسوبة لا يقرّرها النموذج عن نفسه: علامة ٢٥ + دليل الوظيفة ٤٥ + وضوح النسبة ١٥ + اكتمال الحدود ١٥، ولا تتجاوز ٥٩ إن غاب دليل الوظيفة.</p>
+    </div>
+  </section>
+
+  <section id="specialist">
+    <div class="key">
+      <h2>متى نرجع للمتخصص؟ وقلم التمييز الذكي</h2>
+      <p>كل ما ضعف دليله أو كان حساساً (إسرائيليات، أسباب نزول، قراءات، صحابي أم تابعي؟).</p>
+      <p>يعمل المتخصص بقلم تمييز ذكي: يمدّ التمييز أو يقصّره كلمةً كلمة، يغيّر لونه (منهجه)، يحذفه، أو يضيف ما فات الآلة.</p>
+      <p>كل تعديل يُسجَّل: ماذا اقترحت الآلة وماذا غيّر المتخصص ولماذا — فتُقاس دقة الآلة في كل منهج بالأرقام، وتصير التصحيحات بيانات تدريب لاحقاً.</p>
+    </div>
+  </section>
+
+  <section id="reference">
+    <h2>المرجع المُحكِّم (مقترح قيد النقاش)</h2>
+    <p>بجانب كل موضع: ماذا حكم المرجع المعتبر؟ أمثلة:</p>
+    <ul>
+      <li>عمدة التفسير (أحمد شاكر).</li>
+      <li>الصحيح المسبور من التفسير بالمأثور (حكمت بشير ياسين).</li>
+      <li>تقريب التهذيب والإصابة (ابن حجر) لتمييز الصحابي من التابعي.</li>
+      <li>حواشي المحقق في الطبعة نفسها.</li>
+    </ul>
+    <p>إن خالف المرجعُ الآلةَ أُحيل الموضع للمتخصص فوراً. ويُعمَّم لاحقاً بـ«سجل مراجع» لكل تفسير.</p>
+    <p class="notice"><strong>تنبيه:</strong> الكتب محفوظة الحقوق، فنحفظ المرجع والصفحة والحكم المختصر فقط، ويُدخلها المتخصص من المطبوع.</p>
+  </section>
+
+  <section id="model">
+    <div class="key">
+      <h2>الجانب التقني: النموذج قابل للاستبدال، والضمانات ثابتة</h2>
+      <div class="flow" role="list" aria-label="ضمانات ثابتة حول خانة النموذج">
+        <div class="step" role="listitem"><span class="n">١</span><span>النص من المصدر ببصمة رقمية</span></div>
+        <span class="join" aria-hidden="true"></span>
+        <div class="step" role="listitem"><span class="n">٢</span><span>علامات نصية</span></div>
+        <span class="join" aria-hidden="true"></span>
+        <div class="step slot" role="listitem">
+          <span class="slot-name">خانة النموذج</span>
+          <span class="slot-note">تستبدل</span>
+        </div>
+        <span class="join" aria-hidden="true"></span>
+        <div class="step" role="listitem"><span class="n">٣</span><span>مدقق قواعد ودرجة محسوبة</span></div>
+        <span class="join" aria-hidden="true"></span>
+        <div class="step" role="listitem"><span class="n">٤</span><span>المرجع المُحكِّم</span></div>
+        <span class="join" aria-hidden="true"></span>
+        <div class="step" role="listitem"><span class="n">٥</span><span>المتخصص</span></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th scope="col">المرحلة</th>
+            <th scope="col">ماذا يعمل</th>
+          </tr>
+          <tr>
+            <th scope="row">أيام الهاكاثون</th>
+            <td>نموذج قوي مغلق عبر واجهة برمجية (أفضل فهم للعربية الكلاسيكية، وتكلفة دولارات).</td>
+          </tr>
+          <tr>
+            <th scope="row">بعد آلاف المواضع المعتمدة</th>
+            <td>نموذج مفتوح يُدرَّب على بياناتنا (تكلفة أقل، يعمل على خوادم المركز، نتائج ثابتة) — أمثلة للتجربة: <span dir="ltr" lang="en">ALLaM</span>، <span dir="ltr" lang="en">Jais</span>، وعائلات مثل <span dir="ltr" lang="en">Qwen</span> و<span dir="ltr" lang="en">Llama</span>، والاختيار بالاختبار على عيّنتنا لا بالاسم.</td>
+          </tr>
+          <tr>
+            <th scope="row">دائماً</th>
+            <td>العرض يقرأ الملف المعتمد، فيعمل حتى لو فُصل النموذج.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="centers">
+    <h2>لمراكز التفسير</h2>
+    <p>المركز يحدد دقة مطلوبة لكل منهج؛ ما أثبتت المراجعة دقته يُقبل آلياً، ويُراجَع عشوائياً ١٠٪ منه دائماً، والباقي لمتخصص المركز.</p>
+    <p>أداة مفتوحة المصدر.</p>
+  </section>
+
+  <section id="new">
+    <h2>هل الفكرة جديدة؟</h2>
+    <p>الموجود:</p>
+    <ul>
+      <li>تصنيف كتب تفسير كاملة.</li>
+      <li>استخراج أسماء وموضوعات من تفسير الطبري.</li>
+      <li>استرجاع النصوص (خدمة مركز تفسير).</li>
+      <li>موسوعة التفسير المأثور التي رتّبت الآثار بشرياً (وتظهر مرتبة وملونة في تطبيق وحي).</li>
+    </ul>
+    <p>ولم نجد نظاماً منشوراً يفهرس «مواضع» المناهج داخل تفسير واحد مع الدليل والامتناع ومراجعة المتخصص.</p>
+    <p>نحن طبقة فوق هذه الجهود لا بديل عنها.</p>
+  </section>
+
+  <section id="done">
+    <h2>ما أنجزناه</h2>
+    <p>تجربة على ٣ آيات (آية الكرسي، الإسراء ١٠٥، البقرة ١٠٢) بـ ١٤٣ جزءاً:</p>
+    <ul>
+      <li>النظام لم يغيّر حرفاً من النسخة المصدر (١٠٠٪).</li>
+      <li>اتفق فاحصان من عائلتين مختلفتين على مصدر الدليل بنسبة ٩١٪.</li>
+      <li>فصلنا كلام ابن كثير عن حواشي المحقق (مثل «[والخبر من الإسرائيليات]» بين معقوفين) حتى لا يُنسب إليه ما لم يقله.</li>
+      <li>المطابقة مع مصدر ثانٍ كشفت فروق رقمنة (مثل «القرن» في موضع «القرآن») يحسمها المتخصص بالرجوع إلى المطبوع.</li>
+    </ul>
+    <p class="note">أرقام تجربة أولى صغيرة، لا نسبة دقة نهائية.</p>
+  </section>
+
+  <section id="plan">
+    <h2>الخطة</h2>
+    <p>الأيام الثلاثة:</p>
+    <ol>
+      <li>توسيع العيّنة ودليل الوسوم.</li>
+      <li>التصنيف والتحقق.</li>
+      <li>مراجعة المتخصص والعرض والمستودع العام.</li>
+    </ol>
+    <p>خارطة الطريق:</p>
+    <ul>
+      <li>بطاقة منهج التحقيق لكل طبعة.</li>
+      <li>أساس الوسم.</li>
+      <li>وسم المغازي والسير.</li>
+      <li>تفاسير أخرى.</li>
+      <li>نموذج مفتوح.</li>
+    </ul>
+  </section>
+
+  <section id="open">
+    <h2>أسئلة للفريق</h2>
+    <ol>
+      <li>من المتخصص المراجع؟</li>
+      <li>ما الطبعة المطبوعة لنص مركز تفسير؟</li>
+      <li>نعتمد طبقة المرجع المُحكِّم في نسخة الهاكاثون أم في خارطة الطريق؟</li>
+    </ol>
+  </section>
+
+  <footer class="closing">
+    <p class="verse">﴿وَبِالْحَقِّ أَنزَلْنَاهُ وَبِالْحَقِّ نَزَلَ﴾</p>
+    <p>قال ابن كثير: «وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه»</p>
+    <p>ونحن نحفظ لنصّ المفسر الأمانة نفسها.</p>
+  </footer>
+</div>

@@ -1,0 +1,38 @@
+TASK: Phase 1b — separate the AUTHOR's text (Ibn Kathir) from the EDITOR's apparatus in Source A, then redo reconciliation and spans on the author layer. Python stdlib only. Do NOT commit. Do NOT modify data/raw/ (it is pinned by sha256).
+
+CONTEXT: Source A (data/raw/tafsircenter/<s>_<a>.txt) embeds editorial apparatus inline:
+- Footnotes delimited by ¬ ... ¥ (e.g. "¬أخرجه الإمام أحمد ... وسنده صحيح.¥", "¬في (ل) و (ن): ...¥"). These are the editor's, NOT Ibn Kathir's.
+- Verse references in square brackets: [النساء: 166], [آل عمران: 1، 2], [غافر: 1 - 3].
+- Other square-bracket insertions: [وسنده حسن], [والخبر من الإسرائيليات], [والغول في لغة العرب: ...]. Provenance uncertain (probably editor) — must NOT be silently attributed to the author.
+Attributing editor text to Ibn Kathir is the worst possible integrity error in this project.
+
+1. src/layers.py -> data/layers/<s>_<a>.json
+   Classify every character of the Source A text into contiguous ranges, each {start, end, layer} with layer in:
+   - "author" — everything else
+   - "footnote" — from ¬ through ¥ inclusive
+   - "verse_ref" — a [ ... ] whose content matches a sura-name + colon + digits pattern (Arabic digits or Latin, ranges with - allowed)
+   - "editor_bracket" — any other [ ... ]
+   Handle nesting defensively (a [ ] inside a footnote belongs to the footnote). Invariant (assert): ranges are sorted, non-overlapping, and tile [0, len(text)) exactly. Also emit counts per layer and char totals per layer.
+
+2. src/reconcile_author.py -> reports/reconciliation_author.md + .json
+   Build author_text = concatenation of "author" ranges only. Compare author_text vs Source B at L1 (reuse src/normalize.py). Report per ayah: before (full A vs B) ratio, after (author-only vs B) ratio, exact-L1 yes/no, and up to 20 remaining differing regions. Also list every "editor_bracket" range with its text, so a specialist can see them.
+
+3. src/spans_author.py -> data/spans_author/<s>_<a>.json
+   Re-cut atomic spans from AUTHOR ranges only, using the same splitting rules as src/spans.py, with two fixes:
+   - Do not split inside a verse reference or right after "سورة:" style colons; do not break on a colon that is followed by digits.
+   - A span must never cross a non-author range; start/end offsets must be offsets into the ORIGINAL Source A file.
+   Each span: {id, start, end, text}. Invariant (assert): for every span, source_a[start:end] == text, and concatenating all span texts == author_text.
+
+4. src/pilot_windows.py -> data/spans_pilot/<s>_<a>.json (subset of spans_author, same span objects, keep original ids)
+   - 17:105: all spans.
+   - 2:255: spans from the start until cumulative text length first exceeds 6000 characters.
+   - 2:102: locate BY CODE the span containing the substring "كعب الأحبار عن كتب بني إسرائيل"; take 20 spans before it through 10 spans after it (clip to bounds). If not found, report it and take spans 380–430.
+   Print for each: span count, char count, first and last span id.
+
+5. Extend src/run_all.py to run layers -> reconcile_author -> spans_author -> pilot_windows after phase 1 steps. Keep phase 1 outputs unchanged.
+
+GATES (run and paste output):
+  python src/run_all.py
+  a check script asserting: layer ranges tile each file; every spans_author span satisfies source_a[start:end]==text and lies inside an author range; spans_pilot ⊂ spans_author.
+
+REPORT (final message): per ayah — chars per layer; before/after reconciliation ratios; number and full list of editor_bracket texts for 2:255 and 17:105 (for 2:102 give count and first 10); pilot window sizes; anything unverifiable. Do not commit.

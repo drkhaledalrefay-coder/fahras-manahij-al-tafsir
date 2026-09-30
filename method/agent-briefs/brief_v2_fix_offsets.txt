@@ -1,0 +1,20 @@
+TASK: Fix a source-fidelity bug in the specialist highlighter and align the UX flow. Edit only src/methods_template.html (and src/build_methods.py if needed), then rebuild web/methods.html with python src/build_methods.py. Do NOT commit. Do NOT touch data/.
+
+BUG (verified by the reviewer in a browser):
+In specialist mode, onSelectAttempt() computes offsets with a Range from the start of #tafsir: `pre.toString().length`. But #tafsir contains NON-SOURCE nodes (e.g. a state/count label rendering "2", badges, chips). Their text is counted, so offsets after such a node are shifted by its length. Reproduced: selecting «وقوله: {وَلَا» after a label "2" recorded start=26677 (correct only because snapToWord hid the +1 shift) and end=26700, which covers «وقوله: {وَلَا يَئُودُهُ» — one extra word. The same flaw can affect drag handles or any other DOM→offset mapping.
+
+REQUIRED FIX:
+1. Every rendered SOURCE text run inside #tafsir must be a span carrying data-abs-start (absolute char offset in the pinned source) — or equivalent — so DOM→offset mapping never counts non-source text.
+2. Map a DOM Range to offsets by locating the nearest source-run ancestor of range.startContainer/endContainer and adding the offset within that text node. Ignore any node not inside a source run. Mark all non-source UI inside #tafsir (labels, badges, chips, handles) with data-nonsource="1" and aria-hidden where appropriate, and make them user-select: none.
+3. Apply the same mapping to drag handles and keyboard boundary edits.
+4. Add an in-page self-check (runs once after render, console-only, no UI noise): for 5 random source runs, assert that source.slice(abs_start, abs_start+len) === the run's textContent; log PASS/FAIL.
+5. After adding or editing a highlight, verify source.slice(start,end) matches what the user selected (after word snapping) — if not, refuse to save and show an Arabic error line: «تعذّر تحديد الموضع بدقة؛ أعد التحديد».
+
+UX FLOW (make these steps explicit and in this order, as a teammate proposed):
+Select from Source → Add to Annotation → Label → Edit boundaries → Compare → Approve.
+- "Compare" = a clear panel in the highlight drawer titled «مقارنة بالمصدر» that shows the exact source slice for [start,end] (rendered from the pinned source string), its absolute offsets, and a fidelity badge «✅ مطابق للمصدر» computed by string equality. Approve («اعتماد») is enabled only after Compare has been shown for the current boundaries.
+- Keep: no free-text editing of source anywhere.
+
+OPTIONAL (only if quick): an "تصدير بصيغة Label Studio" button that shows (textarea + copy) the highlights as Label Studio NER-style results: {value:{start,end,text,labels:[method]}, from_name:"label", to_name:"text", type:"labels"}.
+
+GATES: python src/build_methods.py; node --check on the inline script; grep that no side-stripe borders >1px exist; report exactly how the mapping now works and where data-nonsource is applied. Do not commit.

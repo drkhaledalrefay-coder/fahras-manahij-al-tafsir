@@ -1,0 +1,1073 @@
+{
+  "window_id": "2_102",
+  "ayah": "2:102",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/al_baghawi/2_102.txt",
+  "source_sha256": "3e0e69bb068daa1c405680e500fddede0cab8b38c8df34401f2cd415e1c928b2",
+  "window_start": 0,
+  "window_end": 9204,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s002",
+        "s003"
+      ],
+      "start": 753,
+      "end": 953,
+      "text": "قَوْلُهُ تَعَالَى: {وَاتَّبَعُوا} يَعْنِي الْيَهُودَ {مَا تَتْلُو الشَّيَاطِينُ} أَيْ: مَا تَلَتْ، وَالْعَرَبُ تَضَعُ الْمُسْتَقْبَلَ مَوْضِعَ الْمَاضِي، وَالْمَاضِي مَوْضِعَ الْمُسْتَقْبَلِ، وَقِيلَ:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s002",
+        "s003"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "بيّن أن المتبعين اليهود، وأن التلاوة بمعنى القراءة، وعلّل الصيغة باستعمال العرب الماضي في موضع المستقبل.",
+      "marker_hits": [
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 753,
+          "end": 770
+        },
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 772,
+          "end": 786
+        },
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 806,
+          "end": 833
+        },
+        {
+          "span_id": "s002",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 834,
+          "end": 839
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s004",
+        "s005"
+      ],
+      "start": 953,
+      "end": 1134,
+      "text": " مَا كُنْتَ تَتْلُو أَيْ تَقْرَأُ، قَالَ ابْنُ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُ:\nتَتَّبِعُ وَتَعْمَلُ بِهِ، وَقَالَ عَطَاءٌ تَحَدَّثُ وَتَكَلَّمُ بِهِ {عَلَى مُلْكِ سُلَيْمَانَ} أَيْ:",
+      "primary": "M_SAHABA",
+      "secondary": [
+        "M_TABIIN"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s004",
+        "s005"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن عباس",
+          "عطاء"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قول ابن عباس في معنى التلاوة بالاتباع والعمل، وعطاء بالكلام، فالمراد اتباع ما تلقته الشياطين.",
+      "marker_hits": [
+        {
+          "span_id": "s004",
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 980,
+          "end": 985
+        },
+        {
+          "span_id": "s004",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 994,
+          "end": 1007,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s005",
+          "family": "TABIIN",
+          "marker": "عطاء",
+          "start": 1067,
+          "end": 1073,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s005",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1102,
+          "end": 1128
+        },
+        {
+          "span_id": "s005",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1129,
+          "end": 1134
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s006",
+        "s007",
+        "s008",
+        "s009",
+        "s010",
+        "s011"
+      ],
+      "start": 1134,
+      "end": 3978,
+      "text": " فِي مُلْكِهِ وَعَهْدِهِ.\nوَقِصَّةُ الْآيَةِ  أَنَّ الشَّيَاطِينَ كَتَبُوا السِّحْرَ وَالنِّيرَنْجِيَّاتِ  عَلَى لِسَانِ آصَفَ بْنِ بَرْخِيَا هَذَا مَا عَلَّمَ آصَفُ بْنُ بَرْخِيَا سُلَيْمَانَ الْمَلِكَ، ثُمَّ دَفَنُوهَا تَحْتَ مُصَلَّاهُ حَتَّى نَزَعَ اللَّهُ الْمُلْكَ عَنْهُ وَلَمْ يَشْعُرْ بِذَلِكَ سُلَيْمَانُ فَلَمَّا مَاتَ اسْتَخْرَجُوهَا وَقَالُوا لِلنَّاسِ: إِنَّمَا مَلَكَهُمْ سُلَيْمَانُ بِهَا فَتَعَلَّمُوهُ فَأَمَّا عُلَمَاءُ بَنِي إِسْرَائِيلَ وَصُلَحَاؤُهُمْ فَقَالُوا: مَعَاذَ اللَّهِ أَنْ يَكُونَ هَذَا مِنْ عِلْمِ اللَّهِ  وَأَمَّا السَّفِلَةُ، فَقَالُوا: هَذَا عِلْمُ سُلَيْمَانَ، وَأَقْبَلُوا عَلَى تَعَلُّمِهِ، وَرَفَضُوا كُتُبَ أَنْبِيَائِهِمْ، وَفَشَتِ الْمَلَامَةُ عَلَى سُلَيْمَانَ فَلَمْ يَزَلْ هَذَا حَالُهُمْ وَفِعْلُهُمْ حَتَّى بَعَثَ اللَّهُ مُحَمَّدًا صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَأَنْزَلَ عَلَيْهِ بَرَاءَةَ سُلَيْمَانَ، هَذَا قَوْلُ الْكَلْبِيِّ.",
+      "primary": "M_TABIIN",
+      "secondary": [
+        "M_NUZUL"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s011"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الكلبي"
+        ]
+      },
+      "alternatives": [
+        "M_ISRAILIYYAT"
+      ],
+      "rationale_ar": "مقطع يفتح قصة الآية ثم يرويها عن الكلبي بلا إسناد، ومدارها على مصدر تابعي لا على أهل الكتاب، وفيها ربط النزول ببراءة سليمان.",
+      "marker_hits": [
+        {
+          "span_id": "s011",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 3875,
+          "end": 3907
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 1179,
+          "end": 3015,
+          "text": "¬ساق ابن كثير رحمه الله جملة من الروايات في تفسير الآية ثم قال: \"وقد روي في قصة هاروت وماروت عن جماعة من التابعين: كمجاهد والسدي والحسن البصري وقتادة، وأبي العالية والزهري، والربيع بن أنس ومقاتل بن حيان وغيرهم، وقصها خلق من المفسرين، من المتقدمين والمتأخرين، وحاصلها راجع في تفصيلها إلى أخبار بني إسراائيل، إذ ليس فيها حديث مرفوع صحيح متصل الإسناد إلى الصادق المصدوق المعصوم، الذي لا ينطق عن الهوى، وظاهر سياق القرآن إجمال القصة من غير بسط ولا إطناب، فنحن نؤمن بما ورد في القرآن، على ما أراده الله تعالى، والله أعلم بحقيقة الحال\". تفسير ابن كثير: 1/ 249 - 250. وقال القاضي عياض رحمه الله عن هاروت وماروت .. \"وما ذكر فيها أهل الأخبار ونقلة المفسرين، وما روى عن علي وابن عباس في خيرهما وابتلائهما - بمحبة المرأة وعقابهما على ما فعلا، وما وقع من السحر: فاعلم - أكرمك الله - أن هذه الأخبار لم يرو منها شيء لا سقيم ولا صحيح عن رسول الله صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وليس هو شيئا يؤخذ بقياس. والذي منه في القرآن: اختلف المفسرون في معناه، وأنكر ما قال بعضهم فيه كثير من السلف، وهذه الأخبار من كتب اليهود وافترائهم، كما نصه الله أول الآيات منها وافترائهم بذلك على سليمان وتكفيرهم إياه. وقد انطوت القصة على شنع عظيمة، وهانحن نحبر في ذلك ما يكشف غطاء هذه الإشكالات، إن شاء الله\" ثم ذكر ما يزيف القصة ويبطلها من عدة وجوه انظر: الشفا بتعريف حقوق المصطفى للقاضي عياض: 2/ 853 - 859. وبعد أن ذكر ابن عطية في تفسيره الروايات عن القصة قال: \"وهذا كله ضعيف وبعيدا على ابن عمر رضي الله عنهما\" انظر: المحرر الوجيز لابن عطية: 1/ 420. وانظر أيضا ما ذكره الشيخ جمال الدين القاسمي رحمه الله في تفسيره: وابن العربي في أحكام القرآن: 1/ 27 - 30، والقرطبي في الجامع لأحكام القرآن 2/ 52. ومع ورود بعض الروايات في المسند للإمام أحمد أو غيره، فإنها روايات ضعيفة، لا تعارض الأخبار الصحيحة والقواعد المقررة عن عصمة الملائكة عليهم السلام وإن سكت عنها الإمام الطبري والثعلبي والبغوي. وانظر: لباب التفسير لمحمود بن حمزة الكرماني 1/ 369. تحقيق د. ناصر بن سليمان العمر.¥",
+          "attached_span_id": "s006",
+          "grading": [
+            "صحيح",
+            "حسن",
+            "ضعيف"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3076,
+          "end": 3134,
+          "text": "¬وهو أخذ كالسحر، وليس به، وإنما هو تشيبه وتلبيس. القاموس.¥",
+          "attached_span_id": "s007",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3568,
+          "end": 3632,
+          "text": "¬هكذا جاء في نسخة (أ) وفي ب (سليمان) وكذلك المطبوع، وهو الصحيح.¥",
+          "attached_span_id": "s010",
+          "grading": [
+            "صحيح"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        }
+      ],
+      "flags": [
+        "rule_M_TABIIN_missing_marker"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s012",
+        "s013",
+        "s014",
+        "s015",
+        "s016",
+        "s017",
+        "s018",
+        "s019",
+        "s020"
+      ],
+      "start": 3978,
+      "end": 5719,
+      "text": "\nوَقَالَ السُّدِّيُّ: كَانَتِ الشَّيَاطِينُ تَصْعَدُ إِلَى السَّمَاءِ، فَيَسْمَعُونَ كَلَامَ الْمَلَائِكَةِ فِيمَا يَكُونُ فِي الْأَرْضِ مِنْ مَوْتٍ وَغَيْرِهِ، فَيَأْتُونَ الْكَهَنَةَ وَيَخْلِطُونَ بِمَا يَسْمَعُونَ فِي كُلِّ كَلِمَةٍ سَبْعِينَ كِذْبَةً وَيُخْبِرُونَهُمْ بِهَا   وَفَشَا فِي بَنِي إِسْرَائِيلَ أَنَّ الْجِنَّ يَعْلَمُونَ الْغَيْبَ، فَبَعَثَ سُلَيْمَانُ فِي النَّاسِ وَجَمَعَ تِلْكَ الْكُتُبَ وَجَعَلَهَا فِي صُنْدُوقٍ وَدَفَنَهُ تَحْتَ كُرْسِيِّهِ وَقَالَ: لَا أَسْمَعُ أَحَدًا يَقُولُ إِنَّ الشَّيْطَانَ يَعْلَمُ الْغَيْبَ إِلَّا ضَرَبْتُ عُنُقَهُ، فَلَمَّا مَاتَ سُلَيْمَانُ وَذَهَبَ الْعُلَمَاءُ الَّذِينَ كَانُوا يَعْرِفُونَ أَمْرَ سُلَيْمَانَ وَدَفَنَةُ الْكُتُبِ، وَخَلَفَ مِنْ بَعْدِهِمْ خَلْفٌ، تَمَثَّلَ الشَّيْطَانُ عَلَى صُورَةِ إِنْسَانٍ فَأَتَى نَفَرًا مِنْ بَنِي إِسْرَائِيلَ فَقَالَ: هَلْ أَدُلُّكُمْ عَلَى كَنْزٍ لَا تَأْكُلُونَهُ أَبَدًا قَالُوا: نَعَمْ فَذَهَبَ مَعَهُمْ فَأَرَاهُمُ الْمَكَانَ الَّذِي تَحْتَ كُرْسِيِّهِ، فَحَفَرُوا فَأَقَامَ نَاحِيَةً فَقَالُوا لَهُ: ادْنُ وَقَالَ: لَا أَحْضُرُ، فَإِنْ لَمْ تَجِدُوهُ فَاقْتُلُونِي، وَذَلِكَ أَنَّهُ لَمْ يَكُنْ أَحَدٌ مِنَ الشَّيَاطِينِ يَدْنُو مِنَ الْكُرْسِيِّ إِلَّا احْتَرَقَ، فَحَفَرُوا وَأَخْرَجُوا تِلْكَ الْكُتُبَ، فَقَالَ الشَّيْطَانُ لَعَنَهُ اللَّهُ: إِنَّ سُلَيْمَانَ كَانَ يَضْبِطُ الْجِنَّ وَالْإِنْسَ وَالشَّيَاطِينَ وَالطَّيْرَ بِهَذَا، ثُمَّ طَارَ الشَّيْطَانُ عَنْهُمْ، وَفَشَا فِي النَّاسِ أَنَّ سُلَيْمَانَ كَانَ سَاحِرًا، وَأَخَذُوا تِلْكَ الْكُتُبَ (وَاسْتَعْمَلُوهَا)  فَلِذَلِكَ أَكْثَرَ مَا يُوجَدُ السِّحْرُ فِي الْيَهُودِ، فَلَمَّا جَاءَ مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بَرَّأَ اللَّهُ تَعَالَى سُلَيْمَانَ مِنْ ذَلِكَ، وَأَنْزَلَ فِي عُذْرِ سُلَيْمَانَ:",
+      "primary": "M_TABIIN",
+      "secondary": [
+        "M_NUZUL"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s012",
+        "s020"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "السدي"
+        ]
+      },
+      "alternatives": [
+        "M_ISRAILIYYAT"
+      ],
+      "rationale_ar": "رواية السدي في صعود الشياطين وسماعهم، ودفن الكتب، حتى برأ الله سليمان وأنزل الآية في عذره.",
+      "marker_hits": [
+        {
+          "span_id": "s012",
+          "family": "TABIIN",
+          "marker": "السدي",
+          "start": 3987,
+          "end": 3996,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s020",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 5601,
+          "end": 5633
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4275,
+          "end": 4302,
+          "text": "¬وفي (ب) فاكتتب الناس ذلك.¥",
+          "attached_span_id": "s013",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 5502,
+          "end": 5517,
+          "text": "¬ساقطة من (ب).¥",
+          "attached_span_id": "s019",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s021"
+      ],
+      "start": 5719,
+      "end": 5768,
+      "text": " {وَمَا كَفَرَ سُلَيْمَانُ} بِالسِّحْرِ، وَقِيلَ:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s021"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "بيان معنى نفي الكفر عن سليمان: أي لم يكفر بالسحر، ثم ذكر وجهاً ثانياً بصيغة قيل.",
+      "marker_hits": [
+        {
+          "span_id": "s021",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5720,
+          "end": 5746
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s022"
+      ],
+      "start": 5768,
+      "end": 6147,
+      "text": " لَمْ يَكُنْ سُلَيْمَانُ كَافِرًا بِالسِّحْرِ وَيَعْمَلُ بِهِ {وَلَكِنَّ الشَّيَاطِينَ كَفَرُوا} قَرَأَ ابْنُ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُ وَالْكِسَائِيُّ وَحَمْزَةُ، \"لَكِنْ\" خَفِيفَةَ النُّونِ \"وَالشَّيَاطِينُ\" رَفْعٌ، وَقَرَأَ الْآخَرُونَ وَلَكِنَّ مُشَدَّدَةَ النُّونِ \"وَالشَّيَاطِينَ\" نَصْبٌ وَكَذَلِكَ \"وَلَكِنَّ اللَّهَ قَتَلَهُمْ\" (17 - الْأَنْفَالِ) وَمَعْنَى لَكِنْ:",
+      "primary": "M_QIRAAT",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s022"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن عباس",
+          "الكسائي",
+          "حمزة"
+        ]
+      },
+      "alternatives": [
+        "M_QURAN"
+      ],
+      "rationale_ar": "عرض قراءتين في لكن والشياطين بين ابن عباس والكسائي وحمزة والجمهور، واستشهد بنظير الأنفال لتوجيه الضبط.",
+      "marker_hits": [
+        {
+          "span_id": "s022",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5830,
+          "end": 5864
+        },
+        {
+          "span_id": "s022",
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 5865,
+          "end": 5870
+        },
+        {
+          "span_id": "s022",
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 5993,
+          "end": 5998
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 0,
+          "boundary": 15
+        },
+        "total": 85
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s023"
+      ],
+      "start": 6147,
+      "end": 6203,
+      "text": " نَفْيُ الْخَبَرِ الْمَاضِي وَإِثْبَاتُ الْمُسْتَقْبَلِ.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s023"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيان دلالة لكن على نفي ما مضى وإثبات ما يستقبل.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s024"
+      ],
+      "start": 6203,
+      "end": 6415,
+      "text": "\n{يُعَلِّمُونَ النَّاسَ} قِيلَ: مَعْنَى السِّحْرِ الْعِلْمُ وَالْحِذْقُ بِالشَّيْءِ قَالَ اللَّهُ تَعَالَى \"وَقَالُوا يَا أَيُّهَا السَّاحِرُ ادْعُ لَنَا رَبَّكَ\" (49 - الزُّخْرُفِ) أَيِ الْعَالِمُ، وَالصَّحِيحُ:",
+      "primary": "M_LUGHA",
+      "secondary": [
+        "M_QURAN"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s024"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "أورد قولاً بأن السحر بمعنى العلم والمهارة، واستشهد بآية الزخرف لبيان أن الساحر قد يراد به العالم.",
+      "marker_hits": [
+        {
+          "span_id": "s024",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 6204,
+          "end": 6227
+        },
+        {
+          "span_id": "s024",
+          "family": "RAY",
+          "marker": "والصحيح",
+          "start": 6402,
+          "end": 6413
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m09",
+      "span_ids": [
+        "s025",
+        "s026",
+        "s027",
+        "s028"
+      ],
+      "start": 6415,
+      "end": 7511,
+      "text": " أَنَّ السِّحْرَ عِبَارَةٌ عَنِ التَّمْوِيهِ وَالتَّخْيِيلِ، وَالسِّحْرُ وُجُودُهُ حَقِيقَةً عِنْدَ أَهْلِ السُّنَّةِ، وَعَلَيْهِ أَكْثَرُ الْأُمَمِ، وَلَكِنَّ الْعَمَلَ بِهِ كُفْرٌ، حُكِيَ عَنِ الشَّافِعِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّهُ قَالَ: السِّحْرُ يُخَيِّلُ وَيُمْرِضُ وَقَدْ يَقْتُلُ، حَتَّى أَوْجَبَ الْقِصَاصَ عَلَى مَنْ قَتَلَ بِهِ فَهُوَ مِنْ عَمَلِ الشَّيْطَانِ، يَتَلَقَّاهُ السَّاحِرُ مِنْهُ بِتَعْلِيمِهِ إِيَّاهُ، فَإِذَا تَلَقَّاهُ مِنْهُ اسْتَعْمَلَهُ فِي غَيْرِهِ، وَقِيلَ: إِنَّهُ يُؤَثِّرُ فِي قَلْبِ الْأَعْيَانِ فَيَجْعَلُ الْآدَمِيَّ عَلَى صُورَةِ الْحِمَارِ وَيَجْعَلُ الْحِمَارَ عَلَى صُورَةِ الْكَلْبِ، وَالْأَصَحُّ أَنَّ ذَلِكَ تَخْيِيلٌ قَالَ اللَّهُ تَعَالَى: \"يُخَيَّلُ إِلَيْهِ مِنْ سِحْرِهِمْ أَنَّهَا تَسْعَى\" (66 - طه) لَكِنَّهُ يُؤَثِّرُ فِي الْأَبْدَانِ بِالْأَمْرَاضِ وَالْمَوْتِ وَالْجُنُونِ، وَلِلْكَلَامِ تَأْثِيرٌ فِي الطِّبَاعِ وَالنُّفُوسِ وَقَدْ يَسْمَعُ الْإِنْسَانُ مَا يَكْرَهُ فَيَحْمَى وَيَغْضَبُ وَرُبَّمَا يُحَمُّ مِنْهُ، وَقَدْ مَاتَ قَوْمٌ بِكَلَامٍ سَمِعُوهُ فَهُوَ بِمَنْزِلَةِ الْعَوَارِضِ وَالْعِلَلِ الَّتِي تُؤَثِّرُ فِي الْأَبْدَانِ ",
+      "primary": "M_RAY",
+      "secondary": [
+        "M_QURAN"
+      ],
+      "content_tags": [
+        "C_FIQH",
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s025",
+        "s027",
+        "s028"
+      ],
+      "author_verdict_span_ids": [
+        "s024",
+        "s027"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الشافعي"
+        ]
+      },
+      "alternatives": [
+        "M_LUGHA"
+      ],
+      "rationale_ar": "ترجيح البغوي أن السحر تمويه وتخييل مع كونه واقعاً، ونقل قول الشافعي في أثره وحكم العمل به، وشاهد طه.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 7511,
+          "end": 7653,
+          "text": "¬انظر تفصيل ذلك فيما بسطه ابن كثير من مسائل حول حقيقة السحر وحكم تعاطيه وتعلمه ... في التفسير: 1/ 252 - 261، أحكام القرآن للجصاص: 1/ 50 - 72.¥",
+          "attached_span_id": "s028",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        }
+      ],
+      "flags": [
+        "rule_ray_unmeasured"
+      ],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m10",
+      "span_ids": [
+        "s029"
+      ],
+      "start": 7653,
+      "end": 7782,
+      "text": ".\nقَوْلُهُ عَزَّ وَجَلَّ {وَمَا أُنْزِلَ عَلَى الْمَلَكَيْنِ بِبَابِلَ} أَيْ وَيُعَلِّمُونَ الَّذِي أُنْزِلَ عَلَى الْمَلَكَيْنِ ",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s029"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيان أن المعلَّم يشمل ما أنزل على الملكين، بتقدير مفعول ثانٍ للفعل.",
+      "marker_hits": [
+        {
+          "span_id": "s029",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7678,
+          "end": 7724
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m11",
+      "span_ids": [
+        "s030",
+        "s031"
+      ],
+      "start": 7919,
+      "end": 8028,
+      "text": "  وَقَرَأَ ابْنُ عَبَّاسٍ وَالْحَسَنُ الْمَلِكَيْنِ بِكَسْرِ اللَّامِ، وَقَالَ ابْنُ عَبَّاسٍ:",
+      "primary": "M_QIRAAT",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s031"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن عباس",
+          "الحسن"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قراءة ابن عباس والحسن الملِكين بكسر اللام، والتوجيه بأن المراد رجلان ساحران لا ملكان.",
+      "marker_hits": [
+        {
+          "span_id": "s031",
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 7938,
+          "end": 7943
+        },
+        {
+          "span_id": "s031",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 8013,
+          "end": 8026,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 7920,
+          "end": 7935,
+          "text": "¬زيادة من (ب).¥",
+          "attached_span_id": "s030",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m12",
+      "span_ids": [
+        "s032",
+        "s033"
+      ],
+      "start": 8028,
+      "end": 8189,
+      "text": " هُمَا رَجُلَانِ سَاحِرَانِ كَانَا بِبَابِلَ، وَقَالَ الْحَسَنُ: عِلْجَانِ  لِأَنَّ الْمَلَائِكَةَ لَا يُعَلِّمُونَ السِّحْرَ.",
+      "primary": "M_SAHABA",
+      "secondary": [
+        "M_TABIIN"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s031",
+        "s032",
+        "s033"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن عباس",
+          "الحسن"
+        ]
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "قول ابن عباس أنهما رجلان ساحران ببابل، والحسن أنهما علجان، وتعليل القراءة بأن الملائكة لا تعلم السحر.",
+      "marker_hits": [
+        {
+          "span_id": "s031",
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 7938,
+          "end": 7943
+        },
+        {
+          "span_id": "s031",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 8013,
+          "end": 8026,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s032",
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "start": 8082,
+          "end": 8090,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 8103,
+          "end": 8138,
+          "text": "¬العلج: الرجل الضخم من كفار العجم.¥",
+          "attached_span_id": "s032",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m13",
+      "span_ids": [
+        "s034"
+      ],
+      "start": 8189,
+      "end": 8348,
+      "text": "\nوَبَابِلُ هِيَ بَابِلُ الْعِرَاقِ سُمِّيَتْ بَابِلَ لِتَبَلْبُلِ الْأَلْسِنَةِ بِهَا عِنْدَ سُقُوطِ صَرْحِ نُمْرُودَ أَيْ تَفَرُّقِهَا، قَالَ ابْنُ مَسْعُودٍ:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s034"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "نمرود"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "بيان أن بابل بالعراق، وتعليل تسميتها بتبلبل الألسنة عند سقوط صرح نمرود.",
+      "marker_hits": [
+        {
+          "span_id": "s034",
+          "family": "SAHABA",
+          "marker": "ابن مسعود",
+          "start": 8332,
+          "end": 8346,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m14",
+      "span_ids": [
+        "s035"
+      ],
+      "start": 8348,
+      "end": 8466,
+      "text": " بَابِلُ أَرْضِ الْكُوفَةِ، وَقِيلَ جَبَلُ دَمَاوَنْدَ، وَالْقِرَاءَةُ الْمَعْرُوفَةُ عَلَى الْمَلَكَيْنِ بِالْفَتْحِ.",
+      "primary": "M_SAHABA",
+      "secondary": [
+        "M_QIRAAT"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s034",
+        "s035"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن مسعود"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قول ابن مسعود أن بابل أرض الكوفة، وقيل جبل دماوند، مع تقرير أن القراءة المعروفة بالفتح.",
+      "marker_hits": [
+        {
+          "span_id": "s034",
+          "family": "SAHABA",
+          "marker": "ابن مسعود",
+          "start": 8332,
+          "end": 8346,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s035",
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 8409,
+          "end": 8417
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m15",
+      "span_ids": [
+        "s036",
+        "s037",
+        "s038",
+        "s039",
+        "s040"
+      ],
+      "start": 8466,
+      "end": 9204,
+      "text": " فَإِنْ قِيلَ كَيْفَ يَجُوزُ تَعْلِيمُ السِّحْرِ مِنَ الْمَلَائِكَةِ؟ قِيلَ: لَهُ تَأْوِيلَانِ: أَحَدُهُمَا، أَنَّهُمَا لَا يَتَعَمَّدَانِ التَّعْلِيمَ لَكِنْ يَصِفَانِ السِّحْرَ وَيَذْكُرَانِ بُطْلَانَهُ وَيَأْمُرَانِ بِاجْتِنَابِهِ، وَالتَّعْلِيمُ بِمَعْنَى الْإِعْلَامِ، فَالشَّقِيُّ يَتْرُكُ نَصِيحَتَهُمَا وَيَتَعَلَّمُ السِّحْرَ مِنْ صَنْعَتِهِمَا.\nوَالتَّأْوِيلُ الثَّانِي: وَهُوَ الْأَصَحُّ: أَنَّ اللَّهَ تَعَالَى امْتَحَنَ النَّاسَ بِالْمَلَكَيْنِ فِي ذَلِكَ الْوَقْتِ فَمَنْ شَقِيَ يَتَعَلَّمُ السِّحْرَ مِنْهُمَا   فَيَكْفُرُ بِهِ، وَمِنْ سَعِدَ يَتْرُكُهُ فَيَبْقَى عَلَى الْإِيمَانِ، وَيَزْدَادُ الْمُعَلِّمَانِ بِالتَّعْلِيمِ عَذَابًا، فَفِيهِ ابْتِلَاءٌ لِلْمُعَلِّمِ ",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s036",
+        "s037",
+        "s038"
+      ],
+      "author_verdict_span_ids": [
+        "s038"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_LUGHA"
+      ],
+      "rationale_ar": "جواب المؤلف عن إشكال تعليم الملكين السحر بتأويلين، ورجّح الثاني: أن الله امتحن الناس بهما ابتلاءً للمعلمين.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 9032,
+          "end": 9046,
+          "text": "¬ساقط من (ب).¥",
+          "attached_span_id": "s039",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+        }
+      ],
+      "flags": [
+        "rule_ray_unmeasured"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 0,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_102",
+    "annotator": "deepseek",
+    "move_count": 15,
+    "auto_candidate": 10,
+    "specialist": 5,
+    "by_primary": {
+      "M_LUGHA": 6,
+      "M_SAHABA": 3,
+      "M_TABIIN": 2,
+      "M_QIRAAT": 2,
+      "M_RAY": 2
+    },
+    "by_certainty": {
+      "strong": 11,
+      "weak": 1,
+      "explicit": 3
+    },
+    "flag_count": 3
+  }
+}

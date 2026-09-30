@@ -1,0 +1,122 @@
+{
+  "window_id": "8_40",
+  "ayah": "8:40",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 5,
+    "HADITH": 1,
+    "SIRA": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 28,
+          "end": 128,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 390,
+          "end": 409,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 456,
+          "end": 477,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 495,
+          "end": 502,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 549,
+          "end": 568,
+          "span_id": "s007"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 661,
+          "end": 669,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 704,
+          "end": 743,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 288,
+      "end": 314,
+      "text": "¬في ت 1: \"فأتوا الإضرار\".¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 744,
+      "end": 957,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 5/ 1702 من طريق سلمة عن ابن إسحاق عن يحيى بن عباد بن عبد الله ابن الزبير عن أبيه، إلى قوله: من كفرهم، كما أخرجه في 5/ 1702 من طريق عبد الله بن إدريس عن ابن إسحاق بالشطر الثاني بنحوه.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

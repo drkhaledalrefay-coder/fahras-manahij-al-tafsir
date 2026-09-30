@@ -1,0 +1,110 @@
+{
+  "annotator": "grok",
+  "ayah": "2:255",
+  "units": [
+    {
+      "unit_id": "u01",
+      "span_ids": ["s001", "s002"],
+      "source_tags": ["S_SUNNAH", "S_RAY"],
+      "content_tags": ["C_FADAIL", "C_TAKHRIJ"],
+      "confidence": 0.58,
+      "reason_ar": "أُلحقت الآية بتقرير المؤلف لفضلها لصحة الخبر، لأن نصها وحده لا يستقر على وسم"
+    },
+    {
+      "unit_id": "u02",
+      "span_ids": ["s003", "s004", "s005", "s006", "s007", "s008"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.9,
+      "reason_ar": "حديث أبي بسنده ومتنه في أنها أعظم آية مع إقرار النبي"
+    },
+    {
+      "unit_id": "u03",
+      "span_ids": ["s009", "s010", "s011"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.92,
+      "reason_ar": "تخريج رواية مسلم وبيان أن الزيادة الأخيرة ليست عنده"
+    },
+    {
+      "unit_id": "u04",
+      "span_ids": ["s012", "s013", "s014", "s015", "s016", "s017", "s018", "s019", "s020", "s021", "s022", "s023"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.9,
+      "reason_ar": "حديث أبي في حراسة التمر وتعليم الجني الآية وتصديق النبي"
+    },
+    {
+      "unit_id": "u05",
+      "span_ids": ["s024"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.93,
+      "reason_ar": "تخريج الحاكم للطريق السابق مع تصحيحه الإسناد"
+    },
+    {
+      "unit_id": "u06",
+      "span_ids": ["s025", "s026", "s027", "s028", "s029", "s030", "s031", "s032", "s033", "s034"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.88,
+      "reason_ar": "طريق ثانٍ لخبر أعظم آية، ينتهي بتهنئة أبي المنذر"
+    },
+    {
+      "unit_id": "u07",
+      "span_ids": ["s035", "s036", "s037", "s038", "s039", "s040", "s041", "s042"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.88,
+      "reason_ar": "حديث الأسقع أن جواب النبي عن أعظم آية كان تلاوة هذه الآية"
+    },
+    {
+      "unit_id": "u08",
+      "span_ids": ["s043", "s044", "s045", "s046", "s047", "s048", "s049", "s050", "s051", "s052", "s053", "s054", "s055", "s056"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.9,
+      "reason_ar": "حديث أنس يعد سورًا أرباعًا ويختم بعدّ هذه الآية ربع القرآن"
+    },
+    {
+      "unit_id": "u09",
+      "span_ids": ["s057", "s058", "s059", "s060", "s061", "s062", "s063", "s064", "s065", "s066", "s067", "s068", "s069", "s070", "s071", "s072", "s073", "s074", "s075", "s076", "s077", "s078", "s079"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.8,
+      "reason_ar": "حديث أبي ذر الطويل وخاتمته فضل الآية، رغم أسئلة لا تتعلق بها"
+    },
+    {
+      "unit_id": "u10",
+      "span_ids": ["s080"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.48,
+      "reason_ar": "يجمع تخريج النسائي للحديث السابق وعنوان الحديث التالي في مقطع واحد"
+    },
+    {
+      "unit_id": "u11",
+      "span_ids": ["s081", "s082", "s083", "s084", "s085", "s086", "s087", "s088", "s089", "s090", "s091"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.9,
+      "reason_ar": "حديث أبي أيوب مع الغول وتعليمها الآية وتصديق النبي مع تكذيب عادتها"
+    },
+    {
+      "unit_id": "u12",
+      "span_ids": ["s092", "s093", "s094"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAKHRIJ"],
+      "confidence": 0.86,
+      "reason_ar": "تخريج الترمذي وحكمه، وأُلحقت به بقايا نقط وفراغ بعد حذف الحواشي"
+    },
+    {
+      "unit_id": "u13",
+      "span_ids": ["s095", "s096", "s097", "s098", "s099", "s100", "s101", "s102", "s103", "s104", "s105", "s106"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL", "C_TAKHRIJ"],
+      "confidence": 0.58,
+      "reason_ar": "مستهل قصة أبي هريرة عند البخاري مع مواضع الكتاب، وتنقطع قبل ذكر الفضل"
+    }
+  ]
+}

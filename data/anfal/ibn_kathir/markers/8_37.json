@@ -1,0 +1,440 @@
+{
+  "window_id": "8_37",
+  "ayah": "8:37",
+  "span_count": 20,
+  "family_counts": {
+    "QURAN": 29,
+    "TABIIN": 2,
+    "SAHABA": 1,
+    "LUGHA": 9,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 173,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 175,
+          "end": 186,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 176,
+          "end": 186,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 188,
+          "end": 234,
+          "span_id": "s002"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "علي بن أبي طلحة",
+          "name": "علي بن أبي طلحة",
+          "role": "NARRATOR",
+          "start": 239,
+          "end": 254,
+          "span_id": "s002"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 258,
+          "end": 266,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 276,
+          "end": 322,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 401,
+          "end": 406,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 520,
+          "end": 524,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 520,
+          "end": 525,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 527,
+          "end": 625,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 632,
+          "end": 642,
+          "text": "[يونس: 28]",
+          "via": "apparatus",
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 651,
+          "end": 711,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 743,
+          "end": 769,
+          "span_id": "s008"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 770,
+          "end": 781,
+          "text": "[الروم: 43]",
+          "via": "apparatus",
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 782,
+          "end": 792,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 783,
+          "end": 792,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 794,
+          "end": 847,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 999,
+          "end": 1002,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1025,
+          "end": 1071,
+          "span_id": "s011"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1072,
+          "end": 1075,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 1132,
+          "end": 1136,
+          "span_id": "s012"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 1132,
+          "end": 1137,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1139,
+          "end": 1393,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 1400,
+          "end": 1421,
+          "text": "[آل عمران: 166 - 167]",
+          "via": "apparatus",
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 1422,
+          "end": 1432,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1423,
+          "end": 1432,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1434,
+          "end": 1598,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 1605,
+          "end": 1620,
+          "text": "[آل عمران: 179]",
+          "via": "apparatus",
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 1622,
+          "end": 1632,
+          "span_id": "s015"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1623,
+          "end": 1632,
+          "span_id": "s015"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1634,
+          "end": 1764,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1897,
+          "end": 2000,
+          "span_id": "s017"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2001,
+          "end": 2004,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 2042,
+          "end": 2055,
+          "span_id": "s018"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 2046,
+          "end": 2055,
+          "span_id": "s018"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2066,
+          "end": 2093,
+          "span_id": "s018"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 2094,
+          "end": 2106,
+          "text": "[النور: 143]",
+          "via": "apparatus",
+          "span_id": "s018"
+        }
+      ]
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2107,
+          "end": 2110,
+          "span_id": "s019"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2129,
+          "end": 2186,
+          "span_id": "s019"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2187,
+          "end": 2190,
+          "span_id": "s019"
+        }
+      ]
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 355,
+      "end": 395,
+      "text": "¬أخرجه الطبري بسند ثابت من طريق علي به.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 430,
+      "end": 477,
+      "text": "¬أخرجه الطبري بسند حسن من طريق أسباط عن السدي.¥",
+      "attached_span_id": "s004",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

@@ -1,0 +1,45 @@
+TASK: Build phase 1 of a tafsir text-integrity pilot. Python 3.13, standard library ONLY (urllib, json, hashlib, sqlite3, re, unicodedata, pathlib). No pip installs. Do NOT commit to git.
+
+WORKING DIR: this repo root (tafsir-pilot). Layout already exists: data/raw, data/spans, reports, docs, src.
+
+CORE PRINCIPLE (non-negotiable): no LLM may ever type, retype, paraphrase or "clean" the Arabic source text. Every Arabic string in data/ must come from bytes downloaded by code. You write CODE that downloads; you never paste Arabic text into files yourself.
+
+TARGET AYAT (Tafsir Ibn Kathir, Arabic):
+- 2:255 (Ayat al-Kursi)
+- 17:105 (وبالحق أنزلناه وبالحق نزل)
+- 2:102 (Harut and Marut)
+
+SOURCE A — Tafsir Center open data (Hugging Face):
+- Dataset: https://huggingface.co/datasets/tafsircenter/tafsir-mcp-data
+- Use the HF API (https://huggingface.co/api/datasets/tafsircenter/tafsir-mcp-data) to list files, download the data file (likely SQLite) via https://huggingface.co/datasets/tafsircenter/tafsir-mcp-data/resolve/main/<path>.
+- Inspect schema with sqlite3, locate Ibn Kathir, extract the 3 entries.
+- Record: license field from the dataset card/API, any edition/publisher metadata present, table/column names used.
+
+SOURCE B — quran.com public API v4:
+- FIRST call https://api.quran.com/api/v4/resources/tafsirs and SELECT the Arabic Ibn Kathir resource programmatically (language arabic, name contains "كثير" or "Kathir"). Do not hardcode the id.
+- Then GET https://api.quran.com/api/v4/tafsirs/{id}/by_ayah/{surah}:{ayah} for each ayah. Record resource metadata (name, author, language, any source/edition field).
+- If quran.com fails, fallback: https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ (list editions, pick Arabic Ibn Kathir). Record which was used.
+
+src/fetch.py
+- Save every raw HTTP response byte-for-byte to data/raw/<source>/<name>, plus data/raw/manifest.json with: url, timestamp UTC, http status, byte length, sha256.
+- Then extract plain text per ayah per source into data/raw/<source>/<surah>_<ayah>.txt (UTF-8). For HTML in source B, strip tags with a small html.parser-based stripper; keep text content exactly otherwise. Record sha256 of each extracted .txt in the manifest too.
+
+src/normalize.py — documented, rule-by-rule, each rule a separate function with a docstring:
+- L0: raw (no change)
+- L1: remove tashkeel (U+064B–U+065F, U+0670), tatweel (U+0640), collapse whitespace, strip Quranic/ornamental brackets ﴿﴾ «» "" and punctuation, remove footnote markers like (١) or [1], unify ﷺ with صلى الله عليه وسلم.
+- Do NOT fold ة→ه, ى→ي, or hamza forms. Those differences must stay visible.
+
+src/reconcile.py -> reports/reconciliation.md + reports/reconciliation.json
+For each ayah: length A/B, exact match (L0) yes/no, match after L1 yes/no, similarity ratio (difflib) at L1, and a word-level diff at L1 listing every differing region (A text vs B text, max 30 regions, with position). Add a section "Independence": do A and B appear to share an upstream edition? Report what metadata says; do not guess — write "unknown" if unknown.
+
+src/spans.py -> data/spans/<surah>_<ayah>.json using SOURCE A text only.
+- Split the L0 text into numbered atomic spans by CODE: break after . ؟ ! : ؛ and newline; also break before markers «حديث آخر» «طريق أخرى» «وقوله» «وقال» «قال» when preceded by sentence end. Keep spans between ~5 and ~60 words; never split inside ﴿...﴾.
+- Each span: {id: "s001", start: char_offset, end: char_offset, text}. Invariant check: "".join(span texts) == source text exactly (assert it). Offsets are into the exact source A file.
+
+src/run_all.py runs fetch -> reconcile -> spans and prints a summary.
+
+GATES (run them yourself and paste output in your report):
+  python src/run_all.py
+  python -c "import json,hashlib,pathlib; ..." (your own check that every span file re-joins to its source byte-for-byte)
+
+REPORT CONTRACT (final message): what sources resolved (exact URLs, ids, licenses, edition metadata), per-ayah character counts, reconciliation headline per ayah (exact / L1 / ratio), number of spans per ayah, any failure and why. State clearly anything you could not verify. Do not commit.

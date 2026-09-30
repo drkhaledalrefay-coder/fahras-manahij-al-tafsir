@@ -1,0 +1,222 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_37.txt",
+  "ayah": "8:37",
+  "surah": 8,
+  "ayah_number": 37,
+  "source_char_length": 2260,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 202,
+      "kind": "author"
+    },
+    {
+      "start": 202,
+      "end": 206,
+      "kind": "layout"
+    },
+    {
+      "start": 206,
+      "end": 388,
+      "kind": "author"
+    },
+    {
+      "start": 388,
+      "end": 405,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 405,
+      "end": 567,
+      "kind": "author"
+    },
+    {
+      "start": 567,
+      "end": 571,
+      "kind": "layout"
+    },
+    {
+      "start": 571,
+      "end": 611,
+      "kind": "author"
+    },
+    {
+      "start": 611,
+      "end": 615,
+      "kind": "layout"
+    },
+    {
+      "start": 615,
+      "end": 631,
+      "kind": "author"
+    },
+    {
+      "start": 631,
+      "end": 635,
+      "kind": "layout"
+    },
+    {
+      "start": 635,
+      "end": 807,
+      "kind": "author"
+    },
+    {
+      "start": 807,
+      "end": 811,
+      "kind": "layout"
+    },
+    {
+      "start": 811,
+      "end": 1069,
+      "kind": "author"
+    },
+    {
+      "start": 1069,
+      "end": 1132,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1132,
+      "end": 1133,
+      "kind": "author"
+    },
+    {
+      "start": 1133,
+      "end": 1137,
+      "kind": "layout"
+    },
+    {
+      "start": 1137,
+      "end": 1164,
+      "kind": "author"
+    },
+    {
+      "start": 1164,
+      "end": 1176,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1176,
+      "end": 1177,
+      "kind": "author"
+    },
+    {
+      "start": 1177,
+      "end": 1197,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1197,
+      "end": 1451,
+      "kind": "author"
+    },
+    {
+      "start": 1451,
+      "end": 1462,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1462,
+      "end": 1484,
+      "kind": "author"
+    },
+    {
+      "start": 1484,
+      "end": 1488,
+      "kind": "layout"
+    },
+    {
+      "start": 1488,
+      "end": 1622,
+      "kind": "author"
+    },
+    {
+      "start": 1622,
+      "end": 1682,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1682,
+      "end": 1683,
+      "kind": "author"
+    },
+    {
+      "start": 1683,
+      "end": 1687,
+      "kind": "layout"
+    },
+    {
+      "start": 1687,
+      "end": 1764,
+      "kind": "author"
+    },
+    {
+      "start": 1764,
+      "end": 1768,
+      "kind": "layout"
+    },
+    {
+      "start": 1768,
+      "end": 2256,
+      "kind": "author"
+    },
+    {
+      "start": 2256,
+      "end": 2260,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 16,
+    "layout": 11,
+    "apparatus": 6
+  },
+  "char_totals": {
+    "author": 2033,
+    "layout": 44,
+    "apparatus": 183
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 4,
+    "editor_bracket": 1,
+    "verse_ref": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 160,
+    "editor_bracket": 12,
+    "verse_ref": 11
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 11
+    },
+    "footnote_open": 4,
+    "footnote_close": 4,
+    "footnotes_closed": 4,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 1,
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[النور: 43]": 1
+    },
+    "other_brackets": {
+      "[وَيَجْعَلَ]": 1
+    }
+  }
+}

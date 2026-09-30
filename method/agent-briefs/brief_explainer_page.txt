@@ -1,0 +1,40 @@
+TASK: Build ONE explainer web page (Arabic, RTL) that explains the whole project idea to the team and to non-technical readers, organized and complete. Do NOT commit. Only create files under deck/explainer/. Read-only everywhere else.
+
+OUTPUT: deck/explainer/explainer.html (single file). Copy deck/idea/idea.png to deck/explainer/idea.png and reference it as <img src="idea.png">.
+
+PAGE CONTRACT (it will be published in a sandboxed viewer):
+- File starts with <meta charset="utf-8">, then <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">, then <title>فهرس مناهج التفسير</title>, then the Google Fonts <link>, then <style>. NO <!DOCTYPE>, <html>, <head>, <body> tags, and avoid the substring "<head" (don't use <header>). dir="rtl" lang="ar" on the outer wrapper.
+- Only external resource: fonts.googleapis.com ("Readex Pro" 400/500/700 for UI and headings, "Amiri" 400/700 for Qur'an/tafsir quotes). No scripts needed; if you add any, inline only. No emoji except 🟢🟡🟠 where statuses are named.
+- Theme: dark-first tokens on bare :root (color-scheme: dark): base #00062c, surface #0e143d, glass rgba(255,255,255,.045), line rgba(255,255,255,.12), ink #f2f4ff, sub #a9b2da, violet #6251eb, teal #2feec3, blue #39a0fd, amber #ffc857, red #ff6b6b. Light theme under @media (prefers-color-scheme: light) guarded by :root:not([data-theme="dark"]) and again :root[data-theme="light"] (color-scheme: light): base #eee9f7, surface #ffffff, ink #12183f, sub #2c3775, violet #6250eb, teal #0f9e7e, amber #9a6b00, red #c23b3b. body background from a token.
+- Brand gradient (#6251eb → #3fb0d6 → #2feec3) ONLY on the page title.
+- Layout: max content width ~760px for prose, centered column, 16px side gutter at every width, readable 18–19px body, line-height 1.9, headings text-wrap: balance. Tables inside overflow-x:auto wrappers. Works at 380px, no horizontal page scroll. No side-stripe accent borders on cards. Use cards sparingly (only for the 3 key boxes marked below).
+- A small sticky table of contents is NOT needed; use a simple in-page list of section links (anchors with bare ids like #idea, #ai, #proof).
+
+CONTENT — write in clear, simple Modern Standard Arabic (فصحى بسيطة), using exactly these facts; do not add claims:
+
+(Title) فهرس مناهج التفسير
+(Lead) كيف فسّر ابن كثير هذه الآية؟ بالقرآن؟ بالحديث؟ بقول صحابي؟ — أداة تجيب عن هذا السؤال من نص التفسير نفسه، بالدليل.
+(Image) idea.png, full width of the column, rounded corners, alt text describing it.
+
+1. #idea الفكرة في سطرين — صفحة تفسير ابن كثير بجانب لوحة المناهج؛ اختيار منهج يلوّن مواضعه في النص. الذكاء الاصطناعي يقترح، والمتخصص يحكم، والنص لا يتغيّر.
+2. #problem المشكلة — الباحث لا يستطيع أن يسأل: "أين استدل ابن كثير بالحديث في هذه الآية؟" إلا بقراءة الصفحات كلها. وإجابات الذكاء الاصطناعي عن القرآن لا يمكن تتبّع مصدرها. ومعيار نجاح المسار نفسه (quote in a box): «أظهر المصدر وحالة الدليل بصورة واضحة وقابلة للتتبع، وميّز بين ما تؤيده المصادر وما يتطلب مزيداً من التحقق».
+3. #what ماذا نبني — مصدر واحد: تفسير ابن كثير من البيانات المفتوحة لمركز تفسير (CC BY 4.0). المناهج العشرة as chips with their colors: قرآن بالقرآن · سنة · صحابة · تابعون · لغة وغريب · قراءات · أسباب نزول · مغازي وسير · إسرائيليات · رأي واجتهاد.
+4. #ai دور الذكاء الاصطناعي — يرتّب ولا يكتب: يُرجع أرقام أجزاء قطّعها البرنامج، لا نصاً، فلا يستطيع تغيير حرف. يحكم على «وظيفة» الموضع لا على كلماته: الآية داخل حديث ليست «قرآناً بقرآن»، والصحابي في الإسناد ليس «قول صحابي».
+5. #proof كيف نعرف أنه أصاب؟ (KEY BOX 1) — ثلاث طبقات أدلة:
+   ١ علامات نصية يلتقطها البرنامج بلا ذكاء اصطناعي: «كما قال تعالى»، «رواه البخاري»، «قال ابن عباس»، «قال الشاعر»، «كعب الأحبار».
+   ٢ حكم النموذج على الوظيفة مع الإشارة إلى جزء الدليل برقمه.
+   ٣ المرجعية المنهجية: ترتيب ابن كثير نفسه في مقدمته — quote in Amiri: «أصح الطرق أن يُفسَّر القرآن بالقرآن… فإن أعياك ذلك فعليك بالسنة… ثم أقوال الصحابة… ثم التابعين».
+   Then a small table of certainty levels: صريح · مستنتج بقوة · مستنتج بضعف (يذهب للمتخصص) · امتناع (لا يصنّف). And one line: درجة الثقة محسوبة لا يقرّرها النموذج عن نفسه: علامة ٢٥ + دليل الوظيفة ٤٥ + وضوح النسبة ١٥ + اكتمال الحدود ١٥، ولا تتجاوز ٥٩ إن غاب دليل الوظيفة.
+6. #specialist متى نرجع للمتخصص؟ وقلم التمييز الذكي (KEY BOX 2) — كل ما ضعف دليله أو كان حساساً (إسرائيليات، أسباب نزول، قراءات، صحابي أم تابعي؟). يعمل المتخصص بقلم تمييز ذكي: يمدّ التمييز أو يقصّره كلمةً كلمة، يغيّر لونه (منهجه)، يحذفه، أو يضيف ما فات الآلة. كل تعديل يُسجَّل: ماذا اقترحت الآلة وماذا غيّر المتخصص ولماذا — فتُقاس دقة الآلة في كل منهج بالأرقام، وتصير التصحيحات بيانات تدريب لاحقاً.
+7. #reference المرجع المُحكِّم (مقترح قيد النقاش) — بجانب كل موضع: ماذا حكم المرجع المعتبر؟ أمثلة: عمدة التفسير (أحمد شاكر)، الصحيح المسبور من التفسير بالمأثور (حكمت بشير ياسين)، تقريب التهذيب والإصابة (ابن حجر) لتمييز الصحابي من التابعي، وحواشي المحقق في الطبعة نفسها. إن خالف المرجعُ الآلةَ أُحيل الموضع للمتخصص فوراً. ويُعمَّم لاحقاً بـ«سجل مراجع» لكل تفسير. تنبيه: الكتب محفوظة الحقوق، فنحفظ المرجع والصفحة والحكم المختصر فقط، ويُدخلها المتخصص من المطبوع.
+8. #model الجانب التقني: النموذج قابل للاستبدال، والضمانات ثابتة (KEY BOX 3) — a simple diagram (inline SVG or nested boxes) showing fixed guarantees around a replaceable "خانة النموذج": ١ النص من المصدر ببصمة رقمية · ٢ علامات نصية · [خانة النموذج] · ٣ مدقق قواعد ودرجة محسوبة · ٤ المرجع المُحكِّم · ٥ المتخصص. Then a 3-row table: أيام الهاكاثون ← نموذج قوي مغلق عبر واجهة برمجية (أفضل فهم للعربية الكلاسيكية، وتكلفة دولارات) · بعد آلاف المواضع المعتمدة ← نموذج مفتوح يُدرَّب على بياناتنا (تكلفة أقل، يعمل على خوادم المركز، نتائج ثابتة) — أمثلة للتجربة: ALLaM، Jais، وعائلات مثل Qwen وLlama، والاختيار بالاختبار على عيّنتنا لا بالاسم · دائماً ← العرض يقرأ الملف المعتمد، فيعمل حتى لو فُصل النموذج.
+9. #centers لمراكز التفسير — المركز يحدد دقة مطلوبة لكل منهج؛ ما أثبتت المراجعة دقته يُقبل آلياً، ويُراجَع عشوائياً ١٠٪ منه دائماً، والباقي لمتخصص المركز. أداة مفتوحة المصدر.
+10. #new هل الفكرة جديدة؟ — الموجود: تصنيف كتب تفسير كاملة، واستخراج أسماء وموضوعات من تفسير الطبري، واسترجاع النصوص (خدمة مركز تفسير)، وموسوعة التفسير المأثور التي رتّبت الآثار بشرياً (وتظهر مرتبة وملونة في تطبيق وحي). ولم نجد نظاماً منشوراً يفهرس «مواضع» المناهج داخل تفسير واحد مع الدليل والامتناع ومراجعة المتخصص. نحن طبقة فوق هذه الجهود لا بديل عنها.
+11. #done ما أنجزناه — تجربة على ٣ آيات (آية الكرسي، الإسراء ١٠٥، البقرة ١٠٢) بـ ١٤٣ جزءاً: النظام لم يغيّر حرفاً من النسخة المصدر (١٠٠٪)؛ اتفق فاحصان من عائلتين مختلفتين على مصدر الدليل بنسبة ٩١٪؛ فصلنا كلام ابن كثير عن حواشي المحقق (مثل «[والخبر من الإسرائيليات]» بين معقوفين) حتى لا يُنسب إليه ما لم يقله؛ والمطابقة مع مصدر ثانٍ كشفت فروق رقمنة (مثل «القرن» في موضع «القرآن») يحسمها المتخصص بالرجوع إلى المطبوع. Add: «أرقام تجربة أولى صغيرة، لا نسبة دقة نهائية».
+12. #plan الخطة — الأيام الثلاثة: ١ توسيع العيّنة ودليل الوسوم · ٢ التصنيف والتحقق · ٣ مراجعة المتخصص والعرض والمستودع العام. خارطة الطريق: بطاقة منهج التحقيق لكل طبعة · أساس الوسم · وسم المغازي والسير · تفاسير أخرى · نموذج مفتوح.
+13. #open أسئلة للفريق — من المتخصص المراجع؟ ما الطبعة المطبوعة لنص مركز تفسير؟ نعتمد طبقة المرجع المُحكِّم في نسخة الهاكاثون أم في خارطة الطريق؟
+(Closing, Amiri, centered) ﴿وَبِالْحَقِّ أَنزَلْنَاهُ وَبِالْحَقِّ نَزَلَ﴾ — قال ابن كثير: «وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه» (quote EXACTLY, no added diacritics) — ونحن نحفظ لنصّ المفسر الأمانة نفسها.
+
+RULES: No personal names. No AI vendor names except model family examples in section 8 (ALLaM, Jais, Qwen, Llama). Don't invent numbers or references beyond the above.
+
+GATES: file exists; starts with <meta charset="utf-8">; no <html/<head/<body/<!DOCTYPE; only fonts.googleapis.com external; idea.png copied; grep for "border-inline-start" wider than 1px = 0. Report the file size. Do not commit.

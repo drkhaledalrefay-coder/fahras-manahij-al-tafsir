@@ -1,0 +1,170 @@
+{
+  "window_id": "8_17",
+  "ayah": "8:17",
+  "span_count": 11,
+  "family_counts": {
+    "QURAN": 7,
+    "SIRA": 1,
+    "HADITH": 2,
+    "LUGHA": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 190,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 192,
+          "end": 196,
+          "span_id": "s002"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 227,
+          "end": 234,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 254,
+          "end": 268,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 288,
+          "end": 307,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 345,
+          "end": 382,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أن النبي",
+          "start": 389,
+          "end": 399,
+          "span_id": "s005"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 404,
+          "end": 422,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1019,
+          "end": 1059,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1061,
+          "end": 1064,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1260,
+          "end": 1283,
+          "span_id": "s011"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 482,
+      "end": 539,
+      "text": "¬كما في «صحيح البخاري» (3953)، ومسلم (1763) عن ابن عباس.¥",
+      "attached_span_id": "s005",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام السعدي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 684,
+      "end": 839,
+      "text": "¬كما في «معجم الطبراني» (11/ 285) عن ابن عباس قال الهيثمي (6/ 84): «رواه الطبراني ورجاله رجال الصحيح». وانظر «فقه السيرة» للغزالي (239) فقد صححه الألباني.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام السعدي"
+    }
+  ],
+  "isnad_ranges": []
+}

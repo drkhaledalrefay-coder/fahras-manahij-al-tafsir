@@ -1,0 +1,17 @@
+ROLE: Research analyst (Qur'anic studies + digital humanities). WEB RESEARCH ONLY. Do not create, edit or delete files. Deliver everything in your final message.
+
+First read method/agent-briefs/brief_v2_context.txt for project context.
+
+TASK A — NOVELTY (be strict; separate categories):
+Has anyone built AI-assisted, claim/passage-level indexing of tafsir by interpretive methodology (Qur'an-by-Qur'an, Sunnah, Sahabah, Tabi'in, language, qira'at, asbab, isra'iliyyat, ra'y) with evidence, confidence and scholar verification?
+Report separately: (A) academic papers/theses, (B) printed books that index or color-code methodologies inside a tafsir, (C) databases, (D) AI projects, (E) commercial/research tools (check Tafsir Center's Tafsir MCP, Wahy, Tadars, quran.com, Quranic Arabic Corpus, any Arabic NLP tafsir datasets).
+Search in Arabic AND English. Arabic queries to try: فهرسة مناهج التفسير · تفسير القرآن بالقرآن فهرسة · تصنيف نصوص التفسير آلياً · مصادر التفسير عند ابن كثير · منهج ابن كثير في التفسير رسالة · تفسير القرآن بالقرآن عند ابن كثير · الإسرائيليات في تفسير ابن كثير · الذكاء الاصطناعي في التفسير. English: automatic tafsir classification, tafsir methodology dataset, computational tafsir, Quran commentary NLP, digital humanities tafsir.
+Conclude: exactly which part of the idea appears genuinely new, and which already exists.
+
+TASK B — REFERENCE AUTHORITY LAYER:
+Identify verifiable scholarly references usable to (1) define categories operationally and (2) adjudicate disputed classifications in Tafsir Ibn Kathir specifically. For each: title, author, publisher/edition if known, what it covers, how it could be used (definition source vs case-level adjudication), availability online (URL). Candidates to verify (do not assume they are correct): Ibn Taymiyya's مقدمة في أصول التفسير; al-Dhahabi's التفسير والمفسرون; Abu Shahbah's الإسرائيليات والموضوعات في كتب التفسير; Ahmad Shakir's عمدة التفسير (abridgment of Ibn Kathir with hadith grading); الصحيح المسبور من التفسير بالمأثور; theses on منهج ابن كثير or تفسير القرآن بالقرآن عند ابن كثير; books of rijal for Sahabi/Tabi'i status (e.g. Ibn Hajar's تقريب التهذيب, الإصابة). Also: does Ibn Kathir's introduction state the hierarchy of tafsir methods? Quote the location if found online.
+
+TASK C — PRIOR ART ON COLOR-CODED TAFSIR:
+Are there printed or digital tafsir editions that color-code methods (e.g. Qur'an citations, hadith, athar) inside the text? Name them with sources.
+
+OUTPUT: Arabic, structured by A/B/C, every factual claim with a URL, unverified items marked "غير مؤكد". Max 900 words.

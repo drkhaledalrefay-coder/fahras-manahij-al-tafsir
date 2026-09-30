@@ -1,0 +1,50 @@
+DELTA — Phase 5: one polished, visually striking, shareable demo app. Do NOT commit. Do NOT touch data/ (read-only). Keep all integrity logic and all data exactly as built; this phase is design + UX + merging, not new analysis.
+
+GOAL: merge the two pages (web/index.html = searchable index, web/reconcile.html = human reconciliation screen) into ONE single-file app web/app.html with three tabs, restyled in the visual identity of the challenge website (islamicaich.org), and make it delightful and self-explanatory for non-technical judges.
+
+BUILD: create src/build_app.py that reads web/index_data.json and web/reconcile_data.json (produced by the existing build scripts — run them first) and inlines both into src/app_template.html -> web/app.html. Reuse/port the JS logic from src/index_template.html and your src/reconcile_template.html; do not change their data semantics, statuses, or wording rules (no "approved" status in data; never write "تمت المطابقة"; the cross-source finding text must keep saying differences may be typos OR edition/spelling variants and the specialist decides).
+
+TABS (sticky tab bar, keyboard accessible, deep-linkable with bare hash tokens #fahras #mutabaqa #tajruba):
+1. "الفهرس" — the searchable index (all current features: filters, example chips, diacritic-insensitive search, cards, "اعرض الفروق", "لماذا هذه الوسوم؟", reviewer mode, editor-apparatus section).
+2. "شاشة المطابقة" — the two-pane reconciliation screen (button "مقارنة بالنص الأصلي", matched/highlighted/discrepancy drawn on text, reviewer actions, stored record).
+3. "التجربة" — the story of the experiment for non-specialists: how it works (4 steps), what it proved (numbers), the three highlighted findings, and honest limits ("تجربة أولى صغيرة: ١٤٣ جزءاً من ٣ آيات").
+
+VISUAL IDENTITY (taken from islamicaich.org CSS — use colors and font only; do NOT use the challenge logo, its name as a brand mark, or copy its SVG assets):
+- Tokens (dark-first):
+  --base #00062c; --surface #0e143d; --surface-2 #0e1237; --glass rgba(255,255,255,.043); --glass-line rgba(255,255,255,.12);
+  --violet #6251eb; --violet-2 #6652ff; --lilac #9b82ff; --blue #39a0fd; --teal #2feec3;
+  --ink #f2f4ff; --sub #a9b2da; --muted #7c86b8;
+  --amber #ffc857; --red #ff6b6b;
+  --grad-brand: linear-gradient(90deg,#6251eb 0%,#4e7fe0 38%,#3fb0d6 68%,#2feec3 100%);
+  --grad-brand-135: linear-gradient(135deg,#6251eb 0%,#3fb0d6 60%,#2feec3 100%);
+  --ease: cubic-bezier(.16,1,.3,1).
+- Light theme (when the viewer is light): paper ground #e9e4f4, surfaces #ffffff / #f6f3fc, ink #12183f, sub #2c3775, muted #4a5590, violet #6250eb, teal darkened to #0f9e7e for text contrast, amber text #9a6b00, red text #c23b3b. Keep hero band dark in both themes (like the site's bands).
+- Theme contract: full palette on bare :root (dark-first, color-scheme: dark there), redefine tokens for light under @media (prefers-color-scheme: light) guarded by :root:not([data-theme="dark"]) and again under :root[data-theme="light"] (color-scheme: light). body background from a token. Every colored element uses tokens only.
+- Status colors: matched/approved = teal; agreed/highlighted = amber; needs_review/discrepancy = red. Always paired with an icon/underline style and a text label (never color alone).
+- Font: "Readex Pro" (Google Fonts, weights 300–700) for all UI; "Amiri" for tafsir/Quran text. Fallback stacks. No other fonts.
+- Background: a faint geometric Islamic star pattern made by YOU as an inline SVG data URI (8-point star lattice), white at ~5% opacity over the dark bands. Soft radial violet/teal glows in the hero.
+- Glass cards: --glass fill, 1px --glass-line border, 16px radius, subtle inner highlight; status accent as a 3px bar on the inline-start (right in RTL) edge.
+- Headline treatment: the app title in Readex Pro 700 with the brand gradient clipped to text (only the title, nowhere else).
+
+WOW + FUN, but purposeful (one orchestrated moment per tab, not scattered effects):
+- Hero: title "فهرس تفسير ابن كثير" + subtitle "نصّ ابن كثير كما هو — مقسّم، موسوم، ومطابَق للأصل" + three glowing stat pills (سلامة النص ١٠٠٪ · اتفاق مصدر الدليل ٩١٪ · فروق كشفتها المطابقة ١٤). Page must be complete at rest: no count-up from 0, no content hidden at opacity 0.
+- A pipeline diagram (inline SVG) of the 4 steps as nodes connected by a gradient line; hovering/focusing a node shows its one-line explanation. Label nodes: المصدر ← فصل الحواشي ← الوسم ← المطابقة والمراجعة.
+- Agreement mini-chart (inline SVG bars, drawn to scale, labels in tokens) for the 3 ayat: source-tag agreement and content-tag agreement.
+- Reconciliation tab: pressing "مقارنة بالنص الأصلي" plays a single scanning sweep (a teal light bar passing over both panes, ~700ms) and then the colors appear. With prefers-reduced-motion: no sweep, colors appear instantly.
+- "جولة سريعة" button in the hero: a 3-stop guided tour (non-blocking callout, next/back/close, Esc closes) that jumps to: (1) the «القرن/القرآن» difference in the index, (2) Ka'b al-Ahbar's report (disagreement → specialist), (3) the reconciliation screen with AK-007 selected. Build it in-page (no libraries).
+- Micro-interactions: card lift on hover (-3px), press scale .97, chip hover glow — all with --ease, all disabled under prefers-reduced-motion.
+
+PAGE CONTRACT (it will be published in a sandboxed artifact viewer):
+- First line <meta charset="utf-8">, then <title>تفسير ابن كثير — فهرس ومطابقة</title>, then <link> to Google Fonts, then <style>. NO <!DOCTYPE>, <html>, <head>, <body> tags, and no "<head" substring anywhere (do not use <header>). dir="rtl" lang="ar" on the outer wrapper.
+- Only external resource: fonts.googleapis.com stylesheet. No CDNs, no external images.
+- No alert/confirm/prompt, no <a download>, no window.print. localStorage only inside try/catch.
+- Hash navigation: only bare tokens (#fahras, #mutabaqa, #tajruba).
+- Responsive: perfect at 380px (16px side gutter, panes stack, tab bar scrolls horizontally inside itself, no page-level horizontal scroll); comfortable at 1280px (max content width ~1200px; reconciliation panes side by side).
+- Tabular numerals for numbers; Eastern Arabic digits in UI text as already used. Visible focus rings (teal). Contrast AA in both themes.
+- Keep size reasonable (< 800 KB; reconcile data alone is ~470 KB — trim unused fields such as per-word tables if they are not needed by the page).
+
+GATES (run, paste output):
+  python src/build_index.py ; python src/build_reconcile.py ; python src/build_app.py
+  check: web/app.html exists; starts with <meta charset="utf-8">; contains no <html/<head/<body/<!DOCTYPE; only fonts.googleapis.com external URLs; both inlined JSON blocks parse; no status "approved" in data; html size.
+
+REPORT: files created/changed, size, and a short list of design decisions. Do not commit.

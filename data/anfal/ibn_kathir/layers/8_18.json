@@ -1,0 +1,72 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_18.txt",
+  "ayah": "8:18",
+  "surah": 8,
+  "ayah_number": 18,
+  "source_char_length": 311,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 251,
+      "kind": "author"
+    },
+    {
+      "start": 251,
+      "end": 257,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 257,
+      "end": 284,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 284,
+      "end": 285,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 285,
+      "end": 311,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 277,
+    "layout": 0,
+    "apparatus": 34
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 2,
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 7,
+    "footnote": 27
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[تبار ¬في الأصل صحفت إلى: \"سال\".¥]": 1
+    }
+  }
+}

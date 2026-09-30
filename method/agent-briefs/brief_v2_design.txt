@@ -1,0 +1,29 @@
+ROLE: Senior AI research architect + usul al-tafsir methodology consultant. READ-ONLY design task. Do not create, edit or delete files. Deliver your design in your final message.
+
+First read, in this order: method/agent-briefs/brief_v2_context.txt, method/taxonomy.md, README.md, and skim data/spans_pilot/2_255.json and data/tags/*/2_255.json to see real spans and tags.
+
+Design the methodology-indexing system for the HACKATHON first, with a short ROADMAP section. Answer these, concretely and with examples from Tafsir Ibn Kathir:
+
+1. OPERATIONAL DEFINITIONS (the most important part). For each category — Qur'an-by-Qur'an, Sunnah, Sahabah, Tabi'in, language/gharib (incl. poetry as shahid), qira'at, sabab al-nuzul, maghazi/sirah, isra'iliyyat, ra'y/ijtihad — give: (a) inclusion rule, (b) exclusion rule / common false positive, (c) the TEXTUAL MARKERS code can detect in Ibn Kathir's prose (e.g. «كما قال تعالى» + {...} [سورة: n]; «رواه البخاري», «قال رسول الله ﷺ», «حدثنا»; «قال ابن عباس» + Companion name list; «قال الشاعر», «وأنشد», «والعرب تقول»; «كعب الأحبار», «وهب بن منبه», «من أخبار بني إسرائيل»), (d) what the model must judge beyond the marker (FUNCTION: explanatory authority vs illustration vs mere quotation vs thematic parallel).
+
+2. EVIDENCE MODEL. Four certainty levels — explicit / strongly inferred / weakly inferred / insufficient (refuse). For each: precise criteria combining (i) deterministic marker hits, (ii) model judgment with cited evidence span IDs, (iii) editor-footnote evidence (hadith grading etc.), (iv) author's own verdict in text. How is a confidence number computed (not model self-reported only)?
+
+3. ESCALATION POLICY. Exact rules for when a case goes to the human specialist, and how auto-accepted cases are still audited (random sampling rate). How per-category precision measured from audits lets a customer (e.g. a tafsir center) set per-category auto-accept thresholds.
+
+4. UNIT OF ANALYSIS. Span vs sentence vs "interpretive claim". Recommend one for the hackathon given that spans are cut by code and models return span IDs. Multi-label: primary method, secondary methods, and how one passage with several interpretive moves is represented.
+
+5. PIPELINE for the 3-day build, step by step, marking which steps are code (zero tokens) vs model. One model or several? Justify scientifically (not voting for show): e.g. extractor/classifier/verifier roles or independent annotators; say which you recommend under a small budget.
+
+6. OUTPUT RECORD (JSON schema) per classification: verse, source, passage span IDs, method (primary/secondary), certainty level, evidence span IDs, marker hits, referenced verse/hadith/athar/person, editor-footnote evidence, model rationale (short), alternatives, confidence, review status, reviewer decision.
+
+7. UI for judges: tafsir page + methodology panel with color highlighting; what clicking a highlight shows ("why this label?"); how the specialist confirms/corrects in the same view. Keep it buildable in a static HTML app.
+
+8. EVALUATION for the pilot: separate classification correctness from evidence correctness; the minimal gold set a specialist can label in ~2 hours; metrics to report honestly.
+
+9. ERROR TAXONOMY: top 10 error types specific to Ibn Kathir (e.g. verse quoted inside a hadith, Companion as isnad narrator only, quotation vs endorsement, sabab vs historical context).
+
+10. PILOT SCOPE: recommend what to index for the demo (we already have Ayat al-Kursi; the team is considering Surat al-Anfal and short surahs). Pick for feasibility + demo value.
+
+ROADMAP (short): gold standard growth, fine-tuning/distillation after thousands of verified examples, multiple tafsirs.
+
+Be concrete, prefer tables. Arabic for definitions and UI text, English allowed for technical parts. Max 1500 words. No generic advice.

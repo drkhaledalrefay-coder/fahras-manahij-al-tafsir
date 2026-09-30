@@ -1,0 +1,1802 @@
+{
+  "window_id": "2_255",
+  "ayah": "2:255",
+  "annotator": "mimo",
+  "source_file": "data/raw/tafsircenter/al_tabari/2_255.txt",
+  "source_sha256": "2562fce7247b332fa147c362401cd926daa53ef107969408a3dc150a791744c6",
+  "window_start": 5,
+  "window_end": 6351,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s007",
+        "s008",
+        "s009",
+        "s010",
+        "s011"
+      ],
+      "start": 205,
+      "end": 582,
+      "text": "وأما تأويلُ قولِه: {لَا إِلَهَ إِلَّا هُوَ}. فإن معناه النَّهيُ عن أن يُعبدَ شيءٌ غيرُ اللهِ الحيِّ القَيُّومِ، الذي صفَتُه ما وصَف به نفسَه تعالى ذكرُه في هذه الآيةِ، يقولُ: اللهُ الذي له عبادةُ الخلقِ، الحيُّ القيومُ، لا إلهَ سواه، لا معبودَ سواه. يعني: فلا تعبُدوا شيئًا سوى  الحيِّ القيُّومِ الذي لا تأخُذُه سِنةٌ ولا نومٌ، والذي صفتُه ما وصَف في هذه الآيةِ.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s008",
+        "s010"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "شرحٌ لتأويلِ العبارةِ بمعناها الناهي عن عبادةِ غيرِ الله، بعلامةِ معناه، من كلامِ المؤلفِ نفسِه.",
+      "marker_hits": [
+        {
+          "span_id": "s008",
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 254,
+          "end": 259
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 483,
+          "end": 498,
+          "text": "¬في م: \"سواه\".¥",
+          "attached_span_id": "s010",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s012",
+        "s013",
+        "s014",
+        "s015",
+        "s016"
+      ],
+      "start": 586,
+      "end": 932,
+      "text": "وهذه الآيةُ إبانةٌ من اللهِ جلّ ثناؤه للمؤمنين به وبرسولِه، عما جاءتْ به  المختلِفين  البيناتُ من بعدِ الرسلِ التي  أخبَرَنا تعالى ذكرُه أنه فضَّل بعضَهم على بعضٍ. واختلَفوا فيه، فاقتتلُوا فيه كفرًا به من بعضٍ، وإيمانًا به من بعضٍ، فالحمدُ للهِ الذي هدانا للتصديقِ به، ووفَّقَنا للإقرارِ به.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "weak",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s012",
+        "s016"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استنتاجُ المؤلفِ في فائدةِ الآيةِ وبيانِها للمؤمنين، دونِ نقلِ قولٍ مسنندٍ ولا ترجيحٍ صريح.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 659,
+          "end": 680,
+          "text": "¬بعده في م: \"أقوال\".¥",
+          "attached_span_id": "s012",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 692,
+          "end": 710,
+          "text": "¬بعده في م: \"في\".¥",
+          "attached_span_id": "s013",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 740,
+          "end": 756,
+          "text": "¬في م: \"الذين\".¥",
+          "attached_span_id": "s014",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_ray_unmeasured"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 0,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s017",
+        "s018",
+        "s019",
+        "s020",
+        "s021"
+      ],
+      "start": 936,
+      "end": 1235,
+      "text": "وأما قولُه: {الْحَيُّ}. فإنه يَعنِي: الذي له الحياةُ الدائمةُ، والبقاءُ الذي لا أوّلَ له بحَدٍّ ، ولا آخرَ له بأمدٍ ، إذ كلُّ ما سواه فإنه وإنْ كان حيًّا فلِحياتِه أَوَّلٌ محدودٌ، وآخرٌ مَمْدودٌ ، يَنْقَطِعُ بانقطاعِ أمدِها، وينقَضِى بانقضاءِ غايتِها.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s017",
+        "s018"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "بيانُ معنى لفظِ الحيِّ بالحياةِ الدائمةِ والبقاءِ، بعلامةِ يَعنِي، من تأويلِ المؤلفِ لا من نقل.",
+      "marker_hits": [
+        {
+          "span_id": "s017",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 948,
+          "end": 958
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 1032,
+          "end": 1046,
+          "text": "¬في م: \"يحد\".¥",
+          "attached_span_id": "s018",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 1066,
+          "end": 1081,
+          "text": "¬في م: \"يؤمد\".¥",
+          "attached_span_id": "s019",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 1160,
+          "end": 1179,
+          "text": "¬في م، س: \"مأمود\".¥",
+          "attached_span_id": "s020",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s024",
+        "s025"
+      ],
+      "start": 1304,
+      "end": 1413,
+      "text": "حُدِّثْتُ عن عمارِ بن الحسنِ، قال: ثنا ابن أبي جعفرٍ، عن أبيه، عن الرَّبيعِ قولَه: {الْحَيُّ}: حيٌّ لا يموتُ ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s025"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الربيع"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قولٌ تابعيٌّ في تأويلِ لفظِ الحيِّ بإسنادِه المتصل، والمتنُ والسندُ في موضعٍ واحد.",
+      "marker_hits": [
+        {
+          "span_id": "s025",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1358,
+          "end": 1401
+        },
+        {
+          "span_id": "s025",
+          "family": "TABIIN",
+          "marker": "الربيع",
+          "start": 1370,
+          "end": 1378,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s025",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1387,
+          "end": 1397
+        },
+        {
+          "span_id": "s024",
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "start": 1326,
+          "end": 1331,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 1413,
+          "end": 1482,
+          "text": "¬أخرجه ابن أبي حاتم في تفسيره 2/ 486 (2571) من طريق ابن أبي جعفر به.¥",
+          "attached_span_id": "s025",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s027",
+        "s028"
+      ],
+      "start": 1487,
+      "end": 1572,
+      "text": "حدَّثني المثنَّى، قال: ثنا إسحاقُ، قال: ثنا ابن أبي جعفرٍ، عن أبيه، عن الربيعِ مثلَه.",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s027",
+        "s028"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الربيع"
+        ]
+      },
+      "alternatives": [
+        "M_TABIIN"
+      ],
+      "rationale_ar": "سندٌ ثانٍ لقولٍ سابقٍ بمثلِه من غيرِ متنٍ جديد؛ وظيفةُ عزوٍ واتصالٍ لا شرح.",
+      "marker_hits": [
+        {
+          "span_id": "s028",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1546,
+          "end": 1572
+        },
+        {
+          "span_id": "s028",
+          "family": "TABIIN",
+          "marker": "الربيع",
+          "start": 1558,
+          "end": 1564,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s029",
+        "s030",
+        "s031",
+        "s032",
+        "s033"
+      ],
+      "start": 1576,
+      "end": 1872,
+      "text": "وقد اختلَف أهلُ البحثِ في تأويلِ ذلك؛ فقال بعضُهم: إنما سمَّى اللهُ جل وعزّ نفسه حيًّا؛ لصَرْفِه الأمورَ مَصارفَها، وتقديرِه الأشياءَ مقاديرَها، فهو حيٌّ بالتدبيرِ لا بحياةٍ.وقال آخرون: بل هو حيٌّ بحياةٍ هي له صفةٌ.وقال آخرون: بل ذلك اسمٌ من الأسماءِ تَسَمَّى به، فقُلْناه تسليمًا لأمرِه.",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "insufficient",
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s029",
+        "s030",
+        "s032",
+        "s033"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY",
+        "M_TABIIN"
+      ],
+      "rationale_ar": "أقوالٌ لجماعةٍ مبهمةٍ متعارضةٍ في التأويلِ بلا ترجيحٍ من المؤلف، فامتناعٌ عن التصنيف.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s034"
+      ],
+      "start": 1876,
+      "end": 2098,
+      "text": "وأما قولُه: {الْقَيُّومُ}. فإنه الفَيْعُولُ من القيامِ، وأصلُه القيْوُومُ، سبَق عينَ الفعلِ - وهي واوٌ - ياءٌ ساكنةٌ، فانْدَغَمتا فصارتا ياءً مشددةً، وكذلك تفعلُ العربُ في كلِّ واوٍ كانت للفعلِ عينًا سبَقَتْها ياءٌ ساكنةٌ.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s034"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "تحليلٌ صرفيٌّ لفظِ القيومِ: مشتقُّه وواوِه المدغَمة، بقاعدةٍ عربيّةٍ عامةٍ من كلامِ المؤلف.",
+      "marker_hits": [
+        {
+          "span_id": "s034",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1888,
+          "end": 1901
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s035",
+        "s036",
+        "s037",
+        "s038",
+        "s039",
+        "s040",
+        "s041"
+      ],
+      "start": 2102,
+      "end": 2410,
+      "text": "ومعنى قولِه: {الْقَيُّومُ}: القائمُ برزْقِ ما خلَق وحِفْظِه، كما قال أُميّةُ :لم تُخْلَقِ السماءُ والنُّجومُ ... والشمسُ مَنْها قَمَرٌ يَعومُ قَدَّرَهُ المُهَيْمِنُ القَيُّومُ ... والحشرُ  والجَنَّةُ والجحيمُإلا لأمرٍ شأنُه عظيمُ",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR",
+        "C_SHIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s035"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "أمية"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "بيانُ معنى القيومِ قائمًا على رزقِ الخلقِ وحفظِهم، مع استشهادٍ بشعرِ أميةٍ شاهدًا.",
+      "marker_hits": [
+        {
+          "span_id": "s035",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2115,
+          "end": 2128
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 2179,
+          "end": 2197,
+          "text": "¬ديوانه ص 24، 25.¥",
+          "attached_span_id": "s035",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 2266,
+          "end": 2294,
+          "text": "¬في م، س، والديوان: \"يقوم\".¥",
+          "attached_span_id": "s038",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 2344,
+          "end": 2365,
+          "text": "¬في الديوان: \"الحش\".¥",
+          "attached_span_id": "s039",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m09",
+      "span_ids": [
+        "s045",
+        "s046",
+        "s047"
+      ],
+      "start": 2485,
+      "end": 2631,
+      "text": "حدَّثني محمدُ بنُ عمرٍو، قال: ثنا أبو عاصمٍ، قال: ثنا عيسى، عن ابن أبي نَجيحٍ، عن مجاهدٍ في قولِ اللهِ: {الْقَيُّومُ}. قال: القائمُ على كلِّ شيءٍ ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s046",
+        "s047"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "مجاهد"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقلُ تأويلِ مجاهدٍ للقيومِ بإسنادٍ متصلٍ، والمتنُ التفسيريُّ مباينٌ للاسناد.",
+      "marker_hits": [
+        {
+          "span_id": "s046",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 2545,
+          "end": 2588
+        },
+        {
+          "span_id": "s046",
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "start": 2567,
+          "end": 2572,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s047",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2589,
+          "end": 2602
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 2631,
+          "end": 2849,
+          "text": "¬تفسير مجاهد ص 248، ومن طريقه ابن أبي حاتم في تفسيره 2/ 486 (2573)، والبيهقي في الأسماء والصفات (76)، وأخرجه أبو الشيخ في العظمة (96) من طريق ابن أبي نجيح به. وعزاه السيوطي في الدر المنثور 12/ 327 إلى آدم بن أبي إياس.¥",
+          "attached_span_id": "s047",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_M_TABIIN_name_only_in_isnad",
+        "rule_M_TABIIN_missing_marker"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 0,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m10",
+      "span_ids": [
+        "s049",
+        "s050",
+        "s051"
+      ],
+      "start": 2854,
+      "end": 3040,
+      "text": "حدَّثني المثنَّى، قال: ثنا إسحاقُ، قال: حدثنا ابن أبي جعفرٍ، عن أبيه، عن الربيعِ: {الْقَيُّومُ}: قَيِّمٌ على  كلِّ شيءٍ، يَكْلَؤُه ويَرْزُقُه ويَحْفَظُه ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s050",
+        "s051"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الربيع"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقلُ قولِ الربيعِ في معنى القيومِ قيمًا على شيءٍ حافظًا له، بإسنادِ المؤلفِ إليه.",
+      "marker_hits": [
+        {
+          "span_id": "s050",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 2894,
+          "end": 2899
+        },
+        {
+          "span_id": "s050",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 2915,
+          "end": 2962
+        },
+        {
+          "span_id": "s050",
+          "family": "TABIIN",
+          "marker": "الربيع",
+          "start": 2927,
+          "end": 2933,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s050",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2936,
+          "end": 2949
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 2963,
+          "end": 2996,
+          "text": "¬سقط من: ص، م، ت 1، ت 2، ت 3، س.¥",
+          "attached_span_id": "s050",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3040,
+          "end": 3109,
+          "text": "¬أخرجه ابن أبي حاتم في تفسيره 2/ 486 (2072) من طريق ابن أبي جعفر به.¥",
+          "attached_span_id": "s051",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m11",
+      "span_ids": [
+        "s053",
+        "s054",
+        "s055"
+      ],
+      "start": 3114,
+      "end": 3218,
+      "text": "حدثني موسى بنُ هارونَ، قال: ثنا عمرُو بنُ حمادٍ، قال: ثنا أسباطُ، عن السديِّ: {الْقَيُّومُ}: هو القائمُ ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s055"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "السدي"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قولُ السديِّ في معنى القيومِ بإسنادٍ ومتنٍ في موضعٍ واحد، والنسبةُ صريحةٌ بلا بديل.",
+      "marker_hits": [
+        {
+          "span_id": "s055",
+          "family": "TABIIN",
+          "marker": "السدي",
+          "start": 3183,
+          "end": 3188,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s055",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 3192,
+          "end": 3205
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3218,
+          "end": 3346,
+          "text": "¬أخرجه البيهقي في الأسماء والصفات (757) من طريق عمرو بن حماد به بإسناد السديِّ المعروف مرفوعا إلى النبي - صلى الله عليه وسلم -.¥",
+          "attached_span_id": "s055",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m12",
+      "span_ids": [
+        "s057",
+        "s058",
+        "s059"
+      ],
+      "start": 3351,
+      "end": 3480,
+      "text": "حدَّثني المثنَّى، قال: ثنا إسحاقُ، قال: ثنا أبو زُهَيرٍ، عن جُويبرٍ، عن الضَّحَّاكِ: {الْحَيُّ الْقَيُّومُ} قال: القائمُ الدائمُ ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s058",
+        "s059"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الضحاك"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "تأويلُ الضحاكِ للحيِّ القيومِ بالإسناد إليه، والمتنُ يلي السندَ مباشرة.",
+      "marker_hits": [
+        {
+          "span_id": "s058",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 3408,
+          "end": 3435
+        },
+        {
+          "span_id": "s058",
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "start": 3423,
+          "end": 3433,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s059",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 3436,
+          "end": 3458
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3480,
+          "end": 3519,
+          "text": "¬ذكره أبو حيان في البحر المحيط 2/ 277.¥",
+          "attached_span_id": "s059",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m13",
+      "span_ids": [
+        "s064",
+        "s065"
+      ],
+      "start": 3605,
+      "end": 3716,
+      "text": "يعني بقولِه جلّ ثناؤُه: {لَا تَأْخُذُهُ سِنَةٌ}: لا يَأْخُذُه نُعاسٌ فيَنْعَسَ، ولا نَوْمٌ فيَسْتَثْقِلَ نومًا.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s064",
+        "s065"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "شرحُ المؤلفِ نفسِه لمعنيَي السينةِ والنومِ معنًى، بلا إسنادٍ ولا شاهد.",
+      "marker_hits": [
+        {
+          "span_id": "s064",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 3629,
+          "end": 3652
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m14",
+      "span_ids": [
+        "s066",
+        "s067",
+        "s068",
+        "s069",
+        "s070"
+      ],
+      "start": 3720,
+      "end": 4015,
+      "text": "والوَسَنُ خُثورةُ النومِ ، ومنه قولُ عديِّ بن الرِّقاعِ :وشنانُ أقْصَدَهُ النُّعاسُ فَرنَّقَتْ  ... في عَيْنِه سِنَةٌ وليس بنائمِ",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR",
+        "C_SHIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s066",
+        "s067",
+        "s069",
+        "s070"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عدي بن الرقاعة"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "شرحُ لفظِ الوَسَنِ بخلطةِ النومِ في العينِ، مدعَّمًا بشاهدٍ شعريٍّ لعديٍّ بن الرقاعة.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3745,
+          "end": 3801,
+          "text": "¬الخثورة: نقيض الرقة. اللسان (خ ث ر) والمراد ثقل النوم.¥",
+          "attached_span_id": "s066",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3832,
+          "end": 3894,
+          "text": "¬البيت في مجاز القرآن 1/ 78، والأغاني 9/ 311، والكامل 1/ 148.¥",
+          "attached_span_id": "s067",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 3937,
+          "end": 3981,
+          "text": "¬رنَّق النومُ عينه: خالطها. اللسان (ر ن ق).¥",
+          "attached_span_id": "s069",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_editor_only_evidence"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m15",
+      "span_ids": [
+        "s071",
+        "s072",
+        "s073",
+        "s074",
+        "s075",
+        "s076",
+        "s077",
+        "s078",
+        "s079",
+        "s080"
+      ],
+      "start": 4019,
+      "end": 4605,
+      "text": "ومن الدليلِ على ما قلْنا، من أنها خُثورةُ النومِ في عينِ الإنسانِ، قولُ الأَعْشَى ميمونِ بن قَيْسٍ :تُعاطِى الضَّجِيعَ إذا اسْتامَها  ... بُعَيْدَ   الوَسَنْ :باكَرَتْها الأغْرابُ  في سِنَةِ النَّوْ ... مِ فتَجْرِى خِلالَ شَوْكِ السَّيَالِ ",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR",
+        "C_SHIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s071",
+        "s073",
+        "s079",
+        "s080"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الأعشى ميمون بن قيس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "شاهدٌ شعريٌّ للأعشى يُستدلُّ به على معنى الوسنِ والسِّنَةِ في العينِ.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4118,
+          "end": 4132,
+          "text": "¬ديوانه ص 17.¥",
+          "attached_span_id": "s071",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4170,
+          "end": 4267,
+          "text": "¬في ص، م، ت 1، ت 2، ت 3، س: \"أقبلت\". وفي حاشية الأصل: \"ويروى: إذا أقبلت بعيد الرقاد وقبل الوسن\".¥",
+          "attached_span_id": "s073",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4300,
+          "end": 4343,
+          "text": "¬في ص، م، ت 1، ت 2، ت 3، س: \"النعاس وقبل\".¥",
+          "attached_span_id": "s075",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4372,
+          "end": 4456,
+          "text": "¬في ص: \"وقول الآخر\"، وفي م، س: \"وقال آخر\". والبيت للأعشى أيضًا وهو في ديوانه ص (5).¥",
+          "attached_span_id": "s077",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4482,
+          "end": 4545,
+          "text": "¬الأغراب: واحده غرب - بسكون الراء - وهو القدح. اللسان (غ ر ب).¥",
+          "attached_span_id": "s079",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 4605,
+          "end": 4688,
+          "text": "¬السيال: شجر سبط الأغصان عليه شوك أبيض، أصوله أمثال ثنايا العذارى. اللسان (س ى ل).¥",
+          "attached_span_id": "s080",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_editor_only_evidence"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m16",
+      "span_ids": [
+        "s081",
+        "s082"
+      ],
+      "start": 4692,
+      "end": 4826,
+      "text": "يعني عندَ هُبوبِها من النومِ ووَسَنُ النومِ في عينِها، يقالُ منه: وَسِن فلانٌ فهو يَوْسَنُ وَسَنًا وسِنةً، وهو وَسْنانُ، إذا كان كذلك.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s081",
+        "s082"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيانُ صيغةِ اشتقاقِ الفعلِ الوسنِ واستعمالِه العربيِّ بقاعدةٍ لغويةٍ واضحة.",
+      "marker_hits": [
+        {
+          "span_id": "s081",
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 4747,
+          "end": 4751
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m17",
+      "span_ids": [
+        "s085",
+        "s086",
+        "s087",
+        "s088"
+      ],
+      "start": 4896,
+      "end": 5095,
+      "text": "حدَّثني المثنى، قال: ثنا عبدُ اللهِ بنُ صالحٍ، قال: ثني معاويةُ بنُ صالحٍ، عن عليّ بن أبي طلحةَ، عن ابن عباسٍ قولَه: {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ}. قال: السَّنَةُ النُّعاسُ، والنومُ هو النومُ ",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s086",
+        "s088"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقلُ قولِ ابنِ عباسٍ في معنيَي السينةِ والنومِ بإسنادِ المؤلفِ إليه.",
+      "marker_hits": [
+        {
+          "span_id": "s086",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 4971,
+          "end": 5012
+        },
+        {
+          "span_id": "s086",
+          "family": "TABIIN",
+          "marker": "علي بن أبي طلحة",
+          "start": 4974,
+          "end": 4990,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s086",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 4996,
+          "end": 5004,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 5095,
+          "end": 5293,
+          "text": "¬أخرجه ابن أبي حاتم في تفسيره 2/ 487، 488 (2576، 2581)، والبيهقي في الأسماء والصفات (77)، من طريق عبد الله بن صالح به، وعزاه السيوطي في الدر المنثور 1/ 327 إلى آدم بن أبي إياس وأبى الشيخ في العظمة.¥",
+          "attached_span_id": "s088",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_M_SAHABA_name_only_in_isnad",
+        "rule_M_SAHABA_missing_marker"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 0,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m18",
+      "span_ids": [
+        "s090",
+        "s091",
+        "s092",
+        "s093"
+      ],
+      "start": 5298,
+      "end": 5432,
+      "text": "حدَّثني محمدُ بنُ سعدٍ، قال: ثنى أبي، قال: ثنى عمي، قال: ثنى أبي، عن أبيه، عن ابن عباسٍ: {لَا تَأْخُذُهُ سِنَةٌ}: السِّنَةُ النُّعاسُ ",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s092",
+        "s093"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "طريقٌ ثانٍ لقولِ ابنِ عباسٍ في معنى السينةِ، والمتنُ يبيّنُ المعنى بعدَ الإسناد.",
+      "marker_hits": [
+        {
+          "span_id": "s092",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 5364,
+          "end": 5386
+        },
+        {
+          "span_id": "s092",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 5376,
+          "end": 5384,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s093",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5387,
+          "end": 5410
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 5432,
+          "end": 5458,
+          "text": "¬تفسير عبد الرزاق 1/ 102.¥",
+          "attached_span_id": "s093",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m19",
+      "span_ids": [
+        "s095",
+        "s096",
+        "s097"
+      ],
+      "start": 5463,
+      "end": 5607,
+      "text": "حدثنا الحسنُ بنُ يحيى، قال: أخبَرَنا عبدُ الرزّاقِ، قال: أَخبَرَنَا مَعْمَرٌ، عن قتادةَ والحسن في قولِه: {لَا تَأْخُذُهُ سِنَةٌ}: قالا: نَعْسةٌ.",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s096",
+        "s097"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "قتادة",
+          "الحسن"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقلُ قولِ قتادةِ والحسنِ معًا في معنى السينةِ نعسةً، بإسنادٍ متصلٍ ومتنٍ يليه.",
+      "marker_hits": [
+        {
+          "span_id": "s096",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 5491,
+          "end": 5499
+        },
+        {
+          "span_id": "s096",
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 5491,
+          "end": 5549
+        },
+        {
+          "span_id": "s096",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 5520,
+          "end": 5530
+        },
+        {
+          "span_id": "s096",
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "start": 5544,
+          "end": 5549,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s097",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5568,
+          "end": 5591
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [
+        "rule_M_TABIIN_name_only_in_isnad",
+        "rule_M_TABIIN_missing_marker"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m20",
+      "span_ids": [
+        "s098",
+        "s099",
+        "s100",
+        "s101"
+      ],
+      "start": 5611,
+      "end": 5811,
+      "text": "حدَّثني المثنّى، قال: ثنا عمرُو بنُ عونٍ، قال: حدثنا هُشيمٌ، عن جُويبرٍ، عن الضَّحَّاكِ في قولِه: {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ}. قال: السِّنَةُ الوَسْنةُ، وهو دونَ النومِ، والنومُ الاستِثْقالُ ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s099",
+        "s101"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الضحاك"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقلُ تفصيلِ الضحاكِ لمعنيي السينةِ والنومِ بإسنادِ المؤلفِ إليه، والمتنُ بعدَ الآية.",
+      "marker_hits": [
+        {
+          "span_id": "s099",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 5658,
+          "end": 5663
+        },
+        {
+          "span_id": "s099",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 5672,
+          "end": 5708
+        },
+        {
+          "span_id": "s099",
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "start": 5687,
+          "end": 5697,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 5811,
+          "end": 5916,
+          "text": "¬أخرج ابن أبي حاتم شطره الثاني 2/ 488 (2582) من طريق جويبر به، وعلق شطره الأولى 2/ 487 عقب الأثر (2577).¥",
+          "attached_span_id": "s101",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m21",
+      "span_ids": [
+        "s103",
+        "s104",
+        "s105"
+      ],
+      "start": 5921,
+      "end": 6084,
+      "text": "حدَّثني المثنَّى، قال: ثنا إسحاقُ، قال: ثنا أبو زُهَيرٍ، عن جُويبرٍ، عن الضّحّاكِ: {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ}: السِّنَةُ النُّعاسُ، والنومُ الاستِثْقالُ ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s104",
+        "s105"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الضحاك"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "طريقٌ ثالثٌ لقولِ الضحاكِ في معنيَي السينةِ والنومِ بمتنٍ مستقلٍ بعدَ السند.",
+      "marker_hits": [
+        {
+          "span_id": "s104",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 5978,
+          "end": 6003
+        },
+        {
+          "span_id": "s104",
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "start": 5993,
+          "end": 6001,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s105",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 6004,
+          "end": 6040
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 6084,
+          "end": 6190,
+          "text": "¬أخرجه أبو الشيخ في العظمة (123)، من طريق جويبر به، وعزاه السيوطي في الدر المنثور 1/ 327 إلى عبد بن حميد.¥",
+          "attached_span_id": "s105",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m22",
+      "span_ids": [
+        "s107",
+        "s108"
+      ],
+      "start": 6195,
+      "end": 6292,
+      "text": "حدَّثني يحيى بنُ أبى طالبٍ، قال: أخبَرَنا يزيدُ، قال: أخبَرَنا جُويبرٌ، عن الضَّحاكِ مثلَه سواءً.",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s108"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الضحاك"
+        ]
+      },
+      "alternatives": [
+        "M_TABIIN"
+      ],
+      "rationale_ar": "سندٌ إضافيٌّ بمثلِ المتنِ السابق من غيرِ زيادةٍ تفسيرية؛ وظيفةُ عزوٍ واتصالٍ.",
+      "marker_hits": [
+        {
+          "span_id": "s108",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 6228,
+          "end": 6236
+        },
+        {
+          "span_id": "s108",
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 6228,
+          "end": 6278
+        },
+        {
+          "span_id": "s108",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 6249,
+          "end": 6257
+        },
+        {
+          "span_id": "s108",
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "start": 6270,
+          "end": 6278,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m23",
+      "span_ids": [
+        "s109",
+        "s110"
+      ],
+      "start": 6296,
+      "end": 6351,
+      "text": "حدَّثنا موسى بنُ هارونَ، قال: ثنا عمرُو بنُ حمادٍ، قال:",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "insufficient",
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s109",
+        "s110"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "إسنادٌ منقطعٌ عند نهايةِ النافذةِ قبلَ أيِّ متنٍ تفسيريٍّ، فامتناعٌ عن التصنيف.",
+      "marker_hits": [
+        {
+          "span_id": "s109",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 6296,
+          "end": 6303
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_255",
+    "annotator": "mimo",
+    "move_count": 23,
+    "auto_candidate": 15,
+    "specialist": 8,
+    "by_primary": {
+      "M_LUGHA": 8,
+      "M_RAY": 1,
+      "M_TABIIN": 8,
+      "None": 4,
+      "M_SAHABA": 2
+    },
+    "by_certainty": {
+      "strong": 14,
+      "weak": 6,
+      "insufficient": 2,
+      "explicit": 1
+    },
+    "flag_count": 9
+  }
+}

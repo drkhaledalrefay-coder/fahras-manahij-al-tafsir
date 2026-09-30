@@ -1,0 +1,196 @@
+{
+  "window_id": "8_47",
+  "ayah": "8:47",
+  "span_count": 13,
+  "family_counts": {
+    "QURAN": 6,
+    "LUGHA": 1,
+    "SAHABA": 1,
+    "HADITH": 1,
+    "SIRA": 1,
+    "NUZUL": 2,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 157,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 303,
+          "end": 323,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 733,
+          "end": 770,
+          "span_id": "s007"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 771,
+          "end": 774,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 839,
+          "end": 847,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 880,
+          "end": 890,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 892,
+          "end": 974,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1019,
+          "end": 1037,
+          "span_id": "s011"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 1040,
+          "end": 1047,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 1269,
+          "end": 1274,
+          "span_id": "s013"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 1269,
+          "end": 1279,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1280,
+          "end": 1437,
+          "span_id": "s013"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 493,
+      "end": 506,
+      "text": "¬أي الجواري.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 546,
+      "end": 588,
+      "text": "¬تقدم تخريجه من السيرة النبوية لابن هشام.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1048,
+      "end": 1195,
+      "text": "¬قول ابن عباس أخرجه الطبري وابن أبي حاتم بسند ضعيف من طريق العوفي عن ابن عباس، ويتقوى بقول مجاهد وقتادة والسدي إذ أخرجه الطبري عنهم بأسانيد ثابتة.¥",
+      "attached_span_id": "s011",
+      "grading": [
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

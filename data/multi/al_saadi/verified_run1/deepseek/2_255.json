@@ -1,0 +1,562 @@
+{
+  "window_id": "2_255",
+  "ayah": "2:255",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/al_saadi/2_255.txt",
+  "source_sha256": "cc0941c3aec1711a8d7e0b28cbc19fbc1eb2487b9d23ab1e9dd154e7d33e4add",
+  "window_start": 0,
+  "window_end": 2859,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s001",
+        "s002"
+      ],
+      "start": 0,
+      "end": 469,
+      "text": "{اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ (255)}\n{255} أخبر - صلى الله عليه وسلم - أن هذه الآية أعظم آيات القرآن ",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [
+        "C_FADAIL"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s002"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "صحيح مسلم"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "خبر نبوي في فضل الآية؛ وحاشية المحقق عيّنت مصدره ودرجته دون أن تنشئ منهجاً.",
+      "marker_hits": [
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 405,
+          "end": 410
+        },
+        {
+          "span_id": "s002",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 418,
+          "end": 436
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 469,
+          "end": 520,
+          "text": "¬أخرجه مسلم (810) من حديث أبي بن كعب رضي الله عنه.¥",
+          "attached_span_id": "s002",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام السعدي"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s003",
+        "s004",
+        "s005"
+      ],
+      "start": 520,
+      "end": 990,
+      "text": " لما احتوت عليه من معاني التوحيد والعظمة وسعة الصفات للباري تعالى، فأخبر أنه {الله}؛ الذي له جميع معاني الألوهية، وأنه لا يستحق الألوهية والعبودية إلا هو، فألوهية غيره وعبادة غيره باطلة، وأنه {الحي} الذي له جميع معاني الحياة الكاملة من السمع والبصر والقدرة والإرادة وغيرها من الصفات الذاتية، كما أن {القيوم}؛ تدخل فيه جميع صفات الأفعال لأنه القيوم الذي قام بنفسه واستغنى عن جميع مخلوقاته وقام بجميع الموجودات فأوجدها وأبقاها وأمدها بجميع ما تحتاج إليه في وجودها وبقائها.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s004",
+        "s005"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح المؤلف معاني الألوهية والحياة والقيومية وما يتبعها من صفات الأفعال.",
+      "marker_hits": [
+        {
+          "span_id": "s004",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 712,
+          "end": 718
+        },
+        {
+          "span_id": "s004",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 819,
+          "end": 827
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s006",
+        "s007"
+      ],
+      "start": 990,
+      "end": 1314,
+      "text": " ومن كمال حياته وقيوميته أنه {لا تأخذه سنة}؛ أي: نعاس {ولا نوم}؛ لأن السنة والنوم إنما يعرضان للمخلوق الذي يعتريه الضعف والعجز والانحلال، ولا يعرضان لذي العظمة والكبرياء والجلال، وأخبر أنه مالك جميع ما في السماوات والأرض، فكلهم عبيد لله مماليك لا يخرج أحد منهم عن هذا الطور {إن كل من في السموات والأرض إلا آتي الرحمن عبداً}؛",
+      "primary": "M_QURAN",
+      "secondary": [
+        "M_LUGHA"
+      ],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s007"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "19:93"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح النعاس والنوم، واستدل بآية عموم العبودية على ملكه سبحانه.",
+      "marker_hits": [
+        {
+          "span_id": "s007",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1035,
+          "end": 1038
+        },
+        {
+          "span_id": "s007",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1044,
+          "end": 1053
+        },
+        {
+          "span_id": "s007",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1264,
+          "end": 1313
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s008",
+        "s009",
+        "s010"
+      ],
+      "start": 1314,
+      "end": 1679,
+      "text": " فهو المالك لجميع الممالك وهو الذي له صفات الملك والتصرف والسلطان والكبرياء، ومن تمام ملكه أنه لا {يشفع عنده}؛ أحد {إلا بإذنه}؛ فكل الوجهاء والشفعاء عبيد له مماليك لا يَقْدِمُون على شفاعة حتى يأذن لهم {قل لله الشفاعة جميعاً له ملك السموات والأرض}؛ والله لا يأذن لأحد أن يشفع إلا فيمن ارتضى ولا يرتضي إلا توحيده واتباع رسله، فمن لم يتصف بهذا فليس له في الشفاعة نصيب.",
+      "primary": "M_QURAN",
+      "secondary": [
+        "M_RAY"
+      ],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s009",
+        "s010"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "39:44"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيّن تفرد الملك بالشفاعة، وعزّزه بآية اختصاص الشفاعة له، واستنتج شرط التوحيد.",
+      "marker_hits": [
+        {
+          "span_id": "s009",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1429,
+          "end": 1440
+        },
+        {
+          "span_id": "s009",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1515,
+          "end": 1560
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s011",
+        "s012"
+      ],
+      "start": 1679,
+      "end": 1885,
+      "text": " ثم أخبر عن علمه الواسع المحيط وأنه يعلم ما بين أيدي الخلائق من الأمور المستقبلة التي لا نهاية لها {وما خلفهم}؛ من الأمور الماضية التي لا حد لها، وأنه لا تخفى عليه خافية {يعلم خائنة الأعين وما تخفي الصدور}؛",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s012"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "40:19"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "توسع في سعة العلم بالمستقبل والماضي، واستشهد بآية إحاطة العلم بالسرائر.",
+      "marker_hits": [
+        {
+          "span_id": "s012",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1849,
+          "end": 1884
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s013",
+        "s014"
+      ],
+      "start": 1885,
+      "end": 2128,
+      "text": " وأن الخلق لا يحيط أحد بشيء من علم الله ومعلوماته {إلا بما شاء} منها وهو ما أطلعهم عليه من الأمور الشرعية والقدرية، وهو جزء يسير جدًّا مضمحل في علوم الباري ومعلوماته كما قال أعلم الخلق به وهم الرسل والملائكة: {سبحانك لا علم لنا إلا ما علمتنا}؛",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s013",
+        "s014"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "2:32"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "أورد قول أعلام الخلق في قصور علمهم؛ فكان بياناً بآية أخرى.",
+      "marker_hits": [
+        {
+          "span_id": "s013",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1935,
+          "end": 1948
+        },
+        {
+          "span_id": "s014",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2094,
+          "end": 2127
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s015"
+      ],
+      "start": 2128,
+      "end": 2357,
+      "text": " ثم أخبر عن عظمته وجلاله وأن كرسيه وسع السماوات والأرض، وأنه قد حفظهما ومن فيهما من العوالم بالأسباب والنظامات التي جعلها الله في المخلوقات، ومع ذلك فلا يؤوده أي يثقله حفظهما لكمال عظمته واقتداره وسعة حكمته في أحكامه {وهو العلي}؛",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s015"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسّر الثقل بالمعنى اللغوي، وبيّن سعة الكرسي وحفظ العوالم بالأسباب.",
+      "marker_hits": [
+        {
+          "span_id": "s015",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2345,
+          "end": 2356
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s016",
+        "s017"
+      ],
+      "start": 2357,
+      "end": 2669,
+      "text": " بذاته على جميع مخلوقاته، وهو العلي بعظمة صفاته، وهو العلي الذي قهر المخلوقات، ودانت له الموجودات، وخضعت له الصعاب، وذلت له الرقاب {العظيم}؛ الجامع لجميع صفات العظمة والكبرياء والمجد والبهاء، الذي تحبه القلوب، وتعظمه الأرواح، ويعرف العارفون أن عظمة كل شيء وإن جلت عن الصفة فإنها مضمحلة في جانب عظمة العلي العظيم.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s016",
+        "s017"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "كشف المؤلف معاني العلو والعظمة وما يجمعه اسم العظيم من أوصاف الكمال.",
+      "marker_hits": [
+        {
+          "span_id": "s016",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2488,
+          "end": 2496
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m09",
+      "span_ids": [
+        "s018"
+      ],
+      "start": 2669,
+      "end": 2859,
+      "text": " فآية احتوت على هذه المعاني التي هي أجل المعاني يحق أن تكون أعظم آيات القرآن، ويحق لمن قرأها متدبراً متفهماً أن يمتلئ قلبه من اليقين والعرفان والإيمان، وأن يكون محفوظاً بذلك من شرور الشيطان.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_FADAIL"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s018"
+      ],
+      "author_verdict_span_ids": [
+        "s018"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SUNNAH"
+      ],
+      "rationale_ar": "ختَم بحكم بفضل الآية وحثّ المتدبر؛ ولا قراءة مختلفة في الموضع.",
+      "marker_hits": [
+        {
+          "span_id": "s018",
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 2756,
+          "end": 2759
+        },
+        {
+          "span_id": "s018",
+          "family": "QIRAAT",
+          "marker": "قرأه",
+          "start": 2756,
+          "end": 2760
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_255",
+    "annotator": "deepseek",
+    "move_count": 9,
+    "auto_candidate": 9,
+    "specialist": 0,
+    "by_primary": {
+      "M_SUNNAH": 1,
+      "M_RAY": 3,
+      "M_QURAN": 4,
+      "M_LUGHA": 1
+    },
+    "by_certainty": {
+      "strong": 8,
+      "explicit": 1
+    },
+    "flag_count": 0
+  }
+}

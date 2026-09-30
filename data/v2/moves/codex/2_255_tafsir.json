@@ -1,0 +1,805 @@
+{
+  "window": "2_255_tafsir",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s198",
+        "s199"
+      ],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s198",
+        "s199"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح المؤلف دلالة نفي الغفلة والنقص في سياق القيومية."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s200",
+        "s201"
+      ],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s200",
+        "s201"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيّن معنى اللفظ وفرق الشدة بين حالتي النعاس والنوم."
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s202",
+        "s203",
+        "s204"
+      ],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s203",
+        "s204"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث أبي موسى"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "خبر نبوي يبين تنزه الله عن النوم الموافق لمعنى الآية."
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s205",
+        "s206",
+        "s207",
+        "s208",
+        "s209",
+        "s210",
+        "s211"
+      ],
+      "primary": "M_ISRAILIYYAT",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s206",
+        "s207",
+        "s210",
+        "s211"
+      ],
+      "author_verdict_span_ids": [
+        "s211"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عكرمة"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قصة تمثيلية في تفسير الآية صنفها المؤلف من أخبار بني إسرائيل."
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s212",
+        "s213",
+        "s214",
+        "s215",
+        "s216",
+        "s217",
+        "s218",
+        "s219"
+      ],
+      "primary": "M_ISRAILIYYAT",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s214",
+        "s218",
+        "s219"
+      ],
+      "author_verdict_span_ids": [
+        "s219"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SUNNAH"
+      ],
+      "rationale_ar": "خبر ظاهر الإسناد النبوي رجح المؤلف أن منشأه إسرائيلي."
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s220",
+        "s221",
+        "s222",
+        "s223",
+        "s224"
+      ],
+      "primary": "M_NUZUL",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s220",
+        "s223",
+        "s224"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_ISRAILIYYAT"
+      ],
+      "rationale_ar": "الخبر يربط واقعة مزعومة بنزول الآية صراحة، مع بقاء صحة الرواية موضع مراجعة."
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s225",
+        "s226"
+      ],
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s225",
+        "s226"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "19:93-95"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استشهد بآية أخرى لبيان شمول الملك والعبودية."
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s227",
+        "s228",
+        "s229"
+      ],
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s227",
+        "s228",
+        "s229"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "53:26",
+          "21:28"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استعمل آيات أخرى لتقييد الشفاعة بالإذن والرضا."
+    },
+    {
+      "move_id": "m09",
+      "span_ids": [
+        "s230",
+        "s231",
+        "s232"
+      ],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s230",
+        "s231",
+        "s232"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث الشفاعة"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استشهد بحديث الشفاعة لشرح توقفها على الإذن."
+    },
+    {
+      "move_id": "m10",
+      "span_ids": [
+        "s233"
+      ],
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s233"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "19:64"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "ربط إحاطة العلم بآية أخرى تصف علم الله."
+    },
+    {
+      "move_id": "m11",
+      "span_ids": [
+        "s234",
+        "s235"
+      ],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s234",
+        "s235"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسر حد علم المخلوقين بما يطلعهم الله عليه."
+    },
+    {
+      "move_id": "m12",
+      "span_ids": [
+        "s236"
+      ],
+      "primary": "M_QURAN",
+      "secondary": [
+        "M_RAY"
+      ],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s236"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "20:110"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "عضد احتمالا تفسيريا بآية أخرى تنفي الإحاطة بالذات."
+    },
+    {
+      "move_id": "m13",
+      "span_ids": [
+        "s237",
+        "s238",
+        "s239",
+        "s240"
+      ],
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s238",
+        "s239",
+        "s240"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل عن ابن عباس تفسيرا لمعنى الكرسي."
+    },
+    {
+      "move_id": "m14",
+      "span_ids": [
+        "s241"
+      ],
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s241"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "سعيد بن جبير"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "أحال إلى تفسير مماثل منسوب إلى سعيد بن جبير دون بسطه هنا."
+    },
+    {
+      "move_id": "m15",
+      "span_ids": [
+        "s242",
+        "s243"
+      ],
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s243"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SAHABA",
+        "M_TABIIN"
+      ],
+      "rationale_ar": "ورد تفسير منسوب إلى جماعة مختلطة بلا تعيين واضح لصاحب القول."
+    },
+    {
+      "move_id": "m16",
+      "span_ids": [
+        "s244",
+        "s245",
+        "s246",
+        "s247",
+        "s248"
+      ],
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s246",
+        "s247",
+        "s248"
+      ],
+      "author_verdict_span_ids": [
+        "s248"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SUNNAH",
+        "M_SAHABA"
+      ],
+      "rationale_ar": "الرواية مرفوعة في ظاهرها لكن المؤلف يخطئ هذا الرفع؛ تعذر إسناد المنهج إليها."
+    },
+    {
+      "move_id": "m17",
+      "span_ids": [
+        "s249",
+        "s250"
+      ],
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s249",
+        "s250"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "ورد التفسير نفسه قولا لابن عباس بعد تصحيح موضع نسبته."
+    },
+    {
+      "move_id": "m18",
+      "span_ids": [
+        "s251",
+        "s252",
+        "s253"
+      ],
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s251",
+        "s252",
+        "s253"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "تخريج للطرق وحكم على رفع الخبر، بلا وظيفة تفسيرية مستقلة."
+    },
+    {
+      "move_id": "m19",
+      "span_ids": [
+        "s254"
+      ],
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s254"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_TABIIN",
+        "M_SAHABA"
+      ],
+      "rationale_ar": "فسر موضع الكرسي لكن نسبة القول إلى أبي مالك عبر السدي لا تكفي لتحديد المنهج."
+    },
+    {
+      "move_id": "m20",
+      "span_ids": [
+        "s255"
+      ],
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s255"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "السدي"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قول السدي نفسه يصف موضع الكرسي بالنسبة إلى العرش."
+    },
+    {
+      "move_id": "m21",
+      "span_ids": [
+        "s256",
+        "s257"
+      ],
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s256",
+        "s257"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل عن ابن عباس تمثيلا يبين سعة الكرسي."
+    },
+    {
+      "move_id": "m22",
+      "span_ids": [
+        "s258",
+        "s259",
+        "s260"
+      ],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s259",
+        "s260"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "خبر ابن زيد"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "خبر منسوب إلى النبي يوضح نسبة السماوات إلى الكرسي."
+    },
+    {
+      "move_id": "m23",
+      "span_ids": [
+        "s261",
+        "s262"
+      ],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s261",
+        "s262"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث أبي ذر"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استعمل قولا نبويا يبين نسبة الكرسي إلى العرش."
+    },
+    {
+      "move_id": "m24",
+      "span_ids": [
+        "s263",
+        "s264",
+        "s265"
+      ],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s264",
+        "s265"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث أبي ذر"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "أورد جوابا نبويا عن الكرسي يبين سعته قياسا إلى المخلوقات."
+    },
+    {
+      "move_id": "m25",
+      "span_ids": [
+        "s266",
+        "s267",
+        "s268",
+        "s269",
+        "s270",
+        "s271"
+      ],
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s267",
+        "s268",
+        "s270",
+        "s271"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث عبد الله بن خليفة"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "تضمن الخبر قولا نبويا يشرح سعة الكرسي، مع مناقشة سنده بعده."
+    },
+    {
+      "move_id": "m26",
+      "span_ids": [
+        "s272",
+        "s273",
+        "s274"
+      ],
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s272",
+        "s273",
+        "s274"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "عزو للخبر وموازنة طرقه وزياداته دون تفسير جديد."
+    },
+    {
+      "move_id": "m27",
+      "span_ids": [
+        "s275"
+      ],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s275"
+      ],
+      "author_verdict_span_ids": [
+        "s275"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "رجح المؤلف تمييز كرسي الآية عن مذكور في أخبار القيامة."
+    },
+    {
+      "move_id": "m28",
+      "span_ids": [
+        "s276"
+      ],
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s276"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الحسن البصري"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل قول الحسن البصري في تفسير الكرسي بعد رأي آخر غير منسوب إليه."
+    },
+    {
+      "move_id": "m29",
+      "span_ids": [
+        "s277"
+      ],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s277"
+      ],
+      "author_verdict_span_ids": [
+        "s277"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "رجح المؤلف تمايز الكرسي والعرش وناقش اعتماد خبر محتج به."
+    },
+    {
+      "move_id": "m30",
+      "span_ids": [
+        "s278",
+        "s279"
+      ],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s278",
+        "s279"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح معنى لفظ قرآني ثم وسع بيان سهولة الحفظ لله."
+    },
+    {
+      "move_id": "m31",
+      "span_ids": [
+        "s280"
+      ],
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s280"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "قرر المؤلف طريقة التعامل مع آيات الصفات في ختام تفسير الآية."
+    }
+  ]
+}

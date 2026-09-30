@@ -1,0 +1,54 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_64.txt",
+  "ayah": "8:64",
+  "surah": 8,
+  "ayah_number": 64,
+  "source_char_length": 665,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 337,
+      "kind": "author"
+    },
+    {
+      "start": 337,
+      "end": 374,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 374,
+      "end": 665,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "layout": 0,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 628,
+    "layout": 0,
+    "apparatus": 37
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 37
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

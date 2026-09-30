@@ -1,0 +1,118 @@
+<style>
+#ai-run-wrap { margin: 0 0 12px; }
+</style>
+<div id="ai-run-wrap" hidden>
+  <button type="button" class="btn primary" id="ai-run-btn" hidden>شغّل الذكاء على هذه الآية</button>
+  <div id="ai-run-card" class="banner" hidden></div>
+</div>
+<script>
+(function () {
+  var CHOICE_KEY = "tafsir-fahras-v1-choice";
+  var wrap = document.getElementById("ai-run-wrap");
+  var btn = document.getElementById("ai-run-btn");
+  var card = document.getElementById("ai-run-card");
+  if (!wrap || !btn || !card) return;
+
+  var verse = document.getElementById("verse-block");
+  if (verse && verse.parentNode && wrap.parentNode !== verse.parentNode) {
+    verse.parentNode.insertBefore(wrap, verse.nextSibling);
+  }
+
+  function currentTafsir() {
+    var sel = document.getElementById("tafsir-select");
+    return sel && sel.value ? sel.value : "";
+  }
+  function currentWindow() {
+    var sel = document.getElementById("win-select");
+    return sel && sel.value ? sel.value : "";
+  }
+  function currentAnnotator() {
+    var sel = document.getElementById("ann-select");
+    return sel && sel.value ? sel.value : "";
+  }
+
+  function showCard(lines, opts) {
+    opts = opts || {};
+    card.hidden = false;
+    card.textContent = "";
+    lines.forEach(function (line) {
+      var p = document.createElement("p");
+      p.style.margin = "0 0 6px";
+      p.textContent = line;
+      card.appendChild(p);
+    });
+    if (opts.errorOnly) return;
+    var note = document.createElement("p");
+    note.style.margin = "8px 0";
+    note.textContent = opts.isFake
+      ? "وضع تجريبي — لا يستدعي نموذجاً"
+      : "النتائج مقترح آلي حتى يعتمدها المتخصص";
+    card.appendChild(note);
+    var reloadBtn = document.createElement("button");
+    reloadBtn.type = "button";
+    reloadBtn.className = "btn primary";
+    reloadBtn.textContent = "أعد تحميل الصفحة لعرض النتائج";
+    reloadBtn.addEventListener("click", function () {
+      try {
+        localStorage.setItem(CHOICE_KEY, JSON.stringify({
+          tafsirId: currentTafsir(),
+          windowId: currentWindow(),
+          annotator: opts.annotator || currentAnnotator()
+        }));
+      } catch (e) { /* ignore */ }
+      location.reload();
+    });
+    card.appendChild(reloadBtn);
+  }
+
+  var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+  var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 1500);
+  var opts = ctrl ? { signal: ctrl.signal } : {};
+  fetch("/api/health", opts).then(function (res) {
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    return res.json();
+  }).then(function (health) {
+    if (!health || !health.ok) return;
+    wrap.hidden = false;
+    btn.hidden = false;
+    btn.textContent = "شغّل الذكاء على هذه الآية";
+    btn.addEventListener("click", function () {
+      btn.disabled = true;
+      btn.textContent = "جارٍ التشغيل…";
+      card.hidden = true;
+      card.textContent = "";
+      fetch("/api/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tafsir: currentTafsir(), window: currentWindow() })
+      }).then(function (res) {
+        return res.json().then(function (data) {
+          return { status: res.status, data: data };
+        });
+      }).then(function (out) {
+        var data = out.data || {};
+        if (data.error) {
+          showCard([String(data.error)], { errorOnly: true });
+          return;
+        }
+        var line =
+          "اقتراحات: " + data.moves +
+          " — مرشّح للقبول: " + data.auto_candidate +
+          " — بانتظار المتخصص: " + data.specialist +
+          " — أعلام: " + data.flags +
+          " — رُفض لأنه يشير إلى نص غير موجود: " + data.rejected_invalid_spans;
+        showCard([line], { annotator: data.annotator, isFake: !!health.fake });
+      }).catch(function (err) {
+        showCard([String(err && err.message ? err.message : err)], { errorOnly: true });
+      }).finally(function () {
+        btn.disabled = false;
+        btn.textContent = "شغّل الذكاء على هذه الآية";
+      });
+    });
+  }).catch(function () {
+    clearTimeout(timer);
+    /* health unreachable — leave button hidden */
+  });
+})();
+</script>

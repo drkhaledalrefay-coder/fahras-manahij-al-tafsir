@@ -1,0 +1,54 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_26.txt",
+  "ayah": "8:26",
+  "surah": 8,
+  "ayah_number": 26,
+  "source_char_length": 1382,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 1321,
+      "kind": "author"
+    },
+    {
+      "start": 1321,
+      "end": 1381,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1381,
+      "end": 1382,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "layout": 0,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 1322,
+    "layout": 0,
+    "apparatus": 60
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 60
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

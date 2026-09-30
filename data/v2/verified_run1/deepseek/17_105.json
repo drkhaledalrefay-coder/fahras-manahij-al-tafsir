@@ -1,0 +1,276 @@
+{
+  "window_id": "17_105",
+  "ayah": "17:105",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/17_105.txt",
+  "source_sha256": "779492c5a161c0896dc5de4bb88bb2ac73d09aeacd730a6c3dd8bb516a37ff65",
+  "window_start": 0,
+  "window_end": 570,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s002",
+        "s003",
+        "s004"
+      ],
+      "start": 70,
+      "end": 254,
+      "text": " متضمنًا للحق، كما قال تعالى: {لَكِنِ اللَّهُ يَشْهَدُ بِمَا أَنْزَلَ إِلَيْكَ أَنْزَلَهُ بِعِلْمِهِ}  أي: متضمنًا علم الله الذي أراد أن يطلعكم عليه من أحكامه وأمره ونهيه.",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s002",
+        "s003",
+        "s004"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "4:166"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استشهد بآية أخرى لبيان معنى الإنزال بالحق، ثم شرح دلالتها على تضمنها علم الله.",
+      "marker_hits": [
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 85,
+          "end": 98
+        },
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 89,
+          "end": 98
+        },
+        {
+          "span_id": "s003",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 100,
+          "end": 171
+        },
+        {
+          "span_id": "s003",
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 172,
+          "end": 185
+        },
+        {
+          "span_id": "s004",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 186,
+          "end": 189
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s001"
+      ],
+      "start": 0,
+      "end": 70,
+      "text": "يقول تعالى مخبرًا عن كتابه العزيز وهو القرآن المجيد أنه بالحق نزل، أي:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "weak",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s001"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_QURAN"
+      ],
+      "rationale_ar": "افتتاح المؤلف وشرحه للفظ الحق، وتمام الشرح في المقطع التالي الموسوم قرآنا بالقرآن.",
+      "marker_hits": [
+        {
+          "span_id": "s001",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 67,
+          "end": 70
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s005"
+      ],
+      "start": 254,
+      "end": 438,
+      "text": " وقوله: {وَبِالْحَقِّ نَزَلَ} أي: وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه، بل وصل إليك بالحق، فإنه نزل به شديد القوى الأمين المكين المطاع في الملأ الأعلى.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s005"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسّر النزول بالحق بأنه بلوغ الوحي محفوظا لم يخالطه غيره ولم يزد ولم ينقص.",
+      "marker_hits": [
+        {
+          "span_id": "s005",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 262,
+          "end": 283
+        },
+        {
+          "span_id": "s005",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 284,
+          "end": 287
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s006"
+      ],
+      "start": 438,
+      "end": 570,
+      "text": "\r\nوقوله: {وَمَا أَرْسَلْنَاكَ} أي: يا محمد {إِلَّا مُبَشِّرًا وَنَذِيرًا} مبشرًا لمن أطاعك من المؤمنين ونذيرًا لمن عصاك من الكافرين.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s006"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيّن مصرف البشارة والنذارة: المؤمنون المطيعون والكافرون العاصون.",
+      "marker_hits": [
+        {
+          "span_id": "s006",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 447,
+          "end": 468
+        },
+        {
+          "span_id": "s006",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 469,
+          "end": 472
+        },
+        {
+          "span_id": "s006",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 481,
+          "end": 511
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "17_105",
+    "annotator": "deepseek",
+    "move_count": 4,
+    "auto_candidate": 3,
+    "specialist": 1,
+    "by_primary": {
+      "M_QURAN": 1,
+      "M_LUGHA": 3
+    },
+    "by_certainty": {
+      "explicit": 3,
+      "weak": 1
+    },
+    "flag_count": 0
+  }
+}

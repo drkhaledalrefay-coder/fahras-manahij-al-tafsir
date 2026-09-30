@@ -1,0 +1,14 @@
+DELTA to your deck task (same repo, deck/ only). Do NOT commit. Keep all text claims unchanged.
+
+Reviewer found these issues in deck/deck.pdf — fix each, then rebuild with node deck/build_deck.mjs:
+
+1. Slide 1: a thin horizontal line/underline appears directly under the gradient title. Remove it (likely a text-decoration, border-bottom, or background-clip artifact).
+2. Slide 6: the screenshot sits on the right with a large empty area on the left and the small caption stranded bottom-left. Re-layout: stats row on top (keep), then the screenshot centered and larger (max width ~1500px), with its caption directly under it centered, and the small "تجربة أولى…" note under that. No empty half-slide.
+3. Slide 8: a stray vertical bar/line appears at the start (right side) of the closing gradient sentence «ونحن نحفظ لنصّ المفسر…». Remove it — no side-stripe borders anywhere in the deck (grep for border-inline-start / border-right / border-left with widths > 1px and remove).
+4. Slides 2 and 4: body text is too small for the space; increase body to ~40px and the quote box text to ~34px, and vertically center the content block in the slide (these slides currently leave the bottom 35% empty).
+5. Slide 3: "بيان معنى" wraps so "معنى" sits alone on the next line. Prevent breaking inside each tag term (wrap each term in a span with white-space: nowrap) or reduce that line's font slightly.
+6. Also: make sure no slide's content is crowded to the top with a large empty bottom — vertically center content blocks across all slides.
+
+After rebuilding, re-run your gates (8 pages, < 10 MB, forbidden grep) and additionally grep deck.html for "border-inline-start" and report the count (expect 0).
+
+REPORT: what changed per item, new PDF size. Do not commit.

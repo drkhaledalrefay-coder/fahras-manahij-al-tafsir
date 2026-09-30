@@ -1,0 +1,728 @@
+{
+  "window_id": "2_102",
+  "ayah": "2:102",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/al_saadi/2_102.txt",
+  "source_sha256": "46aaa66d05f6daddc25752a4e1bcddbc022a4843822735a1274f88ba88b1b360",
+  "window_start": 0,
+  "window_end": 2935,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s001",
+        "s002"
+      ],
+      "start": 0,
+      "end": 905,
+      "text": "{وَاتَّبَعُوا مَا تَتْلُو الشَّيَاطِينُ عَلَى مُلْكِ سُلَيْمَانَ وَمَا كَفَرَ سُلَيْمَانُ وَلَكِنَّ الشَّيَاطِينَ كَفَرُوا يُعَلِّمُونَ النَّاسَ السِّحْرَ وَمَا أُنْزِلَ عَلَى الْمَلَكَيْنِ بِبَابِلَ هَارُوتَ وَمَارُوتَ وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّى يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ فَيَتَعَلَّمُونَ مِنْهُمَا مَا يُفَرِّقُونَ بِهِ بَيْنَ الْمَرْءِ وَزَوْجِهِ وَمَا هُمْ بِضَارِّينَ بِهِ مِنْ أَحَدٍ إِلَّا بِإِذْنِ اللَّهِ وَيَتَعَلَّمُونَ مَا يَضُرُّهُمْ وَلَا يَنْفَعُهُمْ وَلَقَدْ عَلِمُوا لَمَنِ اشْتَرَاهُ مَا لَهُ فِي الْآخِرَةِ مِنْ خَلَاقٍ وَلَبِئْسَ مَا شَرَوْا بِهِ أَنْفُسَهُمْ لَوْ كَانُوا يَعْلَمُونَ (102)}.\n{102} كذلك: هؤلاء اليهود لما نبذوا كتاب الله اتبعوا ما تتلوا الشياطين، وتختلق من السحر على ملك سليمان حيث أخرجت الشياطين للناس السحر، وزعموا أن سليمان عليه السلام كان يستعمله وبه حصل له الملك العظيم، وهم كذبة في ذلك فلم يستعمله سليمان بل نزهه الصادق في قيله:",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s002"
+      ],
+      "author_verdict_span_ids": [
+        "s002"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "سياق اليهود في نبذهم الكتاب وادعائهم على سليمان، مع تكذيب ذلك بنص الآية.",
+      "marker_hits": [
+        {
+          "span_id": "s002",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 647,
+          "end": 652
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s003",
+        "s004"
+      ],
+      "start": 905,
+      "end": 1003,
+      "text": " {وما كفر سليمان}؛ أي: بتعلم السحر فلم يتعلمه، {ولكن الشياطين كفروا}؛ في ذلك {يعلمون الناس السحر}؛",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s003"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيان أن الكفر منفي عن سليمان في تعلم السحر، وثابت للشياطين في تعليمهم الناس.",
+      "marker_hits": [
+        {
+          "span_id": "s003",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 906,
+          "end": 922
+        },
+        {
+          "span_id": "s003",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 924,
+          "end": 927
+        },
+        {
+          "span_id": "s003",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 952,
+          "end": 973
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s005"
+      ],
+      "start": 1003,
+      "end": 1216,
+      "text": " من إضلالهم وحرصهم على إغواء بني آدم وكذلك اتبع اليهود السحر الذي أُنْزِلَ على الملكين الكائنين بأرض بابل من أرض العراق، أنزل عليهما السحر امتحاناً وابتلاءً من الله لعباده فيعلمانهم السحر، {وما يعلمان من أحد حتى}؛",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s005"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "توسع المؤلف في تفاصيل السحر ببابل وكونه ابتلاءً، وهو استنتاج لا نقل إسرائيلي.",
+      "marker_hits": [
+        {
+          "span_id": "s005",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1192,
+          "end": 1215
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s006",
+        "s007"
+      ],
+      "start": 1216,
+      "end": 1642,
+      "text": " ينصحاه و {يقولا إنما نحن فتنة فلا تكفر}؛ أي: لا تتعلم السحر؛ فإنه كفر، فينهيانه عن السحر ويخبرانه عن مرتبته، فتعليم الشياطين للسحر على وجه التدليس والإضلال، ونسبته وترويجه إلى من برأه الله منه وهو سليمان عليه السلام، وتعليم الملكين امتحاناً مع نصحهما لئلا يكون لهم حجة، فهؤلاء اليهود يتبعون السحر الذي تعلمه الشياطين والسحر الذي يعلمه الملكان، فتركوا علم الأنبياء والمرسلين وأقبلوا على علم الشياطين، وكلٌّ يصبو إلى ما يناسبه.",
+      "primary": "M_RAY",
+      "secondary": [
+        "M_LUGHA"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s006",
+        "s007"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "جمع المؤلف بين شرح النهي عن التعلم وتلخيص موقف الشياطين والملَكين واليهود.",
+      "marker_hits": [
+        {
+          "span_id": "s006",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1226,
+          "end": 1256
+        },
+        {
+          "span_id": "s007",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1258,
+          "end": 1261
+        },
+        {
+          "span_id": "s007",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1297,
+          "end": 1347
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s008",
+        "s009",
+        "s010",
+        "s011"
+      ],
+      "start": 1642,
+      "end": 1859,
+      "text": "\nثم ذكر مفاسد السحر فقال: {فيتعلمون منهما ما يفرقون به بين المرء وزوجه}؛ مع أن محبة الزوجين لا تقاس بمحبة غيرهما، لأن الله قال في حقهما: {وجعل بينكم مودة ورحمة}؛ وفي هذا دليل على أن السحر له حقيقة، وأنه يضر بإذن الله؛",
+      "primary": "M_QURAN",
+      "secondary": [
+        "M_RAY"
+      ],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s010",
+        "s011"
+      ],
+      "author_verdict_span_ids": [
+        "s011"
+      ],
+      "references": {
+        "verses": [
+          "30:21"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استشهد المؤلف بآية المودة والرحمة لبيان عظم التفريق بين الزوجين، واستنبط تحقق أثر السحر.",
+      "marker_hits": [
+        {
+          "span_id": "s011",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1779,
+          "end": 1802
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s012"
+      ],
+      "start": 1859,
+      "end": 1890,
+      "text": " أي: بإرادة الله، والإذن نوعان:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s012"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسّر الإذن هنا بالإرادة، وبيّن أن له قسمين: قدرياً وشرعياً.",
+      "marker_hits": [
+        {
+          "span_id": "s012",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1860,
+          "end": 1863
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s013",
+        "s014"
+      ],
+      "start": 1890,
+      "end": 2020,
+      "text": " إذن قدري: وهو المتعلق بمشيئة الله كما في هذه الآية، وإذن شرعي كما في قوله تعالى في الآية السابقة: {فإنه نزله على قلبك بإذن الله}؛",
+      "primary": "M_QURAN",
+      "secondary": [
+        "M_RAY"
+      ],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s013",
+        "s014"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "2:97"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "قابل بين الإذن القدري والشرعي، واستشهد بنزول القرآن بإذن الله في الآية السابقة.",
+      "marker_hits": [
+        {
+          "span_id": "s013",
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1960,
+          "end": 1970
+        },
+        {
+          "span_id": "s014",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1989,
+          "end": 2019
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s015",
+        "s016"
+      ],
+      "start": 2020,
+      "end": 2315,
+      "text": " وفي هذه الآية وما أشبهها أن الأسباب مهما بلغت في قوة التأثير فإنها تابعة للقضاء والقدر ليست مستقلة في التأثير، ولم يخالف في هذا الأصل أحد من فرق الأمة غير القدرية في أفعال العباد زعموا: أنها مستقلة غير تابعة للمشيئة، فأخرجوها عن قدرة الله، فخالفوا كتاب الله وسنة رسوله وإجماع الصحابة والتابعين.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s015",
+        "s016"
+      ],
+      "author_verdict_span_ids": [
+        "s016"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "قرر المؤلف تبعية الأسباب للقدر وردّ على القدرية، وعرض إجماع الأمة دليلاً.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m09",
+      "span_ids": [
+        "s017",
+        "s018"
+      ],
+      "start": 2315,
+      "end": 2515,
+      "text": "\nثم ذكر أن علم السحر مضرة محضة، ليس فيه منفعة لا دينية ولا دنيوية، كما يوجد بعض المنافع الدنيوية في بعض المعاصي كما قال تعالى في الخمر والميسر: {قل فيهما إثم كبير ومنافع للناس وإثمهما أكبر من نفعهما}؛",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s017",
+        "s018"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "2:219"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "عقد المؤلف مقارنة بين ضرر السحر ومنافع الخمر المعدودة، فاستشهد بآية الخمر والميسر.",
+      "marker_hits": [
+        {
+          "span_id": "s017",
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 2427,
+          "end": 2440
+        },
+        {
+          "span_id": "s017",
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 2431,
+          "end": 2440
+        },
+        {
+          "span_id": "s018",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2459,
+          "end": 2514
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m10",
+      "span_ids": [
+        "s019"
+      ],
+      "start": 2515,
+      "end": 2663,
+      "text": " فهذا السحر مضرة محضة فليس له داعٍ أصلاً، فالمنهيات كلها إما مضرة محضة أو شرها أكبر من خيرها، كما أن المأمورات إما مصلحة محضة أو خيرها أكثر من شرها.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s019"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "عمّم المؤلف قاعدة تفاضل الضرر والنفع في المنهيات والمأمورات.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m11",
+      "span_ids": [
+        "s020",
+        "s021"
+      ],
+      "start": 2663,
+      "end": 2771,
+      "text": "\n{ولقد علموا}؛ أي: اليهود، {لمن اشتراه}؛ أي: رغب في السحر رغبة المشتري في السلعة، {ما له في الآخرة من خلاق}؛",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s020",
+        "s021"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح من عناهم بالعلم، ومعنى الاشتراء، وأن الخلاق هو النصيب.",
+      "marker_hits": [
+        {
+          "span_id": "s020",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2664,
+          "end": 2676
+        },
+        {
+          "span_id": "s020",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2678,
+          "end": 2681
+        },
+        {
+          "span_id": "s020",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2690,
+          "end": 2702
+        },
+        {
+          "span_id": "s021",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2704,
+          "end": 2707
+        },
+        {
+          "span_id": "s021",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2745,
+          "end": 2770
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m12",
+      "span_ids": [
+        "s022",
+        "s023"
+      ],
+      "start": 2771,
+      "end": 2935,
+      "text": " أي: نصيب بل هو موجب للعقوبة، فلم يكن فعلهم إياه جهلاً ولكنهم استحبوا الحياة الدنيا على الآخرة فلبئس {ما شروا به أنفسهم لو كانوا يعلمون}؛ علماً يثمر العمل ما فعلوه.",
+      "primary": "M_LUGHA",
+      "secondary": [
+        "M_RAY"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s022",
+        "s023"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسّر النصيب بأنه موجب للعقوبة، وأن علمهم لم يثمر عملاً.",
+      "marker_hits": [
+        {
+          "span_id": "s022",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2772,
+          "end": 2775
+        },
+        {
+          "span_id": "s022",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2872,
+          "end": 2907
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_102",
+    "annotator": "deepseek",
+    "move_count": 12,
+    "auto_candidate": 12,
+    "specialist": 0,
+    "by_primary": {
+      "M_RAY": 5,
+      "M_LUGHA": 4,
+      "M_QURAN": 3
+    },
+    "by_certainty": {
+      "strong": 8,
+      "explicit": 4
+    },
+    "flag_count": 0
+  }
+}

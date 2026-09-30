@@ -1,0 +1,36 @@
+TASK A (sources): Extract the same three verses from three more tafsirs, pin them, and build their author/editor layers and spans — WITHOUT changing anything about the existing Ibn Kathir pipeline. Deterministic code only; no AI; no network. Do NOT commit.
+
+REPO: tafsir-integrity (current dir). Read first: README.md, ATTRIBUTION.md, src/fetch.py (how tafsir_katheer rows were extracted and pinned), src/layers.py, src/spans_author.py, src/v2_windows.py, data/raw/manifest.json.
+
+HARD RULES
+- DO NOT modify or regenerate anything under: data/raw/tafsircenter/*.txt, data/spans*, data/layers*, data/v2/, web/, src/methods_template.html, reports/v2_summary.md. Ibn Kathir outputs must stay byte-identical. You may ADD new files only (plus appending to data/raw/manifest.json and ATTRIBUTION.md).
+- Open the SQLite DB READ-ONLY only: sqlite3.connect("file:<path>?mode=ro", uri=True). A plain connect creates empty files — forbidden.
+- DB path is a CLI argument (--db). Do not hard-code any path outside this repo. On this machine it is: <DRIVE>/Documents/Codex/2026-09-28/islamic-ai-contest/tafsir-pilot/data/raw/tafsircenter/quran.db (sha256 in data/raw/manifest.json: 10e61f61…; verify it before use). <DRIVE> is the user-profile root; the file is the sibling tafsir-pilot copy of quran.db, not a path inside <REPO>.
+- Never strip, normalize or re-type source text. Offsets always index the raw extracted string (read with newline="").
+
+SOURCES (tables in quran.db; column `tafsir`, keys sura/aya):
+- al_tabari  ← tafsir_tabary
+- al_saadi   ← tafsir_saadi
+- al_baghawi ← tafsir_baghawy
+Verses: 2:255, 2:102, 17:105.
+
+STEPS
+1. New script src/multi_fetch.py: write data/raw/tafsircenter/<tafsir_id>/<surah>_<ayah>.txt exactly as the DB string (UTF-8, no newline translation), and append one manifest entry per file (url "sqlite:quran.db:<table>:<s>:<a>", sha256, byte_length, timestamp). Idempotent: if the file exists with the same sha256, skip.
+2. New script src/multi_layers.py producing data/multi/<tafsir_id>/layers/<s>_<a>.json. TWO kinds of non-author text, kept distinct:
+   a) "layout": markup that is only formatting — e.g. "<br>" (and any other HTML tags you find). Allowed INSIDE a highlight later; it is like a line break. Record as kind "layout".
+   b) "apparatus": editor material — "¬…¥" footnotes, "[سورة: n]"-style verse refs, and any bracket markers like "[as2]". Record as kind "apparatus" with subtype. Do NOT guess what "[asN]" means — record subtype "unknown_marker" and list every distinct pattern + count in the report.
+   Survey each file first and report every markup/bracket pattern you find with counts.
+3. New script src/multi_spans.py producing data/multi/<tafsir_id>/spans/<s>_<a>.json with the same span shape as data/spans_author/*.json (id, start, end, text), splitting AUTHOR text only, reusing src/spans_author.py logic where possible (import, don't copy-edit). Every span must satisfy raw[start:end] == text.
+4. New script src/multi_windows.py producing data/multi/<tafsir_id>/windows/<window>.json in the same shape as data/v2/windows/*.json. Window rules (record the rule + char length in each file):
+   - 2_255: if the text contains the phrase-by-phrase commentary starting at «لا تأخذه سنة», use the same needles as select_2_255_tafsir (start «لا تأخذه سنة», end last «العلي العظيم»), cap 110 spans; otherwise all spans capped at 110.
+   - 2_102: start at the first span mentioning «هاروت» (normalized match), cap 40 spans.
+   - 17_105: all spans.
+5. Report reports/multi/A_sources.md: per tafsir × verse: raw chars, sha256 (12 chars), layout count, apparatus count by subtype, spans, window rule, window chars/spans. Plus the list of markup patterns. Plus: does data/raw/tafsircenter/README.md license (CC BY 4.0) cover all tables? Quote the line.
+6. Append the three tafsirs to ATTRIBUTION.md (same style as the existing Ibn Kathir entry).
+7. Progress file reports/multi/PROGRESS.md: a checklist of steps 1–6 marked done/not done with file paths, so another agent can resume from where you stop.
+
+GATES (run and paste output):
+- python -c check: for every new spans file and window file, raw[start:end] == text for every span.
+- git status --short shows NO modified tracked files other than data/raw/manifest.json and ATTRIBUTION.md.
+- python src/v2_selftest.py still passes.
+Do not commit.

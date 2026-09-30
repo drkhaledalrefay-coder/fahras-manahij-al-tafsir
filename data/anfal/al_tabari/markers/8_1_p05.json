@@ -1,0 +1,132 @@
+{
+  "window_id": "8_1_p05",
+  "ayah": "8:1",
+  "span_count": 9,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 1,
+    "HADITH": 1,
+    "TABIIN": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s437",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 32129,
+          "end": 32162,
+          "span_id": "s437"
+        }
+      ]
+    },
+    {
+      "span_id": "s438",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 32168,
+          "end": 32173,
+          "span_id": "s438"
+        }
+      ]
+    },
+    {
+      "span_id": "s439",
+      "markers": []
+    },
+    {
+      "span_id": "s440",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 32350,
+          "end": 32375,
+          "span_id": "s440"
+        }
+      ]
+    },
+    {
+      "span_id": "s441",
+      "markers": []
+    },
+    {
+      "span_id": "s442",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 32468,
+          "end": 32474,
+          "span_id": "s442"
+        }
+      ]
+    },
+    {
+      "span_id": "s443",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "ابن زيد",
+          "name": "ابن زيد",
+          "role": "SPEAKER",
+          "start": 32494,
+          "end": 32501,
+          "span_id": "s443"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 32503,
+          "end": 32609,
+          "span_id": "s443"
+        }
+      ]
+    },
+    {
+      "span_id": "s444",
+      "markers": []
+    },
+    {
+      "span_id": "s445",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 32213,
+      "end": 32247,
+      "text": "¬في ص، ت 1، ت 2، س، ف: \"الأفعال\".¥",
+      "attached_span_id": "s438",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 32319,
+      "end": 32336,
+      "text": "¬في ت 2: \"وجهه\".¥",
+      "attached_span_id": "s439",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 32679,
+      "end": 32745,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 5/ 1655 من طريق أصبغ عن ابن زيد به.¥",
+      "attached_span_id": "s444",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

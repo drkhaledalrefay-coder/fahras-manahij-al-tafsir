@@ -1,0 +1,242 @@
+{
+  "window_id": "8_60_p02",
+  "ayah": "8:60",
+  "span_count": 27,
+  "family_counts": {
+    "QURAN": 7,
+    "LUGHA": 3,
+    "HADITH": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s111",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8141,
+          "end": 8188,
+          "span_id": "s111"
+        }
+      ]
+    },
+    {
+      "span_id": "s112",
+      "markers": []
+    },
+    {
+      "span_id": "s113",
+      "markers": []
+    },
+    {
+      "span_id": "s114",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8283,
+          "end": 8356,
+          "span_id": "s114"
+        }
+      ]
+    },
+    {
+      "span_id": "s115",
+      "markers": []
+    },
+    {
+      "span_id": "s116",
+      "markers": []
+    },
+    {
+      "span_id": "s117",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 8547,
+          "end": 8551,
+          "span_id": "s117"
+        }
+      ]
+    },
+    {
+      "span_id": "s118",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8581,
+          "end": 8628,
+          "span_id": "s118"
+        }
+      ]
+    },
+    {
+      "span_id": "s119",
+      "markers": []
+    },
+    {
+      "span_id": "s120",
+      "markers": []
+    },
+    {
+      "span_id": "s121",
+      "markers": []
+    },
+    {
+      "span_id": "s122",
+      "markers": []
+    },
+    {
+      "span_id": "s123",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9422,
+          "end": 9443,
+          "span_id": "s123"
+        }
+      ]
+    },
+    {
+      "span_id": "s124",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "قال الشاعر",
+          "start": 9524,
+          "end": 9534,
+          "span_id": "s124"
+        }
+      ]
+    },
+    {
+      "span_id": "s125",
+      "markers": []
+    },
+    {
+      "span_id": "s126",
+      "markers": []
+    },
+    {
+      "span_id": "s127",
+      "markers": []
+    },
+    {
+      "span_id": "s128",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9685,
+          "end": 9786,
+          "span_id": "s128"
+        }
+      ]
+    },
+    {
+      "span_id": "s129",
+      "markers": []
+    },
+    {
+      "span_id": "s130",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10169,
+          "end": 10197,
+          "span_id": "s130"
+        }
+      ]
+    },
+    {
+      "span_id": "s131",
+      "markers": []
+    },
+    {
+      "span_id": "s132",
+      "markers": []
+    },
+    {
+      "span_id": "s133",
+      "markers": []
+    },
+    {
+      "span_id": "s134",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 10324,
+          "end": 10331,
+          "span_id": "s134"
+        }
+      ]
+    },
+    {
+      "span_id": "s135",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10374,
+          "end": 10470,
+          "span_id": "s135"
+        }
+      ]
+    },
+    {
+      "span_id": "s136",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 10472,
+          "end": 10475,
+          "span_id": "s136"
+        }
+      ]
+    },
+    {
+      "span_id": "s137",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9536,
+      "end": 9587,
+      "text": "¬هو النمر بن تولب، والبيت في ديوانه (مجموع) ص 122.¥",
+      "attached_span_id": "s124",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9889,
+      "end": 9986,
+      "text": "¬في ص، ت 1، ت 2، س، ف: \"حرب\". والحراب: جمع حربة، وهى آلة من آلات الحرب دون الرمح. التاج (ح ر ب).¥",
+      "attached_span_id": "s129",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10547,
+      "end": 10625,
+      "text": "¬سيرة ابن هشام 1/ 674، وأخرجه ابن أبي حاتم في تفسيره 5/ 1724 من طريق سلمة به.¥",
+      "attached_span_id": "s136",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

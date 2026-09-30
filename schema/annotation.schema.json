@@ -1,0 +1,388 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tafsir-integrity:annotation:1.0.0",
+  "title": "Tafsir annotation — approved record (v1.0.0)",
+  "description": "One verified tafsir annotation unit: a pinned source text, the machine's proposal, and the human-approved labels. Tafsir-agnostic and UI-agnostic — no tafsir work is privileged over another, and no consumer needs any AI to read it. The source text is never the stored truth: start_char/end_char index into a pinned file (source_id + sha256) and text is a convenience copy that must equal the sliced source exactly. A published dataset is a JSON array whose items each validate against this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "$comment": "Cross-field rules that JSON Schema draft 2020-12 cannot express (no arithmetic, no $data extension): source.end_char MUST be greater than source.start_char; quran.ayah_end MUST be >= quran.ayah; and text MUST equal source_file[source.start_char:source.end_char] over the pinned file decoded as UTF-8 bytes-as-is. Validators and exporters MUST enforce these three in code — schema/example_approved.json is checked against both the schema and the offsets.",
+  "required": [
+    "annotation_id",
+    "quran",
+    "tafsir",
+    "source",
+    "labels",
+    "text",
+    "verification",
+    "ai_proposal",
+    "review"
+  ],
+  "properties": {
+    "annotation_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^\\S+$",
+      "description": "Stable public id, unique inside a dataset: \"<tafsir.id>-<window key>-<move id>\". ASCII, no whitespace.",
+      "examples": [
+        "al_tabari-2_255_tafsir-m07"
+      ]
+    },
+    "quran": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "surah",
+        "ayah"
+      ],
+      "description": "The verse, or verse range, this unit comments on.",
+      "properties": {
+        "surah": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 114
+        },
+        "ayah": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ayah_end": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Optional. Last ayah of a multi-ayah range; must be >= ayah (cross-field rule — check in code)."
+        }
+      }
+    },
+    "tafsir": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name"
+      ],
+      "description": "Which tafsir work the text belongs to. Data, never code: adding a work means adding values, not editing this schema.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:[_-][a-z0-9]+)*$",
+          "description": "Lowercase slug, no spaces: the work's short Latin name (al_tabari, al_baghawi, al_sadi).",
+          "examples": [
+            "al_tabari"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable work name in its own language.",
+          "examples": [
+            "تفسير الطبري"
+          ]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "sha256",
+        "start_char",
+        "end_char"
+      ],
+      "description": "Pointer into the pinned plain-text source file. These offsets are the ground truth.",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable id of the pinned file; convention \"<tafsir.id>_<surah>_<ayah>\".",
+          "examples": [
+            "al_tabari_2_255"
+          ]
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 (lowercase hex) of the pinned source file bytes, or null when the pin is unavailable. Consumers re-hash the file and refuse to publish records whose pin does not match."
+        },
+        "start_char": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Inclusive start: 0-based index of the first character, counted in Unicode code points over the source file decoded as UTF-8 bytes-as-is (no newline translation)."
+        },
+        "end_char": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Exclusive end (Python slice semantics); must be greater than start_char (cross-field rule — check in code)."
+        }
+      }
+    },
+    "labels": {
+      "description": "Two independent label sets: how the author argued (source_method) and what the passage contains (content_type). Several values per set are normal. Together they must not both be empty — a pure takhrij or content passage may have no method, so the rule is expressed as anyOf rather than as minItems on each list.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/labelSets"
+        }
+      ],
+      "anyOf": [
+        {
+          "properties": {
+            "source_method": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "properties": {
+            "content_type": {
+              "minItems": 1
+            }
+          }
+        }
+      ]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Convenience copy of the pinned source slice. MUST equal source_file[start_char:end_char] exactly, including spaces, newlines and \\r characters. Never store a trimmed, normalized or edited variant here; re-verify before publishing."
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text_fidelity",
+        "strict_match",
+        "normalized_match"
+      ],
+      "description": "Result of comparing text against the pinned source slice when the record was exported.",
+      "properties": {
+        "text_fidelity": {
+          "type": "string",
+          "enum": [
+            "exact",
+            "partial",
+            "modified",
+            "not_found"
+          ],
+          "description": "exact = text is the source slice character for character; partial = text lies inside the slice but the boundaries need review; modified = text differs from the slice (an editorial change reached the text field); not_found = the source file or the slice could not be resolved."
+        },
+        "strict_match": {
+          "type": "boolean",
+          "description": "True only when text == source[start_char:end_char] character for character."
+        },
+        "normalized_match": {
+          "type": "boolean",
+          "description": "True when the comparison also holds after whitespace collapsing and tashkeel removal. It can be true while strict_match is false: that is a warning, not a pass."
+        }
+      }
+    },
+    "ai_proposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start_char",
+        "end_char",
+        "labels",
+        "certainty",
+        "score",
+        "route"
+      ],
+      "description": "Immutable snapshot of what the machine proposed before human review. Kept for traceability and audit; never publishable content on its own.",
+      "properties": {
+        "start_char": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_char": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Exclusive end; must be greater than start_char."
+        },
+        "labels": {
+          "$ref": "#/$defs/labelSets",
+          "description": "The machine's label sets. Unlike the approved labels, both lists may be empty here: the classifier is allowed to abstain (certainty: insufficient)."
+        },
+        "certainty": {
+          "type": "string",
+          "enum": [
+            "explicit",
+            "strong",
+            "weak",
+            "insufficient"
+          ],
+          "description": "How explicit the textual marker behind the proposal is."
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Auditable rule score (marker + function evidence + attribution + boundary)."
+        },
+        "route": {
+          "type": "string",
+          "enum": [
+            "auto_candidate",
+            "specialist"
+          ],
+          "description": "Triage decision: auto_candidate may be batched ahead; specialist must be decided by a human specialist."
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reviewer_role",
+        "reviewed_at",
+        "changes"
+      ],
+      "description": "Human review state plus audit trail.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "ai_proposed",
+            "under_review",
+            "approved",
+            "rejected"
+          ],
+          "description": "Only \"approved\" is publishable content. ai_proposed and under_review are working states; rejected is kept for audit."
+        },
+        "reviewer_role": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Role of the human who made the decision.",
+          "examples": [
+            "tafsir_specialist"
+          ]
+        },
+        "reviewed_at": {
+          "$ref": "#/$defs/dateTime",
+          "description": "RFC 3339 timestamp of the current status.",
+          "examples": [
+            "2026-09-28T12:00:00Z"
+          ]
+        },
+        "changes": {
+          "type": "array",
+          "description": "Ordered audit log of reviewer actions; empty when approved without edits. Each entry needs 'at' and 'action'; the before/after state and context keys are kept as recorded by the review tool.",
+          "items": {
+            "$ref": "#/$defs/change"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "dateTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}[Tt][0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:[Zz]|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "RFC 3339 date-time, e.g. 2026-09-28T12:00:00Z. The pattern makes the check portable: in draft 2020-12 the format keyword is only an annotation unless the validator enables format assertion.",
+      "examples": [
+        "2026-09-28T12:00:00Z"
+      ]
+    },
+    "labelSets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_method",
+        "content_type"
+      ],
+      "properties": {
+        "source_method": {
+          "$ref": "#/$defs/sourceMethodList"
+        },
+        "content_type": {
+          "$ref": "#/$defs/contentTypeList"
+        }
+      }
+    },
+    "sourceMethodList": {
+      "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
+      "description": "The evidence the author used. Several values allowed; empty allowed (a pure takhrij or content passage may have no method).",
+      "items": {
+        "$ref": "#/$defs/sourceMethod"
+      }
+    },
+    "contentTypeList": {
+      "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
+      "description": "What the passage contains. Several values allowed; empty allowed.",
+      "items": {
+        "$ref": "#/$defs/contentType"
+      }
+    },
+    "sourceMethod": {
+      "type": "string",
+      "description": "M_QURAN قرآن بالقرآن · M_SUNNAH سنة · M_SAHABA صحابة · M_TABIIN تابعون · M_LUGHA لغة وغريب · M_QIRAAT قراءات · M_NUZUL أسباب نزول · M_SIRA مغازي وسير · M_ISRAILIYYAT إسرائيليات · M_RAY رأي واجتهاد",
+      "enum": [
+        "M_QURAN",
+        "M_SUNNAH",
+        "M_SAHABA",
+        "M_TABIIN",
+        "M_LUGHA",
+        "M_QIRAAT",
+        "M_NUZUL",
+        "M_SIRA",
+        "M_ISRAILIYYAT",
+        "M_RAY"
+      ]
+    },
+    "contentType": {
+      "type": "string",
+      "description": "C_FIQH فقه وأحكام · C_BALAGHA بلاغة · C_SHIR شعر · C_FADAIL فضائل · C_TAKHRIJ تخريج وحكم حديثي · C_NUZUL أسباب نزول · C_ISRAILIYYAT إسرائيليات · C_TAFSIR بيان معنى",
+      "enum": [
+        "C_FIQH",
+        "C_BALAGHA",
+        "C_SHIR",
+        "C_FADAIL",
+        "C_TAKHRIJ",
+        "C_NUZUL",
+        "C_ISRAILIYYAT",
+        "C_TAFSIR"
+      ]
+    },
+    "change": {
+      "type": "object",
+      "required": [
+        "at",
+        "action"
+      ],
+      "properties": {
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before": {},
+        "after": {},
+        "from": {},
+        "to": {},
+        "note": {
+          "type": "string"
+        },
+        "window": {
+          "type": "string"
+        },
+        "highlight_id": {
+          "type": "string"
+        },
+        "origin": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "window_id": "8_56",
+  "ayah": "8:56",
+  "span_count": 4,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 2,
+    "HADITH": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 30,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 62,
+          "end": 67,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 120,
+          "end": 128,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 160,
+          "end": 208,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 303,
+          "end": 335,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 403,
+          "end": 435,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 586,
+          "end": 618,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 731,
+          "end": 763,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 766,
+          "end": 789,
+          "span_id": "s004"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

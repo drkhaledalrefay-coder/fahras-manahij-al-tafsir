@@ -1,0 +1,396 @@
+{
+  "window_id": "8_31",
+  "ayah": "8:31",
+  "span_count": 23,
+  "family_counts": {
+    "QURAN": 5,
+    "HADITH": 15,
+    "SIRA": 3,
+    "ISNAD": 2,
+    "TABIIN": 2,
+    "LUGHA": 2,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 116,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 223,
+          "end": 275,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 875,
+          "end": 893,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 1088,
+          "end": 1095,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1128,
+          "end": 1146,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1268,
+          "end": 1273,
+          "span_id": "s009"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 1268,
+          "end": 1326,
+          "stripped": "حدثنا محمد بن بشار، حدثنا محمد بن جعفر، حدثنا شعبة، عن أبي",
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1288,
+          "end": 1293,
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1308,
+          "end": 1313,
+          "span_id": "s009"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1320,
+          "end": 1352,
+          "stripped": "عن أبي بشر، عن سعيد بن جبير قال:",
+          "span_id": "s009"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "name": "سعيد بن جبير",
+          "role": "SPEAKER",
+          "start": 1335,
+          "end": 1347,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1365,
+          "end": 1383,
+          "span_id": "s010"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 1386,
+          "end": 1393,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1522,
+          "end": 1535,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1538,
+          "end": 1556,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1622,
+          "end": 1640,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1684,
+          "end": 1697,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1700,
+          "end": 1718,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1807,
+          "end": 1952,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 2009,
+          "end": 2013,
+          "span_id": "s016"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "name": "سعيد بن جبير",
+          "role": "SPEAKER",
+          "start": 2053,
+          "end": 2065,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 2199,
+          "end": 2206,
+          "span_id": "s017"
+        },
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 2214,
+          "end": 2227,
+          "span_id": "s017"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2230,
+          "end": 2248,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2513,
+          "end": 2531,
+          "span_id": "s019"
+        }
+      ]
+    },
+    {
+      "span_id": "s020",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2561,
+          "end": 2587,
+          "span_id": "s020"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2603,
+          "end": 2606,
+          "span_id": "s020"
+        }
+      ]
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2711,
+          "end": 2916,
+          "span_id": "s022"
+        }
+      ]
+    },
+    {
+      "span_id": "s023",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2927,
+          "end": 2930,
+          "span_id": "s023"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 542,
+      "end": 757,
+      "text": "¬قول سعيد بن جبير أخرجه الطبري بسند صحيح من طريق أبي بشر جعفر عنه، وقول السدي أخرجه الطبري بسند حسن من طريق أسباط عنه، وهذان مرسلان يقوي أحدهما الآخر، وقول ابن جريج أخرجه الطبري بسند ضعيف ويتقوى بالمرسلين السابقين.¥",
+      "attached_span_id": "s004",
+      "grading": [
+        "صحيح",
+        "حسن",
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1953,
+      "end": 2003,
+      "text": "¬أخرجه الطبري بسنده ومتنه، ورجاله ثقات لكنه مرسل.¥",
+      "attached_span_id": "s015",
+      "grading": [
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2091,
+      "end": 2148,
+      "text": "¬أخرجه الطبري عن يعقوب عن هشيم به، رجاله ثقات لكنه مرسل.¥",
+      "attached_span_id": "s016",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2321,
+      "end": 2469,
+      "text": "¬أخرجه البخاري من حديث جبير بن مطعم - رضي الله عنه - (الصحيح، فرض الخمس، باب ما منَّ النبي - صلى الله عليه وسلم - على الأسارى من غير الخمس ح 3139).¥",
+      "attached_span_id": "s018",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1268,
+      "end": 1326,
+      "span_id": "s009",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 1320,
+      "end": 1352,
+      "span_id": "s009",
+      "marker": "عن…عن"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+DELTA to your previous phase-3 task (same repo). Do NOT commit. Do NOT touch data/raw, data/spans*, data/tags, data/layers.
+
+PROBLEM: the cross-source check is binary (in_source_b true/false). 16/25 units show ⚠️ although similarity is 0.90–0.99. That looks alarming and hides the useful information: the actual differing words. Some differences are real typos in Source A, e.g. in 2:255 Source A reads «أي آية في القرن أعظم؟» where Source B has «القرآن»; also الأسقع (A) vs الأسفع (B), القرطيسي (A) vs القراطيسي (B), يقولإن (A, missing space).
+
+CHANGE src/build_index.py:
+1. For each display unit, compute a word-level diff at L1 (src/normalize.py l1_normalize) between the unit text (A) and the best-aligned window of Source B (align using the largest matching block, window = len(A)+10 words).
+2. Drop edge artifacts: remove leading/trailing opcodes that are pure "insert" (B words outside the unit). Keep everything else, including leading "delete" (e.g. A includes the verse text that B omits).
+3. Classify each difference: "missing_in_b" (A words absent in B), "extra_in_b" (B words absent in A, internal only), "variant" (replace). For each store {kind, a_words, b_words}.
+4. Per unit: cross_source = "identical" (no internal diffs) | "minor" (only variants of ≤2 words each and ≤4 diffs total) | "different" (otherwise). Keep match_ratio.
+5. Add to summary a list "source_a_suspect_typos": variants where B's word is a real word that A's word is a one-letter-off form of (edit distance 1 at the letter level) — include القرن/القرآن, الأسقع/الأسفع, القرطيسي/القراطيسي, and the missing-space case. Compute generically; do not hardcode these words.
+
+CHANGE the page (src/index_template.html):
+1. Replace the binary integrity line with:
+   - "✅ مطابق لنسخة مركز تفسير حرفاً بحرف" (verbatim_ok — unchanged meaning)
+   - cross-source badge: identical -> "✅ مطابق للمصدر الثاني"; minor -> "🔎 فروق طفيفة مع المصدر الثاني (N)"; different -> "⚠️ فروق مع المصدر الثاني (N)".
+   - A button "اعرض الفروق" that expands a small table: "نسخة مركز تفسير" | "المصدر الثاني (quran.com)" with the differing words highlighted (A in one color, B in another), and kind in plain Arabic: "كلمة مختلفة" / "غير موجود في المصدر الثاني" / "زائد في المصدر الثاني".
+   - One helper sentence under the table: "الفروق لا تعني خطأ ابن كثير؛ قد تكون خطأً طباعياً في إحدى النسختين أو اختلاف طبعات، ويحسمها المتخصص بالرجوع إلى المطبوع."
+2. In "ماذا أثبتت التجربة؟" add a highlighted finding card titled "المطابقة كشفت أخطاءً في النسخة الرقمية نفسها" listing the suspect typos from summary.source_a_suspect_typos (A word → B word, with ayah), and one line: "مثال: «أي آية في القرن أعظم؟» بدل «القرآن» — خطأ في النسخة الرقمية لا في كلام ابن كثير."
+3. Add a filter option in status or a separate select "المطابقة مع المصدر الثاني": الكل / مطابق / فروق طفيفة / فروق.
+
+GATES: re-run python src/build_index.py and your gate check; additionally print per-ayah counts of identical/minor/different and the full suspect_typos list.
+
+REPORT: those counts, the suspect typo list, html size. Do not commit.

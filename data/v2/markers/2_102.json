@@ -1,0 +1,599 @@
+{
+  "window_id": "2_102",
+  "ayah": "2:102",
+  "span_count": 31,
+  "family_counts": {
+    "RAY": 5,
+    "HADITH": 15,
+    "ISNAD": 8,
+    "ISRAILIYYAT": 6,
+    "TABIIN": 3,
+    "SAHABA": 2,
+    "EDITOR": 10
+  },
+  "spans": [
+    {
+      "span_id": "s262",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 25910,
+          "end": 25913,
+          "span_id": "s262"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 25944,
+          "end": 25962,
+          "span_id": "s262"
+        }
+      ]
+    },
+    {
+      "span_id": "s263",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 25993,
+          "end": 26011,
+          "span_id": "s263"
+        }
+      ]
+    },
+    {
+      "span_id": "s264",
+      "markers": []
+    },
+    {
+      "span_id": "s265",
+      "markers": []
+    },
+    {
+      "span_id": "s266",
+      "markers": []
+    },
+    {
+      "span_id": "s267",
+      "markers": []
+    },
+    {
+      "span_id": "s268",
+      "markers": []
+    },
+    {
+      "span_id": "s269",
+      "markers": []
+    },
+    {
+      "span_id": "s270",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 26237,
+          "end": 26241,
+          "span_id": "s270"
+        },
+        {
+          "family": "RAY",
+          "marker": "وأقرب",
+          "start": 26251,
+          "end": 26256,
+          "span_id": "s270"
+        }
+      ]
+    },
+    {
+      "span_id": "s271",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 26323,
+          "end": 26361,
+          "stripped": "عن كعب الأحبار، لا عن النبي - صلى الله",
+          "span_id": "s271"
+        },
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 26326,
+          "end": 26337,
+          "span_id": "s271"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "كعب الأحبار",
+          "name": "كعب الأحبار",
+          "role": "NARRATOR",
+          "start": 26326,
+          "end": 26337,
+          "span_id": "s271"
+        },
+        {
+          "family": "HADITH",
+          "marker": "النبي",
+          "role": "SPEAKER",
+          "start": 26345,
+          "end": 26350,
+          "span_id": "s271"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 26353,
+          "end": 26371,
+          "span_id": "s271"
+        }
+      ]
+    },
+    {
+      "span_id": "s272",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 26442,
+          "end": 26472,
+          "stripped": "عن الثوري، عن موسى بن عقبة، عن",
+          "span_id": "s272"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 26479,
+          "end": 26506,
+          "stripped": "عن ابن عمر، عن كعب الأحبار؛",
+          "span_id": "s272"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عمر",
+          "name": "ابن عمر",
+          "role": "NARRATOR",
+          "start": 26482,
+          "end": 26489,
+          "span_id": "s272"
+        },
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 26494,
+          "end": 26505,
+          "span_id": "s272"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "كعب الأحبار",
+          "name": "كعب الأحبار",
+          "role": "NARRATOR",
+          "start": 26494,
+          "end": 26505,
+          "span_id": "s272"
+        }
+      ]
+    },
+    {
+      "span_id": "s273",
+      "markers": []
+    },
+    {
+      "span_id": "s274",
+      "markers": []
+    },
+    {
+      "span_id": "s275",
+      "markers": []
+    },
+    {
+      "span_id": "s276",
+      "markers": []
+    },
+    {
+      "span_id": "s277",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 26811,
+          "end": 26815,
+          "span_id": "s277"
+        }
+      ]
+    },
+    {
+      "span_id": "s278",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 26857,
+          "end": 26861,
+          "span_id": "s278"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 26876,
+          "end": 26918,
+          "stripped": "عن أحمد بن عصام، عن مؤمل، عن سفيان الثوري،",
+          "span_id": "s278"
+        }
+      ]
+    },
+    {
+      "span_id": "s279",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 26925,
+          "end": 26929,
+          "span_id": "s279"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 26960,
+          "end": 26965,
+          "span_id": "s279"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 26992,
+          "end": 26997,
+          "span_id": "s279"
+        },
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 27074,
+          "end": 27085,
+          "span_id": "s279"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "كعب الأحبار",
+          "name": "كعب الأحبار",
+          "role": "NARRATOR",
+          "start": 27074,
+          "end": 27085,
+          "span_id": "s279"
+        }
+      ]
+    },
+    {
+      "span_id": "s280",
+      "markers": []
+    },
+    {
+      "span_id": "s281",
+      "markers": []
+    },
+    {
+      "span_id": "s282",
+      "markers": [
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 27740,
+          "end": 27751,
+          "span_id": "s282"
+        },
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "كتب بني إسرائيل",
+          "start": 27755,
+          "end": 27770,
+          "span_id": "s282"
+        },
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 27759,
+          "end": 27770,
+          "span_id": "s282"
+        },
+        {
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 27772,
+          "end": 27782,
+          "span_id": "s282"
+        }
+      ]
+    },
+    {
+      "span_id": "s283",
+      "markers": []
+    },
+    {
+      "span_id": "s284",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 28028,
+          "end": 28033,
+          "span_id": "s284"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 28028,
+          "end": 28061,
+          "stripped": "حدثنا الحجاج، حدثنا حماد، عن خالد",
+          "span_id": "s284"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 28042,
+          "end": 28047,
+          "span_id": "s284"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 28054,
+          "end": 28086,
+          "stripped": "عن خالد الحذاء، عن عمير بن سعيد؛",
+          "span_id": "s284"
+        }
+      ]
+    },
+    {
+      "span_id": "s285",
+      "markers": []
+    },
+    {
+      "span_id": "s286",
+      "markers": []
+    },
+    {
+      "span_id": "s287",
+      "markers": []
+    },
+    {
+      "span_id": "s288",
+      "markers": []
+    },
+    {
+      "span_id": "s289",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 28685,
+          "end": 28689,
+          "span_id": "s289"
+        }
+      ]
+    },
+    {
+      "span_id": "s290",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 28992,
+          "end": 28997,
+          "span_id": "s290"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 28992,
+          "end": 29077,
+          "stripped": "حدثنا الفضل بن شاذان، حدثنا محمد بن عيسى، حدثنا إبراهيم بن موسى، حدثنا أبو معاوية، عن",
+          "span_id": "s290"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 29014,
+          "end": 29019,
+          "span_id": "s290"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 29034,
+          "end": 29039,
+          "span_id": "s290"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 29057,
+          "end": 29062,
+          "span_id": "s290"
+        }
+      ]
+    },
+    {
+      "span_id": "s291",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 29278,
+          "end": 29313,
+          "stripped": "عن عمير بن سعيد، عن علي (- رضي الله",
+          "span_id": "s291"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "علي",
+          "name": "علي",
+          "role": "NARRATOR",
+          "start": 29298,
+          "end": 29301,
+          "span_id": "s291"
+        }
+      ]
+    },
+    {
+      "span_id": "s292",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 26265,
+      "end": 26288,
+      "text": "¬في (ن): \"ما يكون في\".¥",
+      "attached_span_id": "s270",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 26406,
+      "end": 26440,
+      "text": "¬(1/ 53) وقد مضى تخريجه منذ قليل.¥",
+      "attached_span_id": "s271",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 27168,
+      "end": 27691,
+      "text": "¬وهكذا قال أهل العلم. قال ابن معين: \"يقولون: إن نافعًا لم يحدث حتى مات سالم\" وقال ابن المديني، كما في \"التمهيد\" (13/ 282) لابن عبد البر، عن الأحاديث التي اختلف فيها نافع وسالم: \"القول فيها قول سالم\". وقال النسائي: \"سالم أجل من نافع\". وقال الطحاوي في \"شرح المعاني\" (1/ 378): \"وسالم أثبت من نافع وأحفظ\".\r\nوذكر أبو داود في \"سننه\" (3434) أن سالمًا [وقع في \"المطبوعة\": الزهري. وهو خطأ] اختلف مع نافع في أربعة أحاديث. وذكر النسائي أنها ثلاثة، رجح النسائي فيها قول نافع. ورجح ابن المديني قول سالم. وانظر \"فتح الباري\" (5/ 51، 52).¥",
+      "attached_span_id": "s280",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 27870,
+      "end": 28012,
+      "text": "¬في \"تفسيره\" (1683) والمثنى هو ابن إبراهيم، والحجاج هو ابن منهال، وحماد هو ابن سلمة، وخالد هو ابن مهران الحذاء، ورجاله ثقات كما قال ابن كثير.¥",
+      "attached_span_id": "s283",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 28236,
+      "end": 28261,
+      "text": "¬لم يقع في رواية الطبري.¥",
+      "attached_span_id": "s286",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 28307,
+      "end": 28440,
+      "text": "¬كذا في (ع) و (ك) و (ن) و (ى). ووقع في (ج) و (ل): \"المتكلم\"، وأشار ناسخ (ن) في الحاشية إلى هذه الكلمة. ووقع في (ز) و (ض): \"تكلم به\".¥",
+      "attached_span_id": "s287",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 28539,
+      "end": 28679,
+      "text": "¬في (ج): \"جيد ورجاله ثقات\"، وكتب الناسخ لفظة: \"جيد\" بخط دقيق فوق السطر، وكأنها من تصرفه أو لعل ابن كثير كان كتبها ثم ضرب عليها. والله أعلم.¥",
+      "attached_span_id": "s288",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 28716,
+      "end": 28991,
+      "text": "¬في \"تفسيره\" (1008).\r\nوأخرجه الحاكم في \"المستدرك\" (2/ 265، 266)؛ وأبو الشيخ في \"كتاب العظمة\" (698/ 19) من طريق يعلى بن عبيد، حدثنا إسماعيل بن أبي خالد، عن عمير بن سعيد، عن علي به؛ وأخرجه ابن أبي الدنيا في \"العقوبات\" (223) من طريق جرير بن عبد الحميد، عن إسماعيل به وسنده قوي.¥",
+      "attached_span_id": "s289",
+      "grading": [
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 29093,
+      "end": 29276,
+      "text": "¬كذا في (ج) و (ع) و (ك) و (ى). ووقع في (ض): \"ابن أبي حاتم\"؛ وفي (ز): \"عن خالد\" و (ل) و (ن): \"عن أبي خالد\" وكل هذا خطأ. والصواب: ما أثبته، وهو إسماعيل بن أبي خالد، أحد الثقات الأثبات.¥",
+      "attached_span_id": "s290",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 29321,
+      "end": 29330,
+      "text": "¬من (ن).¥",
+      "attached_span_id": "s291",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 26323,
+      "end": 26361,
+      "span_id": "s271",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 26442,
+      "end": 26472,
+      "span_id": "s272",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 26479,
+      "end": 26506,
+      "span_id": "s272",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 26876,
+      "end": 26918,
+      "span_id": "s278",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 28028,
+      "end": 28061,
+      "span_id": "s284",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 28054,
+      "end": 28086,
+      "span_id": "s284",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 28992,
+      "end": 29077,
+      "span_id": "s290",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 29278,
+      "end": 29313,
+      "span_id": "s291",
+      "marker": "عن…عن"
+    }
+  ]
+}

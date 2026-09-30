@@ -1,0 +1,88 @@
+TASK: Build the competition presentation as HTML slides and print it to PDF with headless Chrome. Include real screenshots of the demo app. Do NOT commit. Do NOT modify anything outside deck/ (read-only everywhere else).
+
+REPO: this folder (tafsir-integrity). Demo app: web/app.html (single file, works offline except Google Fonts). Data: web/index_data.json. Method: method/taxonomy.md, README.md.
+
+DELIVERABLES
+- deck/deck.html — 8 slides, 16:9, each slide exactly 1920x1080 CSS px, one <section class="slide"> per slide.
+- deck/shots/*.png — screenshots captured by you from web/app.html with headless Chrome (1440x900 viewport, deviceScaleFactor 1.5 if available).
+- deck/deck.pdf — printed from deck.html with headless Chrome (@page size 1920px 1080px; margin 0; print backgrounds). Must be < 10 MB.
+- deck/build_deck.(py|mjs) — the script that captures screenshots and prints the PDF, re-runnable.
+
+FIND CHROME: try "C:\Program Files\Google\Chrome\Application\chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", "%LOCALAPPDATA%\Google\Chrome\Application\chrome.exe", Edge "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe". For interactive screenshots (clicking a button), drive Chrome via the DevTools protocol (--remote-debugging-port) using Node's built-in WebSocket/fetch or Python stdlib; no npm installs. If interaction is impossible, use URL hash + a tiny inline query param is NOT allowed to change app.html — instead inject a script through DevTools Runtime.evaluate.
+
+SCREENSHOTS NEEDED (inject JS via DevTools to reach each state):
+1. shot_index.png — tab #fahras, search box filled with "القرن أعظم", the matching card's "اعرض الفروق" panel open (the row «القرن» vs «القرآن» visible).
+2. shot_reconcile.png — tab #mutabaqa, set "جدول الفريق (Excel)", unit AK-007 selected, AFTER clicking «مقارنة بالنص الأصلي» (wait ~1s for the sweep), both panes visible with red wavy marks.
+3. shot_experiment.png — tab #tajruba, the pipeline + facts + chart area.
+4. shot_kaab.png — tab #fahras, example chip "الإسرائيليات في هاروت وماروت" clicked, first card's "لماذا هذه الوسوم؟" opened.
+Crop to the relevant region if the full viewport is noisy. Hide the sticky tab bar only if it overlaps content.
+
+VISUAL IDENTITY (same as the app; colors and fonts only, no challenge logo, no challenge name as a brand mark):
+- Dark-first slides: background #00062c with faint 8-point star pattern (white ~5%) and soft radial glows violet rgba(98,81,235,.45) and teal rgba(47,238,195,.22).
+- Accent: violet #6251eb, teal #2feec3, blue #39a0fd, lilac #9b82ff, amber #ffc857, red #ff6b6b. Text #f2f4ff, secondary #a9b2da.
+- Brand gradient linear-gradient(90deg,#6251eb,#4e7fe0 38%,#3fb0d6 68%,#2feec3) ONLY on the title of slide 1 and the closing line of slide 8.
+- Fonts: "Readex Pro" (UI/headings), "Amiri" (tafsir/Quran quotes). Load from Google Fonts. RTL, dir="rtl" lang="ar".
+- Large type: slide titles 64–72px, body 30–36px, never below 24px. Max ~40 words of body text per slide. Screenshots framed in a rounded glass card (1px rgba(255,255,255,.14) border, 20px radius), not tilted, no fake device mockups.
+- Do NOT use side-stripe accent borders on cards. No emoji except the three status circles 🟢🟠🔴 where statuses are named.
+- No personal names anywhere. No vendor/model names in slides 1–7 (slide 5 may say "نموذجان من عائلتين مختلفتين").
+
+SLIDE CONTENT (use this Arabic text; you may tighten wording but not change claims):
+
+1. TITLE
+ - العنوان: الفهرس الموثَّق للتفسير
+ - سطر: نصٌّ لا يتغيّر، ووسومٌ تُراجَع
+ - صغير: المسار ٠٤ — أدوات المعرفة والتحقق لتمكين المعرّفين بالإسلام · نموذج تجريبي على تفسير ابن كثير
+
+2. المشكلة
+ - «أين استدل ابن كثير بالحديث في تفسير آية الكرسي؟» — سؤال بسيط، وجوابه اليوم: اقرأ الصفحات كلها.
+ - وإجابات الذكاء الاصطناعي عن القرآن لا يمكن تتبّع مصدرها: قد يعيد الصياغة أو ينسب للمفسر ما لم يقله.
+ - اقتباس معيار المسار (في إطار مميز): «أظهر المصدر وحالة الدليل بصورة واضحة وقابلة للتتبع، وميّز بين ما تؤيده المصادر وما يتطلب مزيداً من التحقق»
+
+3. الحل
+ - نحوّل التفسير من كتلة تُقرأ إلى وحدات تُسأل.
+ - كل وحدة = نص المفسر من مصدره دون تغيير حرف + وسمان:
+   ١ مصدر الدليل: قرآن · سنة · صحابة · تابعون · لغة · رأي
+   ٢ نوع المحتوى: أسباب نزول · فقه · إسرائيليات · فضائل · تخريج · بيان معنى
+ - الحالة ظاهرة: 🟡 مقترح آلياً · 🟠 بانتظار المتخصص · 🟢 معتمد
+ - screenshot: shot_index.png (or a cropped card)
+
+4. نقطتا تحكم — الموثوقية
+ - (أ) قبول المصدر: تنزيل آلي + بصمة رقمية + فصل كلام المؤلف عن حواشي المحقق + مطابقة مع نسخة ثانية.
+ - (ب) بعد الوسم: إعادة بناء كل وحدة من المصدر ومطابقتها حرفاً بحرف، ثم مراجعة بشرية على لوحتين — بلا أي مدخل جديد من نموذج.
+ - مثال في إطار: «[والخبر من الإسرائيليات]» — عبارة بين معقوفين في النسخة الرقمية، على الأرجح من المحقق. لو وسمناها لنسبناها لابن كثير. فصلناها برمجياً.
+ - draw a simple 2-node flow A → B with the brand gradient line (SVG), not a stock icon.
+
+5. دور الذكاء الاصطناعي
+ - يرتّب ولا يكتب: يُرجع أرقام أجزاء قطّعها الكود، لا نصاً — فيستحيل عليه تغيير حرف.
+ - نموذجان من عائلتين مختلفتين يوسمان كلٌّ على حدة: ما اتفقا عليه ترتفع ثقته، وما اختلفا فيه أو كان حساساً يُحال للمتخصص.
+ - العرض يعمل حتى لو فُصل النموذج — لأن الآلة ليست مصدر المحتوى.
+ - screenshot: shot_kaab.png with caption «خبر كعب الأحبار: اختلف الفاحصان ← أُحيل للمتخصص»
+
+6. ماذا أثبتت التجربة
+ - big numbers (tabular): ١٠٠٪ «لم يتغيّر حرف من النسخة المصدر» · ٩١٪ «اتفاق الفاحصَين في مصدر الدليل» · ٨٧٪ ← ٩٨٪ «تطابق المصدرين بعد فصل حواشي المحقق (آية الكرسي)»
+ - screenshot: shot_reconcile.png with caption «المطابقة تكشف فروق الرقمنة: «القرن» في موضع «القرآن» — والحكم للمتخصص بالرجوع إلى المطبوع»
+ - small note: تجربة أولى على ٣ آيات و١٤٣ جزءاً — أرقام تجربة لا نسبة دقة نهائية.
+
+7. ما الجديد؟
+ - three columns, each a short line:
+   «اليوم: تفسير الآية كتلة واحدة» ← «نحن: تقسيم داخل نص المفسر نفسه»
+   «اليوم: تصنيف وقفات وتدبرات» ← «نحن: وسمان على النص الأصلي، مع حالة ظاهرة»
+   «اليوم: إجابات آلية بلا مصدر» ← «نحن: كل وحدة منسوبة ومطابَقة للأصل»
+ - line: طبقة فوق المصادر الرقمية المتاحة — لا بديلاً عنها.
+ - خارطة الطريق (small chips): بطاقة منهج التحقيق لكل طبعة · أساس الوسم (المفسر / كتاب متخصص / المتخصص) · وسم المغازي والسير · تفاسير أخرى
+
+8. الخطة والفريق
+ - الأيام الثلاثة: ١ توسيع العيّنة ودليل الوسوم · ٢ الوسم بنماذج متعددة والمطابقة · ٣ مراجعة المتخصص والعرض والمستودع العام
+ - الفريق (roles only, no names): متخصص شرعي · مطوّر · تحليل بيانات ومنهجية
+ - closing (gradient text, Amiri for the quote):
+   ﴿وَبِالْحَقِّ أَنزَلْنَاهُ وَبِالْحَقِّ نَزَلَ﴾
+   قال ابن كثير: «وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه»
+   (quote EXACTLY as written here — it is verbatim from the pinned source, data/raw/tafsircenter/17_105.txt; do not add or change diacritics)
+   ونحن نحفظ لنصّ المفسر الأمانة نفسها: لا يُزاد فيه حرف ولا يُنقص.
+
+GATES (run and paste output):
+- deck.pdf exists, page count = 8, file size < 10 MB (print size).
+- each screenshot exists and is non-empty; print their pixel sizes.
+- grep deck.html for forbidden: "Grok", "Codex", "Claude", "GPT", "Cursor", personal names — report hits (expect none).
+
+REPORT: files created, PDF size, page count, how screenshots were captured, anything that failed. Do not commit.

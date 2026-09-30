@@ -1,0 +1,7 @@
+FINAL POLISH on deck/pitch/idea.pptx / idea.pdf via deck/pitch/build_deck.py. Keep all limits (≤10 slides, <10 MB) and rules. Do not commit.
+1. Slide 10: the verse ﴿وَبِالْحَقِّ أَنزَلْنَاهُ وَبِالْحَقِّ نَزَلَ﴾ is now tiny. Make it the hero: centered, ≥ 54 pt, Amiri (or the template's display font if Amiri unavailable in PowerPoint — then embed-safe fallback "Traditional Arabic"), clear spacing; «نحفظ لنصّ المفسِّر الأمانة» ≥ 24 pt below it; credits line ≥ 12 pt.
+2. Slide 5: the «المصدر» body text is tiny — same size as the other three blocks on that slide (shorten if needed: «نص مركز تفسير (بيانات مفتوحة CC BY 4.0) · نبدأ بالطبري (ت ٣١٠هـ) · الأداة تدرس منهج المفسِّر ولا تتخذ التفسير مصدراً لإجابة أو فتوى»).
+3. Slide 7: table text for التفسير and النموذج columns ≥ 16 pt (same as numbers' weight class), header ≥ 16 pt bold; subtitle line ≥ 14 pt.
+4. Slide 4 title: bidi still wrong («JSONمعتمد»). Rewrite as «من النص المُثبَّت إلى ملف معتمد (JSON)» so the Latin token sits at the end in parentheses; do the same pattern anywhere a Latin token sits between Arabic words and renders wrong (check slides 4, 7, 8, 9, 10 in the PDF render).
+5. Re-render the PDF and inspect every page image; list any remaining clipped/tiny (< 12 pt) text.
+GATES: slide count, sizes, placeholder scan, per-slide min font size. Do not commit.

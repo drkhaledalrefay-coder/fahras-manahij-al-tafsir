@@ -1,0 +1,82 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/anfal/al_saadi/raw/8_60.txt",
+  "ayah": "8:60",
+  "surah": 8,
+  "ayah_number": 60,
+  "source_char_length": 1947,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 656,
+      "kind": "author"
+    },
+    {
+      "start": 656,
+      "end": 665,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 665,
+      "end": 865,
+      "kind": "author"
+    },
+    {
+      "start": 865,
+      "end": 901,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 901,
+      "end": 1129,
+      "kind": "author"
+    },
+    {
+      "start": 1129,
+      "end": 1178,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1178,
+      "end": 1947,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 1853,
+    "layout": 0,
+    "apparatus": 94
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 2
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 9,
+    "footnote": 85
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 2,
+    "footnote_close": 2,
+    "footnotes_closed": 2,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[والحصون]": 1
+    }
+  }
+}

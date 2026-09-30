@@ -1,0 +1,1446 @@
+<title>شاشة المطابقة — نقطة التحكم الثانية</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f4f6f5;
+    --surface: #ffffff;
+    --ink: #17201e;
+    --muted: #5b6b67;
+    --line: #d9e0dd;
+    --primary: #1f5f5b;
+    --matched: #2f7a4b;
+    --matched-bg: #e3f3e8;
+    --highlighted: #9a6b00;
+    --highlighted-bg: #fdf0cf;
+    --discrepancy: #b4311f;
+    --discrepancy-bg: #fbe0da;
+    --on-primary: #ffffff;
+    --hatch: rgba(154, 107, 0, 0.45);
+    --font-ui: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+    --font-text: "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Times New Roman", serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #101614;
+      --surface: #1a2220;
+      --ink: #e8efec;
+      --muted: #a9b8b3;
+      --line: #31403c;
+      --primary: #8fd0c8;
+      --matched: #8ed0a6;
+      --matched-bg: #173226;
+      --highlighted: #e4c36a;
+      --highlighted-bg: #3a2e12;
+      --discrepancy: #f0a497;
+      --discrepancy-bg: #3d1e1a;
+      --on-primary: #10201e;
+      --hatch: rgba(228, 195, 106, 0.55);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #101614;
+    --surface: #1a2220;
+    --ink: #e8efec;
+    --muted: #a9b8b3;
+    --line: #31403c;
+    --primary: #8fd0c8;
+    --matched: #8ed0a6;
+    --matched-bg: #173226;
+    --highlighted: #e4c36a;
+    --highlighted-bg: #3a2e12;
+    --discrepancy: #f0a497;
+    --discrepancy-bg: #3d1e1a;
+    --on-primary: #10201e;
+    --hatch: rgba(228, 195, 106, 0.55);
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  * { box-sizing: border-box; }
+
+  .app {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px;
+    overflow-x: clip;
+    font-family: var(--font-ui);
+    font-size: 16px;
+    line-height: 1.55;
+    background: var(--bg);
+    color: var(--ink);
+    border-top: 4px solid var(--primary);
+  }
+
+  h1 {
+    font-size: 1.45rem;
+    line-height: 1.35;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
+  }
+
+  .subtitle {
+    margin: 0;
+    max-width: 46rem;
+    color: var(--ink);
+  }
+
+  .quiet {
+    margin: 0.4rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    align-items: center;
+    margin: 0.8rem 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    overflow-wrap: anywhere;
+  }
+
+  button, input, textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    min-height: 2.4rem;
+    cursor: pointer;
+  }
+
+  button:hover { border-color: var(--primary); }
+
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  .unit:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: flex-end;
+    margin-top: 1rem;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  legend {
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 0.35rem;
+  }
+
+  .choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-inline-end: 0.8rem;
+    min-height: 2.2rem;
+  }
+
+  .units-wrap { margin-top: 0.8rem; }
+
+  .unit-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .units {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    max-height: 9.5rem;
+    overflow: auto;
+    padding: 0.15rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+
+  .unit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    max-width: 100%;
+    text-align: right;
+    background: transparent;
+  }
+
+  .unit[aria-pressed="true"] {
+    border-color: var(--primary);
+    box-shadow: inset 0 0 0 1px var(--primary);
+  }
+
+  .unit-id {
+    font-weight: 600;
+    font-size: 0.86rem;
+  }
+
+  .unit-snip {
+    color: var(--muted);
+    font-size: 0.75rem;
+    max-width: 16rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .compare {
+    margin-top: 0.85rem;
+    background: var(--primary);
+    color: var(--on-primary);
+    border-color: var(--primary);
+    font-weight: 600;
+    min-height: 2.8rem;
+    padding-inline: 1rem;
+  }
+
+  .key {
+    margin: 0.55rem 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .panes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 0.9rem;
+  }
+
+  .pane {
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .pane-source { order: 1; }
+  .pane-ann { order: 2; }
+
+  .pane h2 {
+    margin: 0 0 0.45rem;
+    font-size: 0.98rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.3rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0 0 0.45rem;
+  }
+
+  .tag {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.05rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--ink);
+    background: var(--bg);
+  }
+
+  .tag small {
+    color: var(--muted);
+    margin-inline-start: 0.25rem;
+  }
+
+  .aside {
+    margin: 0 0 0.45rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .pane-body {
+    position: relative;
+    overflow: auto;
+    max-height: 68vh;
+    min-height: 8rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .tafsir {
+    font-family: var(--font-text);
+    font-size: 1.28rem;
+    line-height: 2.2;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0;
+  }
+
+  .apparatus { color: var(--muted); }
+  .verse-ref { color: var(--muted); }
+
+  .loc {
+    box-shadow: inset 0 -2px 0 var(--primary);
+  }
+
+  .mark.matched {
+    background: var(--matched-bg);
+    text-decoration: underline solid var(--matched);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+  }
+
+  .mark.highlighted,
+  .mark.elision_marker {
+    background: var(--highlighted-bg);
+    text-decoration: underline dashed var(--highlighted);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+  }
+
+  .mark.discrepancy {
+    background: var(--discrepancy-bg);
+    text-decoration: underline wavy var(--discrepancy);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
+  }
+
+  .mark.elision {
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      var(--hatch) 5px,
+      var(--hatch) 6px
+    );
+    text-decoration: underline dashed var(--highlighted);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+  }
+
+  .mark.apparatus {
+    text-decoration: underline dashed var(--muted);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+  }
+
+  .state-label {
+    font-family: var(--font-ui);
+    font-size: 0.68rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-inline: 0.15rem;
+    padding: 0 0.28rem;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    vertical-align: super;
+    white-space: nowrap;
+  }
+
+  .chip {
+    display: inline-block;
+    margin-inline: 0.15rem;
+    padding: 0 0.3rem;
+    border: 1px dashed var(--discrepancy);
+    background: var(--discrepancy-bg);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    vertical-align: middle;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .finding {
+    margin: 0.9rem 0 0;
+    font-size: 1.02rem;
+  }
+
+  .notice {
+    margin: 0.35rem 0 0;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .status {
+    min-height: 1.3rem;
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-size: 0.86rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+    margin-top: 0.8rem;
+  }
+
+  .accept {
+    background: var(--primary);
+    color: var(--on-primary);
+    border-color: var(--primary);
+    font-weight: 600;
+  }
+
+  .reject {
+    border-color: var(--discrepancy);
+    color: var(--discrepancy);
+    font-weight: 600;
+  }
+
+  .note {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.7rem;
+    max-width: 42rem;
+  }
+
+  .note textarea,
+  #log {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+    padding: 0.5rem 0.6rem;
+    resize: vertical;
+  }
+
+  #log-panel { margin-top: 0.8rem; }
+  #log { min-height: 10rem; font-family: ui-monospace, Consolas, monospace; font-size: 0.78rem; direction: ltr; text-align: left; }
+
+  .bound-label {
+    width: 100%;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  @media (max-width: 860px) {
+    .panes { grid-template-columns: 1fr; }
+    .pane-body { max-height: 50vh; }
+    .unit-snip { max-width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<div class="app" id="app" dir="rtl" lang="ar">
+  <h1>شاشة المطابقة — نقطة التحكم الثانية</h1>
+  <p class="subtitle">لا يحكم النظام بأن النص مطابق؛ المراجع يرى المقارنة بعينه ويقرر.</p>
+  <p class="quiet">لا يُشغَّل نموذج في هذه الخطوة، ولا يُضاف مدخل جديد. القبول والرفض فعل بشري فقط.</p>
+  <p class="meta">
+    <span>ابن كثير · البقرة ٢:٢٥٥ · آية الكرسي</span>
+    <span class="ltr" id="sha"></span>
+    <button type="button" id="theme">المظهر</button>
+  </p>
+
+  <div class="toolbar">
+    <fieldset>
+      <legend>مجموعة الوسوم</legend>
+      <label class="choice"><input type="radio" name="set" value="system"> مخرجات النظام</label>
+      <label class="choice"><input type="radio" name="set" value="excel" checked> جدول الفريق (Excel)</label>
+    </fieldset>
+  </div>
+
+  <div class="units-wrap">
+    <div class="unit-nav">
+      <button type="button" id="prev">السابق</button>
+      <button type="button" id="next">التالي</button>
+      <span class="quiet" id="pos"></span>
+    </div>
+    <div class="units" id="units" role="listbox" aria-label="الوحدات"></div>
+  </div>
+
+  <button type="button" class="compare" id="compare">مقارنة بالنص الأصلي</button>
+  <p class="key">بعد المقارنة: خط متصل = <span lang="en" dir="ltr">matched</span>، خط متقطع = <span lang="en" dir="ltr">highlighted</span>، خط مموج = <span lang="en" dir="ltr">discrepancy</span>، تظليل مائل = محذوف من النص الموسوم. اللون ليس الإشارة الوحيدة.</p>
+
+  <div class="panes">
+    <section class="pane pane-source" aria-labelledby="source-title">
+      <h2 id="source-title">النص الأصلي (المصدر)</h2>
+      <p class="quiet ltr" id="source-meta"></p>
+      <div class="pane-body" id="source-body" tabindex="0"><p class="tafsir" id="source-text"></p></div>
+    </section>
+    <section class="pane pane-ann" aria-labelledby="ann-title">
+      <h2 id="ann-title">النص الموسوم</h2>
+      <div class="tags" id="tags"></div>
+      <p class="aside" id="note-aside"></p>
+      <div class="pane-body" id="ann-body" tabindex="0"><p class="tafsir" id="ann-text"></p></div>
+    </section>
+  </div>
+
+  <p class="finding" id="finding" aria-live="polite">لم تُعرض المقارنة بعد. اضغط «مقارنة بالنص الأصلي» لرسم الفروق على النص.</p>
+  <p class="notice" id="notice" hidden>نتيجة بصرية — تحتاج تأكيد المراجع</p>
+  <p class="status" id="status"></p>
+
+  <div class="actions">
+    <button type="button" class="accept" id="accept">قبول</button>
+    <button type="button" class="reject" id="reject">رفض</button>
+    <span class="bound-label">تقليص وتوسيع حد المصدر</span>
+    <button type="button" data-nudge="start-shrink">−بداية</button>
+    <button type="button" data-nudge="start-expand">+بداية</button>
+    <button type="button" data-nudge="end-shrink">−نهاية</button>
+    <button type="button" data-nudge="end-expand">+نهاية</button>
+    <button type="button" id="show-log" aria-expanded="false">عرض السجل</button>
+  </div>
+
+  <label class="note">ملاحظة المراجع (اختيارية)
+    <textarea id="review-note" rows="2"></textarea>
+  </label>
+
+  <div id="log-panel" hidden>
+    <textarea id="log" readonly aria-label="سجل قرارات المراجع"></textarea>
+    <div class="actions">
+      <button type="button" id="copy">نسخ السجل</button>
+      <span class="status" id="copy-status"></span>
+    </div>
+  </div>
+</div>
+<script type="application/json" id="data">__RECONCILE_JSON__</script>
+<script>
+(function () {
+  "use strict";
+  var data = JSON.parse(document.getElementById("data").textContent);
+  var STORE = "tafsir-reconcile-checkpoint-b-2-255";
+  var SENT = { ".": 1, "!": 1, "?": 1, "\u061f": 1, "\u061b": 1, "\u2026": 1, "\n": 1, "\r": 1, "\u06d4": 1 };
+  var SLACK = 6;
+  var EDGE = "\"'«»“”‘’()[]{}:،,.؛؟!?…\\-–—";
+  var state = {
+    setId: "excel",
+    unitId: "AK-007",
+    compared: false,
+    boundary: null,
+    notes: {},
+    records: loadRecords(),
+    theme: 0
+  };
+
+  function loadRecords() {
+    try {
+      var raw = localStorage.getItem(STORE);
+      if (!raw) return [];
+      var parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function saveRecords() {
+    try {
+      localStorage.setItem(STORE, JSON.stringify(state.records));
+    } catch (err) {
+      /* memory copy remains */
+    }
+  }
+
+  function setById(id) {
+    for (var i = 0; i < data.sets.length; i++) {
+      if (data.sets[i].id === id) return data.sets[i];
+    }
+    return data.sets[0];
+  }
+
+  function currentSet() { return setById(state.setId); }
+
+  function currentUnit() {
+    var units = currentSet().units;
+    for (var i = 0; i < units.length; i++) {
+      if (units[i].unit_id === state.unitId) return units[i];
+    }
+    return units[0];
+  }
+
+  function keyOf(unit) { return state.setId + ":" + unit.unit_id; }
+
+  function originalBoundary(unit) {
+    return { start: unit.location.start, end: unit.location.end };
+  }
+
+  function boundaryOf(unit) {
+    if (!state.boundary) state.boundary = originalBoundary(unit);
+    return state.boundary;
+  }
+
+  function sameBoundary(a, b) { return a.start === b.start && a.end === b.end; }
+
+  function pretty(raw) {
+    var text = String(raw || "").trim();
+    while (text && EDGE.indexOf(text.charAt(0)) !== -1) text = text.slice(1);
+    while (text && EDGE.indexOf(text.charAt(text.length - 1)) !== -1) text = text.slice(0, -1);
+    return text || String(raw || "");
+  }
+
+  function sliceRaw(absStart, absEnd) {
+    var base = data.source.window_start;
+    return data.source.text.slice(absStart - base, absEnd - base);
+  }
+
+  function charBefore(start) {
+    if (start <= data.source.window_start) return null;
+    return data.source.text.charAt(start - data.source.window_start - 1);
+  }
+
+  function charAfter(end) {
+    if (end >= data.source.window_end) return data.source.next_char;
+    return data.source.text.charAt(end - data.source.window_start);
+  }
+
+  function describeChar(ch) {
+    if (ch === " ") return "مسافة";
+    if (ch === "\n" || ch === "\r") return "سطر جديد";
+    if (ch === "\u00ac") return "علامة بداية الحاشية (¬)";
+    if (ch === "\u00a5") return "علامة نهاية الحاشية (¥)";
+    return "«" + ch + "»";
+  }
+
+  function sentenceIssues(start, end) {
+    var issues = [];
+    var prev = charBefore(start);
+    var next = charAfter(end);
+    if (prev !== null && !SENT[prev]) {
+      issues.push("بداية الوحدة ليست على حد جملة: الحرف السابق " + describeChar(prev) + " وليس علامة جملة أو سطرًا جديدًا.");
+    }
+    if (next !== null && !SENT[next]) {
+      issues.push("نهاية الوحدة ليست على حد جملة: الحرف التالي " + describeChar(next) + " وليس علامة جملة أو سطرًا جديدًا.");
+    }
+    return issues;
+  }
+
+  function longestMatch(a, b, alo, ahi, blo, bhi) {
+    var besti = alo, bestj = blo, bestsize = 0;
+    var j2len = new Map();
+    for (var i = alo; i < ahi; i++) {
+      var next = new Map();
+      for (var j = blo; j < bhi; j++) {
+        if (a[i] === b[j]) {
+          var k = (j2len.get(j - 1) || 0) + 1;
+          next.set(j, k);
+          if (k > bestsize) {
+            besti = i - k + 1;
+            bestj = j - k + 1;
+            bestsize = k;
+          }
+        }
+      }
+      j2len = next;
+    }
+    return [besti, bestj, bestsize];
+  }
+
+  function opcodes(a, b) {
+    var blocks = [];
+    var stack = [[0, a.length, 0, b.length]];
+    while (stack.length) {
+      var range = stack.pop();
+      var found = longestMatch(a, b, range[0], range[1], range[2], range[3]);
+      if (found[2] > 0) {
+        blocks.push(found);
+        if (range[0] < found[0] && range[2] < found[1]) stack.push([range[0], found[0], range[2], found[1]]);
+        if (found[0] + found[2] < range[1] && found[1] + found[2] < range[3]) {
+          stack.push([found[0] + found[2], range[1], found[1] + found[2], range[3]]);
+        }
+      }
+    }
+    blocks.sort(function (p, q) { return p[0] - q[0] || p[1] - q[1]; });
+    var ops = [];
+    var ai = 0, bi = 0;
+    for (var n = 0; n < blocks.length; n++) {
+      var i = blocks[n][0], j = blocks[n][1], k = blocks[n][2];
+      if (ai < i || bi < j) {
+        var tag = ai < i && bi < j ? "replace" : ai < i ? "delete" : "insert";
+        ops.push([tag, ai, i, bi, j]);
+      }
+      if (k) ops.push(["equal", i, i + k, j, j + k]);
+      ai = i + k;
+      bi = j + k;
+    }
+    if (ai < a.length || bi < b.length) {
+      var tail = ai < a.length && bi < b.length ? "replace" : ai < a.length ? "delete" : "insert";
+      ops.push([tail, ai, a.length, bi, b.length]);
+    }
+    return ops;
+  }
+
+  function authorInside(start, end) {
+    var out = [];
+    for (var i = 0; i < data.words.length; i++) {
+      var word = data.words[i];
+      if (word.layer === "author" && word.start >= start && word.end <= end) out.push(word);
+    }
+    return out;
+  }
+
+  function candidates(norms, author, startFrom) {
+    var count = norms.length;
+    var found = new Set();
+    function add(st, en) {
+      var length = en - st;
+      if (startFrom <= st && st < en && en <= author.length && length >= Math.max(1, count - SLACK) && length <= count + SLACK) {
+        found.add(st + ":" + en);
+      }
+    }
+    var hits = 0;
+    if (count >= 2) {
+      for (var index = 0; index < count - 1; index++) {
+        for (var pos = startFrom; pos < author.length - 1; pos++) {
+          if (author[pos].norm !== norms[index] || author[pos + 1].norm !== norms[index + 1]) continue;
+          hits += 1;
+          for (var preD = -SLACK; preD <= SLACK; preD++) {
+            for (var postD = -SLACK; postD <= SLACK; postD++) {
+              var pre = index + preD;
+              var post = count - index - 2 + postD;
+              if (pre < 0 || post < 0) continue;
+              add(pos - pre, pos + 2 + post);
+            }
+          }
+        }
+      }
+    }
+    if (hits === 0) {
+      for (var w = 0; w < count; w++) {
+        for (var p = startFrom; p < author.length; p++) {
+          if (author[p].norm !== norms[w]) continue;
+          for (var pre2 = -SLACK; pre2 <= SLACK; pre2++) {
+            for (var post2 = -SLACK; post2 <= SLACK; post2++) {
+              var preL = w + pre2;
+              var postL = count - w - 1 + post2;
+              if (preL < 0 || postL < 0) continue;
+              add(p - preL, p + 1 + postL);
+            }
+          }
+        }
+      }
+    }
+    var list = [];
+    found.forEach(function (key) {
+      var bits = key.split(":");
+      list.push([Number(bits[0]), Number(bits[1])]);
+    });
+    return list;
+  }
+
+  function scoreWindow(norms, author, st, en) {
+    var windowNorms = [];
+    for (var i = st; i < en; i++) windowNorms.push(author[i].norm);
+    var ops = opcodes(norms, windowNorms);
+    var equal = 0, deleted = 0, inserted = 0, replaced = 0, matches = 0;
+    for (var n = 0; n < ops.length; n++) {
+      var op = ops[n];
+      var span = op[2] - op[1];
+      if (op[0] === "equal") { equal += span; matches += span; }
+      else if (op[0] === "delete") deleted += span;
+      else if (op[0] === "insert") inserted += op[4] - op[3];
+      else replaced += span;
+    }
+    var total = norms.length + windowNorms.length;
+    var ratio = total ? (2 * matches) / total : 1;
+    return { key: [equal, -deleted, -inserted, -replaced, ratio, -st, -(en - st)], ops: ops };
+  }
+
+  function better(a, b) {
+    for (var i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) return a[i] > b[i];
+    }
+    return false;
+  }
+
+  function placeFragment(fragment, author, startFrom) {
+    var norms = fragment.map(function (word) { return word.norm; });
+    var best = null;
+    var cands = candidates(norms, author, startFrom);
+    for (var i = 0; i < cands.length; i++) {
+      var scored = scoreWindow(norms, author, cands[i][0], cands[i][1]);
+      if (!best || better(scored.key, best.key)) {
+        best = { key: scored.key, ops: scored.ops, start: cands[i][0], end: cands[i][1] };
+      }
+    }
+    return best;
+  }
+
+  function joinQuoted(words) {
+    return words.map(function (word) { return "«" + pretty(word) + "»"; }).join(" ");
+  }
+
+  function summaryFromDiffs(diffs) {
+    var variants = diffs.filter(function (d) { return d.kind === "variant"; });
+    var missing = diffs.filter(function (d) { return d.kind === "missing_in_annotation"; });
+    var extra = diffs.filter(function (d) { return d.kind === "extra_in_annotation"; });
+    var bits = [];
+    if (variants.length) {
+      var wordN = 0;
+      variants.forEach(function (item) {
+        wordN += Math.max(item.annotation_words.length, item.source_words.length, 1);
+      });
+      var head = variants.length === 1 && wordN === 1 ? "كلمة واحدة مختلفة" : wordN === 2 ? "كلمتان مختلفتان" : wordN + " كلمات مختلفة";
+      var parts = variants.map(function (item) {
+        return "«" + item.annotation_words.map(pretty).join(" ") + "» في النص الموسوم مقابل «" + item.source_words.map(pretty).join(" ") + "» في المصدر";
+      });
+      bits.push(head + ": " + parts.join("، و"));
+    }
+    if (missing.length) {
+      var mw = [];
+      missing.forEach(function (item) { item.source_words.forEach(function (w) { mw.push(pretty(w)); }); });
+      bits.push("في المصدر وليس في النص الموسوم: " + joinQuoted(mw));
+    }
+    if (extra.length) {
+      var ew = [];
+      extra.forEach(function (item) { item.annotation_words.forEach(function (w) { ew.push(pretty(w)); }); });
+      bits.push("في النص الموسوم وليس في المصدر: " + joinQuoted(ew));
+    }
+    return bits.length ? bits.join(". ") + "." : "";
+  }
+
+  function surfaceWords(words) {
+    var seen = {};
+    var out = [];
+    words.forEach(function (word) {
+      var key = word.start + ":" + word.end;
+      if (seen[key]) return;
+      seen[key] = 1;
+      out.push(sliceRaw(word.start, word.end));
+    });
+    return out;
+  }
+
+  function annSurface(unit, words) {
+    var seen = {};
+    var out = [];
+    words.forEach(function (word) {
+      var key = word.start + ":" + word.end;
+      if (seen[key]) return;
+      seen[key] = 1;
+      out.push(unit.text.slice(word.start, word.end));
+    });
+    return out;
+  }
+
+  function recompute(unit, boundary) {
+    var author = authorInside(boundary.start, boundary.end);
+    var diffs = [];
+    var pair = 1;
+    var diacritics = false;
+    var searchFrom = 0;
+    var placed = [];
+    var fragments = unit.fragments || [];
+    fragments.forEach(function (fragment) {
+      var words = fragment.words || [];
+      if (!words.length) return;
+      var placement = placeFragment(words, author, searchFrom);
+      if (!placement) {
+        diffs.push({
+          kind: "extra_in_annotation",
+          annotation_words: annSurface(unit, words),
+          source_words: [],
+          source_start: boundary.start,
+          source_end: boundary.start,
+          annotation_start: words[0].start,
+          annotation_end: words[words.length - 1].end,
+          pair: pair
+        });
+        pair += 1;
+        return;
+      }
+      placement.ops.forEach(function (op) {
+        var tag = op[0], a1 = op[1], a2 = op[2], b1 = op[3], b2 = op[4];
+        if (tag === "equal") {
+          for (var k = 0; k < a2 - a1; k++) {
+            var aw = words[a1 + k];
+            var sw = author[placement.start + b1 + k];
+            if (unit.text.slice(aw.start, aw.end) !== sliceRaw(sw.start, sw.end)) diacritics = true;
+          }
+          return;
+        }
+        var kind = tag === "replace" ? "variant" : tag === "insert" ? "missing_in_annotation" : "extra_in_annotation";
+        var annSlice = words.slice(a1, a2);
+        var srcSlice = author.slice(placement.start + b1, placement.start + b2);
+        var srcAt, annAt;
+        if (srcSlice.length) srcAt = [srcSlice[0].start, srcSlice[srcSlice.length - 1].end];
+        else if (placement.start + b1 < author.length) srcAt = [author[placement.start + b1].start, author[placement.start + b1].start];
+        else if (author.length) srcAt = [author[author.length - 1].end, author[author.length - 1].end];
+        else srcAt = [boundary.start, boundary.start];
+        if (annSlice.length) annAt = [annSlice[0].start, annSlice[annSlice.length - 1].end];
+        else if (a1 < words.length) annAt = [words[a1].start, words[a1].start];
+        else annAt = [words[words.length - 1].end, words[words.length - 1].end];
+        diffs.push({
+          kind: kind,
+          annotation_words: annSurface(unit, annSlice),
+          source_words: surfaceWords(srcSlice),
+          source_start: srcAt[0],
+          source_end: srcAt[1],
+          annotation_start: annAt[0],
+          annotation_end: annAt[1],
+          pair: pair
+        });
+        pair += 1;
+      });
+      placed.push({ start: placement.start, end: placement.end });
+      searchFrom = placement.end;
+    });
+
+    function missingSpan(slice, annAt) {
+      if (!slice.length) return;
+      diffs.push({
+        kind: "missing_in_annotation",
+        annotation_words: [],
+        source_words: surfaceWords(slice),
+        source_start: slice[0].start,
+        source_end: slice[slice.length - 1].end,
+        annotation_start: annAt,
+        annotation_end: annAt,
+        pair: pair
+      });
+      pair += 1;
+    }
+    if (placed.length && author.length) {
+      var firstWords = (fragments[0] && fragments[0].words) || [];
+      var lastFrag = fragments[fragments.length - 1];
+      var lastWords = (lastFrag && lastFrag.words) || [];
+      var annStart = firstWords.length ? firstWords[0].start : 0;
+      var annEnd = lastWords.length ? lastWords[lastWords.length - 1].end : annStart;
+      if (placed[0].start > 0) missingSpan(author.slice(0, placed[0].start), annStart);
+      var tail = placed[placed.length - 1].end;
+      if (tail < author.length) missingSpan(author.slice(tail), annEnd);
+    }
+
+    var gaps = [];
+    for (var g = 0; g < placed.length - 1; g++) {
+      if (placed[g + 1].start <= placed[g].end) continue;
+      var gapStart = author[placed[g].end - 1].end;
+      var gapEnd = author[placed[g + 1].start].start;
+      var gapText = sliceRaw(gapStart, gapEnd);
+      if (/[\u0600-\u06ff0-9A-Za-z]/.test(gapText)) gaps.push({ start: gapStart, end: gapEnd, role: "elision" });
+    }
+    var reasons = [];
+    if ((unit.fragments || []).length > 1 || unit.leading_elision || unit.trailing_elision) {
+      reasons.push("النص الموسوم فيه حذف مشار إليه بـ «...». ");
+    }
+    if (gaps.length) reasons.push("مواضع الحذف من كلام المصدر معلّمة في النص الأصلي.");
+    reasons = reasons.concat(sentenceIssues(boundary.start, boundary.end));
+    var color = diffs.length ? "discrepancy" : reasons.length || gaps.length ? "highlighted" : "matched";
+    var summary = "";
+    if (color === "matched") {
+      summary = diacritics
+        ? "الكلمات تتفق بعد إزالة التشكيل وعلامات الترقيم، مع اختلاف في التشكيل أو الترقيم، على الحد الذي اختاره المراجع."
+        : "حروف النص الموسوم هي حروف المصدر في هذا الحد.";
+    } else if (diffs.length) {
+      summary = summaryFromDiffs(diffs);
+      if (reasons.length) summary += " " + reasons.join(" ");
+    } else {
+      summary = reasons.join(" ");
+    }
+    summary += " أُعيد رسم المقارنة على الحد الحالي.";
+    return {
+      color: color,
+      reasons: reasons,
+      summary_ar: summary,
+      differences: diffs,
+      diacritics_or_punctuation_differ: diacritics,
+      gaps: gaps,
+      boundary: boundary
+    };
+  }
+
+  function viewOf(unit) {
+    var boundary = boundaryOf(unit);
+    var original = originalBoundary(unit);
+    if (sameBoundary(boundary, original)) {
+      return {
+        color: unit.color,
+        reasons: unit.reasons,
+        summary_ar: unit.summary_ar,
+        differences: unit.differences,
+        diacritics_or_punctuation_differ: unit.diacritics_or_punctuation_differ,
+        source_runs: unit.source_runs,
+        ann_runs: unit.ann_runs,
+        boundary: boundary,
+        moved: false
+      };
+    }
+    var fresh = recompute(unit, boundary);
+    return {
+      color: fresh.color,
+      reasons: fresh.reasons,
+      summary_ar: fresh.summary_ar,
+      differences: fresh.differences,
+      diacritics_or_punctuation_differ: fresh.diacritics_or_punctuation_differ,
+      source_runs: runsFromRecompute(unit, fresh, boundary),
+      ann_runs: annRunsFromRecompute(unit, fresh),
+      boundary: boundary,
+      moved: true
+    };
+  }
+
+  function runsFromRecompute(unit, fresh, boundary) {
+    var runs = [];
+    var author = authorInside(boundary.start, boundary.end);
+    fresh.differences.forEach(function (diff) {
+      var label = "discrepancy " + diff.pair;
+      var title = diff.kind === "variant"
+        ? "في النص الموسوم: «" + diff.annotation_words.map(pretty).join(" ") + "» — في المصدر: «" + diff.source_words.map(pretty).join(" ") + "»"
+        : diff.kind === "missing_in_annotation"
+          ? "في المصدر وليس في النص الموسوم: «" + diff.source_words.map(pretty).join(" ") + "»"
+          : "في النص الموسوم وليس في المصدر: «" + diff.annotation_words.map(pretty).join(" ") + "»";
+      if (diff.kind === "extra_in_annotation") {
+        runs.push({ start: diff.source_start, end: diff.source_end, kind: "chip", label: label, title: title, pair: diff.pair, chip_text: "زائد في الموسوم: " + joinQuoted(diff.annotation_words.map(pretty)) });
+      } else {
+        runs.push({ start: diff.source_start, end: diff.source_end, kind: "discrepancy", label: label, title: title, pair: diff.pair });
+      }
+    });
+    fresh.gaps.forEach(function (gap) {
+      runs.push({ start: gap.start, end: gap.end, kind: "elision", label: "محذوف من النص الموسوم", title: "محذوف من النص الموسوم", pair: null });
+    });
+    if (fresh.color !== "discrepancy") {
+      author.forEach(function (word) {
+        var covered = fresh.differences.some(function (diff) {
+          return word.start >= diff.source_start && word.end <= diff.source_end && diff.source_start !== diff.source_end;
+        });
+        var inGap = fresh.gaps.some(function (gap) { return word.start >= gap.start && word.end <= gap.end; });
+        if (!covered && !inGap) {
+          runs.push({ start: word.start, end: word.end, kind: fresh.color, label: fresh.color, pair: null });
+        }
+      });
+    }
+    return runs;
+  }
+
+  function annRunsFromRecompute(unit, fresh) {
+    var runs = [];
+    fresh.differences.forEach(function (diff) {
+      var label = "discrepancy " + diff.pair;
+      var title = "discrepancy";
+      if (diff.kind === "missing_in_annotation") {
+        runs.push({ start: diff.annotation_start, end: diff.annotation_end, kind: "chip", label: label, title: title, pair: diff.pair, chip_text: "ناقص من الموسوم: " + joinQuoted(diff.source_words.map(pretty)) });
+      } else if (diff.annotation_start !== diff.annotation_end || diff.kind === "variant" || diff.kind === "extra_in_annotation") {
+        runs.push({ start: diff.annotation_start, end: diff.annotation_end, kind: "discrepancy", label: label, title: title, pair: diff.pair });
+      }
+    });
+    if (fresh.color !== "discrepancy") {
+      (unit.fragments || []).forEach(function (fragment) {
+        (fragment.words || []).forEach(function (word) {
+          runs.push({ start: word.start, end: word.end, kind: fresh.color, label: fresh.color, pair: null });
+        });
+      });
+    }
+    return runs;
+  }
+
+  function layerAt(pos) {
+    var rows = data.layers;
+    var lo = 0, hi = rows.length - 1;
+    while (lo <= hi) {
+      var mid = (lo + hi) >> 1;
+      var row = rows[mid];
+      if (pos < row.start) hi = mid - 1;
+      else if (pos >= row.end) lo = mid + 1;
+      else return row.layer;
+    }
+    return "author";
+  }
+
+  function clear(node) {
+    while (node.firstChild) node.removeChild(node.firstChild);
+  }
+
+  function addLabel(parent, text, english) {
+    var label = document.createElement("span");
+    label.className = "state-label";
+    if (english) { label.lang = "en"; label.dir = "ltr"; }
+    label.textContent = text;
+    parent.appendChild(label);
+  }
+
+  function paint(parent, text, base, runs, outline, showMarks) {
+    clear(parent);
+    var active = showMarks ? runs : [];
+    var chips = [];
+    var ranges = [];
+    active.forEach(function (run) {
+      if (run.kind === "chip" || run.start === run.end) chips.push(run);
+      else ranges.push(run);
+    });
+    var points = [base, base + text.length];
+    if (outline) { points.push(outline.start, outline.end); }
+    data.layers.forEach(function (row) { points.push(row.start, row.end); });
+    ranges.forEach(function (run) { points.push(run.start, run.end); });
+    chips.forEach(function (chip) { points.push(chip.start); });
+    points = points.filter(function (value, index, all) {
+      return value >= base && value <= base + text.length && all.indexOf(value) === index;
+    }).sort(function (a, b) { return a - b; });
+
+    function topRun(start, end) {
+      var best = null;
+      var rank = { discrepancy: 5, elision: 4, apparatus: 3, highlighted: 2, matched: 2, elision_marker: 2 };
+      ranges.forEach(function (run) {
+        if (run.start <= start && run.end >= end) {
+          if (!best || (rank[run.kind] || 0) > (rank[best.kind] || 0)) best = run;
+        }
+      });
+      return best;
+    }
+
+    for (var p = 0; p < points.length; p++) {
+      var at = points[p];
+      chips.forEach(function (chip) {
+        if (chip.start !== at || !showMarks) return;
+        var node = document.createElement("span");
+        node.className = "chip";
+        node.title = chip.title || "";
+        addLabel(node, chip.label || "discrepancy", true);
+        node.appendChild(document.createTextNode(" " + (chip.chip_text || "")));
+        parent.appendChild(node);
+      });
+      if (p === points.length - 1) break;
+      var next = points[p + 1];
+      if (next <= at) continue;
+      var slice = text.slice(at - base, next - base);
+      if (!slice) continue;
+      var run = showMarks ? topRun(at, next) : null;
+      var layer = layerAt(at);
+      var span = document.createElement("span");
+      var classes = [];
+      if (layer === "footnote" || layer === "editor_bracket") {
+        classes.push("apparatus");
+        span.title = "حاشية المحقق";
+      } else if (layer === "verse_ref") {
+        classes.push("verse-ref");
+        span.title = "إحالة آية";
+      }
+      if (outline && at >= outline.start && next <= outline.end) classes.push("loc");
+      if (run) {
+        classes.push("mark", run.kind);
+        if (run.title) span.title = run.title;
+        if (run.label && run.start === at) {
+          addLabel(span, run.label, /^(matched|highlighted|discrepancy)/.test(run.label));
+        }
+      }
+      span.className = classes.join(" ");
+      span.appendChild(document.createTextNode(slice));
+      parent.appendChild(span);
+    }
+  }
+
+  function snippet(text) {
+    return text.replace(/\s+/g, " ").trim().slice(0, 42);
+  }
+
+  function render() {
+    var set = currentSet();
+    var unit = currentUnit();
+    state.unitId = unit.unit_id;
+    var boundary = boundaryOf(unit);
+    var view = state.compared ? viewOf(unit) : null;
+    document.getElementById("sha").textContent = data.source.sha256;
+    document.getElementById("source-meta").textContent = data.source.file + "  " + boundary.start + ":" + boundary.end;
+
+    var list = document.getElementById("units");
+    clear(list);
+    set.units.forEach(function (item) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "unit";
+      button.setAttribute("role", "option");
+      button.setAttribute("aria-pressed", item.unit_id === unit.unit_id ? "true" : "false");
+      button.dataset.unit = item.unit_id;
+      var id = document.createElement("span");
+      id.className = "unit-id";
+      id.textContent = item.unit_id;
+      var snip = document.createElement("span");
+      snip.className = "unit-snip";
+      snip.textContent = snippet(item.text);
+      button.appendChild(id);
+      button.appendChild(snip);
+      list.appendChild(button);
+    });
+    var index = set.units.findIndex(function (item) { return item.unit_id === unit.unit_id; });
+    document.getElementById("pos").textContent = (index + 1) + " / " + set.units.length;
+    document.getElementById("prev").disabled = index <= 0;
+    document.getElementById("next").disabled = index >= set.units.length - 1;
+
+    var tags = document.getElementById("tags");
+    clear(tags);
+    ["source", "content"].forEach(function (group) {
+      (unit.tags[group] || []).forEach(function (tag) {
+        var chip = document.createElement("span");
+        chip.className = "tag";
+        chip.textContent = tag.label_ar;
+        if (tag.code) {
+          var small = document.createElement("small");
+          small.lang = "en";
+          small.dir = "ltr";
+          small.textContent = tag.code;
+          chip.appendChild(small);
+        }
+        tags.appendChild(chip);
+      });
+    });
+    if (unit.confidence !== null && unit.confidence !== undefined) {
+      var conf = document.createElement("span");
+      conf.className = "tag";
+      conf.textContent = "ثقة الوسم " + unit.confidence;
+      tags.appendChild(conf);
+    }
+    var aside = document.getElementById("note-aside");
+    aside.textContent = unit.note_ar ? (unit.note_label_ar + ": " + unit.note_ar) : "";
+
+    paint(
+      document.getElementById("source-text"),
+      data.source.text,
+      data.source.window_start,
+      view ? view.source_runs : [],
+      boundary,
+      state.compared
+    );
+    paint(
+      document.getElementById("ann-text"),
+      unit.text,
+      0,
+      view ? view.ann_runs : [],
+      null,
+      state.compared
+    );
+
+    var finding = document.getElementById("finding");
+    var notice = document.getElementById("notice");
+    if (!state.compared) {
+      finding.textContent = "لم تُعرض المقارنة بعد. اضغط «مقارنة بالنص الأصلي» لرسم الفروق على النص.";
+      notice.hidden = true;
+    } else {
+      finding.textContent = view.summary_ar;
+      notice.hidden = false;
+    }
+
+    var prior = state.records.filter(function (row) {
+      return row.unit_id === unit.unit_id && row.annotation_set === set.label_ar;
+    });
+    var status = document.getElementById("status");
+    if (prior.length) {
+      var last = prior[prior.length - 1].reviewer_decision.action;
+      status.textContent = "آخر قرار مسجّل لهذه الوحدة: " + (last === "accept" ? "قبول" : "رفض") + ". اللون لا يُسجّل قرارًا وحده.";
+    } else if (!state.compared) {
+      status.textContent = "القرار يُسجَّل بعد عرض المقارنة.";
+    } else {
+      status.textContent = "اللون نتيجة بصرية. القبول أو الرفض هو القرار.";
+    }
+
+    var note = document.getElementById("review-note");
+    if (document.activeElement !== note) note.value = state.notes[keyOf(unit)] || "";
+
+    var sourceBody = document.getElementById("source-body");
+    var loc = sourceBody.querySelector(".loc, .mark");
+    if (loc) sourceBody.scrollTop = Math.max(0, loc.offsetTop - 28);
+    var annBody = document.getElementById("ann-body");
+    var annLoc = annBody.querySelector(".mark, .chip");
+    if (annLoc && state.compared) annBody.scrollTop = Math.max(0, annLoc.offsetTop - 28);
+  }
+
+  function selectUnit(id) {
+    state.notes[keyOf(currentUnit())] = document.getElementById("review-note").value;
+    state.unitId = id;
+    state.compared = false;
+    state.boundary = originalBoundary(currentUnit());
+    render();
+  }
+
+  function nudge(which) {
+    var unit = currentUnit();
+    var boundary = boundaryOf(unit);
+    var inside = data.words.filter(function (word) { return word.start >= boundary.start && word.end <= boundary.end; });
+    var status = document.getElementById("status");
+    if (which === "start-shrink") {
+      if (inside.length < 2) { status.textContent = "لا تبقى كلمة في المدى."; return; }
+      boundary.start = inside[1].start;
+    } else if (which === "start-expand") {
+      var prev = null;
+      for (var i = 0; i < data.words.length; i++) {
+        if (data.words[i].end <= boundary.start) prev = data.words[i];
+      }
+      if (!prev) { status.textContent = "لا توجد كلمة قبل هذا الحد في النافذة."; return; }
+      boundary.start = prev.start;
+    } else if (which === "end-shrink") {
+      if (inside.length < 2) { status.textContent = "لا تبقى كلمة في المدى."; return; }
+      boundary.end = inside[inside.length - 2].end;
+    } else if (which === "end-expand") {
+      var next = null;
+      for (var j = 0; j < data.words.length; j++) {
+        if (data.words[j].start >= boundary.end) { next = data.words[j]; break; }
+      }
+      if (!next) { status.textContent = "لا توجد كلمة بعد هذا الحد في النافذة."; return; }
+      boundary.end = next.end;
+    }
+    state.boundary = boundary;
+    if (state.compared) {
+      status.textContent = "أُعيد رسم المقارنة على الحد الجديد.";
+    } else {
+      status.textContent = "تغيّر حد المصدر. اضغط «مقارنة بالنص الأصلي» لرسم الفروق على هذا الحد.";
+    }
+    render();
+  }
+
+  function decide(action) {
+    var status = document.getElementById("status");
+    if (!state.compared) {
+      status.textContent = "اعرض المقارنة أولًا، ثم سجّل القبول أو الرفض.";
+      return;
+    }
+    var unit = currentUnit();
+    var set = currentSet();
+    var view = viewOf(unit);
+    var boundary = view.boundary;
+    var base = data.source.window_start;
+    var record = {
+      unit_id: unit.unit_id,
+      annotation_set: set.label_ar,
+      source: {
+        file: data.source.file,
+        sha256: data.source.sha256,
+        start: boundary.start,
+        end: boundary.end,
+        text: data.source.text.slice(boundary.start - base, boundary.end - base)
+      },
+      annotated_text: unit.text,
+      color_result: view.color,
+      reasons: view.reasons,
+      differences: view.differences,
+      reviewer_decision: {
+        action: action,
+        final_start: boundary.start,
+        final_end: boundary.end,
+        note: document.getElementById("review-note").value,
+        decided_at: new Date().toISOString()
+      },
+      new_model_input: false,
+      model_run_at_this_step: "none"
+    };
+    state.records.push(record);
+    state.notes[keyOf(unit)] = record.reviewer_decision.note;
+    saveRecords();
+    render();
+    document.getElementById("status").textContent = action === "accept" ? "سُجّل القبول في السجل." : "سُجّل الرفض في السجل.";
+    if (!document.getElementById("log-panel").hidden) fillLog();
+  }
+
+  function fillLog() {
+    document.getElementById("log").value = JSON.stringify(state.records, null, 2);
+  }
+
+  document.getElementById("app").addEventListener("click", function (event) {
+    var origin = event.target;
+    if (!origin) return;
+    if (origin.nodeType !== 1) origin = origin.parentElement;
+    if (!origin || !origin.closest) return;
+    var target = origin.closest("button");
+    if (!target) return;
+    if (target.dataset.unit) selectUnit(target.dataset.unit);
+    else if (target.dataset.nudge) nudge(target.dataset.nudge);
+    else if (target.id === "compare") {
+      state.compared = true;
+      render();
+    } else if (target.id === "prev" || target.id === "next") {
+      var units = currentSet().units;
+      var index = units.findIndex(function (item) { return item.unit_id === state.unitId; });
+      var next = target.id === "next" ? index + 1 : index - 1;
+      if (units[next]) selectUnit(units[next].unit_id);
+    } else if (target.id === "accept") decide("accept");
+    else if (target.id === "reject") decide("reject");
+    else if (target.id === "show-log") {
+      var panel = document.getElementById("log-panel");
+      var open = panel.hidden;
+      panel.hidden = !open;
+      target.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) fillLog();
+    } else if (target.id === "theme") {
+      state.theme = (state.theme + 1) % 3;
+      var root = document.documentElement;
+      if (state.theme === 0) root.removeAttribute("data-theme");
+      else root.setAttribute("data-theme", state.theme === 1 ? "dark" : "light");
+    }
+  });
+
+  document.getElementById("copy").addEventListener("click", function () {
+    var box = document.getElementById("log");
+    var status = document.getElementById("copy-status");
+    var value = box.value;
+    function fallback() {
+      box.focus();
+      box.select();
+      status.textContent = "تعذّر النسخ الآلي؛ النص محدد في المربع.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(value).then(function () {
+        status.textContent = "نُسخ السجل.";
+      }, fallback);
+    } else {
+      fallback();
+    }
+  });
+
+  document.querySelectorAll('input[name="set"]').forEach(function (input) {
+    input.addEventListener("change", function () {
+      if (!input.checked) return;
+      state.notes[keyOf(currentUnit())] = document.getElementById("review-note").value;
+      state.setId = input.value;
+      var units = currentSet().units;
+      var keep = units.some(function (item) { return item.unit_id === state.unitId; });
+      if (!keep) state.unitId = units[0].unit_id;
+      state.compared = false;
+      state.boundary = originalBoundary(currentUnit());
+      render();
+    });
+  });
+
+  document.getElementById("review-note").addEventListener("input", function (event) {
+    state.notes[keyOf(currentUnit())] = event.target.value;
+  });
+
+  state.boundary = null;
+  render();
+})();
+</script>

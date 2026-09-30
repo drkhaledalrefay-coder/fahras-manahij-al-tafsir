@@ -1,0 +1,16 @@
+URGENT — DEADLINE TONIGHT 23:59 Riyadh. This deck is the mandatory «ملف الفكرة» upload in the registration form.
+HARD LIMITS FROM THE FORM: PPTX or PDF · MAXIMUM 10 SLIDES · MAXIMUM 10 MB. The official template alone is ~9.5 MB, so you MUST shrink media: remove unused layouts' images from the saved file (delete unused slides so their media parts are dropped), recompress any PNG/JPG you add (screenshots ≤ 1600px wide, JPEG quality ~80, each ≤ 250 KB), and verify the final file size < 9.5 MB. Produce BOTH deck/pitch/idea.pptx and deck/pitch/idea.pdf (PDF via LibreOffice or PowerPoint COM; PDF must also be < 10 MB).
+
+Follow ALL of method/agent-briefs/brief_deck_v3.txt (official template, python-pptx build script deck/pitch/build_deck.py, identity, rules, numbers, no names, scientific-package rules, source placeholder line) EXCEPT the slide plan: compress to EXACTLY 10 slides max:
+1. Title (name + one line + Track 04).
+2. Problem (+ track success criterion quote).
+3. Solution in one picture (screenshot) — «الآلة تقترح، والمتخصص يحكم، والنص لا يتغيّر حرفاً».
+4. How it works (layout 24 pipeline) incl. the model-swappable guarantee line.
+5. Reliability & scientific safety (four content levels mapping, function-not-words, certainty levels, sensitive → specialist, abstention, AI proposal vs approved, hadith grading not claimed, source placeholder line).
+6. Specialist smart highlighter + compare-with-source (screenshot) + log → measured accuracy.
+7. Results on 4 tafsirs (Run 2 numbers exactly) + «راجعنا أنفسنا» one line (Run 1 lenient → tightened, both published) + two models close on Ibn Kathir.
+8. Originality & value for people: positioning line (big sites show what was said about the verse; we show how the commentator explained it, with evidence) + users: researchers, teachers, ordinary readers (approved cards), memorization, Quran apps via approved JSON, browser extension.
+9. Build-days plan (4–6 Oct) & continuation: سورة الأنفال full pass + 10% audit + specialist on sensitive; public repo, live demo, video; roadmap: المرجع المُحكِّم per tafsir, more tafsirs when licensed, open model trained on approvals later («لم ندرّب نموذجاً بعد»), open-source tool for tafsir centers.
+10. Closing verse + credits (Tafsir Center open data CC BY 4.0; code MIT; AI tools disclosed).
+Speaker notes per slide. COMPLIANCE.md as before.
+GATES: slide count ≤ 10; file sizes (pptx, pdf) < 10 MB — paste `ls -l`; no [bracket] placeholder except the one source-placeholder line; no guide slides; no personal names. Do not commit.

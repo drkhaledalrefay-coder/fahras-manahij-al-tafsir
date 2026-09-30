@@ -1,0 +1,337 @@
+{
+  "window_id": "8_64",
+  "ayah": "8:64",
+  "span_count": 32,
+  "family_counts": {
+    "QURAN": 7,
+    "HADITH": 5,
+    "TABIIN": 4,
+    "ISNAD": 2,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 28,
+          "end": 112,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 151,
+          "end": 169,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 461,
+          "end": 468,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الشعبي",
+          "name": "الشعبي",
+          "role": "SPEAKER",
+          "start": 689,
+          "end": 695,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 708,
+          "end": 787,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1071,
+          "end": 1078,
+          "span_id": "s016"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1087,
+          "end": 1121,
+          "stripped": "عن شوذب، عن الشعبي في قوله:",
+          "span_id": "s016"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الشعبي",
+          "name": "الشعبي",
+          "role": "SPEAKER",
+          "start": 1103,
+          "end": 1109,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1122,
+          "end": 1201,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1309,
+          "end": 1316,
+          "span_id": "s020"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1352,
+          "end": 1398,
+          "stripped": "عن سفيان، عن شوذب، عن عامر بنحوه، إلا أنه",
+          "span_id": "s020"
+        }
+      ]
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1462,
+          "end": 1469,
+          "span_id": "s022"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "ابن زيد",
+          "name": "ابن زيد",
+          "role": "SPEAKER",
+          "start": 1483,
+          "end": 1490,
+          "span_id": "s022"
+        }
+      ]
+    },
+    {
+      "span_id": "s023",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1502,
+          "end": 1581,
+          "span_id": "s023"
+        }
+      ]
+    },
+    {
+      "span_id": "s024",
+      "markers": []
+    },
+    {
+      "span_id": "s025",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1700,
+          "end": 1739,
+          "span_id": "s025"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الشعبي",
+          "name": "الشعبي",
+          "role": "NARRATOR",
+          "start": 1775,
+          "end": 1781,
+          "span_id": "s025"
+        }
+      ]
+    },
+    {
+      "span_id": "s026",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1824,
+          "end": 1842,
+          "span_id": "s026"
+        }
+      ]
+    },
+    {
+      "span_id": "s027",
+      "markers": []
+    },
+    {
+      "span_id": "s028",
+      "markers": []
+    },
+    {
+      "span_id": "s029",
+      "markers": []
+    },
+    {
+      "span_id": "s030",
+      "markers": []
+    },
+    {
+      "span_id": "s031",
+      "markers": []
+    },
+    {
+      "span_id": "s032",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2203,
+          "end": 2244,
+          "span_id": "s032"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 549,
+      "end": 678,
+      "text": "¬في م: \"بن\". وفرق البخارى بين شوذب أبى معاذ، وشوذب الذي يروى عن الشعبي. ينظر التاريخ الكبير 4/ 261، والجرح والتعديل 4/ 377، 378.¥",
+      "attached_span_id": "s009",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 848,
+      "end": 981,
+      "text": "¬تفسير سفيان ص 121، وأخرجه البخاري في تاريخه 4/ 261 من طريق مؤمل به، وعزاه السيوطي في الدر المنثور 3/ 200 إلى ابن المنذر وأبي الشيخ.¥",
+      "attached_span_id": "s012",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1236,
+      "end": 1304,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 5/ 1727 من طريق عبيد الله بن موسى به.¥",
+      "attached_span_id": "s018",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1087,
+      "end": 1121,
+      "span_id": "s016",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 1352,
+      "end": 1398,
+      "span_id": "s020",
+      "marker": "عن…عن"
+    }
+  ]
+}

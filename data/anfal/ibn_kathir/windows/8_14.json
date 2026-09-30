@@ -1,0 +1,46 @@
+{
+  "window_id": "8_14",
+  "tafsir_id": "ibn_kathir",
+  "ayah": "8:14",
+  "surah": 8,
+  "ayah_number": 14,
+  "source": "tafsircenter",
+  "source_file": "data/anfal/ibn_kathir/raw/8_14.txt",
+  "source_sha256": "a405cedc0bfe467cb97b89e0f52ebfa570041c34d0584106d347a1d8fbe86b6c",
+  "window_start": 0,
+  "window_end": 239,
+  "window_text": "{ذَلِكُمْ فَذُوقُوهُ وَأَنَّ لِلْكَافِرِينَ عَذَابَ النَّارِ (14)}.\r\n{ذَلِكُمْ فَذُوقُوهُ وَأَنَّ لِلْكَافِرِينَ عَذَابَ النَّارِ (14)} هذا خطاب للكفار أي: ذوقوا هذا العذاب والنكال في الدنيا، واعلموا أيضًا أن للكافرين عذاب النار في الآخرة.",
+  "span_count": 3,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 67,
+      "text": "{ذَلِكُمْ فَذُوقُوهُ وَأَنَّ لِلْكَافِرِينَ عَذَابَ النَّارِ (14)}."
+    },
+    {
+      "id": "s002",
+      "start": 67,
+      "end": 155,
+      "text": "\r\n{ذَلِكُمْ فَذُوقُوهُ وَأَنَّ لِلْكَافِرِينَ عَذَابَ النَّارِ (14)} هذا خطاب للكفار أي:"
+    },
+    {
+      "id": "s003",
+      "start": 155,
+      "end": 239,
+      "text": " ذوقوا هذا العذاب والنكال في الدنيا، واعلموا أيضًا أن للكافرين عذاب النار في الآخرة."
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s003",
+    "start_index": 0,
+    "end_index": 2,
+    "char_length": 239,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

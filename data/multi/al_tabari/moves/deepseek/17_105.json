@@ -1,0 +1,31 @@
+{
+  "window": "17_105",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s003", "s004", "s005"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s003", "s004", "s005"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_RAY"],
+      "rationale_ar": "شرح المؤلف للفظ الحق في الإنزال والنزول، وتكرار جزء الآية هنا علامة عودة لا استشهاد بآية أخرى."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": ["s006", "s007", "s008"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s006", "s007", "s008"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_RAY"],
+      "rationale_ar": "بيّن المؤلف عموم الإرسال ومعناه: بشارة المطيع وإنذار من خالف، وذكر النبي هنا خطاب لا حديث مسند."
+    }
+  ]
+}

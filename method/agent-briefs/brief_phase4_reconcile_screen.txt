@@ -1,0 +1,59 @@
+TASK: Build the HUMAN RECONCILIATION SCREEN (checkpoint B) for a tafsir annotation tool: a build script + one single-file web page. Python stdlib only for the build; vanilla HTML/CSS/JS for the page. Do NOT commit.
+
+FILES YOU OWN (create only these): src/build_reconcile.py, src/reconcile_template.html, web/reconcile_data.json, web/reconcile.html.
+DO NOT TOUCH: src/build_index.py, src/index_template.html, web/index.html, web/index_data.json (another worker is editing them), and anything under data/ (read-only).
+
+PRINCIPLE: The reviewer is a specialist who will not trust a system claim that a passage is "reconciled". The check must happen in front of his eyes, drawn on the text. No model runs at this step and no new input is added. Acceptance is a human action only.
+
+INPUTS (read-only)
+- Source text: data/raw/tafsircenter/2_255.txt (read with encoding='utf-8', newline='' — never alter newlines) and its layers data/layers/2_255.json (ranges with layer in author/footnote/verse_ref/editor_bracket).
+- Pinned sha256: data/raw/manifest.json.
+- Normalizer: src/normalize.py (l1_normalize: strips tashkeel, tatweel, punctuation, brackets, footnote markers; keeps letters).
+- Annotation set 1 "مخرجات النظام": data/spans_pilot/2_255.json + data/tags/grok/2_255.json (units = span_ids; text = concatenated span texts; exact offsets known).
+- Annotation set 2 "جدول الفريق (Excel)": data/external/excel_pilot_2_255.json (8 units, text typed/pasted outside the pipeline, fully vocalized, uses "..." for elisions).
+
+WINDOW: Only Ayat al-Kursi 2:255, source char range = from the start of the first pilot span to the end of the last pilot span (data/spans_pilot/2_255.json), extended to include everything (all layers) in between.
+
+MATCHING (src/build_reconcile.py, all at build time, deterministic):
+1. Tokenize the source window into words with char offsets (split on whitespace). For each word store l1_normalize(word); ignore words whose normalized form is empty. Keep the layer of each word.
+2. For annotation set 1: location = the exact span offsets. Color:
+   - matched (green): every span's source[start:end] == span text AND no non-author layer lies between the unit's first and last span.
+   - highlighted (orange): texts match but the unit skips non-author material in between (editor footnote/bracket), OR the unit starts or ends in the middle of a sentence (first char of unit is not preceded by sentence punctuation/newline, or last char not followed by one) — reason must say which.
+   - discrepancy (red): any span text != source slice (should never happen; if it happens, show it).
+3. For annotation set 2: split text on "..." or "…" into fragments. Align each fragment's normalized words to the source word list IN ORDER (each fragment searched after the previous fragment's end). Use difflib.SequenceMatcher on word lists; to avoid mis-anchoring short fragments, prefer windows that contain an exact 2-word anchor from the fragment, and choose the window with the highest ratio. Map aligned words back to raw char offsets. Color:
+   - matched (green): one fragment, all words identical after l1_normalize, contiguous in source (diacritics/punctuation differences allowed — record "diacritics_or_punctuation_differ": true/false).
+   - highlighted (orange): all words identical after l1_normalize but the text is elided (more than one fragment) or does not cover a full sentence; record the elided source ranges (gaps).
+   - discrepancy (red): any word differs, is missing, or is extra. Record each difference {kind: variant|missing_in_annotation|extra_in_annotation, annotation_words, source_words, source_start, source_end}.
+   Expected real cases (verify, do not hardcode): AK-007 has «القرآن» where the pinned source has «القرن», and «الأسفع» vs «الأسقع»; AK-001 has «قد» vs source «وقد»; several units are elided with "...".
+4. Output web/reconcile_data.json: source window text (exact characters), word/offset table, layer ranges in window, both annotation sets with per-unit color, reasons, locations, differences, and the source sha256 (verified against manifest at build time — abort if mismatch).
+5. Inline the JSON into src/reconcile_template.html -> web/reconcile.html (<script type="application/json" id="data">).
+
+SCREEN (Arabic UI, RTL; technical state names may appear in English in small text: matched, highlighted, discrepancy):
+- Title: "شاشة المطابقة — نقطة التحكم الثانية". Subtitle: "لا يحكم النظام بأن النص مطابق؛ المراجع يرى المقارنة بعينه ويقرر."
+- Selector: "مجموعة الوسوم": مخرجات النظام / جدول الفريق (Excel). Unit list (small, scrollable) to pick a unit; "التالي/السابق".
+- TWO PANES, always visible together (side by side on desktop, stacked on mobile; never a modal, never a separate page):
+  • Right pane "النص الأصلي (المصدر)": the source window, characters intact. Editor footnotes/brackets shown in the text but dimmed and labeled "حاشية المحقق" on hover. The selected unit's location is outlined.
+  • Left pane "النص الموسوم": the annotated unit text exactly as stored, with its tags.
+- One explicit button: "مقارنة بالنص الأصلي". Before it is pressed, NO colors are shown. After pressing, draw results ON THE TEXT in both panes:
+  • matched: green background + solid underline.
+  • highlighted: orange background + dashed underline; elided gaps in the source pane marked with a hatched pattern and label "محذوف من النص الموسوم".
+  • discrepancy: red background + wavy underline; each differing word pair shown in both panes; missing words marked in the source pane.
+  Color must never be the only signal (use underline style + a small text label per state).
+- Below the panes: a plain sentence describing the finding (e.g. "كلمة واحدة مختلفة: «القرآن» في النص الموسوم مقابل «القرن» في المصدر"). Never write "تمت المطابقة" or any sentence that claims the data is reconciled.
+- REVIEWER ACTIONS on the selected unit: "قبول" (accept), "تقليص" and "توسيع" (shrink/expand the source boundary by one word at start or end — four small buttons: −بداية +بداية −نهاية +نهاية; re-run the comparison view for the new boundary), "رفض" (reject), plus an optional note field. Green does NOT auto-accept: it shows "نتيجة بصرية — تحتاج تأكيد المراجع".
+- STORED RECORD after a decision (kept in memory + localStorage inside try/catch; page must work if storage fails):
+  { unit_id, annotation_set, source: {file, sha256, start, end, text}, annotated_text, color_result, reasons, differences, reviewer_decision: {action, final_start, final_end, note, decided_at}, new_model_input: false, model_run_at_this_step: "none" }
+  A button "عرض السجل" reveals a read-only textarea with all records as JSON + a copy button (navigator.clipboard inside the click handler; fallback: select the text).
+
+PAGE CONTRACT (it will be published in a sandboxed viewer):
+- File starts with <title> then <style>; NO <!DOCTYPE>, <html>, <head>, <body> tags (avoid the substring "<head" anywhere, e.g. do not use <header>). Put dir="rtl" lang="ar" on the outer wrapper.
+- Only external resource allowed: Google Fonts stylesheet. Fonts: "Amiri" for tafsir text, "IBM Plex Sans Arabic" for UI (not Inter). Real fallback stacks.
+- Tokens on :root (light): --bg #f4f6f5; --surface #ffffff; --ink #17201e; --muted #5b6b67; --line #d9e0dd; --primary #1f5f5b; --matched #2f7a4b / --matched-bg #e3f3e8; --highlighted #9a6b00 / --highlighted-bg #fdf0cf; --discrepancy #b4311f / --discrepancy-bg #fbe0da. Dark mode: redefine tokens only under @media (prefers-color-scheme: dark) guarded by :root:not([data-theme="light"]) and again under :root[data-theme="dark"], with color-scheme: dark. body background from a token.
+- No alert/confirm/prompt, no <a download>, no window.print. Works at 380px width with 16px side gutter and no horizontal page scroll. Visible focus states. prefers-reduced-motion respected.
+- Opens in a realistic state: set "جدول الفريق (Excel)" selected, unit AK-007 selected, comparison NOT yet run (so the reviewer presses the button himself).
+
+GATES (run and paste output):
+  python src/build_reconcile.py   -> print per set: count matched/highlighted/discrepancy, and the list of discrepancy differences
+  a check: web/reconcile.html has no <html/<head/<body/<!DOCTYPE, only fonts.googleapis.com external, JSON parses, sha256 verified.
+
+REPORT: the counts, the differences found for each Excel unit, html size, files created, assumptions. Do not commit.

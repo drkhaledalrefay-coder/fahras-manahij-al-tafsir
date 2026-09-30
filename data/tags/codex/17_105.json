@@ -1,0 +1,30 @@
+{
+  "annotator": "codex",
+  "ayah": "17:105",
+  "units": [
+    {
+      "unit_id": "u01",
+      "span_ids": ["s001", "s002", "s003", "s004"],
+      "source_tags": ["S_QURAN", "S_RAY"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.91,
+      "reason_ar": "استشهد بآية أخرى لتوضيح معنى نزول الكتاب بالحق ثم بيّن وجه الاستشهاد."
+    },
+    {
+      "unit_id": "u02",
+      "span_ids": ["s005"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.92,
+      "reason_ar": "شرح وصول الوحي محفوظًا إلى الرسول وبيّن المقصود بالحق في السياق."
+    },
+    {
+      "unit_id": "u03",
+      "span_ids": ["s006"],
+      "source_tags": ["S_RAY"],
+      "content_tags": ["C_TAFSIR"],
+      "confidence": 0.94,
+      "reason_ar": "فسر مهمة الرسول في التبشير والإنذار وعيّن المخاطبين بكل منهما."
+    }
+  ]
+}

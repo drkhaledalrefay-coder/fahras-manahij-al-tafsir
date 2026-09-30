@@ -1,0 +1,33 @@
+TASK: Annotate classical tafsir text by grouping pre-numbered spans into units and tagging each unit. You are one of two independent annotators; do not look for or read any other annotator's output (ignore everything under data/tags/ except your own output folder). Do NOT commit to git.
+
+INPUTS (read them):
+- docs/taxonomy.md — tag ids, operational definitions, and 5 mandatory hard-case rules. Follow it strictly.
+- data/spans_pilot/2_255.json, data/spans_pilot/17_105.json, data/spans_pilot/2_102.json — each is a list of spans {id, start, end, text} cut by code from Tafsir Ibn Kathir. These contain ONLY the author's text (the editor's footnotes and bracketed notes were removed by code), and each file is a contiguous pilot window, not the whole entry. Span ids are not necessarily starting at s001 — use them exactly as given. Ignore data/spans/ and data/spans_author/.
+
+WHAT TO PRODUCE — for each span file, write exactly one JSON file:
+  data/tags/grok/{surah}_{ayah}.json
+with this shape:
+{
+  "annotator": "grok",
+  "ayah": "2:255",
+  "units": [
+    {
+      "unit_id": "u01",
+      "span_ids": ["s001", "s002"],
+      "source_tags": ["S_SUNNAH"],
+      "content_tags": ["C_FADAIL"],
+      "confidence": 0.85,
+      "reason_ar": "جملة عربية قصيرة تشرح سبب الوسم"
+    }
+  ]
+}
+
+HARD RULES
+1. NEVER write, copy, or paraphrase the Arabic source text into the output. Refer to text ONLY by span ids. The text will be rebuilt by code from span ids. reason_ar is your own short explanation (max 25 words) and must not quote more than 4 consecutive words from the source.
+2. span_ids in a unit must be consecutive (e.g. s004,s005,s006). Units must not overlap. Every span must belong to exactly one unit, in order, covering the whole file.
+3. A unit = one coherent semantic piece (e.g. one hadith with its isnad and matn; its takhrij as a separate unit; one linguistic note; one Companion's explanatory statement).
+4. Each unit gets at least one source tag and at least one content tag, using only ids from docs/taxonomy.md. Multiple tags allowed.
+5. Apply the hard-case rules. When a rule makes a tag uncertain, lower confidence (< 0.6) and say why in reason_ar.
+6. Output must be valid UTF-8 JSON. Validate each file by loading it with python -c "import json;json.load(open(...,encoding='utf-8'))".
+
+FINAL MESSAGE: per ayah — number of units, count per tag, list of units with confidence < 0.6 and why, and any span you found hard to place. Keep it under 300 words.

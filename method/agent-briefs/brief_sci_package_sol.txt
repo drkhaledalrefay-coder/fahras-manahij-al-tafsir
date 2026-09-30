@@ -1,0 +1,9 @@
+READ-ONLY (no edits, no commit). Read deck/official/doc_a.pdf (the challenge's official «المرجعية والحزمة العلمية والبيانات», 8 pages; use python + PyMuPDF `fitz` to extract text; Arabic PDFs may have broken letter order — read carefully) and the relevant pages of deck/official/doc_b.pdf (participant guide, 44 pages: pages about Track 04, the reliability/scientific-safety scoring questions ~pp. 20–22 and 38–41, and any mention of «مستويات المحتوى الأربعة» or «الحزمة العلمية»).
+Then read our design: method/design_v2.md, method/taxonomy.md, docs/DATA_FORMAT.md, method/competition_rules_checklist.md.
+
+DELIVER in your final message (Arabic, ≤ 700 words):
+1. What the scientific package requires/recommends (sources, reference hierarchy, content levels — define each of the «four content levels» exactly as the document states, with page numbers; data rules; citation rules).
+2. A mapping table: each requirement → how our project satisfies it today (file/feature) → gap (if any) → the smallest fix during build days.
+3. Exact sentences we should use in the deck for the reliability criterion (15%) and the track criterion (20%), phrased in the package's own terms.
+4. Any rule we might be violating (e.g. content level we must not publish without review, source types not allowed, AI-generated content labeling).
+Touch no files.

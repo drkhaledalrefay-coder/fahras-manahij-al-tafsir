@@ -1,0 +1,68 @@
+{
+  "window_id": "8_18",
+  "tafsir_id": "ibn_kathir",
+  "ayah": "8:18",
+  "surah": 8,
+  "ayah_number": 18,
+  "source": "tafsircenter",
+  "source_file": "data/anfal/ibn_kathir/raw/8_18.txt",
+  "source_sha256": "808fe6248b113820c27900e991efced0d6e8530481c6ec51adc32813a4571974",
+  "window_start": 0,
+  "window_end": 311,
+  "window_text": "{ذَلِكُمْ وَأَنَّ اللَّهَ مُوهِنُ كَيْدِ الْكَافِرِينَ (18)}.\r\nوقوله: {ذَلِكُمْ وَأَنَّ اللَّهَ مُوهِنُ كَيْدِ الْكَافِرِينَ (18)} هذه بشارة أخرى مع ما حصل من النصر أنه أعلمهم تعالى بأنه مضعف كيد الكافرين فيما يستقبل مصغر أمرهم، وأنهم وكلُّ ما لهم في [تبار ¬في الأصل صحفت إلى: \"سال\".¥] ودمار، ولله الحمد والمنة.",
+  "span_count": 3,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 61,
+      "text": "{ذَلِكُمْ وَأَنَّ اللَّهَ مُوهِنُ كَيْدِ الْكَافِرِينَ (18)}."
+    },
+    {
+      "id": "s002",
+      "start": 61,
+      "end": 251,
+      "text": "\r\nوقوله: {ذَلِكُمْ وَأَنَّ اللَّهَ مُوهِنُ كَيْدِ الْكَافِرِينَ (18)} هذه بشارة أخرى مع ما حصل من النصر أنه أعلمهم تعالى بأنه مضعف كيد الكافرين فيما يستقبل مصغر أمرهم، وأنهم وكلُّ ما لهم في "
+    },
+    {
+      "id": "s003",
+      "start": 285,
+      "end": 311,
+      "text": " ودمار، ولله الحمد والمنة."
+    }
+  ],
+  "apparatus": [
+    {
+      "start": 251,
+      "end": 257,
+      "kind": "apparatus",
+      "subtype": "editor_bracket",
+      "text": "[تبار "
+    },
+    {
+      "start": 257,
+      "end": 284,
+      "kind": "apparatus",
+      "subtype": "footnote",
+      "text": "¬في الأصل صحفت إلى: \"سال\".¥"
+    },
+    {
+      "start": 284,
+      "end": 285,
+      "kind": "apparatus",
+      "subtype": "editor_bracket",
+      "text": "]"
+    }
+  ],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s003",
+    "start_index": 0,
+    "end_index": 2,
+    "char_length": 311,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

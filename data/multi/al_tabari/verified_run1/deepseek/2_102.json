@@ -1,0 +1,608 @@
+{
+  "window_id": "2_102",
+  "ayah": "2:102",
+  "annotator": "deepseek",
+  "source_file": "data/raw/tafsircenter/al_tabari/2_102.txt",
+  "source_sha256": "abccb5ec7784daf3cab3a0f8977739a981ea426dc84cf40a9676776afdea1ea1",
+  "window_start": 22943,
+  "window_end": 25652,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s288",
+        "s289",
+        "s290",
+        "s291",
+        "s292",
+        "s293",
+        "s294"
+      ],
+      "start": 22943,
+      "end": 23523,
+      "text": " به، {وَمَا أُنْزِلَ عَلَى الْمَلَكَيْنِ بِبَابِلَ هَارُوتَ وَمَارُوتَ} .فإذ  كان الأمرُ في ذلك ما وصَفنا، وتأويلُ قولِه: {وَاتَّبَعُوا مَا تَتْلُو الشَّيَاطِينُ عَلَى مُلْكِ سُلَيْمَانَ وَمَا كَفَرَ سُلَيْمَانُ وَلَكِنَّ الشَّيَاطِينَ كَفَرُوا}. ما ذكَرنا، فبيِّنٌ  أن في الكلامِ متروكًا، ترِك ذكرُه اكتفاءً بما ذكِر منه، وأن معنى الكلامِ: واتَّبَعوا ما تَتْلو الشياطينُ مِن السحرِ على مُلْكِ سليمانَ، فتُضِيفُه إلى سليمانَ، وما كفَر سليمانُ فيعمَلَ بالسحرِ، ولكنَّ الشياطينَ كفَروا يعلِّمون الناسَ السحرَ.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s291",
+        "s293",
+        "s294"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "تقدير المؤلف محذوفًا في الجملة، وبيان أن المراد اتباع السحر المنسوب إلى سليمان مع تبرئته، وأن الشياطين علَّموه الناس.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23015,
+          "end": 23038,
+          "text": "¬سيرة ابن هشام 1/ 544.¥",
+          "attached_span_id": "s288",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23047,
+          "end": 23062,
+          "text": "¬في م: \"فإذا\".¥",
+          "attached_span_id": "s290",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23251,
+          "end": 23282,
+          "text": "¬في م، ت 1، ت 2، ت 3: \"فتبين\".¥",
+          "attached_span_id": "s292",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_editor_only_evidence"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s295",
+        "s296",
+        "s297",
+        "s298",
+        "s299",
+        "s300",
+        "s301",
+        "s302",
+        "s303"
+      ],
+      "start": 23527,
+      "end": 23979,
+      "text": "وقد كان قتادةُ يتأوَّلُ قولَه: {وَمَا كَفَرَ سُلَيْمَانُ وَلَكِنَّ الشَّيَاطِينَ كَفَرُوا}. على  .حدَّثنا بشرُ بنُ معاذٍ، قال: حدثنا يزيدُ بنُ زُرَيْعٍ، قال: حدثنا سعيدٌ، عن قتادةَ: {وَمَا كَفَرَ سُلَيْمَانُ وَلَكِنَّ الشَّيَاطِينَ كَفَرُوا}. يقولُ: ما كان عن مشورتِه، ولا عن رضًا منه، ولكنه شيء افتَعَلَته الشياطينُ دونَه .",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s295",
+        "s301",
+        "s302"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "قتادة"
+        ]
+      },
+      "alternatives": [
+        "M_SAHABA"
+      ],
+      "rationale_ar": "نقل الطبري تأويل قتادة للآية بإسناده إليه، وحاشية المحقق تعزوه إلى تفسير ابن أبي حاتم.",
+      "marker_hits": [
+        {
+          "span_id": "s301",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 23738,
+          "end": 23743
+        },
+        {
+          "span_id": "s301",
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "start": 23754,
+          "end": 23759,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s301",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 23762,
+          "end": 23821
+        },
+        {
+          "span_id": "s302",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 23837,
+          "end": 23875
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23640,
+          "end": 23673,
+          "text": "¬في م، ت 1، ت 2، ت 3: \"ما قلنا\".¥",
+          "attached_span_id": "s297",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23903,
+          "end": 23978,
+          "text": "¬أخرجه ابن أبي حاتم في تفسيره 1/ 187 (990) من طريق سعيد بن بشير، عن قتادة.¥",
+          "attached_span_id": "s302",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s304",
+        "s305",
+        "s306",
+        "s307",
+        "s308"
+      ],
+      "start": 23983,
+      "end": 24317,
+      "text": "وقد دلَّلنا فيما مضَى قبلُ على اختلافِ المختلِفين في معنى: {تَتْلُو}. وتوجيهِ مَن وجَّه ذلك إلى أنه  بمعنى \"تلَت\"، إذ كان الذي قبلَه خبرًا ماضيًا، وهو قولُه: {تَتْلُو}. وتوجيهِ الذين وجَّهوا ذلك إلى خلافِ ذلك، وبيَّنا فيه وفي نظيرِه الصوابَ مِن القولِ، فأغنَى ذلك عن إعادتِه في هذا الموضِعِ .",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s304",
+        "s307",
+        "s308"
+      ],
+      "author_verdict_span_ids": [
+        "s307"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_LUGHA"
+      ],
+      "rationale_ar": "إحالة المؤلف إلى نقاش سابق في معنى اللفظ وتوجيهه، وإقراره بأنه بيّن الصواب فيه، فالتفصيل خارج النافذة.",
+      "marker_hits": [
+        {
+          "span_id": "s307",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24159,
+          "end": 24168
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24083,
+          "end": 24101,
+          "text": "¬في م: \"أن تتلو\".¥",
+          "attached_span_id": "s305",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24292,
+          "end": 24316,
+          "text": "¬ينظر ما تقدم في ص 256.¥",
+          "attached_span_id": "s307",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s309",
+        "s310"
+      ],
+      "start": 24321,
+      "end": 24390,
+      "text": "وأمَّا معنى قولِه: {مَا تَتْلُو}. فإنه: بمعنى: الذي تتلو، وهو السحرُ.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s309",
+        "s310"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_RAY"
+      ],
+      "rationale_ar": "تفسير لغوي مباشر للفظ في الآية: بيان معنى الموصول، وتحديد المراد به وهو السحر.",
+      "marker_hits": [
+        {
+          "span_id": "s309",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24340,
+          "end": 24353
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s311",
+        "s312",
+        "s313"
+      ],
+      "start": 24394,
+      "end": 24556,
+      "text": "كما  حدَّثنا ابنُ حميدٍ، قال: ثنا سلمةُ، عن ابنِ إسحاقَ: {وَاتَّبَعُوا مَا تَتْلُو الشَّيَاطِينُ عَلَى مُلْكِ سُلَيْمَانَ}. أي: السحرَ.",
+      "primary": "M_TABIIN",
+      "secondary": [
+        "M_LUGHA"
+      ],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "weak",
+      "evidence_span_ids": [
+        "s311",
+        "s312",
+        "s313"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "ابن إسحاق"
+        ]
+      },
+      "alternatives": [
+        "M_LUGHA"
+      ],
+      "rationale_ar": "خبر بإسناد عن ابن إسحاق يشرح اللفظ بالمعنى نفسه، فنُقل عن تابعي مع تفسير لفظي.",
+      "marker_hits": [
+        {
+          "span_id": "s312",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 24426,
+          "end": 24433
+        },
+        {
+          "span_id": "s313",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24478,
+          "end": 24543
+        },
+        {
+          "span_id": "s313",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 24545,
+          "end": 24548
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24398,
+          "end": 24425,
+          "text": "¬سقط من: م، ت 1، ت 2، ت 3.¥",
+          "attached_span_id": "s311",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [
+        "rule_M_TABIIN_missing_marker"
+      ],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 59
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s314",
+        "s315",
+        "s316",
+        "s317",
+        "s318",
+        "s319",
+        "s320",
+        "s321",
+        "s322",
+        "s323",
+        "s324",
+        "s325",
+        "s326",
+        "s327"
+      ],
+      "start": 24560,
+      "end": 25652,
+      "text": "ولعلَّ قائلًا أن يقولَ: أوَ ما كان السحرُ إلا أيامَ سليمانَ؟قيل له: بل  قد كان ذلك قبلَ ذلك، وقد أخبرَ اللهُ عن سَحَرةِ فرعونَ بما  أخبرَ عنهم، وقد كانوا قبلَ سليمانَ، وأخبرَ عن قومِ نوحٍ أنهم قالوا لنوحٍ إنه ساحرٌ.فإن  قال: فكيف أخبرَ عن اليهودِ أنهم اتبَعوا ما تَلَته الشياطينُ في  عهدِ سليمانَ،  ؛ لأنهم أضافوا ذلك إلى سليمانَ -على ما قد قدَّمنا البيانَ عنه- فأراد اللهُ تعالى ذكرُه تَبرئةَ سليمانَ مما نَحَلُوه وأضافوا إليه مما كانوا وجَدوه، إما في خزائنِه  وإما تحتَ كرسيِّه، على ما جاءت به الآثارُ التي قد ذكَرناها من ذلك، فخصّ  الخبرَ عما كانت اليهودُ اتبَعتْه مما  تَلَته الشياطينُ أيَّامئذٍ  دونَ غيرِه لذلك من  السببِ، وإن كانت الشياطينُ قد كانت تاليةَ السحرِ والكفرِ قبلَ ذلك.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [
+        "C_TAFSIR"
+      ],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s315",
+        "s317",
+        "s322",
+        "s327"
+      ],
+      "author_verdict_span_ids": [
+        "s322",
+        "s327"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_QURAN",
+        "M_ISRAILIYYAT"
+      ],
+      "rationale_ar": "جواب المؤلف عن اعتراضين: وجود السحر قبل سليمان، وسبب تخصيص اليهود بعهده، مع إحالة إلى آثار سابقة غير معزوّة لأهل الكتاب.",
+      "marker_hits": [],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24635,
+          "end": 24664,
+          "text": "¬في م، ت 1، ت 2، ت 3: \"بلي\".¥",
+          "attached_span_id": "s315",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24724,
+          "end": 24737,
+          "text": "¬في م: \"ما\".¥",
+          "attached_span_id": "s316",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24829,
+          "end": 24856,
+          "text": "¬سقط من: م، ت 1، ت 2، ت 3.¥",
+          "attached_span_id": "s318",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24920,
+          "end": 24949,
+          "text": "¬في م، ت 1، ت 2، ت 3: \"على\".¥",
+          "attached_span_id": "s319",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25145,
+          "end": 25159,
+          "text": "¬في م: \"قيل\".¥",
+          "attached_span_id": "s321",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25321,
+          "end": 25342,
+          "text": "¬في الأصل: \"خزانته\".¥",
+          "attached_span_id": "s322",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25415,
+          "end": 25445,
+          "text": "¬في م، ت 1، ت 2، ت 3: \"فحصر\".¥",
+          "attached_span_id": "s323",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25483,
+          "end": 25498,
+          "text": "¬في م: \"فيما\".¥",
+          "attached_span_id": "s324",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25526,
+          "end": 25548,
+          "text": "¬في م: \"أيام سليمان\".¥",
+          "attached_span_id": "s325",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25568,
+          "end": 25585,
+          "text": "¬سقط من: م، ت 1.¥",
+          "attached_span_id": "s326",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_102",
+    "annotator": "deepseek",
+    "move_count": 6,
+    "auto_candidate": 4,
+    "specialist": 2,
+    "by_primary": {
+      "M_LUGHA": 2,
+      "M_TABIIN": 2,
+      "M_RAY": 2
+    },
+    "by_certainty": {
+      "weak": 2,
+      "explicit": 2,
+      "strong": 2
+    },
+    "flag_count": 2
+  }
+}

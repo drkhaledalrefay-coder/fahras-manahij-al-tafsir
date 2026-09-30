@@ -1,0 +1,94 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_24.txt",
+  "ayah": "8:24",
+  "surah": 8,
+  "ayah_number": 24,
+  "source_char_length": 3762,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 1460,
+      "kind": "author"
+    },
+    {
+      "start": 1460,
+      "end": 1558,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1558,
+      "end": 1993,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1993,
+      "end": 1994,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1994,
+      "end": 1995,
+      "kind": "author"
+    },
+    {
+      "start": 1995,
+      "end": 2024,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2024,
+      "end": 3468,
+      "kind": "author"
+    },
+    {
+      "start": 3468,
+      "end": 3761,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3761,
+      "end": 3762,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 2906,
+    "layout": 0,
+    "apparatus": 856
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 2,
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 99,
+    "footnote": 757
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[فَقَالَ: لَا جَرَمَ يَا رَسُولَ اللَّهِ لَا تَدْعُونِي إِلَّا أَجَبْتُ وَإِنْ كُنْتُ مُصَلِّيًا\" ¬أخرجه الطبري في التفسير: 13/ 467 بهذا اللفظ، وأخرجه بنحوه الترمذي في فضائل القرآن - باب ما جاء في فضل فاتحة الكتاب: 8/ 178 - 180 وقال: هذا حديث حسن صحيح. والإمام أحمد في المسند: 2/ 412 - 413، وأخرجه البخاري بغير هذا السياق في التفسير 8/ 156، وفي فضائل القرآن. وقال المنذري: رواه ابن خزيمة وابن حبان في صحيحيهما والحاكم باختصار عن أبي هريرة عن أُبي، وقال الحاكم: صحيح على شرط مسلم. انظر: الكافي الشاف ص (68 - 69) تحفة الأحوذي: 8/ 180.¥]": 1
+    }
+  }
+}

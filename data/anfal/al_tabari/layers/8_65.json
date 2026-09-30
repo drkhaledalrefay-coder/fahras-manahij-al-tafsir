@@ -1,0 +1,76 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_65.txt",
+  "ayah": "8:65",
+  "surah": 8,
+  "ayah_number": 65,
+  "source_char_length": 1322,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 502,
+      "kind": "author"
+    },
+    {
+      "start": 502,
+      "end": 506,
+      "kind": "layout"
+    },
+    {
+      "start": 506,
+      "end": 632,
+      "kind": "author"
+    },
+    {
+      "start": 632,
+      "end": 644,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 644,
+      "end": 1318,
+      "kind": "author"
+    },
+    {
+      "start": 1318,
+      "end": 1322,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 3,
+    "layout": 3,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 1298,
+    "layout": 12,
+    "apparatus": 12
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 12
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 3
+    },
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

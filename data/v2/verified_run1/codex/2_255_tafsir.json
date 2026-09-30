@@ -1,0 +1,2496 @@
+{
+  "window_id": "2_255_tafsir",
+  "ayah": "2:255",
+  "annotator": "codex",
+  "source_file": "data/raw/tafsircenter/2_255.txt",
+  "source_sha256": "7dfc6ccbd2f8548234621a6a62337d5d27d992a5f33f89b78750a2963196b986",
+  "window_start": 17325,
+  "window_end": 27301,
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": [
+        "s198",
+        "s199"
+      ],
+      "start": 17325,
+      "end": 17553,
+      "text": " وقوله: {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ} أي: لا يعتريه نقص ولا غفلة ولا ذهول عن خلقه، بل هو قائم على كل نفس بما كسبت، شهيد على كل شيء، لا يغيب عنه شيء، ولا يخفى عليه خافية، ومن تمام القيومية أنه لا يعتريه سنة ولا نوم، فقوله:",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s198",
+        "s199"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح المؤلف دلالة نفي الغفلة والنقص في سياق القيومية.",
+      "marker_hits": [
+        {
+          "span_id": "s198",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 17333,
+          "end": 17369
+        },
+        {
+          "span_id": "s198",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 17370,
+          "end": 17373
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m02",
+      "span_ids": [
+        "s200",
+        "s201"
+      ],
+      "start": 17553,
+      "end": 17645,
+      "text": " {لَا تَأْخُذُهُ} أي: لا تغلبه سنة وهي الوسن والنعاس، ولهذا قال: ولا نوم لأنه أقوى من السنة.",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s200",
+        "s201"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "بيّن معنى اللفظ وفرق الشدة بين حالتي النعاس والنوم.",
+      "marker_hits": [
+        {
+          "span_id": "s200",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 17554,
+          "end": 17570
+        },
+        {
+          "span_id": "s200",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 17571,
+          "end": 17574
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m03",
+      "span_ids": [
+        "s202",
+        "s203",
+        "s204"
+      ],
+      "start": 17645,
+      "end": 17935,
+      "text": "\r\nوفي الصحيح عن أبي موسى، قال: قام فينا رسول الله - صلى الله عليه وسلم - بأربع كلمات، فقال: \"إن الله لا ينام، ولا ينبغي له أن ينام، يخفض القسط ويرفعه، يرفع إليه عمل النهار قبل عمل الليل، وعمل الليل قبل عمر النهار، حجابه النور أو النار، لو كشفه لأحرقت سبحات وجهه ما انتهى إليه بصره من خلقه\" ",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s203",
+        "s204"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث أبي موسى"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "خبر نبوي يبين تنزه الله عن النوم الموافق لمعنى الآية.",
+      "marker_hits": [
+        {
+          "span_id": "s203",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 17697,
+          "end": 17715
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 17935,
+          "end": 17996,
+          "text": "¬صحيح مسلم، الإيمان، باب في قوله: \"إن الله لا ينام\" (ح 179).¥",
+          "attached_span_id": "s204",
+          "grading": [
+            "صحيح"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m04",
+      "span_ids": [
+        "s205",
+        "s206",
+        "s207",
+        "s208",
+        "s209",
+        "s210",
+        "s211"
+      ],
+      "start": 17996,
+      "end": 18862,
+      "text": ".\r\nوقال عبد الرزاق: أخبرنا معمر، أخبرني الحكم بن أبان، عن عكرمة مولى ابن عباس في قوله: {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ} أن موسى - عليه السلام - سأل الملائكة: هل ينام الله - عز وجل - فأوحى الله تعالى إلى الملائكة وأمرهم أن يؤرقوه ثلاثًا، فلا يتركوه ينام، ففعلوا، ثم أعطوه قارورتين فأمسكهما، ثم تركوه وحذروه أن يكسرهما، قال: فجعل ينعس وهما في يده، وفي كل يد واحدة، قال: فجعل ينعس وينبه، وينعس وينبه، حتى نعس نعسة، فضرب إحداهما بالأخرى فكسرهما، قال معمر: إنما هو مثل ضربه الله - عز وجل -، يقول فكذلك السموات والأرض في يده، وهكذا رواه ابن جرير، عن الحسن بن يحيى، عن عبد الرزاق ... فذكره ، وهو من أخبار بني إسرائيل، وهو مما يعلم أن موسى - عليه السلام - لا يخفى عليه مثل هذا من أمر الله - عز وجل -، وأنه منزه عنه، وأغرب من هذا كله الحديث الذي رواه ابن جرير:",
+      "primary": "M_ISRAILIYYAT",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s206",
+        "s207",
+        "s210",
+        "s211"
+      ],
+      "author_verdict_span_ids": [
+        "s211"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عكرمة"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قصة تمثيلية في تفسير الآية صنفها المؤلف من أخبار بني إسرائيل.",
+      "marker_hits": [
+        {
+          "span_id": "s206",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 18083,
+          "end": 18119
+        },
+        {
+          "span_id": "s210",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 18526,
+          "end": 18530
+        },
+        {
+          "span_id": "s210",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 18541,
+          "end": 18582
+        },
+        {
+          "span_id": "s210",
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "start": 18544,
+          "end": 18549,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s211",
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 18709,
+          "end": 18720
+        },
+        {
+          "span_id": "s211",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 18848,
+          "end": 18852
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 18583,
+          "end": 18694,
+          "text": "¬أخرجه الطبري بسنده ولفظه. وفي سنده أُمية بن شبل له حديث منكر، وهو الحديث المذكور (ينظر: لسان الميزان 1/ 467).¥",
+          "attached_span_id": "s210",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m05",
+      "span_ids": [
+        "s212",
+        "s213",
+        "s214",
+        "s215",
+        "s216",
+        "s217",
+        "s218",
+        "s219"
+      ],
+      "start": 18862,
+      "end": 19543,
+      "text": " حدثنا إسحاق بن أبي إسرائيل. حدثنا هشام بن يوسف، عن أُمية بن شبل، عن الحكم بن أبان، عن عكرمة، عن أبي هريرة، قال: سمعت رسول الله - صلى الله عليه وسلم - يحكي عن موسى - عليه السلام - على المنبر، قال: \"وقع في نفس موسى: هل ينام الله؟ فأرسل إليه ملكًا فأرقه ثلاثًا، ثم أعطاه قارورتين في كل يد قارورة، وأمره أن يحتفظ بهما قال: فجعل ينام، وكادت يداه تلتقيان، فيستيقظ فيحبس إحداهما  على الأخرى، حتى نام نومة، فاصطفقت يداه، فانكسرت القارورتان، - قال - ضرب الله - عز وجل مثلًا، أن الله لو كان ينام لم تستمسك السماء والأرض\"  وهذا حديث غريب جدًّا، والأظهر أنه إسرائيلي لا مرفوع، والله أعلم.",
+      "primary": "M_ISRAILIYYAT",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s214",
+        "s218",
+        "s219"
+      ],
+      "author_verdict_span_ids": [
+        "s219"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SUNNAH"
+      ],
+      "rationale_ar": "خبر ظاهر الإسناد النبوي رجح المؤلف أن منشأه إسرائيلي.",
+      "marker_hits": [
+        {
+          "span_id": "s214",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 18992,
+          "end": 19010
+        },
+        {
+          "span_id": "s219",
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 19489,
+          "end": 19493
+        },
+        {
+          "span_id": "s219",
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 19532,
+          "end": 19542
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 19235,
+          "end": 19257,
+          "text": "¬في الأصل: \"أحديهما\".¥",
+          "attached_span_id": "s217",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        },
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 19396,
+          "end": 19478,
+          "text": "¬أخرجه الطبري بسنده ومتنه وحكم عليه الحافظ ابن كثير. وفي سنده أيضًا أُمية بن شبل.¥",
+          "attached_span_id": "s218",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m06",
+      "span_ids": [
+        "s220",
+        "s221",
+        "s222",
+        "s223",
+        "s224"
+      ],
+      "start": 19543,
+      "end": 20137,
+      "text": "\r\nوقال ابن أبي حاتم: حدثنا أحمد بن القاسم بن عطية، حدثنا أحمد بن عبد الرحمن الدشتكي، حدثني أبي، عن أبيه، حدثنا أشعث بن إسحاق، عن جعفر بن أبي المغيرة، عن سعيد بن جبير، عن ابن عباس، أن بني إسرائيل قالوا: يا موسى، هل ينام ربك؟ قال: اتقوا الله، فناداه ربه - عز وجل - يا موسى، سألوك هل ينام ربك، فخذ زجاجتين في يديك، فقم الليلة، ففعل موسى، فلما ذهب من الليل ثلث نعس، فوقع لركبتيه، ثم انتعش فضبطهما، حتى إذا كان آخر الليل نعس، فسقطت الزجاجتان فانكسرتا، فقال: يا موسى، لو كنت أنام لسقطت السموات والأرض فهلكت كما هلكت الزجاجتان في يديك. فأنزل الله - عز وجل - على نبيه - صلى الله عليه وسلم - آية الكرسي ",
+      "primary": "M_NUZUL",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s220",
+        "s223",
+        "s224"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_ISRAILIYYAT"
+      ],
+      "rationale_ar": "الخبر يربط واقعة مزعومة بنزول الآية صراحة، مع بقاء صحة الرواية موضع مراجعة.",
+      "marker_hits": [
+        {
+          "span_id": "s220",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 19564,
+          "end": 19569
+        },
+        {
+          "span_id": "s220",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 19594,
+          "end": 19599
+        },
+        {
+          "span_id": "s220",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 19648,
+          "end": 19653
+        },
+        {
+          "span_id": "s220",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 19669,
+          "end": 19712
+        },
+        {
+          "span_id": "s220",
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "start": 19696,
+          "end": 19708,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s220",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 19713,
+          "end": 19721,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s220",
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 19726,
+          "end": 19737
+        },
+        {
+          "span_id": "s224",
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 20072,
+          "end": 20077
+        },
+        {
+          "span_id": "s224",
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 20072,
+          "end": 20082
+        },
+        {
+          "span_id": "s224",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 20105,
+          "end": 20123
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 20137,
+          "end": 20229,
+          "text": "¬أخرجه ابن أبي حاتم بسنده ولفظه، وفي سنده جعفر بن أبي المغيرة وهو صدوق يهم (التقريب ص 141).¥",
+          "attached_span_id": "s224",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m07",
+      "span_ids": [
+        "s225",
+        "s226"
+      ],
+      "start": 20229,
+      "end": 20527,
+      "text": ".\r\nوقوله: {لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ} إخبار بأن الجميع عبيده وفي ملكه، وتحت قهره وسلطانه، كقوله: {إِنْ كُلُّ مَنْ فِي السَّمَاوَاتِ وَالْأَرْضِ إِلَّا آتِي الرَّحْمَنِ عَبْدًا (93) لَقَدْ أَحْصَاهُمْ وَعَدَّهُمْ عَدًّا (94) وَكُلُّهُمْ آتِيهِ يَوْمَ الْقِيَامَةِ فَرْدًا (95)} ",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s225",
+        "s226"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "19:93-95"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استشهد بآية أخرى لبيان شمول الملك والعبودية.",
+      "marker_hits": [
+        {
+          "span_id": "s225",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 20239,
+          "end": 20287
+        },
+        {
+          "span_id": "s225",
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 20340,
+          "end": 20344
+        },
+        {
+          "span_id": "s225",
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 20340,
+          "end": 20345
+        },
+        {
+          "span_id": "s226",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 20347,
+          "end": 20526
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m08",
+      "span_ids": [
+        "s227",
+        "s228",
+        "s229"
+      ],
+      "start": 20533,
+      "end": 20802,
+      "text": ".\r\nوقوله: {لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ} كقوله: {وَكَمْ مِنْ مَلَكٍ فِي السَّمَاوَاتِ لَا تُغْنِي شَفَاعَتُهُمْ شَيْئًا إِلَّا مِنْ بَعْدِ أَنْ يَأْذَنَ اللَّهُ لِمَنْ يَشَاءُ وَيَرْضَى (26)}  وكقوله: {وَلَا يَشْفَعُونَ إِلَّا لِمَنِ ارْتَضَى} ",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s227",
+        "s228",
+        "s229"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "53:26",
+          "21:28"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استعمل آيات أخرى لتقييد الشفاعة بالإذن والرضا.",
+      "marker_hits": [
+        {
+          "span_id": "s227",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 20543,
+          "end": 20591
+        },
+        {
+          "span_id": "s227",
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 20592,
+          "end": 20596
+        },
+        {
+          "span_id": "s227",
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 20592,
+          "end": 20597
+        },
+        {
+          "span_id": "s228",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 20599,
+          "end": 20742
+        },
+        {
+          "span_id": "s229",
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 20752,
+          "end": 20756
+        },
+        {
+          "span_id": "s229",
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 20752,
+          "end": 20757
+        },
+        {
+          "span_id": "s229",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 20759,
+          "end": 20801
+        },
+        {
+          "span_id": "s229",
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 20802,
+          "end": 20816
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m09",
+      "span_ids": [
+        "s230",
+        "s231",
+        "s232"
+      ],
+      "start": 20816,
+      "end": 21078,
+      "text": " وهذا من عظمته وجلاله وكبريائه - عز وجل -، أنه لا يتجاسر أحد على أن يشفع لأحد عنده إلا بإذنه له في الشفاعة، كما في حديث الشفاعة: \"آتي تحت العرش فأخر ساجدًا، فيدعني ما شاء الله أن يدعني. ثم يقال: ارفع رأسك وقل تسمع واشفع تشفع - قال - فيحد لي حدًّا فأدخلهم الجنة\" ",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s230",
+        "s231",
+        "s232"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث الشفاعة"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استشهد بحديث الشفاعة لشرح توقفها على الإذن.",
+      "marker_hits": [
+        {
+          "span_id": "s232",
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 21005,
+          "end": 21009
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 21078,
+          "end": 21210,
+          "text": "¬أخرجه البخاري من حديث أبي هريرة (الصحيح، تفسير سورة الإسراء، باب {ذُرِّيَّةَ مَنْ حَمَلْنَا مَعَ نُوحٍ ... } [الإسراء: 3] ح 4712).¥",
+          "attached_span_id": "s232",
+          "grading": [
+            "صحيح"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m10",
+      "span_ids": [
+        "s233"
+      ],
+      "start": 21210,
+      "end": 21500,
+      "text": ".\r\nوقوله: {يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ} دليل على إحاطة علمه بجميع الكائنات، ماضيها وحاضرها ومستقبلها، كقوله إخبارًا عن الملائكة {وَمَا نَتَنَزَّلُ إِلَّا بِأَمْرِ رَبِّكَ لَهُ مَا بَيْنَ أَيْدِينَا وَمَا خَلْفَنَا وَمَا بَيْنَ ذَلِكَ وَمَا كَانَ رَبُّكَ نَسِيًّا (64)} ",
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s233"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "19:64"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "ربط إحاطة العلم بآية أخرى تصف علم الله.",
+      "marker_hits": [
+        {
+          "span_id": "s233",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 21220,
+          "end": 21270
+        },
+        {
+          "span_id": "s233",
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 21333,
+          "end": 21337
+        },
+        {
+          "span_id": "s233",
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 21333,
+          "end": 21338
+        },
+        {
+          "span_id": "s233",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 21359,
+          "end": 21499
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m11",
+      "span_ids": [
+        "s234",
+        "s235"
+      ],
+      "start": 21506,
+      "end": 21655,
+      "text": ".\r\nوقوله: {وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ} أي: لا يطلع أحد من علم الله على شيء إلا بما أعلمه الله - عز وجل - وأطلعه عليه.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s234",
+        "s235"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "فسر حد علم المخلوقين بما يطلعهم الله عليه.",
+      "marker_hits": [
+        {
+          "span_id": "s234",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 21516,
+          "end": 21576
+        },
+        {
+          "span_id": "s234",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 21577,
+          "end": 21580
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m12",
+      "span_ids": [
+        "s236"
+      ],
+      "start": 21655,
+      "end": 21781,
+      "text": " ويحتمل أن يكون المراد لا يطلعون على شيء من علم ذاته وصفاته، إلا بما أطلعهم الله عليه، كقوله: {وَلَا يُحِيطُونَ بِهِ عِلْمًا} ",
+      "primary": "M_QURAN",
+      "secondary": [
+        "M_RAY"
+      ],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s236"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [
+          "20:110"
+        ],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "عضد احتمالا تفسيريا بآية أخرى تنفي الإحاطة بالذات.",
+      "marker_hits": [
+        {
+          "span_id": "s236",
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 21742,
+          "end": 21746
+        },
+        {
+          "span_id": "s236",
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 21742,
+          "end": 21747
+        },
+        {
+          "span_id": "s236",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 21749,
+          "end": 21780
+        },
+        {
+          "span_id": "s236",
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 21781,
+          "end": 21790
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m13",
+      "span_ids": [
+        "s237",
+        "s238",
+        "s239",
+        "s240"
+      ],
+      "start": 21790,
+      "end": 22139,
+      "text": ".\r\nوقوله: {وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ}، قال ابن أبي حاتم: حدثنا أبو سعيد الأشج، حدثنا ابن إدريس، عن مطرف بن طريف، عن جعفر بن أبي المغيرة، عن سعيد بن جبير، عن ابن عباس، في قوله: {وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ} قال: علمه، وكذا رواه ابن جرير من حديث عبد الله بن إدريس وهشيم، كلاهما عن مطرف بن طريف به، قال ابن أبي حاتم:",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s238",
+        "s239",
+        "s240"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل عن ابن عباس تفسيرا لمعنى الكرسي.",
+      "marker_hits": [
+        {
+          "span_id": "s238",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 21866,
+          "end": 21871
+        },
+        {
+          "span_id": "s238",
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 21866,
+          "end": 21907
+        },
+        {
+          "span_id": "s238",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 21888,
+          "end": 21893
+        },
+        {
+          "span_id": "s238",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 21905,
+          "end": 21965
+        },
+        {
+          "span_id": "s238",
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "start": 21949,
+          "end": 21961,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s238",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 21966,
+          "end": 21974,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s239",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 21985,
+          "end": 22031
+        },
+        {
+          "span_id": "s240",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 22048,
+          "end": 22052
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m14",
+      "span_ids": [
+        "s241"
+      ],
+      "start": 22139,
+      "end": 22166,
+      "text": " وروي عن سعيد بن جبير مثله ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s241"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "سعيد بن جبير"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "أحال إلى تفسير مماثل منسوب إلى سعيد بن جبير دون بسطه هنا.",
+      "marker_hits": [
+        {
+          "span_id": "s241",
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "start": 22148,
+          "end": 22160,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 22166,
+          "end": 22366,
+          "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه وتعليقه والطبري كذلك، وفي سنديهما جعفر بن أبي المغيرة صدوق يهم كما تقدم في الصفحة السابقة وهذه الرواية عن ابن عباس مخالفة ما ثبت عنه أن الكرسي: موضع القدمين كما سيأتي.¥",
+          "attached_span_id": "s241",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m15",
+      "span_ids": [
+        "s242",
+        "s243"
+      ],
+      "start": 22366,
+      "end": 22464,
+      "text": "، ثم قال ابن جرير: وقال آخرون الكرسي موضع القدمين، ثم رواه عن أبي موسى والسدي الضحاك ومسلم البطين ",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "insufficient",
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s243"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SAHABA",
+        "M_TABIIN"
+      ],
+      "rationale_ar": "ورد تفسير منسوب إلى جماعة مختلطة بلا تعيين واضح لصاحب القول.",
+      "marker_hits": [
+        {
+          "span_id": "s243",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 22420,
+          "end": 22424
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 22464,
+          "end": 22627,
+          "text": "¬أخرجه الطبري من طريق عمارة بن عمير عن أبي موسى، وعمارة لم يسمع من أبي موسى، وأخرجه بسند حسن من طريق أسباط عن السدي، وبسند حسن من طريق عمار الدهني عن مسلم البطين.¥",
+          "attached_span_id": "s243",
+          "grading": [
+            "حسن"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m16",
+      "span_ids": [
+        "s244",
+        "s245",
+        "s246",
+        "s247",
+        "s248"
+      ],
+      "start": 22627,
+      "end": 23012,
+      "text": ".\r\nوقال شجاع بن مخلد في تفسيره: أخبرنا أبو عاصم، عن سفيان، عن عمار الدُهني، عن مسلم البطين، عن سعيد بن جبير، عن ابن عباس، قال: سئل النبي - صلى الله عليه وسلم - عن قول الله - عز وجل -: {وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ}؟ قال: \"كرسيه موضع قدميه والعرش لا يقدر قدره إلا الله - عز وجل - \" كذا أورد هذا الحديث الحافظ أبو بكر بن مردويه من طريق شجاع بن مخلد الفلاس، فذكره وهو غلط ",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "insufficient",
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s246",
+        "s247",
+        "s248"
+      ],
+      "author_verdict_span_ids": [
+        "s248"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_SUNNAH",
+        "M_SAHABA"
+      ],
+      "rationale_ar": "الرواية مرفوعة في ظاهرها لكن المؤلف يخطئ هذا الرفع؛ تعذر إسناد المنهج إليها.",
+      "marker_hits": [
+        {
+          "span_id": "s246",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 22766,
+          "end": 22784
+        },
+        {
+          "span_id": "s247",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 22811,
+          "end": 22857
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23012,
+          "end": 23119,
+          "text": "¬وجه الغلط هو رفعه إلى النبي - صلى الله عليه وسلم - والصحيح وقفه على ابن عباس ولعل الذي رفعه شجاع بن مخلد.¥",
+          "attached_span_id": "s248",
+          "grading": [
+            "صحيح"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m17",
+      "span_ids": [
+        "s249",
+        "s250"
+      ],
+      "start": 23119,
+      "end": 23272,
+      "text": ".\r\nوقد رواه وكيع في تفسيره، حدثنا سفيان، عن عمار الدهني، عن مسلم البطين، عن سعيد بن جبير، عن ابن عباس، قال: الكرسي موضع القدمين، والعرش لا يقدر أحد قدره ",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s249",
+        "s250"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "ورد التفسير نفسه قولا لابن عباس بعد تصحيح موضع نسبته.",
+      "marker_hits": [
+        {
+          "span_id": "s249",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 23126,
+          "end": 23130
+        },
+        {
+          "span_id": "s249",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 23147,
+          "end": 23152
+        },
+        {
+          "span_id": "s249",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 23160,
+          "end": 23199
+        },
+        {
+          "span_id": "s249",
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "start": 23195,
+          "end": 23207,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s249",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 23212,
+          "end": 23220,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23272,
+          "end": 23283,
+          "text": "¬سنده حسن.¥",
+          "attached_span_id": "s250",
+          "grading": [
+            "حسن",
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m18",
+      "span_ids": [
+        "s251",
+        "s252",
+        "s253"
+      ],
+      "start": 23283,
+      "end": 23618,
+      "text": ". وقد رواه الحاكم في مستدركه عن أبي العباس محمد بن أحمد المحبوبي، عن محمد بن معاذ، عن أبي عاصم، عن سفيان، وهو الثوري بإسناده عن ابن عباس موقوفًا مثله، وقال: صحيح على شرط الشيخين، ولم يخرجاه . وقد رواه ابن مردويه من طريق الحاكم بن ظهير الغزاري الكوفي، وهو متروك عن السدي، عن أبيه، عن أبي هريرة، مرفوعًا ولا يصحّ أيضًا.",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s251",
+        "s252",
+        "s253"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "تخريج للطرق وحكم على رفع الخبر، بلا وظيفة تفسيرية مستقلة.",
+      "marker_hits": [
+        {
+          "span_id": "s251",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 23289,
+          "end": 23293
+        },
+        {
+          "span_id": "s251",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 23349,
+          "end": 23388
+        },
+        {
+          "span_id": "s251",
+          "family": "SAHABA",
+          "marker": "معاذ",
+          "start": 23360,
+          "end": 23364,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s251",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 23411,
+          "end": 23419,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s253",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 23497,
+          "end": 23501
+        },
+        {
+          "span_id": "s253",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 23562,
+          "end": 23606
+        },
+        {
+          "span_id": "s253",
+          "family": "TABIIN",
+          "marker": "السدي",
+          "start": 23565,
+          "end": 23570,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23473,
+          "end": 23491,
+          "text": "¬المستدرك 2/ 282.¥",
+          "attached_span_id": "s252",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m19",
+      "span_ids": [
+        "s254"
+      ],
+      "start": 23618,
+      "end": 23662,
+      "text": "\r\nوقال السدي، عن أبي مالك: الكرسي تحت العرش ",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "insufficient",
+      "certainty": "insufficient",
+      "evidence_span_ids": [
+        "s254"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [
+        "M_TABIIN",
+        "M_SAHABA"
+      ],
+      "rationale_ar": "فسر موضع الكرسي لكن نسبة القول إلى أبي مالك عبر السدي لا تكفي لتحديد المنهج.",
+      "marker_hits": [
+        {
+          "span_id": "s254",
+          "family": "TABIIN",
+          "marker": "السدي",
+          "start": 23625,
+          "end": 23630,
+          "role": "NARRATOR"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23662,
+          "end": 23720,
+          "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق إسرائيل عن السدي به.¥",
+          "attached_span_id": "s254",
+          "grading": [
+            "حسن"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "specialist",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m20",
+      "span_ids": [
+        "s255"
+      ],
+      "start": 23720,
+      "end": 23786,
+      "text": "، وقال السدي: السموات والأرض في جوف الكرسي، والكرسي بين يدي العرش ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s255"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "السدي"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "قول السدي نفسه يصف موضع الكرسي بالنسبة إلى العرش.",
+      "marker_hits": [
+        {
+          "span_id": "s255",
+          "family": "TABIIN",
+          "marker": "السدي",
+          "start": 23727,
+          "end": 23732,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 23786,
+          "end": 23847,
+          "text": "¬أخرجه الطبرى وابن أبي حاتم بسند حسن من طريق أسباط عن السدي.¥",
+          "attached_span_id": "s255",
+          "grading": [
+            "حسن"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m21",
+      "span_ids": [
+        "s256",
+        "s257"
+      ],
+      "start": 23847,
+      "end": 24019,
+      "text": ".\r\nوقال الضحاك: عن ابن عباس: لو أن السموات السبع والأرضين السبع، بسطن ثم وصلن بعضهن إلى بعض، ما كن في سعة الكرسي إلا بمنزلة الحلقة في المفازة، ورواه ابن جرير وابن أبي حاتم ",
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s256",
+        "s257"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "عبد الله بن عباس"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل عن ابن عباس تمثيلا يبين سعة الكرسي.",
+      "marker_hits": [
+        {
+          "span_id": "s256",
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "start": 23855,
+          "end": 23861,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s256",
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "start": 23866,
+          "end": 23874,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s257",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 23991,
+          "end": 23995
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24019,
+          "end": 24121,
+          "text": "¬أخرجه ابن أبي حاتم بسند ضعيف من طريق بشر بن عمارة عن أبي روق عطية عن الضحاك به، وبشر بن عمارة: ضعيف.¥",
+          "attached_span_id": "s257",
+          "grading": [
+            "ضعيف"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m22",
+      "span_ids": [
+        "s258",
+        "s259",
+        "s260"
+      ],
+      "start": 24121,
+      "end": 24276,
+      "text": ".\r\nوقال ابن جرير: حدثني يونس، أخبرني ابن وهب قال: قال ابن زيد: حدثني أبي قال: قال رسول الله: \"ما السموات السبع في الكرسي إلا كدراهم سبعة ألقيت في ترس\" قال:",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s259",
+        "s260"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "خبر ابن زيد"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "خبر منسوب إلى النبي يوضح نسبة السماوات إلى الكرسي.",
+      "marker_hits": [
+        {
+          "span_id": "s259",
+          "family": "TABIIN",
+          "marker": "ابن زيد",
+          "start": 24175,
+          "end": 24182,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s260",
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 24199,
+          "end": 24212
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m23",
+      "span_ids": [
+        "s261",
+        "s262"
+      ],
+      "start": 24276,
+      "end": 24404,
+      "text": " وقال أبو ذرٍّ: سمعت رسول الله - صلى الله عليه وسلم - يقول: \"ما الكرسي في العرش إلا كحلقة من حديد ألقيت بين ظهري فلاة من الأرض\" ",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s261",
+        "s262"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث أبي ذر"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "استعمل قولا نبويا يبين نسبة الكرسي إلى العرش.",
+      "marker_hits": [
+        {
+          "span_id": "s261",
+          "family": "SAHABA",
+          "marker": "أبو ذر",
+          "start": 24282,
+          "end": 24288,
+          "role": "SPEAKER"
+        },
+        {
+          "span_id": "s261",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 24309,
+          "end": 24327
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24404,
+          "end": 24472,
+          "text": "¬أخرجه الطبري بسنده ومتنه وفيه عبد الرحمن بن زيد بن أسلم: وهو ضعيف.¥",
+          "attached_span_id": "s262",
+          "grading": [
+            "ضعيف",
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m24",
+      "span_ids": [
+        "s263",
+        "s264",
+        "s265"
+      ],
+      "start": 24472,
+      "end": 24918,
+      "text": ".\r\nوقال أبو بكر بن مردويه: أخبرنا سليمان بن أحمد، أخبرنا عبد الله بن وهب الغزي، أخبرنا محمد بن أبي السري العسقلاني، أخبرنا محمد بن عبد الله التميمي، عن القاسم بن محمد الثقفي، عن أبي إدريس الخولاني، عن أبي ذرّ الغفاري، أنه سأل النبي - صلى الله عليه وسلم - عن الكرسي، فقال رسول الله - صلى الله عليه وسلم -: \"والذي نفسي بيده ما السموات السبع والأرضون السبع عند الكرسي، إلا كحلقة ملقاة بأرض فلاة، وإن فضل العرش على الكرسي كفضل الفلاة على تلك الحلقة\" ",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s264",
+        "s265"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث أبي ذر"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "أورد جوابا نبويا عن الكرسي يبين سعته قياسا إلى المخلوقات.",
+      "marker_hits": [
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 24499,
+          "end": 24505
+        },
+        {
+          "span_id": "s264",
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 24499,
+          "end": 24540
+        },
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 24522,
+          "end": 24528
+        },
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 24552,
+          "end": 24558
+        },
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 24588,
+          "end": 24594
+        },
+        {
+          "span_id": "s264",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 24621,
+          "end": 24672
+        },
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 24706,
+          "end": 24724
+        },
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 24739,
+          "end": 24752
+        },
+        {
+          "span_id": "s264",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 24755,
+          "end": 24773
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 24918,
+          "end": 25021,
+          "text": "¬في سنده القاسم بن محمد الثقفي وهو مجهول، ومحمد بن أبي السري: وهو صدوق له أوهام كثيرة (التقريب ص 504).¥",
+          "attached_span_id": "s265",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m25",
+      "span_ids": [
+        "s266",
+        "s267",
+        "s268",
+        "s269",
+        "s270",
+        "s271"
+      ],
+      "start": 25021,
+      "end": 25363,
+      "text": ".\r\nوقال الحافظ أبو يعلى الموصلي في مسنده: حدثنا زهير، حدثنا ابن أبي بُكير، حدثنا إسرائيل، عن أبي إسحاق، عن عبد الله بن خليفة، عن عمر - رضي الله عنه -، قال: أتت امرأة إلى رسول الله - صلى الله عليه وسلم - فقالت: ادع الله أن يدخلني الجنة، قال: فعظم الرب تبارك وتعالى، وقال: \"إن كرسيه وسع السموات والأرض وإن له أطيطًا كأطيط الرحل الجديد من ثقله\" ",
+      "primary": "M_SUNNAH",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s267",
+        "s268",
+        "s270",
+        "s271"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [
+          "حديث عبد الله بن خليفة"
+        ],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "تضمن الخبر قولا نبويا يشرح سعة الكرسي، مع مناقشة سنده بعده.",
+      "marker_hits": [
+        {
+          "span_id": "s267",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 25063,
+          "end": 25068
+        },
+        {
+          "span_id": "s267",
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 25063,
+          "end": 25117
+        },
+        {
+          "span_id": "s267",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 25075,
+          "end": 25080
+        },
+        {
+          "span_id": "s267",
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 25096,
+          "end": 25101
+        },
+        {
+          "span_id": "s267",
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 25111,
+          "end": 25164
+        },
+        {
+          "span_id": "s267",
+          "family": "SAHABA",
+          "marker": "عمر",
+          "start": 25150,
+          "end": 25153,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s268",
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 25203,
+          "end": 25221
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 25363,
+          "end": 25588,
+          "text": "¬أخرجه الضياء عن طريق أبي يعلى به (ح 151)، وأخرجه ابن أبي عاصم (السنة 1/ 252)، وأبو الشيخ (العظمة ح 193)، والبزار (كشف الأستار ح 39، كلهم من طريق إسرائيل به. وقد حكم عليه الحافظ ابن كثير بالانقطاع بين عبد الله بن خليفة وعمر.¥",
+          "attached_span_id": "s271",
+          "grading": [],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m26",
+      "span_ids": [
+        "s272",
+        "s273",
+        "s274"
+      ],
+      "start": 25588,
+      "end": 26047,
+      "text": " وقد رواه الحافظ البزار في مسنده المشهور وعبد بن حميد وابن جرير في تفسيريهما، والطبراني وابن أبي عاصم في كتابيّ السنة لهما، والحافظ الضياء في كتابه المختار من حديث أبي إسحاق السبيعي، عن عبد الله بن خليفة، وليس بذاك المشهور، وفي سماعه من عمر نظر. ثم منهم من يرويه عنه عن عمر موقوفًا، ومنهم من يرويه عنه مرسلًا، ومنهم من يزيد في متنه زيادة غريبة، ومنهم من يحذفها. وأغرب من هذا حديث جبير بن مطعم في صفة العرش كما رواه أبو داود في كتابه السنة من سننه، والله أعلم.",
+      "primary": null,
+      "secondary": [],
+      "content_tags": [
+        "C_TAKHRIJ"
+      ],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s272",
+        "s273",
+        "s274"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "عزو للخبر وموازنة طرقه وزياداته دون تفسير جديد.",
+      "marker_hits": [
+        {
+          "span_id": "s272",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 25593,
+          "end": 25597
+        },
+        {
+          "span_id": "s273",
+          "family": "SAHABA",
+          "marker": "عمر",
+          "start": 25858,
+          "end": 25861,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s273",
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 25926,
+          "end": 25930
+        },
+        {
+          "span_id": "s274",
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 25998,
+          "end": 26002
+        },
+        {
+          "span_id": "s274",
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 26036,
+          "end": 26046
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m27",
+      "span_ids": [
+        "s275"
+      ],
+      "start": 26047,
+      "end": 26335,
+      "text": "\r\nوقد روى ابن مردويه وغيره أحاديث عن بريدة وجابر وغيرهما في وضع الكرسي يوم القيامة لفصل القضاء، والظاهر أن ذلك غير المذكور في هذه الآية، وقد زعم بعض المتكلمين على علم الهيئة من الإسلاميين، إن الكرسي عندهم هو الفلك الثامن، وهو فلك الثوابت الذي فوقه الفلك التاسع، وهو الفلك الأثير ويقال له:",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s275"
+      ],
+      "author_verdict_span_ids": [
+        "s275"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "رجح المؤلف تمييز كرسي الآية عن مذكور في أخبار القيامة.",
+      "marker_hits": [
+        {
+          "span_id": "s275",
+          "family": "RAY",
+          "marker": "والظاهر",
+          "start": 26143,
+          "end": 26150
+        },
+        {
+          "span_id": "s275",
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 26327,
+          "end": 26331
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m28",
+      "span_ids": [
+        "s276"
+      ],
+      "start": 26335,
+      "end": 26442,
+      "text": " الأطلس، وقد رد ذلك عليهم آخرون وروى ابن جرير من طريق جويبر، عن الحسن البصري أنه كان يقول: الكرسي هو العرش ",
+      "primary": "M_TABIIN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s276"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": [
+          "الحسن البصري"
+        ]
+      },
+      "alternatives": [],
+      "rationale_ar": "نقل قول الحسن البصري في تفسير الكرسي بعد رأي آخر غير منسوب إليه.",
+      "marker_hits": [
+        {
+          "span_id": "s276",
+          "family": "TABIIN",
+          "marker": "الحسن البصري",
+          "start": 26399,
+          "end": 26411,
+          "role": "SPEAKER"
+        }
+      ],
+      "editor_footnote_evidence": [
+        {
+          "family": "EDITOR",
+          "marker": "editor_footnote",
+          "start": 26442,
+          "end": 26501,
+          "text": "¬في سنده جويبر: وهو ابن سعيد الأزدي: متروك كما في التقريب.¥",
+          "attached_span_id": "s276",
+          "grading": [
+            "سنده"
+          ],
+          "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+        }
+      ],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m29",
+      "span_ids": [
+        "s277"
+      ],
+      "start": 26501,
+      "end": 26675,
+      "text": "، والصحيح أن الكرسي غير العرش، والعرش أكبر منه، كما دلّت على ذلك الآثار والأخبار، وقد اعتمد ابن جرير على حديث عبد الله بن خليفة، عن عمر في ذلك، وعندي في صحته نظر، والله أعلم.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s277"
+      ],
+      "author_verdict_span_ids": [
+        "s277"
+      ],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "رجح المؤلف تمايز الكرسي والعرش وناقش اعتماد خبر محتج به.",
+      "marker_hits": [
+        {
+          "span_id": "s277",
+          "family": "RAY",
+          "marker": "والصحيح",
+          "start": 26503,
+          "end": 26510
+        },
+        {
+          "span_id": "s277",
+          "family": "SAHABA",
+          "marker": "عمر",
+          "start": 26633,
+          "end": 26636,
+          "role": "NARRATOR"
+        },
+        {
+          "span_id": "s277",
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 26664,
+          "end": 26674
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m30",
+      "span_ids": [
+        "s278",
+        "s279"
+      ],
+      "start": 26675,
+      "end": 27125,
+      "text": "\r\nوقوله: {وَلَا يَئُودُهُ حِفْظُهُمَا} أي: لا يثقله ولا يكرثه حفظ السموات والأرض، ومن فيهما، ومن بينهما، بل ذلك سهل عليه، يسير لديه، وهو القائم على كل نفس بما كسبت، الرقيب على جميع الأشياء، فلا يعزب عنه شيء ولا يغيب عنه شيء، والأشياء كلها حقيرة بين يديه متواضعة صغيرة بالنسبة إليه، محتاجة فقيرة وهو الغني الفعال لما يريد، الذي لا يسأل عما يفعل وهم يسألون، وهو القاهر لكل شيء، الحسيب على كل شيء، الرقيب العلي العظيم، لا إله غيره، ولا ربَّ سواه، فقوله:",
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "explicit",
+      "certainty": "explicit",
+      "evidence_span_ids": [
+        "s278",
+        "s279"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "شرح معنى لفظ قرآني ثم وسع بيان سهولة الحفظ لله.",
+      "marker_hits": [
+        {
+          "span_id": "s278",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 26684,
+          "end": 26713
+        },
+        {
+          "span_id": "s278",
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 26714,
+          "end": 26717
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 25,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 100
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    },
+    {
+      "move_id": "m31",
+      "span_ids": [
+        "s280"
+      ],
+      "start": 27125,
+      "end": 27301,
+      "text": " {وَهُوَ الْعَلِيُّ الْعَظِيمُ} كقوله: (وهو الكبير المتعال) وهذه الآيات وما في معناها من الأحاديث الصحاح الأجود فيها طريقة السلف الصالح، أمروها كما جاءت من غير تكييف ولا تشبيه.",
+      "primary": "M_RAY",
+      "secondary": [],
+      "content_tags": [],
+      "certainty_in": "strong",
+      "certainty": "strong",
+      "evidence_span_ids": [
+        "s280"
+      ],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": [],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "قرر المؤلف طريقة التعامل مع آيات الصفات في ختام تفسير الآية.",
+      "marker_hits": [
+        {
+          "span_id": "s280",
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 27126,
+          "end": 27156
+        },
+        {
+          "span_id": "s280",
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 27157,
+          "end": 27161
+        },
+        {
+          "span_id": "s280",
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 27157,
+          "end": 27162
+        },
+        {
+          "span_id": "s280",
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 27204,
+          "end": 27209
+        }
+      ],
+      "editor_footnote_evidence": [],
+      "flags": [],
+      "score": {
+        "parts": {
+          "marker": 0,
+          "function_evidence": 45,
+          "attribution": 15,
+          "boundary": 15
+        },
+        "total": 75
+      },
+      "route": "auto_candidate",
+      "review_status": "pending",
+      "origin": "ai"
+    }
+  ],
+  "summary": {
+    "window_id": "2_255_tafsir",
+    "annotator": "codex",
+    "move_count": 31,
+    "auto_candidate": 25,
+    "specialist": 6,
+    "by_primary": {
+      "M_RAY": 5,
+      "M_LUGHA": 2,
+      "M_SUNNAH": 6,
+      "M_ISRAILIYYAT": 2,
+      "M_NUZUL": 1,
+      "M_QURAN": 4,
+      "M_SAHABA": 3,
+      "M_TABIIN": 3,
+      "None": 5
+    },
+    "by_certainty": {
+      "strong": 10,
+      "explicit": 18,
+      "insufficient": 3
+    },
+    "flag_count": 0
+  }
+}

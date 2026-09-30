@@ -1,0 +1,68 @@
+TASK: Phase 3 — build the searchable Tafsir Index demo (data build script + single-file web page). Python stdlib only for the build. Vanilla HTML/CSS/JS for the page (no frameworks, no npm). Do NOT commit. Do NOT modify anything under data/raw/, data/spans*/, data/tags/, data/layers/.
+
+AUDIENCE: judges and team members who are NOT technical and NOT tafsir specialists. The page must explain itself in simple Modern Standard Arabic (فصحى بسيطة). All UI text in Arabic, RTL.
+
+====================================================================
+PART A — src/build_index.py  ->  web/index_data.json  and  web/index.html
+====================================================================
+Inputs (read-only): data/raw/tafsircenter/<a>.txt (read bytes, decode utf-8, NEVER normalize newlines — use newline=''), data/raw/quran_com/<a>.txt, data/spans_pilot/<a>.json, data/layers/<a>.json, data/tags/grok/<a>.json, data/tags/codex/<a>.json, data/raw/manifest.json, docs/taxonomy.md, reports/comparison.json, reports/reconciliation_author.json. Ayat: 17_105, 2_255, 2_102.
+
+1. Display units = union of both annotators' boundaries: walk spans in order; start a new display unit wherever EITHER annotator starts a unit. For each display unit record the covering unit of each annotator (its source_tags, content_tags, confidence, reason_ar).
+2. Text of each display unit is rebuilt BY CODE: src_a[start_of_first_span : end_of_last_span] is NOT allowed (it would include editor apparatus between spans). Instead concatenate the span texts, and also store the list of (start,end) offsets. Assert each span's src_a[start:end] == span text.
+3. Integrity checks per display unit (computed at build time, stored as booleans):
+   - verbatim_ok: all span offsets match the pinned Source A bytes (and the file sha256 equals the manifest value).
+   - in_source_b: normalized (reuse src/normalize.py L1) unit text is a substring of normalized Source B text for that ayah. Also store match_ratio if not a substring (difflib quick ratio on the best-aligned window is fine; keep it cheap).
+4. Status per display unit (NO unit may be "approved" in the data — nobody has reviewed yet):
+   - "agreed"  : both annotators have identical source_tags AND identical content_tags, both confidence >= 0.6, and no tag in SENSITIVE = {C_ISRAILIYYAT, C_TAKHRIJ, C_FIQH, C_NUZUL}.
+   - "needs_review": otherwise. Store reasons list from {"اختلاف بين الفاحصين","ثقة منخفضة","وسم حساس"}.
+   Displayed tags: if agreed -> the shared tags. If not -> show both annotators' tags side by side (label them "الفاحص الأول" and "الفاحص الثاني" — do NOT show model/vendor names in the UI).
+5. Editor apparatus per ayah: from data/layers, list the footnote and editor_bracket ranges inside the pilot window's char range (text + layer), so the page can show "ما عزلناه من حواشي المحقق".
+6. Summary numbers for the header, taken from reports (do not recompute differently): total spans, % text verbatim (should be 100), source-tag agreement, content-tag agreement, cross-source author match per ayah (after-separation ratio).
+7. Tag labels + plain-language one-line explanations come from docs/taxonomy.md (Arabic label + a simpler rewording you write for non-specialists, max 12 words each).
+8. Write web/index_data.json, then generate web/index.html from a template (src/index_template.html) by inlining the JSON into a <script type="application/json" id="data"> block. The final web/index.html must work by double-click with no server and no network except Google Fonts.
+
+====================================================================
+PART B — the page (src/index_template.html)
+====================================================================
+HARD CONSTRAINTS (the page will also be published inside a sandboxed viewer):
+- Start the file with <title> then <style>. Do NOT write <!DOCTYPE>, <html>, <head>, or <body> tags. Put dir="rtl" lang="ar" on the outermost wrapper div.
+- External resources: ONLY Google Fonts stylesheet (fonts.googleapis.com). Everything else inline. No CDN scripts needed.
+- Fonts: "Amiri" for the tafsir/Quran text; "IBM Plex Sans Arabic" for UI. Real fallback stacks. Do NOT use Inter.
+- Colors as CSS custom properties on :root (light). Redefine only the tokens under @media (prefers-color-scheme: dark) guarded by :root:not([data-theme="light"]), and again under :root[data-theme="dark"]; set color-scheme: dark in both dark blocks. body must set an explicit background from a token.
+  Light tokens: --bg #f4f6f5; --surface #ffffff; --ink #17201e; --muted #5b6b67; --line #d9e0dd; --primary #1f5f5b; --agreed #9a6b00 (amber text) with --agreed-bg #fdf3d7; --review #b4461f with --review-bg #fbe6dc; --approved #2f7a4b with --approved-bg #e3f3e8; --ok #2f7a4b; --warn #b4461f.
+  Dark tokens: pick matching values with legible contrast (bg ~#0f1514, surface ~#172120, ink ~#e6ecea, adjust status colors lighter).
+- No alert/confirm/prompt. No <a download>. No window.print. localStorage only inside try/catch and only for reviewer decisions (page must work if storage throws).
+- Mobile: works at 380px wide; 16px side gutter; no horizontal page scroll; filters stack.
+- Use flex/grid with gap. Tabular numerals for numbers. Visible keyboard focus. Respect prefers-reduced-motion.
+
+LAYOUT (top to bottom):
+1. Header: title "فهرس تفسير ابن كثير — نموذج تجريبي" and one-sentence subtitle: "نصّ ابن كثير كما هو، مقسّم إلى وحدات موسومة، مع بيان حالة كل وحدة ومطابقتها للأصل."
+2. "كيف يعمل؟" — a short 4-step strip for non-specialists (one line each):
+   ١ نأخذ النص آلياً من مصدر موثّق دون أن يكتبه أحد.
+   ٢ نفصل كلام ابن كثير عن حواشي المحقق.
+   ٣ فاحصان آليان يضعان الوسوم دون أن يلمسا النص.
+   ٤ نطابق كل وحدة مع الأصل، والمتخصص يعتمد.
+3. "ماذا أثبتت التجربة؟" — 4 compact facts with numbers from the summary: text integrity 100%; source-tag agreement %; content-tag agreement %; cross-source match after separating the editor's notes (per ayah). Label them as "نتائج تجربة أولى صغيرة".
+4. Legend of statuses with plain meaning:
+   🟡 مقترح — اتفق الفاحصان (لم يراجعه متخصص بعد)
+   🟠 بانتظار المتخصص — اختلاف أو ثقة منخفضة أو وسم حساس
+   🟢 معتمد — اعتمده المراجع في هذه الصفحة
+5. Filters bar: ayah select (الكل / البقرة ٢٥٥ / الإسراء ١٠٥ / البقرة ١٠٢), source-tag select, content-tag select, status select, and a text search box that ignores tashkeel (normalize both sides: strip U+064B–U+065F, U+0670, tatweel). Show "النتائج: N وحدة". Include 3 one-click example queries as chips: "كل الأحاديث في آية الكرسي", "الإسرائيليات في هاروت وماروت", "ما يحتاج مراجعة".
+6. Result cards. Each card:
+   - status badge + tag chips (each chip has title= plain-language explanation)
+   - the verbatim text in Amiri, generous line-height; Quranic text inside {…} or ﴿…﴾ lightly highlighted
+   - provenance line: "ابن كثير — سورة/آية — المحارف من X إلى Y"
+   - integrity line: "✅ مطابق للأصل حرفاً بحرف" (or ⚠️) and "✅ موجود أيضاً في المصدر الثاني" (or "⚠️ يختلف عن المصدر الثاني بنسبة …")
+   - an expandable "لماذا هذه الوسوم؟" showing الفاحص الأول / الفاحص الثاني tags, confidence as a simple word (عالية ≥0.8 / متوسطة ≥0.6 / منخفضة) and reason_ar, plus the review reasons.
+   - Reviewer controls (only visible when a top toggle "وضع المراجع" is on): "اعتماد" (sets local status approved), "رفض", and "إعادة للمراجعة". Store decisions in memory + localStorage (try/catch). A small "تصدير قرارات المراجع" button reveals a read-only textarea with the decisions JSON and a copy button (navigator.clipboard in the click handler, fall back to selecting the text).
+7. Per-ayah collapsible "ما عزلناه من حواشي المحقق" listing the editor apparatus texts found inside the window, with one sentence: "عُزلت هذه العبارات لأنها من المحقق أو مجهولة النسبة، حتى لا تُنسب إلى ابن كثير."
+8. Footer: sources and license — "النص: مركز تفسير للدراسات القرآنية (CC BY 4.0) · المصدر الثاني للمطابقة: quran.com" — and "نموذج تجريبي: لم يعتمد متخصص أي وحدة بعد."
+
+The page must open in a realistic state: all results visible, default ayah = الكل.
+
+GATES (run and paste output):
+  python src/build_index.py
+  python -c "check: web/index.html exists, contains no '<html' '<head' '<body' '<!DOCTYPE' tags, contains only fonts.googleapis.com as external URL, inlined JSON parses, every unit verbatim_ok is True, no unit has status 'approved'"
+Report size of web/index.html.
+
+REPORT (final message): number of display units per ayah and per status; how many units are in_source_b True/False; list of files created; any assumption you made. Do not commit.

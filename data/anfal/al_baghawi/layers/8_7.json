@@ -1,0 +1,149 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_7.txt",
+  "ayah": "8:7",
+  "surah": 8,
+  "ayah_number": 7,
+  "source_char_length": 10439,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 170,
+      "kind": "author"
+    },
+    {
+      "start": 170,
+      "end": 288,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 288,
+      "end": 521,
+      "kind": "author"
+    },
+    {
+      "start": 521,
+      "end": 566,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 566,
+      "end": 1927,
+      "kind": "author"
+    },
+    {
+      "start": 1927,
+      "end": 1980,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1980,
+      "end": 2573,
+      "kind": "author"
+    },
+    {
+      "start": 2573,
+      "end": 2602,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2602,
+      "end": 5169,
+      "kind": "author"
+    },
+    {
+      "start": 5169,
+      "end": 5189,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5189,
+      "end": 8652,
+      "kind": "author"
+    },
+    {
+      "start": 8652,
+      "end": 8675,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 8675,
+      "end": 8676,
+      "kind": "author"
+    },
+    {
+      "start": 8676,
+      "end": 8705,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 8705,
+      "end": 10226,
+      "kind": "author"
+    },
+    {
+      "start": 10226,
+      "end": 10239,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 10239,
+      "end": 10240,
+      "kind": "author"
+    },
+    {
+      "start": 10240,
+      "end": 10260,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 10260,
+      "end": 10439,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 10,
+    "layout": 0,
+    "apparatus": 9
+  },
+  "char_totals": {
+    "author": 10089,
+    "layout": 0,
+    "apparatus": 350
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 7,
+    "editor_bracket": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 314,
+    "editor_bracket": 36
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 7,
+    "footnote_close": 7,
+    "footnotes_closed": 7,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[عُهُودًا وَمَوَاثِيقَ]": 1,
+      "[بِعِدَاتِهِ]": 1
+    }
+  }
+}

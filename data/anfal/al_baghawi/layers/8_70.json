@@ -1,0 +1,105 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_70.txt",
+  "ayah": "8:70",
+  "surah": 8,
+  "ayah_number": 70,
+  "source_char_length": 2915,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 851,
+      "kind": "author"
+    },
+    {
+      "start": 851,
+      "end": 863,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 863,
+      "end": 864,
+      "kind": "author"
+    },
+    {
+      "start": 864,
+      "end": 878,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 878,
+      "end": 2228,
+      "kind": "author"
+    },
+    {
+      "start": 2228,
+      "end": 2269,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2269,
+      "end": 2270,
+      "kind": "author"
+    },
+    {
+      "start": 2270,
+      "end": 2284,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2284,
+      "end": 2595,
+      "kind": "author"
+    },
+    {
+      "start": 2595,
+      "end": 2914,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2914,
+      "end": 2915,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 6,
+    "layout": 0,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 2515,
+    "layout": 0,
+    "apparatus": 400
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 2,
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 53,
+    "footnote": 347
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[وَبَقِيَتْ]": 1,
+      "[قَالَ الْعَبَّاسُ رَضِيَ اللَّهُ عَنْهُ]": 1
+    }
+  }
+}

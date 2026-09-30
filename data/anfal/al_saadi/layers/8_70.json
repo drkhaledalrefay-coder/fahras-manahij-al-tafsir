@@ -1,0 +1,76 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/anfal/al_saadi/raw/8_70.txt",
+  "ayah": "8:70",
+  "surah": 8,
+  "ayah_number": 70,
+  "source_char_length": 985,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 239,
+      "kind": "author"
+    },
+    {
+      "start": 239,
+      "end": 271,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 271,
+      "end": 623,
+      "kind": "author"
+    },
+    {
+      "start": 623,
+      "end": 647,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 647,
+      "end": 942,
+      "kind": "author"
+    },
+    {
+      "start": 942,
+      "end": 984,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 984,
+      "end": 985,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 887,
+    "layout": 0,
+    "apparatus": 98
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 98
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

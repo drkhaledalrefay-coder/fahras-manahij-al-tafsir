@@ -1,0 +1,138 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_17.txt",
+  "ayah": "8:17",
+  "surah": 8,
+  "ayah_number": 17,
+  "source_char_length": 4113,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 278,
+      "kind": "author"
+    },
+    {
+      "start": 278,
+      "end": 306,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 306,
+      "end": 560,
+      "kind": "author"
+    },
+    {
+      "start": 560,
+      "end": 572,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 572,
+      "end": 573,
+      "kind": "author"
+    },
+    {
+      "start": 573,
+      "end": 591,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 591,
+      "end": 793,
+      "kind": "author"
+    },
+    {
+      "start": 793,
+      "end": 815,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 815,
+      "end": 2124,
+      "kind": "author"
+    },
+    {
+      "start": 2124,
+      "end": 2257,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2257,
+      "end": 2473,
+      "kind": "author"
+    },
+    {
+      "start": 2473,
+      "end": 2485,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2485,
+      "end": 2486,
+      "kind": "author"
+    },
+    {
+      "start": 2486,
+      "end": 2516,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2516,
+      "end": 3052,
+      "kind": "author"
+    },
+    {
+      "start": 3052,
+      "end": 3135,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3135,
+      "end": 4113,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 9,
+    "layout": 0,
+    "apparatus": 8
+  },
+  "char_totals": {
+    "author": 3775,
+    "layout": 0,
+    "apparatus": 338
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 6,
+    "editor_bracket": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 314,
+    "editor_bracket": 24
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 6,
+    "footnote_close": 6,
+    "footnotes_closed": 6,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[بِنَصْرِهِ]": 1,
+      "[تُحَادُّكَ]": 1
+    }
+  }
+}

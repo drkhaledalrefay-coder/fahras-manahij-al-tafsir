@@ -1,0 +1,13 @@
+TASK: Two small fixes in the specialist highlighter. Edit ONLY src/methods_template.html (and src/build_methods.py only if it must pass extra layer data), then rebuild: python src/build_methods.py. Do NOT touch data/, src/v2_*.py, deck/, method/. Do NOT commit.
+
+FIX 1 — Methods apply to the AUTHOR's text only.
+Bug (reviewer reproduced in browser): in specialist mode, selecting editor-footnote text such as «¬أخرجه الطبري» (the ¬…¥ apparatus inserted by the edition's editor) was saved as an M_QURAN highlight at 22464–22477. Editor apparatus is not Ibn Kathir's words and must never carry a method.
+Required:
+- Identify non-author ranges from the data the page already has (editor footnote spans ¬…¥ and any layer marked editor/non-author in the embedded data; inspect how the page already distinguishes them — if it does not, detect ¬…¥ ranges in the pinned source string at load time).
+- Render those ranges with a distinct muted style and a tooltip «حاشية المحقق — ليست من كلام ابن كثير».
+- When a new or edited highlight (selection, drag handle, keyboard boundary edit) overlaps a non-author range: refuse to save a METHOD label and show the Arabic line «هذا الموضع من حاشية المحقق، لا من كلام ابن كثير؛ لا يُوسم بمنهج». If the selection is partly author text, offer to trim to the author part only (auto-trim at word boundaries, then re-run the existing fidelity check).
+- Existing AI highlights are unchanged.
+
+FIX 2 — Colors: the «صحابة» (M_SAHABA) and «رأي» (M_RAY) colors are too similar. Make every method color distinguishable (check both light and dark themes); keep the existing palette style; no side-stripe borders >1px.
+
+GATES: python src/build_methods.py ; extract the inline script and run node --check on it ; report where the non-author detection lives and the exact refusal path for selection, handles, keyboard. List final method→color hex values. Do not commit.

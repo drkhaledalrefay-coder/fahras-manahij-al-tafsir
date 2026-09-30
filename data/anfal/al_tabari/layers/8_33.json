@@ -1,0 +1,118 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_33.txt",
+  "ayah": "8:33",
+  "surah": 8,
+  "ayah_number": 33,
+  "source_char_length": 1595,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 233,
+      "kind": "author"
+    },
+    {
+      "start": 233,
+      "end": 237,
+      "kind": "layout"
+    },
+    {
+      "start": 237,
+      "end": 584,
+      "kind": "author"
+    },
+    {
+      "start": 584,
+      "end": 626,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 626,
+      "end": 792,
+      "kind": "author"
+    },
+    {
+      "start": 792,
+      "end": 796,
+      "kind": "layout"
+    },
+    {
+      "start": 796,
+      "end": 811,
+      "kind": "author"
+    },
+    {
+      "start": 811,
+      "end": 815,
+      "kind": "layout"
+    },
+    {
+      "start": 815,
+      "end": 969,
+      "kind": "author"
+    },
+    {
+      "start": 969,
+      "end": 1000,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1000,
+      "end": 1482,
+      "kind": "author"
+    },
+    {
+      "start": 1482,
+      "end": 1590,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1590,
+      "end": 1591,
+      "kind": "author"
+    },
+    {
+      "start": 1591,
+      "end": 1595,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 7,
+    "layout": 5,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 1394,
+    "layout": 20,
+    "apparatus": 181
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 181
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 5
+    },
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

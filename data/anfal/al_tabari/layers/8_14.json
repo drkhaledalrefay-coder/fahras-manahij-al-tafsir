@@ -1,0 +1,126 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_14.txt",
+  "ayah": "8:14",
+  "surah": 8,
+  "ayah_number": 14,
+  "source_char_length": 915,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 104,
+      "kind": "author"
+    },
+    {
+      "start": 104,
+      "end": 108,
+      "kind": "layout"
+    },
+    {
+      "start": 108,
+      "end": 442,
+      "kind": "author"
+    },
+    {
+      "start": 442,
+      "end": 446,
+      "kind": "layout"
+    },
+    {
+      "start": 446,
+      "end": 564,
+      "kind": "author"
+    },
+    {
+      "start": 564,
+      "end": 568,
+      "kind": "layout"
+    },
+    {
+      "start": 568,
+      "end": 692,
+      "kind": "author"
+    },
+    {
+      "start": 692,
+      "end": 736,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 736,
+      "end": 737,
+      "kind": "author"
+    },
+    {
+      "start": 737,
+      "end": 741,
+      "kind": "layout"
+    },
+    {
+      "start": 741,
+      "end": 798,
+      "kind": "author"
+    },
+    {
+      "start": 798,
+      "end": 802,
+      "kind": "layout"
+    },
+    {
+      "start": 802,
+      "end": 825,
+      "kind": "author"
+    },
+    {
+      "start": 825,
+      "end": 829,
+      "kind": "layout"
+    },
+    {
+      "start": 829,
+      "end": 911,
+      "kind": "author"
+    },
+    {
+      "start": 911,
+      "end": 915,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 8,
+    "layout": 8,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 839,
+    "layout": 32,
+    "apparatus": 44
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 44
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 8
+    },
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "_comment": "FIXTURE — hand-written for src/v2_selftest.py only. NEVER load in the UI. NOT classifier output.",
+  "fixture": true,
+  "window": "17_105",
+  "annotator": "fixture",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s002", "s003", "s004"],
+      "primary": "M_QURAN",
+      "secondary": ["M_LUGHA"],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s002", "s003"],
+      "author_verdict_span_ids": [],
+      "references": {
+        "verses": ["4:166"],
+        "hadith": [],
+        "persons": []
+      },
+      "alternatives": [],
+      "rationale_ar": "آية مستشهد بها تبيّن معنى بالحق مع شرح لغوي لاحق."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": ["s001"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "strong",
+      "evidence_span_ids": ["s001"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "تفسير لغوي لمعنى نزول القرآن بالحق."
+    },
+    {
+      "move_id": "m03",
+      "span_ids": ["s005"],
+      "primary": "M_QURAN",
+      "secondary": ["M_LUGHA"],
+      "content_tags": ["C_TAFSIR"],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s005"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "شرح قوله وبالحق نزل بوظيفة تفسيرية مباشرة."
+    },
+    {
+      "move_id": "m04",
+      "span_ids": ["s006"],
+      "primary": "M_SAHABA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "strong",
+      "evidence_span_ids": ["s006"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_QURAN"],
+      "rationale_ar": "وسم خاطئ عمداً لاختبار قاعدة غياب علامة الصحابة."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+TASK: Create ONE explanatory infographic image (Arabic, RTL) that explains the project idea to non-technical people in a WhatsApp group. Output PNG. Do NOT commit. Only create files under deck/idea/ (nothing else in the repo).
+
+HOW: write deck/idea/idea.html (self-contained HTML/CSS/inline SVG, Google Fonts only: "Readex Pro" for UI text, "Amiri" for tafsir/Quran text), then render deck/idea/idea.png with headless Chrome at exactly 1080x1350 CSS px (portrait, WhatsApp-friendly), deviceScaleFactor 2 if possible. Find Chrome at "C:\Program Files\Google\Chrome\Application\chrome.exe" or Edge at "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"; use: --headless=new --screenshot=... --window-size=1080,1350 --force-device-scale-factor=2 --hide-scrollbars. Wait for fonts (use a small inline script that sets document.title="ready" after document.fonts.ready, and add --virtual-time-budget=5000).
+
+VISUAL IDENTITY: dark navy background #00062c with a faint 8-point star pattern (white ~5%); accents violet #6251eb, teal #2feec3, blue #39a0fd, amber #ffc857, red #ff6b6b; text #f2f4ff / #a9b2da. Brand gradient (#6251eb → #3fb0d6 → #2feec3) only on the main title. No logos. No personal names. No AI vendor names. Large readable type (body ≥ 30px at 1080 width). No side-stripe borders.
+
+CONTENT (Arabic, use this wording; you may shorten slightly):
+
+Title (gradient): فهرس مناهج التفسير
+Subtitle: كيف فسّر ابن كثير هذه الآية؟ بالقرآن؟ بالحديث؟ بقول صحابي؟
+
+Main visual (center, largest element): a mock of the app — two side-by-side panels:
+  RIGHT panel titled «صفحة التفسير»: 4–5 lines of real Ibn Kathir text (use these exact lines, verbatim, Amiri font):
+    يقول تعالى مخبرًا عن كتابه العزيز وهو القرآن المجيد أنه بالحق نزل، أي: متضمنًا للحق، كما قال تعالى: {لَكِنِ اللَّهُ يَشْهَدُ بِمَا أَنْزَلَ إِلَيْكَ أَنْزَلَهُ بِعِلْمِهِ}
+    وقوله: {وَبِالْحَقِّ نَزَلَ} أي: وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه
+  with colored highlights over parts of it: the quoted verse {لَكِنِ اللَّهُ ...} highlighted violet (قرآن بقرآن); «أي: وصل إليك ... ولا نقص منه» highlighted teal (بيان المعنى/الرأي). Each highlight has a small label chip.
+  LEFT panel titled «لوحة المناهج»: a vertical list of color swatches with names: قرآن بقرآن (violet) · سنة (blue) · صحابة (teal) · تابعون · لغة · أسباب نزول · إسرائيليات (red) · رأي — two of them shown toggled on.
+  A small pop-up card pointing at the violet highlight: «لماذا هذا الوسم؟ — الدليل: «كما قال تعالى» + آية تبيّن المعنى · اليقين: صريح ✅»
+
+Below the mock, a 3-step flow with simple icons (inline SVG), right-to-left:
+  ١ الذكاء الاصطناعي يقترح: يلوّن المواضع ويذكر دليله من النص نفسه — ولا يغيّر حرفاً.
+  ٢ النظام يتحقق: علامات نصية + قواعد + مستوى يقين (صريح · قوي · ضعيف · امتناع).
+  ٣ المتخصص يحكم: بقلم تمييز ذكي — يمدّ التمييز أو يقصّره، يغيّر لونه، يحذفه، أو يضيف ما فات.
+
+Footer line (small): النص من المصدر دون تغيير حرف · الآلة ترتّب، والعالِم يحكم.
+
+GATES: deck/idea/idea.png exists, is 1080x1350 (or 2160x2700 at 2x), non-empty; report its size. Verify the Ibn Kathir lines in idea.html are character-identical to the lines above (they are verbatim from the source). Do not commit.

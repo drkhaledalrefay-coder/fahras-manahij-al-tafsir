@@ -1,0 +1,22 @@
+TASK: Create ONE infographic (Arabic, RTL, PNG) for the team WhatsApp group: «ماذا تعلّمنا، وكيف تعمل الصفحة الآن». Only create files under deck/idea2/. Do NOT commit. Do not touch anything else.
+
+HOW: write deck/idea2/learned.html (self-contained HTML/CSS/inline SVG; Google Fonts only: "Readex Pro" UI, "Amiri" for Quran/tafsir text), then render deck/idea2/learned.png with headless Chrome ("C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --screenshot=... --window-size=1080,1920 --force-device-scale-factor=2 --hide-scrollbars --virtual-time-budget=6000; wait for document.fonts.ready). Portrait 1080×1920 CSS px.
+
+IDENTITY (the challenge's official identity): navy #12183F background, violet #6150EA, turquoise #2EF2C2, off-white #F2F4FF text; method colors only for highlight chips. No logos, no personal names, no AI vendor names except where listed below as «النموذج أ / ب / ج». Body text ≥ 28px. No side-stripe borders.
+
+REAL SCREENSHOTS to embed (as <img>, rounded corners, thin light border): deck/pitch/shots/fahras_ibn_kathir.png and deck/pitch/shots/fahras_tabari.png (current page look). Copy them into deck/idea2/ and reference relatively.
+
+CONTENT (use this wording; shorten slightly if needed):
+Title: فهرس مناهج التفسير — ماذا تعلّمنا؟
+Section A «ماذا فعلنا» (4 compact cards with an icon each):
+ 1. أربعة تفاسير بالمنهج نفسه: ابن كثير · الطبري · السعدي · البغوي — ٣ آيات — بلا ضبط لتفسير بعينه.
+ 2. النموذج قابل للاستبدال: نموذجان مختلفان على ابن كثير أعطيا نتائج متقاربة (٢٣/١٩ و٢٦/١٨).
+ 3. راجعنا أنفسنا: وجدنا المدقق متساهلاً فشدّدناه عاماً لكل التفاسير — ونشرنا النتيجتين.
+ 4. النص لا يتغيّر: كل موضع مطابق للمصدر حرفاً بحرف، وحواشي المحقق مفصولة عن كلام المفسِّر.
+Section B «النتائج (التشغيل الثاني)» — a small clean table: التفسير · مواضع · قبول آلي · للمتخصص: ابن كثير 42/23/19 · الطبري 31/18/13 · البغوي 39/29/10 · السعدي 24/15/9. Note: «أرقام تجربة أولى؛ الدقة تُقاس بعيّنة المتخصص».
+Section C «كيف تعمل الصفحة» — the two screenshots with numbered callouts (circles ١–٦ placed over/next to the image with short captions):
+ ١ اختر التفسير والآية  ٢ لوحة المناهج: اضغط منهجاً فتتلوّن مواضعه  ٣ اضغط أي تمييز: «لماذا هذا التمييز؟» والدليل ودرجة اليقين  ٤ «اعرض الأصل بجانبه»: الأصل حرفاً بحرف  ٥ «ابدأ المراجعة»: قلم التمييز للمتخصص ثم «قارن بالمصدر» و«اعتماد»  ٦ «تصدير ▾»: ملف JSON معتمد لتطبيقات القرآن
+Section D «الفرق عن المواقع الكبرى» one line: المواقع الكبرى تعرض ماذا قيل عن الآية؛ نحن نكشف كيف فسّرها المفسِّر في نصه، بالدليل.
+Footer: الآلة تقترح، والمتخصص يحكم، والنص لا يتغيّر حرفاً · لم ندرّب نموذجاً؛ بنينا منهجاً يعمل مع أي نموذج.
+
+GATES: deck/idea2/learned.png exists, size reported, no text overflow (check by eye in your own render; re-render if clipped). Do not commit.

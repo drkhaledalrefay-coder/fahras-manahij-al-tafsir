@@ -1,0 +1,280 @@
+{
+  "window_id": "8_38",
+  "ayah": "8:38",
+  "span_count": 14,
+  "family_counts": {
+    "QURAN": 5,
+    "HADITH": 7,
+    "LUGHA": 3,
+    "SAHABA": 1,
+    "TABIIN": 2,
+    "SIRA": 2,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 132,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 159,
+          "end": 177,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 181,
+          "end": 223,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 224,
+          "end": 227,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 361,
+          "end": 370,
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن مسعود",
+          "name": "ابن مسعود",
+          "role": "NARRATOR",
+          "start": 391,
+          "end": 400,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن رسول الله",
+          "start": 418,
+          "end": 430,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 433,
+          "end": 451,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 679,
+          "end": 688,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن رسول الله",
+          "start": 695,
+          "end": 707,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 710,
+          "end": 728,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1101,
+          "end": 1119,
+          "span_id": "s008"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1120,
+          "end": 1123,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1146,
+          "end": 1183,
+          "span_id": "s009"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1184,
+          "end": 1187,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 1285,
+          "end": 1290,
+          "span_id": "s011"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1300,
+          "end": 1337,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 1350,
+          "end": 1357,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 1437,
+          "end": 1442,
+          "span_id": "s013"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 1462,
+          "end": 1469,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 548,
+      "end": 676,
+      "text": "¬صحيح البخاري، كتاب استتابة المرتدين، باب إثم من أشرك بالله (ح 6921) وصحيح مسلم الإيمان، باب هل يؤاخذ بأعمال الجاهلية؟ (ح 120).¥",
+      "attached_span_id": "s005",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 787,
+      "end": 1091,
+      "text": "¬أخرجه الإمام أحمد بسند عن عمرو بن العاص مرفوعًا بلفظ: \"إن الإسلام يجبُّ ما كان قبله، وإن الهجرة تجبُّ ما كان قبلها\"، (المسند 29/ 349 ح 17813) قال محققوه: الشطر الأول منه حسن، وأخرج مسلم في صحيحه من حديث عمر: \"أما علمت أن الإسلام يهدم ما كان قبله\"، (الصحيح، الإيمان، باب كون الإسلام يهدم ما قبله ح 121).¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "صحيح",
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1374,
+      "end": 1429,
+      "text": "¬أخرجه الطبري بسند صحيح من طريق ابن أبي نجيح عن مجاهد.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1470,
+      "end": 1573,
+      "text": "¬قول السدي أخرجه الطبري بسند حسن من طريق أسباط عنه، وقول ابن إسحاق أخرجه الطبري من طريق سلمة بن الفضل.¥",
+      "attached_span_id": "s013",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

@@ -1,0 +1,503 @@
+{
+  "window_id": "2_102",
+  "ayah": "2:102",
+  "span_count": 40,
+  "family_counts": {
+    "QURAN": 9,
+    "LUGHA": 2,
+    "QIRAAT": 5,
+    "SAHABA": 3,
+    "TABIIN": 3,
+    "ISRAILIYYAT": 3,
+    "HADITH": 2,
+    "RAY": 1,
+    "EDITOR": 9
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 752,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 753,
+          "end": 770,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 772,
+          "end": 786,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 806,
+          "end": 833,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 834,
+          "end": 839,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 980,
+          "end": 985,
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 994,
+          "end": 1007,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عطاء",
+          "name": "عطاء",
+          "role": "SPEAKER",
+          "start": 1067,
+          "end": 1073,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1102,
+          "end": 1128,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1129,
+          "end": 1134,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 3467,
+          "end": 3484,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 3875,
+          "end": 3907,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 3987,
+          "end": 3996,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 4315,
+          "end": 4332,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "بني إسرائيل",
+          "start": 4811,
+          "end": 4828,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 5601,
+          "end": 5633,
+          "span_id": "s020"
+        }
+      ]
+    },
+    {
+      "span_id": "s021",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5720,
+          "end": 5746,
+          "span_id": "s021"
+        }
+      ]
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5830,
+          "end": 5864,
+          "span_id": "s022"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 5865,
+          "end": 5870,
+          "span_id": "s022"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 5993,
+          "end": 5998,
+          "span_id": "s022"
+        }
+      ]
+    },
+    {
+      "span_id": "s023",
+      "markers": []
+    },
+    {
+      "span_id": "s024",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 6204,
+          "end": 6227,
+          "span_id": "s024"
+        },
+        {
+          "family": "RAY",
+          "marker": "والصحيح",
+          "start": 6402,
+          "end": 6413,
+          "span_id": "s024"
+        }
+      ]
+    },
+    {
+      "span_id": "s025",
+      "markers": []
+    },
+    {
+      "span_id": "s026",
+      "markers": []
+    },
+    {
+      "span_id": "s027",
+      "markers": []
+    },
+    {
+      "span_id": "s028",
+      "markers": []
+    },
+    {
+      "span_id": "s029",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 7678,
+          "end": 7724,
+          "span_id": "s029"
+        }
+      ]
+    },
+    {
+      "span_id": "s030",
+      "markers": []
+    },
+    {
+      "span_id": "s031",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 7938,
+          "end": 7943,
+          "span_id": "s031"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 8013,
+          "end": 8026,
+          "span_id": "s031"
+        }
+      ]
+    },
+    {
+      "span_id": "s032",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "SPEAKER",
+          "start": 8082,
+          "end": 8090,
+          "span_id": "s032"
+        }
+      ]
+    },
+    {
+      "span_id": "s033",
+      "markers": []
+    },
+    {
+      "span_id": "s034",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن مسعود",
+          "name": "ابن مسعود",
+          "role": "SPEAKER",
+          "start": 8332,
+          "end": 8346,
+          "span_id": "s034"
+        }
+      ]
+    },
+    {
+      "span_id": "s035",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 8409,
+          "end": 8417,
+          "span_id": "s035"
+        }
+      ]
+    },
+    {
+      "span_id": "s036",
+      "markers": []
+    },
+    {
+      "span_id": "s037",
+      "markers": []
+    },
+    {
+      "span_id": "s038",
+      "markers": []
+    },
+    {
+      "span_id": "s039",
+      "markers": []
+    },
+    {
+      "span_id": "s040",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1179,
+      "end": 3015,
+      "text": "¬ساق ابن كثير رحمه الله جملة من الروايات في تفسير الآية ثم قال: \"وقد روي في قصة هاروت وماروت عن جماعة من التابعين: كمجاهد والسدي والحسن البصري وقتادة، وأبي العالية والزهري، والربيع بن أنس ومقاتل بن حيان وغيرهم، وقصها خلق من المفسرين، من المتقدمين والمتأخرين، وحاصلها راجع في تفصيلها إلى أخبار بني إسراائيل، إذ ليس فيها حديث مرفوع صحيح متصل الإسناد إلى الصادق المصدوق المعصوم، الذي لا ينطق عن الهوى، وظاهر سياق القرآن إجمال القصة من غير بسط ولا إطناب، فنحن نؤمن بما ورد في القرآن، على ما أراده الله تعالى، والله أعلم بحقيقة الحال\". تفسير ابن كثير: 1/ 249 - 250. وقال القاضي عياض رحمه الله عن هاروت وماروت .. \"وما ذكر فيها أهل الأخبار ونقلة المفسرين، وما روى عن علي وابن عباس في خيرهما وابتلائهما - بمحبة المرأة وعقابهما على ما فعلا، وما وقع من السحر: فاعلم - أكرمك الله - أن هذه الأخبار لم يرو منها شيء لا سقيم ولا صحيح عن رسول الله صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وليس هو شيئا يؤخذ بقياس. والذي منه في القرآن: اختلف المفسرون في معناه، وأنكر ما قال بعضهم فيه كثير من السلف، وهذه الأخبار من كتب اليهود وافترائهم، كما نصه الله أول الآيات منها وافترائهم بذلك على سليمان وتكفيرهم إياه. وقد انطوت القصة على شنع عظيمة، وهانحن نحبر في ذلك ما يكشف غطاء هذه الإشكالات، إن شاء الله\" ثم ذكر ما يزيف القصة ويبطلها من عدة وجوه انظر: الشفا بتعريف حقوق المصطفى للقاضي عياض: 2/ 853 - 859. وبعد أن ذكر ابن عطية في تفسيره الروايات عن القصة قال: \"وهذا كله ضعيف وبعيدا على ابن عمر رضي الله عنهما\" انظر: المحرر الوجيز لابن عطية: 1/ 420. وانظر أيضا ما ذكره الشيخ جمال الدين القاسمي رحمه الله في تفسيره: وابن العربي في أحكام القرآن: 1/ 27 - 30، والقرطبي في الجامع لأحكام القرآن 2/ 52. ومع ورود بعض الروايات في المسند للإمام أحمد أو غيره، فإنها روايات ضعيفة، لا تعارض الأخبار الصحيحة والقواعد المقررة عن عصمة الملائكة عليهم السلام وإن سكت عنها الإمام الطبري والثعلبي والبغوي. وانظر: لباب التفسير لمحمود بن حمزة الكرماني 1/ 369. تحقيق د. ناصر بن سليمان العمر.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "صحيح",
+        "حسن",
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3076,
+      "end": 3134,
+      "text": "¬وهو أخذ كالسحر، وليس به، وإنما هو تشيبه وتلبيس. القاموس.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3568,
+      "end": 3632,
+      "text": "¬هكذا جاء في نسخة (أ) وفي ب (سليمان) وكذلك المطبوع، وهو الصحيح.¥",
+      "attached_span_id": "s010",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 4275,
+      "end": 4302,
+      "text": "¬وفي (ب) فاكتتب الناس ذلك.¥",
+      "attached_span_id": "s013",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 5502,
+      "end": 5517,
+      "text": "¬ساقطة من (ب).¥",
+      "attached_span_id": "s019",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7511,
+      "end": 7653,
+      "text": "¬انظر تفصيل ذلك فيما بسطه ابن كثير من مسائل حول حقيقة السحر وحكم تعاطيه وتعلمه ... في التفسير: 1/ 252 - 261، أحكام القرآن للجصاص: 1/ 50 - 72.¥",
+      "attached_span_id": "s028",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7920,
+      "end": 7935,
+      "text": "¬زيادة من (ب).¥",
+      "attached_span_id": "s030",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8103,
+      "end": 8138,
+      "text": "¬العلج: الرجل الضخم من كفار العجم.¥",
+      "attached_span_id": "s032",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9032,
+      "end": 9046,
+      "text": "¬ساقط من (ب).¥",
+      "attached_span_id": "s039",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

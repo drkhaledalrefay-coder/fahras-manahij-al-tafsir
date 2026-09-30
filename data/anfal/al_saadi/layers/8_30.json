@@ -1,0 +1,104 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/anfal/al_saadi/raw/8_30.txt",
+  "ayah": "8:30",
+  "surah": 8,
+  "ayah_number": 30,
+  "source_char_length": 1493,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 209,
+      "kind": "author"
+    },
+    {
+      "start": 209,
+      "end": 242,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 242,
+      "end": 752,
+      "kind": "author"
+    },
+    {
+      "start": 752,
+      "end": 774,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 774,
+      "end": 1057,
+      "kind": "author"
+    },
+    {
+      "start": 1057,
+      "end": 1061,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1061,
+      "end": 1062,
+      "kind": "author"
+    },
+    {
+      "start": 1062,
+      "end": 1095,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1095,
+      "end": 1101,
+      "kind": "author"
+    },
+    {
+      "start": 1101,
+      "end": 1218,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1218,
+      "end": 1493,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 6,
+    "layout": 0,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 1284,
+    "layout": 0,
+    "apparatus": 209
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 4,
+    "editor_bracket": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 205,
+    "editor_bracket": 4
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 4,
+    "footnote_close": 4,
+    "footnotes_closed": 4,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[عن]": 1
+    }
+  }
+}

@@ -1,0 +1,1496 @@
+<meta charset="utf-8">
+<title>فهرس تفسير ابن كثير — نموذج تجريبي</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --ink: #17201e;
+  --muted: #5b6b67;
+  --line: #d9e0dd;
+  --primary: #1f5f5b;
+  --agreed: #9a6b00;
+  --agreed-bg: #fdf3d7;
+  --review: #b4461f;
+  --review-bg: #fbe6dc;
+  --approved: #2f7a4b;
+  --approved-bg: #e3f3e8;
+  --ok: #2f7a4b;
+  --warn: #b4461f;
+  --diff-a: #9a6b00;
+  --diff-a-bg: #fdf3d7;
+  --diff-b: #1f5f5b;
+  --diff-b-bg: #e4f1ef;
+  --finding-bg: #f7efe2;
+  --quran-bg: rgba(31, 95, 91, 0.08);
+  --focus: #1f5f5b;
+  --gutter: 16px;
+  --radius: 10px;
+  --shadow: 0 1px 0 rgba(23, 32, 30, 0.04);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514;
+    --surface: #172120;
+    --ink: #e6ecea;
+    --muted: #9aaba6;
+    --line: #2a3633;
+    --primary: #7eb6b1;
+    --agreed: #e0b45a;
+    --agreed-bg: #3a2e14;
+    --review: #e08a6a;
+    --review-bg: #3a221a;
+    --approved: #7ec99a;
+    --approved-bg: #1a3326;
+    --ok: #7ec99a;
+    --warn: #e08a6a;
+    --diff-a: #e0b45a;
+    --diff-a-bg: #3a2e14;
+    --diff-b: #7eb6b1;
+    --diff-b-bg: #1a2e2c;
+    --finding-bg: #2a2418;
+    --quran-bg: rgba(126, 182, 177, 0.14);
+    --focus: #7eb6b1;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1514;
+  --surface: #172120;
+  --ink: #e6ecea;
+  --muted: #9aaba6;
+  --line: #2a3633;
+  --primary: #7eb6b1;
+  --agreed: #e0b45a;
+  --agreed-bg: #3a2e14;
+  --review: #e08a6a;
+  --review-bg: #3a221a;
+  --approved: #7ec99a;
+  --approved-bg: #1a3326;
+  --ok: #7ec99a;
+  --warn: #e08a6a;
+  --diff-a: #e0b45a;
+  --diff-a-bg: #3a2e14;
+  --diff-b: #7eb6b1;
+  --diff-b-bg: #1a2e2c;
+  --finding-bg: #2a2418;
+  --quran-bg: rgba(126, 182, 177, 0.14);
+  --focus: #7eb6b1;
+  --shadow: none;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 28px var(--gutter) 48px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.45rem, 4vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.site-header .subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  max-width: 42em;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.toggle input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--primary);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.section .note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.step .n {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fact {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.fact .value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fact .label {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.fact .sub {
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.fact.finding {
+  grid-column: 1 / -1;
+  background: var(--finding-bg);
+  border-color: var(--agreed);
+  gap: 8px;
+}
+
+.fact.finding .finding-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--agreed);
+}
+
+.fact.finding ul {
+  margin: 0;
+  padding-inline-start: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fact.finding li {
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.fact.finding .example {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+.legend-item strong {
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.field select,
+.field input[type="search"],
+.field input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 44px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.chip:hover,
+.chip.is-active {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--agreed-bg);
+}
+
+.results-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.card.is-hidden {
+  display: none;
+}
+
+.card-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge.agreed {
+  color: var(--agreed);
+  background: var(--agreed-bg);
+}
+
+.badge.needs_review,
+.badge.rejected {
+  color: var(--review);
+  background: var(--review-bg);
+}
+
+.badge.approved {
+  color: var(--approved);
+  background: var(--approved-bg);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.84rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.tag-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.tag-group-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.unit-text {
+  font-family: "Amiri", "Traditional Arabic", "Scheherazade New", serif;
+  font-size: 1.22rem;
+  line-height: 2;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.quran {
+  background: var(--quran-bg);
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.meta-line,
+.integrity-line {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+}
+
+.integrity-line .ok {
+  color: var(--ok);
+}
+
+.integrity-line .warn {
+  color: var(--warn);
+}
+
+.integrity-line .minor {
+  color: var(--agreed);
+}
+
+.integrity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diff-panel {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 10px;
+}
+
+.diff-panel.is-open {
+  display: flex;
+}
+
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.diff-table th,
+.diff-table td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: right;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.diff-table th {
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.diff-table .kind {
+  color: var(--muted);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.hl-a {
+  color: var(--diff-a);
+  background: var(--diff-a-bg);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 600;
+}
+
+.hl-b {
+  color: var(--diff-b);
+  background: var(--diff-b-bg);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 600;
+}
+
+.diff-help {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+details.why {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+details.why > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  list-style-position: outside;
+}
+
+details.why[open] > summary {
+  margin-bottom: 10px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.why-panel {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.why-panel h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.why-panel p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.review-reasons {
+  margin: 0;
+  padding-inline-start: 1.2em;
+  color: var(--review);
+  font-size: 0.92rem;
+}
+
+.reviewer-box {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.page.reviewer-on .reviewer-box {
+  display: flex;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.btn.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn.ok {
+  background: var(--approved-bg);
+  border-color: var(--approved);
+  color: var(--approved);
+}
+
+.btn.warn {
+  background: var(--review-bg);
+  border-color: var(--review);
+  color: var(--review);
+}
+
+.apparatus details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.apparatus summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.apparatus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.app-item {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-item .layer {
+  font-size: 0.84rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.app-item .text {
+  font-family: "Amiri", "Traditional Arabic", serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.export-box {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+}
+
+.export-box.is-open {
+  display: flex;
+}
+
+.export-box textarea {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 10px;
+  resize: vertical;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.85rem;
+  direction: ltr;
+  text-align: left;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.empty {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .facts {
+    grid-template-columns: 1fr;
+  }
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+
+<div class="page stack" id="app" dir="rtl" lang="ar">
+  <div class="site-header">
+    <h1>فهرس تفسير ابن كثير — نموذج تجريبي</h1>
+    <p class="subtitle">نصّ ابن كثير كما هو، مقسّم إلى وحدات موسومة، مع بيان حالة كل وحدة ومطابقتها للأصل.</p>
+    <div class="top-bar">
+      <label class="toggle">
+        <input type="checkbox" id="reviewerMode" />
+        <span>وضع المراجع</span>
+      </label>
+      <button type="button" class="btn" id="exportBtn" hidden>تصدير قرارات المراجع</button>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="how-title">
+    <h2 id="how-title">كيف يعمل؟</h2>
+    <div class="steps">
+      <div class="step"><div class="n">١</div><p>نأخذ النص آلياً من مصدر موثّق دون أن يكتبه أحد.</p></div>
+      <div class="step"><div class="n">٢</div><p>نفصل كلام ابن كثير عن حواشي المحقق.</p></div>
+      <div class="step"><div class="n">٣</div><p>فاحصان آليان يضعان الوسوم دون أن يلمسا النص.</p></div>
+      <div class="step"><div class="n">٤</div><p>نطابق كل وحدة مع الأصل، والمتخصص يعتمد.</p></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="facts-title">
+    <h2 id="facts-title">ماذا أثبتت التجربة؟</h2>
+    <p class="note">نتائج تجربة أولى صغيرة</p>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <section class="section" aria-labelledby="legend-title">
+    <h2 id="legend-title">معاني الحالات</h2>
+    <div class="legend">
+      <div class="legend-item"><span aria-hidden="true">🟡</span><div><strong>مقترح</strong> — اتفق الفاحصان (لم يراجعه متخصص بعد)</div></div>
+      <div class="legend-item"><span aria-hidden="true">🟠</span><div><strong>بانتظار المتخصص</strong> — اختلاف أو ثقة منخفضة أو وسم حساس</div></div>
+      <div class="legend-item"><span aria-hidden="true">🟢</span><div><strong>معتمد</strong> — اعتمده المراجع في هذه الصفحة</div></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="filters-title">
+    <h2 id="filters-title">تصفية النتائج</h2>
+    <div class="filters">
+      <div class="filters-grid">
+        <div class="field">
+          <label for="filterAyah">الآية</label>
+          <select id="filterAyah">
+            <option value="">الكل</option>
+            <option value="2_255">البقرة ٢٥٥</option>
+            <option value="17_105">الإسراء ١٠٥</option>
+            <option value="2_102">البقرة ١٠٢</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filterSource">وسم المصدر</label>
+          <select id="filterSource"><option value="">الكل</option></select>
+        </div>
+        <div class="field">
+          <label for="filterContent">وسم المحتوى</label>
+          <select id="filterContent"><option value="">الكل</option></select>
+        </div>
+        <div class="field">
+          <label for="filterStatus">الحالة</label>
+          <select id="filterStatus">
+            <option value="">الكل</option>
+            <option value="agreed">مقترح</option>
+            <option value="needs_review">بانتظار المتخصص</option>
+            <option value="approved">معتمد</option>
+            <option value="rejected">مرفوض</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filterCross">المطابقة مع المصدر الثاني</label>
+          <select id="filterCross">
+            <option value="">الكل</option>
+            <option value="identical">مطابق</option>
+            <option value="minor">فروق طفيفة</option>
+            <option value="different">فروق</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="filterSearch">بحث في النص</label>
+          <input type="search" id="filterSearch" placeholder="ابحث في نص الوحدات…" autocomplete="off" />
+        </div>
+      </div>
+      <div class="chips" id="exampleChips">
+        <button type="button" class="chip" data-example="hadith">كل الأحاديث في آية الكرسي</button>
+        <button type="button" class="chip" data-example="isra">الإسرائيليات في هاروت وماروت</button>
+        <button type="button" class="chip" data-example="review">ما يحتاج مراجعة</button>
+      </div>
+      <div class="results-meta">
+        <div id="resultsCount">النتائج: ٠ وحدة</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="results-title">
+    <h2 id="results-title">الوحدات</h2>
+    <div class="cards" id="cards"></div>
+    <div class="empty" id="empty" hidden>لا توجد وحدات مطابقة للتصفية الحالية.</div>
+  </section>
+
+  <section class="section apparatus" aria-labelledby="apparatus-title">
+    <h2 id="apparatus-title">ما عزلناه من حواشي المحقق</h2>
+    <p class="note">عُزلت هذه العبارات لأنها من المحقق أو مجهولة النسبة، حتى لا تُنسب إلى ابن كثير.</p>
+    <div id="apparatus"></div>
+  </section>
+
+  <div class="export-box" id="exportBox">
+    <div class="top-bar">
+      <strong>قرارات المراجع (JSON)</strong>
+      <button type="button" class="btn primary" id="copyDecisions">نسخ</button>
+    </div>
+    <textarea id="exportText" readonly dir="ltr"></textarea>
+    <p class="note" id="copyStatus" aria-live="polite"></p>
+  </div>
+
+  <div class="site-footer">
+    <div>النص: مركز تفسير للدراسات القرآنية (CC BY 4.0) · المصدر الثاني للمطابقة: quran.com</div>
+    <div>نموذج تجريبي: لم يعتمد متخصص أي وحدة بعد.</div>
+  </div>
+</div>
+
+<script type="application/json" id="data">{"title_ar": "فهرس تفسير ابن كثير — نموذج تجريبي", "summary": {"total_spans": 143, "verbatim_pct": 100.0, "source_tag_agreement": 0.909, "source_tag_agreement_pct": 90.9, "content_tag_agreement": 0.692, "content_tag_agreement_pct": 69.2, "cross_source_after": {"2_255": {"ratio": 0.977747, "pct": 97.8, "label_ar": "البقرة ٢٥٥"}, "17_105": {"ratio": 0.964856, "pct": 96.5, "label_ar": "الإسراء ١٠٥"}, "2_102": {"ratio": 0.948928, "pct": 94.9, "label_ar": "البقرة ١٠٢"}}, "source_a_suspect_typos": [{"ayah_id": "17_105", "ayah_label_ar": "الإسراء ١٠٥", "unit_id": "17_105_d02", "a_word": "وصل", "b_word": "ووصل", "a_words": ["وصل"], "b_words": ["ووصل"]}, {"ayah_id": "17_105", "ayah_label_ar": "الإسراء ١٠٥", "unit_id": "17_105_d02", "a_word": "الملأ", "b_word": "الملإ", "a_words": ["الملأ"], "b_words": ["الملإ"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d01", "a_word": "وقد", "b_word": "قد", "a_words": ["وقد"], "b_words": ["قد"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d04", "a_word": "أنسي", "b_word": "إنسي", "a_words": ["أنسي"], "b_words": ["إنسي"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d04", "a_word": "بلغنى", "b_word": "بلغني", "a_words": ["بلغنى"], "b_words": ["بلغني"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d07", "a_word": "الأسقع", "b_word": "الأسفع", "a_words": ["الأسقع"], "b_words": ["الأسفع"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d07", "a_word": "القرطيسي", "b_word": "القراطيسي", "a_words": ["القرطيسي"], "b_words": ["القراطيسي"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d07", "a_word": "يقولإن", "b_word": "يقول إن", "a_words": ["يقولإن"], "b_words": ["يقول", "إن"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d07", "a_word": "القرن", "b_word": "القرآن", "a_words": ["القرن"], "b_words": ["القرآن"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d08", "a_word": "لى", "b_word": "بلى", "a_words": ["لى"], "b_words": ["بلى"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d09", "a_word": "مجزي", "b_word": "مجزئ", "a_words": ["مجزي"], "b_words": ["مجزئ"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d11", "a_word": "فأرسلتها", "b_word": "فأرسلها", "a_words": ["فأرسلتها"], "b_words": ["فأرسلها"]}, {"ayah_id": "2_255", "ayah_label_ar": "البقرة ٢٥٥", "unit_id": "2_255_d13", "a_word": "فقال", "b_word": "قال", "a_words": ["فقال"], "b_words": ["قال"]}, {"ayah_id": "2_102", "ayah_label_ar": "البقرة ١٠٢", "unit_id": "2_102_d05", "a_word": "رواه", "b_word": "ورواه", "a_words": ["رواه"], "b_words": ["ورواه"]}]}, "tags": {"S_QURAN": {"label_ar": "تفسير القرآن بالقرآن", "explain_ar": "يشرح الآية بآية أخرى من القرآن", "layer": "source"}, "S_SUNNAH": {"label_ar": "تفسير القرآن بالسنة", "explain_ar": "يستدل بحديث عن النبي صلى الله عليه وسلم", "layer": "source"}, "S_SAHABA": {"label_ar": "أقوال الصحابة", "explain_ar": "ينقل قولاً لصحابي يبيّن معنى الآية", "layer": "source"}, "S_TABIIN": {"label_ar": "أقوال التابعين", "explain_ar": "ينقل قولاً لتابعي يبيّن معنى الآية", "layer": "source"}, "S_LUGHA": {"label_ar": "اللغة", "explain_ar": "يوضّح معنى الألفاظ من جهة اللغة", "layer": "source"}, "S_RAY": {"label_ar": "الاجتهاد والرأي", "explain_ar": "تحليل من المفسّر نفسه لمعنى الآية", "layer": "source"}, "S_IRAB": {"label_ar": "الإعراب", "explain_ar": "يبين الموقع النحوي لألفاظ الآية", "layer": "source"}, "C_NUZUL": {"label_ar": "أسباب النزول", "explain_ar": "يذكر سبب نزول الآية أو سياقه", "layer": "content"}, "C_FIQH": {"label_ar": "فقه وأحكام", "explain_ar": "يستنبط حكماً شرعياً من الآية", "layer": "content"}, "C_BALAGHA": {"label_ar": "بلاغة", "explain_ar": "يشير إلى أسلوب بلاغي في الآية", "layer": "content"}, "C_SHIR": {"label_ar": "شعر", "explain_ar": "يستشهد ببيت شعر للتوضيح", "layer": "content"}, "C_ISRAILIYYAT": {"label_ar": "إسرائيليات", "explain_ar": "مادة منسوبة إلى كتب بني إسرائيل", "layer": "content"}, "C_FADAIL": {"label_ar": "فضائل القرآن/الآية", "explain_ar": "يذكر فضل هذه الآية أو السورة", "layer": "content"}, "C_TAKHRIJ": {"label_ar": "تخريج/حكم حديثي", "explain_ar": "يحكم على سند الحديث أو مصدره", "layer": "content"}, "C_TAFSIR": {"label_ar": "بيان معنى", "explain_ar": "شرح مباشر لمعنى الآية أو ألفاظها", "layer": "content"}}, "ayat": [{"id": "17_105", "ayah": "17:105", "surah": 17, "ayah_number": 105, "label_ar": "الإسراء ١٠٥", "surah_name_ar": "الإسراء", "window_start": 0, "window_end": 570, "source_sha256_ok": true, "apparatus": [], "units": [{"id": "17_105_d01", "ayah_id": "17_105", "span_ids": ["s001", "s002", "s003", "s004"], "offsets": [[0, 70], [70, 99], [99, 172], [185, 254]], "start": 0, "end": 254, "text": "يقول تعالى مخبرًا عن كتابه العزيز وهو القرآن المجيد أنه بالحق نزل، أي: متضمنًا للحق، كما قال تعالى: {لَكِنِ اللَّهُ يَشْهَدُ بِمَا أَنْزَلَ إِلَيْكَ أَنْزَلَهُ بِعِلْمِهِ}  أي: متضمنًا علم الله الذي أراد أن يطلعكم عليه من أحكامه وأمره ونهيه.", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.8864, "diffs": [{"kind": "extra_in_b", "a_words": [], "b_words": ["النساء", "166"]}], "tags_display": "shared", "source_tags": ["S_QURAN", "S_RAY"], "content_tags": ["C_TAFSIR"], "annotators": {"first": {"source_tags": ["S_QURAN", "S_RAY"], "content_tags": ["C_TAFSIR"], "confidence": 0.88, "reason_ar": "شرح معنى النزول بالحق بالاستشهاد بآية أخرى ثم بيان تضمنه علم الله وأحكامه"}, "second": {"source_tags": ["S_QURAN", "S_RAY"], "content_tags": ["C_TAFSIR"], "confidence": 0.91, "reason_ar": "استشهد بآية أخرى لتوضيح معنى نزول الكتاب بالحق ثم بيّن وجه الاستشهاد."}}}, {"id": "17_105_d02", "ayah_id": "17_105", "span_ids": ["s005"], "offsets": [[254, 438]], "start": 254, "end": 438, "text": " وقوله: {وَبِالْحَقِّ نَزَلَ} أي: وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه، بل وصل إليك بالحق، فإنه نزل به شديد القوى الأمين المكين المطاع في الملأ الأعلى.", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.8205, "diffs": [{"kind": "variant", "a_words": ["وصل"], "b_words": ["ووصل"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["القوي"]}, {"kind": "variant", "a_words": ["الملأ"], "b_words": ["الملإ"]}], "tags_display": "shared", "source_tags": ["S_RAY"], "content_tags": ["C_TAFSIR"], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAFSIR"], "confidence": 0.8, "reason_ar": "تفسير جملة الوصول المحفوظ بلا زيادة ولا نقص، مع صفات الناقل دون آية مسوقة"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAFSIR"], "confidence": 0.92, "reason_ar": "شرح وصول الوحي محفوظًا إلى الرسول وبيّن المقصود بالحق في السياق."}}}, {"id": "17_105_d03", "ayah_id": "17_105", "span_ids": ["s006"], "offsets": [[438, 570]], "start": 438, "end": 570, "text": "\r\nوقوله: {وَمَا أَرْسَلْنَاكَ} أي: يا محمد {إِلَّا مُبَشِّرًا وَنَذِيرًا} مبشرًا لمن أطاعك من المؤمنين ونذيرًا لمن عصاك من الكافرين.", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.7083, "diffs": [{"kind": "missing_in_b", "a_words": ["مبشرا", "ونذيرا"], "b_words": []}], "tags_display": "shared", "source_tags": ["S_RAY"], "content_tags": ["C_TAFSIR"], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAFSIR"], "confidence": 0.9, "reason_ar": "بيان وظيفة الرسول تبشيرًا للمطيع وإنذارًا للعاصي"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAFSIR"], "confidence": 0.94, "reason_ar": "فسر مهمة الرسول في التبشير والإنذار وعيّن المخاطبين بكل منهما."}}}]}, {"id": "2_255", "ayah": "2:255", "surah": 2, "ayah_number": 255, "label_ar": "البقرة ٢٥٥", "surah_name_ar": "البقرة", "window_start": 0, "window_end": 7611, "source_sha256_ok": true, "apparatus": [{"start": 748, "end": 766, "layer": "footnote", "text": "¬في الأصل: \"مرر\".¥"}, {"start": 883, "end": 947, "layer": "footnote", "text": "¬أخرجه الإمام أحمد بسنده ومتنه (المسند 5/ 141، 142) وسنده صحيح.¥"}, {"start": 1077, "end": 1145, "layer": "footnote", "text": "¬صحيح مسلم، صلاة المسافرين، باب فضل سورة الكهف وآية الكرسي (ح 810).¥"}, {"start": 1377, "end": 1437, "layer": "footnote", "text": "¬الجُرْن: هو موضع التمر الذي يجفف فيه (مختار الصحاح ص 101).¥"}, {"start": 1948, "end": 2164, "layer": "footnote", "text": "¬قال المنذري: سنده جيد (ينظر: الفتح القدسي في آية الكرسي للبقاعي ص 58)، الحاكم وأخرجه ووافقه الذهبي (المستدرك 1/ 562)، وأخرجه ابن حبان من طريق يحيى بن أبي كثير عن ابن لأبي بن كعب عن أبيه (موارد الظمآن ص 426 ح 1724).¥"}, {"start": 2360, "end": 2378, "layer": "footnote", "text": "¬المستدرك 1/ 562.¥"}, {"start": 2449, "end": 2468, "layer": "footnote", "text": "¬في الأصل: \"عتاب\".¥"}, {"start": 2870, "end": 3045, "layer": "footnote", "text": "¬أخرجه الإمام أحمد بسنده ومتنه (المسند 5/ 58) وفيه أبو السليل وهو: ضُريب القيسي من السادسة (التقريب ص 280)، وهو لم يدرك أحدًا من الصحابة فالإسناد منقطع ويشهد له الحديث الأول.¥"}, {"start": 3514, "end": 3628, "layer": "footnote", "text": "¬أخرجه الطبراني بسنده ومتنه (المعجم الكبير 1/ 334)، وفي سنده مولى ابن الأسقع لم يصرح باسمه ويشهد له الحديث الأول.¥"}, {"start": 4247, "end": 4327, "layer": "footnote", "text": "¬أخرجه الإمام أحمد بسنده ومتنه (المسند 3/ 221) وفي سنده سلمة بن وردان وهو ضعيف.¥"}, {"start": 4463, "end": 4495, "layer": "footnote", "text": "¬في الأصل: \"الحسحاس\" وهو تصحيف.¥"}, {"start": 5337, "end": 5475, "layer": "footnote", "text": "¬أخرجه الإمام أحمد بسنده ومتنه (المستد 5/ 178)، وأخرجه الحاكم من طريق يعلى بن عبيد عن المسعودي به، وصححه ووافقه الذهبي (المستدرك 2/ 282).¥"}, {"start": 5685, "end": 5753, "layer": "footnote", "text": "¬السهوة: هي في البيت كالصفة أو كالخزانة (انظر: جامع الأصول 8/ 478).¥"}, {"start": 5934, "end": 5956, "layer": "footnote", "text": "¬في الأصل: \"فأرسلها\".¥"}, {"start": 6153, "end": 6174, "layer": "footnote", "text": "¬في الأصل: \"فأخذها\".¥"}, {"start": 6302, "end": 6626, "layer": "footnote", "text": "¬أخرجه الإمام أحمد سنده ومتنه (المسند 5/ 423)، وأخرجه الترمذي من طريق أبي أحمد الزبيري به (السنن، فضائل القرآن، باب ما جاء في فضل سورة البقرة وآية الكرسي ح 288)، وما ورد في صحيح البخاري عن أبي هريرة تعليقًا وليس عن أبي أيوب (صحيح البخاري، كتاب الوكالة، باب إذا وكل رجل شيئًا فأجازه الموكل ح 231)، كما سيأتي في الحديث الآتي.¥"}, {"start": 6706, "end": 6737, "layer": "footnote", "text": "¬السنن، فضائل القرآن (ح. 288).¥"}, {"start": 6739, "end": 6787, "layer": "editor_bracket", "text": "[والغول في لغة العرب: الجانّ إذا تبدَى في الليل]"}, {"start": 6788, "end": 6836, "layer": "footnote", "text": "¬ما بين معقوفين زيادة (عف) و (حم) و (مح) و (ح).¥"}], "units": [{"id": "2_255_d01", "ayah_id": "2_255", "span_ids": ["s001", "s002"], "offsets": [[0, 405], [405, 519]], "start": 0, "end": 519, "text": "{اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ (255)}.\r\nهذه آية الكرسي، ولها شأن عظيم، وقد صحَّ الحديث عن رسول الله - صلى الله عليه وسلم -، بأنها أفضل آية في كتاب الله.", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "ثقة منخفضة", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.2727, "diffs": [{"kind": "missing_in_b", "a_words": ["الله", "لا", "إله", "إلا", "هو", "الحي", "القيوم", "لا", "تأخذه", "سنة", "ولا", "نوم", "له", "ما", "في", "السماوات", "وما", "في", "الأرض", "من", "ذا", "الذي", "يشفع", "عنده", "إلا", "بإذنه", "يعلم", "ما", "بين", "أيديهم", "وما", "خلفهم", "ولا", "يحيطون", "بشيء", "من", "علمه", "إلا", "بما", "شاء", "وسع", "كرسيه", "السماوات", "والأرض", "ولا", "يئوده", "حفظهما", "وهو", "العلي", "العظيم"], "b_words": []}, {"kind": "variant", "a_words": ["وقد"], "b_words": ["قد"]}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_SUNNAH", "S_RAY"], "content_tags": ["C_FADAIL", "C_TAKHRIJ"], "confidence": 0.58, "reason_ar": "أُلحقت الآية بتقرير المؤلف لفضلها لصحة الخبر، لأن نصها وحده لا يستقر على وسم"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.87, "reason_ar": "ورد نص الآية تمهيدًا لتقرير فضلها المنسوب إلى حديث نبوي."}}}, {"id": "2_255_d02", "ayah_id": "2_255", "span_ids": ["s003", "s004", "s005", "s006", "s007", "s008"], "offsets": [[519, 633], [633, 681], [681, 709], [709, 748], [766, 792], [792, 883]], "start": 519, "end": 883, "text": "\r\nقال الإمام أحمد: حدثنا عبد الرزاق، حدثنا سفيان، عن سعيد الجريري، عن أبي السليل، عن عبد الله بن رباح، عن أُبي هو: ابن كعب، أن النبي - صلى الله عليه وسلم -، سأله: \"أي آية في كتاب الله أعظم\"؟ قال الله ورسوله أعلم، فردَّدها مرارًا ، ثم قال: آية الكرسي، قال: \"ليهنكَ العلم أبا المنذر، والذي نفسي بيده، إن لها لسانًا وشفتين تقدس الملك عند ساق العرش\" ", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9275, "diffs": [{"kind": "extra_in_b", "a_words": [], "b_words": ["أبي"]}], "tags_display": "shared", "source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.9, "reason_ar": "حديث أبي بسنده ومتنه في أنها أعظم آية مع إقرار النبي"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.95, "reason_ar": "حديث بسنده ومتنه يقرر عظمة الآية وفضل العلم بها."}}}, {"id": "2_255_d03", "ayah_id": "2_255", "span_ids": ["s009", "s010", "s011"], "offsets": [[947, 978], [978, 1049], [1049, 1077]], "start": 947, "end": 1077, "text": "، وقد رواه مسلم عن أبي بكر بن\r\n أبي شيبة، عن عبد الأعلى بن عبد الأعلى، عن الجريري به، وليس عنده زيادة: \"والذي نفسي بيده ... \" إلخ ", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "وسم حساس"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.8333, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.92, "reason_ar": "تخريج رواية مسلم وبيان أن الزيادة الأخيرة ليست عنده"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.96, "reason_ar": "عزا الحديث إلى مصدر آخر وبيّن اختلاف الزيادة بين الروايتين."}}}, {"id": "2_255_d04", "ayah_id": "2_255", "span_ids": ["s012", "s013", "s014", "s015", "s016", "s017", "s018", "s019", "s020", "s021", "s022", "s023"], "offsets": [[1145, 1219], [1219, 1377], [1437, 1486], [1486, 1567], [1567, 1595], [1595, 1628], [1628, 1669], [1669, 1722], [1722, 1749], [1749, 1806], [1806, 1846], [1846, 1948]], "start": 1145, "end": 1948, "text": ".\r\n(حديث آخر) عن أبي أيضًا في فضل آية الكرسي، قال الحافظ أبو يعلى الموصلي: حدثنا أحمد بن إبراهيم الدورقي، حدثنا مبشر عن الأوزاعي، عن يحيى بن أبي كثير، عن عبدة بن أبي لبابة، عن عبد الله بن أُبي بن كعب، أن أباه أخبره أنه كان له جُرْن  فيه تمر، قال: فكان أبي يتعاهده، فوجده ينقص، قال: فحرسه ذات ليلة، فإذا هو بدابة شبيه الغلام المحتلم، فسلمت عليه، فردّ السلام، قال: فقلت: ما أنت؟ جنّي أم أنسي؟ قال: جنّي. قال: ناولني يدك، قال: فناولني يده، فإذا يد كلب وشعر كلب، فقلت: هكذا خلق الجنّ. قال: لقد علمت الجنّ ما فيهم أشد مني. قلت: فما حملك على ما صنعت؟ قال: بلغنى أنك رجل تحب الصدقة، فأحببنا أن نصيب من طعامك. قال: فقال له أبي: فما الذي يجيرنا منكم؟ قال: هذه الآية، آية الكرسي، ثم غدا إلى النبي فأخبره، فقال النبي - صلى الله عليه وسلم -: \"صدق الخبيث\" ", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9329, "diffs": [{"kind": "extra_in_b", "a_words": [], "b_words": ["قال"]}, {"kind": "variant", "a_words": ["أنسي"], "b_words": ["إنسي"]}, {"kind": "variant", "a_words": ["قال"], "b_words": ["قلت"]}, {"kind": "missing_in_b", "a_words": ["يده"], "b_words": []}, {"kind": "variant", "a_words": ["بلغنى"], "b_words": ["بلغني"]}, {"kind": "missing_in_b", "a_words": ["أبي"], "b_words": []}, {"kind": "extra_in_b", "a_words": [], "b_words": ["صلى", "الله", "عليه", "وسلم"]}], "tags_display": "shared", "source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.9, "reason_ar": "حديث أبي في حراسة التمر وتعليم الجني الآية وتصديق النبي"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.94, "reason_ar": "رواية متصلة بسندها وقصتها عن أثر الآية في الوقاية، مع تصديق نبوي."}}}, {"id": "2_255_d05", "ayah_id": "2_255", "span_ids": ["s024"], "offsets": [[2164, 2360]], "start": 2164, "end": 2360, "text": "، وهكذا رواه الحاكم في مستدركه من حديث أبي داود الطيالسي، عن حرب بن شداد، عن يحيى بن أبي كثير، عن الحضرمي بن لاحق، عن محمد بن عمرو بن أُبي بن كعب، عن جده به، وقال الحاكم: صحيح الإسناد، ولم يخرجاه ", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.8667, "diffs": [{"kind": "missing_in_b", "a_words": ["الحاكم"], "b_words": []}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.93, "reason_ar": "تخريج الحاكم للطريق السابق مع تصحيحه الإسناد"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.96, "reason_ar": "ذكر طريقًا آخر للخبر ونقل الحكم على إسناده."}}}, {"id": "2_255_d06", "ayah_id": "2_255", "span_ids": ["s025", "s026", "s027", "s028", "s029", "s030", "s031", "s032", "s033", "s034"], "offsets": [[2378, 2408], [2408, 2449], [2468, 2496], [2496, 2607], [2607, 2650], [2650, 2674], [2674, 2745], [2745, 2794], [2794, 2840], [2840, 2870]], "start": 2378, "end": 2870, "text": ".\r\n(طريق آخر) قال الإمام أحمد: حدثنا محمد بن جعفر، حدثنا عثمان بن غياث ، قال: سمعت أبا السليل، قال: كان رجل من أصحاب النبي - صلى الله عليه وسلم - يحدث الناس حتى يكثروا عليه، فيصعد على سطح بيت، فيحدث الناس، قال: قال رسول الله - صلى الله عليه وسلم - الله: \"أي آية في القرآن أعظم؟ \" فقال رجل: {اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ} قال: فوضع يده بين كتفي، فوجدت بردها بين ثديي، أو قال: فوضع يده بين ثديي فوجدت بردها بين كتفي، وقال: \"ليهنكَ العلم يا أبا المنذر\" ", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9011, "diffs": [{"kind": "variant", "a_words": ["آخر"], "b_words": ["أخرى"]}, {"kind": "missing_in_b", "a_words": ["الله"], "b_words": []}, {"kind": "missing_in_b", "a_words": ["الحي", "القيوم"], "b_words": []}], "tags_display": "shared", "source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.88, "reason_ar": "طريق ثانٍ لخبر أعظم آية، ينتهي بتهنئة أبي المنذر"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.92, "reason_ar": "طريق مستقل لحديث يبرز منزلة الآية من القرآن."}}}, {"id": "2_255_d07", "ayah_id": "2_255", "span_ids": ["s035", "s036", "s037", "s038", "s039", "s040", "s041", "s042"], "offsets": [[3045, 3076], [3076, 3108], [3108, 3284], [3284, 3346], [3346, 3368], [3368, 3403], [3403, 3493], [3493, 3514]], "start": 3045, "end": 3514, "text": ".\r\n(حديث آخر) عن الأسقع البكري. قال الحافظ أبو القاسم الطبراني: حدثنا أبو يزيد القرطيسي، حدثنا يعقوب بن أبي عباد المكي، حدثنا مسلم بن خالد، عن ابن جريج، أخبرني عمر بن عطاء، أن مولى ابن الأسقع رجل صدق، أخبره عن الأسقع البكري، أنه سمعه يقول:إن النبي - صلى الله عليه وسلم - في صفة المهاجرين، فسأله إنسان: أي آية في القرن أعظم؟ فقال النبي - صلى الله عليه وسلم -: {اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ... } حتى انقضت الآية ", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.8471, "diffs": [{"kind": "missing_in_b", "a_words": ["حديث", "آخر"], "b_words": []}, {"kind": "variant", "a_words": ["الأسقع"], "b_words": ["الأسفع"]}, {"kind": "variant", "a_words": ["القرطيسي"], "b_words": ["القراطيسي"]}, {"kind": "variant", "a_words": ["الأسقع"], "b_words": ["الأسفع"]}, {"kind": "variant", "a_words": ["الأسقع"], "b_words": ["الأسفع"]}, {"kind": "variant", "a_words": ["يقولإن"], "b_words": ["يقول", "إن"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["جاءهم"]}, {"kind": "variant", "a_words": ["القرن"], "b_words": ["القرآن"]}], "tags_display": "shared", "source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.88, "reason_ar": "حديث الأسقع أن جواب النبي عن أعظم آية كان تلاوة هذه الآية"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.92, "reason_ar": "حديث مستقل يجيب فيه النبي عن أعظم الآيات بذكر الآية محل التفسير."}}}, {"id": "2_255_d08", "ayah_id": "2_255", "span_ids": ["s043", "s044", "s045", "s046", "s047", "s048", "s049", "s050", "s051", "s052", "s053", "s054", "s055", "s056"], "offsets": [[3628, 3669], [3669, 3800], [3800, 3826], [3826, 3858], [3858, 3901], [3913, 3931], [3931, 3999], [4012, 4030], [4030, 4066], [4066, 4101], [4101, 4129], [4129, 4160], [4160, 4219], [4219, 4247]], "start": 3628, "end": 4247, "text": ".\r\n(حديث آخر) - عن أنس - قال الإمام أحمد: حدثنا عبد الله بن الحارث، حدثني سلمة بن وردان، أن أنس بن مالك، حدثه أن رسول الله - صلى الله عليه وسلم - سأل رجلًا من صحابته، فقال: \"أي فلان هل تزوجت؟ \" قال: لا، وليس عندي ما أتزوج به، قال: \"أوليس معك {قُلْ هُوَ اللَّهُ أَحَدٌ (1)} ؟ \" قال: بلى، قال: \"ربع القرآن\". قال: \"أليس معكَ {قُلْ يَاأَيُّهَا الْكَافِرُونَ (1)} ؟ \" قال: بلى. قال: \"ربع القرآن\". \"أليس معكَ إذا زلزلت؟ \" قال: بلى. قال: \"ربع القرآن\" قال: \"أليس معك إذا جاء نصر الله؟ \" قال: بلى. قال: \"ربع القرآن\". قال: \"أليس معك آية الكرسي الله لا إله إلا هو الحي القيوم\"؟ قال: لى. قال: \"ربع القرآن\" ", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9, "diffs": [{"kind": "missing_in_b", "a_words": ["قال"], "b_words": []}, {"kind": "missing_in_b", "a_words": ["قال"], "b_words": []}, {"kind": "extra_in_b", "a_words": [], "b_words": ["والفتح"]}, {"kind": "missing_in_b", "a_words": ["قال"], "b_words": []}, {"kind": "missing_in_b", "a_words": ["الحي", "القيوم"], "b_words": []}, {"kind": "variant", "a_words": ["لى"], "b_words": ["بلى"]}], "tags_display": "shared", "source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.9, "reason_ar": "حديث أنس يعد سورًا أرباعًا ويختم بعدّ هذه الآية ربع القرآن"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.91, "reason_ar": "حديث واحد يقارن فضائل سور متعددة ويذكر فضل آية الكرسي بينها."}}}, {"id": "2_255_d09", "ayah_id": "2_255", "span_ids": ["s057", "s058", "s059", "s060", "s061", "s062", "s063", "s064", "s065", "s066", "s067", "s068", "s069", "s070", "s071", "s072", "s073", "s074", "s075", "s076", "s077", "s078", "s079"], "offsets": [[4327, 4367], [4367, 4463], [4495, 4531], [4531, 4592], [4592, 4615], [4615, 4641], [4641, 4673], [4673, 4724], [4724, 4766], [4766, 4807], [4807, 4855], [4855, 4881], [4881, 4917], [4917, 4944], [4944, 4991], [4991, 5030], [5030, 5065], [5065, 5105], [5105, 5132], [5132, 5159], [5159, 5209], [5209, 5264], [5264, 5337]], "start": 4327, "end": 5337, "text": ".\r\n(حديث آخر) عن أبي ذرٍّ جندب بن جنادة. قال الإمام أحمد: حدثنا وكيع بن الجراح، حدثنا المسعودي، أنبأني أبو عمر الدمشقي، عن عبيد الخشخاش ، عن أبي ذرٍّ - رضي الله عنه -، قال: أتيت النبي - صلى الله عليه وسلم - وهو في المسجد فجلست، فقال: \"يا أبا ذرٍّ، هل صليت؟ \" قلت: لا. قال: \"قم فصل\". قال: فقمت فصليت، ثم جلست، فقال: \"يا أبا ذرّ تعوذ بالله من شر شياطين الإنس والجنّ\". قال: قلت: يا رسول الله، أوَ للإنس شياطين؟ قال: نعم، قال: قلت: يا رسول الله الصلاة؟ قال: \"خير موضوع، من شاء أقل، ومن شاء أكثر\" قال: قلت: يا رسول الله فالصوم؟ قال: \"فرض مجزي وعند الله مزيد\" قلت: يا رسول الله فالصدقة؟ قال: \"أضعاف مضاعفة\". قلت: يا رسول الله، فأيها أفضل؟ قال: \"جهد من مقل، أو سر إلى فقير\" قلت: يا رسول الله، أي الأنبياء كان أول؟ قال: \"آدم\" قلت: يا رسول الله، ونبي كان؟ قال: \"نعم نبي مكلَّم\" قلت: يا رسول الله، كم المرسلون؟ قال: \"ثلاثمائة وبضعة عشر جمًّا غفيرًا\"، وقال مرة: \"وخمسة عشر\" قلت: يا رسول الله، أيما ما أنزل عليك أعظم؟ قال: \"آية الكرسي\" {اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ} ", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9465, "diffs": [{"kind": "missing_in_b", "a_words": ["حديث"], "b_words": []}, {"kind": "extra_in_b", "a_words": [], "b_words": ["بن"]}, {"kind": "variant", "a_words": ["أو", "للإنس"], "b_words": ["أوللإنس"]}, {"kind": "variant", "a_words": ["مجزي"], "b_words": ["مجزئ"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["قال"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["قال"]}, {"kind": "missing_in_b", "a_words": ["ما"], "b_words": []}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.8, "reason_ar": "حديث أبي ذر الطويل وخاتمته فضل الآية، رغم أسئلة لا تتعلق بها"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL", "C_FIQH"], "confidence": 0.78, "reason_ar": "رواية واحدة تتناول أعمالًا شرعية متعددة وتنتهي ببيان منزلة الآية."}}}, {"id": "2_255_d10", "ayah_id": "2_255", "span_ids": ["s080"], "offsets": [[5475, 5560]], "start": 5475, "end": 5560, "text": " ورواه النسائي.\r\n(حديث آخر) عن أبي أيوب خالد بن زيد الأنصاري - رضي الله عنه - وأرضاه.", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "ثقة منخفضة", "وسم حساس"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.75, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.48, "reason_ar": "يجمع تخريج النسائي للحديث السابق وعنوان الحديث التالي في مقطع واحد"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.54, "reason_ar": "يجمع span واحد عزو الحديث السابق وعنوان الخبر التالي؛ غلبت وظيفة التخريج لتعذر الفصل."}}}, {"id": "2_255_d11", "ayah_id": "2_255", "span_ids": ["s081", "s082", "s083", "s084", "s085", "s086", "s087", "s088", "s089", "s090", "s091"], "offsets": [[5560, 5685], [5753, 5828], [5828, 5874], [5874, 5934], [5956, 6000], [6000, 6036], [6036, 6065], [6065, 6114], [6114, 6153], [6174, 6271], [6271, 6302]], "start": 5560, "end": 6302, "text": " قال الإمام أحمد: حدثنا أبو أحمد، حدثنا سفيان، عن ابن أبي ليلى، عن أخيه عبد الرحمن بن أبي ليلى، عن أبي أيوب، أنه كان في سهوة  له، وكانت الغول تجيء فتأخذ، فشكاها إلى النبي - صلى الله عليه وسلم -، فقال: \"فإذا رأيتها فقل باسم الله، أجيبي رسول الله\". قال: فجاءت، فقال لها، فأخذها، فقالت: إني لا أعود، فأرسلتها ، فجاء فقال له النبي - صلى الله عليه وسلم -: \"ما فعل أسيرك\"؟ قال: أخذتها، فقالت: إني لا أعود، فأرسلتها، فقال: إنها عائدة، فأخذتها مرتين أو ثلاثًا كل ذلك تقول: لا أعود، فيقول: \"إنها عائدة\"، فأخذتها ، فقالت: أرسلني، وأعلمك شيئًا تقوله فلا يقربك شيء، آية الكرسي، فأتى النبي - صلى الله عليه وسلم -. فأخبره، فقال: \"صدقت وهي كذوب\" ", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.8376, "diffs": [{"kind": "missing_in_b", "a_words": ["أحمد", "حدثنا", "أبو"], "b_words": []}, {"kind": "variant", "a_words": ["فأرسلتها"], "b_words": ["فأرسلها"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["لي", "إني", "لا", "أعود"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["لا", "أعود", "وأجيء", "إلى", "النبي", "صلى", "الله", "عليه", "وسلم", "فيقول", "ما", "فعل", "أسيرك", "فأقول", "أخذتها", "فتقول"]}, {"kind": "missing_in_b", "a_words": ["النبي", "صلى", "الله", "عليه", "وسلم", "فأخبره", "فقال", "صدقت", "وهي", "كذوب"], "b_words": []}], "tags_display": "shared", "source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.9, "reason_ar": "حديث أبي أيوب مع الغول وتعليمها الآية وتصديق النبي مع تكذيب عادتها"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.93, "reason_ar": "قصة مسندة عن أثر قراءة الآية في الحفظ مع إقرار نبوي."}}}, {"id": "2_255_d12", "ayah_id": "2_255", "span_ids": ["s092", "s093", "s094"], "offsets": [[6626, 6706], [6737, 6739], [6787, 6788]], "start": 6626, "end": 6788, "text": ". ورواه الترمذي في فضائل القرآن عن بندار، عن أبي أحمد الزبيري به، وقال حسن غريب .  ", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "وسم حساس"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.75, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.86, "reason_ar": "تخريج الترمذي وحكمه، وأُلحقت به بقايا نقط وفراغ بعد حذف الحواشي"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.93, "reason_ar": "عزو رواية الفضيلة إلى مصدر حديثي مع نقل درجتها، وتليه علامات ترقيم فارغة المعنى."}}}, {"id": "2_255_d13", "ayah_id": "2_255", "span_ids": ["s095", "s096", "s097", "s098", "s099", "s100", "s101", "s102", "s103", "s104", "s105", "s106"], "offsets": [[6836, 6981], [6981, 7028], [7028, 7131], [7131, 7184], [7184, 7226], [7226, 7280], [7280, 7317], [7317, 7392], [7392, 7472], [7472, 7523], [7523, 7574], [7574, 7611]], "start": 6836, "end": 7611, "text": ".\r\nوقد ذكر البخاري هذه القصة عن أبي هريرة، فقال في كتاب فضائل القرآن، وفي كتاب الوكالة، وفي صفة إبليس من صحيحه، قال عثمان بن الهيثم - أبو عمرو -: حدثنا عوف عن محمد بن سيرين، عن أبي هريرة، قال: وكَّلني رسول الله - صلى الله عليه وسلم - بحفظ زكاة رمضان، فأتاني آتٍ فجعل يحثو من الطعام، فأخذته وقلت: لأرفعنكَ إلى رسول الله - صلى الله عليه وسلم -، فقال: إني محتاج وعليّ عيال ولي حاجة شديدة، قال: فخليتُ عنه فأصبحت، فقال النبي - صلى الله عليه وسلم -: \"يا أبا هريرة ما فعل أسيركَ البارحة؟ \" قال: قلت: يا رسول الله، شكا حاجة شديدة وعيالًا، فرحمته وخليت سبيله، قال: \"أما إنه قد كذبك وسيعود\" فعرفت أنه سيعود لقول رسول الله - صلى الله عليه وسلم -: \"إنه سيعود\" فرصدته، فجاء يحثو الطعام، فأخذته فقلت: لأرفعنكَ إلى رسول الله - صلى الله عليه وسلم - قال: دعني فأنا محتاج وعليّ عيال، لا أعود.", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "ثقة منخفضة", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9517, "diffs": [{"kind": "variant", "a_words": ["فقال"], "b_words": ["قال"]}, {"kind": "extra_in_b", "a_words": [], "b_words": ["من"]}, {"kind": "variant", "a_words": ["فأنا"], "b_words": ["فإني"]}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL", "C_TAKHRIJ"], "confidence": 0.58, "reason_ar": "مستهل قصة أبي هريرة عند البخاري مع مواضع الكتاب، وتنقطع قبل ذكر الفضل"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_FADAIL"], "confidence": 0.55, "reason_ar": "بدأ طريقًا جديدًا للقصة السابقة، لكن النافذة تنتهي قبل ذكر أثر الآية صراحة."}}}]}, {"id": "2_102", "ayah": "2:102", "surah": 2, "ayah_number": 102, "label_ar": "البقرة ١٠٢", "surah_name_ar": "البقرة", "window_start": 25901, "window_end": 29364, "source_sha256_ok": true, "apparatus": [{"start": 26265, "end": 26288, "layer": "footnote", "text": "¬في (ن): \"ما يكون في\".¥"}, {"start": 26406, "end": 26440, "layer": "footnote", "text": "¬(1/ 53) وقد مضى تخريجه منذ قليل.¥"}, {"start": 27168, "end": 27691, "layer": "footnote", "text": "¬وهكذا قال أهل العلم. قال ابن معين: \"يقولون: إن نافعًا لم يحدث حتى مات سالم\" وقال ابن المديني، كما في \"التمهيد\" (13/ 282) لابن عبد البر، عن الأحاديث التي اختلف فيها نافع وسالم: \"القول فيها قول سالم\". وقال النسائي: \"سالم أجل من نافع\". وقال الطحاوي في \"شرح المعاني\" (1/ 378): \"وسالم أثبت من نافع وأحفظ\".\r\nوذكر أبو داود في \"سننه\" (3434) أن سالمًا [وقع في \"المطبوعة\": الزهري. وهو خطأ] اختلف مع نافع في أربعة أحاديث. وذكر النسائي أنها ثلاثة، رجح النسائي فيها قول نافع. ورجح ابن المديني قول سالم. وانظر \"فتح الباري\" (5/ 51، 52).¥"}, {"start": 27870, "end": 28012, "layer": "footnote", "text": "¬في \"تفسيره\" (1683) والمثنى هو ابن إبراهيم، والحجاج هو ابن منهال، وحماد هو ابن سلمة، وخالد هو ابن مهران الحذاء، ورجاله ثقات كما قال ابن كثير.¥"}, {"start": 28236, "end": 28261, "layer": "footnote", "text": "¬لم يقع في رواية الطبري.¥"}, {"start": 28307, "end": 28440, "layer": "footnote", "text": "¬كذا في (ع) و (ك) و (ن) و (ى). ووقع في (ج) و (ل): \"المتكلم\"، وأشار ناسخ (ن) في الحاشية إلى هذه الكلمة. ووقع في (ز) و (ض): \"تكلم به\".¥"}, {"start": 28539, "end": 28679, "layer": "footnote", "text": "¬في (ج): \"جيد ورجاله ثقات\"، وكتب الناسخ لفظة: \"جيد\" بخط دقيق فوق السطر، وكأنها من تصرفه أو لعل ابن كثير كان كتبها ثم ضرب عليها. والله أعلم.¥"}, {"start": 28716, "end": 28991, "layer": "footnote", "text": "¬في \"تفسيره\" (1008).\r\nوأخرجه الحاكم في \"المستدرك\" (2/ 265، 266)؛ وأبو الشيخ في \"كتاب العظمة\" (698/ 19) من طريق يعلى بن عبيد، حدثنا إسماعيل بن أبي خالد، عن عمير بن سعيد، عن علي به؛ وأخرجه ابن أبي الدنيا في \"العقوبات\" (223) من طريق جرير بن عبد الحميد، عن إسماعيل به وسنده قوي.¥"}, {"start": 29093, "end": 29276, "layer": "footnote", "text": "¬كذا في (ج) و (ع) و (ك) و (ى). ووقع في (ض): \"ابن أبي حاتم\"؛ وفي (ز): \"عن خالد\" و (ل) و (ن): \"عن أبي خالد\" وكل هذا خطأ. والصواب: ما أثبته، وهو إسماعيل بن أبي خالد، أحد الثقات الأثبات.¥"}, {"start": 29321, "end": 29330, "layer": "footnote", "text": "¬من (ن).¥"}], "units": [{"id": "2_102_d01", "ayah_id": "2_102", "span_ids": ["s262", "s263", "s264", "s265", "s266", "s267", "s268", "s269"], "offsets": [[25901, 25965], [25965, 26014], [26014, 26039], [26039, 26081], [26081, 26116], [26116, 26141], [26141, 26172], [26172, 26223]], "start": 25901, "end": 26223, "text": " قال: ما قلت لك إلا ما سمعت من رسول الله - صلى الله عليه وسلم -. أو قال: قال لي رسول الله - صلى الله عليه وسلم -: إن الملائكة قالت: يا رب!، كيف صبرك على بني آدم في الخطايا والذنوب؟ قال: إني ابتليتهم وعافيتكم. قالوا: لو كنا مكانهم ما عصيناك. قال: فاختاروا ملكين منكم. قال: فلم يألوا جهدًا أن يختاروا، فاختاروا هاروت وماروت.", "status": "needs_review", "reasons": ["ثقة منخفضة"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.9231, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_TAFSIR"], "confidence": 0.82, "reason_ar": "رواية تُنسب إلى النبي في اختيار الملكين، والنافذة تبدأ من ختامها"}, "second": {"source_tags": ["S_SUNNAH"], "content_tags": ["C_TAFSIR"], "confidence": 0.55, "reason_ar": "نُسب خبر الملكين إلى الرسول هنا، لكن الترجيح اللاحق يرجعه إلى مصدر آخر؛ لذلك بقي تصنيف المصدر محتملًا."}}}, {"id": "2_102_d02", "ayah_id": "2_102", "span_ids": ["s270", "s271"], "offsets": [[26223, 26265], [26288, 26406]], "start": 26223, "end": 26406, "text": "\r\nوهذان أيضًا غريبان جدًّا. وأقرب (ما في)  هذا أنه من رواية عبد الله بن عمر، عن كعب الأحبار، لا عن النبي - صلى الله عليه وسلم -، كما قال عبد الرزاق في \"تفسيره\" ", "status": "needs_review", "reasons": ["وسم حساس"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.8611, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.74, "reason_ar": "حكم بغرابة الرواية وأن الأقرب نسبتها لكعب لا إلى النبي، مع إحالة مصدر"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.87, "reason_ar": "رجح المفسر نسبة الخبر إلى طريق آخر وذكر إسناده تمهيدًا للرواية."}}}, {"id": "2_102_d03", "ayah_id": "2_102", "span_ids": ["s272"], "offsets": [[26440, 26506]], "start": 26440, "end": 26506, "text": "، عن الثوري، عن موسى بن عقبة، عن سالم، عن ابن عمر، عن كعب الأحبار؛", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.6842, "diffs": [{"kind": "variant", "a_words": ["الأحبار"], "b_words": ["قال", "ذكرت", "الملائكة", "أعمال", "بني", "آدم", "وما", "يأتون", "من", "الذنوب", "فقيل"]}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_TABIIN"], "content_tags": ["C_TAFSIR"], "confidence": 0.84, "reason_ar": "قول كعب في هبوط الملكين وما نُهيا عنه، وابن عمر راوٍ في السند فقط"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.87, "reason_ar": "رجح المفسر نسبة الخبر إلى طريق آخر وذكر إسناده تمهيدًا للرواية."}}}, {"id": "2_102_d04", "ayah_id": "2_102", "span_ids": ["s273", "s274", "s275", "s276"], "offsets": [[26506, 26571], [26571, 26614], [26614, 26738], [26738, 26809]], "start": 26506, "end": 26809, "text": " قال: ذكرت الملائكة أعمال بني آدم، وما يأتون من الذنوب، فقيل لهم: اختاروا منكم اثنين، فاختاروا هاروت وماروت؛ فقال لهما: إني أرسل إلى بني آدم رسلًا، وليس بيني وبينكم رسول، انزلا لا تشركا بي شيئًا، ولا تزنيا، ولا تشربا الخمر، قال كعب: فوالله ما أمسيا من يومهما الذي أهبطا فيه حتى استكملا جميع ما نهيا عنه.", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "وسم حساس"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.918, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_TABIIN"], "content_tags": ["C_TAFSIR"], "confidence": 0.84, "reason_ar": "قول كعب في هبوط الملكين وما نُهيا عنه، وابن عمر راوٍ في السند فقط"}, "second": {"source_tags": ["S_TABIIN"], "content_tags": ["C_ISRAILIYYAT", "C_TAFSIR"], "confidence": 0.88, "reason_ar": "هذا خبر تفسيري منقول عن كعب؛ وصرح المفسر لاحقًا بأن مأخذه من كتب بني إسرائيل."}}}, {"id": "2_102_d05", "ayah_id": "2_102", "span_ids": ["s277", "s278", "s279", "s280", "s281", "s282"], "offsets": [[26809, 26835], [26835, 26922], [26922, 27087], [27087, 27168], [27691, 27714], [27714, 27783]], "start": 26809, "end": 27783, "text": "\r\nرواه ابن جرير من طريقين؛ عن عبد الرزاق، به.\r\nورواه ابن أبي حاتم، عن أحمد بن عصام، عن مؤمل، عن سفيان الثوري، به.\r\nورواه ابن جرير أيضًا: حدثني المثنى، حدثنا المعلَّى - وهو ابن أسد -، حدثنا عبد العزيز بن المختار، عن موسى بن عقبة، حدثني سالم أنه سمع عبد الله يحدث عن كعب الأحبار ... فذكره.\r\nفهذا أصح وأثبت إلى عبد الله بن عمر من الإسنادين المتقدمين، وسالم أثبت  في أبيه من مولاه نافع؛ فدار الحديث ورجع إلى نقل كعب الأحبار عن كتب بني إسرائيل، والله أعلم.", "status": "needs_review", "reasons": ["وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "minor", "match_ratio": 0.9333, "diffs": [{"kind": "variant", "a_words": ["رواه"], "b_words": ["ورواه"]}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ", "C_ISRAILIYYAT"], "confidence": 0.88, "reason_ar": "تخريج الطرق وترجيح سند سالم، ثم تصريح بعودة النقل إلى كتب أهل الكتاب"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ", "C_ISRAILIYYAT"], "confidence": 0.82, "reason_ar": "قارن طرق الرواية وحكم بترجيح أحدها ثم صرح بأن أصل الخبر من كتب بني إسرائيل."}}}, {"id": "2_102_d06", "ayah_id": "2_102", "span_ids": ["s283", "s284", "s285", "s286", "s287", "s288"], "offsets": [[27783, 27870], [28012, 28086], [28086, 28125], [28125, 28236], [28261, 28307], [28440, 28539]], "start": 27783, "end": 28539, "text": "\r\n\r\nذكر الآثار الواردة في ذلك عن الصحابة والتابعين رضي الله عنهم أجمعين:\r\nقال ابن جرير : حدثني المثنى، حدثنا الحجاج، حدثنا حماد، عن خالد الحذاء، عن عمير بن سعيد؛ قال: سمعت عليًا - رضي الله عنه - يقول: كانت الزهرة امرأةً جميلةً من أهل فارس، وإنها خاصمت إلى الملكين هاروت وماروت، فراوداها عن نفسها، فأبت (عليهما)  إلا أن يعلماها الكلام الذي إذا تكلم به (أحد)  يعرج به إلى السماء؛ فعلماها فتكلمت به، فعرجت إلى السماء، فمسخت كوكبًا.\r\nوهذا الإسناد (رجاله ثقات) ", "status": "needs_review", "reasons": ["ثقة منخفضة", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.9277, "diffs": [{"kind": "extra_in_b", "a_words": [], "b_words": ["المتكلم"]}, {"kind": "missing_in_b", "a_words": ["أحد"], "b_words": []}, {"kind": "extra_in_b", "a_words": [], "b_words": ["جيد", "و"]}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_SAHABA"], "content_tags": ["C_TAFSIR", "C_TAKHRIJ"], "confidence": 0.55, "reason_ar": "أثر علي في مسخ الزهرة، وآخره حكم بتوثيق الرجال فلا ينفصل عن المتن"}, "second": {"source_tags": ["S_SAHABA"], "content_tags": ["C_TAFSIR", "C_TAKHRIJ"], "confidence": 0.54, "reason_ar": "أثر عن صحابي، لكن آخر span يجمع ختام المتن مع بداية الحكم على الإسناد فلا يمكن فصلهما."}}}, {"id": "2_102_d07", "ayah_id": "2_102", "span_ids": ["s289"], "offsets": [[28679, 28716]], "start": 28679, "end": 28716, "text": "، وهو غريب جدًّا.\r\nوقال ابن أبي حاتم ", "status": "needs_review", "reasons": ["ثقة منخفضة", "وسم حساس"], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.5833, "diffs": [], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.5, "reason_ar": "يجمع حكم الغرابة على السند السابق مع بداية إسناد الرواية التالية"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.53, "reason_ar": "يجمع أول span تقويم الطريق السابق وبدء طريق جديد؛ والجمع اضطراري بسبب حدوده."}}}, {"id": "2_102_d08", "ayah_id": "2_102", "span_ids": ["s290", "s291"], "offsets": [[28991, 29093], [29276, 29321]], "start": 28991, "end": 29321, "text": " حدثنا الفضل بن شاذان، حدثنا محمد بن عيسى، حدثنا إبراهيم بن موسى، حدثنا أبو معاوية، عن (ابن أبي خالد) ، عن عمير بن سعيد، عن علي (- رضي الله عنه -) ", "status": "needs_review", "reasons": ["اختلاف بين الفاحصين", "ثقة منخفضة", "وسم حساس"], "verbatim_ok": true, "in_source_b": false, "cross_source": "different", "match_ratio": 0.7576, "diffs": [{"kind": "variant", "a_words": ["رضي", "الله", "عنه"], "b_words": ["قال", "هما", "ملكان", "من", "ملائكة", "السماء", "يعني", "وما", "أنزل", "على", "الملكين", "ورواه", "الحافظ"]}], "tags_display": "side_by_side", "source_tags": [], "content_tags": [], "annotators": {"first": {"source_tags": ["S_SAHABA"], "content_tags": ["C_TAFSIR"], "confidence": 0.76, "reason_ar": "قول علي في تحديد طبيعة الملكين، والنافذة تنقطع قبل تمام الخبر"}, "second": {"source_tags": ["S_RAY"], "content_tags": ["C_TAKHRIJ"], "confidence": 0.53, "reason_ar": "يجمع أول span تقويم الطريق السابق وبدء طريق جديد؛ والجمع اضطراري بسبب حدوده."}}}, {"id": "2_102_d09", "ayah_id": "2_102", "span_ids": ["s292"], "offsets": [[29330, 29364]], "start": 29330, "end": 29364, "text": ". قال: هما ملكان من ملائكة السماء؛", "status": "agreed", "reasons": [], "verbatim_ok": true, "in_source_b": true, "cross_source": "identical", "match_ratio": 0.5455, "diffs": [], "tags_display": "shared", "source_tags": ["S_SAHABA"], "content_tags": ["C_TAFSIR"], "annotators": {"first": {"source_tags": ["S_SAHABA"], "content_tags": ["C_TAFSIR"], "confidence": 0.76, "reason_ar": "قول علي في تحديد طبيعة الملكين، والنافذة تنقطع قبل تمام الخبر"}, "second": {"source_tags": ["S_SAHABA"], "content_tags": ["C_TAFSIR"], "confidence": 0.83, "reason_ar": "بداية قول مستقل منسوب إلى صحابي يبيّن هوية الملكين، وينتهي النص المختار قبل استكماله."}}}]}], "annotator_labels": {"first": "الفاحص الأول", "second": "الفاحص الثاني"}}</script>
+<script>
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "tafsir-index-reviewer-decisions-v1";
+  var data = JSON.parse(document.getElementById("data").textContent);
+  var decisions = {};
+  var app = document.getElementById("app");
+  var cardsEl = document.getElementById("cards");
+  var emptyEl = document.getElementById("empty");
+  var countEl = document.getElementById("resultsCount");
+  var exportBox = document.getElementById("exportBox");
+  var exportText = document.getElementById("exportText");
+  var copyStatus = document.getElementById("copyStatus");
+  var exportBtn = document.getElementById("exportBtn");
+  var reviewerMode = document.getElementById("reviewerMode");
+
+  var filterAyah = document.getElementById("filterAyah");
+  var filterSource = document.getElementById("filterSource");
+  var filterContent = document.getElementById("filterContent");
+  var filterStatus = document.getElementById("filterStatus");
+  var filterCross = document.getElementById("filterCross");
+  var filterSearch = document.getElementById("filterSearch");
+
+  var ayahById = {};
+  var allUnits = [];
+  data.ayat.forEach(function (a) {
+    ayahById[a.id] = a;
+    a.units.forEach(function (u) {
+      allUnits.push(u);
+    });
+  });
+
+  function toEastern(n) {
+    return String(n).replace(/[0-9]/g, function (d) {
+      return "٠١٢٣٤٥٦٧٨٩"[Number(d)];
+    });
+  }
+
+  function pctAr(x) {
+    return toEastern(Number(x).toFixed(1).replace(/\.0$/, "")) + "٪";
+  }
+
+  function stripSearch(s) {
+    return String(s || "")
+      .replace(/[\u064B-\u065F\u0670]/g, "")
+      .replace(/\u0640/g, "");
+  }
+
+  function confWord(c) {
+    if (c >= 0.8) return "عالية";
+    if (c >= 0.6) return "متوسطة";
+    return "منخفضة";
+  }
+
+  function statusMeta(status) {
+    if (status === "approved") {
+      return { emoji: "🟢", label: "معتمد", cls: "approved" };
+    }
+    if (status === "rejected") {
+      return { emoji: "🟠", label: "مرفوض", cls: "rejected" };
+    }
+    if (status === "agreed") {
+      return { emoji: "🟡", label: "مقترح", cls: "agreed" };
+    }
+    return { emoji: "🟠", label: "بانتظار المتخصص", cls: "needs_review" };
+  }
+
+  function effectiveStatus(unit) {
+    var d = decisions[unit.id];
+    if (d && d.decision) return d.decision;
+    return unit.status;
+  }
+
+  function loadDecisions() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") decisions = parsed;
+    } catch (e) {
+      decisions = {};
+    }
+  }
+
+  function saveDecisions() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(decisions));
+    } catch (e) {
+      /* storage may throw in sandboxed viewers */
+    }
+  }
+
+  function tagLabel(id) {
+    var t = data.tags[id];
+    return t ? t.label_ar : id;
+  }
+
+  function tagTitle(id) {
+    var t = data.tags[id];
+    return t ? t.explain_ar : id;
+  }
+
+  function unitHasTag(unit, tagId, layer) {
+    function has(list) {
+      return (list || []).indexOf(tagId) !== -1;
+    }
+    if (unit.tags_display === "shared") {
+      return layer === "source" ? has(unit.source_tags) : has(unit.content_tags);
+    }
+    var a = unit.annotators.first;
+    var b = unit.annotators.second;
+    if (layer === "source") return has(a.source_tags) || has(b.source_tags);
+    return has(a.content_tags) || has(b.content_tags);
+  }
+
+  function highlightQuran(text) {
+    var esc = String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    esc = esc.replace(/([﴿{][^﴾}]*[﴾}])/g, '<span class="quran">$1</span>');
+    return esc;
+  }
+
+  function renderTagChips(ids) {
+    return (ids || [])
+      .map(function (id) {
+        return (
+          '<span class="tag" title="' +
+          tagTitle(id).replace(/"/g, "&quot;") +
+          '">' +
+          tagLabel(id) +
+          "</span>"
+        );
+      })
+      .join("");
+  }
+
+  function renderFacts() {
+    var s = data.summary;
+    var afterParts = ["2_255", "17_105", "2_102"]
+      .map(function (k) {
+        var row = s.cross_source_after[k];
+        return row.label_ar + ": " + pctAr(row.pct);
+      })
+      .join(" · ");
+    var typos = s.source_a_suspect_typos || [];
+    var typoItems = typos
+      .map(function (t) {
+        return (
+          "<li><strong>" +
+          t.ayah_label_ar +
+          "</strong>: مركز تفسير «" +
+          escText(t.a_word) +
+          "» · quran.com «" +
+          escText(t.b_word) +
+          "»</li>"
+        );
+      })
+      .join("");
+    var finding =
+      '<div class="fact finding">' +
+      '<p class="finding-title">المطابقة كشفت فروقاً بحرف واحد بين النسختين (' + toEastern(typos.length) + ')</p>' +
+      '<p class="note">بعضها خطأ طباعي ظاهر، وبعضها اختلاف طبعات أو إملاء. لا يحكم النظام أيّ النسختين أصح؛ يحسمها المتخصص بالرجوع إلى المطبوع.</p>' +
+      '<p class="example">أوضحها: في حديث «أي آية في القرآن أعظم؟» جاءت في نسخة مركز تفسير «القرن» — خطأ طباعي في النسخة الرقمية لا في كلام ابن كثير.</p>' +
+      (typoItems
+        ? "<details><summary>اعرض الفروق كلها</summary><ul>" + typoItems + "</ul></details>"
+        : "<p class=\"note\">لم تُرصد فروق حرفية في هذه النافذة.</p>") +
+      "</div>";
+    var html =
+      '<div class="fact"><div class="value">' +
+      pctAr(s.verbatim_pct) +
+      '</div><div class="label">سلامة النص حرفاً بحرف</div></div>' +
+      '<div class="fact"><div class="value">' +
+      pctAr(s.source_tag_agreement_pct) +
+      '</div><div class="label">اتفاق وسوم المصدر بين الفاحصين</div></div>' +
+      '<div class="fact"><div class="value">' +
+      pctAr(s.content_tag_agreement_pct) +
+      '</div><div class="label">اتفاق وسوم المحتوى بين الفاحصين</div></div>' +
+      '<div class="fact"><div class="value">' +
+      toEastern(Object.keys(s.cross_source_after).length) +
+      ' آيات</div><div class="label">مطابقة المصدرين بعد عزل الحواشي</div><div class="sub">' +
+      afterParts +
+      "</div></div>" +
+      finding;
+    document.getElementById("facts").innerHTML = html;
+  }
+
+  function escText(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function kindLabelAr(kind) {
+    if (kind === "variant") return "كلمة مختلفة";
+    if (kind === "missing_in_b") return "غير موجود في المصدر الثاني";
+    if (kind === "extra_in_b") return "زائد في المصدر الثاني";
+    return kind;
+  }
+
+  function crossBadge(unit) {
+    var n = (unit.diffs || []).length;
+    if (unit.cross_source === "identical") {
+      return '<span class="ok">✅ مطابق للمصدر الثاني</span>';
+    }
+    if (unit.cross_source === "minor") {
+      return (
+        '<span class="minor">🔎 فروق طفيفة مع المصدر الثاني (' +
+        toEastern(n) +
+        ")</span>"
+      );
+    }
+    return (
+      '<span class="warn">⚠️ فروق مع المصدر الثاني (' + toEastern(n) + ")</span>"
+    );
+  }
+
+  function renderDiffTable(unit) {
+    var rows = (unit.diffs || [])
+      .map(function (d) {
+        var a = d.a_words && d.a_words.length
+          ? '<span class="hl-a">' + escText(d.a_words.join(" ")) + "</span>"
+          : "—";
+        var b = d.b_words && d.b_words.length
+          ? '<span class="hl-b">' + escText(d.b_words.join(" ")) + "</span>"
+          : "—";
+        return (
+          "<tr><td>" +
+          a +
+          "</td><td>" +
+          b +
+          '</td><td class="kind">' +
+          kindLabelAr(d.kind) +
+          "</td></tr>"
+        );
+      })
+      .join("");
+    if (!rows) return "";
+    return (
+      '<div class="diff-panel" data-diff-panel>' +
+      '<table class="diff-table"><thead><tr>' +
+      "<th>نسخة مركز تفسير</th><th>المصدر الثاني (quran.com)</th><th>نوع الفرق</th>" +
+      "</tr></thead><tbody>" +
+      rows +
+      "</tbody></table>" +
+      '<p class="diff-help">الفروق لا تعني خطأ ابن كثير؛ قد تكون خطأً طباعياً في إحدى النسختين أو اختلاف طبعات، ويحسمها المتخصص بالرجوع إلى المطبوع.</p>' +
+      "</div>"
+    );
+  }
+
+  function fillTagSelects() {
+    var sourceIds = [];
+    var contentIds = [];
+    Object.keys(data.tags).forEach(function (id) {
+      if (data.tags[id].layer === "source") sourceIds.push(id);
+      else contentIds.push(id);
+    });
+    function fill(sel, ids) {
+      ids.forEach(function (id) {
+        var opt = document.createElement("option");
+        opt.value = id;
+        opt.textContent = data.tags[id].label_ar;
+        sel.appendChild(opt);
+      });
+    }
+    fill(filterSource, sourceIds);
+    fill(filterContent, contentIds);
+  }
+
+  function renderApparatus() {
+    var root = document.getElementById("apparatus");
+    var order = ["2_255", "17_105", "2_102"];
+    root.innerHTML = order
+      .map(function (id) {
+        var a = ayahById[id];
+        if (!a) return "";
+        var items = (a.apparatus || [])
+          .map(function (item) {
+            var layerLabel =
+              item.layer === "footnote" ? "حاشية محقق" : "إضافة بين معقوفين";
+            return (
+              '<div class="app-item"><div class="layer">' +
+              layerLabel +
+              " — المحارف " +
+              toEastern(item.start) +
+              "–" +
+              toEastern(item.end) +
+              '</div><div class="text">' +
+              highlightQuran(item.text) +
+              "</div></div>"
+            );
+          })
+          .join("");
+        if (!items) {
+          items = '<p class="note">لا توجد حواشي معزولة داخل نافذة هذه الآية في النموذج.</p>';
+        }
+        return (
+          "<details><summary>" +
+          a.label_ar +
+          " — " +
+          toEastern((a.apparatus || []).length) +
+          " عبارة</summary><div class=\"apparatus-list\">" +
+          items +
+          "</div></details>"
+        );
+      })
+      .join("");
+  }
+
+  function renderWhy(unit) {
+    var labels = data.annotator_labels;
+    function panel(key, ann) {
+      return (
+        '<div class="why-panel"><h4>' +
+        labels[key] +
+        "</h4><div class=\"tag-row\">" +
+        renderTagChips(ann.source_tags.concat(ann.content_tags)) +
+        "</div><p>الثقة: <strong>" +
+        confWord(ann.confidence) +
+        "</strong></p><p>" +
+        (ann.reason_ar || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;") +
+        "</p></div>"
+      );
+    }
+    var reasons = "";
+    if (unit.reasons && unit.reasons.length) {
+      reasons =
+        '<ul class="review-reasons">' +
+        unit.reasons
+          .map(function (r) {
+            return "<li>" + r + "</li>";
+          })
+          .join("") +
+        "</ul>";
+    }
+    return (
+      '<details class="why"><summary>لماذا هذه الوسوم؟</summary><div class="why-grid">' +
+      panel("first", unit.annotators.first) +
+      panel("second", unit.annotators.second) +
+      "</div>" +
+      reasons +
+      "</details>"
+    );
+  }
+
+  function renderCard(unit) {
+    var ayah = ayahById[unit.ayah_id];
+    var status = effectiveStatus(unit);
+    var sm = statusMeta(status);
+    var tagsHtml = "";
+    if (unit.tags_display === "shared") {
+      tagsHtml =
+        '<div class="tag-row">' +
+        renderTagChips(unit.source_tags.concat(unit.content_tags)) +
+        "</div>";
+    } else {
+      tagsHtml =
+        '<div class="tag-groups">' +
+        '<div><div class="tag-group-label">' +
+        data.annotator_labels.first +
+        '</div><div class="tag-row">' +
+        renderTagChips(
+          unit.annotators.first.source_tags.concat(unit.annotators.first.content_tags)
+        ) +
+        "</div></div>" +
+        '<div><div class="tag-group-label">' +
+        data.annotator_labels.second +
+        '</div><div class="tag-row">' +
+        renderTagChips(
+          unit.annotators.second.source_tags.concat(unit.annotators.second.content_tags)
+        ) +
+        "</div></div></div>";
+    }
+
+    var verbatim = unit.verbatim_ok
+      ? '<span class="ok">✅ مطابق لنسخة مركز تفسير حرفاً بحرف</span>'
+      : '<span class="warn">⚠️ غير مطابق لنسخة مركز تفسير</span>';
+    var hasDiffs = unit.cross_source !== "identical" && (unit.diffs || []).length > 0;
+    var diffBtn = hasDiffs
+      ? '<button type="button" class="btn" data-diff-toggle>اعرض الفروق</button>'
+      : "";
+
+    var card = document.createElement("article");
+    card.className = "card";
+    card.dataset.unitId = unit.id;
+    card.innerHTML =
+      '<div class="card-top"><span class="badge ' +
+      sm.cls +
+      '">' +
+      sm.emoji +
+      " " +
+      sm.label +
+      "</span>" +
+      tagsHtml +
+      '</div><div class="unit-text">' +
+      highlightQuran(unit.text) +
+      '</div><p class="meta-line">ابن كثير — ' +
+      ayah.surah_name_ar +
+      " " +
+      toEastern(ayah.ayah_number) +
+      " — المحارف من " +
+      toEastern(unit.start) +
+      " إلى " +
+      toEastern(unit.end) +
+      '</p><div class="integrity-block"><p class="integrity-line">' +
+      verbatim +
+      crossBadge(unit) +
+      diffBtn +
+      "</p>" +
+      renderDiffTable(unit) +
+      "</div>" +
+      renderWhy(unit) +
+      '<div class="reviewer-box">' +
+      '<button type="button" class="btn ok" data-act="approved">اعتماد</button>' +
+      '<button type="button" class="btn warn" data-act="rejected">رفض</button>' +
+      '<button type="button" class="btn" data-act="needs_review">إعادة للمراجعة</button>' +
+      "</div>";
+
+    card.querySelectorAll("[data-act]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var act = btn.getAttribute("data-act");
+        if (act === "needs_review") {
+          delete decisions[unit.id];
+        } else {
+          decisions[unit.id] = { decision: act, at: new Date().toISOString() };
+        }
+        saveDecisions();
+        applyFilters();
+        if (exportBox.classList.contains("is-open")) refreshExport();
+      });
+    });
+    var toggle = card.querySelector("[data-diff-toggle]");
+    var panel = card.querySelector("[data-diff-panel]");
+    if (toggle && panel) {
+      toggle.addEventListener("click", function () {
+        var open = panel.classList.toggle("is-open");
+        toggle.textContent = open ? "اخفِ الفروق" : "اعرض الفروق";
+      });
+    }
+    return card;
+  }
+
+  function buildCards() {
+    cardsEl.innerHTML = "";
+    allUnits.forEach(function (u) {
+      cardsEl.appendChild(renderCard(u));
+    });
+  }
+
+  function matchesFilters(unit) {
+    var ayah = filterAyah.value;
+    var source = filterSource.value;
+    var content = filterContent.value;
+    var status = filterStatus.value;
+    var cross = filterCross.value;
+    var q = stripSearch(filterSearch.value.trim());
+    if (ayah && unit.ayah_id !== ayah) return false;
+    if (source && !unitHasTag(unit, source, "source")) return false;
+    if (content && !unitHasTag(unit, content, "content")) return false;
+    if (status && effectiveStatus(unit) !== status) return false;
+    if (cross && unit.cross_source !== cross) return false;
+    if (q && stripSearch(unit.text).indexOf(q) === -1) return false;
+    return true;
+  }
+
+  function applyFilters() {
+    var visible = 0;
+    var cards = cardsEl.querySelectorAll(".card");
+    cards.forEach(function (card) {
+      var unit = allUnits.find(function (u) {
+        return u.id === card.dataset.unitId;
+      });
+      var ok = matchesFilters(unit);
+      card.classList.toggle("is-hidden", !ok);
+      if (ok) {
+        visible += 1;
+        var status = effectiveStatus(unit);
+        var sm = statusMeta(status);
+        var badge = card.querySelector(".badge");
+        badge.className = "badge " + sm.cls;
+        badge.textContent = sm.emoji + " " + sm.label;
+      }
+    });
+    countEl.textContent = "النتائج: " + toEastern(visible) + " وحدة";
+    emptyEl.hidden = visible !== 0;
+  }
+
+  function setExample(name) {
+    filterAyah.value = "";
+    filterSource.value = "";
+    filterContent.value = "";
+    filterStatus.value = "";
+    filterCross.value = "";
+    filterSearch.value = "";
+    document.querySelectorAll(".chip").forEach(function (c) {
+      c.classList.toggle("is-active", c.getAttribute("data-example") === name);
+    });
+    if (name === "hadith") {
+      filterAyah.value = "2_255";
+      filterSource.value = "S_SUNNAH";
+    } else if (name === "isra") {
+      filterAyah.value = "2_102";
+      filterContent.value = "C_ISRAILIYYAT";
+    } else if (name === "review") {
+      filterStatus.value = "needs_review";
+    }
+    applyFilters();
+  }
+
+  function refreshExport() {
+    exportText.value = JSON.stringify(decisions, null, 2);
+  }
+
+  reviewerMode.addEventListener("change", function () {
+    app.classList.toggle("reviewer-on", reviewerMode.checked);
+    exportBtn.hidden = !reviewerMode.checked;
+    if (!reviewerMode.checked) {
+      exportBox.classList.remove("is-open");
+      copyStatus.textContent = "";
+    }
+  });
+
+  exportBtn.addEventListener("click", function () {
+    exportBox.classList.add("is-open");
+    refreshExport();
+  });
+
+  document.getElementById("copyDecisions").addEventListener("click", function () {
+    refreshExport();
+    var text = exportText.value;
+    function fallback() {
+      exportText.focus();
+      exportText.select();
+      copyStatus.textContent = "حدّد النص وانسخه يدوياً إن لزم.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () {
+          copyStatus.textContent = "تم نسخ القرارات.";
+        },
+        fallback
+      );
+    } else {
+      fallback();
+    }
+  });
+
+  [filterAyah, filterSource, filterContent, filterStatus, filterCross].forEach(function (el) {
+    el.addEventListener("change", function () {
+      document.querySelectorAll(".chip").forEach(function (c) {
+        c.classList.remove("is-active");
+      });
+      applyFilters();
+    });
+  });
+  filterSearch.addEventListener("input", function () {
+    document.querySelectorAll(".chip").forEach(function (c) {
+      c.classList.remove("is-active");
+    });
+    applyFilters();
+  });
+
+  document.getElementById("exampleChips").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-example]");
+    if (!btn) return;
+    setExample(btn.getAttribute("data-example"));
+  });
+
+  loadDecisions();
+  renderFacts();
+  fillTagSelects();
+  renderApparatus();
+  buildCards();
+  applyFilters();
+})();
+</script>

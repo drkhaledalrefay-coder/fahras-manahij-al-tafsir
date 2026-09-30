@@ -1,0 +1,120 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/anfal/ibn_kathir/raw/8_45.txt",
+  "ayah": "8:45",
+  "surah": 8,
+  "ayah_number": 45,
+  "source_char_length": 2849,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 671,
+      "kind": "author"
+    },
+    {
+      "start": 671,
+      "end": 846,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 846,
+      "end": 1105,
+      "kind": "author"
+    },
+    {
+      "start": 1105,
+      "end": 1248,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1248,
+      "end": 1520,
+      "kind": "author"
+    },
+    {
+      "start": 1520,
+      "end": 1606,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1606,
+      "end": 1697,
+      "kind": "author"
+    },
+    {
+      "start": 1697,
+      "end": 1784,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1784,
+      "end": 1942,
+      "kind": "author"
+    },
+    {
+      "start": 1942,
+      "end": 1983,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1983,
+      "end": 2164,
+      "kind": "author"
+    },
+    {
+      "start": 2164,
+      "end": 2209,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2209,
+      "end": 2601,
+      "kind": "author"
+    },
+    {
+      "start": 2601,
+      "end": 2702,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2702,
+      "end": 2849,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 8,
+    "layout": 0,
+    "apparatus": 7
+  },
+  "char_totals": {
+    "author": 2171,
+    "layout": 0,
+    "apparatus": 678
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 7
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 678
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 7,
+    "footnote_close": 7,
+    "footnotes_closed": 7,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

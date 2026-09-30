@@ -1,0 +1,57 @@
+{
+  "window": "17_105",
+  "moves": [
+    {
+      "move_id": "m01",
+      "span_ids": ["s002", "s003", "s004"],
+      "primary": "M_QURAN",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s002", "s003", "s004"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": ["4:166"], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "استشهد بآية أخرى لبيان معنى الإنزال بالحق، ثم شرح دلالتها على تضمنها علم الله."
+    },
+    {
+      "move_id": "m02",
+      "span_ids": ["s001"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "weak",
+      "evidence_span_ids": ["s001"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": ["M_QURAN"],
+      "rationale_ar": "افتتاح المؤلف وشرحه للفظ الحق، وتمام الشرح في المقطع التالي الموسوم قرآنا بالقرآن."
+    },
+    {
+      "move_id": "m03",
+      "span_ids": ["s005"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s005"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "فسّر النزول بالحق بأنه بلوغ الوحي محفوظا لم يخالطه غيره ولم يزد ولم ينقص."
+    },
+    {
+      "move_id": "m04",
+      "span_ids": ["s006"],
+      "primary": "M_LUGHA",
+      "secondary": [],
+      "content_tags": [],
+      "certainty": "explicit",
+      "evidence_span_ids": ["s006"],
+      "author_verdict_span_ids": [],
+      "references": {"verses": [], "hadith": [], "persons": []},
+      "alternatives": [],
+      "rationale_ar": "بيّن مصرف البشارة والنذارة: المؤمنون المطيعون والكافرون العاصون."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/anfal/al_tabari/raw/8_13.txt",
+  "ayah": "8:13",
+  "surah": 8,
+  "ayah_number": 13,
+  "source_char_length": 783,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 155,
+      "kind": "author"
+    },
+    {
+      "start": 155,
+      "end": 159,
+      "kind": "layout"
+    },
+    {
+      "start": 159,
+      "end": 277,
+      "kind": "author"
+    },
+    {
+      "start": 277,
+      "end": 309,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 309,
+      "end": 362,
+      "kind": "author"
+    },
+    {
+      "start": 362,
+      "end": 366,
+      "kind": "layout"
+    },
+    {
+      "start": 366,
+      "end": 471,
+      "kind": "author"
+    },
+    {
+      "start": 471,
+      "end": 475,
+      "kind": "layout"
+    },
+    {
+      "start": 475,
+      "end": 779,
+      "kind": "author"
+    },
+    {
+      "start": 779,
+      "end": 783,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 5,
+    "layout": 5,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 731,
+    "layout": 20,
+    "apparatus": 32
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 32
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 5
+    },
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

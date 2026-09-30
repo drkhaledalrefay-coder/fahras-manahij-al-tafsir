@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الفهرس الموثَّق للتفسير</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+<style>
+:root {
+  --base: #00062c;
+  --ink: #f2f4ff;
+  --sub: #a9b2da;
+  --violet: #6251eb;
+  --lilac: #9b82ff;
+  --blue: #39a0fd;
+  --teal: #2feec3;
+  --amber: #ffc857;
+  --red: #ff6b6b;
+  --glass-line: rgba(255, 255, 255, .14);
+  --brand: linear-gradient(90deg, #6251eb, #4e7fe0 38%, #3fb0d6 68%, #2feec3);
+  --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpolygon points='32,10 35.4,23.7 47.6,16.4 40.3,28.6 54,32 40.3,35.4 47.6,47.6 35.4,40.3 32,54 28.6,40.3 16.4,47.6 23.7,35.4 10,32 23.7,28.6 16.4,16.4 28.6,23.7' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+  --font-ui: "Readex Pro", "Segoe UI", Tahoma, sans-serif;
+  --font-text: "Amiri", "Traditional Arabic", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+
+@page {
+  size: 1920px 1080px;
+  margin: 0;
+}
+
+@media print {
+  html, body { background: #000; }
+  .slide {
+    break-after: page;
+    page-break-after: always;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .slide:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  min-height: 1080px;
+  max-height: 1080px;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--base);
+  background-image:
+    radial-gradient(ellipse 900px 520px at 18% 12%, rgba(98, 81, 235, .45), transparent 60%),
+    radial-gradient(ellipse 780px 480px at 88% 78%, rgba(47, 238, 195, .22), transparent 55%),
+    var(--star);
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+/* Absolute centering is reliable in Chrome print-to-PDF (flex often top-packs). */
+.slide-inner {
+  position: absolute;
+  top: 50%;
+  right: 88px;
+  left: 88px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: auto;
+  max-height: 952px;
+}
+
+.slide.center .slide-inner {
+  align-items: center;
+  text-align: center;
+}
+
+h1, h2, h3, p, ul, ol, li { margin: 0; }
+
+.kicker {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--teal);
+  letter-spacing: .02em;
+}
+
+.title {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+/* SVG gradient titles — CSS background-clip:text leaves box/underline artifacts in PDF */
+.grad-svg {
+  display: block;
+  overflow: visible;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.grad-svg.title-svg {
+  width: 1500px;
+  height: 110px;
+  max-width: 100%;
+}
+.grad-svg.close-svg {
+  width: 1500px;
+  height: 56px;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.subtitle {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.body {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.55;
+  max-width: 1600px;
+}
+
+.body-sec {
+  font-size: 28px;
+  color: var(--sub);
+  line-height: 1.5;
+}
+
+.small {
+  font-size: 24px;
+  color: var(--sub);
+  line-height: 1.5;
+}
+
+.quote-box {
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .045);
+  padding: 28px 32px;
+  font-size: 28px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 1580px;
+}
+
+.quote-box.accent {
+  border-color: rgba(155, 130, 255, .45);
+  box-shadow: inset 0 0 0 1px rgba(98, 81, 235, .25);
+}
+
+/* Sparse text slides: larger type */
+.slide-sparse .body {
+  font-size: 40px;
+  line-height: 1.55;
+  max-width: 1680px;
+}
+.slide-sparse .quote-box {
+  font-size: 34px;
+  line-height: 1.55;
+  padding: 32px 36px;
+}
+.slide-sparse .list {
+  font-size: 34px;
+  gap: 22px;
+  line-height: 1.55;
+}
+.slide-sparse .slide-inner {
+  gap: 40px;
+}
+.slide-sparse .flow-node {
+  font-size: 30px;
+  padding: 26px 32px;
+}
+
+.shot {
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .04);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .35);
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.caption {
+  font-size: 24px;
+  color: var(--sub);
+  line-height: 1.45;
+  margin-top: 10px;
+}
+
+.caption.centered,
+.note-centered {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 1500px;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+}
+
+.col { flex: 1; min-width: 0; }
+
+.stack { display: flex; flex-direction: column; gap: 22px; }
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 30px;
+  line-height: 1.45;
+}
+
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-inline-end: 14px;
+  vertical-align: middle;
+}
+
+.status-line {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  color: var(--ink);
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-block: 8px 4px;
+}
+
+.flow-node {
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .05);
+  padding: 22px 28px;
+  min-width: 280px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.flow-node span {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--sub);
+  margin-top: 6px;
+}
+
+.nums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.num {
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .045);
+  padding: 24px 26px;
+  text-align: center;
+}
+
+.num .v {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.num .l {
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--sub);
+  line-height: 1.4;
+}
+
+.compare3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.compare-card {
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .045);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 280px;
+}
+
+.compare-card .today {
+  font-size: 28px;
+  color: var(--sub);
+  line-height: 1.45;
+}
+
+.compare-card .arrow {
+  color: var(--teal);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.compare-card .us {
+  font-size: 30px;
+  color: var(--ink);
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip {
+  border: 1px solid var(--glass-line);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 24px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .05);
+}
+
+.roles {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.role {
+  border: 1px solid var(--glass-line);
+  border-radius: 16px;
+  padding: 16px 22px;
+  font-size: 28px;
+  background: rgba(255, 255, 255, .05);
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.day {
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: rgba(255, 255, 255, .045);
+}
+
+.day .n {
+  color: var(--lilac);
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.day .t {
+  font-size: 28px;
+  line-height: 1.45;
+}
+
+.close-quote {
+  font-family: var(--font-text);
+  font-size: 34px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+.ayah {
+  color: var(--lilac);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.tag-row {
+  font-size: 27px;
+  color: var(--sub);
+  line-height: 1.65;
+}
+
+.tag-row strong { color: var(--ink); font-weight: 600; }
+
+.term {
+  white-space: nowrap;
+}
+
+.shot-wrap { display: flex; flex-direction: column; gap: 8px; }
+.shot-md { max-height: 540px; }
+
+.shot-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.shot-wide {
+  width: fit-content;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+.shot-wide img {
+  display: block;
+  width: auto;
+  max-width: 1500px;
+  max-height: 480px;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.slide-results .slide-inner {
+  gap: 24px;
+}
+</style>
+</head>
+<body>
+
+<!-- 1 TITLE -->
+<section class="slide center">
+  <div class="slide-inner">
+    <p class="kicker">نموذج تجريبي</p>
+    <svg class="grad-svg title-svg" viewBox="0 0 1500 110" role="img" aria-label="الفهرس الموثَّق للتفسير">
+      <defs>
+        <linearGradient id="brandGradTitle" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#6251eb"/>
+          <stop offset="0.38" stop-color="#4e7fe0"/>
+          <stop offset="0.68" stop-color="#3fb0d6"/>
+          <stop offset="1" stop-color="#2feec3"/>
+        </linearGradient>
+      </defs>
+      <text x="750" y="78" text-anchor="middle" xml:lang="ar"
+            font-family="Readex Pro, Segoe UI, Tahoma, sans-serif" font-size="72" font-weight="700"
+            fill="url(#brandGradTitle)">الفهرس الموثَّق للتفسير</text>
+    </svg>
+    <p class="subtitle">نصٌّ لا يتغيّر، ووسومٌ تُراجَع</p>
+    <p class="small" style="max-width:1400px">
+      المسار ٠٤ — أدوات المعرفة والتحقق لتمكين المعرّفين بالإسلام
+      · نموذج تجريبي على تفسير ابن كثير
+    </p>
+  </div>
+</section>
+
+<!-- 2 المشكلة -->
+<section class="slide slide-sparse">
+  <div class="slide-inner">
+    <h2 class="title">المشكلة</h2>
+    <p class="body">«أين استدل ابن كثير بالحديث في تفسير آية الكرسي؟» — سؤال بسيط، وجوابه اليوم: اقرأ الصفحات كلها.</p>
+    <p class="body">وإجابات الذكاء الاصطناعي عن القرآن لا يمكن تتبّع مصدرها: قد يعيد الصياغة أو ينسب للمفسر ما لم يقله.</p>
+    <div class="quote-box accent">
+      معيار المسار: «أظهر المصدر وحالة الدليل بصورة واضحة وقابلة للتتبع، وميّز بين ما تؤيده المصادر وما يتطلب مزيداً من التحقق»
+    </div>
+  </div>
+</section>
+
+<!-- 3 الحل -->
+<section class="slide">
+  <div class="slide-inner">
+    <h2 class="title">الحل</h2>
+    <div class="row">
+      <div class="col stack" style="flex:1.05">
+        <p class="body">نحوّل التفسير من كتلة تُقرأ إلى وحدات تُسأل.</p>
+        <p class="body">كل وحدة = نص المفسر من مصدره دون تغيير حرف + وسمان:</p>
+        <p class="tag-row"><strong>١ مصدر الدليل:</strong> <span class="term">قرآن</span> · <span class="term">سنة</span> · <span class="term">صحابة</span> · <span class="term">تابعون</span> · <span class="term">لغة</span> · <span class="term">رأي</span></p>
+        <p class="tag-row"><strong>٢ نوع المحتوى:</strong> <span class="term">أسباب نزول</span> · <span class="term">فقه</span> · <span class="term">إسرائيليات</span> · <span class="term">فضائل</span> · <span class="term">تخريج</span> · <span class="term">بيان معنى</span></p>
+        <p class="status-line">
+          <span>🟡 مقترح آلياً</span>
+          <span>🟠 بانتظار المتخصص</span>
+          <span>🟢 معتمد</span>
+        </p>
+      </div>
+      <div class="col shot-wrap" style="flex:1">
+        <div class="shot shot-md">
+          <img src="shots/shot_index.png" alt="بطاقة فهرس تظهر فرق القرن والقرآن">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 نقطتا تحكم -->
+<section class="slide slide-sparse">
+  <div class="slide-inner">
+    <h2 class="title">نقطتا تحكم — الموثوقية</h2>
+    <div class="flow" aria-hidden="true">
+      <div class="flow-node">أ — قبول المصدر<span>تنزيل · بصمة · فصل حواشي · مطابقة</span></div>
+      <svg width="160" height="24" viewBox="0 0 160 24" aria-hidden="true">
+        <defs>
+          <linearGradient id="flowGrad" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0" stop-color="#6251eb"/>
+            <stop offset="0.38" stop-color="#4e7fe0"/>
+            <stop offset="0.68" stop-color="#3fb0d6"/>
+            <stop offset="1" stop-color="#2feec3"/>
+          </linearGradient>
+        </defs>
+        <line x1="156" y1="12" x2="30" y2="12" stroke="url(#flowGrad)" stroke-width="4" stroke-linecap="round"/>
+        <polygon points="32,4 8,12 32,20" fill="#2feec3"/>
+      </svg>
+      <div class="flow-node">ب — بعد الوسم<span>مطابقة حرفاً بحرف · مراجعة بشرية</span></div>
+    </div>
+    <ul class="list">
+      <li><strong>(أ)</strong> قبول المصدر: تنزيل آلي + بصمة رقمية + فصل كلام المؤلف عن حواشي المحقق + مطابقة مع نسخة ثانية.</li>
+      <li><strong>(ب)</strong> بعد الوسم: إعادة بناء كل وحدة من المصدر ومطابقتها حرفاً بحرف، ثم مراجعة بشرية على لوحتين — بلا أي مدخل جديد من نموذج.</li>
+    </ul>
+    <div class="quote-box">
+      مثال: «[والخبر من الإسرائيليات]» — عبارة بين معقوفين في النسخة الرقمية، على الأرجح من المحقق. لو وسمناها لنسبناها لابن كثير. فصلناها برمجياً.
+    </div>
+  </div>
+</section>
+
+<!-- 5 دور الذكاء الاصطناعي -->
+<section class="slide">
+  <div class="slide-inner">
+    <h2 class="title">دور الذكاء الاصطناعي</h2>
+    <div class="row">
+      <div class="col stack" style="flex:1">
+        <p class="body">يرتّب ولا يكتب: يُرجع أرقام أجزاء قطّعها الكود، لا نصاً — فيستحيل عليه تغيير حرف.</p>
+        <p class="body">نموذجان من عائلتين مختلفتين يوسمان كلٌّ على حدة: ما اتفقا عليه ترتفع ثقته، وما اختلفا فيه أو كان حساساً يُحال للمتخصص.</p>
+        <p class="body">العرض يعمل حتى لو فُصل النموذج — لأن الآلة ليست مصدر المحتوى.</p>
+      </div>
+      <div class="col shot-wrap" style="flex:1.05">
+        <div class="shot shot-md">
+          <img src="shots/shot_kaab.png" alt="بطاقة خبر كعب الأحبار بانتظار المتخصص">
+        </div>
+        <p class="caption">خبر كعب الأحبار: اختلف الفاحصان ← أُحيل للمتخصص</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 ماذا أثبتت التجربة -->
+<section class="slide slide-results">
+  <div class="slide-inner">
+    <h2 class="title">ماذا أثبتت التجربة</h2>
+    <div class="nums">
+      <div class="num"><div class="v">١٠٠٪</div><div class="l">لم يتغيّر حرف من النسخة المصدر</div></div>
+      <div class="num"><div class="v">٩١٪</div><div class="l">اتفاق الفاحصَين في مصدر الدليل</div></div>
+      <div class="num"><div class="v">٨٧٪ ← ٩٨٪</div><div class="l">تطابق المصدرين بعد فصل حواشي المحقق (آية الكرسي)</div></div>
+    </div>
+    <div class="shot-block">
+      <div class="shot shot-wide">
+        <img src="shots/shot_reconcile.png" alt="شاشة المطابقة مع علامات الفروق">
+      </div>
+      <p class="caption centered">المطابقة تكشف فروق الرقمنة: «القرن» في موضع «القرآن» — والحكم للمتخصص بالرجوع إلى المطبوع</p>
+      <p class="small note-centered">تجربة أولى على ٣ آيات و١٤٣ جزءاً — أرقام تجربة لا نسبة دقة نهائية.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 ما الجديد -->
+<section class="slide">
+  <div class="slide-inner">
+    <h2 class="title">ما الجديد؟</h2>
+    <div class="compare3">
+      <div class="compare-card">
+        <p class="today">اليوم: تفسير الآية كتلة واحدة</p>
+        <p class="arrow">←</p>
+        <p class="us">نحن: تقسيم داخل نص المفسر نفسه</p>
+      </div>
+      <div class="compare-card">
+        <p class="today">اليوم: تصنيف وقفات وتدبرات</p>
+        <p class="arrow">←</p>
+        <p class="us">نحن: وسمان على النص الأصلي، مع حالة ظاهرة</p>
+      </div>
+      <div class="compare-card">
+        <p class="today">اليوم: إجابات آلية بلا مصدر</p>
+        <p class="arrow">←</p>
+        <p class="us">نحن: كل وحدة منسوبة ومطابَقة للأصل</p>
+      </div>
+    </div>
+    <p class="body-sec">طبقة فوق المصادر الرقمية المتاحة — لا بديلاً عنها.</p>
+    <div>
+      <p class="small" style="margin-bottom:12px">خارطة الطريق</p>
+      <div class="chips">
+        <span class="chip">بطاقة منهج التحقيق لكل طبعة</span>
+        <span class="chip">أساس الوسم (المفسر / كتاب متخصص / المتخصص)</span>
+        <span class="chip">وسم المغازي والسير</span>
+        <span class="chip">تفاسير أخرى</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 الخطة والفريق -->
+<section class="slide">
+  <div class="slide-inner">
+    <h2 class="title">الخطة والفريق</h2>
+    <div class="days">
+      <div class="day"><div class="n">اليوم ١</div><div class="t">توسيع العيّنة ودليل الوسوم</div></div>
+      <div class="day"><div class="n">اليوم ٢</div><div class="t">الوسم بنماذج متعددة والمطابقة</div></div>
+      <div class="day"><div class="n">اليوم ٣</div><div class="t">مراجعة المتخصص والعرض والمستودع العام</div></div>
+    </div>
+    <div class="roles">
+      <span class="role">متخصص شرعي</span>
+      <span class="role">مطوّر</span>
+      <span class="role">تحليل بيانات ومنهجية</span>
+    </div>
+    <div class="close-quote">
+      <p class="ayah">﴿وَبِالْحَقِّ أَنزَلْنَاهُ وَبِالْحَقِّ نَزَلَ﴾</p>
+      <p>قال ابن كثير: «وصل إليك يا محمد محفوظًا محروسًا لم يشب بغيره ولا زيد فيه ولا نقص منه»</p>
+    </div>
+    <svg class="grad-svg close-svg" viewBox="0 0 1500 56" role="img" aria-label="ونحن نحفظ لنصّ المفسر الأمانة نفسها: لا يُزاد فيه حرف ولا يُنقص.">
+      <defs>
+        <linearGradient id="brandGradClose" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#6251eb"/>
+          <stop offset="0.38" stop-color="#4e7fe0"/>
+          <stop offset="0.68" stop-color="#3fb0d6"/>
+          <stop offset="1" stop-color="#2feec3"/>
+        </linearGradient>
+      </defs>
+      <text x="750" y="38" text-anchor="middle" xml:lang="ar"
+            font-family="Readex Pro, Segoe UI, Tahoma, sans-serif" font-size="28" font-weight="600"
+            fill="url(#brandGradClose)">ونحن نحفظ لنصّ المفسر الأمانة نفسها: لا يُزاد فيه حرف ولا يُنقص.</text>
+    </svg>
+  </div>
+</section>
+
+</body>
+</html>

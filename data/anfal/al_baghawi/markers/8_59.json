@@ -1,0 +1,141 @@
+{
+  "window_id": "8_59",
+  "ayah": "8:59",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 3,
+    "QIRAAT": 6,
+    "LUGHA": 2,
+    "NUZUL": 1,
+    "SIRA": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 367,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 392,
+          "end": 439,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 440,
+          "end": 445,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 526,
+          "end": 531,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 568,
+          "end": 573,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 585,
+          "end": 597,
+          "span_id": "s003"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 620,
+          "end": 632,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 662,
+          "end": 667,
+          "span_id": "s004"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 783,
+          "end": 788,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 821,
+          "end": 826,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 843,
+          "end": 870,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 891,
+          "end": 896,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 949,
+          "end": 954,
+          "span_id": "s007"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

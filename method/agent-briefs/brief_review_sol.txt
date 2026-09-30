@@ -1,0 +1,41 @@
+ROLE: Independent reviewer. READ-ONLY. Do not create, edit, or delete any file. Deliver your review in your final message only.
+
+WHAT YOU REVIEW: another agent just built web/app.html (via src/build_app.py and src/app_template.html) for a tafsir-integrity demo. The requirements it had to meet are in docs/brief_phase5_design.txt — read it fully first. Also read docs/brief_phase4_reconcile_screen.txt (reconciliation rules) and docs/brief_phase3_index_ui.txt (index rules), because app.html must preserve their behavior.
+
+You cannot open a browser. Review by reading code and by running read-only commands (python, node --check, grep). Do NOT write files; if you need to run a script, use python -c or node -e.
+
+CHECKLIST — for each item answer PASS / FAIL / PARTIAL with file:line evidence:
+
+A. Integrity & honesty (most important)
+ 1. No unit has status "approved" in inlined data; "approved" can only come from reviewer action in the page.
+ 2. The words "تمت المطابقة" (or any sentence claiming data is reconciled) appear nowhere.
+ 3. Reconciliation colors are not shown before the button «مقارنة بالنص الأصلي» is pressed.
+ 4. Green (matched) is not auto-accepted; page says it needs reviewer confirmation.
+ 5. Cross-source differences text says differences may be typos OR edition/spelling variants and the specialist decides — it must NOT claim all 14 are errors, and must not imply quran.com is the correct one.
+ 6. Source text characters are displayed intact (no normalization applied to displayed source/unit text).
+ 7. Stored reviewer record contains new_model_input:false and model_run_at_this_step:"none".
+ 8. No vendor/model names (Grok, Codex, Claude, GPT, Cursor) visible in UI text; annotators shown as الفاحص الأول/الثاني.
+ 9. No personal names of team members anywhere.
+
+B. Page contract (sandboxed viewer)
+ 10. File starts with <meta charset="utf-8">; no <!DOCTYPE, <html, <head (substring), <body.
+ 11. Only external URL = fonts.googleapis.com (grep for http). No <a download>, no alert/confirm/prompt, no window.print.
+ 12. localStorage access only inside try/catch.
+ 13. Theme tokens: palette on :root, overrides only in the guarded media query and [data-theme] blocks; body background from a token; no hardcoded colors in component rules (list any).
+ 14. Hash navigation uses only bare tokens.
+ 15. Both inlined JSON blocks parse (run python to verify); total size.
+
+C. Functionality (by code reading)
+ 16. Index tab: filters (ayah, source tag, content tag, status, cross-source), diacritic-insensitive search, example chips, "اعرض الفروق", "لماذا هذه الوسوم؟", reviewer mode, editor-apparatus section — all present and wired.
+ 17. Reconciliation tab: two panes always visible together; set selector; unit navigation; reviewer actions accept/shrink/expand/reject + note; record view + copy with clipboard fallback.
+ 18. Experiment tab: 4 steps, numbers, findings, honest limits.
+ 19. Quick tour: 3 stops, Esc closes, non-blocking.
+ 20. prefers-reduced-motion disables sweep and hover motion.
+ 21. Mobile: panes stack < ~768px; tab bar scrolls inside itself; no fixed widths wider than 380px (grep for min-width / width px values > 380).
+ 22. JS syntax: extract inline scripts and run node --check (via node -e reading the file) — report errors.
+
+D. Design quality (judgment)
+ 23. Uses the specified identity (navy base, violet→teal gradient only on title, teal accent, Readex Pro + Amiri).
+ 24. Anything that looks broken, inconsistent, or unfinished (dead code, TODOs, placeholder text, lorem ipsum, English leftovers in UI).
+
+DELIVERABLE: a table of the 24 items (PASS/FAIL/PARTIAL + evidence), then "Top 5 fixes" ordered by severity, each with the exact file and what to change. Max 700 words. Be strict; do not praise.

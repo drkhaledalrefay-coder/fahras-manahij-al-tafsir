@@ -1,0 +1,76 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/anfal/al_baghawi/raw/8_35.txt",
+  "ayah": "8:35",
+  "surah": 8,
+  "ayah_number": 35,
+  "source_char_length": 1836,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 400,
+      "kind": "author"
+    },
+    {
+      "start": 400,
+      "end": 418,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 418,
+      "end": 954,
+      "kind": "author"
+    },
+    {
+      "start": 954,
+      "end": 972,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 972,
+      "end": 1268,
+      "kind": "author"
+    },
+    {
+      "start": 1268,
+      "end": 1310,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1310,
+      "end": 1836,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 1758,
+    "layout": 0,
+    "apparatus": 78
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 78
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

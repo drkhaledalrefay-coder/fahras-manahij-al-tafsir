@@ -1,0 +1,149 @@
+{
+  "window_id": "8_64",
+  "ayah": "8:64",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 3,
+    "HADITH": 3,
+    "TABIIN": 2,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 84,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 110,
+          "end": 128,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 316,
+          "end": 321,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 345,
+          "end": 350,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الشعبي",
+          "name": "الشعبي",
+          "role": "SPEAKER",
+          "start": 689,
+          "end": 695,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 705,
+          "end": 789,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عطاء",
+          "name": "عطاء",
+          "role": "SPEAKER",
+          "start": 942,
+          "end": 946,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1087,
+          "end": 1151,
+          "span_id": "s008"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 394,
+      "end": 685,
+      "text": "¬شوذب كذا في التاريخ الكبير فقد أخرجه البخاري من طريقه به (4/ 261)، وهو معروف بالرواية عن الشعبي وبرواية سفيان عنه كما في الجرح والتعديل (4/ 378)، وفي الأصل: و (عم) وتفسير ابن أبي حاتم ورد باسم: ابن شوذب والصواب ما أثبت إذ أخرجه الطبري أيضًا من طريق شوذب أبي معاذ به في ثلاث روايات متتالية.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 822,
+      "end": 927,
+      "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه مع الفرق السابق في شوذب، وقد سكت عنه البخاري وابن أبي حاتم، ومعناه صحيح.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "صحيح",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 981,
+      "end": 1074,
+      "text": "¬ذكرهما ابن أبي حاتم بحذف السند، وقول عبد الرحمن أخرجه الطبري بسند صحيح من طريق ابن وهب عنه.¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

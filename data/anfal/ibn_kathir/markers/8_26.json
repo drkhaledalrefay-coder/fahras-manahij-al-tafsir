@@ -1,0 +1,113 @@
+{
+  "window_id": "8_26",
+  "ayah": "8:26",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 3,
+    "RAY": 1,
+    "SIRA": 1,
+    "HADITH": 1,
+    "TABIIN": 1,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 203,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 540,
+          "end": 543,
+          "span_id": "s003"
+        },
+        {
+          "family": "SIRA",
+          "marker": "يوم بدر",
+          "start": 658,
+          "end": 665,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 729,
+          "end": 747,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "name": "قتادة",
+          "role": "SPEAKER",
+          "start": 756,
+          "end": 761,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 796,
+          "end": 806,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 808,
+          "end": 873,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1321,
+      "end": 1381,
+      "text": "¬أخرجه الطبري بسند صحيح من طريق سعيد بن أبي عروبة عن قتادة.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}
