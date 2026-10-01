@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>مقترح — وضع المراجعة</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Readex+Pro:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --base:#F3F4F9; --surface:#fff; --line:#E3E6F2; --ink:#161B3D; --sub:#4A5175; --muted:#7E86A8;
+  --accent:#5B3FD9; --accent-bg:#EEEAFE;
+  --ok:#0C7A5C; --ok-bg:#E3F5EE; --warn:#9A6A12; --warn-bg:#FBF1DC; --bad:#A3264F; --bad-bg:#FBE6EE;
+  --m-sahaba:#7A4E0D; --m-tabiin:#1A4F86; --m-lugha:#6A3418; --m-ray:#1F4D2A;
+  --font-ui:"Readex Pro",sans-serif; --font-text:"Noto Naskh Arabic",serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--base);color:var(--ink);font-family:var(--font-ui);width:1440px;height:900px;overflow:hidden}
+header{background:#161B3D;color:#fff;height:60px;display:flex;align-items:center;gap:18px;padding:0 28px}
+.brand{font-weight:600;font-size:17px}
+.mode{background:#F2B84B;color:#161B3D;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px}
+.sel{border:1px solid #3A4170;border-radius:9px;padding:6px 12px;font-size:13px;color:#DDE1F5}
+.sp{flex:1}
+.prog{display:flex;align-items:center;gap:12px;font-size:12.5px;color:#C8CFE8}
+.pbar{width:220px;height:8px;border-radius:999px;background:#2C3464;display:flex;overflow:hidden}
+.btn{font-size:13px;padding:7px 14px;border-radius:9px;border:1px solid #3A4170;color:#fff}
+.btn.p{background:var(--accent);border-color:var(--accent)}
+.wrap{display:grid;grid-template-columns:300px 1fr 360px;height:calc(900px - 60px)}
+/* queue */
+.queue{background:var(--surface);border-left:1px solid var(--line);display:flex;flex-direction:column}
+.qh{padding:16px 16px 10px}
+.qh h4{font-size:14px;font-weight:600;margin-bottom:10px}
+.tabs{display:flex;gap:4px;background:var(--base);padding:3px;border-radius:9px}
+.tabs div{flex:1;text-align:center;font-size:12px;padding:6px 0;border-radius:7px;color:var(--sub)}
+.tabs .on{background:#fff;color:var(--ink);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.items{overflow:hidden;padding:4px 8px}
+.it{display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:start;padding:10px;border-radius:10px;font-size:12.5px;color:var(--sub);border:1px solid transparent}
+.it i{width:10px;height:10px;border-radius:50%;margin-top:5px}
+.it .tx{font-family:var(--font-text);font-size:14px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:190px}
+.it .mt{font-size:11.5px;color:var(--muted)}
+.it.cur{background:var(--accent-bg);border-color:#CFC4FB}
+.it.done{opacity:.55}
+.badge{font-size:11px;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.b-sp{background:var(--warn-bg);color:var(--warn)}
+.b-ok{background:var(--ok-bg);color:var(--ok)}
+.b-x{background:var(--bad-bg);color:var(--bad)}
+/* text */
+.text{overflow:hidden;padding:24px 36px}
+.th{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.th h4{font-size:14px;font-weight:600}
+.th .tg{font-size:12px;color:var(--muted);display:flex;gap:14px}
+.th .tg b{color:var(--sub);font-weight:500}
+.paper{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px 40px;font-family:var(--font-text);font-size:19px;line-height:2.15;color:#9097B5}
+.paper p{margin-bottom:12px}
+.q{color:#5F8F86}
+.cur-move{color:var(--ink);background:#E3EDF9;outline:2px solid var(--m-tabiin);outline-offset:3px;border-radius:4px;padding:2px 2px;position:relative}
+.cur-move .q{color:#0C5C52}
+.sid{font-family:var(--font-ui);font-size:10px;color:var(--m-tabiin);background:#fff;border:1px solid #BCD0EA;border-radius:4px;padding:0 4px;margin:0 2px;vertical-align:middle}
+.fn{font-family:var(--font-ui);font-size:12.5px;color:#9A8F6A;background:#F8F5EC;border-radius:4px;padding:1px 6px}
+.other{border-bottom:1px dashed #C7CBE0}
+.cmp{margin-top:14px;background:var(--ok-bg);color:var(--ok);font-size:12.5px;border-radius:10px;padding:10px 14px;display:flex;gap:16px}
+/* decision */
+.dec{background:var(--surface);border-right:1px solid var(--line);padding:20px 22px;display:flex;flex-direction:column;gap:16px}
+.dec h4{font-size:12px;color:var(--muted);font-weight:500;margin-bottom:6px}
+.prop{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:600;color:var(--m-tabiin)}
+.prop i{width:12px;height:12px;border-radius:50%;background:var(--m-tabiin)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
+.kv span{color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:8px}
+.score b{font-size:30px;font-weight:600;color:var(--ok)}
+.score small{color:var(--muted);font-size:12px}
+.parts{display:grid;gap:7px;font-size:12px;color:var(--sub)}
+.parts div{display:grid;grid-template-columns:90px 1fr 34px;gap:8px;align-items:center}
+.parts .tr{height:6px;background:var(--base);border-radius:999px;overflow:hidden}
+.parts .tr i{display:block;height:100%;background:var(--accent)}
+.chk{font-size:12.5px;display:grid;gap:5px}
+.chk .y{color:var(--ok)}.chk .n{color:var(--warn)}
+.acts{margin-top:auto;display:grid;gap:8px}
+.act{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-radius:11px;font-size:15px;font-weight:500}
+.act kbd{font-family:var(--font-ui);font-size:11px;border:1px solid currentColor;border-radius:5px;padding:1px 7px;opacity:.7}
+.a1{background:var(--ok);color:#fff}
+.a2{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.a3{background:#fff;border:1px solid #F0C6D5;color:var(--bad)}
+.notein{border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:12.5px;color:var(--muted)}
+.nav2{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">فهرس مناهج التفسير</div>
+  <div class="mode">وضع المراجعة</div>
+  <div class="sel">الطبري ▾</div>
+  <div class="sel">البقرة ٢٥٥ ▾</div>
+  <div class="sp"></div>
+  <div class="prog">
+    <span>٥ من ٢٣ موضعاً</span>
+    <div class="pbar"><i style="flex:3;background:#2FBF8F"></i><i style="flex:1;background:#E07A9C"></i><i style="flex:1;background:#F2B84B"></i><i style="flex:18"></i></div>
+    <span>معتمد ٣ · مرفوض ١ · معدّل ١</span>
+  </div>
+  <div class="btn">تصدير المعتمد</div>
+  <div class="btn p">خروج إلى القراءة</div>
+</header>
+
+<div class="wrap">
+  <section class="queue">
+    <div class="qh">
+      <h4>طابور المواضع</h4>
+      <div class="tabs"><div class="on">بانتظارك ١٣</div><div>مرشّح للقبول ١٠</div><div>تمّ ٥</div></div>
+    </div>
+    <div class="items">
+      <div class="it done"><i style="background:var(--m-lugha)"></i><div><div class="tx">وأما تأويلُ قولِه: {لَا إِلَهَ إِلَّا هُوَ}</div><div class="mt">اللغة · ٨٥</div></div><span class="badge b-ok">معتمد</span></div>
+      <div class="it done"><i style="background:var(--m-ray)"></i><div><div class="tx">وهذه الآيةُ إبانةٌ من اللهِ جلّ ثناؤه</div><div class="mt">الرأي · ٦٠</div></div><span class="badge b-x">مرفوض</span></div>
+      <div class="it cur"><i style="background:var(--m-tabiin)"></i><div><div class="tx">حُدِّثْتُ عن عمارِ بن الحسنِ، قال</div><div class="mt">التابعون · ١٠٠</div></div><span class="badge b-ok">مرشّح</span></div>
+      <div class="it"><i style="background:var(--m-tabiin)"></i><div><div class="tx">حدَّثني المثنَّى، قال: ثنا إسحاقُ</div><div class="mt">التابعون · ١٠٠</div></div><span class="badge b-ok">مرشّح</span></div>
+      <div class="it"><i style="background:var(--m-ray)"></i><div><div class="tx">وقد اختلَف أهلُ البحثِ في تأويلِ ذلك</div><div class="mt">الرأي · غير كافٍ</div></div><span class="badge b-sp">مختص</span></div>
+      <div class="it"><i style="background:var(--m-lugha)"></i><div><div class="tx">وأما قولُه: {الْقَيُّومُ}. فإنه الفَيْعُولُ</div><div class="mt">اللغة · ٧٥</div></div><span class="badge b-ok">مرشّح</span></div>
+      <div class="it"><i style="background:var(--m-lugha)"></i><div><div class="tx">ومعنى قولِه: {الْقَيُّومُ}: القائمُ برزْقِ</div><div class="mt">اللغة · شعر · ٧٥</div></div><span class="badge b-ok">مرشّح</span></div>
+      <div class="it"><i style="background:var(--m-sahaba)"></i><div><div class="tx">حدَّثني عليُّ بن داودَ، عن ابن عباسٍ</div><div class="mt">الصحابة · ٦٥</div></div><span class="badge b-sp">مختص</span></div>
+      <div class="it"><i style="background:var(--m-tabiin)"></i><div><div class="tx">حدثنا بشرٌ، عن قتادةَ قولَه</div><div class="mt">التابعون · ٧٠</div></div><span class="badge b-sp">مختص</span></div>
+      <div class="it"><i style="background:var(--m-tabiin)"></i><div><div class="tx">حدثني يونسُ، عن ابن زيدٍ</div><div class="mt">التابعون · ٧٠</div></div><span class="badge b-sp">مختص</span></div>
+    </div>
+  </section>
+
+  <section class="text">
+    <div class="th">
+      <h4>النص في سياقه</h4>
+      <div class="tg"><b>حواشي المحقق: ظاهرة</b><span>المواضع الأخرى: خط متقطع</span><span>المعرّفات: ظاهرة</span></div>
+    </div>
+    <div class="paper">
+      <p class="other">وأما قولُه: <span class="q">{الْحَيُّ}</span>. فإنه يَعنِي: الذي له الحياةُ الدائمةُ، والبقاءُ الذي لا أوّلَ له يُحَدُّ، ولا آخرَ له يُؤْمَدُ، إذ كلُّ ما سواه فإنه وإن كان حيًّا فلحياته أوّلٌ محدودٌ <span class="fn">في م: «ماجود»</span>.</p>
+      <p><span class="cur-move"><span class="sid">s041</span>حُدِّثْتُ عن عمارِ بن الحسنِ، قال: ثنا ابن أبي جعفرٍ، عن أبيه، عن الرَّبيعِ قولَه: <span class="sid">s042</span><span class="q">{الْحَيُّ}</span>: حيٌّ لا يموتُ.</span> <span class="fn">أخرجه ابن أبي حاتم في تفسيره ٢/٤٨٦ (٢٥٧١)</span></p>
+      <p class="other">حدَّثني المثنَّى، قال: ثنا إسحاقُ، قال: ثنا ابن أبي جعفرٍ، عن أبيه، عن الربيعِ مثلَه.</p>
+      <p>وقد اختلَف أهلُ البحثِ في تأويلِ ذلك؛ فقال بعضُهم: إنما سمَّى اللهُ جل وعزّ نفسَه حيًّا؛ لصرفِه الأمورَ مصارفَها، وتقديرِه الأشياءَ مقاديرَها، فهو حيٌّ بالتدبيرِ لا بحياةٍ.</p>
+    </div>
+    <div class="cmp">✓ النص المعاد بناؤه من s041–s042 يطابق المصدر المثبّت حرفاً بحرف <span>· sha256 ‎2562…44c6</span><span>· نسخة quran.com: مطابقة</span></div>
+  </section>
+
+  <section class="dec">
+    <div>
+      <h4>اقتراح المصنّف (MiMo)</h4>
+      <div class="prop"><i></i>التابعون</div>
+    </div>
+    <div class="kv">
+      <span>الدور</span><b>أساسي</b>
+      <span>اليقين</span><b>قوي</b>
+      <span>المؤشر</span><b>إسناد ينتهي إلى الربيع بن أنس</b>
+      <span>الشاهد</span><b>s041 – s042</b>
+    </div>
+    <div>
+      <h4>درجة الفاحص الحتمي</h4>
+      <div class="score"><b>١٠٠</b><small>/ ١٠٠ · مرشّح للقبول</small></div>
+    </div>
+    <div class="parts">
+      <div>علامة لفظية<span class="tr"><i style="width:100%"></i></span>٢٥</div>
+      <div>شاهد الوظيفة<span class="tr"><i style="width:100%"></i></span>٤٥</div>
+      <div>النسبة<span class="tr"><i style="width:100%"></i></span>١٥</div>
+      <div>الحدود<span class="tr"><i style="width:100%"></i></span>١٥</div>
+    </div>
+    <div class="chk">
+      <div class="y">✓ كل المعرّفات موجودة في النافذة</div>
+      <div class="y">✓ الشاهد داخل حدود الحركة</div>
+      <div class="n">◌ لا أعلام للمراجعة</div>
+    </div>
+    <div class="notein">ملاحظة للمتخصص (اختيارية)…</div>
+    <div class="acts">
+      <div class="act a1">اعتماد <kbd>A</kbd></div>
+      <div class="act a2">تعديل الوسم أو الحدود <kbd>E</kbd></div>
+      <div class="act a3">رفض <kbd>R</kbd></div>
+      <div class="nav2"><span>→ السابق <kbd>K</kbd></span><span>التالي ← <kbd>J</kbd></span></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

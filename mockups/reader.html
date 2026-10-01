@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>مقترح — وضع القراءة</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Readex+Pro:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --base:#F6F7FC; --surface:#fff; --line:#E3E6F2; --ink:#161B3D; --sub:#4A5175; --muted:#7E86A8;
+  --accent:#5B3FD9; --accent-bg:#EEEAFE;
+  --m-sahaba:#7A4E0D; --m-tabiin:#1A4F86; --m-lugha:#6A3418; --m-ray:#1F4D2A; --m-quran:#3C2BB8;
+  --font-ui:"Readex Pro",sans-serif; --font-text:"Noto Naskh Arabic",serif; --font-quran:"Amiri",serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--base);color:var(--ink);font-family:var(--font-ui);width:1440px}
+header{background:var(--surface);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;gap:20px;padding:0 48px}
+.brand{font-weight:600;font-size:20px;color:var(--accent)}
+.pick{display:flex;gap:8px;margin-inline-start:24px}
+.sel{border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:14px;display:flex;gap:10px;align-items:center;background:#fff}
+.sel b{font-weight:500}.sel span{color:var(--muted);font-size:12px}
+.nav{display:flex;gap:4px}
+.ib{width:36px;height:36px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:var(--sub);background:#fff}
+.sp{flex:1}
+.ghost{font-size:13px;color:var(--sub);border:1px solid var(--line);padding:8px 14px;border-radius:999px;background:#fff}
+main{display:grid;grid-template-columns:1fr 300px;gap:40px;max-width:1180px;margin:32px auto;padding:0 24px}
+.ayah{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 28px;text-align:center}
+.ayah .ref{font-size:12px;color:var(--muted);margin-bottom:8px}
+.ayah p{font-family:var(--font-quran);font-size:24px;line-height:2.1}
+.chips{position:sticky;top:0;display:flex;gap:8px;align-items:center;margin:24px 0 8px;flex-wrap:wrap}
+.chips .lbl{font-size:13px;color:var(--muted);margin-inline-end:4px}
+.chip{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font-size:14px}
+.chip i{width:10px;height:10px;border-radius:50%}
+.chip small{color:var(--muted);font-size:12px}
+.chip.on{border-color:var(--m-tabiin);background:#E8F0FA;color:var(--m-tabiin);font-weight:500}
+.chip.more{color:var(--muted);border-style:dashed}
+.note{font-size:12.5px;color:var(--muted);margin:4px 2px 18px;display:flex;gap:6px;align-items:center}
+.note b{color:#9A6A12;font-weight:500}
+article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:36px 56px;font-family:var(--font-text);font-size:21px;line-height:2.15}
+article h3{font-family:var(--font-ui);font-size:15px;font-weight:500;color:var(--accent);margin:28px 0 6px;display:flex;gap:8px;align-items:center}
+article h3:first-child{margin-top:0}
+article h3::before{content:"";width:18px;height:2px;background:var(--accent)}
+article p{margin-bottom:14px;color:#232849}
+.q{color:#0C5C52}
+.fn{font-family:var(--font-ui);font-size:11px;color:var(--muted);vertical-align:super;margin:0 1px}
+.hl{background:#E3EDF9;border-radius:4px;padding:2px 3px;box-shadow:inset 0 -2px 0 var(--m-tabiin);position:relative}
+.dim{color:#232849}
+.pop{position:absolute;top:calc(100% + 10px);right:0;width:330px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(18,24,63,.16);padding:14px 16px;font-family:var(--font-ui);font-size:13px;line-height:1.7;z-index:5;color:var(--ink)}
+.pop .t{display:flex;gap:8px;align-items:center;font-weight:600;color:var(--m-tabiin);font-size:14px}
+.pop .t i{width:10px;height:10px;border-radius:50%;background:var(--m-tabiin)}
+.pop .r{color:var(--sub)}
+.pop .st{display:block;margin-top:8px;padding-top:8px;border-top:1px solid var(--line);color:#9A6A12;font-size:12px}
+.pop a{color:var(--accent);font-size:12px}
+aside{display:flex;flex-direction:column;gap:16px;position:sticky;top:24px;align-self:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.card h4{font-size:14px;font-weight:600;margin-bottom:12px}
+.bar{display:flex;height:10px;border-radius:999px;overflow:hidden;margin-bottom:12px}
+.leg{display:grid;gap:6px;font-size:13px;color:var(--sub)}
+.leg div{display:flex;align-items:center;gap:8px}.leg i{width:9px;height:9px;border-radius:50%}
+.leg span{margin-inline-start:auto;color:var(--muted)}
+.toc{list-style:none;padding:0;display:grid;gap:2px;font-size:13.5px}
+.toc li{padding:7px 10px;border-radius:8px;color:var(--sub)}
+.toc li.cur{background:var(--accent-bg);color:var(--accent);font-weight:500}
+.tg{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--sub);padding:6px 0}
+.sw{width:36px;height:20px;border-radius:999px;background:#D5D9EA;position:relative}
+.sw::after{content:"";position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:#fff}
+.sw.on{background:var(--accent)}.sw.on::after{right:auto;left:2px}
+.src{font-size:12.5px;color:var(--muted);line-height:1.9}
+.src a{color:var(--accent);text-decoration:none}
+.tag{position:fixed;top:12px;left:12px;background:#161B3D;color:#fff;font-size:12px;padding:4px 10px;border-radius:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">فهرس مناهج التفسير</div>
+  <div class="pick">
+    <div class="sel"><span>التفسير</span><b>الطبري</b> ▾</div>
+    <div class="sel"><span>الآية</span><b>البقرة ٢٥٥ — آية الكرسي</b> ▾</div>
+    <div class="nav"><div class="ib">›</div><div class="ib">‹</div></div>
+  </div>
+  <div class="sp"></div>
+  <div class="ghost">🔍 بحث</div>
+  <div class="ghost">وضع المراجعة ←</div>
+  <div class="ib">⋯</div>
+</header>
+
+<main>
+  <section>
+    <div class="ayah">
+      <div class="ref">سورة البقرة · الآية ٢٥٥</div>
+      <p>ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ …</p>
+    </div>
+
+    <div class="chips">
+      <span class="lbl">لوّن حسب:</span>
+      <div class="chip">بلا تلوين</div>
+      <div class="chip on"><i style="background:var(--m-tabiin)"></i>التابعون <small>٨</small></div>
+      <div class="chip"><i style="background:var(--m-lugha)"></i>اللغة <small>٨</small></div>
+      <div class="chip"><i style="background:var(--m-sahaba)"></i>الصحابة <small>٢</small></div>
+      <div class="chip"><i style="background:var(--m-ray)"></i>الرأي <small>١</small></div>
+      <div class="chip more">+ ٦ مناهج لا ترد هنا</div>
+    </div>
+    <div class="note">ⓘ <b>الوسوم مقترحة آلياً</b> ولم يعتمدها متخصص بعد · النص نفسه مطابق للمصدر حرفاً بحرف</div>
+
+    <article>
+      <h3>القولُ في تأويل: {ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ}</h3>
+      <p>قد دلَّلْنا فيما مضى على تأويلِ قولِ اللهِ جلّ ثناؤه: <span class="q">{اللَّهُ}</span><span class="fn">١</span>.</p>
+      <p>وأما تأويلُ قولِه: <span class="q">{لَا إِلَهَ إِلَّا هُوَ}</span>. فإن معناه النَّهيُ عن أن يُعبدَ شيءٌ غيرُ اللهِ الحيِّ القيُّومِ، الذي صفتُه ما وصَف به نفسَه تعالى ذكرُه في هذه الآيةِ.</p>
+      <h3>{ٱلْحَىُّ}</h3>
+      <p>وأما قولُه: <span class="q">{الْحَيُّ}</span>. فإنه يَعنِي: الذي له الحياةُ الدائمةُ، والبقاءُ الذي لا أوّلَ له يُحَدُّ، ولا آخرَ له يُؤْمَدُ<span class="fn">٢</span>.</p>
+      <p><span class="hl">حُدِّثْتُ عن عمارِ بن الحسنِ، قال: ثنا ابن أبي جعفرٍ، عن أبيه، عن الرَّبيعِ قولَه: <span class="q">{الْحَيُّ}</span>: حيٌّ لا يموتُ.
+        <span class="pop">
+          <span class="t"><i></i>التابعون · أساسي</span>
+          <span class="r">قول الربيع بن أنس، بإسناد الطبري.</span><br>
+          <a href="#">انسخ الموضع مع المرجع</a> · <a href="#">اقرأ في المصدر</a>
+          <span class="st">مقترح آلي — لم يُعتمد بعد</span>
+        </span></span><span class="fn">٣</span></p>
+      <p><span class="hl">حدَّثني المثنَّى، قال: ثنا إسحاقُ، قال: ثنا ابن أبي جعفرٍ، عن أبيه، عن الربيعِ مثلَه.</span></p>
+      <p>وقد اختلَف أهلُ البحثِ في تأويلِ ذلك؛ فقال بعضُهم: إنما سمَّى اللهُ جل وعزّ نفسَه حيًّا؛ لصرفِه الأمورَ مصارفَها، وتقديرِه الأشياءَ مقاديرَها.</p>
+      <h3>{ٱلْقَيُّومُ}</h3>
+      <p>وأما قولُه: <span class="q">{الْقَيُّومُ}</span>. فإنه الفَيْعُولُ من القيامِ، وأصلُه القيْوُومُ، سبَق عينَ الفعلِ — وهي واوٌ — ياءٌ ساكنةٌ، فاندغَمتا فصارتا ياءً مشدَّدةً…</p>
+    </article>
+  </section>
+
+  <aside>
+    <div class="card">
+      <h4>مناهج الطبري في هذه الآية</h4>
+      <div class="bar">
+        <i style="flex:8;background:var(--m-tabiin)"></i><i style="flex:8;background:var(--m-lugha)"></i><i style="flex:2;background:var(--m-sahaba)"></i><i style="flex:1;background:var(--m-ray)"></i>
+      </div>
+      <div class="leg">
+        <div><i style="background:var(--m-tabiin)"></i>التابعون<span>٨</span></div>
+        <div><i style="background:var(--m-lugha)"></i>اللغة والغريب<span>٨</span></div>
+        <div><i style="background:var(--m-sahaba)"></i>الصحابة<span>٢</span></div>
+        <div><i style="background:var(--m-ray)"></i>الرأي والاجتهاد<span>١</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h4>انتقل إلى</h4>
+      <ul class="toc">
+        <li>ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ</li>
+        <li class="cur">ٱلْحَىُّ</li>
+        <li>ٱلْقَيُّومُ</li>
+        <li>لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ</li>
+        <li>مَن ذَا ٱلَّذِى يَشْفَعُ</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tg">حواشي المحقق <div class="sw"></div></div>
+      <div class="tg">عرض نسخة المقارنة بجانبه <div class="sw"></div></div>
+      <div class="tg">حجم الخط <span style="color:var(--muted)">أ− أ+</span></div>
+    </div>
+    <div class="src">المصدر: مركز تفسير — CC BY 4.0 · <a href="#">الدرر السنية</a> · <a href="#">quran.com</a></div>
+  </aside>
+</main>
+</body>
+</html>
