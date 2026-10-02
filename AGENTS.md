@@ -53,4 +53,6 @@ Classify one window without a key (manual fallback):
 - `git status -- data` must show nothing under `raw/`, `layers/`, `spans/` or `windows/` unless the team explicitly asked for a source change. Never write to those files, even temporarily to test something.
 - `web/fahras.html` is committed only by the designated person; otherwise leave the rebuilt file uncommitted (`git checkout web/fahras.html`).
 - Commit only your own paths. No scratch files, screenshots, personal notes, `deck/qa/shots/`, `deck/qa/gallery/`.
+- **No copy-paste helpers.** Before writing a helper, search `src/` for one that already does it and import it. Known duplicates to consolidate, not extend: `_read_exact` (10 copies), `_read_json` (9), `_sha256_*` (5), `_assert_tiling` (3 copies that have **diverged**). See `docs/AUDIT_2026-10-02.md` §3.
+- Fix root causes, not symptoms: never disable a failing test, raise a timeout, or swallow an exception to get green. State the cause with evidence first.
 - Do not rewrite large files wholesale or add a database/API/cache without measurements that justify it.

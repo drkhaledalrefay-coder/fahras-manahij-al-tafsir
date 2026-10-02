@@ -1,3 +1,5 @@
+> **ملاحظة تقادم (٢ أكتوبر ٢٠٢٦):** هذا تقرير مؤرخ بـ ٣٠ سبتمبر. ما يذكره عن غياب `--base` في `run_window.py` وغياب `run_surah.py` **لم يعد صحيحاً**؛ كلاهما موجود. الأوامر الحالية في [`docs/RUN.md`](../../docs/RUN.md). بقية المحتوى محفوظ كما هو.
+
 # Anfal source-text prep — 2026-09-30
 
 **DB sha256:** `10e61f615ab5e6a3440e8ecc8ba1dc2273d12cd9048752760fe53a44d191cc27` — **MATCH** (`docs/RUN.md` / `data/raw/manifest.json`). Opened read-only: `file:<path-to>/quran.db?mode=ro`. `quran.db` not in repo; `data/anfal/` not gitignored (`git check-ignore` exit 1).
