@@ -26,7 +26,7 @@ python -m playwright install chromium
 python deck/qa/qa_runner.py
 ```
 
-`qa_runner.py` وبقية سكربتات `deck/qa/` تتصل بـ http://localhost:8791/fahras.html. اختبار التصدير يتوقع ٢٢ نجاحاً.
+`qa_runner.py` وبقية سكربتات `deck/qa/` تتصل بـ http://localhost:8791/fahras.html. اختبار التصدير يتوقع ٢٢ نجاحاً. `qa_runner.py` يستخدم Chrome إن وُجد وإلا Chromium (أو `QA_CHROMIUM_EXECUTABLE`)، ويخرج برمز ١ عند أي فشل. قبل التسليم: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md).
 
 ## إضافة آيات
 
