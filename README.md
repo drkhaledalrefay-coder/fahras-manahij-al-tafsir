@@ -7,6 +7,13 @@
 
 ---
 
+## ابدأ من هنا (للزملاء)
+
+1. شغّل الصفحة والاختبارات: قسم «التشغيل» أدناه.
+2. إن كنت تعمل عبر Codex أو Claude: الأداة تقرأ [`AGENTS.md`](AGENTS.md) تلقائياً (Claude عبر [`CLAUDE.md`](CLAUDE.md)). ابدأ كل جلسة بـ «اقرأ AGENTS.md والتزم به».
+3. قواعد العمل والفروع: [`CONTRIBUTING.md`](CONTRIBUTING.md). قبل التسليم: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md).
+4. حالة المشروع والقرارات المعلّقة (النطاق ومصدر النص): [`docs/AUDIT_2026-10-02.md`](docs/AUDIT_2026-10-02.md).
+
 ## الفكرة
 
 كتب التفسير نصوص طويلة متصلة يختلط فيها الحديث، وقول الصحابي، والشرح اللغوي، والحكم الفقهي، والإسرائيليات.
@@ -104,7 +111,7 @@ python -m playwright install chromium
 python deck/qa/qa_runner.py
 ```
 
-`qa_runner.py` يفتح http://localhost:8791/fahras.html (Playwright). بقية سكربتات `deck/qa/` تتصل بالمنفذ نفسه.
+`qa_runner.py` يفتح http://localhost:8791/fahras.html (Playwright). يستخدم Google Chrome إن وُجد وإلا Chromium المثبَّت أعلاه (أو المسار في `QA_CHROMIUM_EXECUTABLE`)، ويخرج برمز ١ عند أي فحص فاشل. بقية سكربتات `deck/qa/` تتصل بالمنفذ نفسه.
 
 ملف قاعدة البيانات الأصلي `quran.db` (~٢٣٤ م.ب) **غير مرفوع**؛ يُنزَّل من مجموعة بيانات مركز تفسير المفتوحة ويُمرَّر إلى سكربت الاستخراج بوسيلة `--db` (لا مسارات شخصية داخل الكود)، وبصمته في `data/raw/manifest.json`.
 نص المصدر الثاني (quran.com) **غير مرفوع** أيضاً إلى حين التحقق من شروط استخدامه؛ `fetch.py` ينزّله محلياً (بلا وسائط/أعلام — no flags؛ يتطلب اتصالاً بالشبكة؛ ينزّل نحو ٢٣٤ م.ب لـ `quran.db` + نصوص quran.com).
@@ -121,7 +128,7 @@ python deck/qa/qa_runner.py
 - نص التفسير والبيانات المشتقة منه: **CC BY 4.0** مع **النسب** إلى مركز تفسير للدراسات القرآنية — انظر [`ATTRIBUTION.md`](ATTRIBUTION.md).
 - **غير تجاري:** هذا مستودع بحثي/تعليمي **غير تجاري**، يُنشر مع النسبة الكاملة إلى المصدر؛ وإعادة التوزيع التجاري تطلب إذناً مسبقاً كما يشترط ملف `DATA_SOURCES.md` لدى المركز — التفصيل في [`ATTRIBUTION.md`](ATTRIBUTION.md).
 
-وثائق أخرى: [`docs/RUN.md`](docs/RUN.md) (التشغيل وإعادة البناء) · [`docs/AI_RUN.md`](docs/AI_RUN.md) (تشغيل التصنيف) · [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) (سكربت العرض) · [`docs/AI_DISCLOSURE.md`](docs/AI_DISCLOSURE.md) (الإفصاح عن أدوات الذكاء الاصطناعي) · [`docs/DATA_FORMAT.md`](docs/DATA_FORMAT.md) (صيغة بيانات الوسوم) · [`ATTRIBUTION.md`](ATTRIBUTION.md) (المصادر والتراخيص) · [`CONTRIBUTING.md`](CONTRIBUTING.md) (المساهمة).
+وثائق أخرى: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md) (قائمة التحقق قبل التسليم) · [`docs/AUDIT_2026-10-02.md`](docs/AUDIT_2026-10-02.md) (تدقيق هندسي) · [`docs/RUN.md`](docs/RUN.md) (التشغيل وإعادة البناء) · [`docs/AI_RUN.md`](docs/AI_RUN.md) (تشغيل التصنيف) · [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) (سكربت العرض) · [`docs/AI_DISCLOSURE.md`](docs/AI_DISCLOSURE.md) (الإفصاح عن أدوات الذكاء الاصطناعي) · [`docs/DATA_FORMAT.md`](docs/DATA_FORMAT.md) (صيغة بيانات الوسوم) · [`ATTRIBUTION.md`](ATTRIBUTION.md) (المصادر والتراخيص) · [`CONTRIBUTING.md`](CONTRIBUTING.md) (المساهمة).
 
 ## الإفصاح عن أدوات الذكاء الاصطناعي
 

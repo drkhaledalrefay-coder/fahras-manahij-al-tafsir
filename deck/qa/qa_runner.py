@@ -14,6 +14,17 @@ results = []  # (test_id, mode, status, note)
 console_errors = []  # (mode, text)
 fail_details = []
 
+def launch_browser(p):
+    """Google Chrome if installed, else Playwright's Chromium (`python -m playwright install chromium`).
+    QA_CHROMIUM_EXECUTABLE overrides both."""
+    exe = os.environ.get("QA_CHROMIUM_EXECUTABLE")
+    if exe:
+        return p.chromium.launch(executable_path=exe, headless=True)
+    try:
+        return p.chromium.launch(channel="chrome", headless=True)
+    except Exception:
+        return p.chromium.launch(headless=True)
+
 def log(test_id, mode, status, note=""):
     results.append((test_id, mode, status, note))
     print(f"[{mode}] {test_id}: {status} {note}")
@@ -53,7 +64,7 @@ def parse_rgb(s):
 
 def run_mode(mode, viewport, color_scheme, is_phone=False):
     with sync_playwright() as p:
-        browser = p.chromium.launch(channel="chrome", headless=True)
+        browser = launch_browser(p)
         ctx = browser.new_context(viewport=viewport, color_scheme=color_scheme,
                                    locale="ar-SA",
                                    device_scale_factor=2 if not is_phone else 2,
@@ -542,7 +553,7 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
 # Gallery-specific captures (light desktop only, clean state)
 def capture_gallery():
     with sync_playwright() as p:
-        browser = p.chromium.launch(channel="chrome", headless=True)
+        browser = launch_browser(p)
         ctx = browser.new_context(viewport={"width":1440,"height":900}, color_scheme="light", locale="ar-SA")
         page = ctx.new_page()
         page.goto(BASE, wait_until="networkidle")
@@ -555,7 +566,7 @@ def capture_gallery():
         browser.close()
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(channel="chrome", headless=True)
+        browser = launch_browser(p)
         ctx = browser.new_context(viewport={"width":390,"height":844}, color_scheme="light", locale="ar-SA", is_mobile=True, has_touch=True)
         page = ctx.new_page()
         page.goto(BASE, wait_until="networkidle")
@@ -567,7 +578,7 @@ def capture_gallery():
         browser.close()
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(channel="chrome", headless=True)
+        browser = launch_browser(p)
         ctx = browser.new_context(viewport={"width":1440,"height":900}, color_scheme="dark", locale="ar-SA")
         page = ctx.new_page()
         page.goto(BASE, wait_until="networkidle")
@@ -592,3 +603,7 @@ if __name__ == "__main__":
     with open(os.path.join(os.path.dirname(__file__), "qa_raw_results.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
     print("DONE")
+    failed = [r for r in results if r[2] == "FAIL"]
+    if failed:
+        print(f"QA FAIL: {len(failed)} check(s) failed", file=sys.stderr)
+        sys.exit(1)
