@@ -14,7 +14,7 @@ Read this before any change. Human-facing details: [`README.md`](README.md), [`C
 4. **Never claim accuracy, approval, or coverage** in docs, UI, or commit messages without evidence in the repo. Do not show sample numbers as results.
 5. **No secrets anywhere.** API keys come from `LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL` env vars only. Never print them, never commit `.env`.
 6. **Never commit `quran.db`** (234 MB, gitignored).
-7. **Do not decide scope or sources.** Open questions (do not resolve by assumption): al-Anfal with al-Tabari only or four tafsirs; whether the Ibn Kathir A/B test is in scope; whether the indexed text must come from Dorar al-Sunniya (owner's direction) while current data comes from Tafsir Center (`tafsircenter/tafsir-mcp-data`). Do not add, scrape, or swap source text. See `docs/AUDIT_2026-10-02.md` §6.
+7. **Do not decide scope or sources.** Open questions (do not resolve by assumption): al-Anfal with al-Tabari only or four tafsirs; whether the Ibn Kathir A/B test is in scope; whether the indexed text must come from Dorar al-Sunniya (owner's direction) while current data comes from Tafsir Center (`tafsircenter/tafsir-mcp-data`). Do not add, scrape, or swap source text. See `docs/AUDIT_2026-10-02.md`, Appendix A (الملحق أ).
 8. **Do not merge to `main`, push to `main`, or change repo visibility.** Work on your own branch; one branch per person/agent.
 
 ## Repo map
