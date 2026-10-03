@@ -7,6 +7,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from textcore import read_exact as _read_exact, read_json as _read_json, assert_tiling as _assert_tiling, IntegrityError
 RAW_A = ROOT / "data" / "raw" / "tafsircenter"
 LAYERS_DIR = ROOT / "data" / "layers"
 SPANS_AUTHOR_DIR = ROOT / "data" / "spans_author"
@@ -14,27 +18,8 @@ SPANS_PILOT_DIR = ROOT / "data" / "spans_pilot"
 KEYS = ["2_255", "17_105", "2_102"]
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
-def _load(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
-
-
-def _assert_tiling(ranges: list[dict], n: int) -> None:
-    assert ranges == sorted(ranges, key=lambda r: r["start"]), "not sorted"
-    if n == 0:
-        assert ranges == []
-        return
-    assert ranges[0]["start"] == 0
-    assert ranges[-1]["end"] == n
-    prev_end = 0
-    for r in ranges:
-        assert r["start"] == prev_end, f"gap/overlap at {prev_end}"
-        assert r["end"] > r["start"]
-        prev_end = r["end"]
-    assert prev_end == n
 
 
 def _author_intervals(ranges: list[dict]) -> list[tuple[int, int]]:
@@ -49,14 +34,14 @@ def main() -> int:
     ok = True
     for key in KEYS:
         src_text = _read_exact(RAW_A / f"{key}.txt")
-        layers = _load(LAYERS_DIR / f"{key}.json")
-        spans_a = _load(SPANS_AUTHOR_DIR / f"{key}.json")
-        pilot = _load(SPANS_PILOT_DIR / f"{key}.json")
+        layers = _read_json(LAYERS_DIR / f"{key}.json")
+        spans_a = _read_json(SPANS_AUTHOR_DIR / f"{key}.json")
+        pilot = _read_json(SPANS_PILOT_DIR / f"{key}.json")
 
         try:
             _assert_tiling(layers["ranges"], len(src_text))
             tile_ok = True
-        except AssertionError as exc:
+        except IntegrityError as exc:
             tile_ok = False
             ok = False
             print(f"{key}: TILE_FAIL {exc}")

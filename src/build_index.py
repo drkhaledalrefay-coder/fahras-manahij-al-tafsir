@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_json as _read_json
+
 from normalize import l1_normalize  # noqa: E402
 
 AYAT = ["17_105", "2_255", "2_102"]
@@ -125,8 +127,6 @@ TAG_INFO = {
 DATA_MARKER = "__INDEX_DATA_JSON__"
 
 
-def _read_json(path: Path):
-    return json.loads(path.read_bytes().decode("utf-8"))
 
 
 def _read_source_text(path: Path) -> tuple[str, bytes, str]:

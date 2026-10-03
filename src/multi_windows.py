@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact, read_json as _read_json, sha256_file as _sha256_file
+
 from v2_windows import _match_norm, select_2_255_tafsir  # noqa: E402
 
 OUT_ROOT = ROOT / "data" / "multi"
@@ -20,16 +22,10 @@ _NEEDLE_SINA = "لا تاخذه سنه"
 _NEEDLE_HARUT = "هاروت"
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
-def _read_json(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
 
 
-def _sha256_file(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def _apparatus_in_range(layers: dict, win_start: int, win_end: int, source: str) -> list[dict]:

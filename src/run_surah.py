@@ -25,6 +25,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import sha256_bytes as _sha256_bytes
+
 import multi_layers  # noqa: E402
 import spans_author  # noqa: E402
 import v2_markers  # noqa: E402
@@ -60,8 +62,6 @@ CUSTOM_SPLITS = {
 }
 
 
-def _sha256_bytes(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
 
 
 def _format_path(p: Path) -> str:

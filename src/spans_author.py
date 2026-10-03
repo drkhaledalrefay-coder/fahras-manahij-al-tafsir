@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact
+
 from layers import author_text_from_ranges, classify  # noqa: E402
 from spans import (  # noqa: E402
     _BREAK_AFTER,
@@ -31,8 +33,6 @@ TARGET_AYAT = [(2, 255), (17, 105), (2, 102)]
 _SURAH_WORD = "\u0633\u0648\u0631\u0629"  # سورة
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def _is_digit_char(ch: str) -> bool:

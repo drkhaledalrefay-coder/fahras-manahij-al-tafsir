@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact
+
 RAW_A = ROOT / "data" / "raw" / "tafsircenter"
 SPANS_DIR = ROOT / "data" / "spans"
 TARGET_AYAT = [(2, 255), (17, 105), (2, 102)]
@@ -36,8 +38,6 @@ _MIN_WORDS = 5
 _MAX_WORDS = 60
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def _quranic_ranges(text: str) -> list[tuple[int, int]]:

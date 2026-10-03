@@ -8,14 +8,22 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import sys
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from textcore import read_exact as _read_exact, read_json as _read_json
+
 TEMPLATE = ROOT / "src" / "fahras_template.html"
 OUT = ROOT / "web" / "fahras.html"
+TEMPLATE_V2 = ROOT / "src" / "fahras_v2_template.html"
+OUT_V2 = ROOT / "web" / "reader.html"
 
 DATA_MARKER = "__METHODS_DATA_JSON__"
 
@@ -117,16 +125,31 @@ WINDOW_VERSES = {
 
 
 def embed(payload: object) -> str:
-    text = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+    # sort_keys=True: byte-stable across dict insertion order / PYTHONHASHSEED.
+    text = json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
     return text.replace("<", "\\u003c").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
 
 
-def _read_json(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
+def _stable_build_date(data_version: str) -> str:
+    """Deterministic build_date for unchanged data.
 
-
-def _read_text(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
+    Root cause of methods-data churn: date.today() stamped into the embedded
+    JSON on every run. Prefer SOURCE_DATE_EPOCH; else reuse the previous stamp
+    when data_version is unchanged; else today.
+    """
+    epoch = os.environ.get("SOURCE_DATE_EPOCH")
+    if epoch:
+        return datetime.fromtimestamp(int(epoch), tz=timezone.utc).date().isoformat()
+    if OUT.is_file():
+        try:
+            prev = OUT.read_bytes().decode("utf-8")
+            m_ver = re.search(r'"data_version":"([^"]+)"', prev)
+            m_date = re.search(r'"build_date":"([^"]+)"', prev)
+            if m_ver and m_date and m_ver.group(1) == data_version:
+                return m_date.group(1)
+        except OSError:
+            pass
+    return date.today().isoformat()
 
 
 def _load_window(path: Path) -> dict:
@@ -290,7 +313,7 @@ def collect_tafsir(cfg: dict) -> dict:
         rpath = _raw_path(cfg, w["source_file"], verse_key)
         if not rpath.is_file():
             raise SystemExit(f"missing raw source {tid}/{verse_key}: {rpath}")
-        full = _read_text(rpath)
+        full = _read_exact(rpath)
         slice_text = full[w["window_start"] : w["window_end"]]
         if slice_text != w["window_text"]:
             raise SystemExit(
@@ -438,7 +461,7 @@ def collect_data() -> dict:
     # Version stamps the payload *before* embedding the stamps themselves.
     core = json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
     payload["data_version"] = hashlib.sha256(core.encode("utf-8")).hexdigest()[:12]
-    payload["build_date"] = date.today().isoformat()
+    payload["build_date"] = _stable_build_date(payload["data_version"])
     return payload
 
 
@@ -536,15 +559,28 @@ def build() -> Path:
         raise SystemExit(f"missing template {TEMPLATE}")
     data = collect_data()
     _check_br_source_fidelity(data["tafsirs"])
+    embedded = embed(data)
     html = TEMPLATE.read_bytes().decode("utf-8")
     if "\r\n" in html:
         html = html.replace("\r\n", "\n")
     if DATA_MARKER not in html:
         raise SystemExit("template missing data marker")
-    html = html.replace(DATA_MARKER, embed(data))
+    html = html.replace(DATA_MARKER, embedded)
     check_html(html)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_bytes(html.encode("utf-8"))
+
+    if TEMPLATE_V2.is_file():
+        html_v2 = TEMPLATE_V2.read_bytes().decode("utf-8")
+        if "\r\n" in html_v2:
+            html_v2 = html_v2.replace("\r\n", "\n")
+        if DATA_MARKER not in html_v2:
+            raise SystemExit("v2 template missing data marker")
+        html_v2 = html_v2.replace(DATA_MARKER, embedded)
+        check_html(html_v2)
+        OUT_V2.parent.mkdir(parents=True, exist_ok=True)
+        OUT_V2.write_bytes(html_v2.encode("utf-8"))
+
     n_verified = sum(
         1
         for t in data["tafsirs"].values()
@@ -558,6 +594,11 @@ def build() -> Path:
         f"data_version={data.get('data_version')} "
         f"coverage={data.get('coverage', {}).get('label', '')}"
     )
+    if TEMPLATE_V2.is_file() and OUT_V2.is_file():
+        print(
+            f"wrote {OUT_V2.relative_to(ROOT).as_posix()} "
+            f"({OUT_V2.stat().st_size} bytes)"
+        )
     return OUT
 
 

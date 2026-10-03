@@ -16,7 +16,12 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
+import sys
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from textcore import sha256_bytes as _sha256_bytes
 RAW = ROOT / "data" / "raw"
 
 TARGET_AYAT = [(2, 255), (17, 105), (2, 102)]
@@ -63,8 +68,6 @@ def strip_html(html: str) -> str:
     return extractor.get_text()
 
 
-def _sha256_bytes(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
 
 
 def _utc_now() -> str:

@@ -1,0 +1,3669 @@
+<meta charset="utf-8">
+<script>try{var __t=localStorage.getItem("tafsir-fahras-v1-theme");document.documentElement.setAttribute("data-theme",(__t==="dark"||__t==="light")?__t:"light");}catch(e){document.documentElement.setAttribute("data-theme","light");}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>فهرس مناهج التفسير</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+<style>
+[hidden] { display: none !important; }
+:root {
+  color-scheme: light;
+  --base: #F6F7FC;
+  --surface: #FFFFFF;
+  --surface-2: #EBEEFA;
+  --line: #E3E6F2;
+  --ink: #161B3D;
+  --sub: #4A5175;
+  --muted: #7E86A8;
+  --accent: #5B3FD9;
+  --accent-bg: #EEEAFE;
+  --accent-hover: #482ec4;
+  --ok: #0C7A5C;
+  --ok-bg: #E3F5EE;
+  --warn: #9A6A12;
+  --warn-bg: #FBF1DC;
+  --bad: #A3264F;
+  --bad-bg: #FBE6EE;
+  --teal: #0C5C52;
+  --teal-bg: rgba(12, 92, 82, 0.1);
+  --m-quran: #3C2BB8;
+  --m-sunnah: #0C5C52;
+  --m-sahaba: #7A4E0D;
+  --m-tabiin: #1A4F86;
+  --m-lugha: #6A3418;
+  --m-qiraat: #8C2348;
+  --m-nuzul: #0E4F6E;
+  --m-sira: #5A2E86;
+  --m-isra: #3E2A78;
+  --m-ray: #1F4D2A;
+  --font-ui: "Readex Pro", "Segoe UI", Tahoma, sans-serif;
+  --font-text: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+  --font-quran: "Amiri", "Noto Naskh Arabic", serif;
+  --tafsir-size: 1.25rem;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --base: #12183F;
+  --surface: #1A2348;
+  --surface-2: #222B55;
+  --line: #2A3264;
+  --ink: #F2F4FF;
+  --sub: #C8CFE8;
+  --muted: #9AA3C8;
+  --accent: #8E78FF;
+  --accent-bg: #2C275E;
+  --accent-hover: #A493FF;
+  --ok: #2EF2C2;
+  --ok-bg: rgba(46, 242, 194, 0.12);
+  --warn: #F2B84B;
+  --warn-bg: rgba(242, 184, 75, 0.14);
+  --bad: #F0A3C0;
+  --bad-bg: rgba(240, 163, 192, 0.12);
+  --teal: #2EF2C2;
+  --teal-bg: rgba(46, 242, 194, 0.14);
+  --m-quran: #C4B6FF;
+  --m-sunnah: #5EEAD4;
+  --m-sahaba: #E2B15A;
+  --m-tabiin: #9ECAF5;
+  --m-lugha: #F5A77B;
+  --m-qiraat: #F0A3C0;
+  --m-nuzul: #7BD7F5;
+  --m-sira: #D4B2FA;
+  --m-isra: #BBA7F5;
+  --m-ray: #86E39C;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, .shell {
+  background: var(--base);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  min-height: 100vh;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* Header */
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+.mode-badge {
+  background: #F2B84B;
+  color: #161B3D;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pick-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sel-box {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 6px 10px;
+  font-size: 0.86rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.sel-box label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.sel-box select {
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+.nav-btns {
+  display: flex;
+  gap: 4px;
+}
+.ib-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: inline-grid;
+  place-items: center;
+  background: var(--surface);
+  color: var(--sub);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+.ib-btn:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.header-spacer { flex: 1; }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--sub);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.btn:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF !important;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+.btn-ghost {
+  border-color: transparent;
+  background: transparent;
+}
+.btn-ghost:hover {
+  background: var(--surface-2);
+}
+
+/* Toast */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.toast-msg.is-show {
+  opacity: 1;
+}
+
+/* Reader View Layout */
+.reader-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 32px;
+  max-width: 1220px;
+  margin: 28px auto;
+  padding: 0 20px;
+}
+.reader-col {
+  position: relative;
+  min-width: 0;
+}
+@media (max-width: 900px) {
+  .reader-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 14px;
+  }
+}
+
+.ayah-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ayah-card .ayah-ref {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.ayah-card .ayah-text {
+  font-family: var(--font-quran);
+  font-size: 1.45rem;
+  line-height: 2.3;
+  color: var(--ink);
+  direction: rtl;
+}
+
+/* Chips Bar */
+.chips-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.chips-bar .lbl {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-inline-end: 4px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--sub);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.chip:hover {
+  background: var(--surface-2);
+}
+.chip i.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.chip small.cnt {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.chip.is-active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+.chip.chip-unused {
+  cursor: default;
+  color: var(--muted);
+  border-style: dashed;
+}
+
+.info-banner {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 6px 2px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.info-banner b {
+  color: var(--warn);
+}
+.info-banner.has-approved b {
+  color: var(--ok);
+}
+.info-banner.is-mismatch {
+  background: color-mix(in srgb, var(--err) 10%, transparent);
+  border-color: var(--err);
+  color: var(--err);
+}
+.info-banner.is-mismatch b {
+  color: var(--err);
+}
+
+/* Article */
+article.reading-article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 32px 40px;
+  font-family: var(--font-text);
+  font-size: var(--tafsir-size);
+  line-height: 2.3;
+  color: var(--ink);
+  position: relative;
+}
+@media (max-width: 600px) {
+  article.reading-article {
+    padding: 20px 18px;
+  }
+}
+article.reading-article h3 {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 28px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+article.reading-article h3:first-child { margin-top: 0; }
+article.reading-article h3::before {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background: var(--accent);
+}
+article.reading-article p {
+  margin-bottom: 16px;
+}
+.quran-quote {
+  color: var(--teal);
+  font-weight: 600;
+}
+.fn {
+  font-family: var(--font-ui);
+  font-size: 0.7em;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin: 0 3px;
+  vertical-align: super;
+  cursor: pointer;
+}
+.hide-footnotes .fn { display: none; }
+
+.br-src { display: none; }
+.layout-br { display: block; height: 0.6em; }
+
+/* Highlight spans */
+.hl {
+  border-radius: 2px;
+  padding: 1px 1px;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  position: relative;
+  color: var(--ink) !important;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
+  transition: outline 0.15s ease, background-color 0.15s ease;
+}
+.hl.is-proposed {
+  border: 0;
+  box-shadow: none;
+}
+.hl.is-approved {
+  border: 0;
+  box-shadow: none;
+}
+.hl.is-approved:hover:not(.is-selected) {
+  outline: 1px solid var(--ok);
+  outline-offset: 2px;
+}
+.hl .hl-status {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--ok);
+  margin-inline-end: 3px;
+  vertical-align: super;
+}
+.hl.is-selected {
+  outline: 2px solid #6150EA !important;
+  outline-offset: 2px;
+  z-index: 2;
+}
+:root[data-theme="dark"] .hl.is-selected {
+  outline-color: #2EF2C2 !important;
+}
+.no-color .hl {
+  background: transparent !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* Evidence Popover Card */
+.evidence-card {
+  position: absolute;
+  width: 320px;
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(18,24,63,0.18);
+  padding: 14px 16px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  z-index: 100;
+  color: var(--ink);
+}
+.evidence-card[hidden] { display: none !important; }
+.evidence-card .ec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.evidence-card .ec-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.evidence-card .ec-title i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.evidence-card .ec-close {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+.evidence-card .ec-role {
+  color: var(--sub);
+  font-size: 0.78rem;
+  margin-bottom: 6px;
+}
+.evidence-card .ec-rationale {
+  color: var(--sub);
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+.evidence-card .ec-status {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+.evidence-card .ec-status.st-ok { color: var(--ok); }
+.evidence-card .ec-status.st-pending { color: var(--warn); }
+.evidence-card .ec-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.78rem;
+}
+.evidence-card a.ec-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+.evidence-card a.ec-link:hover { text-decoration: underline; }
+.evidence-card button.ec-copy {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+.evidence-card button.ec-copy:hover { text-decoration: underline; }
+
+/* Aside Sidebar */
+aside.reader-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: sticky;
+  top: 76px;
+  align-self: start;
+}
+.aside-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.aside-card h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.dist-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: var(--surface-2);
+}
+.dist-legend {
+  display: grid;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--sub);
+}
+.dist-legend .leg-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dist-legend .leg-item i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 8px;
+}
+.dist-legend .leg-item span.leg-cnt {
+  margin-inline-start: auto;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.toc-list {
+  list-style: none;
+  display: grid;
+  gap: 3px;
+  font-size: 0.82rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.toc-list li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--sub);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toc-list li:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.toc-list li.is-cur {
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tg-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--sub);
+  padding: 6px 0;
+}
+.switch-wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.switch-wrap input { display: none; }
+.sw-track {
+  width: 36px;
+  height: 20px;
+  border-radius: 999px;
+  background: #D5D9EA;
+  position: relative;
+  transition: background 0.2s ease;
+}
+.sw-track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transition: transform 0.2s ease;
+}
+.switch-wrap input:checked + .sw-track {
+  background: var(--accent);
+}
+.switch-wrap input:checked + .sw-track::after {
+  transform: translateX(-16px);
+}
+.font-scale-btns {
+  display: inline-flex;
+  gap: 4px;
+}
+.font-scale-btns button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--sub);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.font-scale-btns button:hover {
+  background: var(--surface-2);
+}
+
+.src-box {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.src-box a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.src-box a:hover { text-decoration: underline; }
+
+/* Review Mode Layout */
+.review-container {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr) 340px;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 16px auto;
+  padding: 0 16px;
+  align-items: start;
+}
+@media (max-width: 992px) {
+  .review-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 12px;
+  }
+}
+
+/* Review Header Stats */
+.review-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--sub);
+}
+.mini-pbar {
+  width: 140px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  display: flex;
+  overflow: hidden;
+}
+.mini-pbar i { height: 100%; }
+
+/* Queue Col (Right) */
+.queue-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.queue-header {
+  padding: 14px 14px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.queue-header h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.queue-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--base);
+  padding: 3px;
+  border-radius: 8px;
+}
+.queue-tabs button {
+  flex: 1;
+  text-align: center;
+  font-size: 0.74rem;
+  font-family: inherit;
+  padding: 5px 0;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--sub);
+  cursor: pointer;
+  font-weight: 500;
+}
+.queue-tabs button.is-on {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.queue-items {
+  padding: 6px 8px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  display: grid;
+  gap: 4px;
+}
+.q-it {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  gap: 10px;
+  align-items: start;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  color: var(--sub);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.q-it:hover {
+  background: var(--surface-2);
+}
+.q-it i.q-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+.q-it .tx {
+  font-family: var(--font-text);
+  font-size: 0.88rem;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+.q-it .mt {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.q-it.is-cur {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+.badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.b-candidate { background: var(--ok-bg); color: var(--ok); }
+.b-specialist { background: var(--warn-bg); color: var(--warn); }
+.b-approved { background: var(--ok-bg); color: var(--ok); }
+.b-rejected { background: var(--bad-bg); color: var(--bad); }
+.b-edited { background: var(--accent-bg); color: var(--accent); }
+
+/* Center Text in Context Col */
+.text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+}
+.text-header h4 { font-size: 0.92rem; font-weight: 700; }
+.text-header .tg-info {
+  display: flex;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.text-header .tg-info b { color: var(--sub); font-weight: 600; }
+
+.paper-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 30px;
+  font-family: var(--font-text);
+  font-size: 1.15rem;
+  line-height: 2.2;
+  color: var(--sub);
+  position: relative;
+}
+.paper-box p { margin-bottom: 14px; }
+.cur-move {
+  color: var(--ink);
+  background: var(--accent-bg);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+  padding: 1px 3px;
+  position: relative;
+  font-weight: 500;
+}
+.sid {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0 4px;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+.other-move {
+  border-bottom: 1px dashed var(--muted);
+}
+.cmp-badge {
+  background: var(--surface);
+  color: var(--sub);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cmp-badge.ok {
+  background: var(--ok-bg);
+  color: var(--ok);
+  border-color: color-mix(in srgb, var(--ok) 30%, transparent);
+}
+.cmp-badge.bad {
+  background: #FEE2E2;
+  color: #991B1B;
+  border-color: #F87171;
+  font-weight: 600;
+}
+:root[data-theme="dark"] .cmp-badge.bad {
+  background: #450A0A;
+  color: #FCA5A5;
+  border-color: #991B1B;
+}
+
+/* Left Decision Panel */
+.dec-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.dec-panel h4 {
+  font-size: 0.76rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.prop-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.prop-box i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.kv-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 0.8rem;
+}
+.kv-grid span { color: var(--muted); }
+.kv-grid b { font-weight: 600; color: var(--ink); }
+
+.score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.score-row b {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ok);
+}
+.score-row small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.score-parts {
+  display: grid;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--sub);
+}
+.score-parts .part-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 28px;
+  gap: 8px;
+  align-items: center;
+}
+.score-parts .tr {
+  height: 5px;
+  background: var(--base);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.score-parts .tr i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.chk-list {
+  font-size: 0.76rem;
+  display: grid;
+  gap: 4px;
+}
+.chk-list .y { color: var(--ok); }
+.chk-list .n { color: var(--warn); }
+.chk-list .bad-flag { color: var(--bad); }
+
+.note-textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  background: var(--surface);
+  color: var(--ink);
+  resize: vertical;
+  min-height: 54px;
+}
+
+.act-btns {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+}
+.act-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.act-btn kbd {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 1px 6px;
+  opacity: 0.75;
+}
+.act-btn.a-compare {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.act-btn.a-compare:hover {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.compare-subpanel {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  margin: 8px 0;
+}
+.cmp-box-head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+}
+.cmp-slice-content {
+  font-family: var(--font-quran);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink);
+  max-height: 120px;
+  overflow-y: auto;
+  border-top: 1px dashed var(--line);
+  padding-top: 6px;
+  white-space: pre-wrap;
+}
+.act-btn.a-ok {
+  background: var(--ok);
+  color: #FFFFFF;
+}
+.act-btn.a-ok:hover { opacity: 0.9; }
+.act-btn.a-edit {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.act-btn.a-edit:hover { background: var(--surface-2); }
+.act-btn.a-rej {
+  background: var(--surface);
+  border-color: #F0C6D5;
+  color: var(--bad);
+}
+.act-btn.a-rej:hover { background: var(--bad-bg); }
+
+.act-nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.act-nav-row button {
+  background: transparent;
+  border: none;
+  color: var(--sub);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.act-nav-row button:hover { color: var(--accent); }
+.act-nav-row kbd {
+  font-size: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 1px 4px;
+}
+
+/* Edit subpanel */
+.edit-subpanel {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--base);
+  display: grid;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+.edit-subpanel select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  font-family: inherit;
+}
+.b-control-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.b-control-grid button {
+  padding: 5px;
+  font-size: 0.72rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.b-control-grid button:hover { background: var(--surface-2); }
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  padding: 16px;
+}
+.modal-backdrop[hidden] { display: none !important; }
+.modal-box {
+  background: var(--surface);
+  border-radius: 12px;
+  max-width: 580px;
+  width: 100%;
+  padding: 22px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal-box textarea {
+  width: 100%;
+  height: 220px;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+  font-size: 0.75rem;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--base);
+  color: var(--ink);
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Mobile review adjustments */
+.mobile-queue-toggle {
+  display: none;
+  width: 100%;
+  margin-bottom: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .mobile-queue-toggle { display: block; }
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .text-col { order: 1; }
+  .dec-panel { order: 2; }
+  .queue-panel { order: 3; }
+  .queue-panel.is-collapsed .queue-header,
+  .queue-panel.is-collapsed .queue-items { display: none !important; }
+}
+@media (min-width: 993px) {
+  .mobile-queue-toggle { display: none !important; }
+  .queue-panel.is-collapsed .queue-header,
+  .queue-panel.is-collapsed .queue-items { display: flex !important; }
+}
+</style>
+
+<div class="shell" dir="rtl">
+  <div class="app-header" role="banner">
+    <div class="brand-wrap">
+      <div class="brand-title" id="brand-logo" title="فهرس مناهج التفسير">فهرس مناهج التفسير</div>
+      <span class="mode-badge" id="header-mode-badge" hidden>وضع المراجعة</span>
+    </div>
+
+    <div class="pick-group">
+      <div class="sel-box">
+        <label for="tafsir-sel">التفسير</label>
+        <select id="tafsir-sel"></select>
+      </div>
+
+      <div class="sel-box">
+        <label for="verse-sel">الآية</label>
+        <select id="verse-sel"></select>
+      </div>
+
+      <div class="nav-btns">
+        <button type="button" class="ib-btn" id="btn-prev-verse" title="السابق">›</button>
+        <button type="button" class="ib-btn" id="btn-next-verse" title="التالي">‹</button>
+      </div>
+    </div>
+
+    <div class="header-spacer"></div>
+
+    <!-- Review mode progress in header -->
+    <div class="review-stats" id="header-review-stats" hidden>
+      <span id="stat-count-str"></span>
+      <div class="mini-pbar" id="stat-pbar">
+        <i style="flex:0; background:var(--ok)" id="pb-ok"></i>
+        <i style="flex:0; background:var(--bad)" id="pb-bad"></i>
+        <i style="flex:0; background:var(--accent)" id="pb-mod"></i>
+        <i style="flex:1; background:var(--line)" id="pb-rem"></i>
+      </div>
+      <span id="stat-status-str"></span>
+    </div>
+
+    <div class="header-actions">
+      <button type="button" class="btn" id="btn-export-decisions" hidden title="تصدير قرارات المتخصص بصيغة JSON">صدّر القرارات</button>
+      <button type="button" class="btn btn-primary" id="btn-toggle-mode">وضع المراجعة ←</button>
+      <button type="button" class="ib-btn" id="btn-theme-toggle" aria-label="تبديل المظهر" title="تبديل المظهر الفاتح/الداكن">◐</button>
+      <a href="fahras.html" class="btn btn-ghost" title="الرجوع إلى الواجهة الكلاسيكية">الواجهة الكلاسيكية</a>
+    </div>
+  </div>
+
+  <!-- READER MODE VIEW -->
+  <main class="reader-container" id="reader-view">
+    <section class="reader-col">
+      <div class="ayah-card">
+        <div class="ayah-ref" id="reader-ayah-ref">سورة البقرة · الآية ٢٥٥</div>
+        <p class="ayah-text" id="reader-ayah-text"></p>
+      </div>
+
+      <div class="chips-bar" id="reader-chips-bar">
+        <span class="lbl">لوّن حسب:</span>
+        <button type="button" class="chip" id="chip-none">بلا تلوين</button>
+        <span id="reader-dynamic-chips"></span>
+        <span class="chip chip-unused" id="chip-unused-note" hidden></span>
+      </div>
+
+      <div class="info-banner" id="reader-info-banner"></div>
+
+      <article class="reading-article" id="reading-article">
+        <!-- Reconstructed text with highlights -->
+      </article>
+
+      <!-- Floating Evidence Card Popover -->
+      <div class="evidence-card" id="evidence-card" hidden>
+        <div class="ec-head">
+          <div class="ec-title"><i id="ec-dot"></i><span id="ec-method-name"></span></div>
+          <button type="button" class="ec-close" id="ec-close-btn" aria-label="إغلاق">×</button>
+        </div>
+        <div class="ec-role" id="ec-role-line"></div>
+        <div class="ec-rationale" id="ec-rationale"></div>
+        <div class="ec-status" id="ec-status-line"></div>
+        <div class="ec-actions">
+          <button type="button" class="ec-copy" id="ec-copy-btn">انسخ الموضع مع المرجع</button>
+          <span>·</span>
+          <a href="https://quran.com" target="_blank" rel="noopener" class="ec-link" id="ec-source-link">اقرأ في المصدر</a>
+        </div>
+      </div>
+    </section>
+
+    <aside class="reader-aside">
+      <div class="aside-card">
+        <h4 id="dist-title">مناهج التفسير في هذه الآية</h4>
+        <div class="dist-bar" id="dist-bar"></div>
+        <div class="dist-legend" id="dist-legend"></div>
+      </div>
+
+      <div class="aside-card">
+        <h4>انتقل إلى</h4>
+        <ul class="toc-list" id="reader-toc"></ul>
+      </div>
+
+      <div class="aside-card">
+        <div class="tg-row">
+          <span>حواشي المحقق</span>
+          <label class="switch-wrap">
+            <input type="checkbox" id="toggle-footnotes" checked>
+            <span class="sw-track"></span>
+          </label>
+        </div>
+        <div class="tg-row">
+          <span>حجم الخط</span>
+          <div class="font-scale-btns">
+            <button type="button" id="btn-font-dec" title="تصغير">أ−</button>
+            <button type="button" id="btn-font-inc" title="تكبير">أ+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="src-box" id="reader-source-box">
+        المصدر: مركز تفسير — CC BY 4.0 · <a href="https://dorar.net" target="_blank" rel="noopener" id="reader-dorar-link">الدرر السنية</a> · <a href="https://quran.com" target="_blank" rel="noopener" id="reader-quran-link">quran.com</a>
+      </div>
+    </aside>
+  </main>
+
+  <!-- REVIEW MODE VIEW -->
+  <main class="review-container" id="review-view" hidden>
+    <!-- Column 1: Queue -->
+    <section class="queue-panel is-collapsed" id="review-queue-panel">
+      <button type="button" class="btn mobile-queue-toggle" id="btn-toggle-mobile-queue">طابور المواضع ▾</button>
+      <div class="queue-header">
+        <h4>طابور المواضع</h4>
+        <div class="queue-tabs">
+          <button type="button" class="is-on" data-tab="pending" id="tab-pending">بانتظارك <span id="cnt-pending"></span></button>
+          <button type="button" data-tab="candidate" id="tab-candidate">مرشّح <span id="cnt-candidate"></span></button>
+          <button type="button" data-tab="done" id="tab-done">تمّ <span id="cnt-done"></span></button>
+        </div>
+      </div>
+      <div class="queue-items" id="queue-items-container">
+        <!-- Rendered items -->
+      </div>
+    </section>
+
+    <!-- Column 2: Text in Context -->
+    <section class="text-col">
+      <div class="text-header">
+        <h4>النص في سياقه</h4>
+        <div class="tg-info">
+          <span>حواشي المحقق: <b id="rv-fn-label">ظاهرة</b></span>
+          <span>المعرّفات: <b>ظاهرة</b></span>
+        </div>
+      </div>
+
+      <div class="paper-box" id="review-paper">
+        <!-- Text with spans & outlined selection -->
+      </div>
+
+      <div class="cmp-badge" id="review-cmp-badge">
+        <!-- Dynamic reconstruction fidelity check -->
+      </div>
+    </section>
+
+    <!-- Column 3: Decision Panel -->
+    <section class="dec-panel">
+      <div>
+        <h4>اقتراح المصنّف <span id="dec-annotator-lbl"></span></h4>
+        <div class="prop-box" id="dec-prop-method"><i></i><span>—</span></div>
+      </div>
+
+      <div class="kv-grid">
+        <span>الدور</span><b id="dec-role">—</b>
+        <span>اليقين</span><b id="dec-certainty">—</b>
+        <span>المؤشر</span><b id="dec-marker">—</b>
+        <span>الشاهد</span><b id="dec-evidence">—</b>
+      </div>
+
+      <div>
+        <h4>درجة الفاحص الحتمي</h4>
+        <div class="score-row">
+          <b id="dec-score-total">—</b>
+          <span id="dec-score-scale" style="color:var(--muted); font-size:0.85rem;"></span>
+          <small id="dec-route-label">—</small>
+        </div>
+      </div>
+
+      <div class="score-parts" id="dec-score-parts">
+        <div class="part-row">علامة لفظية<span class="tr"><i id="sp-marker" style="width:0%"></i></span><span id="val-marker">—</span></div>
+        <div class="part-row">شاهد الوظيفة<span class="tr"><i id="sp-func" style="width:0%"></i></span><span id="val-func">—</span></div>
+        <div class="part-row">النسبة<span class="tr"><i id="sp-attr" style="width:0%"></i></span><span id="val-attr">—</span></div>
+        <div class="part-row">الحدود<span class="tr"><i id="sp-bound" style="width:0%"></i></span><span id="val-bound">—</span></div>
+      </div>
+
+      <div class="chk-list" id="dec-chk-list">
+        <div class="y">✓ كل المعرّفات موجودة في النافذة</div>
+        <div class="y">✓ الشاهد داخل حدود الحركة</div>
+        <div class="n" id="dec-compare-status">◌ لم تُعرض المقارنة بالمصدر بعد</div>
+        <div class="n" id="dec-flags-item">◌ لا أعلام للمراجعة</div>
+        <div class="bad-flag" id="dec-fidelity-error" hidden></div>
+      </div>
+
+      <!-- Pinned Source Comparison Subpanel -->
+      <div class="compare-subpanel" id="compare-subpanel" hidden>
+        <div class="cmp-box-head">
+          <span>نص المصدر المثبّت [<b id="cmp-slice-range">—</b>]:</span>
+          <span id="cmp-slice-len"></span>
+        </div>
+        <div class="cmp-slice-content" id="cmp-slice-content"></div>
+      </div>
+
+      <!-- Edit Controls Subpanel (Collapsible) -->
+      <div class="edit-subpanel" id="edit-subpanel" hidden>
+        <label for="edit-method-select">تعديل المنهج الأساسي:</label>
+        <select id="edit-method-select"></select>
+        <div class="b-control-grid">
+          <button type="button" id="btn-adj-before">+ كلمة قبل</button>
+          <button type="button" id="btn-adj-shrink-start">− تقليص البداية</button>
+          <button type="button" id="btn-adj-after">+ كلمة بعد</button>
+          <button type="button" id="btn-adj-shrink-end">− تقليص النهاية</button>
+        </div>
+      </div>
+
+      <textarea class="note-textarea" id="review-note" placeholder="ملاحظة للمتخصص (اختيارية)..."></textarea>
+
+      <div class="act-btns">
+        <button type="button" class="act-btn a-compare" id="act-compare">
+          <span>قارن بالمصدر</span><kbd>C</kbd>
+        </button>
+        <button type="button" class="act-btn a-ok" id="act-approve">
+          <span>اعتماد</span><kbd>A</kbd>
+        </button>
+        <button type="button" class="act-btn a-edit" id="act-edit">
+          <span>تعديل الوسم أو الحدود</span><kbd>E</kbd>
+        </button>
+        <button type="button" class="act-btn a-rej" id="act-reject">
+          <span>رفض</span><kbd>R</kbd>
+        </button>
+        <div class="act-nav-row">
+          <button type="button" id="act-prev"><span>→ السابق</span><kbd>K</kbd></button>
+          <button type="button" id="act-next"><span>التالي ←</span><kbd>J</kbd></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Export Decisions Modal -->
+  <div class="modal-backdrop" id="export-modal" hidden>
+    <div class="modal-box">
+      <h3 style="font-size:1.05rem; font-weight:700;">سجل قرارات المتخصص (JSON)</h3>
+      <p style="font-size:0.78rem; color:var(--muted);">قرارات الاعتماد والتعديل والرفض المحفوظة في الجلسة بصيغة متوافقة تماماً مع النظام</p>
+      <textarea id="export-json-area" readonly></textarea>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-primary" id="btn-copy-export">نسخ JSON</button>
+        <button type="button" class="btn" id="btn-download-export">تنزيل ملف JSON</button>
+        <button type="button" class="btn btn-ghost" id="btn-close-export">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-msg" id="app-toast"></div>
+</div>
+
+<script type="application/json" id="methods-data">__METHODS_DATA_JSON__</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var DATA = JSON.parse(document.getElementById("methods-data").textContent);
+
+  var STORAGE_KEY = "tafsir-fahras-v1-log";
+  var THEME_KEY = "tafsir-fahras-v1-theme";
+  var TYPE_KEY = "tafsir-fahras-v1-type-scale";
+  var TYPE_STEPS = [1.05, 1.15, 1.25, 1.38, 1.5];
+
+  var METHODS = [
+    { id: "M_QURAN", name: "القرآن بالقرآن", color: "var(--m-quran)" },
+    { id: "M_SUNNAH", name: "السنة", color: "var(--m-sunnah)" },
+    { id: "M_SAHABA", name: "الصحابة", color: "var(--m-sahaba)" },
+    { id: "M_TABIIN", name: "التابعون", color: "var(--m-tabiin)" },
+    { id: "M_LUGHA", name: "اللغة والغريب", color: "var(--m-lugha)" },
+    { id: "M_QIRAAT", name: "القراءات", color: "var(--m-qiraat)" },
+    { id: "M_NUZUL", name: "سبب النزول", color: "var(--m-nuzul)" },
+    { id: "M_SIRA", name: "المغازي والسيرة", color: "var(--m-sira)" },
+    { id: "M_ISRAILIYYAT", name: "الإسرائيليات", color: "var(--m-isra)" },
+    { id: "M_RAY", name: "الرأي والاجتهاد", color: "var(--m-ray)" }
+  ];
+  var METHOD_MAP = {};
+  METHODS.forEach(function (m) { METHOD_MAP[m.id] = m; });
+
+  var CERT_AR = {
+    explicit: "صريح",
+    strong: "مستنتج بقوة",
+    weak: "مستنتج بضعف",
+    insufficient: "امتناع"
+  };
+  var ROUTE_AR = {
+    auto_candidate: "مرشح للقبول",
+    specialist: "بانتظار المتخصص"
+  };
+  // Maximum verifier score cap (marker 25 + function 45 + attribution 15 + boundary 15 = 100 in src/v2_verify.py:score_move)
+  var VERIFIER_SCORE_MAX = 100;
+
+  var QURAN_TAFSIR_SLUGS = {
+    al_tabari: "ar-tafsir-al-tabari",
+    ibn_kathir: "ar-tafsir-ibn-kathir",
+    al_baghawi: "ar-tafsir-al-baghawi",
+    al_saadi: "ar-tafseer-al-saddi"
+  };
+
+  var NONAUTHOR_LAYERS = {
+    apparatus: true,
+    footnote: true,
+    editor: true,
+    verse_ref: true,
+    unknown_marker: true
+  };
+
+  var state = {
+    mode: "reader", // "reader" or "review"
+    tafsirId: DATA.default_tafsir || "al_tabari",
+    windowId: DATA.default_window || "2_255",
+    annotator: null,
+    selectedId: null,
+    comparedKey: null, // Gate: reviewer must compare with pinned source before approve
+    activeMethodFilter: null, // null for all
+    colorEnabled: true,
+    footnotesVisible: true,
+    typeStep: 2,
+    queueTab: "pending", // "pending" | "candidate" | "done"
+    log: [],
+    reviewMoves: [],
+    evidenceVisible: false
+  };
+
+  function toArabicDigits(n) {
+    return String(n).replace(/[0-9]/g, function (d) {
+      return "٠١٢٣٤٥٦٧٨٩"[parseInt(d, 10)];
+    });
+  }
+
+  function toast(msg) {
+    var el = document.getElementById("app-toast");
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add("is-show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { el.classList.remove("is-show"); }, 2000);
+  }
+
+  function loadLog() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      state.log = raw ? (JSON.parse(raw) || []) : [];
+    } catch (e) {
+      state.log = [];
+    }
+  }
+
+  function saveLog() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.log));
+    } catch (e) { /* ignore */ }
+  }
+
+  function loadTheme() {
+    try {
+      var t = localStorage.getItem(THEME_KEY);
+      if (t === "light" || t === "dark") {
+        document.documentElement.setAttribute("data-theme", t);
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+    syncThemeBtn();
+  }
+
+  function toggleTheme() {
+    var cur = document.documentElement.getAttribute("data-theme") || "light";
+    var next = cur === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignore */ }
+    syncThemeBtn();
+  }
+
+  function syncThemeBtn() {
+    var dark = document.documentElement.getAttribute("data-theme") === "dark";
+    var b1 = document.getElementById("btn-theme-toggle");
+    if (b1) {
+      b1.textContent = dark ? "☼" : "◐";
+      b1.setAttribute("aria-label", dark ? "وضع فاتح" : "وضع داكن");
+    }
+  }
+
+  function loadTypeScale() {
+    try {
+      var raw = localStorage.getItem(TYPE_KEY);
+      var n = raw == null ? 2 : parseInt(raw, 10);
+      if (!isFinite(n) || n < 0 || n >= TYPE_STEPS.length) n = 2;
+      state.typeStep = n;
+    } catch (e) { state.typeStep = 2; }
+    applyTypeScale();
+  }
+
+  function applyTypeScale() {
+    document.documentElement.style.setProperty("--tafsir-size", TYPE_STEPS[state.typeStep] + "rem");
+  }
+
+  function bumpTypeScale(delta) {
+    var next = state.typeStep + delta;
+    if (next < 0 || next >= TYPE_STEPS.length) return;
+    state.typeStep = next;
+    try { localStorage.setItem(TYPE_KEY, String(state.typeStep)); } catch (e) { /* ignore */ }
+    applyTypeScale();
+  }
+
+  function parseWindowKey(wid) {
+    var m = String(wid || "").match(/^(\d+)_(\d+)/);
+    if (!m) return { surah: 2, ayah: 255 };
+    return { surah: parseInt(m[1], 10), ayah: parseInt(m[2], 10) };
+  }
+
+  function activeTafsir() {
+    return (DATA.tafsirs && DATA.tafsirs[state.tafsirId]) || null;
+  }
+
+  function currentWindow() {
+    var T = activeTafsir();
+    return (T && T.windows && T.windows[state.windowId]) || null;
+  }
+
+  function currentRaw() {
+    var T = activeTafsir();
+    return (T && T.raw && T.raw[state.windowId]) || null;
+  }
+
+  var STATUS = {
+    AI_PROPOSED: "ai_proposed",
+    UNDER_REVIEW: "under_review",
+    APPROVED: "approved",
+    REJECTED: "rejected",
+    NEEDS_RECHECK: "needs_recheck"
+  };
+  var STATUS_EXPORT = {
+    ai_proposed: "ai_proposed",
+    under_review: "under_review",
+    approved: "approved",
+    rejected: "rejected",
+    needs_recheck: "under_review"
+  };
+  function normalizeStatus(s) {
+    if (s === STATUS.AI_PROPOSED || s === STATUS.UNDER_REVIEW || s === STATUS.APPROVED || s === STATUS.REJECTED || s === STATUS.NEEDS_RECHECK) return s;
+    if (s === "approved") return STATUS.APPROVED;
+    if (s === "rejected" || s === "refused") return STATUS.REJECTED;
+    if (s === "needs_recheck") return STATUS.NEEDS_RECHECK;
+    if (s === "under_review" || s === "pending_edit" || s === "edited") return STATUS.UNDER_REVIEW;
+    return STATUS.AI_PROPOSED;
+  }
+
+  function tafsirMeta() {
+    var tid = state.tafsirId;
+    var name = (DATA.tafsir_labels && DATA.tafsir_labels[tid]) || (DATA.meta && DATA.meta.tafsir_name) || (DATA.tafsir && DATA.tafsir.name) || tid;
+    return { id: tid, name: name };
+  }
+
+  function windowAyahParts(w) {
+    var surah = w && w.surah;
+    var ayah = w && w.ayah_number;
+    if (surah == null || ayah == null) {
+      var parts = String((w && w.ayah) || "").split(":");
+      surah = parseInt(parts[0], 10);
+      ayah = parseInt(parts[1], 10);
+    }
+    if (surah == null || isNaN(surah) || ayah == null || isNaN(ayah)) {
+      var wid = (w && (w.id || w.window_id)) || state.windowId || "";
+      var match = wid.match(/^(\d+)_(\d+)/);
+      if (match) {
+        surah = parseInt(match[1], 10);
+        ayah = parseInt(match[2], 10);
+      }
+    }
+    return { surah: surah || 1, ayah: ayah || 1 };
+  }
+
+  function sourceIdFor(w) {
+    var t = tafsirMeta();
+    var a = windowAyahParts(w);
+    return t.id + "_" + a.surah + "_" + a.ayah;
+  }
+
+  function methodLabelsOf(h) {
+    var out = [];
+    if (h.primary) out.push(h.primary);
+    (h.secondary || []).forEach(function (s) {
+      if (s && out.indexOf(s) < 0) out.push(s);
+    });
+    return out;
+  }
+
+  function wordBounds(text) {
+    var words = [];
+    var re = /\S+/g;
+    var m;
+    while ((m = re.exec(text))) {
+      words.push({ start: m.index, end: m.index + m[0].length });
+    }
+    return words;
+  }
+
+  function snapToWord(text, offset, edge) {
+    var words = wordBounds(text);
+    if (!words.length) return offset;
+    if (edge === "start") {
+      for (var i = words.length - 1; i >= 0; i--) {
+        if (words[i].start <= offset) return words[i].start;
+      }
+      return words[0].start;
+    } else {
+      for (var j = 0; j < words.length; j++) {
+        if (words[j].end >= offset) return words[j].end;
+      }
+      return words[words.length - 1].end;
+    }
+  }
+
+  function absToLocal(abs) {
+    var w = currentWindow();
+    return abs - (w ? w.window_start : 0);
+  }
+
+  function localToAbs(loc) {
+    var w = currentWindow();
+    return loc + (w ? w.window_start : 0);
+  }
+
+  function sourceSlice(absStart, absEnd) {
+    var w = currentWindow();
+    var base = (w && w.window_start != null) ? w.window_start : 0;
+    var text = (w && w.window_text != null) ? w.window_text : (currentRaw() ? currentRaw().text : "");
+    return text.slice(absStart - base, absEnd - base);
+  }
+
+  function verifyBoundaryFidelity(absStart, absEnd, expectedText) {
+    var w = currentWindow();
+    if (!w) return false;
+    var baseStart = w.window_start != null ? w.window_start : 0;
+    var baseEnd = w.window_end != null ? w.window_end : (baseStart + (w.window_text ? w.window_text.length : 0));
+    if (absStart < baseStart || absEnd > baseEnd || absStart >= absEnd) return false;
+    var got = sourceSlice(absStart, absEnd);
+    if (expectedText != null && got !== expectedText) return false;
+    return got.length === (absEnd - absStart);
+  }
+
+  function compareKey(h) {
+    if (!h) return "";
+    var id = h.move_id || h.id || "";
+    return id + ":" + h.start + ":" + h.end;
+  }
+
+  function getRenderedMoveText(move) {
+    if (!move) return "";
+    var hid = move.move_id || move.id;
+    // Check in review paper first (cur-move or specific move element)
+    var paper = document.getElementById("review-paper");
+    if (paper) {
+      var curMoveEl = paper.querySelector(".cur-move");
+      if (curMoveEl) {
+        var runs = Array.prototype.slice.call(curMoveEl.querySelectorAll(".src-run"));
+        if (runs.length) {
+          return runs.map(function (r) { return r.textContent || ""; }).join("");
+        }
+      }
+    }
+    // Check in reader article
+    var art = document.getElementById("reading-article");
+    if (art) {
+      var mark = art.querySelector('mark[data-hid="' + hid + '"]');
+      if (mark) {
+        var markRuns = Array.prototype.slice.call(mark.querySelectorAll(".src-run"));
+        if (markRuns.length) {
+          return markRuns.map(function (r) { return r.textContent || ""; }).join("");
+        }
+      }
+    }
+    return move.text || "";
+  }
+
+  function canApproveMove(move) {
+    if (!move) return { ok: false, reason: "لا يوجد موضع محدد" };
+    if (move.start == null || move.end == null) return { ok: false, reason: "الحدود غير محددة" };
+    if (move.start >= move.end) {
+      return { ok: false, reason: "بداية الموضع تسبق أو تساوي نهايته" };
+    }
+    var rendered = getRenderedMoveText(move);
+    var slice = sourceSlice(move.start, move.end);
+    if (rendered !== slice) {
+      return { ok: false, reason: "نص الموضع المعروض في الصفحة لا يطابق نص المصدر المثبّت" };
+    }
+    if (!verifyBoundaryFidelity(move.start, move.end, rendered)) {
+      return { ok: false, reason: "حدود الموضع لا تطابق المصدر المثبّت أو تخرج عن نطاق النافذة" };
+    }
+    return { ok: true };
+  }
+
+  function runCompareWithSource() {
+    var cur = getSelectedMove();
+    if (!cur) {
+      toast("اختر موضعاً أولاً");
+      return;
+    }
+    var check = canApproveMove(cur);
+    var slice = sourceSlice(cur.start, cur.end);
+    var cmpSub = document.getElementById("compare-subpanel");
+    var cmpRange = document.getElementById("cmp-slice-range");
+    var cmpLen = document.getElementById("cmp-slice-len");
+    var cmpContent = document.getElementById("cmp-slice-content");
+    var cmpStatus = document.getElementById("dec-compare-status");
+
+    if (cmpRange) cmpRange.textContent = cur.start + " : " + cur.end;
+    if (cmpLen) cmpLen.textContent = "الطول: " + (cur.end - cur.start) + " حرفاً";
+    if (cmpContent) cmpContent.textContent = slice;
+    if (cmpSub) cmpSub.hidden = false;
+
+    if (!check.ok) {
+      state.comparedKey = null;
+      if (cmpStatus) {
+        cmpStatus.className = "bad-flag";
+        cmpStatus.textContent = "⚠ تعذّرت المقارنة بالمصدر: " + check.reason;
+      }
+      showFidelityError(check.reason);
+      return;
+    }
+
+    state.comparedKey = compareKey(cur);
+    clearFidelityError();
+    if (cmpStatus) {
+      cmpStatus.className = "y";
+      cmpStatus.textContent = "✓ تمت المقارنة بالمصدر المثبّت وطابق النص حرفاً بحرف";
+    }
+    toast("تمت المقارنة بالمصدر المثبّت بنجاح");
+  }
+
+  function showFidelityError(msg) {
+    var elErr = document.getElementById("dec-fidelity-error");
+    if (elErr) {
+      elErr.hidden = false;
+      elErr.textContent = "⚠ " + msg;
+    }
+    toast(msg);
+  }
+
+  function clearFidelityError() {
+    var elErr = document.getElementById("dec-fidelity-error");
+    if (elErr) {
+      elErr.hidden = true;
+      elErr.textContent = "";
+    }
+  }
+
+  var CHANGE_SCHEMA_KEYS = ["at", "action", "before", "after", "from", "to", "note", "window", "highlight_id", "origin"];
+  function toSchemaChange(entry) {
+    var out = {};
+    CHANGE_SCHEMA_KEYS.forEach(function (k) {
+      if (Object.prototype.hasOwnProperty.call(entry, k)) out[k] = entry[k];
+    });
+    return out;
+  }
+
+  function logEntriesForHighlight(h) {
+    var hid = h.move_id || h.id;
+    return (state.log || []).filter(function (e) {
+      return e.highlight_id === hid;
+    });
+  }
+
+  function buildExportRecord(h) {
+    var wid = h.window_id || state.windowId;
+    var T = activeTafsir();
+    var w = (T && T.windows && T.windows[wid]) || (DATA.windows && DATA.windows[wid]) || currentWindow();
+    var t = tafsirMeta();
+    var ayah = windowAyahParts(w);
+    var baseStart = (w && w.window_start != null) ? w.window_start : 0;
+    var rawText = (w && w.window_text != null) ? w.window_text : (currentRaw() ? currentRaw().text : "");
+    var text = rawText.slice(h.start - baseStart, h.end - baseStart);
+    var fidelityOk = text.length === (h.end - h.start);
+    var snap = h.aiSnapshot || {
+      start: h.start,
+      end: h.end,
+      primary: h.primary,
+      secondary: h.secondary || [],
+      content_tags: h.content_tags || [],
+      certainty: h.certainty,
+      route: h.route,
+      score: (h.score && h.score.total != null) ? h.score.total : h.score
+    };
+    var aiLabels = {
+      source_method: [],
+      content_type: (snap.content_tags || []).slice()
+    };
+    if (snap.primary) aiLabels.source_method.push(snap.primary);
+    (snap.secondary || []).forEach(function (s) {
+      if (s && aiLabels.source_method.indexOf(s) < 0) aiLabels.source_method.push(s);
+    });
+    var scoreVal = snap.score;
+    if (scoreVal && typeof scoreVal === "object") scoreVal = scoreVal.total;
+    var changes = logEntriesForHighlight(h).map(toSchemaChange);
+    var reviewedAt = null;
+    for (var i = changes.length - 1; i >= 0; i--) {
+      if (/status_|approve|reject|needs_edit|restore_ai|merge|resize|label_/.test(changes[i].action)) {
+        reviewedAt = changes[i].at;
+        break;
+      }
+    }
+    if (!reviewedAt && changes.length) reviewedAt = changes[changes.length - 1].at;
+    if (!reviewedAt) reviewedAt = new Date().toISOString();
+    return {
+      annotation_id: t.id + "-" + wid + "-" + (h.move_id || h.id),
+      quran: { surah: ayah.surah, ayah: ayah.ayah },
+      tafsir: { id: t.id, name: t.name },
+      source: {
+        source_id: sourceIdFor(w),
+        sha256: (w && w.source_sha256) || (currentRaw() && currentRaw().source_sha256) || null,
+        start_char: h.start,
+        end_char: h.end
+      },
+      labels: {
+        source_method: methodLabelsOf(h),
+        content_type: (h.content_tags || []).slice()
+      },
+      text: text,
+      verification: {
+        text_fidelity: fidelityOk ? "exact" : "mismatch",
+        strict_match: fidelityOk,
+        normalized_match: fidelityOk
+      },
+      ai_proposal: {
+        start_char: snap.start,
+        end_char: snap.end,
+        labels: aiLabels,
+        certainty: snap.certainty,
+        score: scoreVal,
+        route: snap.route
+      },
+      review: {
+        status: STATUS_EXPORT[normalizeStatus(h.review_status)] || "ai_proposed",
+        reviewer_role: "tafsir_specialist",
+        reviewed_at: reviewedAt,
+        changes: changes
+      }
+    };
+  }
+
+  function exportApprovedRecords() {
+    var approved = [];
+    (state.reviewMoves || []).forEach(function (m) {
+      if (normalizeStatus(m.review_status) === "approved" && !m.rejected) {
+        approved.push(buildExportRecord(m));
+      }
+    });
+    return approved;
+  }
+
+  function collectSourceRunText(container) {
+    if (!container) return "";
+    var runs = Array.prototype.slice.call(container.querySelectorAll(".src-run"));
+    runs.sort(function (a, b) {
+      return parseInt(a.getAttribute("data-abs-start"), 10) - parseInt(b.getAttribute("data-abs-start"), 10);
+    });
+    return runs.map(function (r) { return r.textContent || ""; }).join("");
+  }
+
+  function checkReconstructionFidelity(container) {
+    var raw = currentRaw();
+    var w = currentWindow();
+    var expect = (raw && raw.text != null) ? raw.text : (w ? w.window_text : "");
+    var got = collectSourceRunText(container);
+    var sha = (raw && raw.source_sha256) || (w && w.source_sha256) || "";
+    var shortSha = sha ? sha.slice(0, 12) : "—";
+    if (got === expect && expect.length > 0) {
+      return { ok: true, sha: shortSha, gotLen: got.length, expectLen: expect.length };
+    }
+    var n = Math.min(got.length, expect.length);
+    var diff = n;
+    for (var i = 0; i < n; i++) {
+      if (got.charAt(i) !== expect.charAt(i)) { diff = i; break; }
+    }
+    if (got.length !== expect.length && diff === n) diff = n;
+    return { ok: false, diff: diff, sha: shortSha, gotLen: got.length, expectLen: expect.length };
+  }
+
+  function updateReviewReconstructionBadge() {
+    var paper = document.getElementById("review-paper");
+    var res = checkReconstructionFidelity(paper);
+    var badge = document.getElementById("review-cmp-badge");
+    if (!badge) return;
+    badge.textContent = "";
+
+    if (res.ok) {
+      badge.className = "cmp-badge ok";
+      var s1 = document.createElement("span");
+      s1.textContent = "✓ النص المعاد بناؤه يطابق المصدر المثبّت حرفاً بحرف";
+      var s2 = document.createElement("span");
+      s2.textContent = " · sha256 " + res.sha;
+      badge.appendChild(s1);
+      badge.appendChild(s2);
+    } else {
+      badge.className = "cmp-badge bad";
+      var sWarn = document.createElement("span");
+      sWarn.textContent = "⚠ عدم تطابق عند الإزاحة " + toArabicDigits(res.diff) + " (مُعاد " + toArabicDigits(res.gotLen) + " / أصل " + toArabicDigits(res.expectLen) + ") · sha256 " + res.sha;
+      badge.appendChild(sWarn);
+    }
+  }
+
+  function updateReaderReconstructionBanner() {
+    var infoEl = document.getElementById("reader-info-banner");
+    if (!infoEl) return;
+    var art = document.getElementById("reading-article");
+    var res = checkReconstructionFidelity(art);
+
+    var moves = state.reviewMoves;
+    var approvedCount = 0;
+    var proposedCount = 0;
+    moves.forEach(function (m) {
+      if (m.review_status === "approved") approvedCount++;
+      else proposedCount++;
+    });
+
+    infoEl.textContent = "";
+
+    if (!res.ok) {
+      infoEl.className = "info-banner is-mismatch";
+      var warnB = document.createElement("b");
+      warnB.textContent = "⚠ عدم تطابق مع المصدر المثبّت";
+      infoEl.appendChild(warnB);
+      var warnText = document.createTextNode(" عند الإزاحة " + toArabicDigits(res.diff) + " (مُعاد " + toArabicDigits(res.gotLen) + " / أصل " + toArabicDigits(res.expectLen) + ") · sha256 " + res.sha);
+      infoEl.appendChild(warnText);
+      return;
+    }
+
+    infoEl.className = "info-banner";
+    infoEl.appendChild(document.createTextNode("ⓘ "));
+    var b = document.createElement("b");
+    if (approvedCount > 0) {
+      infoEl.classList.add("has-approved");
+      b.textContent = "معتمد: " + toArabicDigits(approvedCount);
+      infoEl.appendChild(b);
+      infoEl.appendChild(document.createTextNode(" بواسطة متخصص · باقي الوسوم (" + toArabicDigits(proposedCount) + ") مقترحة آلياً · النص مطابق للمصدر حرفاً بحرف (sha256 " + res.sha + ")"));
+    } else {
+      infoEl.classList.remove("has-approved");
+      b.textContent = "الوسوم مقترحة آلياً";
+      infoEl.appendChild(b);
+      infoEl.appendChild(document.createTextNode(" ولم يعتمدها متخصص بعد · النص نفسه مطابق للمصدر حرفاً بحرف (sha256 " + res.sha + ")"));
+    }
+  }
+
+  var readerObserver = null;
+  function observeReaderArticle() {
+    var art = document.getElementById("reading-article");
+    if (!art || !window.MutationObserver) return;
+    if (readerObserver) readerObserver.disconnect();
+    readerObserver = new MutationObserver(function () {
+      updateReaderReconstructionBanner();
+    });
+    readerObserver.observe(art, {
+      characterData: true,
+      childList: true,
+      subtree: true
+    });
+  }
+
+  function resolveAnnotator() {
+    var T = activeTafsir();
+    if (!T) return;
+    var block = (T.verified && T.verified[state.windowId]) || {};
+    var pref = ["codex", "deepseek", "mimo"];
+    var avail = pref.filter(function (a) { return a in block && ((block[a].moves) || []).length > 0; });
+    var others = Object.keys(block).filter(function (a) { return pref.indexOf(a) < 0 && ((block[a].moves) || []).length > 0; });
+    var all = avail.concat(others);
+    state.annotator = all.length ? all[0] : (T.annotators && T.annotators[0]) || "codex";
+  }
+
+  function getBaseMoves() {
+    var T = activeTafsir();
+    if (!T) return [];
+    var block = (T.verified && T.verified[state.windowId]) || {};
+    if (state.annotator && block[state.annotator]) {
+      return (block[state.annotator].moves || []).slice();
+    }
+    var keys = Object.keys(block);
+    if (keys.length && block[keys[0]].moves) {
+      return block[keys[0]].moves.slice();
+    }
+    return [];
+  }
+
+  function replayMoves() {
+    var rawMoves = getBaseMoves();
+    var moves = JSON.parse(JSON.stringify(rawMoves));
+
+    // Replay decisions from state.log with strict re-verification (DELTA 3)
+    moves.forEach(function (m) {
+      var hid = m.move_id || m.id;
+      var entries = (state.log || []).filter(function (e) {
+        if (e.window !== state.windowId) return false;
+        if (e.tafsir && e.tafsir !== state.tafsirId) return false;
+        return e.highlight_id === hid;
+      });
+
+      entries.forEach(function (e) {
+        if (e.after) {
+          if (e.after.start != null) m.start = e.after.start;
+          if (e.after.end != null) m.end = e.after.end;
+          if (e.after.method) m.primary = e.after.method;
+        }
+        if (e.action === "status_reject" || e.action === "reject") {
+          m.review_status = "rejected";
+          m.rejected = true;
+        } else if (e.action === "recolor" || e.action === "resize") {
+          m.review_status = "edited";
+        } else if (e.action === "status_approve" || e.action === "approve") {
+          // Re-run strict fidelity verification on replay (Codex DELTA 3):
+          var dataVersionMatch = Boolean(e.data_version && DATA.data_version && e.data_version === DATA.data_version);
+          var currentSlice = sourceSlice(m.start, m.end);
+          var boundaryOk = verifyBoundaryFidelity(m.start, m.end, currentSlice);
+          var expectedText = e.text || (e.after && e.after.text) || m.text || "";
+          var textOk = Boolean(expectedText && currentSlice && expectedText === currentSlice);
+
+          if (dataVersionMatch && boundaryOk && textOk) {
+            m.review_status = "approved";
+            m.rejected = false;
+          } else {
+            m.review_status = "needs_recheck";
+            m.rejected = false;
+            var reasons = [];
+            if (!dataVersionMatch) reasons.push("تغير إصدار البيانات");
+            if (!boundaryOk || !textOk) reasons.push("تغير نص المصدر أو حدوده");
+            m.recheck_reason = "قرار سابق يحتاج إعادة تحقق (" + reasons.join(" · ") + ")";
+          }
+        }
+        if (e.note) m.note = e.note;
+      });
+    });
+
+    state.reviewMoves = moves;
+  }
+
+  function nonAuthorRanges() {
+    var w = currentWindow();
+    if (!w) return [];
+    var text = w.window_text;
+    var base = w.window_start;
+    var ranges = [];
+    (w.apparatus || []).forEach(function (ap) {
+      var kind = String(ap.kind || "");
+      var layer = String(ap.layer || ap.subtype || "");
+      if (kind === "layout") return;
+      if (NONAUTHOR_LAYERS[layer] || NONAUTHOR_LAYERS[kind] || /footnote|editor/i.test(layer)) {
+        if (ap.end > ap.start) ranges.push({ start: ap.start, end: ap.end });
+      }
+    });
+    for (var i = 0; i < text.length; i++) {
+      if (text.charAt(i) === "\u00ac") {
+        var close = text.indexOf("\u00a5", i);
+        var endRel = close < 0 ? text.length : close + 1;
+        ranges.push({ start: base + i, end: base + endRel });
+        i = endRel - 1;
+      }
+    }
+    return ranges;
+  }
+
+  function layoutBreakRanges() {
+    var w = currentWindow();
+    if (!w) return [];
+    var text = w.window_text;
+    var base = w.window_start;
+    var ranges = [];
+    var idx = 0;
+    while ((idx = text.indexOf("<br>", idx)) >= 0) {
+      ranges.push({ start: base + idx, end: base + idx + 4 });
+      idx += 4;
+    }
+    return ranges;
+  }
+
+  // --- RENDER HEADER SELECTS & NAVIGATION ---
+  function initHeaderControls() {
+    var tafsirSel = document.getElementById("tafsir-sel");
+    tafsirSel.textContent = "";
+    (DATA.tafsir_order || []).forEach(function (tid) {
+      var opt = document.createElement("option");
+      opt.value = tid;
+      opt.textContent = (DATA.tafsir_labels && DATA.tafsir_labels[tid]) || tid;
+      if (tid === state.tafsirId) opt.selected = true;
+      tafsirSel.appendChild(opt);
+    });
+    tafsirSel.addEventListener("change", function () {
+      state.tafsirId = tafsirSel.value;
+      resolveAnnotator();
+      replayMoves();
+      if (state.mode === "review") {
+        state.selectedId = state.reviewMoves.length ? (state.reviewMoves[0].move_id || state.reviewMoves[0].id) : null;
+      } else {
+        state.selectedId = null;
+      }
+      renderAll();
+    });
+
+    var verseSel = document.getElementById("verse-sel");
+    verseSel.textContent = "";
+    (DATA.window_order || []).forEach(function (wid) {
+      var opt = document.createElement("option");
+      opt.value = wid;
+      opt.textContent = (DATA.window_labels && DATA.window_labels[wid]) || wid;
+      if (wid === state.windowId) opt.selected = true;
+      verseSel.appendChild(opt);
+    });
+    verseSel.addEventListener("change", function () {
+      state.windowId = verseSel.value;
+      resolveAnnotator();
+      replayMoves();
+      if (state.mode === "review") {
+        state.selectedId = state.reviewMoves.length ? (state.reviewMoves[0].move_id || state.reviewMoves[0].id) : null;
+      } else {
+        state.selectedId = null;
+      }
+      renderAll();
+    });
+
+    document.getElementById("btn-prev-verse").addEventListener("click", function () {
+      navigateVerse(-1);
+    });
+    document.getElementById("btn-next-verse").addEventListener("click", function () {
+      navigateVerse(1);
+    });
+
+    document.getElementById("btn-theme-toggle").addEventListener("click", toggleTheme);
+
+    var toggleModeBtn = document.getElementById("btn-toggle-mode");
+    toggleModeBtn.addEventListener("click", function () {
+      setMode(state.mode === "reader" ? "review" : "reader");
+    });
+
+    document.getElementById("brand-logo").addEventListener("click", function () {
+      setMode("reader");
+    });
+  }
+
+  function navigateVerse(delta) {
+    var order = DATA.window_order || [];
+    var idx = order.indexOf(state.windowId);
+    if (idx < 0) return;
+    var nextIdx = idx + delta;
+    if (nextIdx >= 0 && nextIdx < order.length) {
+      state.windowId = order[nextIdx];
+      var verseSel = document.getElementById("verse-sel");
+      if (verseSel) verseSel.value = state.windowId;
+      resolveAnnotator();
+      replayMoves();
+      if (state.mode === "review") {
+        state.selectedId = state.reviewMoves.length ? (state.reviewMoves[0].move_id || state.reviewMoves[0].id) : null;
+      } else {
+        state.selectedId = null;
+      }
+      renderAll();
+    }
+  }
+
+  function setMode(mode) {
+    state.mode = mode;
+    var readerView = document.getElementById("reader-view");
+    var reviewView = document.getElementById("review-view");
+    var modeBadge = document.getElementById("header-mode-badge");
+    var headerStats = document.getElementById("header-review-stats");
+    var toggleModeBtn = document.getElementById("btn-toggle-mode");
+    var exportBtn = document.getElementById("btn-export-decisions");
+
+    if (mode === "review") {
+      if (!state.selectedId && state.reviewMoves.length) {
+        state.selectedId = state.reviewMoves[0].move_id || state.reviewMoves[0].id;
+      }
+      readerView.hidden = true;
+      reviewView.hidden = false;
+      modeBadge.hidden = false;
+      headerStats.hidden = false;
+      exportBtn.hidden = false;
+      toggleModeBtn.textContent = "خروج إلى القراءة";
+      toggleModeBtn.classList.remove("btn-primary");
+      try {
+        var url = new URL(window.location.href);
+        url.searchParams.set("mode", "review");
+        window.history.replaceState({}, "", url.toString());
+      } catch (e) { /* ignore */ }
+    } else {
+      state.selectedId = null;
+      readerView.hidden = false;
+      reviewView.hidden = true;
+      modeBadge.hidden = true;
+      headerStats.hidden = true;
+      exportBtn.hidden = true;
+      toggleModeBtn.textContent = "وضع المراجعة ←";
+      toggleModeBtn.classList.add("btn-primary");
+      try {
+        var url2 = new URL(window.location.href);
+        url2.searchParams.delete("mode");
+        window.history.replaceState({}, "", url2.toString());
+      } catch (e2) { /* ignore */ }
+    }
+    renderAll();
+  }
+
+  // --- RENDER READER MODE ---
+  function renderReader() {
+    var w = currentWindow();
+    if (!w) return;
+
+    var ayahParts = parseWindowKey(state.windowId);
+    var label = (DATA.window_labels && DATA.window_labels[state.windowId]) || state.windowId;
+    var verseText = (DATA.window_verses && DATA.window_verses[state.windowId]) || "";
+
+    var refEl = document.getElementById("reader-ayah-ref");
+    if (refEl) refEl.textContent = label;
+    var textEl = document.getElementById("reader-ayah-text");
+    if (textEl) textEl.textContent = verseText;
+
+    // Counts for methods present in this window
+    var moves = state.reviewMoves;
+    var counts = {};
+    var approvedCount = 0;
+    var proposedCount = 0;
+
+    moves.forEach(function (m) {
+      var p = m.primary;
+      if (p) counts[p] = (counts[p] || 0) + 1;
+      if (m.review_status === "approved") approvedCount++;
+      else proposedCount++;
+    });
+
+    // Render chips bar
+    var chipsContainer = document.getElementById("reader-dynamic-chips");
+    chipsContainer.textContent = "";
+
+    var chipNone = document.getElementById("chip-none");
+    if (chipNone) {
+      chipNone.classList.toggle("is-active", !state.colorEnabled);
+    }
+
+    var presentMethods = METHODS.filter(function (m) { return (counts[m.id] || 0) > 0; });
+    var unusedCount = METHODS.length - presentMethods.length;
+
+    presentMethods.forEach(function (m) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chip";
+      if (state.colorEnabled && state.activeMethodFilter === m.id) {
+        btn.classList.add("is-active");
+      }
+      var dot = document.createElement("i");
+      dot.className = "dot";
+      dot.style.background = m.color;
+      btn.appendChild(dot);
+
+      var txt = document.createTextNode(m.name + " ");
+      btn.appendChild(txt);
+
+      var cnt = document.createElement("small");
+      cnt.className = "cnt";
+      cnt.textContent = toArabicDigits(counts[m.id]);
+      btn.appendChild(cnt);
+
+      btn.addEventListener("click", function () {
+        if (!state.colorEnabled) state.colorEnabled = true;
+        if (state.activeMethodFilter === m.id) {
+          state.activeMethodFilter = null;
+        } else {
+          state.activeMethodFilter = m.id;
+        }
+        renderReader();
+      });
+      chipsContainer.appendChild(btn);
+    });
+
+    var unusedNote = document.getElementById("chip-unused-note");
+    if (unusedNote) {
+      if (unusedCount > 0) {
+        unusedNote.hidden = false;
+        unusedNote.textContent = "+ " + toArabicDigits(unusedCount) + " مناهج لا ترد هنا";
+      } else {
+        unusedNote.hidden = true;
+      }
+    }
+
+    // Build Reader Text Article letter-by-letter with reconstruction checking
+    renderReaderArticle();
+    updateReaderReconstructionBanner();
+    observeReaderArticle();
+
+    // Render Aside: Distribution bar + legend
+    renderDistribution(counts, presentMethods);
+
+    // Render Aside: Table of contents
+    renderToc(w.window_text);
+
+    // Update external links
+    var qSlug = QURAN_TAFSIR_SLUGS[state.tafsirId] || "ar-tafsir-al-tabari";
+    var qLink = "https://quran.com/ar/" + ayahParts.surah + ":" + ayahParts.ayah + "/tafsirs/" + qSlug;
+    var dLink = "https://dorar.net/tafseer/" + ayahParts.surah;
+    var rDorar = document.getElementById("reader-dorar-link");
+    if (rDorar) rDorar.href = dLink;
+    var rQuran = document.getElementById("reader-quran-link");
+    if (rQuran) rQuran.href = qLink;
+  }
+
+  function renderDistribution(counts, presentMethods) {
+    var distBar = document.getElementById("dist-bar");
+    var distLegend = document.getElementById("dist-legend");
+    var distTitle = document.getElementById("dist-title");
+    if (!distBar || !distLegend) return;
+
+    var T = activeTafsir();
+    if (distTitle) {
+      distTitle.textContent = "مناهج " + (T ? T.short : "المفسر") + " في هذه الآية";
+    }
+
+    distBar.textContent = "";
+    distLegend.textContent = "";
+
+    presentMethods.forEach(function (m) {
+      var n = counts[m.id] || 0;
+      var seg = document.createElement("i");
+      seg.style.flex = String(n);
+      seg.style.background = m.color;
+      seg.title = m.name + " (" + n + ")";
+      distBar.appendChild(seg);
+
+      var item = document.createElement("div");
+      item.className = "leg-item";
+
+      var dot = document.createElement("i");
+      dot.style.background = m.color;
+      item.appendChild(dot);
+
+      var lbl = document.createElement("span");
+      lbl.textContent = m.name;
+      item.appendChild(lbl);
+
+      var cnt = document.createElement("span");
+      cnt.className = "leg-cnt";
+      cnt.textContent = toArabicDigits(n);
+      item.appendChild(cnt);
+
+      distLegend.appendChild(item);
+    });
+  }
+
+  function renderToc(text) {
+    var tocEl = document.getElementById("reader-toc");
+    if (!tocEl) return;
+    tocEl.textContent = "";
+
+    // Extract Quranic quotes or section titles in text
+    var re = /\{([^}]+)\}/g;
+    var match;
+    var seen = {};
+    var sections = [];
+
+    while ((match = re.exec(text)) !== null) {
+      var secName = match[1].trim();
+      if (secName.length > 2 && !seen[secName]) {
+        seen[secName] = true;
+        sections.push({ name: secName, pos: match.index });
+      }
+      if (sections.length >= 7) break;
+    }
+
+    if (!sections.length) {
+      sections.push({ name: "أول التفسير", pos: 0 });
+    }
+
+    sections.forEach(function (s, idx) {
+      var li = document.createElement("li");
+      li.textContent = s.name;
+      if (idx === 0) li.classList.add("is-cur");
+      li.addEventListener("click", function () {
+        tocEl.querySelectorAll("li").forEach(function (el) { el.classList.remove("is-cur"); });
+        li.classList.add("is-cur");
+        var art = document.getElementById("reading-article");
+        if (art) {
+          var targetEl = art.querySelector('[data-pos="' + s.pos + '"]') || art;
+          targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      });
+      tocEl.appendChild(li);
+    });
+  }
+
+  function renderReaderArticle() {
+    var art = document.getElementById("reading-article");
+    if (!art) return;
+    art.textContent = "";
+
+    if (!state.footnotesVisible) art.classList.add("hide-footnotes");
+    else art.classList.remove("hide-footnotes");
+
+    if (!state.colorEnabled) art.classList.add("no-color");
+    else art.classList.remove("no-color");
+
+    var w = currentWindow();
+    if (!w) return;
+    var text = w.window_text;
+    var base = w.window_start;
+
+    var cuts = {};
+    cuts[0] = true;
+    cuts[text.length] = true;
+
+    var nonAuth = nonAuthorRanges();
+    var brRanges = layoutBreakRanges();
+
+    nonAuth.forEach(function (r) {
+      var s0 = Math.max(0, r.start - base);
+      var s1 = Math.min(text.length, r.end - base);
+      if (s0 < s1) { cuts[s0] = true; cuts[s1] = true; }
+    });
+
+    brRanges.forEach(function (r) {
+      var s0 = Math.max(0, r.start - base);
+      var s1 = Math.min(text.length, r.end - base);
+      if (s0 < s1) { cuts[s0] = true; cuts[s1] = true; }
+    });
+
+    var moves = state.reviewMoves;
+    moves.forEach(function (m) {
+      if (state.activeMethodFilter && m.primary !== state.activeMethodFilter) return;
+      var s0 = Math.max(0, m.start - base);
+      var s1 = Math.min(text.length, m.end - base);
+      if (s0 < s1) { cuts[s0] = true; cuts[s1] = true; }
+    });
+
+    var pts = Object.keys(cuts).map(Number).sort(function (a, b) { return a - b; });
+
+    var frag = document.createDocumentFragment();
+
+    for (var i = 0; i < pts.length - 1; i++) {
+      var a = pts[i];
+      var b = pts[i + 1];
+      if (a >= b) continue;
+      var slice = text.slice(a, b);
+
+      if (slice === "<br>") {
+        var br = document.createElement("span");
+        br.className = "layout-br src-run";
+        br.setAttribute("data-abs-start", String(base + a));
+        var brSrc = document.createElement("span");
+        brSrc.className = "br-src";
+        brSrc.textContent = "<br>";
+        br.appendChild(brSrc);
+        frag.appendChild(br);
+        continue;
+      }
+
+      // Check if inside non-author / apparatus
+      var isNonAuth = nonAuth.some(function (r) {
+        return (r.start - base) <= a && (r.end - base) >= b;
+      });
+
+      if (isNonAuth) {
+        var fn = document.createElement("span");
+        fn.className = "fn src-run";
+        fn.setAttribute("data-abs-start", String(base + a));
+        fn.textContent = slice;
+        fn.title = "حاشية المحقق";
+        frag.appendChild(fn);
+        continue;
+      }
+
+      // Check if covering move
+      var coveringMove = null;
+      for (var mi = 0; mi < moves.length; mi++) {
+        var m = moves[mi];
+        if (state.activeMethodFilter && m.primary !== state.activeMethodFilter) continue;
+        var ms = m.start - base;
+        var me = m.end - base;
+        if (ms <= a && me >= b) {
+          coveringMove = m;
+          break;
+        }
+      }
+
+      if (coveringMove && state.colorEnabled) {
+        var mark = document.createElement("mark");
+        mark.className = "hl";
+        var isApp = coveringMove.review_status === "approved";
+        mark.classList.add(isApp ? "is-approved" : "is-proposed");
+        if (state.selectedId === (coveringMove.move_id || coveringMove.id)) {
+          mark.classList.add("is-selected");
+        }
+
+        var mObj = METHOD_MAP[coveringMove.primary];
+        var col = mObj ? mObj.color : "var(--accent)";
+        mark.style.backgroundColor = "color-mix(in srgb, " + col + " 12%, transparent)";
+        mark.style.textDecorationColor = col;
+        mark.setAttribute("data-hid", coveringMove.move_id || coveringMove.id);
+        mark.setAttribute("data-pos", String(a));
+
+        if (isApp) {
+          var okTag = document.createElement("span");
+          okTag.className = "hl-status";
+          okTag.textContent = "✓";
+          okTag.title = "معتمد";
+          mark.appendChild(okTag);
+        }
+
+        var run = document.createElement("span");
+        run.className = "src-run";
+        run.setAttribute("data-abs-start", String(base + a));
+        run.textContent = slice;
+        mark.appendChild(run);
+
+        (function (moveItem, markEl) {
+          markEl.addEventListener("click", function (e) {
+            e.stopPropagation();
+            showEvidenceCard(moveItem, markEl);
+          });
+        })(coveringMove, mark);
+
+        frag.appendChild(mark);
+      } else {
+        var txtNode = document.createElement("span");
+        txtNode.className = "src-run";
+        txtNode.setAttribute("data-abs-start", String(base + a));
+        txtNode.setAttribute("data-pos", String(a));
+        txtNode.textContent = slice;
+        frag.appendChild(txtNode);
+      }
+    }
+
+    art.appendChild(frag);
+  }
+
+  function showEvidenceCard(move, anchorEl) {
+    state.selectedId = move.move_id || move.id;
+    var prev = document.querySelectorAll(".reader-article .hl.is-selected");
+    prev.forEach(function (el) { el.classList.remove("is-selected"); });
+    anchorEl.classList.add("is-selected");
+
+    var card = document.getElementById("evidence-card");
+    if (!card) return;
+
+    var mObj = METHOD_MAP[move.primary] || { name: move.primary, color: "var(--accent)" };
+    document.getElementById("ec-dot").style.background = mObj.color;
+    document.getElementById("ec-method-name").textContent = mObj.name;
+
+    var isSecondary = (move.secondary || []).indexOf(move.primary) >= 0;
+    var roleStr = isSecondary ? "دور: مساعد" : "دور: أساسي";
+    var certStr = "اليقين: " + (CERT_AR[move.certainty] || move.certainty || "—");
+    document.getElementById("ec-role-line").textContent = roleStr + " · " + certStr;
+
+    var ratEl = document.getElementById("ec-rationale");
+    ratEl.textContent = move.rationale_ar || "";
+
+    var stEl = document.getElementById("ec-status-line");
+    if (move.review_status === "approved") {
+      stEl.className = "ec-status st-ok";
+      stEl.textContent = "حالة: معتمد ✓ (بواسطة متخصص)";
+    } else if (move.review_status === "needs_recheck") {
+      stEl.className = "ec-status st-pending";
+      stEl.textContent = "حالة: قرار سابق يحتاج إعادة تحقق";
+    } else {
+      stEl.className = "ec-status st-pending";
+      stEl.textContent = "حالة: مقترح آلي — لم يُعتمد بعد";
+    }
+
+    var ayahParts = parseWindowKey(state.windowId);
+    var qSlug = QURAN_TAFSIR_SLUGS[state.tafsirId] || "ar-tafsir-al-tabari";
+    var sLink = document.getElementById("ec-source-link");
+    sLink.href = "https://quran.com/ar/" + ayahParts.surah + ":" + ayahParts.ayah + "/tafsirs/" + qSlug;
+
+    // Position card - clamped strictly inside reader-col (Item 6)
+    card.hidden = false;
+    var rect = anchorEl.getBoundingClientRect();
+    var readerCol = document.querySelector(".reader-col") || document.getElementById("reader-view");
+    var colRect = readerCol.getBoundingClientRect();
+    var cardWidth = Math.min(320, Math.max(260, colRect.width - 24));
+    card.style.width = cardWidth + "px";
+
+    var anchorTop = rect.top - colRect.top;
+    var anchorBottom = rect.bottom - colRect.top;
+    var anchorLeft = rect.left - colRect.left;
+
+    var top = anchorBottom + 8;
+    if (rect.bottom + 260 > window.innerHeight && rect.top > 260) {
+      top = anchorTop - 250;
+    }
+
+    var maxLeft = colRect.width - cardWidth - 10;
+    var minLeft = 10;
+    var left = Math.max(minLeft, Math.min(maxLeft, anchorLeft - 20));
+
+    card.style.top = Math.max(10, top) + "px";
+    card.style.left = left + "px";
+
+    // Set up copy action - exact text without trim (Item 8)
+    var copyBtn = document.getElementById("ec-copy-btn");
+    copyBtn.onclick = function () {
+      var w = currentWindow();
+      var txt = w.window_text.slice(move.start - w.window_start, move.end - w.window_start);
+      var T = activeTafsir();
+      var citation = "«" + txt + "» [" + (T ? T.name : "التفسير") + " — الآية " + ayahParts.surah + ":" + ayahParts.ayah + " · منهج: " + mObj.name + "]";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(citation).then(function () {
+          toast("تم نسخ الموضع مع المرجع بنجاح");
+        });
+      } else {
+        toast("تم النسخ بنجاح");
+      }
+    };
+  }
+
+  // --- RENDER REVIEW MODE ---
+  function renderReview() {
+    var w = currentWindow();
+    if (!w) return;
+
+    var moves = state.reviewMoves;
+    var counts = { pending: 0, candidate: 0, done: 0, approved: 0, rejected: 0, edited: 0 };
+
+    moves.forEach(function (m) {
+      if (m.review_status === "approved") { counts.done++; counts.approved++; }
+      else if (m.review_status === "rejected") { counts.done++; counts.rejected++; }
+      else if (m.review_status === "edited") { counts.done++; counts.edited++; }
+      else if (m.route === "auto_candidate") { counts.candidate++; }
+      else { counts.pending++; }
+    });
+
+    // Header stats
+    var countStr = document.getElementById("stat-count-str");
+    if (countStr) {
+      countStr.textContent = toArabicDigits(counts.done) + " من " + toArabicDigits(moves.length) + " موضعاً";
+    }
+    var statusStr = document.getElementById("stat-status-str");
+    if (statusStr) {
+      statusStr.textContent = "معتمد " + toArabicDigits(counts.approved) + " · مرفوض " + toArabicDigits(counts.rejected) + " · معدّل " + toArabicDigits(counts.edited);
+    }
+    var pbOk = document.getElementById("pb-ok");
+    var pbBad = document.getElementById("pb-bad");
+    var pbMod = document.getElementById("pb-mod");
+    var pbRem = document.getElementById("pb-rem");
+    if (pbOk) pbOk.style.flex = String(counts.approved);
+    if (pbBad) pbBad.style.flex = String(counts.rejected);
+    if (pbMod) pbMod.style.flex = String(counts.edited);
+    if (pbRem) pbRem.style.flex = String(Math.max(0, moves.length - counts.done));
+
+    // Update Tab Counts
+    var cntPending = document.getElementById("cnt-pending");
+    if (cntPending) cntPending.textContent = toArabicDigits(counts.pending);
+    var cntCand = document.getElementById("cnt-candidate");
+    if (cntCand) cntCand.textContent = toArabicDigits(counts.candidate);
+    var cntDone = document.getElementById("cnt-done");
+    if (cntDone) cntDone.textContent = toArabicDigits(counts.done);
+
+    // Queue Items List
+    renderQueueItems(moves);
+
+    // Context Text in center
+    renderReviewText(moves);
+
+    // Decision Panel on left
+    renderDecisionPanel();
+  }
+
+  function renderQueueItems(moves) {
+    var container = document.getElementById("queue-items-container");
+    if (!container) return;
+    container.textContent = "";
+
+    var filtered = moves.filter(function (m) {
+      if (state.queueTab === "pending") {
+        return m.review_status !== "approved" && m.review_status !== "rejected" && m.review_status !== "edited" && m.route !== "auto_candidate";
+      } else if (state.queueTab === "candidate") {
+        return m.review_status !== "approved" && m.review_status !== "rejected" && m.review_status !== "edited" && m.route === "auto_candidate";
+      } else {
+        return m.review_status === "approved" || m.review_status === "rejected" || m.review_status === "edited";
+      }
+    });
+
+    if (!state.selectedId && filtered.length) {
+      state.selectedId = filtered[0].move_id || filtered[0].id;
+    }
+
+    filtered.forEach(function (m) {
+      var id = m.move_id || m.id;
+      var it = document.createElement("div");
+      it.className = "q-it";
+      if (state.selectedId === id) it.classList.add("is-cur");
+
+      var mObj = METHOD_MAP[m.primary] || { name: m.primary, color: "var(--accent)" };
+      var dot = document.createElement("i");
+      dot.className = "q-dot";
+      dot.style.background = mObj.color;
+      it.appendChild(dot);
+
+      var mid = document.createElement("div");
+      var tx = document.createElement("div");
+      tx.className = "tx";
+      tx.textContent = m.text || "";
+      mid.appendChild(tx);
+
+      var mt = document.createElement("div");
+      mt.className = "mt";
+      var scoreVal = m.score && m.score.total != null ? toArabicDigits(m.score.total) : "—";
+      mt.textContent = mObj.name + " · " + scoreVal;
+      mid.appendChild(mt);
+      it.appendChild(mid);
+
+      var b = document.createElement("span");
+      b.className = "badge ";
+      if (m.review_status === "approved") {
+        b.className += "b-approved";
+        b.textContent = "معتمد";
+      } else if (m.review_status === "rejected") {
+        b.className += "b-rejected";
+        b.textContent = "مرفوض";
+      } else if (m.review_status === "edited") {
+        b.className += "b-edited";
+        b.textContent = "معدّل";
+      } else if (m.review_status === "needs_recheck") {
+        b.className += "b-recheck";
+        b.style.background = "#fff3cd";
+        b.style.color = "#856404";
+        b.textContent = "يحتاج إعادة تحقق";
+      } else if (m.route === "auto_candidate") {
+        b.className += "b-candidate";
+        b.textContent = "مرشّح";
+      } else {
+        b.className += "b-specialist";
+        b.textContent = "مختص";
+      }
+      it.appendChild(b);
+
+      it.addEventListener("click", function () {
+        state.selectedId = id;
+        renderReview();
+      });
+
+      container.appendChild(it);
+    });
+  }
+
+  function renderReviewText(moves) {
+    var paper = document.getElementById("review-paper");
+    if (!paper) return;
+    paper.textContent = "";
+
+    var w = currentWindow();
+    if (!w) return;
+    var text = w.window_text;
+    var base = w.window_start;
+
+    var curMove = null;
+    moves.forEach(function (m) {
+      if ((m.move_id || m.id) === state.selectedId) curMove = m;
+    });
+
+    var cuts = {};
+    cuts[0] = true;
+    cuts[text.length] = true;
+
+    var nonAuth = nonAuthorRanges();
+    var brRanges = layoutBreakRanges();
+
+    nonAuth.forEach(function (r) {
+      var s0 = Math.max(0, r.start - base);
+      var s1 = Math.min(text.length, r.end - base);
+      if (s0 < s1) { cuts[s0] = true; cuts[s1] = true; }
+    });
+
+    brRanges.forEach(function (r) {
+      var s0 = Math.max(0, r.start - base);
+      var s1 = Math.min(text.length, r.end - base);
+      if (s0 < s1) { cuts[s0] = true; cuts[s1] = true; }
+    });
+
+    if (curMove) {
+      var s0 = Math.max(0, curMove.start - base);
+      var s1 = Math.min(text.length, curMove.end - base);
+      if (s0 < s1) { cuts[s0] = true; cuts[s1] = true; }
+    }
+
+    var pts = Object.keys(cuts).map(Number).sort(function (a, b) { return a - b; });
+
+    var frag = document.createDocumentFragment();
+
+    for (var i = 0; i < pts.length - 1; i++) {
+      var a = pts[i];
+      var b = pts[i + 1];
+      if (a >= b) continue;
+      var slice = text.slice(a, b);
+
+      if (slice === "<br>") {
+        var br = document.createElement("span");
+        br.className = "layout-br src-run";
+        br.setAttribute("data-abs-start", String(base + a));
+        var brSrc = document.createElement("span");
+        brSrc.className = "br-src";
+        brSrc.textContent = "<br>";
+        br.appendChild(brSrc);
+        frag.appendChild(br);
+        continue;
+      }
+
+      var isNonAuth = nonAuth.some(function (r) {
+        return (r.start - base) <= a && (r.end - base) >= b;
+      });
+
+      if (isNonAuth) {
+        var fn = document.createElement("span");
+        fn.className = "fn src-run";
+        fn.setAttribute("data-abs-start", String(base + a));
+        fn.textContent = slice;
+        frag.appendChild(fn);
+        continue;
+      }
+
+      var isCurMove = curMove && (curMove.start - base) <= a && (curMove.end - base) >= b;
+
+      if (isCurMove) {
+        var spanWrap = document.createElement("span");
+        spanWrap.className = "cur-move";
+        if (a === (curMove.start - base)) {
+          var sid = document.createElement("span");
+          sid.className = "sid";
+          sid.textContent = (curMove.span_ids && curMove.span_ids[0]) || "span";
+          spanWrap.appendChild(sid);
+        }
+        var run = document.createElement("span");
+        run.className = "src-run";
+        run.setAttribute("data-abs-start", String(base + a));
+        run.textContent = slice;
+        spanWrap.appendChild(run);
+        frag.appendChild(spanWrap);
+      } else {
+        var plain = document.createElement("span");
+        plain.className = "other-move src-run";
+        plain.setAttribute("data-abs-start", String(base + a));
+        plain.textContent = slice;
+        frag.appendChild(plain);
+      }
+    }
+
+    paper.appendChild(frag);
+
+    // Dynamic reconstruction fidelity check against pinned source (Item 3)
+    updateReviewReconstructionBadge();
+  }
+
+  function renderDecisionPanel() {
+    var curMove = null;
+    state.reviewMoves.forEach(function (m) {
+      if ((m.move_id || m.id) === state.selectedId) curMove = m;
+    });
+
+    var annLbl = document.getElementById("dec-annotator-lbl");
+    if (annLbl) annLbl.textContent = state.annotator ? "(" + state.annotator + ")" : "";
+
+    var propMethod = document.getElementById("dec-prop-method");
+    var roleEl = document.getElementById("dec-role");
+    var certEl = document.getElementById("dec-certainty");
+    var markerEl = document.getElementById("dec-marker");
+    var evEl = document.getElementById("dec-evidence");
+    var scoreEl = document.getElementById("dec-score-total");
+    var routeEl = document.getElementById("dec-route-label");
+    var noteEl = document.getElementById("review-note");
+
+    if (!curMove) {
+      if (propMethod) {
+        propMethod.textContent = "";
+        var spPrompt = document.createElement("span");
+        spPrompt.textContent = "اختر موضعاً";
+        propMethod.appendChild(spPrompt);
+      }
+      if (roleEl) roleEl.textContent = "—";
+      if (certEl) certEl.textContent = "—";
+      if (markerEl) markerEl.textContent = "—";
+      if (evEl) evEl.textContent = "—";
+      if (scoreEl) scoreEl.textContent = "—";
+      var scaleEl0 = document.getElementById("dec-score-scale");
+      if (scaleEl0) scaleEl0.textContent = "";
+      if (routeEl) routeEl.textContent = "—";
+      return;
+    }
+
+    var mObj = METHOD_MAP[curMove.primary] || { name: curMove.primary, color: "var(--accent)" };
+    if (propMethod) {
+      propMethod.textContent = "";
+      var iDot = document.createElement("i");
+      iDot.style.background = mObj.color || "var(--accent)";
+      var spName = document.createElement("span");
+      spName.textContent = mObj.name || (curMove.primary || "—");
+      propMethod.appendChild(iDot);
+      propMethod.appendChild(spName);
+    }
+
+    var isSecondary = (curMove.secondary || []).indexOf(curMove.primary) >= 0;
+    if (roleEl) roleEl.textContent = isSecondary ? "مساعد" : "أساسي";
+    if (certEl) certEl.textContent = CERT_AR[curMove.certainty] || curMove.certainty || "—";
+
+    var mHit = (curMove.marker_hits && curMove.marker_hits[0]) || null;
+    if (markerEl) {
+      markerEl.textContent = mHit ? (mHit.marker || mHit.family) : "—";
+    }
+
+    var evSpans = curMove.evidence_span_ids || curMove.span_ids || [];
+    if (evEl) evEl.textContent = evSpans.length ? evSpans.join(" – ") : "—";
+
+    var hasScore = curMove.score && curMove.score.total != null;
+    var scaleEl = document.getElementById("dec-score-scale");
+    if (scoreEl) scoreEl.textContent = hasScore ? toArabicDigits(curMove.score.total) : "—";
+    if (scaleEl) scaleEl.textContent = hasScore ? (" / " + toArabicDigits(VERIFIER_SCORE_MAX)) : "";
+    if (routeEl) {
+      routeEl.textContent = ROUTE_AR[curMove.route] || curMove.route || "—";
+    }
+
+    // Parts breakdown — show «—» unless verified/ data supplies real values (Item 5)
+    var parts = (curMove.score && curMove.score.parts) || null;
+    var spMarker = document.getElementById("sp-marker");
+    var valMarker = document.getElementById("val-marker");
+    var spFunc = document.getElementById("sp-func");
+    var valFunc = document.getElementById("val-func");
+    var spAttr = document.getElementById("sp-attr");
+    var valAttr = document.getElementById("val-attr");
+    var spBound = document.getElementById("sp-bound");
+    var valBound = document.getElementById("val-bound");
+
+    function renderPart(spEl, valEl, val, max) {
+      if (parts && val != null) {
+        if (spEl) spEl.style.width = Math.min(100, Math.max(0, val / max * 100)) + "%";
+        if (valEl) valEl.textContent = toArabicDigits(val);
+      } else {
+        if (spEl) spEl.style.width = "0%";
+        if (valEl) valEl.textContent = "—";
+      }
+    }
+    renderPart(spMarker, valMarker, parts ? parts.marker : null, 25);
+    renderPart(spFunc, valFunc, parts ? parts.function_evidence : null, 45);
+    renderPart(spAttr, valAttr, parts ? parts.attribution : null, 15);
+    renderPart(spBound, valBound, parts ? parts.boundary : null, 15);
+
+    var cmpStatus = document.getElementById("dec-compare-status");
+    var cmpSub = document.getElementById("compare-subpanel");
+    if (cmpStatus) {
+      if (curMove && curMove.review_status === "needs_recheck") {
+        cmpStatus.className = "n";
+        cmpStatus.textContent = "⚠ " + (curMove.recheck_reason || "قرار سابق يحتاج إعادة تحقق");
+        if (cmpSub) cmpSub.hidden = true;
+      } else if (curMove && state.comparedKey === compareKey(curMove)) {
+        cmpStatus.className = "y";
+        cmpStatus.textContent = "✓ تمت المقارنة بالمصدر المثبّت وطابق النص حرفاً بحرف";
+      } else {
+        cmpStatus.className = "n";
+        cmpStatus.textContent = "◌ لم تُعرض المقارنة بالمصدر بعد";
+        if (cmpSub) cmpSub.hidden = true;
+      }
+    }
+
+    var flagsItem = document.getElementById("dec-flags-item");
+    if (flagsItem) {
+      if (curMove.flags && curMove.flags.length > 0) {
+        flagsItem.className = "bad-flag";
+        flagsItem.textContent = "⚠ أعلام: " + curMove.flags.join("، ");
+      } else {
+        flagsItem.className = "n";
+        flagsItem.textContent = "◌ لا أعلام للمراجعة";
+      }
+    }
+
+    if (noteEl) {
+      noteEl.value = curMove.note || "";
+    }
+  }
+
+  // --- REVIEW ACTIONS ---
+  function recordDecision(action, move, newPrimary) {
+    if (!move) return false;
+    var before = {
+      start: move.start,
+      end: move.end,
+      method: move.primary,
+      secondary: (move.secondary || []).slice(),
+      certainty: move.certainty,
+      review_status: move.review_status
+    };
+
+    var note = (document.getElementById("review-note") || {}).value || "";
+
+    if (action === "approve") {
+      var k = compareKey(move);
+      if (state.comparedKey !== k) {
+        showFidelityError("اعرض مقارنة بالمصدر أولاً قبل الاعتماد (اضغط C أو زر «قارن بالمصدر»)");
+        return false;
+      }
+      var check = canApproveMove(move);
+      if (!check.ok) {
+        showFidelityError("تعذّر الاعتماد: " + check.reason);
+        return false;
+      }
+      clearFidelityError();
+      move.review_status = "approved";
+    } else if (action === "reject") {
+      clearFidelityError();
+      move.review_status = "rejected";
+    } else if (action === "recolor" && newPrimary) {
+      move.primary = newPrimary;
+      move.review_status = "under_review";
+    }
+    move.note = note;
+
+    var after = {
+      start: move.start,
+      end: move.end,
+      method: move.primary,
+      secondary: (move.secondary || []).slice(),
+      certainty: move.certainty,
+      review_status: move.review_status
+    };
+
+    var entry = {
+      window: state.windowId,
+      tafsir: state.tafsirId,
+      annotator: state.annotator,
+      data_version: DATA.data_version || "",
+      highlight_id: move.move_id || move.id,
+      origin: "specialist",
+      action: action === "approve" ? "status_approve" : (action === "reject" ? "status_reject" : action),
+      before: before,
+      after: after,
+      text: sourceSlice(move.start, move.end),
+      note: note,
+      at: new Date().toISOString()
+    };
+
+    state.log.push(entry);
+    saveLog();
+    renderReview();
+    if (state.mode === "reader") renderReader();
+    return true;
+  }
+
+  function setupReviewEvents() {
+    var tabPending = document.getElementById("tab-pending");
+    var tabCandidate = document.getElementById("tab-candidate");
+    var tabDone = document.getElementById("tab-done");
+
+    if (tabPending) {
+      tabPending.addEventListener("click", function () {
+        state.queueTab = "pending";
+        syncTabs();
+        renderReview();
+      });
+    }
+    if (tabCandidate) {
+      tabCandidate.addEventListener("click", function () {
+        state.queueTab = "candidate";
+        syncTabs();
+        renderReview();
+      });
+    }
+    if (tabDone) {
+      tabDone.addEventListener("click", function () {
+        state.queueTab = "done";
+        syncTabs();
+        renderReview();
+      });
+    }
+
+    function syncTabs() {
+      if (tabPending) tabPending.classList.toggle("is-on", state.queueTab === "pending");
+      if (tabCandidate) tabCandidate.classList.toggle("is-on", state.queueTab === "candidate");
+      if (tabDone) tabDone.classList.toggle("is-on", state.queueTab === "done");
+    }
+
+    var actCompare = document.getElementById("act-compare");
+    if (actCompare) {
+      actCompare.addEventListener("click", function () {
+        runCompareWithSource();
+      });
+    }
+
+    var actApprove = document.getElementById("act-approve");
+    if (actApprove) {
+      actApprove.addEventListener("click", function () {
+        var cur = getSelectedMove();
+        if (cur) {
+          if (recordDecision("approve", cur)) {
+            toast("اعتُمد الموضع بنجاح");
+            selectNextMove(1);
+          }
+        }
+      });
+    }
+
+    var actReject = document.getElementById("act-reject");
+    if (actReject) {
+      actReject.addEventListener("click", function () {
+        var cur = getSelectedMove();
+        if (cur) {
+          if (recordDecision("reject", cur)) {
+            toast("رُفض الموضع");
+            selectNextMove(1);
+          }
+        }
+      });
+    }
+
+    var actEdit = document.getElementById("act-edit");
+    var editSubpanel = document.getElementById("edit-subpanel");
+    if (actEdit && editSubpanel) {
+      actEdit.addEventListener("click", function () {
+        editSubpanel.hidden = !editSubpanel.hidden;
+        if (!editSubpanel.hidden) populateEditMethodSelect();
+      });
+    }
+
+    // Boundary buttons (Item 4)
+    var btnAdjBefore = document.getElementById("btn-adj-before");
+    var btnAdjShrinkStart = document.getElementById("btn-adj-shrink-start");
+    var btnAdjAfter = document.getElementById("btn-adj-after");
+    var btnAdjShrinkEnd = document.getElementById("btn-adj-shrink-end");
+    if (btnAdjBefore) btnAdjBefore.addEventListener("click", function () { adjustBoundary("before"); });
+    if (btnAdjShrinkStart) btnAdjShrinkStart.addEventListener("click", function () { adjustBoundary("shrink-start"); });
+    if (btnAdjAfter) btnAdjAfter.addEventListener("click", function () { adjustBoundary("after"); });
+    if (btnAdjShrinkEnd) btnAdjShrinkEnd.addEventListener("click", function () { adjustBoundary("shrink-end"); });
+
+    var actPrev = document.getElementById("act-prev");
+    if (actPrev) actPrev.addEventListener("click", function () { selectNextMove(-1); });
+    var actNext = document.getElementById("act-next");
+    if (actNext) actNext.addEventListener("click", function () { selectNextMove(1); });
+
+    // Mobile queue toggle
+    var btnMobileQ = document.getElementById("btn-toggle-mobile-queue");
+    var queuePanel = document.getElementById("review-queue-panel");
+    if (btnMobileQ && queuePanel) {
+      btnMobileQ.addEventListener("click", function () {
+        queuePanel.classList.toggle("is-collapsed");
+      });
+    }
+
+    // Keyboard shortcuts
+    window.addEventListener("keydown", function (e) {
+      var tag = (e.target && e.target.tagName) || "";
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
+      var key = e.key ? e.key.toLowerCase() : "";
+      if (state.mode === "review") {
+        if (key === "c") {
+          e.preventDefault();
+          runCompareWithSource();
+        } else if (key === "a") {
+          e.preventDefault();
+          var cur = getSelectedMove();
+          if (cur) {
+            if (recordDecision("approve", cur)) {
+              toast("اعتُمد الموضع بنجاح");
+              selectNextMove(1);
+            }
+          }
+        } else if (key === "r") {
+          e.preventDefault();
+          var curR = getSelectedMove();
+          if (curR) {
+            if (recordDecision("reject", curR)) {
+              toast("رُفض الموضع");
+              selectNextMove(1);
+            }
+          }
+        } else if (key === "e") {
+          e.preventDefault();
+          if (editSubpanel) {
+            editSubpanel.hidden = !editSubpanel.hidden;
+            if (!editSubpanel.hidden) populateEditMethodSelect();
+          }
+        } else if (key === "j") {
+          e.preventDefault();
+          selectNextMove(1);
+        } else if (key === "k") {
+          e.preventDefault();
+          selectNextMove(-1);
+        }
+      }
+    });
+
+    // Setup Export
+    setupExportModal();
+  }
+
+  function adjustBoundary(which) {
+    var cur = getSelectedMove();
+    if (!cur) return;
+    var text = currentWindow().window_text;
+    var words = wordBounds(text);
+    var before = {
+      id: cur.move_id || cur.id,
+      start: cur.start,
+      end: cur.end,
+      primary: cur.primary,
+      secondary: (cur.secondary || []).slice(),
+      certainty: cur.certainty,
+      review_status: cur.review_status
+    };
+    var locS = absToLocal(cur.start);
+    var locE = absToLocal(cur.end);
+
+    function wordIndexAt(offset, preferEnd) {
+      for (var i = 0; i < words.length; i++) {
+        if (!preferEnd && words[i].start === offset) return i;
+        if (preferEnd && words[i].end === offset) return i;
+        if (words[i].start <= offset && offset < words[i].end) return i;
+      }
+      return preferEnd ? words.length - 1 : 0;
+    }
+
+    if (which === "before") {
+      var si = wordIndexAt(locS, false);
+      if (si > 0) locS = words[si - 1].start;
+    } else if (which === "shrink-start") {
+      var si2 = wordIndexAt(locS, false);
+      if (si2 < words.length - 1 && words[si2 + 1].start < locE) locS = words[si2 + 1].start;
+    } else if (which === "after") {
+      var ei = wordIndexAt(locE, true);
+      if (ei < words.length - 1) locE = words[ei + 1].end;
+      else if (ei >= 0) locE = words[ei].end;
+    } else if (which === "shrink-end") {
+      var ei2 = wordIndexAt(locE, true);
+      if (ei2 > 0 && words[ei2 - 1].end > locS) locE = words[ei2 - 1].end;
+    }
+    commitResize(cur, before, locS, locE);
+  }
+
+  function commitResize(cur, before, locS, locE) {
+    var text = currentWindow().window_text;
+    locS = snapToWord(text, locS, "start");
+    locE = snapToWord(text, locE, "end");
+    if (locE <= locS) return false;
+    var absStart = localToAbs(locS);
+    var absEnd = localToAbs(locE);
+    var expected = text.slice(locS, locE);
+    if (!verifyBoundaryFidelity(absStart, absEnd, expected)) {
+      showFidelityError("خطأ في مطابقة حدود الموضع بعد التعديل");
+      return false;
+    }
+    cur.start = absStart;
+    cur.end = absEnd;
+    cur.review_status = "under_review";
+    state.comparedKey = null;
+    clearFidelityError();
+    var entry = {
+      window: state.windowId,
+      tafsir: state.tafsirId,
+      annotator: state.annotator,
+      highlight_id: cur.move_id || cur.id,
+      origin: "specialist",
+      action: "resize",
+      before: before,
+      after: {
+        start: cur.start,
+        end: cur.end,
+        method: cur.primary,
+        secondary: (cur.secondary || []).slice(),
+        certainty: cur.certainty,
+        review_status: cur.review_status
+      },
+      note: cur.note || "",
+      at: new Date().toISOString()
+    };
+    state.log.push(entry);
+    saveLog();
+    renderReview();
+    if (state.mode === "reader") renderReader();
+    toast("عُدّلت الحدود بنجاح");
+    return true;
+  }
+
+  function getSelectedMove() {
+    for (var i = 0; i < state.reviewMoves.length; i++) {
+      var m = state.reviewMoves[i];
+      if ((m.move_id || m.id) === state.selectedId) return m;
+    }
+    return null;
+  }
+
+  function selectNextMove(delta) {
+    var moves = state.reviewMoves;
+    if (!moves.length) return;
+    var idx = -1;
+    for (var i = 0; i < moves.length; i++) {
+      if ((moves[i].move_id || moves[i].id) === state.selectedId) {
+        idx = i;
+        break;
+      }
+    }
+    var nextIdx = idx + delta;
+    if (nextIdx >= 0 && nextIdx < moves.length) {
+      state.selectedId = moves[nextIdx].move_id || moves[nextIdx].id;
+      renderReview();
+    }
+  }
+
+  function populateEditMethodSelect() {
+    var sel = document.getElementById("edit-method-select");
+    if (!sel) return;
+    sel.textContent = "";
+    var cur = getSelectedMove();
+    METHODS.forEach(function (m) {
+      var opt = document.createElement("option");
+      opt.value = m.id;
+      opt.textContent = m.name;
+      if (cur && cur.primary === m.id) opt.selected = true;
+      sel.appendChild(opt);
+    });
+    sel.onchange = function () {
+      if (cur) {
+        recordDecision("recolor", cur, sel.value);
+        toast("تم تعديل المنهج إلى " + (METHOD_MAP[sel.value] || {}).name);
+      }
+    };
+  }
+
+  function getApprovedExportPayload() {
+    var records = exportApprovedRecords();
+    return {
+      data_version: DATA.data_version || "",
+      records: records
+    };
+  }
+
+  function setupExportModal() {
+    var exportBtn = document.getElementById("btn-export-decisions");
+    var modal = document.getElementById("export-modal");
+    var closeBtn = document.getElementById("btn-close-export");
+    var copyBtn = document.getElementById("btn-copy-export");
+    var dlBtn = document.getElementById("btn-download-export");
+    var area = document.getElementById("export-json-area");
+
+    if (exportBtn && modal) {
+      exportBtn.addEventListener("click", function () {
+        var records = exportApprovedRecords();
+        if (records.length === 0) {
+          toast("لا توجد وسوم معتمدة بعد");
+          modal.hidden = true;
+          return;
+        }
+        var payload = getApprovedExportPayload();
+        if (area) area.value = JSON.stringify(payload, null, 2);
+        modal.hidden = false;
+      });
+    }
+
+    if (closeBtn && modal) {
+      closeBtn.addEventListener("click", function () { modal.hidden = true; });
+    }
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) modal.hidden = true;
+      });
+    }
+
+    if (copyBtn && area) {
+      copyBtn.addEventListener("click", function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(area.value).then(function () {
+            toast("تم نسخ سجل القرارات (JSON)");
+          });
+        } else {
+          toast("تم النسخ بنجاح");
+        }
+      });
+    }
+
+    if (dlBtn && area) {
+      dlBtn.addEventListener("click", function () {
+        var blob = new Blob([area.value], { type: "application/json" });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "approved-" + state.tafsirId + "-" + state.windowId + ".json";
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+  }
+
+  function setupReaderEvents() {
+    var chipNone = document.getElementById("chip-none");
+    if (chipNone) {
+      chipNone.addEventListener("click", function () {
+        state.colorEnabled = !state.colorEnabled;
+        state.activeMethodFilter = null;
+        renderReader();
+      });
+    }
+
+    var toggleFootnotes = document.getElementById("toggle-footnotes");
+    if (toggleFootnotes) {
+      toggleFootnotes.addEventListener("change", function () {
+        state.footnotesVisible = toggleFootnotes.checked;
+        var rvFnLabel = document.getElementById("rv-fn-label");
+        if (rvFnLabel) rvFnLabel.textContent = state.footnotesVisible ? "ظاهرة" : "مخفية";
+        renderReaderArticle();
+      });
+    }
+
+    var btnFontDec = document.getElementById("btn-font-dec");
+    if (btnFontDec) {
+      btnFontDec.addEventListener("click", function () { bumpTypeScale(-1); });
+    }
+    var btnFontInc = document.getElementById("btn-font-inc");
+    if (btnFontInc) {
+      btnFontInc.addEventListener("click", function () { bumpTypeScale(1); });
+    }
+
+    var ecClose = document.getElementById("ec-close-btn");
+    if (ecClose) {
+      ecClose.addEventListener("click", function () {
+        var card = document.getElementById("evidence-card");
+        if (card) card.hidden = true;
+        state.selectedId = null;
+        var sel = document.querySelectorAll(".reader-article .hl.is-selected");
+        sel.forEach(function (el) { el.classList.remove("is-selected"); });
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      var card = document.getElementById("evidence-card");
+      if (card && !card.hidden && !card.contains(e.target) && !e.target.closest(".hl")) {
+        card.hidden = true;
+        state.selectedId = null;
+        var sel = document.querySelectorAll(".reader-article .hl.is-selected");
+        sel.forEach(function (el) { el.classList.remove("is-selected"); });
+      }
+    });
+  }
+
+  function renderAll() {
+    if (state.mode === "reader") {
+      renderReader();
+    } else {
+      renderReview();
+    }
+  }
+
+  function boot() {
+    loadLog();
+    loadTheme();
+    loadTypeScale();
+
+    // Check URL mode parameter
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get("mode") === "review") {
+        state.mode = "review";
+      }
+      var tParam = params.get("t") || params.get("tafsir");
+      if (tParam && (DATA.tafsir_order || []).indexOf(tParam) >= 0) {
+        state.tafsirId = tParam;
+      }
+      var wParam = params.get("w") || params.get("window");
+      if (wParam && (DATA.window_order || []).indexOf(wParam) >= 0) {
+        state.windowId = wParam;
+      }
+      var hash = (window.location.hash || "").replace(/^#/, "");
+      if (hash && (DATA.tafsir_order || []).indexOf(hash) >= 0) {
+        state.tafsirId = hash;
+      }
+    } catch (e) { /* ignore */ }
+
+    initHeaderControls();
+    setupReaderEvents();
+    setupReviewEvents();
+
+    resolveAnnotator();
+    replayMoves();
+    if (state.mode === "review" && state.reviewMoves.length) {
+      state.selectedId = state.reviewMoves[0].move_id || state.reviewMoves[0].id;
+    } else {
+      state.selectedId = null;
+    }
+
+    setMode(state.mode);
+  }
+
+  // Expose test and debugging API
+  window.__fahras_v2 = {
+    state: state,
+    getSelectedMove: getSelectedMove,
+    recordDecision: recordDecision,
+    adjustBoundary: adjustBoundary,
+    verifyBoundaryFidelity: verifyBoundaryFidelity,
+    canApproveMove: canApproveMove,
+    clearFidelityError: clearFidelityError,
+    exportApprovedRecords: exportApprovedRecords,
+    getApprovedExportPayload: getApprovedExportPayload,
+    buildExportRecord: buildExportRecord,
+    compareKey: compareKey,
+    runCompareWithSource: runCompareWithSource,
+    getRenderedMoveText: getRenderedMoveText,
+    updateReaderReconstructionBanner: updateReaderReconstructionBanner,
+    checkReconstructionFidelity: checkReconstructionFidelity
+  };
+  window.getSelectedMove = getSelectedMove;
+  window.recordDecision = recordDecision;
+  window.clearFidelityError = clearFidelityError;
+  window.adjustBoundary = adjustBoundary;
+  window.canApproveMove = canApproveMove;
+  window.runCompareWithSource = runCompareWithSource;
+  window.compareKey = compareKey;
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>
