@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact, assert_tiling as _assert_tiling
+
 RAW_A = ROOT / "data" / "raw" / "tafsircenter"
 LAYERS_DIR = ROOT / "data" / "layers"
 TARGET_AYAT = [(2, 255), (17, 105), (2, 102)]
@@ -27,8 +29,6 @@ _VERSE_REF_RE = re.compile(
 LAYERS = ("author", "footnote", "verse_ref", "editor_bracket")
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def is_verse_ref_content(inner: str) -> bool:
@@ -113,17 +113,6 @@ def classify(text: str) -> list[dict]:
     return ranges
 
 
-def _assert_tiling(ranges: list[dict], n: int) -> None:
-    assert ranges == sorted(ranges, key=lambda r: r["start"]), "ranges not sorted"
-    if n == 0:
-        assert ranges == []
-        return
-    assert ranges[0]["start"] == 0, "ranges do not start at 0"
-    assert ranges[-1]["end"] == n, "ranges do not end at len(text)"
-    for a, b in zip(ranges, ranges[1:]):
-        assert a["end"] == b["start"], f"gap/overlap at {a['end']} vs {b['start']}"
-        assert a["end"] > a["start"], "empty range"
-    assert ranges[-1]["end"] > ranges[-1]["start"] or n == 0
 
 
 def layer_stats(ranges: list[dict], text: str) -> dict:

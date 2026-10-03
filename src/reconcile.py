@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact
+
 from normalize import l0_raw, l1_normalize  # noqa: E402
 
 RAW = ROOT / "data" / "raw"
@@ -18,8 +20,6 @@ REPORTS = ROOT / "reports"
 TARGET_AYAT = [(2, 255), (17, 105), (2, 102)]
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def _word_diff(a: str, b: str, max_regions: int = 30) -> list[dict]:

@@ -12,6 +12,8 @@ if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
 from layers import author_text_from_ranges, classify  # noqa: E402
+from textcore import read_exact as _read_exact
+
 from normalize import l1_normalize  # noqa: E402
 from reconcile import _resolve_source_dirs, _word_diff  # noqa: E402
 
@@ -21,8 +23,6 @@ REPORTS = ROOT / "reports"
 TARGET_AYAT = [(2, 255), (17, 105), (2, 102)]
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def _load_or_classify(key: str, text_a: str) -> list[dict]:

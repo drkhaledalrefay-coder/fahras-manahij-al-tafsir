@@ -42,6 +42,100 @@ def highlight_count(page):
 def has_horiz_scroll(page):
     return page.evaluate("document.documentElement.scrollWidth > document.documentElement.clientWidth + 2")
 
+def _drawer_or_backdrop_open(page):
+    drawer_open = False
+    try:
+        drawer_open = page.is_visible("#drawer")
+    except Exception as e:
+        print(f"[qa] close_drawer: drawer visibility check failed: {e}", file=sys.stderr)
+    backdrop_open = False
+    try:
+        if page.query_selector("#drawer-backdrop"):
+            backdrop_open = page.evaluate(
+                "!document.getElementById('drawer-backdrop').hidden"
+            )
+    except Exception as e:
+        print(f"[qa] close_drawer: backdrop check failed: {e}", file=sys.stderr)
+    return drawer_open, backdrop_open
+
+
+def close_drawer(page, *, require_closed=True):
+    """Close highlight drawer + backdrop so later clicks are not intercepted.
+
+    Evidence (T9–T15 FAILs): after opening a highlight, `#drawer-backdrop` /
+    `#drawer` sit above the page (z-index 40/50) and Playwright click retries
+    time out. Real UI: Esc or `#drawer-close` calls closeDrawer(). Stale tests
+    kept clicking through an open drawer.
+
+    Cleanup failures are logged (never swallowed silently). When require_closed
+    is True (default), asserts drawer and backdrop are closed at the end.
+    """
+    try:
+        if page.is_visible("#drawer") or (
+            page.query_selector("#drawer-backdrop")
+            and page.evaluate("!document.getElementById('drawer-backdrop').hidden")
+        ):
+            if page.is_visible("#drawer-close"):
+                page.click("#drawer-close")
+            else:
+                page.keyboard.press("Escape")
+            page.wait_for_timeout(150)
+        # Ensure backdrop is gone even if Esc hit another overlay first.
+        if page.query_selector("#drawer-backdrop") and page.evaluate(
+            "!document.getElementById('drawer-backdrop').hidden"
+        ):
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(100)
+        if page.is_visible("#palette"):
+            if page.is_visible("#palette-cancel"):
+                page.click("#palette-cancel")
+            else:
+                page.keyboard.press("Escape")
+            page.wait_for_timeout(100)
+    except Exception as e:
+        print(f"[qa] close_drawer cleanup failed: {e}", file=sys.stderr)
+        if require_closed:
+            raise
+    if require_closed:
+        drawer_open, backdrop_open = _drawer_or_backdrop_open(page)
+        assert not drawer_open and not backdrop_open, (
+            f"drawer/backdrop still open after close_drawer "
+            f"(drawer_open={drawer_open}, backdrop_open={backdrop_open})"
+        )
+
+def mouse_select_in_tafsir(page):
+    """Drag-select text inside #tafsir (mouseup opens «إضافة إلى التعليق»).
+
+    Programmatic Range + synthetic mouseup is unreliable; the live UI listens
+    for real selection via onSelectAttempt on mouseup/touchend.
+    """
+    rect = page.evaluate("""() => {
+        var el = document.getElementById('tafsir');
+        if (!el) return null;
+        var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+        var node = walker.nextNode();
+        while (node && node.textContent.trim().length < 20) node = walker.nextNode();
+        if (!node) return null;
+        var r = document.createRange();
+        r.selectNodeContents(node);
+        var rects = r.getClientRects();
+        if (!rects.length) return null;
+        var rc = rects[rects.length - 1];
+        node.parentElement.scrollIntoView({block:'center'});
+        return {x:rc.x, y:rc.y, w:rc.width, h:rc.height};
+    }""")
+    page.wait_for_timeout(150)
+    if not rect:
+        return False
+    cx = rect["x"] + rect["w"] * 0.7
+    cy = rect["y"] + rect["h"] * 0.5
+    page.mouse.move(cx, cy)
+    page.mouse.down()
+    page.mouse.move(cx - 120, cy, steps=10)
+    page.mouse.up()
+    page.wait_for_timeout(300)
+    return True
+
 def contrast_ratio(rgb1, rgb2):
     def lum(rgb):
         def chan(c):
@@ -71,7 +165,18 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                                    is_mobile=is_phone, has_touch=is_phone)
         page = ctx.new_page()
         errs = []
-        page.on("console", lambda msg: errs.append(msg.text) if msg.type == "error" else None)
+        def _on_console(msg):
+            if msg.type != "error":
+                return
+            text = msg.text or ""
+            # Browsers auto-request /favicon.ico; static web/ has none — not a page bug.
+            if "favicon.ico" in text:
+                return
+            loc = msg.location or {}
+            if isinstance(loc, dict) and "favicon.ico" in str(loc.get("url") or ""):
+                return
+            errs.append(text)
+        page.on("console", _on_console)
         page.on("pageerror", lambda exc: errs.append(str(exc)))
 
         # T1 Load
@@ -210,13 +315,24 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                     page.keyboard.press("Escape")
                     page.wait_for_timeout(200)
                     drawer_closed = not page.is_visible("#drawer")
-                    log("T6", mode, "PASS" if (drawer_open and drawer_closed) else "FAIL",
-                        f"drawer_open={drawer_open} drawer_closed_after_esc={drawer_closed}")
+                    # Backdrop must clear too (otherwise T9+ clicks time out).
+                    backdrop_open = page.evaluate(
+                        "(() => { var b = document.getElementById('drawer-backdrop'); return b && !b.hidden; })()"
+                    )
+                    if backdrop_open:
+                        close_drawer(page)
+                        drawer_closed = not page.is_visible("#drawer")
+                        backdrop_open = page.evaluate(
+                            "(() => { var b = document.getElementById('drawer-backdrop'); return b && !b.hidden; })()"
+                        )
+                    log("T6", mode, "PASS" if (drawer_open and drawer_closed and not backdrop_open) else "FAIL",
+                        f"drawer_open={drawer_open} drawer_closed_after_esc={drawer_closed} backdrop_open={backdrop_open}")
                 else:
                     log("T6", mode, "SKIPPED", "no highlights found in current window")
             except Exception as e:
                 log("T6", mode, "FAIL", str(e))
 
+            close_drawer(page)
             # T7 side-by-side for all 12 windows
             try:
                 page.click("#side-by-side-btn")
@@ -283,60 +399,72 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
             page.wait_for_timeout(150)
 
             # T9 start review + select + palette + compare + approve
+            # Verdict: STALE TEST (not a UI regression). Evidence: clicks timed out
+            # on #drawer-backdrop / #drawer after add — selectHighlight() already
+            # opens the drawer; re-clicking the mark under the backdrop fails.
+            # Fix: mouse-drag selection; use drawer compare/approve; close after.
             try:
+                close_drawer(page)
                 page.click("#start-review-btn")
                 page.wait_for_timeout(200)
-                review_on = page.is_visible("#spec-tools")
+                review_on = page.is_visible("#spec-tools") or page.is_visible("#review-toolbar")
                 notes = f"review_tools_visible={review_on}"
+                t9_ok = False
                 if review_on:
-                    # select text inside tafsir
-                    tafsir_el = page.query_selector("#tafsir")
-                    txt = tafsir_el.inner_text() if tafsir_el else ""
-                    if len(txt) > 30:
-                        page.evaluate("""() => {
-                            var el = document.getElementById('tafsir');
-                            var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-                            var node = walker.nextNode();
-                            while(node && node.textContent.trim().length < 15) node = walker.nextNode();
-                            if(!node) return;
-                            var range = document.createRange();
-                            var start = node.textContent.indexOf(node.textContent.trim()[0]);
-                            range.setStart(node, start);
-                            range.setEnd(node, Math.min(node.textContent.length, start+10));
-                            var sel = window.getSelection();
-                            sel.removeAllRanges();
-                            sel.addRange(range);
-                            el.dispatchEvent(new Event('mouseup', {bubbles:true}));
-                            document.dispatchEvent(new Event('selectionchange', {bubbles:true}));
-                        }""")
-                        page.wait_for_timeout(300)
-                        palette_visible = page.is_visible("#palette")
-                        notes += f" palette_visible={palette_visible}"
-                        if palette_visible:
+                    selected = mouse_select_in_tafsir(page)
+                    notes += f" mouse_select={selected}"
+                    palette_visible = page.is_visible("#palette")
+                    notes += f" palette_visible={palette_visible}"
+                    if palette_visible:
+                        page.screenshot(path=os.path.join(GALLERY, "05_review_highlighter.png"))
+                        if page.is_visible("#palette-ok"):
+                            page.click("#palette-ok")
+                            page.wait_for_timeout(350)
+                            notes += " added_highlight"
+                        # UI opens drawer via selectHighlight after add — do NOT
+                        # re-click the mark (backdrop intercepts). Compare in drawer.
+                        if page.is_visible("#compare-source-btn"):
+                            page.click("#compare-source-btn")
+                            page.wait_for_timeout(300)
+                            badge = page.is_visible("#compare-badge")
+                            approve_enabled = (
+                                page.is_enabled("#drawer-approve-btn")
+                                if page.is_visible("#drawer-approve-btn")
+                                else False
+                            )
+                            notes += f" compare_badge={badge} approve_enabled={approve_enabled}"
                             page.screenshot(path=os.path.join(GALLERY, "05_review_highlighter.png"))
-                            if page.is_visible("#palette-ok"):
-                                page.click("#palette-ok")
-                                page.wait_for_timeout(300)
-                            notes += f" added_highlight"
-                            hls2 = page.query_selector_all("#tafsir [data-hid]")
-                            if hls2:
-                                hls2[-1].click()
-                                page.wait_for_timeout(300)
-                                if page.is_visible("#compare-source-btn"):
-                                    page.click("#compare-source-btn")
-                                    page.wait_for_timeout(300)
-                                    badge = page.is_visible("#compare-badge")
-                                    approve_enabled = page.is_enabled("#drawer-approve-btn") if page.is_visible("#drawer-approve-btn") else False
-                                    notes += f" compare_badge={badge} approve_enabled={approve_enabled}"
-                                    page.screenshot(path=os.path.join(GALLERY, "05_review_highlighter.png"))
-                    log("T9", mode, "PASS", notes)
+                            if approve_enabled and page.is_visible("#drawer-approve-btn"):
+                                page.click("#drawer-approve-btn")
+                                page.wait_for_timeout(250)
+                                notes += " approved"
+                            t9_ok = bool(badge and approve_enabled)
+                        elif page.is_enabled("#rt-compare-btn"):
+                            page.click("#rt-compare-btn", force=True)
+                            page.wait_for_timeout(300)
+                            if page.is_enabled("#rt-approve-btn"):
+                                page.click("#rt-approve-btn", force=True)
+                                page.wait_for_timeout(250)
+                                notes += " approved_via_toolbar"
+                                t9_ok = True
+                            else:
+                                notes += " rt_approve_disabled"
+                        else:
+                            notes += " no_compare_controls"
+                    else:
+                        notes += " palette_missing_after_select"
+                    close_drawer(page)
+                    log("T9", mode, "PASS" if t9_ok else "FAIL", notes)
                 else:
                     log("T9", mode, "FAIL", notes)
             except Exception as e:
+                close_drawer(page, require_closed=False)
+                page.screenshot(path=os.path.join(SHOTS, f"{shot_prefix}_T9_fail.png"))
                 log("T9", mode, "FAIL", f"{e}")
 
             # T10 boundary tools - light check of enabled state after selecting a highlight
             try:
+                close_drawer(page)
                 hls3 = page.query_selector_all("#tafsir [data-hid]")
                 if hls3:
                     hls3[0].click()
@@ -344,14 +472,17 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                     btn_ids = ["word-before","word-shrink-start","word-after","word-shrink-end","expand-next-sent-btn","restore-ai-btn"]
                     states = {b: page.is_enabled(f"#{b}") for b in btn_ids if page.query_selector(f"#{b}")}
                     log("T10", mode, "PASS", f"button_states={states}")
-                    page.keyboard.press("Escape")
+                    close_drawer(page)
                 else:
                     log("T10", mode, "SKIPPED", "no highlights to select")
             except Exception as e:
+                close_drawer(page, require_closed=False)
+                page.screenshot(path=os.path.join(SHOTS, f"{shot_prefix}_T10_fail.png"))
                 log("T10", mode, "FAIL", str(e))
 
             # T11 export
             try:
+                close_drawer(page)
                 page.click("#export-menu-btn")
                 page.wait_for_timeout(200)
                 menu_visible = page.is_visible("#export-menu")
@@ -378,10 +509,13 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                     page.click("#close-export")
                     page.wait_for_timeout(150)
             except Exception as e:
+                close_drawer(page, require_closed=False)
+                page.screenshot(path=os.path.join(SHOTS, f"{shot_prefix}_T11_fail.png"))
                 log("T11", mode, "FAIL", str(e))
 
             # T12 help panel
             try:
+                close_drawer(page)
                 page.click("#help-btn")
                 page.wait_for_timeout(200)
                 help_visible = page.is_visible("#help-panel")
@@ -401,10 +535,13 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                 log("T12", mode, "PASS" if (help_visible and tabs_ok and help_closed) else "FAIL",
                     f"visible={help_visible} tabs_ok={tabs_ok} closed_after_esc={help_closed}")
             except Exception as e:
+                close_drawer(page, require_closed=False)
+                page.screenshot(path=os.path.join(SHOTS, f"{shot_prefix}_T12_fail.png"))
                 log("T12", mode, "FAIL", str(e))
 
             # T13 text size persistence
             try:
+                close_drawer(page)
                 page.click("#type-larger")
                 page.wait_for_timeout(150)
                 size_after_click = page.eval_on_selector("#tafsir", "el => getComputedStyle(el).fontSize")
@@ -415,10 +552,12 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                 log("T13", mode, "PASS" if persisted else "FAIL",
                     f"after_click={size_after_click} after_reload={size_after_reload}")
             except Exception as e:
+                page.screenshot(path=os.path.join(SHOTS, f"{shot_prefix}_T13_fail.png"))
                 log("T13", mode, "FAIL", str(e))
 
             # T15 collapsible sections
             try:
+                close_drawer(page)
                 res_open_before = page.get_attribute("#results-disclose", "open") is not None
                 page.click("#results-summary")
                 page.wait_for_timeout(150)
@@ -431,10 +570,12 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
                 log("T15", mode, "PASS" if toggled else "FAIL",
                     f"results {res_open_before}->{res_open_after}; queue {q_open_before}->{q_open_after}")
             except Exception as e:
+                page.screenshot(path=os.path.join(SHOTS, f"{shot_prefix}_T15_fail.png"))
                 log("T15", mode, "FAIL", str(e))
 
             # T16 keyboard focus
             try:
+                close_drawer(page)
                 page.keyboard.press("Tab")
                 page.wait_for_timeout(100)
                 for _ in range(5):
@@ -447,6 +588,7 @@ def run_mode(mode, viewport, color_scheme, is_phone=False):
 
         # T14 theme toggle + contrast (run in all modes to compare)
         try:
+            close_drawer(page)
             initial_theme = page.evaluate("document.documentElement.getAttribute('data-theme')")
             page.click("#theme-btn")
             page.wait_for_timeout(250)

@@ -5,8 +5,9 @@ Deterministic and offline: no AI, no network, standard library + jsonschema only
 Usage:
     python src/export_approved.py INPUT.json --out approved.json [--include-rejected]
 
-INPUT is what the review UI's «تصدير المعتمد» button copies: either a JSON array of
-records or an object with an "annotations" array. Every selected record is validated
+INPUT is what the review UI's «تصدير المعتمد» button copies: a JSON array of
+records, an object with "annotations", an object with "records" (classic UI:
+optional data_version), or one record. Every selected record is validated
 against schema/annotation.schema.json (draft 2020-12) and then re-verified against the
 pinned source file (source.sha256, text == source[start_char:end_char], end > start);
 records that fail are reported with a reason and are never written.
@@ -26,11 +27,35 @@ import jsonschema
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = ROOT / "schema" / "annotation.schema.json"
+FAHRAS_HTML = ROOT / "web" / "fahras.html"
+# Same compact JSON form as build_fahras.embed() / _stable_build_date.
+DATA_VERSION_RE = re.compile(r'"data_version":"([^"]+)"')
+VERSION_MISMATCH_MSG = "نسخة البيانات مختلفة — أعد التحقق من القرارات"
 
 APPROVED = "approved"
 REJECTED = "rejected"
 # Working states: never publishable, not even with --include-rejected.
 WORKING_STATUSES = ("ai_proposed", "under_review")
+
+
+class VersionMismatchError(ValueError):
+    """UI export data_version does not match the current build."""
+
+    def __init__(self, message: str = VERSION_MISMATCH_MSG) -> None:
+        super().__init__(message)
+
+
+def current_data_version(html_path: Path | None = None) -> str:
+    """Read data_version embedded in web/fahras.html (build_fahras output)."""
+    path = Path(html_path) if html_path is not None else FAHRAS_HTML
+    try:
+        text = path.read_bytes().decode("utf-8")
+    except OSError as exc:
+        raise ValueError(f"تعذّر قراءة data_version من البناء الحالي: {exc}") from exc
+    match = DATA_VERSION_RE.search(text)
+    if match is None:
+        raise ValueError(f"تعذّر قراءة data_version من البناء الحالي: {path.as_posix()}")
+    return match.group(1)
 
 # --- one place to teach the tool about another tafsir or dataset -------------------
 # tafsir.id -> directory holding that work's pinned "<surah>_<ayah>.txt" files.
@@ -86,20 +111,46 @@ def annotation_id_of(record: dict) -> str:
     return value if isinstance(value, str) and value else "<no annotation_id>"
 
 
-def load_records(path: Path) -> list[dict]:
-    """Load a UI export: a JSON array, an object with "annotations", or one record."""
+def load_records(
+    path: Path,
+    *,
+    allow_version_mismatch: bool = False,
+    fahras_path: Path | None = None,
+) -> list[dict]:
+    """Load a UI export.
+
+    Accepted shapes:
+      - JSON array of records
+      - object with "records" (classic fahras «تصدير كل المعتمد»)
+      - object with "annotations"
+      - a single record object
+
+    When the envelope carries data_version, it must match the current build
+    (web/fahras.html) unless allow_version_mismatch is True.
+    """
     payload = json.loads(path.read_bytes().decode("utf-8"))
+    envelope_version: object | None = None
     if isinstance(payload, list):
         records = payload
+    elif isinstance(payload, dict) and isinstance(payload.get("records"), list):
+        records = payload["records"]
+        if "data_version" in payload:
+            envelope_version = payload["data_version"]
     elif isinstance(payload, dict) and isinstance(payload.get("annotations"), list):
         records = payload["annotations"]
+        if "data_version" in payload:
+            envelope_version = payload["data_version"]
     elif isinstance(payload, dict) and "annotation_id" in payload:
         records = [payload]
     else:
         raise ValueError(
-            'input must be a JSON array of records, an object with an "annotations" '
-            "array, or a single record object"
+            'input must be a JSON array of records, an object with a "records" '
+            'or "annotations" array, or a single record object'
         )
+    if envelope_version is not None and not allow_version_mismatch:
+        current = current_data_version(fahras_path)
+        if str(envelope_version) != current:
+            raise VersionMismatchError()
     for index, record in enumerate(records):
         if not isinstance(record, dict):
             raise ValueError(f"record #{index} is not a JSON object")
@@ -230,9 +281,16 @@ def export(
     out_path: Path,
     include_rejected: bool = False,
     schema_path: Path = SCHEMA_PATH,
+    *,
+    allow_version_mismatch: bool = False,
+    fahras_path: Path | None = None,
 ) -> dict:
     """Run the whole export and return a report dict (also the source of the summary)."""
-    records = load_records(Path(input_path))
+    records = load_records(
+        Path(input_path),
+        allow_version_mismatch=allow_version_mismatch,
+        fahras_path=fahras_path,
+    )
     validator = load_validator(Path(schema_path))
     report: dict = {
         "input": len(records),
@@ -329,13 +387,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "input",
-        help="ملف JSON من زر «تصدير المعتمد» (مصفوفة سجلات أو كائن فيه annotations)",
+        help=(
+            "ملف JSON من زر «تصدير المعتمد» "
+            "(مصفوفة، أو كائن فيه records/annotations، أو سجل واحد)"
+        ),
     )
     parser.add_argument("--out", required=True, help="ملف الخرج: مصفوفة السجلات المعتمدة")
     parser.add_argument(
         "--include-rejected",
         action="store_true",
         help="أدرج rejected أيضاً؛ ai_proposed و under_review لا يُصدَّران أبداً",
+    )
+    parser.add_argument(
+        "--allow-version-mismatch",
+        action="store_true",
+        help="تجاوز فحص data_version (غير افتراضي؛ للطوارئ/الاختبار فقط)",
     )
     return parser
 
@@ -348,12 +414,16 @@ def main(argv: list[str] | None = None) -> int:
             Path(args.input),
             Path(args.out),
             include_rejected=args.include_rejected,
+            allow_version_mismatch=args.allow_version_mismatch,
         )
     except FileNotFoundError as exc:
         print(f"خطأ: الملف غير موجود: {exc.filename}")
         return 2
     except json.JSONDecodeError as exc:
         print(f"خطأ: ملف JSON غير صالح: {exc}")
+        return 2
+    except VersionMismatchError as exc:
+        print(str(exc))
         return 2
     except (ValueError, jsonschema.exceptions.SchemaError) as exc:
         print(f"خطأ: {exc}")
@@ -362,6 +432,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"خطأ: تعذّر قراءة المدخل: {exc}")
         return 2
     print_summary(report, include_rejected=args.include_rejected)
+    # Empty records → written=[], dropped=0 → exit 0 (nothing to approve, nothing failed).
     dropped = report["dropped_schema"] + report["dropped_fidelity"] + report["duplicates"]
     return 1 if dropped else 0
 

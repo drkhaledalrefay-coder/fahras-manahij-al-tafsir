@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: v2 selftest
+        run: python src/v2_selftest.py
+
+      - name: Unit tests
+        run: pytest -q
+
+      - name: Deterministic build (build ×2 + cmp)
+        run: |
+          python src/build_fahras.py
+          cp web/fahras.html /tmp/fahras_build1.html
+          python src/build_fahras.py
+          cmp /tmp/fahras_build1.html web/fahras.html
+
+      - name: Frozen paths unchanged vs base
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          set -euo pipefail
+          # Match files under frozen dirs (not the dir names alone).
+          # MDR only: modify/delete/rename of existing files fail; adds are allowed.
+          FROZEN=(
+            ':(glob)data/**/raw/**'
+            ':(glob)data/**/layers/**'
+            ':(glob)data/**/spans/**'
+            ':(glob)data/**/windows/**'
+          )
+          check_frozen() {
+            local range="$1"
+            local label="$2"
+            local changed
+            changed="$(git diff --diff-filter=MDR --name-only "$range" -- "${FROZEN[@]}")"
+            if [ -n "$changed" ]; then
+              echo "ERROR: $label must not modify/delete/rename frozen raw/layers/spans/windows"
+              echo "$changed"
+              git diff --diff-filter=MDR --stat "$range" -- "${FROZEN[@]}"
+              exit 1
+            fi
+          }
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            git fetch origin "$BASE_REF"
+            check_frozen "origin/${BASE_REF}...HEAD" "PR"
+          elif [ "$EVENT_NAME" = "push" ]; then
+            if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+              check_frozen "HEAD~1...HEAD" "push"
+            else
+              echo "SKIP: no HEAD~1 on this push (initial commit); frozen-path base diff not applicable"
+            fi
+          else
+            echo "SKIP: frozen-path base diff not applicable for event=$EVENT_NAME"
+          fi
+
+      - name: Post-build frozen paths clean
+        run: |
+          git diff --exit-code -- \
+            ':(glob)data/**/raw/**' \
+            ':(glob)data/**/layers/**' \
+            ':(glob)data/**/spans/**' \
+            ':(glob)data/**/windows/**' || {
+              echo "ERROR: build must not modify raw/layers/spans/windows"
+              git diff --stat -- data
+              exit 1
+            }

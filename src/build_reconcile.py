@@ -22,6 +22,7 @@ if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
 from normalize import l1_normalize  # noqa: E402
+from textcore import read_exact, read_json as load_json  # noqa: E402
 
 SOURCE_REL = "data/raw/tafsircenter/2_255.txt"
 WINDOW_KEY = "2_255"
@@ -56,15 +57,6 @@ TAG_AR = {
 
 SET_SYSTEM = "مخرجات النظام"
 SET_EXCEL = "جدول الفريق (Excel)"
-
-
-def read_exact(path: Path) -> str:
-    with path.open(encoding="utf-8", newline="") as handle:
-        return handle.read()
-
-
-def load_json(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def verify_source() -> tuple[str, str]:

@@ -14,6 +14,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from textcore import sha256_bytes as _sha256_bytes
 RAW = ROOT / "data" / "raw"
 MANIFEST_PATH = RAW / "manifest.json"
 
@@ -29,8 +33,6 @@ SOURCES = {
 EXPECTED_DB_SHA256 = "10e61f615ab5e6a3440e8ecc8ba1dc2273d12cd9048752760fe53a44d191cc27"
 
 
-def _sha256_bytes(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
 
 
 def _utc_now() -> str:
