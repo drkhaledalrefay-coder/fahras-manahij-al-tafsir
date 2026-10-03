@@ -4,12 +4,13 @@ import argparse
 import glob
 import hashlib
 import json
+import os
 import sqlite3
 from pathlib import Path
 HERE = Path(__file__).resolve()
 ROOT = HERE.parents[2]
 DATA_NUR = ROOT / "data" / "nur"
-DEFAULT_DB = Path(r"C:\Users\Khale\Documents\Codex\2026-09-28\islamic-ai-contest\_db\quran.db")
+DEFAULT_DB = Path(os.environ.get("QURAN_DB", ROOT.parent / "_db" / "quran.db"))
 EXPECTED_DB_SHA256 = "10e61f615ab5e6a3440e8ecc8ba1dc2273d12cd9048752760fe53a44d191cc27"
 TAFSIRS = ("al_tabari", "ibn_kathir", "al_baghawi", "al_saadi")
 TABLES = {"al_tabari": "tafsir_tabary", "ibn_kathir": "tafsir_katheer", "al_baghawi": "tafsir_baghawy", "al_saadi": "tafsir_saadi"}
