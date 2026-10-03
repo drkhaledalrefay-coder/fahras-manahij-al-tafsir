@@ -2068,11 +2068,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
     }).join("، ") || "—";
     var st = normalizeStatus(h.review_status);
     el.drawerKv.innerHTML =
-      "<dt>المنهج</dt><dd>" + mname + "</dd>" +
-      "<dt>ثانوي</dt><dd>" + sec + "</dd>" +
-      "<dt>نوع المحتوى</dt><dd>" + contentNames + "</dd>" +
-      "<dt>اليقين</dt><dd>" + (CERT_AR[h.certainty] || h.certainty) + "</dd>" +
-      "<dt>المسار</dt><dd>" + (ROUTE_AR[h.route] || h.route) + "</dd>" +
+      "<dt>المنهج</dt><dd>" + escapeHtml(mname) + "</dd>" +
+      "<dt>ثانوي</dt><dd>" + escapeHtml(sec) + "</dd>" +
+      "<dt>نوع المحتوى</dt><dd>" + escapeHtml(contentNames) + "</dd>" +
+      "<dt>اليقين</dt><dd>" + escapeHtml(CERT_AR[h.certainty] || h.certainty) + "</dd>" +
+      "<dt>المسار</dt><dd>" + escapeHtml(ROUTE_AR[h.route] || h.route) + "</dd>" +
       "<dt>الأصل</dt><dd>" + (h.origin === "specialist" ? "متخصص" : "ذكاء") + "</dd>" +
       "<dt>الحالة</dt><dd><span class='status-badge' data-st='" + st + "'>" + STATUS_AR[st] + "</span></dd>" +
       (h.delta ? "<dt>ما تغيّر</dt><dd>" + escapeHtml(h.delta) + "</dd>" : "");
@@ -2084,15 +2084,15 @@ button, input, select, textarea { font: inherit; color: inherit; }
       cell("وظيفة", parts.function_evidence) +
       cell("نسبة", parts.attribution) +
       cell("حدود", parts.boundary) +
-      "<div class='score-cell' style='grid-column:1/-1'><strong>" + total + "</strong>المجموع / ١٠٠</div>";
+      "<div class='score-cell' style='grid-column:1/-1'><strong>" + escapeHtml(total) + "</strong>المجموع / ١٠٠</div>";
 
     var body = "";
-    body += "<p class='note'><strong>الدليل:</strong> " + (h.evidence_span_ids || []).join(", ") + "</p>";
-    body += "<p class='note'><strong>حكم المؤلف:</strong> " + ((h.author_verdict_span_ids || []).join(", ") || "—") + "</p>";
+    body += "<p class='note'><strong>الدليل:</strong> " + escapeHtml((h.evidence_span_ids || []).map(String).join(", ")) + "</p>";
+    body += "<p class='note'><strong>حكم المؤلف:</strong> " + escapeHtml((h.author_verdict_span_ids || []).map(String).join(", ") || "—") + "</p>";
     if (h.marker_hits && h.marker_hits.length) {
-      body += "<p class='note'><strong>علامات:</strong> " + h.marker_hits.map(function (x) {
+      body += "<p class='note'><strong>علامات:</strong> " + escapeHtml(h.marker_hits.map(function (x) {
         return (x.family || "") + "/" + (x.marker || "");
-      }).join(" · ") + "</p>";
+      }).join(" · ")) + "</p>";
     }
     if (h.editor_footnote_evidence && h.editor_footnote_evidence.length) {
       body += "<div class='editor-box'><h4>حاشية المحقق — دليل مساعد لا من كلام ابن كثير</h4>";
@@ -2102,11 +2102,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
       body += "</div>";
     }
     if (h.alternatives && h.alternatives.length) {
-      body += "<p class='note'><strong>بدائل:</strong> " + h.alternatives.join(", ") + "</p>";
+      body += "<p class='note'><strong>بدائل:</strong> " + escapeHtml(h.alternatives.map(String).join(", ")) + "</p>";
     }
     body += "<p class='note'><strong>التعليل:</strong> " + escapeHtml(h.rationale_ar || "—") + "</p>";
     if (h.flags && h.flags.length) {
-      body += "<p class='note'><strong>أعلام:</strong> " + h.flags.join(", ") + "</p>";
+      body += "<p class='note'><strong>أعلام:</strong> " + escapeHtml(h.flags.map(String).join(", ")) + "</p>";
     }
     el.drawerBody.innerHTML = body;
     el.hlNote.value = h.note || "";
@@ -2118,7 +2118,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   }
 
   function cell(label, n) {
-    return "<div class='score-cell'><strong>" + (n != null ? n : "—") + "</strong>" + label + "</div>";
+    return "<div class='score-cell'><strong>" + escapeHtml(n != null ? n : "—") + "</strong>" + label + "</div>";
   }
 
   function escapeHtml(s) {
