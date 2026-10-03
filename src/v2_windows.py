@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact, read_json as _read_json, sha256_file as _sha256_file
+
 from normalize import collapse_whitespace, remove_tashkeel  # noqa: E402
 
 SPANS_AUTHOR_DIR = ROOT / "data" / "spans_author"
@@ -28,12 +30,8 @@ _NEEDLE_WAQULUHU = "وقوله"
 _NEEDLE_ALIYY = "العلي العظيم"
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
-def _read_json(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
 
 
 def _match_norm(text: str) -> str:
@@ -49,8 +47,6 @@ def _match_norm(text: str) -> str:
     return collapse_whitespace(t)
 
 
-def _sha256_file(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def _apparatus_in_range(layers: dict, win_start: int, win_end: int, source: str) -> list[dict]:

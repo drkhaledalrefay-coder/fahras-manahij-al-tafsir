@@ -167,9 +167,16 @@ python -c "import json,jsonschema;S=json.load(open('schema/annotation.schema.jso
 python src/export_approved.py ui_export.json --out approved.json [--include-rejected]
 ```
 
-المدخل: ما ينسخه زر «تصدير المعتمد» — مصفوفة سجلات أو كائن فيه `annotations`.
+المدخل المقبول (أيّ شكل واحد):
+1. مصفوفة سجلات JSON
+2. كائن الواجهة الكلاسيكية: `{ "data_version": "<12 hex>", "records": [ ... ] }` من زر «تصدير كل المعتمد»
+3. كائن فيه `"annotations": [ ... ]` (وقد يحمل `data_version` أيضاً)
+4. سجل واحد (كائن فيه `annotation_id`)
+
+إن وُجد `data_version` في المغلف، يُقارَن بـ `data_version` المضمَّن في `web/fahras.html` (بناء `build_fahras`). عند الاختلاف: **لا يُكتب شيء**، ورسالة عربية ثابتة `نسخة البيانات مختلفة — أعد التحقق من القرارات`، ورمز الخروج **2**. التجاوز الاختياري غير الافتراضي: `--allow-version-mismatch`.
+
 لا يُكتب إلا سجل `approved` اجتاز المخطط، ثم أُعيد التحقق من بصمة ملف المصدر ومن `text == source[start_char:end_char]` ومن `end_char > start_char`؛ وما سِواه يُطبع في التقرير بسببه. ومع `--include-rejected` يُضاف `rejected` فقط، ولا يُصدَّر `ai_proposed` ولا `under_review` أبداً.
-المخرج مصفوفة مرتّبة بـ (سورة، آية، `start_char`)، وعند تكرار `annotation_id` يُحفظ الأحدث `review.reviewed_at`؛ ورمز الخروج: 0 إذا لم يُسقَط سجل، و1 إذا أُسقط. والفحص: `python -m unittest discover -s tests -p "test_export_approved.py"`.
+المخرج مصفوفة مرتّبة بـ (سورة، آية، `start_char`)، وعند تكرار `annotation_id` يُحفظ الأحدث `review.reviewed_at`. مجموعة معتمدة فارغة (لا سجلات مختارة/صالحة، بما فيها `records: []`) تكتب حرفياً `[]` وتخرج برمز **0**. رموز الخروج: **0** إذا لم يُسقَط سجل، و**1** إذا أُسقط سجل بعد الفحص، و**2** لخطأ المدخل أو اختلاف النسخة. والفحص: `python -m unittest discover -s tests -p "test_export_approved.py"`.
 
 
 

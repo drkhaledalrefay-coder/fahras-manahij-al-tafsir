@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact
+
 from multi_layers import author_text_from_ranges  # noqa: E402
 from spans_author import segment_author_chunk  # noqa: E402
 
@@ -23,8 +25,6 @@ TAFSIR_IDS = ("al_tabari", "al_saadi", "al_baghawi")
 TARGET_AYAT = [(2, 255), (2, 102), (17, 105)]
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def _span_inside_author(start: int, end: int, author_ranges: list[tuple[int, int]]) -> bool:
