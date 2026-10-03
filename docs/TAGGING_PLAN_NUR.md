@@ -71,6 +71,7 @@
 2. **تجربة عيّنة أولاً:** آية واحدة غنية بالتفاسير الأربعة — مثلاً **٢٤:٣٥ (آية النور)** — ثم توقّف:
    ```powershell
    # جلسة الطرفية فقط — لا تكتب المفتاح في ملف
+   $env:PYTHONIOENCODING = "utf-8"   # مطلوب على ويندوز للطباعة العربية
    $env:LLM_API_KEY = "ollama"
    $env:LLM_BASE_URL = "http://localhost:11434/v1"
    python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --dry-run
