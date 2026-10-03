@@ -22,6 +22,8 @@ from textcore import read_exact as _read_exact, read_json as _read_json
 
 TEMPLATE = ROOT / "src" / "fahras_template.html"
 OUT = ROOT / "web" / "fahras.html"
+TEMPLATE_V2 = ROOT / "src" / "fahras_v2_template.html"
+OUT_V2 = ROOT / "web" / "reader.html"
 
 DATA_MARKER = "__METHODS_DATA_JSON__"
 
@@ -557,15 +559,28 @@ def build() -> Path:
         raise SystemExit(f"missing template {TEMPLATE}")
     data = collect_data()
     _check_br_source_fidelity(data["tafsirs"])
+    embedded = embed(data)
     html = TEMPLATE.read_bytes().decode("utf-8")
     if "\r\n" in html:
         html = html.replace("\r\n", "\n")
     if DATA_MARKER not in html:
         raise SystemExit("template missing data marker")
-    html = html.replace(DATA_MARKER, embed(data))
+    html = html.replace(DATA_MARKER, embedded)
     check_html(html)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_bytes(html.encode("utf-8"))
+
+    if TEMPLATE_V2.is_file():
+        html_v2 = TEMPLATE_V2.read_bytes().decode("utf-8")
+        if "\r\n" in html_v2:
+            html_v2 = html_v2.replace("\r\n", "\n")
+        if DATA_MARKER not in html_v2:
+            raise SystemExit("v2 template missing data marker")
+        html_v2 = html_v2.replace(DATA_MARKER, embedded)
+        check_html(html_v2)
+        OUT_V2.parent.mkdir(parents=True, exist_ok=True)
+        OUT_V2.write_bytes(html_v2.encode("utf-8"))
+
     n_verified = sum(
         1
         for t in data["tafsirs"].values()
@@ -579,6 +594,11 @@ def build() -> Path:
         f"data_version={data.get('data_version')} "
         f"coverage={data.get('coverage', {}).get('label', '')}"
     )
+    if TEMPLATE_V2.is_file() and OUT_V2.is_file():
+        print(
+            f"wrote {OUT_V2.relative_to(ROOT).as_posix()} "
+            f"({OUT_V2.stat().st_size} bytes)"
+        )
     return OUT
 
 
