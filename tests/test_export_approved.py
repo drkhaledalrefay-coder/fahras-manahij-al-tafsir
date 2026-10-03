@@ -1,9 +1,10 @@
 """Tests for src/export_approved.py.
 
-tests/fixtures/ui_export_sample.json is what the review UI's «تصدير المعتمد» button
-copies, built from schema/example_approved.json: one approved and faithful record, the
-same record still ai_proposed, the same span with one letter changed in text, and the
-same span plus an unknown field. Only the first may reach approved.json.
+The four-record UI-export sample is built at runtime from
+schema/example_approved.json (not stored under tests/fixtures): one approved and
+faithful record, the same record still ai_proposed, the same span with one letter
+changed in text, and the same span plus an unknown field. Only the first may reach
+approved.json.
 
 Run with pytest, or with:
     python -m unittest discover -s tests -p "test_export_approved.py"
@@ -20,6 +21,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
@@ -27,7 +29,13 @@ if str(ROOT / "src") not in sys.path:
 
 import export_approved as exporter  # noqa: E402
 
-FIXTURE = ROOT / "tests" / "fixtures" / "ui_export_sample.json"
+# Synthetic Arabic filler — not from any tafsir (PART 4 envelope tests).
+SYNTHETIC_SOURCE = (
+    "هذا نص تجريبي ملفّق للاختبار فقط. "
+    "كلمات متتابعة بلا معنى تراثي: قمرٌ ونهرٌ وكتابٌ وحجرٌ وضوءٌ."
+)
+SYNTH_VERSION = "synthver0001"
+
 EXAMPLE = ROOT / "schema" / "example_approved.json"
 RAW_DIR = ROOT / "data" / "raw" / "tafsircenter"
 EXAMPLE_ID = "ibn_kathir-2_255_tafsir-m20"
@@ -37,6 +45,27 @@ FIDELITY_LINE = "المرفوض بسبب عدم المطابقة"
 
 def read_json(path: Path):
     return json.loads(Path(path).read_bytes().decode("utf-8"))
+
+
+def ui_export_sample() -> list[dict]:
+    """Runtime stand-in for a UI export: no tafsir text stored under tests/fixtures."""
+    valid = read_json(EXAMPLE)
+    pending = copy.deepcopy(valid)
+    pending["review"] = {
+        "status": "ai_proposed",
+        "reviewer_role": "tafsir_specialist",
+        "reviewed_at": "2026-09-28T12:00:00Z",
+        "changes": [],
+    }
+    changed = copy.deepcopy(valid)
+    changed["annotation_id"] = "ibn_kathir-2_255_tafsir-m21"
+    # One-letter corruption for fidelity failure (last letter of the slice).
+    text = changed["text"]
+    changed["text"] = text[:-2] + ("ز" if text[-2] != "ز" else "س") + text[-1:]
+    unknown = copy.deepcopy(valid)
+    unknown["annotation_id"] = "ibn_kathir-2_255_tafsir-m22"
+    unknown["ui_note"] = "should fail schema"
+    return [valid, pending, changed, unknown]
 
 
 def record_for(
@@ -112,7 +141,7 @@ class ExportApprovedTest(unittest.TestCase):
     # --- the fixture itself -------------------------------------------------------
 
     def test_fixture_holds_the_four_intended_records(self):
-        payload = read_json(FIXTURE)
+        payload = ui_export_sample()
         self.assertIsInstance(payload, list)
         self.assertEqual(len(payload), 4)
         valid, pending, changed, unknown = payload
@@ -133,7 +162,7 @@ class ExportApprovedTest(unittest.TestCase):
         self.assertEqual(set(changed), set(example))
 
     def test_fixture_writes_only_the_valid_record(self):
-        code, summary = self.run_main(read_json(FIXTURE))
+        code, summary = self.run_main(ui_export_sample())
         self.assertEqual(code, 1)
         self.assertEqual(read_json(self.out), [read_json(EXAMPLE)])
         for line in (
@@ -148,7 +177,7 @@ class ExportApprovedTest(unittest.TestCase):
             self.assertIn(line, summary)
 
     def test_fixture_report_counts_and_reasons(self):
-        report = self.report(read_json(FIXTURE))
+        report = self.report(ui_export_sample())
         self.assertEqual(
             (
                 report["input"],
@@ -175,7 +204,7 @@ class ExportApprovedTest(unittest.TestCase):
 
     def test_annotations_object_input_gives_the_same_result(self):
         payload = {
-            "annotations": read_json(FIXTURE),
+            "annotations": ui_export_sample(),
             "exported_at": "2026-09-28T13:00:00Z",
         }
         code, summary = self.run_main(payload)
@@ -271,7 +300,7 @@ class ExportApprovedTest(unittest.TestCase):
     # --- what gets dropped, and why ------------------------------------------------
 
     def test_fixture_record_with_unknown_field_fails_the_schema(self):
-        payload = copy.deepcopy(read_json(FIXTURE)[3])
+        payload = copy.deepcopy(ui_export_sample()[3])
         code, summary = self.run_main(payload)
         self.assertEqual(code, 1)
         self.assertEqual(read_json(self.out), [])
@@ -282,7 +311,7 @@ class ExportApprovedTest(unittest.TestCase):
         self.assertIn("ui_note", report["dropped"][0]["reason"])
 
     def test_fixture_record_with_one_changed_letter_fails_fidelity(self):
-        payload = copy.deepcopy(read_json(FIXTURE)[2])
+        payload = copy.deepcopy(ui_export_sample()[2])
         code, summary = self.run_main(payload)
         self.assertEqual(code, 1)
         self.assertEqual(read_json(self.out), [])
@@ -330,7 +359,8 @@ class ExportApprovedTest(unittest.TestCase):
         self.assertIn("end_char", report["dropped"][0]["reason"])
 
     def test_dropped_records_are_never_written(self):
-        payload = [copy.deepcopy(read_json(FIXTURE)[2]), copy.deepcopy(read_json(FIXTURE)[3])]
+        sample = ui_export_sample()
+        payload = [copy.deepcopy(sample[2]), copy.deepcopy(sample[3])]
         code, summary = self.run_main(payload)
         self.assertEqual(code, 1)
         self.assertEqual(read_json(self.out), [])
@@ -349,7 +379,7 @@ class ExportApprovedTest(unittest.TestCase):
         validator = exporter.load_validator()
         for record in (
             read_json(EXAMPLE),
-            read_json(FIXTURE)[0],
+            ui_export_sample()[0],
             record_for(2, 255, 23720, 66, EXAMPLE_ID),
             record_for(2, 102, 0, 40, "ibn_kathir-2_102_tafsir-m01", status="rejected"),
             record_for(17, 105, 0, 40, "ibn_kathir-17_105_tafsir-m01", status="ai_proposed"),
@@ -380,7 +410,7 @@ class ExportApprovedTest(unittest.TestCase):
                 [str(self.write_input({"windows": []})), "--out", str(self.out)]
             )
         self.assertEqual(code, 2)
-        self.assertIn("annotations", buffer.getvalue())
+        self.assertIn("records", buffer.getvalue())
 
     def test_output_file_is_utf8_indented_json(self):
         code, _ = self.run_main([read_json(EXAMPLE)])
@@ -388,8 +418,94 @@ class ExportApprovedTest(unittest.TestCase):
         raw = self.out.read_bytes()
         self.assertIn(b'\n  {\n    "annotation_id"', raw)
         self.assertNotIn(b"\\u0627", raw)
-        self.assertIn("السدي".encode("utf-8"), raw)
+        # UTF-8 Arabic from the schema example must appear literally (not \\uXXXX).
+        example_slice = read_json(EXAMPLE)["text"][:8].encode("utf-8")
+        self.assertTrue(example_slice)
+        self.assertIn(example_slice, raw)
         self.assertEqual(read_json(self.out), [read_json(EXAMPLE)])
+
+    # --- classic UI envelope {data_version, records} (synthetic only) -------------
+
+    def _synth_record_and_pin(self) -> dict:
+        pinned = self.workspace / "pinned"
+        pinned.mkdir(parents=True, exist_ok=True)
+        raw = SYNTHETIC_SOURCE.encode("utf-8")
+        (pinned / "1_1.txt").write_bytes(raw)
+        start, end = 0, 24
+        return {
+            "annotation_id": "synth_demo-1_1_window-m01",
+            "quran": {"surah": 1, "ayah": 1},
+            "tafsir": {"id": "synth_demo", "name": "مصدر اختباري ملفّق"},
+            "source": {
+                "source_id": "synth_demo_1_1",
+                "sha256": hashlib.sha256(raw).hexdigest(),
+                "start_char": start,
+                "end_char": end,
+            },
+            "labels": {"source_method": ["M_TABIIN"], "content_type": []},
+            "text": SYNTHETIC_SOURCE[start:end],
+            "verification": {
+                "text_fidelity": "exact",
+                "strict_match": True,
+                "normalized_match": True,
+            },
+            "ai_proposal": {
+                "start_char": start,
+                "end_char": end,
+                "labels": {"source_method": ["M_TABIIN"], "content_type": []},
+                "certainty": "explicit",
+                "score": 100,
+                "route": "auto_candidate",
+            },
+            "review": {
+                "status": "approved",
+                "reviewer_role": "tafsir_specialist",
+                "reviewed_at": "2026-09-28T12:00:00Z",
+                "changes": [],
+            },
+        }
+
+    def test_records_envelope_matching_version_is_written(self):
+        record = self._synth_record_and_pin()
+        pinned = self.workspace / "pinned"
+        payload = {"data_version": SYNTH_VERSION, "records": [record]}
+        with mock.patch.dict(
+            exporter.TAFSIR_SOURCE_DIRS,
+            {"synth_demo": pinned, "default": pinned},
+            clear=False,
+        ), mock.patch.object(
+            exporter, "current_data_version", return_value=SYNTH_VERSION
+        ):
+            code, summary = self.run_main(payload)
+        self.assertEqual(code, 0)
+        self.assertTrue(self.out.is_file())
+        self.assertEqual(read_json(self.out), [record])
+        self.assertIn("المعتمد المكتوب: 1", summary)
+
+    def test_records_envelope_version_mismatch_refuses_write(self):
+        record = self._synth_record_and_pin()
+        payload = {"data_version": "wrongversion1", "records": [record]}
+        preexisting = b'[{"keep":true}]'
+        self.out.parent.mkdir(parents=True, exist_ok=True)
+        self.out.write_bytes(preexisting)
+        with mock.patch.object(
+            exporter, "current_data_version", return_value=SYNTH_VERSION
+        ):
+            code, summary = self.run_main(payload)
+        self.assertEqual(code, 2)
+        self.assertEqual(summary.strip(), exporter.VERSION_MISMATCH_MSG)
+        self.assertEqual(self.out.read_bytes(), preexisting)
+
+    def test_records_envelope_empty_writes_nothing_exit_zero(self):
+        payload = {"data_version": SYNTH_VERSION, "records": []}
+        with mock.patch.object(
+            exporter, "current_data_version", return_value=SYNTH_VERSION
+        ):
+            code, summary = self.run_main(payload)
+        self.assertEqual(code, 0, msg="empty records → exit 0 (no drops)")
+        self.assertEqual(read_json(self.out), [])
+        self.assertIn("المعتمد المكتوب: 0", summary)
+        self.assertIn("عدد المدخل: 0", summary)
 
 
 if __name__ == "__main__":

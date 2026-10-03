@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_json as _read_json, resolve_base as _resolve_base
+
 DEFAULT_BASE = "data/v2"
 DEFAULT_V2_BASE = (ROOT / "data" / "v2").resolve()
 
@@ -68,15 +70,8 @@ SOFT_RULE_FLAGS = frozenset(
 )
 
 
-def _read_json(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
 
 
-def _resolve_base(base: str | Path) -> Path:
-    p = Path(base)
-    if not p.is_absolute():
-        p = ROOT / p
-    return p.resolve()
 
 
 def configure(base: str | Path = DEFAULT_BASE) -> Path:

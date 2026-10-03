@@ -129,6 +129,10 @@ python src/build_fahras.py     # → web/fahras.html  (الصفحة الرئيس
 python src/build_methods.py    # → web/methods.html (مرجع ابن كثير المجمَّد)
 ```
 
+`build_fahras.py` حتمي البايتات عند ثبات البيانات: `embed(..., sort_keys=True)`، و`build_date` يُعاد استخدامه إن لم يتغيّر `data_version` (أو من `SOURCE_DATE_EPOCH`). الدوال المشتركة للقراءة/التجزئة/التبليط في `src/textcore.py`.
+
+CI (GitHub Actions): `v2_selftest` + `pytest` + بناء مرتين مع `cmp`، ورفض أي تعديل تحت `raw|layers|spans|windows`.
+
 ### فتح الواجهة واستعراض النتائج
 
 - **مباشرة في المتصفح:** افتح الملف `web/fahras.html` مباشرة دون الحاجة لأي خادم.
@@ -231,4 +235,26 @@ python src/run_surah.py --db "<path-to>/quran.db" --tafsir al_baghawi --surah 8 
 # السعدي (75 نافذة)
 python src/run_surah.py --db "<path-to>/quran.db" --tafsir al_saadi --surah 8 --base data/anfal/al_saadi
 ```
+
+---
+
+## استيراد مراجعات الواجهة (`import_reviews`)
+
+بعد «تصدير كل المعتمد» من الواجهة، يُستورد الملف بعد التحقق (مخطط + مطابقة المصدر المثبّت). التفاصيل: [`DECISIONS_PROPOSAL.md`](DECISIONS_PROPOSAL.md) و[`DATA_FORMAT.md`](DATA_FORMAT.md) «أداة التصدير».
+
+شكل التصدير الكلاسيكي المقبول:
+
+```json
+{ "data_version": "<من البناء>", "records": [ /* سجلات معتمدة */ ] }
+```
+
+إن اختلف `data_version` عن المضمَّن في `web/fahras.html` يُرفض الاستيراد برسالة `نسخة البيانات مختلفة — أعد التحقق من القرارات` (خروج 2). `records: []` → لا ملفات، خروج 0.
+
+```bash
+# --out-root مطلوب دائماً. للاختبار: مجلد مؤقت. للاستيراد الحقيقي: جذر المستودع صراحةً.
+python src/import_reviews.py export.json --base data/v2 --reviewer specialist_a --out-root .
+# اختياري غير افتراضي: --allow-version-mismatch
+```
+
+لا يُكتب تحت `data/` إلا إذا مرّر المشغّل `--out-root` يؤول إلى هناك. الاختبارات تستخدم مجلداً مؤقتاً فقط.
 

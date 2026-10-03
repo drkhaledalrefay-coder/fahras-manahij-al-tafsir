@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_json as _read_json
+
 SPANS_AUTHOR_DIR = ROOT / "data" / "spans_author"
 SPANS_PILOT_DIR = ROOT / "data" / "spans_pilot"
 
@@ -20,8 +22,6 @@ _ANCHOR_2_102 = (
 )  # كعب الأحبار عن كتب بني إسرائيل
 
 
-def _read_json(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
 
 
 def _window_all(spans: list[dict]) -> list[dict]:

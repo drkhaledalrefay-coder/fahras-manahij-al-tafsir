@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+from textcore import read_exact as _read_exact, assert_tiling as _assert_tiling
+
 from layers import is_verse_ref_content  # noqa: E402
 
 RAW_MULTI = ROOT / "data" / "raw" / "tafsircenter"
@@ -31,8 +33,6 @@ _HTML_TAG_RE = re.compile(r"</?[A-Za-z][^>]*>")
 _AS_MARKER_RE = re.compile(r"^as\d+$", re.IGNORECASE)
 
 
-def _read_exact(path: Path) -> str:
-    return path.read_bytes().decode("utf-8")
 
 
 def survey_patterns(text: str) -> dict:
@@ -208,16 +208,6 @@ def classify(text: str) -> list[dict]:
     return ranges
 
 
-def _assert_tiling(ranges: list[dict], n: int) -> None:
-    assert ranges == sorted(ranges, key=lambda r: r["start"])
-    if n == 0:
-        assert ranges == []
-        return
-    assert ranges[0]["start"] == 0
-    assert ranges[-1]["end"] == n
-    for a, b in zip(ranges, ranges[1:]):
-        assert a["end"] == b["start"]
-        assert a["end"] > a["start"]
 
 
 def range_stats(ranges: list[dict], text: str) -> dict:

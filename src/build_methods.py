@@ -8,6 +8,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from textcore import read_json as _read_json
 TEMPLATE = ROOT / "src" / "methods_template.html"
 OUT = ROOT / "web" / "methods.html"
 WINDOWS_DIR = ROOT / "data" / "v2" / "windows"
@@ -24,8 +28,6 @@ def embed(payload: object) -> str:
     return text.replace("<", "\\u003c").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
 
 
-def _read_json(path: Path) -> dict:
-    return json.loads(path.read_bytes().decode("utf-8"))
 
 
 def collect_data() -> dict:
