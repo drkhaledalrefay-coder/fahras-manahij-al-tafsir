@@ -12,7 +12,8 @@
 1. شغّل الصفحة والاختبارات: قسم «التشغيل» أدناه.
 2. إن كنت تعمل عبر Codex أو Claude: الأداة تقرأ [`AGENTS.md`](AGENTS.md) تلقائياً (Claude عبر [`CLAUDE.md`](CLAUDE.md)). ابدأ كل جلسة بـ «اقرأ AGENTS.md والتزم به».
 3. قواعد العمل والفروع: [`CONTRIBUTING.md`](CONTRIBUTING.md). قبل التسليم: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md).
-4. حالة المشروع والقرارات المعلّقة (النطاق ومصدر النص): [`docs/AUDIT_2026-10-02.md`](docs/AUDIT_2026-10-02.md).
+4. **المهام التالية بالترتيب:** [`docs/HANDOFF.md`](docs/HANDOFF.md).
+5. حالة المشروع والقرارات المعلّقة (النطاق ومصدر النص): [`docs/AUDIT_2026-10-02.md`](docs/AUDIT_2026-10-02.md).
 
 ## الفكرة
 
