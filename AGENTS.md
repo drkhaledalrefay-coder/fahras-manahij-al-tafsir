@@ -1,6 +1,6 @@
 # AGENTS.md — rules for AI coding agents (Codex, Claude, Cursor…)
 
-Read this before any change. Human-facing details: [`README.md`](README.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), [`docs/RUN.md`](docs/RUN.md), [`docs/AI_RUN.md`](docs/AI_RUN.md).
+Read this before any change. **Next tasks, in order: [`docs/HANDOFF.md`](docs/HANDOFF.md).** Human-facing details: [`README.md`](README.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), [`docs/RUN.md`](docs/RUN.md), [`docs/AI_RUN.md`](docs/AI_RUN.md).
 
 ## What this project is
 
