@@ -1,0 +1,60 @@
+{
+  "window_id": "24_9",
+  "tafsir_id": "al_tabari",
+  "ayah": "24:9",
+  "surah": 24,
+  "ayah_number": 9,
+  "source": "tafsircenter",
+  "source_file": "data/nur/al_tabari/raw/24_9.txt",
+  "source_sha256": "bb20556267ef0c71c7c855fe681fd05f44c6a11f86c5cb2a24ebd4d4639e1189",
+  "window_start": 4,
+  "window_end": 257,
+  "window_text": " وقولُه: {وَالْخَامِسَةَ أَنَّ غَضَبَ اللَّهِ عَلَيْهَا إِنْ} الآية. يقولُ: والشهادةَ الخامسةُ: أن غضَبَ اللهِ عليها إن كان زوجُها فيما رماها ¬في ت 2: \"رمي\".¥ به من الزنى {مِنَ الصَّادِقِينَ}.ورُفِع قولُه: (الخامسة) في كلتا الآيتين، بـ \"أن\" التي تليها. ",
+  "span_count": 4,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 4,
+      "end": 72,
+      "text": " وقولُه: {وَالْخَامِسَةَ أَنَّ غَضَبَ اللَّهِ عَلَيْهَا إِنْ} الآية."
+    },
+    {
+      "id": "s002",
+      "start": 72,
+      "end": 146,
+      "text": " يقولُ: والشهادةَ الخامسةُ: أن غضَبَ اللهِ عليها إن كان زوجُها فيما رماها "
+    },
+    {
+      "id": "s003",
+      "start": 162,
+      "end": 196,
+      "text": " به من الزنى {مِنَ الصَّادِقِينَ}."
+    },
+    {
+      "id": "s004",
+      "start": 196,
+      "end": 257,
+      "text": "ورُفِع قولُه: (الخامسة) في كلتا الآيتين، بـ \"أن\" التي تليها. "
+    }
+  ],
+  "apparatus": [
+    {
+      "start": 146,
+      "end": 162,
+      "kind": "apparatus",
+      "subtype": "footnote",
+      "text": "¬في ت 2: \"رمي\".¥"
+    }
+  ],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s004",
+    "start_index": 0,
+    "end_index": 3,
+    "char_length": 253,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

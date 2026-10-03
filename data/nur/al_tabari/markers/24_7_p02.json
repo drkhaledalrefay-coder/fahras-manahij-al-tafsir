@@ -1,0 +1,814 @@
+{
+  "window_id": "24_7_p02",
+  "ayah": "24:7",
+  "span_count": 57,
+  "family_counts": {
+    "HADITH": 12,
+    "NUZUL": 7,
+    "TABIIN": 4,
+    "RAY": 1,
+    "ISNAD": 5,
+    "QURAN": 6,
+    "SAHABA": 4,
+    "LUGHA": 2,
+    "EDITOR": 20
+  },
+  "spans": [
+    {
+      "span_id": "s104",
+      "markers": []
+    },
+    {
+      "span_id": "s105",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 7303,
+          "end": 7321,
+          "span_id": "s105"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 7325,
+          "end": 7331,
+          "span_id": "s105"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 7325,
+          "end": 7336,
+          "span_id": "s105"
+        }
+      ]
+    },
+    {
+      "span_id": "s106",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 7460,
+          "end": 7478,
+          "span_id": "s106"
+        }
+      ]
+    },
+    {
+      "span_id": "s107",
+      "markers": []
+    },
+    {
+      "span_id": "s108",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 7805,
+          "end": 7812,
+          "span_id": "s108"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "name": "سعيد بن جبير",
+          "role": "SPEAKER",
+          "start": 7891,
+          "end": 7905,
+          "span_id": "s108"
+        }
+      ]
+    },
+    {
+      "span_id": "s109",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 7931,
+          "end": 7934,
+          "span_id": "s109"
+        }
+      ]
+    },
+    {
+      "span_id": "s110",
+      "markers": []
+    },
+    {
+      "span_id": "s111",
+      "markers": []
+    },
+    {
+      "span_id": "s112",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8095,
+          "end": 8113,
+          "span_id": "s112"
+        }
+      ]
+    },
+    {
+      "span_id": "s113",
+      "markers": []
+    },
+    {
+      "span_id": "s114",
+      "markers": []
+    },
+    {
+      "span_id": "s115",
+      "markers": []
+    },
+    {
+      "span_id": "s116",
+      "markers": []
+    },
+    {
+      "span_id": "s117",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 8287,
+          "end": 8293,
+          "span_id": "s117"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 8287,
+          "end": 8298,
+          "span_id": "s117"
+        }
+      ]
+    },
+    {
+      "span_id": "s118",
+      "markers": []
+    },
+    {
+      "span_id": "s119",
+      "markers": []
+    },
+    {
+      "span_id": "s120",
+      "markers": []
+    },
+    {
+      "span_id": "s121",
+      "markers": []
+    },
+    {
+      "span_id": "s122",
+      "markers": []
+    },
+    {
+      "span_id": "s123",
+      "markers": []
+    },
+    {
+      "span_id": "s124",
+      "markers": []
+    },
+    {
+      "span_id": "s125",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 9301,
+          "end": 9308,
+          "span_id": "s125"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 9345,
+          "end": 9369,
+          "stripped": "عن داود، عن عامر، قال:",
+          "span_id": "s125"
+        }
+      ]
+    },
+    {
+      "span_id": "s126",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9382,
+          "end": 9498,
+          "span_id": "s126"
+        }
+      ]
+    },
+    {
+      "span_id": "s127",
+      "markers": []
+    },
+    {
+      "span_id": "s128",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9633,
+          "end": 9651,
+          "span_id": "s128"
+        }
+      ]
+    },
+    {
+      "span_id": "s129",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 9660,
+          "end": 9666,
+          "span_id": "s129"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9680,
+          "end": 9768,
+          "span_id": "s129"
+        }
+      ]
+    },
+    {
+      "span_id": "s130",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9860,
+          "end": 9878,
+          "span_id": "s130"
+        }
+      ]
+    },
+    {
+      "span_id": "s131",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "علي",
+          "name": "علي",
+          "role": "SPEAKER",
+          "start": 10023,
+          "end": 10026,
+          "span_id": "s131"
+        }
+      ]
+    },
+    {
+      "span_id": "s132",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 10069,
+          "end": 10098,
+          "stripped": "عن علي، عن ابن عباس قوله:",
+          "span_id": "s132"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "علي",
+          "name": "علي",
+          "role": "NARRATOR",
+          "start": 10072,
+          "end": 10075,
+          "span_id": "s132"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 10082,
+          "end": 10090,
+          "span_id": "s132"
+        }
+      ]
+    },
+    {
+      "span_id": "s133",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10099,
+          "end": 10187,
+          "span_id": "s133"
+        }
+      ]
+    },
+    {
+      "span_id": "s134",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 10209,
+          "end": 10214,
+          "span_id": "s134"
+        }
+      ]
+    },
+    {
+      "span_id": "s135",
+      "markers": []
+    },
+    {
+      "span_id": "s136",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 10366,
+          "end": 10371,
+          "span_id": "s136"
+        }
+      ]
+    },
+    {
+      "span_id": "s137",
+      "markers": []
+    },
+    {
+      "span_id": "s138",
+      "markers": []
+    },
+    {
+      "span_id": "s139",
+      "markers": []
+    },
+    {
+      "span_id": "s140",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 10580,
+          "end": 10587,
+          "span_id": "s140"
+        }
+      ]
+    },
+    {
+      "span_id": "s141",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 10631,
+          "end": 10662,
+          "stripped": "عن ابن جريج، عن عكرمة قوله:",
+          "span_id": "s141"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "ابن جريج",
+          "name": "ابن جريج",
+          "role": "NARRATOR",
+          "start": 10634,
+          "end": 10643,
+          "span_id": "s141"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "عكرمة",
+          "name": "عكرمة",
+          "role": "NARRATOR",
+          "start": 10649,
+          "end": 10654,
+          "span_id": "s141"
+        }
+      ]
+    },
+    {
+      "span_id": "s142",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10663,
+          "end": 10700,
+          "span_id": "s142"
+        }
+      ]
+    },
+    {
+      "span_id": "s143",
+      "markers": []
+    },
+    {
+      "span_id": "s144",
+      "markers": []
+    },
+    {
+      "span_id": "s145",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "ابن جريج",
+          "name": "ابن جريج",
+          "role": "SPEAKER",
+          "start": 10895,
+          "end": 10904,
+          "span_id": "s145"
+        }
+      ]
+    },
+    {
+      "span_id": "s146",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 10929,
+          "end": 10978,
+          "stripped": "عن الملاعنة والسنة فيها، عن حديث سهل بن سعد،",
+          "span_id": "s146"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11018,
+          "end": 11036,
+          "span_id": "s146"
+        }
+      ]
+    },
+    {
+      "span_id": "s147",
+      "markers": []
+    },
+    {
+      "span_id": "s148",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 11148,
+          "end": 11154,
+          "span_id": "s148"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 11148,
+          "end": 11159,
+          "span_id": "s148"
+        },
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 11200,
+          "end": 11214,
+          "span_id": "s148"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11218,
+          "end": 11236,
+          "span_id": "s148"
+        }
+      ]
+    },
+    {
+      "span_id": "s149",
+      "markers": []
+    },
+    {
+      "span_id": "s150",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11330,
+          "end": 11348,
+          "span_id": "s150"
+        }
+      ]
+    },
+    {
+      "span_id": "s151",
+      "markers": []
+    },
+    {
+      "span_id": "s152",
+      "markers": []
+    },
+    {
+      "span_id": "s153",
+      "markers": []
+    },
+    {
+      "span_id": "s154",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 11681,
+          "end": 11709,
+          "stripped": "عن أبيه، عن ابن عباس قوله:",
+          "span_id": "s154"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 11693,
+          "end": 11701,
+          "span_id": "s154"
+        }
+      ]
+    },
+    {
+      "span_id": "s155",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 11710,
+          "end": 11747,
+          "span_id": "s155"
+        }
+      ]
+    },
+    {
+      "span_id": "s156",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 11760,
+          "end": 11791,
+          "span_id": "s156"
+        }
+      ]
+    },
+    {
+      "span_id": "s157",
+      "markers": []
+    },
+    {
+      "span_id": "s158",
+      "markers": []
+    },
+    {
+      "span_id": "s159",
+      "markers": []
+    },
+    {
+      "span_id": "s160",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7235,
+      "end": 7256,
+      "text": "¬في ت 2: \"فقتلتموه\".¥",
+      "attached_span_id": "s104",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7343,
+      "end": 7394,
+      "text": "¬في ص، ت 1، ت 2، ت 3، ف: \"آيات\" وهي لفظة ابن ماجه.¥",
+      "attached_span_id": "s105",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7552,
+      "end": 7804,
+      "text": "¬أخرجه ابن أبي شيبة 9/ 405، ومسلم (1495)، وابن ماجه (2068)، والبيهقى 8/ 337 من طريق عبدة به. وأخرجه أحمد 7/ 105، 312 (4001، 4281)، ومسلم (10/ 1495)، وأبو داود (2253)، وأبو يعلى (5161)، والواحدى في أسباب النزول ص 238، والبيهقى 7/ 405 من طريق الأعمش به.¥",
+      "attached_span_id": "s107",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7968,
+      "end": 8008,
+      "text": "¬في ص، ت 1، ت 2: \"يفرق\"، وفي ف: \"تفرق\".¥",
+      "attached_span_id": "s109",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8142,
+      "end": 8156,
+      "text": "¬في ف: \"كان\".¥",
+      "attached_span_id": "s112",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8407,
+      "end": 8443,
+      "text": "¬في ت 2: \"الله أشد من عذاب الدنيا\".¥",
+      "attached_span_id": "s118",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8629,
+      "end": 8665,
+      "text": "¬في ت 2: \"ما رأى شيئًا وإنه لكاذب\".¥",
+      "attached_span_id": "s121",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8894,
+      "end": 8911,
+      "text": "¬في ت 2: \"ففرق\".¥",
+      "attached_span_id": "s123",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8920,
+      "end": 9300,
+      "text": "¬أخرجه النسائي في الكبرى (11358) من طريق جرير به. وأخرجه أحمد 8/ 210، 319، 9/ 52 (4603، 4693، 5009، والدارمي 2/ 150، 151، ومسلم (1493)، والترمذى (1202، 3178)، والنسائي (3473)، وفي الكبرى (11357)، وأبو يعلى (5656، 5772)، وابن الجارود (752)، وابن حبان (4286)، والبيهقي 7/ 404، من طريق عبد الملك بن أبي سلي<br>مان به. وعزاه السيوطي في الدر المنثور 5/ 23 إلى عبد بن حميد وابن مردويه.¥",
+      "attached_span_id": "s124",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9889,
+      "end": 10014,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 8/ 2528 من طريق حصين بن نمير عن الشعبي به. وعزاه السيوطي في الدر المنثور 5/ 21 إلى ابن مردويه.¥",
+      "attached_span_id": "s130",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10403,
+      "end": 10425,
+      "text": "¬في ص، ت 1، ف: \"كنت\".¥",
+      "attached_span_id": "s137",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10453,
+      "end": 10483,
+      "text": "¬سقط من: ص، ت 1، ت 2، ت 3، ف.¥",
+      "attached_span_id": "s138",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10553,
+      "end": 10579,
+      "text": "¬تقدم تخريجه ص 180 - 182.¥",
+      "attached_span_id": "s139",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10759,
+      "end": 10803,
+      "text": "¬في ت 1، ت 2: \"سمحا\". وينظر الإصابة 3/ 344.¥",
+      "attached_span_id": "s142",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10840,
+      "end": 10875,
+      "text": "¬في ص، ت 1، ت 2، ف: \"عدي بن عاصم\".¥",
+      "attached_span_id": "s144",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11053,
+      "end": 11086,
+      "text": "¬بعده في ت 1، ت 2، ت 3: \"لو أن\".¥",
+      "attached_span_id": "s146",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11517,
+      "end": 11614,
+      "text": "¬أخرجه عبد الرزاق في مصنفه (12446) - ومن طريقه البخارى (5309)، ومسلم (3/ 1492) - عن ابن جريج به.¥",
+      "attached_span_id": "s151",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11939,
+      "end": 11957,
+      "text": "¬في ص، ف: \"يحلف\".¥",
+      "attached_span_id": "s157",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11970,
+      "end": 11992,
+      "text": "¬في ت 1، ت 2: \"عليه\".¥",
+      "attached_span_id": "s158",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 12008,
+      "end": 12036,
+      "text": "¬بعده في ت 2: \"والله أعلم\".¥",
+      "attached_span_id": "s159",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 9345,
+      "end": 9369,
+      "span_id": "s125",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 10069,
+      "end": 10098,
+      "span_id": "s132",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 10631,
+      "end": 10662,
+      "span_id": "s141",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 10929,
+      "end": 10978,
+      "span_id": "s146",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 11681,
+      "end": 11709,
+      "span_id": "s154",
+      "marker": "عن…عن"
+    }
+  ]
+}

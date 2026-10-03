@@ -1,0 +1,52 @@
+{
+  "window_id": "24_56",
+  "ayah": "24:56",
+  "span_count": 4,
+  "family_counts": {
+    "QURAN": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 22,
+          "end": 33,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 35,
+          "end": 241,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 411,
+          "end": 436,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

@@ -1,0 +1,109 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_24.txt",
+  "ayah": "24:24",
+  "surah": 24,
+  "ayah_number": 24,
+  "source_char_length": 2336,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 520,
+      "kind": "author"
+    },
+    {
+      "start": 520,
+      "end": 564,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 564,
+      "end": 959,
+      "kind": "author"
+    },
+    {
+      "start": 959,
+      "end": 1054,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1054,
+      "end": 1672,
+      "kind": "author"
+    },
+    {
+      "start": 1672,
+      "end": 1699,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1699,
+      "end": 1702,
+      "kind": "author"
+    },
+    {
+      "start": 1702,
+      "end": 1746,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1746,
+      "end": 1942,
+      "kind": "author"
+    },
+    {
+      "start": 1942,
+      "end": 2021,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2021,
+      "end": 2269,
+      "kind": "author"
+    },
+    {
+      "start": 2269,
+      "end": 2335,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2335,
+      "end": 2336,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 7,
+    "layout": 0,
+    "apparatus": 6
+  },
+  "char_totals": {
+    "author": 1981,
+    "layout": 0,
+    "apparatus": 355
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 6
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 355
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 6,
+    "footnote_close": 6,
+    "footnotes_closed": 6,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

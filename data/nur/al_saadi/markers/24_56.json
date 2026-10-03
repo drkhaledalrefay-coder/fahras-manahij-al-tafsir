@@ -1,0 +1,106 @@
+{
+  "window_id": "24_56",
+  "ayah": "24:56",
+  "span_count": 9,
+  "family_counts": {
+    "QURAN": 6,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 95,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 97,
+          "end": 101,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 443,
+          "end": 462,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 503,
+          "end": 541,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 543,
+          "end": 552,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 570,
+          "end": 581,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 670,
+      "end": 688,
+      "text": "¬في (ب): «وطاعة».¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام السعدي"
+    }
+  ],
+  "isnad_ranges": []
+}

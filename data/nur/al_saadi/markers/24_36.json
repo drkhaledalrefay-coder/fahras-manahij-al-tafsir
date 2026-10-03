@@ -1,0 +1,136 @@
+{
+  "window_id": "24_36",
+  "ayah": "24:36",
+  "span_count": 9,
+  "family_counts": {
+    "QURAN": 6,
+    "LUGHA": 2,
+    "ISNAD": 1,
+    "QIRAAT": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 88,
+          "end": 208,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 210,
+          "end": 214,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 215,
+          "end": 218,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 235,
+          "end": 245,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 296,
+          "end": 308,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 310,
+          "end": 313,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 325,
+          "end": 359,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 510,
+          "end": 558,
+          "stripped": "عن الكافر وأن تصان عن اللغو فيها ورفع الأصوات",
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 578,
+          "end": 600,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 648,
+          "end": 653,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": [
+    {
+      "start": 510,
+      "end": 558,
+      "span_id": "s006",
+      "marker": "عن…عن"
+    }
+  ]
+}

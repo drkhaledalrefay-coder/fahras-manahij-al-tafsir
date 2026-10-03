@@ -1,0 +1,71 @@
+{
+  "window_id": "24_20",
+  "ayah": "24:20",
+  "span_count": 4,
+  "family_counts": {
+    "QURAN": 3,
+    "LUGHA": 1,
+    "SAHABA": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 87,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 88,
+          "end": 651,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 652,
+          "end": 734,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 764,
+          "end": 769,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 806,
+          "end": 819,
+          "span_id": "s004"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

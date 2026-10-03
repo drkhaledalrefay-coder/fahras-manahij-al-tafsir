@@ -1,0 +1,131 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_21.txt",
+  "ayah": "24:21",
+  "surah": 24,
+  "ayah_number": 21,
+  "source_char_length": 2261,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 652,
+      "kind": "author"
+    },
+    {
+      "start": 652,
+      "end": 698,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 698,
+      "end": 720,
+      "kind": "author"
+    },
+    {
+      "start": 720,
+      "end": 775,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 775,
+      "end": 820,
+      "kind": "author"
+    },
+    {
+      "start": 820,
+      "end": 893,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 893,
+      "end": 946,
+      "kind": "author"
+    },
+    {
+      "start": 946,
+      "end": 1010,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1010,
+      "end": 1127,
+      "kind": "author"
+    },
+    {
+      "start": 1127,
+      "end": 1194,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1194,
+      "end": 1273,
+      "kind": "author"
+    },
+    {
+      "start": 1273,
+      "end": 1334,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1334,
+      "end": 1630,
+      "kind": "author"
+    },
+    {
+      "start": 1630,
+      "end": 1708,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1708,
+      "end": 1772,
+      "kind": "author"
+    },
+    {
+      "start": 1772,
+      "end": 1816,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1816,
+      "end": 2261,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 9,
+    "layout": 0,
+    "apparatus": 8
+  },
+  "char_totals": {
+    "author": 1773,
+    "layout": 0,
+    "apparatus": 488
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 8
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 488
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 8,
+    "footnote_close": 8,
+    "footnotes_closed": 8,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

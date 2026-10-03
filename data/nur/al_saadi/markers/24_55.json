@@ -1,0 +1,157 @@
+{
+  "window_id": "24_55",
+  "ayah": "24:55",
+  "span_count": 16,
+  "family_counts": {
+    "QURAN": 9,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 365,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 367,
+          "end": 371,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 573,
+          "end": 602,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 868,
+          "end": 884,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1737,
+          "end": 1758,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1810,
+          "end": 1830,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2159,
+          "end": 2210,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 2212,
+          "end": 2222,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 2213,
+          "end": 2222,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1356,
+      "end": 1375,
+      "text": "¬في (ب): «يفوقون».¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام السعدي"
+    }
+  ],
+  "isnad_ranges": []
+}

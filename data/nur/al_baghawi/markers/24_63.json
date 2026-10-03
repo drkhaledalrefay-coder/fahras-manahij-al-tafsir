@@ -1,0 +1,260 @@
+{
+  "window_id": "24_63",
+  "ayah": "24:63",
+  "span_count": 17,
+  "family_counts": {
+    "QURAN": 8,
+    "SAHABA": 2,
+    "TABIIN": 2,
+    "LUGHA": 5,
+    "HADITH": 2,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 254,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 255,
+          "end": 330,
+          "span_id": "s002"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 337,
+          "end": 350,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 561,
+          "end": 569,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1217,
+          "end": 1265,
+          "span_id": "s007"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1266,
+          "end": 1271,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1284,
+          "end": 1303,
+          "span_id": "s008"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1304,
+          "end": 1309,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1542,
+          "end": 1574,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1595,
+          "end": 1608,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1647,
+          "end": 1652,
+          "span_id": "s011"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1818,
+          "end": 1850,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1961,
+          "end": 1984,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2004,
+          "end": 2054,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2055,
+          "end": 2060,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 2096,
+          "end": 2104,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2174,
+          "end": 2201,
+          "span_id": "s015"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 2244,
+          "end": 2252,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2279,
+          "end": 2313,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 529,
+      "end": 552,
+      "text": "¬انظر: الطبري 17/ 177.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 786,
+      "end": 1215,
+      "text": "¬وهو مروي أيضا عن ابن عباس. انظر: الطبري 17/ 177، الدر المنثور: 6/ 230. ونقل ابن كثير القولين في التفسير: 3/ 308. ورجح الطبري قول ابن عباس الأول، لأن الذي قبل ذلك نهي من الله للمؤمنين أن يأتوا من الانصراف عنه في الأمر الذي يجمع جميعهم ما يكرهه، والذي بعده وعيد للمنصرفين بغير إذنه عنه، فالذي بينهما بأن يكون تحذيرا لهم سخطه أن يضطره إلى الدعاء عليهم، أشبه من أن يكون أمرا لهم بما لم يجر له ذكر من تعظيمه وتوقيره بالقول والدعاء\".¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

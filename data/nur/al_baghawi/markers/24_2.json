@@ -1,0 +1,248 @@
+{
+  "window_id": "24_2",
+  "ayah": "24:2",
+  "span_count": 17,
+  "family_counts": {
+    "QURAN": 8,
+    "LUGHA": 5,
+    "QIRAAT": 1,
+    "TABIIN": 3,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24,
+          "end": 103,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 259,
+          "end": 265,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 305,
+          "end": 311,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 935,
+          "end": 972,
+          "span_id": "s004"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 995,
+          "end": 1000,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 1867,
+          "end": 1875,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "name": "قتادة",
+          "role": "SPEAKER",
+          "start": 2129,
+          "end": 2137,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2211,
+          "end": 2230,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2231,
+          "end": 2236,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2257,
+          "end": 2315,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 2316,
+          "end": 2324,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2408,
+          "end": 2422,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2437,
+          "end": 2451,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2489,
+          "end": 2500,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2509,
+          "end": 2530,
+          "span_id": "s014"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 2537,
+          "end": 2545,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عكرمة",
+          "name": "عكرمة",
+          "role": "SPEAKER",
+          "start": 2612,
+          "end": 2621,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 530,
+      "end": 725,
+      "text": "¬أخرج البخاري في الشهادات، باب: شهادة القاذف والسارق والزاني: 5/ 255 عن زيد بن خالد رضي الله عنه، عن رسول الله صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: \"أنه أمر فيمن زنى ولم يحصن بجلد مئة وتغريب عام\".¥",
+      "attached_span_id": "s002",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 857,
+      "end": 933,
+      "text": "¬أخرج البخاري في الشهادات، باب: شهادة القاذف والسارق والزاني: 2/ 181 - 183.¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1556,
+      "end": 1613,
+      "text": "¬أخرجه الطبري: 18/ 67 وانظر: الدر المنثور: 6/ 125 - 126.¥",
+      "attached_span_id": "s007",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

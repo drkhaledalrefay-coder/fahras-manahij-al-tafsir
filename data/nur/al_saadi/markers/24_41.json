@@ -1,0 +1,195 @@
+{
+  "window_id": "24_41",
+  "ayah": "24:41",
+  "span_count": 14,
+  "family_counts": {
+    "QURAN": 10,
+    "LUGHA": 5,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 182,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 184,
+          "end": 188,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 311,
+          "end": 364,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 383,
+          "end": 399,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 401,
+          "end": 404,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 453,
+          "end": 459,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 478,
+          "end": 505,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 507,
+          "end": 510,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 711,
+          "end": 737,
+          "span_id": "s010"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 739,
+          "end": 742,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 925,
+          "end": 949,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 1082,
+          "end": 1086,
+          "span_id": "s014"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 1082,
+          "end": 1087,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1083,
+          "end": 1093,
+          "span_id": "s014"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1095,
+          "end": 1231,
+          "span_id": "s014"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 195,
+      "end": 212,
+      "text": "¬في (ب): «ينبه».¥",
+      "attached_span_id": "s001",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام السعدي"
+    }
+  ],
+  "isnad_ranges": []
+}

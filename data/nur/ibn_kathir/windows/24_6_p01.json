@@ -1,0 +1,34 @@
+{
+  "window_id": "24_6_p01",
+  "tafsir_id": "ibn_kathir",
+  "ayah": "24:6",
+  "surah": 24,
+  "ayah_number": 6,
+  "source": "tafsircenter",
+  "source_file": "data/nur/ibn_kathir/raw/24_6.txt",
+  "source_sha256": "830b8224195408a6876a2faf830c96c3b210ef2187c46e7dc8e88b12d9fbe6a9",
+  "window_start": 0,
+  "window_end": 175,
+  "window_text": "وَالَّذِينَ يَرْمُونَ أَزْوَاجَهُمْ وَلَمْ يَكُنْ لَهُمْ شُهَدَاءُ إِلَّا أَنْفُسُهُمْ فَشَهَادَةُ أَحَدِهِمْ أَرْبَعُ شَهَادَاتٍ بِاللَّهِ إِنَّهُ لَمِنَ الصَّادِقِينَ (6) \r\n",
+  "span_count": 1,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 175,
+      "text": "وَالَّذِينَ يَرْمُونَ أَزْوَاجَهُمْ وَلَمْ يَكُنْ لَهُمْ شُهَدَاءُ إِلَّا أَنْفُسُهُمْ فَشَهَادَةُ أَحَدِهِمْ أَرْبَعُ شَهَادَاتٍ بِاللَّهِ إِنَّهُ لَمِنَ الصَّادِقِينَ (6) \r\n"
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "paragraph_pack_cap_110",
+    "start_span_id": "s001",
+    "end_span_id": "s001",
+    "start_index": 0,
+    "end_index": 0,
+    "char_length": 175,
+    "part": 1,
+    "part_count": 3,
+    "capped_at_110": false
+  }
+}

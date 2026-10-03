@@ -1,0 +1,269 @@
+{
+  "window_id": "24_19",
+  "ayah": "24:19",
+  "span_count": 19,
+  "family_counts": {
+    "QURAN": 7,
+    "HADITH": 3,
+    "ISNAD": 2,
+    "TABIIN": 5,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 22,
+          "end": 33,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 35,
+          "end": 213,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 325,
+          "end": 349,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 523,
+          "end": 530,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 574,
+          "end": 606,
+          "stripped": "عن ابن جريج، عن مجاهد قوله:",
+          "span_id": "s006"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "ابن جريج",
+          "name": "ابن جريج",
+          "role": "NARRATOR",
+          "start": 577,
+          "end": 587,
+          "span_id": "s006"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "NARRATOR",
+          "start": 593,
+          "end": 598,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 607,
+          "end": 645,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 696,
+          "end": 703,
+          "span_id": "s009"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "ابن زيد",
+          "name": "ابن زيد",
+          "role": "SPEAKER",
+          "start": 723,
+          "end": 730,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 742,
+          "end": 841,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "SPEAKER",
+          "start": 1121,
+          "end": 1126,
+          "span_id": "s014"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1153,
+          "end": 1188,
+          "stripped": "عن ابن أبي نجيح، عن مجاهد قوله:",
+          "span_id": "s014"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "NARRATOR",
+          "start": 1175,
+          "end": 1180,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1189,
+          "end": 1216,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1431,
+          "end": 1478,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1748,
+          "end": 1766,
+          "span_id": "s019"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 965,
+      "end": 1033,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 8/ 2550 من طريق أصبغ، عن ابن زيد.<br>¥",
+      "attached_span_id": "s011",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1260,
+      "end": 1422,
+      "text": "¬تفسير مجاهد ص 490. ومن طريقه ابن أبي حاتم في تفسيره 8/ 2550، والطبراني 23/ 146 (212). وعزاه السيوطي في الدر المنثور 5/ 34 إلى الفريابي وعبد بن حميد وابن المنذر.¥",
+      "attached_span_id": "s015",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 574,
+      "end": 606,
+      "span_id": "s006",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 1153,
+      "end": 1188,
+      "span_id": "s014",
+      "marker": "عن…عن"
+    }
+  ]
+}

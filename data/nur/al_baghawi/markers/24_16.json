@@ -1,0 +1,95 @@
+{
+  "window_id": "24_16",
+  "ayah": "24:16",
+  "span_count": 6,
+  "family_counts": {
+    "QURAN": 2,
+    "RAY": 1,
+    "LUGHA": 2,
+    "NUZUL": 1,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 94,
+          "span_id": "s001"
+        },
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 30,
+          "end": 35,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 120,
+          "end": 128,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 143,
+          "end": 168,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 169,
+          "end": 174,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فنزلت",
+          "start": 535,
+          "end": 544,
+          "span_id": "s006"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 430,
+      "end": 534,
+      "text": "¬ذكره الواحدي في أسباب النزول ص (373)، وانظر الطبري: 18/ 96، والدر المنثور: 6/ 159، فتح الباري: 9/ 470.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

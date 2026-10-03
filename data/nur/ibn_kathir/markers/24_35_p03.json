@@ -1,0 +1,542 @@
+{
+  "window_id": "24_35_p03",
+  "ayah": "24:35",
+  "span_count": 30,
+  "family_counts": {
+    "SAHABA": 4,
+    "QURAN": 11,
+    "ISRAILIYYAT": 1,
+    "HADITH": 13,
+    "TABIIN": 1,
+    "LUGHA": 2,
+    "ISNAD": 5,
+    "EDITOR": 7
+  },
+  "spans": [
+    {
+      "span_id": "s112",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "أبي بن كعب",
+          "name": "أبي بن كعب",
+          "role": "SPEAKER",
+          "start": 10438,
+          "end": 10450,
+          "span_id": "s112"
+        }
+      ]
+    },
+    {
+      "span_id": "s113",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10452,
+          "end": 10471,
+          "span_id": "s113"
+        }
+      ]
+    },
+    {
+      "span_id": "s114",
+      "markers": []
+    },
+    {
+      "span_id": "s115",
+      "markers": []
+    },
+    {
+      "span_id": "s116",
+      "markers": [
+        {
+          "family": "ISRAILIYYAT",
+          "marker": "كعب الأحبار",
+          "start": 10682,
+          "end": 10693,
+          "span_id": "s116"
+        }
+      ]
+    },
+    {
+      "span_id": "s117",
+      "markers": []
+    },
+    {
+      "span_id": "s118",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10725,
+          "end": 10781,
+          "span_id": "s118"
+        }
+      ]
+    },
+    {
+      "span_id": "s119",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 10799,
+          "end": 10817,
+          "span_id": "s119"
+        }
+      ]
+    },
+    {
+      "span_id": "s120",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 10939,
+          "end": 10944,
+          "span_id": "s120"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 10948,
+          "end": 10958,
+          "span_id": "s120"
+        }
+      ]
+    },
+    {
+      "span_id": "s121",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10960,
+          "end": 10979,
+          "span_id": "s121"
+        }
+      ]
+    },
+    {
+      "span_id": "s122",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 11176,
+          "end": 11187,
+          "span_id": "s122"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 11177,
+          "end": 11187,
+          "span_id": "s122"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 11189,
+          "end": 11229,
+          "span_id": "s122"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 11230,
+          "end": 11233,
+          "span_id": "s122"
+        }
+      ]
+    },
+    {
+      "span_id": "s123",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 11289,
+          "end": 11293,
+          "span_id": "s123"
+        }
+      ]
+    },
+    {
+      "span_id": "s124",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 11307,
+          "end": 11312,
+          "span_id": "s124"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 11307,
+          "end": 11350,
+          "stripped": "حدثنا معاوية بن عمرو، حدثنا إبراهيم بن محمد",
+          "span_id": "s124"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 11329,
+          "end": 11334,
+          "span_id": "s124"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 11360,
+          "end": 11365,
+          "span_id": "s124"
+        }
+      ]
+    },
+    {
+      "span_id": "s125",
+      "markers": []
+    },
+    {
+      "span_id": "s126",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "عبد الله بن عمرو",
+          "name": "عبد الله بن عمرو",
+          "role": "SPEAKER",
+          "start": 11489,
+          "end": 11505,
+          "span_id": "s126"
+        }
+      ]
+    },
+    {
+      "span_id": "s127",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11524,
+          "end": 11542,
+          "span_id": "s127"
+        }
+      ]
+    },
+    {
+      "span_id": "s128",
+      "markers": []
+    },
+    {
+      "span_id": "s129",
+      "markers": []
+    },
+    {
+      "span_id": "s130",
+      "markers": []
+    },
+    {
+      "span_id": "s131",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 11814,
+          "end": 11819,
+          "span_id": "s131"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 11826,
+          "end": 11854,
+          "stripped": "عن سويد، عن يحيى بن أبي عمرو",
+          "span_id": "s131"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 11865,
+          "end": 11894,
+          "stripped": "عن أبيه، عن عبد الله بن عمرو،",
+          "span_id": "s131"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "عبد الله بن عمرو",
+          "name": "عبد الله بن عمرو",
+          "role": "NARRATOR",
+          "start": 11877,
+          "end": 11893,
+          "span_id": "s131"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11912,
+          "end": 11930,
+          "span_id": "s131"
+        }
+      ]
+    },
+    {
+      "span_id": "s132",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 12036,
+          "end": 12040,
+          "span_id": "s132"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "عبد الله بن عمرو",
+          "name": "عبد الله بن عمرو",
+          "role": "NARRATOR",
+          "start": 12051,
+          "end": 12067,
+          "span_id": "s132"
+        }
+      ]
+    },
+    {
+      "span_id": "s133",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 12257,
+          "end": 12268,
+          "span_id": "s133"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 12258,
+          "end": 12268,
+          "span_id": "s133"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 12270,
+          "end": 12346,
+          "span_id": "s133"
+        }
+      ]
+    },
+    {
+      "span_id": "s134",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 12412,
+          "end": 12488,
+          "span_id": "s134"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 12489,
+          "end": 12492,
+          "span_id": "s134"
+        }
+      ]
+    },
+    {
+      "span_id": "s135",
+      "markers": []
+    },
+    {
+      "span_id": "s136",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 12556,
+          "end": 12561,
+          "span_id": "s136"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 12556,
+          "end": 12595,
+          "stripped": "حدثنا أبو النضر، حدثنا أبو معاوية، يعني",
+          "span_id": "s136"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 12573,
+          "end": 12578,
+          "span_id": "s136"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 12603,
+          "end": 12629,
+          "stripped": "عن ليث، عن عمرو بن مرة، عن",
+          "span_id": "s136"
+        }
+      ]
+    },
+    {
+      "span_id": "s137",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 12668,
+          "end": 12681,
+          "span_id": "s137"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 12684,
+          "end": 12702,
+          "span_id": "s137"
+        }
+      ]
+    },
+    {
+      "span_id": "s138",
+      "markers": []
+    },
+    {
+      "span_id": "s139",
+      "markers": []
+    },
+    {
+      "span_id": "s140",
+      "markers": []
+    },
+    {
+      "span_id": "s141",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10586,
+      "end": 10644,
+      "text": "¬أخرجه ابن أبي حاتم بسند جيد من طريق أبي العالية عن أُبي.¥",
+      "attached_span_id": "s114",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10880,
+      "end": 10931,
+      "text": "¬أخرجه ابن أبي حاتم مقطعًا بسند حسن من طريق شمر به¥",
+      "attached_span_id": "s119",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11120,
+      "end": 11173,
+      "text": "¬أخرجه ابن أبي حاتم بسند جيد من طريق أسباط عن السدي.¥",
+      "attached_span_id": "s121",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11418,
+      "end": 11484,
+      "text": "¬كذا في (ح) و (حم) والمسند وترجمته، وفي الأصل صُحف إلى: \"الديلي\".¥",
+      "attached_span_id": "s125",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 11707,
+      "end": 11782,
+      "text": "¬أخرجه الإمام أحمد بسنده ومتنه، (المسند 11/ 219 ح 6644)، وصحح سنده محققوه.¥",
+      "attached_span_id": "s129",
+      "grading": [
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 12093,
+      "end": 12254,
+      "text": "¬أخرجه البزار كما في كشف الأستار (ح 2145)، وأخرجه الإمام أحمد من طريق عبد الله الديلمي عن عبد الله بن عمرو - رضي الله عنه -، كما في الحديث السابق، الصحيح السند.¥",
+      "attached_span_id": "s132",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 13101,
+      "end": 13279,
+      "text": "¬أخرجه الإمام أحمد بسنده ومتنه (المسند 17/ 208 ح 11129)، وضعف سنده محققوه، وجود الحافظ ابن كثير سنده، والحق أنه ضعيف لانقطاعه بين أبي البُختري وأبي سعيد الخدري - رضي الله عنه -.¥",
+      "attached_span_id": "s140",
+      "grading": [
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 11307,
+      "end": 11350,
+      "span_id": "s124",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 11826,
+      "end": 11854,
+      "span_id": "s131",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 11865,
+      "end": 11894,
+      "span_id": "s131",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 12556,
+      "end": 12595,
+      "span_id": "s136",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 12603,
+      "end": 12629,
+      "span_id": "s136",
+      "marker": "عن…عن"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "window_id": "24_1",
+  "ayah": "24:1",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 4,
+    "TABIIN": 1,
+    "QIRAAT": 1,
+    "LUGHA": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 160,
+          "end": 184,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 249,
+          "end": 254,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 475,
+          "end": 478,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 479,
+          "end": 495,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 593,
+          "end": 633,
+          "span_id": "s007"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 634,
+          "end": 637,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 652,
+          "end": 678,
+          "span_id": "s007"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 310,
+      "end": 454,
+      "text": "¬قول مجاهد أخرجه آدم بن أبي إياس والطبري بسند صحيح من طريق ابن أبي نجيح عنه، وقول قتادة أخرجه ابن أبي حاتم بسند صحيح من طريق ابن أبي عروبة عنه.¥",
+      "attached_span_id": "s004",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 496,
+      "end": 518,
+      "text": "¬القراءتان متواترتان.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 554,
+      "end": 590,
+      "text": "¬صحيح البخاري، التفسير، سورة النور.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

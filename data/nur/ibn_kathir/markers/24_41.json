@@ -1,0 +1,139 @@
+{
+  "window_id": "24_41",
+  "ayah": "24:41",
+  "span_count": 9,
+  "family_counts": {
+    "QURAN": 10,
+    "LUGHA": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 280,
+          "end": 293,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 284,
+          "end": 293,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 295,
+          "end": 486,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 499,
+          "end": 510,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 500,
+          "end": 510,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 512,
+          "end": 535,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 536,
+          "end": 539,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 628,
+          "end": 637,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 639,
+          "end": 682,
+          "span_id": "s007"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 683,
+          "end": 686,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 801,
+          "end": 810,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 812,
+          "end": 849,
+          "span_id": "s009"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

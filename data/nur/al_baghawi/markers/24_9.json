@@ -1,0 +1,165 @@
+{
+  "window_id": "24_9",
+  "ayah": "24:9",
+  "span_count": 21,
+  "family_counts": {
+    "QURAN": 2,
+    "LUGHA": 3,
+    "ISNAD": 1,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 77,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 205,
+          "end": 210,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 863,
+          "end": 868,
+          "span_id": "s005"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 996,
+          "end": 1079,
+          "stripped": "عن الزوج وامتنعت المرأة عن اللعان حبست حتى تلاعن.",
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2419,
+          "end": 2424,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2734,
+          "end": 2771,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3713,
+      "end": 3727,
+      "text": "¬ساقط من \"أ\".¥",
+      "attached_span_id": "s020",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 996,
+      "end": 1079,
+      "span_id": "s005",
+      "marker": "عن…عن"
+    }
+  ]
+}

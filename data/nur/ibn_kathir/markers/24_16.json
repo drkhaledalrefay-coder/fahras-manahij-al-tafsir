@@ -1,0 +1,126 @@
+{
+  "window_id": "24_16",
+  "ayah": "24:16",
+  "span_count": 7,
+  "family_counts": {
+    "RAY": 2,
+    "HADITH": 2,
+    "QURAN": 2,
+    "LUGHA": 3,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 29,
+          "end": 34,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 346,
+          "end": 364,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 446,
+          "end": 455,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 611,
+          "end": 693,
+          "span_id": "s005"
+        },
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 641,
+          "end": 646,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 694,
+          "end": 697,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 748,
+          "end": 785,
+          "span_id": "s006"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 786,
+          "end": 789,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 804,
+          "end": 808,
+          "span_id": "s007"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 458,
+      "end": 591,
+      "text": "¬أخرجاه من حديث أبي هريرة - رضي الله عنه - (صحيح البخاري، الطلاق ح 5269)، وصحيح مسلم، الإيمان، باب تجاوز الله عن حديث النفس (ح 127).¥",
+      "attached_span_id": "s004",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

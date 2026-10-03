@@ -1,0 +1,140 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_40.txt",
+  "ayah": "24:40",
+  "surah": 24,
+  "ayah_number": 40,
+  "source_char_length": 1939,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 275,
+      "kind": "author"
+    },
+    {
+      "start": 275,
+      "end": 321,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 321,
+      "end": 893,
+      "kind": "author"
+    },
+    {
+      "start": 893,
+      "end": 904,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 904,
+      "end": 1073,
+      "kind": "author"
+    },
+    {
+      "start": 1073,
+      "end": 1086,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1086,
+      "end": 1087,
+      "kind": "author"
+    },
+    {
+      "start": 1087,
+      "end": 1130,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1130,
+      "end": 1314,
+      "kind": "author"
+    },
+    {
+      "start": 1314,
+      "end": 1375,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1375,
+      "end": 1417,
+      "kind": "author"
+    },
+    {
+      "start": 1417,
+      "end": 1546,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1546,
+      "end": 1730,
+      "kind": "author"
+    },
+    {
+      "start": 1730,
+      "end": 1744,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1744,
+      "end": 1826,
+      "kind": "author"
+    },
+    {
+      "start": 1826,
+      "end": 1837,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1837,
+      "end": 1939,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 9,
+    "layout": 0,
+    "apparatus": 8
+  },
+  "char_totals": {
+    "author": 1611,
+    "layout": 0,
+    "apparatus": 328
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 4,
+    "verse_ref": 4
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 279,
+    "verse_ref": 49
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 4,
+    "footnote_close": 4,
+    "footnotes_closed": 4,
+    "bracket_total": 4,
+    "bracket_pattern_classes": {
+      "verse_ref": 4
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[البقرة: 7]": 1,
+      "[الجاثية: 23]": 1,
+      "[الأعراف: 186]": 1,
+      "[النور: 35]": 1
+    },
+    "other_brackets": {}
+  }
+}

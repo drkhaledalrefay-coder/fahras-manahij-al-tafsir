@@ -1,0 +1,113 @@
+{
+  "window_id": "24_6",
+  "ayah": "24:6",
+  "span_count": 6,
+  "family_counts": {
+    "QURAN": 4,
+    "LUGHA": 4,
+    "QIRAAT": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24,
+          "end": 61,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 62,
+          "end": 67,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 93,
+          "end": 125,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 165,
+          "end": 186,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 187,
+          "end": 192,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 214,
+          "end": 297,
+          "span_id": "s003"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 298,
+          "end": 303,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 409,
+          "end": 414,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 487,
+          "end": 492,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 519,
+          "end": 524,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

@@ -1,0 +1,176 @@
+{
+  "window_id": "24_25",
+  "ayah": "24:25",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 6,
+    "SAHABA": 2,
+    "LUGHA": 2,
+    "QIRAAT": 4,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 110,
+          "end": 121,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 111,
+          "end": 121,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 123,
+          "end": 175,
+          "span_id": "s002"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 180,
+          "end": 188,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 190,
+          "end": 201,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 202,
+          "end": 205,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 274,
+          "end": 279,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 293,
+          "end": 303,
+          "span_id": "s004"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 325,
+          "end": 328,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 387,
+          "end": 390,
+          "span_id": "s005"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأه",
+          "start": 387,
+          "end": 391,
+          "span_id": "s005"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "أبي بن كعب",
+          "name": "أبي بن كعب",
+          "role": "SPEAKER",
+          "start": 411,
+          "end": 423,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 580,
+          "end": 634,
+          "span_id": "s007"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 635,
+          "end": 638,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 362,
+      "end": 384,
+      "text": "¬القراءتان متواترتان.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 457,
+      "end": 570,
+      "text": "¬أخرجه الطبري بسند منقطع من طريق جرير بن حازم عن أُبي بن كعب، وجرير لم يدرك أُبي بن كعب، والقراءة شاذة تفسير به.¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

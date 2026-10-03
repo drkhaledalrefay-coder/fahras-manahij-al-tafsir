@@ -1,0 +1,225 @@
+{
+  "window_id": "24_64",
+  "ayah": "24:64",
+  "span_count": 6,
+  "family_counts": {
+    "QURAN": 6,
+    "LUGHA": 1,
+    "HADITH": 10,
+    "ISNAD": 3,
+    "SAHABA": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 32,
+          "end": 221,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 222,
+          "end": 274,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 295,
+          "end": 331,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 357,
+          "end": 362,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 389,
+          "end": 420,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 448,
+          "end": 480,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 503,
+          "end": 537,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 538,
+          "end": 549,
+          "span_id": "s004"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 538,
+          "end": 623,
+          "stripped": "أخبرنا أبو سعيد الشريحي، أخبرنا أبو إسحاق الثعلبي،",
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "أبو سعيد",
+          "name": "أبو سعيد",
+          "role": "NARRATOR",
+          "start": 550,
+          "end": 562,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 580,
+          "end": 591,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 682,
+          "end": 692,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 738,
+          "end": 748,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 795,
+          "end": 805,
+          "span_id": "s004"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 795,
+          "end": 913,
+          "stripped": "حدثنا سليمان بن توبة، حدثنا أبو داود الأنصاري، أخبرنا محمد بن إبراهيم",
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 833,
+          "end": 843,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 875,
+          "end": 886,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 928,
+          "end": 938,
+          "span_id": "s004"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 964,
+          "end": 1029,
+          "stripped": "عن هشام بن عروة، عن أبيه، عن عائشة قالت:",
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "عائشة",
+          "name": "عائشة",
+          "role": "NARRATOR",
+          "start": 1011,
+          "end": 1019,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1030,
+          "end": 1050,
+          "span_id": "s005"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1052,
+          "end": 1084,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": [
+    {
+      "start": 538,
+      "end": 623,
+      "span_id": "s004",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 795,
+      "end": 913,
+      "span_id": "s004",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 964,
+      "end": 1029,
+      "span_id": "s004",
+      "marker": "عن…عن"
+    }
+  ]
+}

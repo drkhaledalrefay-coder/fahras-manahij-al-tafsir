@@ -1,0 +1,1392 @@
+{
+  "window_id": "24_7",
+  "ayah": "24:7",
+  "span_count": 96,
+  "family_counts": {
+    "QURAN": 9,
+    "QIRAAT": 9,
+    "LUGHA": 5,
+    "NUZUL": 5,
+    "HADITH": 65,
+    "ISNAD": 5,
+    "TABIIN": 1,
+    "SAHABA": 5,
+    "RAY": 3,
+    "EDITOR": 14
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 82,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 83,
+          "end": 161,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 162,
+          "end": 167,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 273,
+          "end": 278,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 301,
+          "end": 306,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 397,
+          "end": 402,
+          "span_id": "s002"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 521,
+          "end": 526,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 586,
+          "end": 591,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 632,
+          "end": 637,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "سبب نزول",
+          "start": 718,
+          "end": 731,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 753,
+          "end": 764,
+          "span_id": "s004"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 753,
+          "end": 871,
+          "stripped": "أخبرنا أبو الحسن السرخسي، أخبرنا زاهر بن أحمد، أخبرنا أبو إسحاق إبراهيم",
+          "span_id": "s004"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "NARRATOR",
+          "start": 771,
+          "end": 779,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 797,
+          "end": 808,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 832,
+          "end": 843,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 910,
+          "end": 921,
+          "span_id": "s004"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 938,
+          "end": 981,
+          "stripped": "عن مالك عن ابن شهاب أن سهل",
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1278,
+          "end": 1310,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1353,
+          "end": 1385,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1425,
+          "end": 1457,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1543,
+          "end": 1575,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1696,
+          "end": 1728,
+          "span_id": "s008"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1813,
+          "end": 1845,
+          "span_id": "s008"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1997,
+          "end": 2029,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 2180,
+          "end": 2200,
+          "span_id": "s010"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2202,
+          "end": 2234,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2375,
+          "end": 2407,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2585,
+          "end": 2617,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 2972,
+          "end": 2983,
+          "span_id": "s015"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 2972,
+          "end": 3082,
+          "stripped": "أخبرنا إسحاق، أخبرنا محمد بن يوسف، أخبرنا الأوزاعي، أخبرنا الزهري",
+          "span_id": "s015"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 2995,
+          "end": 3006,
+          "span_id": "s015"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 3031,
+          "end": 3042,
+          "span_id": "s015"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 3060,
+          "end": 3071,
+          "span_id": "s015"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 3115,
+          "end": 3123,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 3140,
+          "end": 3160,
+          "span_id": "s016"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 3162,
+          "end": 3194,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 3992,
+          "end": 4024,
+          "span_id": "s020"
+        }
+      ]
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    },
+    {
+      "span_id": "s022",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4186,
+          "end": 4197,
+          "span_id": "s022"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 4186,
+          "end": 4263,
+          "stripped": "أخبرنا عبد الواحد المليحي، أخبرنا محمد بن عبد",
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4231,
+          "end": 4242,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4288,
+          "end": 4299,
+          "span_id": "s022"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 4288,
+          "end": 4433,
+          "stripped": "أخبرنا أحمد بن يوسف، أخبرنا محمد بن إسماعيل، أخبرنا محمد بن بشار، أخبرنا ابن أبي عدي،",
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4323,
+          "end": 4334,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4364,
+          "end": 4375,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4401,
+          "end": 4412,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 4462,
+          "end": 4473,
+          "span_id": "s022"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 4491,
+          "end": 4504,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 4578,
+          "end": 4610,
+          "span_id": "s022"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 4657,
+          "end": 4689,
+          "span_id": "s022"
+        }
+      ]
+    },
+    {
+      "span_id": "s023",
+      "markers": []
+    },
+    {
+      "span_id": "s024",
+      "markers": []
+    },
+    {
+      "span_id": "s025",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 4865,
+          "end": 4897,
+          "span_id": "s025"
+        }
+      ]
+    },
+    {
+      "span_id": "s026",
+      "markers": []
+    },
+    {
+      "span_id": "s027",
+      "markers": []
+    },
+    {
+      "span_id": "s028",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5118,
+          "end": 5155,
+          "span_id": "s028"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 5158,
+          "end": 5163,
+          "span_id": "s028"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5179,
+          "end": 5210,
+          "span_id": "s028"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 5234,
+          "end": 5266,
+          "span_id": "s028"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 5330,
+          "end": 5362,
+          "span_id": "s028"
+        }
+      ]
+    },
+    {
+      "span_id": "s029",
+      "markers": []
+    },
+    {
+      "span_id": "s030",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 5560,
+          "end": 5573,
+          "span_id": "s030"
+        }
+      ]
+    },
+    {
+      "span_id": "s031",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 5720,
+          "end": 5752,
+          "span_id": "s031"
+        }
+      ]
+    },
+    {
+      "span_id": "s032",
+      "markers": []
+    },
+    {
+      "span_id": "s033",
+      "markers": []
+    },
+    {
+      "span_id": "s034",
+      "markers": []
+    },
+    {
+      "span_id": "s035",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 5992,
+          "end": 6024,
+          "span_id": "s035"
+        }
+      ]
+    },
+    {
+      "span_id": "s036",
+      "markers": []
+    },
+    {
+      "span_id": "s037",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 6284,
+          "end": 6297,
+          "span_id": "s037"
+        }
+      ]
+    },
+    {
+      "span_id": "s038",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 6323,
+          "end": 6361,
+          "span_id": "s038"
+        }
+      ]
+    },
+    {
+      "span_id": "s039",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 6618,
+          "end": 6623,
+          "span_id": "s039"
+        },
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 6681,
+          "end": 6701,
+          "span_id": "s039"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 6703,
+          "end": 6735,
+          "span_id": "s039"
+        }
+      ]
+    },
+    {
+      "span_id": "s040",
+      "markers": []
+    },
+    {
+      "span_id": "s041",
+      "markers": []
+    },
+    {
+      "span_id": "s042",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 7176,
+          "end": 7208,
+          "span_id": "s042"
+        }
+      ]
+    },
+    {
+      "span_id": "s043",
+      "markers": []
+    },
+    {
+      "span_id": "s044",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 7359,
+          "end": 7365,
+          "span_id": "s044"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 7538,
+          "end": 7570,
+          "span_id": "s044"
+        }
+      ]
+    },
+    {
+      "span_id": "s045",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 7770,
+          "end": 7802,
+          "span_id": "s045"
+        }
+      ]
+    },
+    {
+      "span_id": "s046",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 8031,
+          "end": 8036,
+          "span_id": "s046"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8131,
+          "end": 8163,
+          "span_id": "s046"
+        }
+      ]
+    },
+    {
+      "span_id": "s047",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8338,
+          "end": 8370,
+          "span_id": "s047"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 8544,
+          "end": 8553,
+          "span_id": "s047"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 8544,
+          "end": 8561,
+          "span_id": "s047"
+        }
+      ]
+    },
+    {
+      "span_id": "s048",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8578,
+          "end": 8615,
+          "span_id": "s048"
+        },
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 8640,
+          "end": 8660,
+          "span_id": "s048"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8662,
+          "end": 8694,
+          "span_id": "s048"
+        }
+      ]
+    },
+    {
+      "span_id": "s049",
+      "markers": []
+    },
+    {
+      "span_id": "s050",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 8815,
+          "end": 8835,
+          "span_id": "s050"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8837,
+          "end": 8869,
+          "span_id": "s050"
+        }
+      ]
+    },
+    {
+      "span_id": "s051",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 8948,
+          "end": 8980,
+          "span_id": "s051"
+        },
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 9009,
+          "end": 9029,
+          "span_id": "s051"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9031,
+          "end": 9063,
+          "span_id": "s051"
+        }
+      ]
+    },
+    {
+      "span_id": "s052",
+      "markers": []
+    },
+    {
+      "span_id": "s053",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 9222,
+          "end": 9227,
+          "span_id": "s053"
+        },
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 9246,
+          "end": 9266,
+          "span_id": "s053"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9268,
+          "end": 9300,
+          "span_id": "s053"
+        }
+      ]
+    },
+    {
+      "span_id": "s054",
+      "markers": []
+    },
+    {
+      "span_id": "s055",
+      "markers": []
+    },
+    {
+      "span_id": "s056",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 9794,
+          "end": 9826,
+          "span_id": "s056"
+        }
+      ]
+    },
+    {
+      "span_id": "s057",
+      "markers": []
+    },
+    {
+      "span_id": "s058",
+      "markers": []
+    },
+    {
+      "span_id": "s059",
+      "markers": []
+    },
+    {
+      "span_id": "s060",
+      "markers": []
+    },
+    {
+      "span_id": "s061",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 10379,
+          "end": 10411,
+          "span_id": "s061"
+        }
+      ]
+    },
+    {
+      "span_id": "s062",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 10596,
+          "end": 10616,
+          "span_id": "s062"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 10618,
+          "end": 10650,
+          "span_id": "s062"
+        }
+      ]
+    },
+    {
+      "span_id": "s063",
+      "markers": []
+    },
+    {
+      "span_id": "s064",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 10921,
+          "end": 10934,
+          "span_id": "s064"
+        }
+      ]
+    },
+    {
+      "span_id": "s065",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10993,
+          "end": 11031,
+          "span_id": "s065"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 11044,
+          "end": 11049,
+          "span_id": "s065"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأه",
+          "start": 11044,
+          "end": 11051,
+          "span_id": "s065"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11070,
+          "end": 11102,
+          "span_id": "s065"
+        }
+      ]
+    },
+    {
+      "span_id": "s066",
+      "markers": []
+    },
+    {
+      "span_id": "s067",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 11549,
+          "end": 11555,
+          "span_id": "s067"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 11591,
+          "end": 11597,
+          "span_id": "s067"
+        }
+      ]
+    },
+    {
+      "span_id": "s068",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 11795,
+          "end": 11827,
+          "span_id": "s068"
+        }
+      ]
+    },
+    {
+      "span_id": "s069",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 12101,
+          "end": 12133,
+          "span_id": "s069"
+        }
+      ]
+    },
+    {
+      "span_id": "s070",
+      "markers": []
+    },
+    {
+      "span_id": "s071",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 12433,
+          "end": 12453,
+          "span_id": "s071"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 12455,
+          "end": 12487,
+          "span_id": "s071"
+        }
+      ]
+    },
+    {
+      "span_id": "s072",
+      "markers": []
+    },
+    {
+      "span_id": "s073",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 12729,
+          "end": 12749,
+          "span_id": "s073"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 12751,
+          "end": 12783,
+          "span_id": "s073"
+        }
+      ]
+    },
+    {
+      "span_id": "s074",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 12854,
+          "end": 12863,
+          "span_id": "s074"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 12854,
+          "end": 12871,
+          "span_id": "s074"
+        }
+      ]
+    },
+    {
+      "span_id": "s075",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 12888,
+          "end": 12925,
+          "span_id": "s075"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 12961,
+          "end": 12993,
+          "span_id": "s075"
+        }
+      ]
+    },
+    {
+      "span_id": "s076",
+      "markers": []
+    },
+    {
+      "span_id": "s077",
+      "markers": []
+    },
+    {
+      "span_id": "s078",
+      "markers": []
+    },
+    {
+      "span_id": "s079",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 14302,
+          "end": 14334,
+          "span_id": "s079"
+        }
+      ]
+    },
+    {
+      "span_id": "s080",
+      "markers": []
+    },
+    {
+      "span_id": "s081",
+      "markers": []
+    },
+    {
+      "span_id": "s082",
+      "markers": []
+    },
+    {
+      "span_id": "s083",
+      "markers": []
+    },
+    {
+      "span_id": "s084",
+      "markers": []
+    },
+    {
+      "span_id": "s085",
+      "markers": []
+    },
+    {
+      "span_id": "s086",
+      "markers": []
+    },
+    {
+      "span_id": "s087",
+      "markers": []
+    },
+    {
+      "span_id": "s088",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 14991,
+          "end": 15004,
+          "span_id": "s088"
+        }
+      ]
+    },
+    {
+      "span_id": "s089",
+      "markers": []
+    },
+    {
+      "span_id": "s090",
+      "markers": []
+    },
+    {
+      "span_id": "s091",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 15896,
+          "end": 15910,
+          "span_id": "s091"
+        }
+      ]
+    },
+    {
+      "span_id": "s092",
+      "markers": []
+    },
+    {
+      "span_id": "s093",
+      "markers": []
+    },
+    {
+      "span_id": "s094",
+      "markers": []
+    },
+    {
+      "span_id": "s095",
+      "markers": []
+    },
+    {
+      "span_id": "s096",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2699,
+      "end": 2934,
+      "text": "¬أخرجه مالك في الموطأ، باب ما جاء في اللعان برقم (34): 2/ 566 - 567، وأخرجه البخاري في الطلاق، باب: اللعان ومن طلق بعد اللعان: 9/ 446، وفي مواضع أخرى، ومسلم في أول باب اللعان، برقم: (1492) 2/ 1129 - 1130، والمصنف في شرح السنة: 9/ 250.¥",
+      "attached_span_id": "s014",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3412,
+      "end": 3884,
+      "text": "¬لقد اشتهر بهذا اللفظ في كتب والأصول ما أخرجه ابن ماجه في كتاب الطلاق باب طلاق المكره والناسي من طريق الوليد بن مسلم عن الأوزاعي عن عطاء عن ابن عباس بلفظ: (إن الله وضع عن أمتي الخطأ والنسيان وما استكرهوا عليه) رجاله كلهم ثقات ولكن يوجد فيه انقطاع بين ابن عباس وعطاء وأشار إلى هذا البوصيري في الزوائد فقال: إسناده صحيح إن سلم من الانقطاع وقد ورد بألفاظ أخرى يقوي بعضها بعضا. انظر إرواء الغليل للشيخ الألباني 1/ 123 والمعتبر في تخريج أحاديث المنهاج، والمختصر للزركشي ص 154.¥",
+      "attached_span_id": "s018",
+      "grading": [
+        "صحيح",
+        "إسناده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 4052,
+      "end": 4146,
+      "text": "¬أخرجه البخاري في الطلاق، باب: التلاعن في المسجد: 9/ 452 - 453، والمصنف في شرح السنة: 9/ 252.¥",
+      "attached_span_id": "s020",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 5812,
+      "end": 5827,
+      "text": "¬شديد سوادهما.¥",
+      "attached_span_id": "s032",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 5853,
+      "end": 5877,
+      "text": "¬تام الإليتين، عظيمهما.¥",
+      "attached_span_id": "s033",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 5902,
+      "end": 5912,
+      "text": "¬عظيمهما.¥",
+      "attached_span_id": "s034",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 6095,
+      "end": 6258,
+      "text": "¬أخرجه البخاري في تفسير سورة النور، باب: \"ويدرأ عنها العذاب أن تشهد أربع شهادات بالله إنه لمن الكاذبين\" 8/ 449 وفي مواضع أخرى، والمصنف في شرح السنة: 9/ 259 - 260.¥",
+      "attached_span_id": "s036",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 10425,
+      "end": 10510,
+      "text": "¬أخرجه مسلم في اللعان، برقم (1498): 2/ 1135، وأخرج بعضه المصنف في شرح السنة: 9/ 265.¥",
+      "attached_span_id": "s061",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 14499,
+      "end": 14594,
+      "text": "¬الأصيهب: تصغير الأصهب، وهو الذي يعلوه صهبة، وهي كالشقرة، وفي \"أ\": \"بأصهب\" بدلا من \"به أصيهب\".¥",
+      "attached_span_id": "s081",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 14608,
+      "end": 14718,
+      "text": "¬الأثيبج: تصغير الأثبج، وهو الناتئ الثبج، والثبج: ما بين الكاهل ووسط الظهر وفي \"أ\" جاءت العبارة: \"أسلح أسحب\".¥",
+      "attached_span_id": "s083",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 14792,
+      "end": 14822,
+      "text": "¬أورق: يميل لونه للون الرماد.¥",
+      "attached_span_id": "s084",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 14843,
+      "end": 14896,
+      "text": "¬جماليا: الجمالي: العظيم الخلق، شبه خلقه بخلق الجمل.¥",
+      "attached_span_id": "s085",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 14919,
+      "end": 14944,
+      "text": "¬الخدلج: العظيم الساقين.¥",
+      "attached_span_id": "s086",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 15052,
+      "end": 15083,
+      "text": "¬أخرجه الطبري مختصرًا: 18/ 84.¥",
+      "attached_span_id": "s088",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 753,
+      "end": 871,
+      "span_id": "s004",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 938,
+      "end": 981,
+      "span_id": "s004",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 2972,
+      "end": 3082,
+      "span_id": "s015",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 4186,
+      "end": 4263,
+      "span_id": "s022",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 4288,
+      "end": 4433,
+      "span_id": "s022",
+      "marker": "حدثنا…حدثنا"
+    }
+  ]
+}

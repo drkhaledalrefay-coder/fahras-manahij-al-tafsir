@@ -1,0 +1,40 @@
+{
+  "window_id": "24_20",
+  "ayah": "24:20",
+  "span_count": 3,
+  "family_counts": {
+    "QURAN": 1,
+    "LUGHA": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 103,
+          "end": 189,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 190,
+          "end": 193,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

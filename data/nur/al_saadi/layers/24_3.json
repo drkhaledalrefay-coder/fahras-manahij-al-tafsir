@@ -1,0 +1,65 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/nur/al_saadi/raw/24_3.txt",
+  "ayah": "24:3",
+  "surah": 24,
+  "ayah_number": 3,
+  "source_char_length": 1580,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 1297,
+      "kind": "author"
+    },
+    {
+      "start": 1297,
+      "end": 1321,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1321,
+      "end": 1434,
+      "kind": "author"
+    },
+    {
+      "start": 1434,
+      "end": 1501,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1501,
+      "end": 1580,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 3,
+    "layout": 0,
+    "apparatus": 2
+  },
+  "char_totals": {
+    "author": 1489,
+    "layout": 0,
+    "apparatus": 91
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 2
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 91
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 2,
+    "footnote_close": 2,
+    "footnotes_closed": 2,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "window_id": "24_60",
+  "ayah": "24:60",
+  "span_count": 11,
+  "family_counts": {
+    "QURAN": 8,
+    "LUGHA": 3,
+    "QIRAAT": 2,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 883,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 884,
+          "end": 901,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 903,
+          "end": 935,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1134,
+          "end": 1168,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1169,
+          "end": 1174,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1690,
+          "end": 1695,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1886,
+          "end": 1943,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "وفي قراءة",
+          "start": 2146,
+          "end": 2160,
+          "span_id": "s008"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 2152,
+          "end": 2160,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2258,
+          "end": 2291,
+          "span_id": "s009"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2292,
+          "end": 2297,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2493,
+          "end": 2516,
+          "span_id": "s011"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2560,
+          "end": 2602,
+          "span_id": "s011"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1316,
+      "end": 1665,
+      "text": "¬قال ابن قتيبة في \"غريب القرآن\" (2/ 43) من \"القرطين\" لابن مطرف الكناني: \" .. ولا أراها تسمت قاعدا إلا بالقعود، لأنها إذا أسنت عجزت عن التصرف وكثرة الحركة، وأطالت القعود، فقيل لها: \"قاعد\" بلا هاء، ليدل بحذف الهاء على أنه قعود كبر، كما قالوا: امرأة حامل، بلا هاء، ليدل بحذف الهاء على أنه حمل حبل، وقالوا في غير ذلك: قاعدة في بيتها، وحاملة على ظهرها\".¥",
+      "attached_span_id": "s006",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

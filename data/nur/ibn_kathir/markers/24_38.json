@@ -1,0 +1,432 @@
+{
+  "window_id": "24_38",
+  "ayah": "24:38",
+  "span_count": 20,
+  "family_counts": {
+    "QURAN": 19,
+    "LUGHA": 2,
+    "HADITH": 8,
+    "ISNAD": 4,
+    "SAHABA": 2,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 128,
+          "end": 174,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 175,
+          "end": 178,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 235,
+          "end": 264,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 265,
+          "end": 268,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 299,
+          "end": 312,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 303,
+          "end": 312,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 314,
+          "end": 439,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقال تعالى",
+          "start": 450,
+          "end": 460,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 451,
+          "end": 460,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 462,
+          "end": 515,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 516,
+          "end": 530,
+          "text": "[الأنعام: 160]",
+          "via": "apparatus",
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 538,
+          "end": 629,
+          "span_id": "s008"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 630,
+          "end": 643,
+          "text": "[البقرة: 245]",
+          "via": "apparatus",
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 650,
+          "end": 686,
+          "span_id": "s009"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 687,
+          "end": 700,
+          "text": "[البقرة: 261]",
+          "via": "apparatus",
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 712,
+          "end": 762,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 909,
+          "end": 973,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 975,
+          "end": 979,
+          "span_id": "s012"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1018,
+          "end": 1042,
+          "stripped": "عن إبراهيم، عن علقمة عنه",
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1169,
+          "end": 1174,
+          "span_id": "s013"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 1169,
+          "end": 1218,
+          "stripped": "حدثنا أبي، حدثنا سويد بن سعيد، حدثنا علي بن مسهر،",
+          "span_id": "s013"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1180,
+          "end": 1185,
+          "span_id": "s013"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1200,
+          "end": 1205,
+          "span_id": "s013"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "علي",
+          "name": "علي",
+          "role": "NARRATOR",
+          "start": 1206,
+          "end": 1209,
+          "span_id": "s013"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1219,
+          "end": 1261,
+          "stripped": "عن عبد الرحمن بن إسحاق، عن شهر بن حوشب، عن",
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1292,
+          "end": 1305,
+          "span_id": "s014"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1308,
+          "end": 1326,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1797,
+          "end": 1843,
+          "stripped": "عن الأعمش، عن أبي وائل، عن ابن مسعود، عن النبي",
+          "span_id": "s017"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن مسعود",
+          "name": "ابن مسعود",
+          "role": "NARRATOR",
+          "start": 1824,
+          "end": 1833,
+          "span_id": "s017"
+        },
+        {
+          "family": "HADITH",
+          "marker": "النبي",
+          "role": "SPEAKER",
+          "start": 1838,
+          "end": 1843,
+          "span_id": "s017"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1846,
+          "end": 1864,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1876,
+          "end": 1933,
+          "span_id": "s018"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1939,
+          "end": 1952,
+          "span_id": "s018"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 1953,
+          "end": 1963,
+          "text": "[فاطر: 30]",
+          "via": "apparatus",
+          "span_id": "s018"
+        }
+      ]
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1978,
+          "end": 2007,
+          "span_id": "s019"
+        }
+      ]
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1043,
+      "end": 1154,
+      "text": "¬أخرجه ابن أبي حاتم من طريق الأعمش به، وأخرجه الحاكم من طريق الأعمش به، وصححه ووافقه الذهبي (المستدرك 2/ 399).¥",
+      "attached_span_id": "s012",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1530,
+      "end": 1735,
+      "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه، وفي سنده عبد الرحمن بن إسحاق وهو ضعيف، وشهر بن حوشب فيه مقال، وقد روي من طرق أخرى تقويه فقد أخرجه الحاكم من حديث عقبة بن عامر الجهني وصححه ووافقه الذهبي (المستدرك 2/ 399).¥",
+      "attached_span_id": "s016",
+      "grading": [
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2068,
+      "end": 2111,
+      "text": "¬تقدم تخريجه في تفسير سورة النساء آية 173.¥",
+      "attached_span_id": "s019",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1018,
+      "end": 1042,
+      "span_id": "s012",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 1169,
+      "end": 1218,
+      "span_id": "s013",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 1219,
+      "end": 1261,
+      "span_id": "s013",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 1797,
+      "end": 1843,
+      "span_id": "s017",
+      "marker": "عن…عن"
+    }
+  ]
+}

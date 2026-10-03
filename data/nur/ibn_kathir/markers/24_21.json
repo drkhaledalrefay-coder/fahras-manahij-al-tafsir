@@ -1,0 +1,383 @@
+{
+  "window_id": "24_21",
+  "ayah": "24:21",
+  "span_count": 21,
+  "family_counts": {
+    "QURAN": 9,
+    "TABIIN": 4,
+    "SAHABA": 1,
+    "HADITH": 3,
+    "ISNAD": 2,
+    "LUGHA": 3,
+    "EDITOR": 8
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 321,
+          "end": 330,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 332,
+          "end": 403,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 437,
+          "end": 526,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "علي بن أبي طلحة",
+          "name": "علي بن أبي طلحة",
+          "role": "NARRATOR",
+          "start": 593,
+          "end": 608,
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 613,
+          "end": 621,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 622,
+          "end": 646,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عكرمة",
+          "name": "عكرمة",
+          "role": "SPEAKER",
+          "start": 706,
+          "end": 711,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "name": "قتادة",
+          "role": "SPEAKER",
+          "start": 783,
+          "end": 788,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الشعبي",
+          "name": "الشعبي",
+          "role": "SPEAKER",
+          "start": 1202,
+          "end": 1208,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1356,
+          "end": 1361,
+          "span_id": "s014"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 1356,
+          "end": 1384,
+          "stripped": "حدثنا أبي، حدثنا حسان بن عبد",
+          "span_id": "s014"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1367,
+          "end": 1372,
+          "span_id": "s014"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1398,
+          "end": 1403,
+          "span_id": "s014"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1419,
+          "end": 1453,
+          "stripped": "عن سليمان التيمي، عن أبي رافع قال:",
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    },
+    {
+      "span_id": "s018",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1822,
+          "end": 1831,
+          "span_id": "s018"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1833,
+          "end": 1922,
+          "span_id": "s018"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1923,
+          "end": 1926,
+          "span_id": "s018"
+        }
+      ]
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2074,
+          "end": 2115,
+          "span_id": "s019"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2116,
+          "end": 2119,
+          "span_id": "s019"
+        }
+      ]
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    },
+    {
+      "span_id": "s021",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2180,
+          "end": 2199,
+          "span_id": "s021"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 2200,
+          "end": 2203,
+          "span_id": "s021"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2222,
+          "end": 2231,
+          "span_id": "s021"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 652,
+      "end": 698,
+      "text": "¬أخرجه ابن أبي حاتم بسند ثابت من طريق علي به.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 720,
+      "end": 775,
+      "text": "¬أخرجه ابن أبي حاتم بسند ضعيف فيه حفص بن عمر، وهو ضعف.¥",
+      "attached_span_id": "s005",
+      "grading": [
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 820,
+      "end": 893,
+      "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق القاسم بن الوليد الهمداني عن قتادة.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 946,
+      "end": 1010,
+      "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق سليمان التيمي عن أبي مجلز.¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1127,
+      "end": 1194,
+      "text": "¬أخرجه ابن أبي حاتم والحاكم وصححه ووافقه الذهبي (المستدرك 2/ 313).¥",
+      "attached_span_id": "s010",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1273,
+      "end": 1334,
+      "text": "¬أخرجه ابن أبي حاتم بسند حسن من طريق خالد بن داود عن الشعبي.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1630,
+      "end": 1708,
+      "text": "¬زينب بنت أم سلمة بن عبد الأسد بن هلال ماتت سنة ثلاث وسبعين (الإصابة 4/ 317).¥",
+      "attached_span_id": "s016",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1772,
+      "end": 1816,
+      "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه، وسنده حسن.¥",
+      "attached_span_id": "s017",
+      "grading": [
+        "حسن",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1356,
+      "end": 1384,
+      "span_id": "s014",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 1419,
+      "end": 1453,
+      "span_id": "s014",
+      "marker": "عن…عن"
+    }
+  ]
+}

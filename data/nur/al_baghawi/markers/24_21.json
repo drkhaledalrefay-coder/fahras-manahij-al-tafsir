@@ -1,0 +1,124 @@
+{
+  "window_id": "24_21",
+  "ayah": "24:21",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 7,
+    "LUGHA": 2,
+    "TABIIN": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24,
+          "end": 169,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 170,
+          "end": 175,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 210,
+          "end": 225,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 264,
+          "end": 324,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 392,
+          "end": 414,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 649,
+          "end": 657,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عطاء",
+          "name": "عطاء",
+          "role": "SPEAKER",
+          "start": 781,
+          "end": 787,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 834,
+          "end": 870,
+          "span_id": "s008"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 882,
+          "end": 896,
+          "span_id": "s008"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 943,
+          "end": 970,
+          "span_id": "s008"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

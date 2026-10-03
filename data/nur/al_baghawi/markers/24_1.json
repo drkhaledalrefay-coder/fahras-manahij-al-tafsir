@@ -1,0 +1,177 @@
+{
+  "window_id": "24_1",
+  "ayah": "24:1",
+  "span_count": 13,
+  "family_counts": {
+    "QURAN": 5,
+    "LUGHA": 6,
+    "QIRAAT": 2,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 227,
+          "end": 583,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 584,
+          "end": 593,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 594,
+          "end": 599,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 616,
+          "end": 647,
+          "span_id": "s003"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 648,
+          "end": 653,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 729,
+          "end": 734,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 764,
+          "end": 769,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 855,
+          "end": 863,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1003,
+          "end": 1008,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "معناه",
+          "start": 1145,
+          "end": 1150,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1330,
+          "end": 1335,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1412,
+          "end": 1452,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1465,
+          "end": 1491,
+          "span_id": "s013"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 29,
+      "end": 188,
+      "text": "¬مدنية كلها بإجماع العلماء، أخرج ابن مردويه عن ابن عباس قال: نزلت سورة النور بالمدينة، وأخرج عن ابن الزبير مثله. انظر: الدر المنثور: 6/ 124، زاد المسير: 3/ 6.¥",
+      "attached_span_id": "s001",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

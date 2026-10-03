@@ -1,0 +1,120 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/nur/al_baghawi/raw/24_58.txt",
+  "ayah": "24:58",
+  "surah": 24,
+  "ayah_number": 58,
+  "source_char_length": 4720,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 935,
+      "kind": "author"
+    },
+    {
+      "start": 935,
+      "end": 994,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 994,
+      "end": 1299,
+      "kind": "author"
+    },
+    {
+      "start": 1299,
+      "end": 1435,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1435,
+      "end": 3239,
+      "kind": "author"
+    },
+    {
+      "start": 3239,
+      "end": 3368,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3368,
+      "end": 3459,
+      "kind": "author"
+    },
+    {
+      "start": 3459,
+      "end": 3560,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3560,
+      "end": 3799,
+      "kind": "author"
+    },
+    {
+      "start": 3799,
+      "end": 4153,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4153,
+      "end": 4479,
+      "kind": "author"
+    },
+    {
+      "start": 4479,
+      "end": 4541,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4541,
+      "end": 4695,
+      "kind": "author"
+    },
+    {
+      "start": 4695,
+      "end": 4719,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4719,
+      "end": 4720,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 8,
+    "layout": 0,
+    "apparatus": 7
+  },
+  "char_totals": {
+    "author": 3855,
+    "layout": 0,
+    "apparatus": 865
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 7
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 865
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 7,
+    "footnote_close": 7,
+    "footnotes_closed": 7,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

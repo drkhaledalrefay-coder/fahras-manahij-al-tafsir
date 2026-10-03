@@ -1,0 +1,34 @@
+{
+  "window_id": "24_27_p01",
+  "tafsir_id": "ibn_kathir",
+  "ayah": "24:27",
+  "surah": 24,
+  "ayah_number": 27,
+  "source": "tafsircenter",
+  "source_file": "data/nur/ibn_kathir/raw/24_27.txt",
+  "source_sha256": "46777f3b3dee4e803d11fbb559bf7281246f635e69d27ca39a4780fded896ab2",
+  "window_start": 0,
+  "window_end": 180,
+  "window_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَدْخُلُوا بُيُوتًا غَيْرَ بُيُوتِكُمْ حَتَّى تَسْتَأْنِسُوا وَتُسَلِّمُوا عَلَى أَهْلِهَا ذَلِكُمْ خَيْرٌ لَكُمْ لَعَلَّكُمْ تَذَكَّرُونَ (27)\r\n",
+  "span_count": 1,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 180,
+      "text": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَدْخُلُوا بُيُوتًا غَيْرَ بُيُوتِكُمْ حَتَّى تَسْتَأْنِسُوا وَتُسَلِّمُوا عَلَى أَهْلِهَا ذَلِكُمْ خَيْرٌ لَكُمْ لَعَلَّكُمْ تَذَكَّرُونَ (27)\r\n"
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "paragraph_pack_cap_110",
+    "start_span_id": "s001",
+    "end_span_id": "s001",
+    "start_index": 0,
+    "end_index": 0,
+    "char_length": 180,
+    "part": 1,
+    "part_count": 3,
+    "capped_at_110": false
+  }
+}

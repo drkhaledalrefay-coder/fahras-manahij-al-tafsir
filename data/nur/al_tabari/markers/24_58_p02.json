@@ -1,0 +1,111 @@
+{
+  "window_id": "24_58_p02",
+  "ayah": "24:58",
+  "span_count": 8,
+  "family_counts": {
+    "QURAN": 5,
+    "RAY": 2,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s106",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9243,
+          "end": 9299,
+          "span_id": "s106"
+        }
+      ]
+    },
+    {
+      "span_id": "s107",
+      "markers": []
+    },
+    {
+      "span_id": "s108",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9467,
+          "end": 9491,
+          "span_id": "s108"
+        }
+      ]
+    },
+    {
+      "span_id": "s109",
+      "markers": []
+    },
+    {
+      "span_id": "s110",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "وأقرب",
+          "start": 9668,
+          "end": 9675,
+          "span_id": "s110"
+        }
+      ]
+    },
+    {
+      "span_id": "s111",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9740,
+          "end": 9765,
+          "span_id": "s111"
+        },
+        {
+          "family": "RAY",
+          "marker": "وأقرب",
+          "start": 9829,
+          "end": 9836,
+          "span_id": "s111"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9858,
+          "end": 9903,
+          "span_id": "s111"
+        }
+      ]
+    },
+    {
+      "span_id": "s112",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10053,
+          "end": 10080,
+          "span_id": "s112"
+        }
+      ]
+    },
+    {
+      "span_id": "s113",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9386,
+      "end": 9458,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 8/ 2636، وهو تتمة الأثر المتقدم في ص 353.¥",
+      "attached_span_id": "s107",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

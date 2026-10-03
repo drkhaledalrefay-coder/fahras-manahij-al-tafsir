@@ -1,0 +1,54 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/nur/al_baghawi/raw/24_24.txt",
+  "ayah": "24:24",
+  "surah": 24,
+  "ayah_number": 24,
+  "source_char_length": 892,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 669,
+      "kind": "author"
+    },
+    {
+      "start": 669,
+      "end": 688,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 688,
+      "end": 892,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 2,
+    "layout": 0,
+    "apparatus": 1
+  },
+  "char_totals": {
+    "author": 873,
+    "layout": 0,
+    "apparatus": 19
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 19
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

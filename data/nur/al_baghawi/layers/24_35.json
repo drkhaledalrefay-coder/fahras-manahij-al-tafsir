@@ -1,0 +1,164 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/nur/al_baghawi/raw/24_35.txt",
+  "ayah": "24:35",
+  "surah": 24,
+  "ayah_number": 35,
+  "source_char_length": 14253,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 398,
+      "kind": "author"
+    },
+    {
+      "start": 398,
+      "end": 493,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 493,
+      "end": 2088,
+      "kind": "author"
+    },
+    {
+      "start": 2088,
+      "end": 2684,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2684,
+      "end": 5838,
+      "kind": "author"
+    },
+    {
+      "start": 5838,
+      "end": 6327,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 6327,
+      "end": 6938,
+      "kind": "author"
+    },
+    {
+      "start": 6938,
+      "end": 7447,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 7447,
+      "end": 8819,
+      "kind": "author"
+    },
+    {
+      "start": 8819,
+      "end": 9212,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 9212,
+      "end": 10086,
+      "kind": "author"
+    },
+    {
+      "start": 10086,
+      "end": 10185,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 10185,
+      "end": 10582,
+      "kind": "author"
+    },
+    {
+      "start": 10582,
+      "end": 10658,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 10658,
+      "end": 12592,
+      "kind": "author"
+    },
+    {
+      "start": 12592,
+      "end": 12645,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 12645,
+      "end": 13026,
+      "kind": "author"
+    },
+    {
+      "start": 13026,
+      "end": 13062,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 13062,
+      "end": 13246,
+      "kind": "author"
+    },
+    {
+      "start": 13246,
+      "end": 13264,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 13264,
+      "end": 13789,
+      "kind": "author"
+    },
+    {
+      "start": 13789,
+      "end": 13891,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 13891,
+      "end": 14253,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 12,
+    "layout": 0,
+    "apparatus": 11
+  },
+  "char_totals": {
+    "author": 11787,
+    "layout": 0,
+    "apparatus": 2466
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 11
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 2466
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 11,
+    "footnote_close": 11,
+    "footnotes_closed": 11,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}
