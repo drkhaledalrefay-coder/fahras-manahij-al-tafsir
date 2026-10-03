@@ -1,0 +1,319 @@
+{
+  "window_id": "24_30",
+  "ayah": "24:30",
+  "span_count": 15,
+  "family_counts": {
+    "QURAN": 5,
+    "LUGHA": 4,
+    "TABIIN": 2,
+    "HADITH": 12,
+    "ISNAD": 1,
+    "SAHABA": 2,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24,
+          "end": 75,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 76,
+          "end": 81,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 162,
+          "end": 167,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 425,
+          "end": 451,
+          "span_id": "s004"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "أبو العالية",
+          "name": "أبو العالية",
+          "role": "SPEAKER",
+          "start": 478,
+          "end": 495,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 691,
+          "end": 699,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 700,
+          "end": 705,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 742,
+          "end": 758,
+          "span_id": "s006"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 759,
+          "end": 764,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 791,
+          "end": 832,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 890,
+          "end": 910,
+          "span_id": "s008"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 912,
+          "end": 944,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1451,
+          "end": 1483,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1637,
+          "end": 1648,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1686,
+          "end": 1697,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1732,
+          "end": 1742,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1780,
+          "end": 1790,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 1835,
+          "end": 1845,
+          "span_id": "s012"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 1835,
+          "end": 1901,
+          "stripped": "حدثنا مسلم بن الحجاج، أخبرنا أبو بكر بن",
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1873,
+          "end": 1884,
+          "span_id": "s012"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "أبو بكر",
+          "name": "أبو بكر",
+          "role": "NARRATOR",
+          "start": 1885,
+          "end": 1896,
+          "span_id": "s012"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 1919,
+          "end": 1930,
+          "span_id": "s012"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "name": "الضحاك",
+          "role": "NARRATOR",
+          "start": 1960,
+          "end": 1970,
+          "span_id": "s012"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "عثمان",
+          "name": "عثمان",
+          "role": "SPEAKER",
+          "start": 1977,
+          "end": 1985,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أن رسول الله",
+          "start": 2098,
+          "end": 2118,
+          "span_id": "s013"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 2120,
+          "end": 2152,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1058,
+      "end": 1380,
+      "text": "¬أخرجه أبو داود في النكاح، باب: ما يؤمر به من غض البصر: 3/ 70 والترمذي في الأدب، باب: ما جاء في نظرة المفاجأة: 8/ 61 وقال: هذا حديث حسن غريب لا نعرفه إلا من حديث شريك، والدارمي في الرقاق باب: في حفظ السمع: 2/ 298 وصححه الحاكم: 2/ 194 على شرط مسلم ووافقه الذهبي، والإمام أحمد: 5/ 353، 357 وذكره المصنف في شرح السنة: 9/ 23.¥",
+      "attached_span_id": "s009",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1539,
+      "end": 1635,
+      "text": "¬أخرجه مسلم في الآداب، باب: نظرة الفجأة برقم: (2159): 3/ 1699 وذكره المصنف في شرح السنة: 9/ 23.¥",
+      "attached_span_id": "s011",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2381,
+      "end": 2480,
+      "text": "¬أخرجه مسلم في الحيض، باب تحريم النظر إلى العورات برقم: (338): 1/ 266 والمصنف في شرح السنة: 9/ 20.¥",
+      "attached_span_id": "s014",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 1835,
+      "end": 1901,
+      "span_id": "s012",
+      "marker": "حدثنا…حدثنا"
+    }
+  ]
+}

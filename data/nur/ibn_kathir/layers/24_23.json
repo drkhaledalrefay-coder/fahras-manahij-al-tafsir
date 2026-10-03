@@ -1,0 +1,189 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_23.txt",
+  "ayah": "24:23",
+  "surah": 24,
+  "ayah_number": 23,
+  "source_char_length": 5182,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 752,
+      "kind": "author"
+    },
+    {
+      "start": 752,
+      "end": 761,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 761,
+      "end": 1027,
+      "kind": "author"
+    },
+    {
+      "start": 1027,
+      "end": 1208,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1208,
+      "end": 1802,
+      "kind": "author"
+    },
+    {
+      "start": 1802,
+      "end": 1813,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1813,
+      "end": 1814,
+      "kind": "author"
+    },
+    {
+      "start": 1814,
+      "end": 1925,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1925,
+      "end": 2165,
+      "kind": "author"
+    },
+    {
+      "start": 2165,
+      "end": 2465,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2465,
+      "end": 2882,
+      "kind": "author"
+    },
+    {
+      "start": 2882,
+      "end": 2895,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2895,
+      "end": 2952,
+      "kind": "author"
+    },
+    {
+      "start": 2952,
+      "end": 3013,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3013,
+      "end": 3503,
+      "kind": "author"
+    },
+    {
+      "start": 3503,
+      "end": 3513,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 3513,
+      "end": 3639,
+      "kind": "author"
+    },
+    {
+      "start": 3639,
+      "end": 3768,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3768,
+      "end": 3983,
+      "kind": "author"
+    },
+    {
+      "start": 3983,
+      "end": 4096,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4096,
+      "end": 4571,
+      "kind": "author"
+    },
+    {
+      "start": 4571,
+      "end": 4795,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4795,
+      "end": 5077,
+      "kind": "author"
+    },
+    {
+      "start": 5077,
+      "end": 5181,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 5181,
+      "end": 5182,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 13,
+    "layout": 0,
+    "apparatus": 12
+  },
+  "char_totals": {
+    "author": 3916,
+    "layout": 0,
+    "apparatus": 1266
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 8,
+    "verse_ref": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 9,
+    "footnote": 1223,
+    "verse_ref": 34
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 8,
+    "footnote_close": 8,
+    "footnotes_closed": 8,
+    "bracket_total": 5,
+    "bracket_pattern_classes": {
+      "other_bracket": 1,
+      "verse_ref": 4
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[النور: 26]": 1,
+      "[النور: 4، 5]": 1,
+      "[النور: 5]": 1,
+      "[النساء: 10]": 1
+    },
+    "other_brackets": {
+      "[الأحزاب]": 1
+    }
+  }
+}

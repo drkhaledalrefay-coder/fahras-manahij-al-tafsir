@@ -1,0 +1,34 @@
+{
+  "window_id": "24_46",
+  "tafsir_id": "al_baghawi",
+  "ayah": "24:46",
+  "surah": 24,
+  "ayah_number": 46,
+  "source": "tafsircenter",
+  "source_file": "data/nur/al_baghawi/raw/24_46.txt",
+  "source_sha256": "2fdccaa80aaaccd6ef670e3d6d8769024c34b361f188c6ac9a97f123315f556c",
+  "window_start": 0,
+  "window_end": 111,
+  "window_text": "{لَقَدْ أَنْزَلْنَا} إِلَيْكَ، {آيَاتٍ مُبَيِّنَاتٍ وَاللَّهُ، يَهْدِي مَنْ يَشَاءُ إِلَى صِرَاطٍ مُسْتَقِيمٍ}.",
+  "span_count": 1,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 111,
+      "text": "{لَقَدْ أَنْزَلْنَا} إِلَيْكَ، {آيَاتٍ مُبَيِّنَاتٍ وَاللَّهُ، يَهْدِي مَنْ يَشَاءُ إِلَى صِرَاطٍ مُسْتَقِيمٍ}."
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s001",
+    "start_index": 0,
+    "end_index": 0,
+    "char_length": 111,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

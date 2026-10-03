@@ -1,0 +1,874 @@
+{
+  "window_id": "24_61",
+  "ayah": "24:61",
+  "span_count": 55,
+  "family_counts": {
+    "QURAN": 18,
+    "NUZUL": 15,
+    "LUGHA": 5,
+    "TABIIN": 10,
+    "SAHABA": 6,
+    "HADITH": 2,
+    "RAY": 1,
+    "EDITOR": 16
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 0,
+          "end": 17,
+          "span_id": "s001"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 19,
+          "end": 110,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 784,
+          "end": 793,
+          "span_id": "s003"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 784,
+          "end": 801,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1031,
+          "end": 1036,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "سعيد بن جبير",
+          "name": "سعيد بن جبير",
+          "role": "SPEAKER",
+          "start": 1150,
+          "end": 1170,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فنزلت",
+          "start": 1475,
+          "end": 1484,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 1547,
+          "end": 1555,
+          "span_id": "s009"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 2018,
+          "end": 2027,
+          "span_id": "s009"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 2018,
+          "end": 2035,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 2503,
+          "end": 2512,
+          "span_id": "s010"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 2503,
+          "end": 2520,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "SPEAKER",
+          "start": 2791,
+          "end": 2799,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 2956,
+          "end": 2975,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 2958,
+          "end": 2975,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2977,
+          "end": 3003,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 3328,
+          "end": 3337,
+          "span_id": "s016"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 3328,
+          "end": 3345,
+          "span_id": "s016"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 3361,
+          "end": 3420,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 3522,
+          "end": 3527,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": []
+    },
+    {
+      "span_id": "s020",
+      "markers": []
+    },
+    {
+      "span_id": "s021",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 4677,
+          "end": 4922,
+          "span_id": "s021"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 4929,
+          "end": 4942,
+          "span_id": "s021"
+        }
+      ]
+    },
+    {
+      "span_id": "s022",
+      "markers": []
+    },
+    {
+      "span_id": "s023",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "الضحاك",
+          "name": "الضحاك",
+          "role": "SPEAKER",
+          "start": 5180,
+          "end": 5190,
+          "span_id": "s023"
+        },
+        {
+          "family": "QURAN",
+          "marker": "لقوله تعالى",
+          "start": 5326,
+          "end": 5345,
+          "span_id": "s023"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 5328,
+          "end": 5345,
+          "span_id": "s023"
+        }
+      ]
+    },
+    {
+      "span_id": "s024",
+      "markers": []
+    },
+    {
+      "span_id": "s025",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عكرمة",
+          "name": "عكرمة",
+          "role": "SPEAKER",
+          "start": 5450,
+          "end": 5459,
+          "span_id": "s025"
+        }
+      ]
+    },
+    {
+      "span_id": "s026",
+      "markers": []
+    },
+    {
+      "span_id": "s027",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "السدي",
+          "name": "السدي",
+          "role": "SPEAKER",
+          "start": 5571,
+          "end": 5580,
+          "span_id": "s027"
+        }
+      ]
+    },
+    {
+      "span_id": "s028",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 5753,
+          "end": 5761,
+          "span_id": "s028"
+        }
+      ]
+    },
+    {
+      "span_id": "s029",
+      "markers": []
+    },
+    {
+      "span_id": "s030",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 5836,
+          "end": 5854,
+          "span_id": "s030"
+        }
+      ]
+    },
+    {
+      "span_id": "s031",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 5907,
+          "end": 5920,
+          "span_id": "s031"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 5923,
+          "end": 5935,
+          "span_id": "s031"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 6020,
+          "end": 6052,
+          "span_id": "s031"
+        }
+      ]
+    },
+    {
+      "span_id": "s032",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 6221,
+          "end": 6230,
+          "span_id": "s032"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 6221,
+          "end": 6238,
+          "span_id": "s032"
+        }
+      ]
+    },
+    {
+      "span_id": "s033",
+      "markers": []
+    },
+    {
+      "span_id": "s034",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "والمعنى",
+          "start": 6495,
+          "end": 6507,
+          "span_id": "s034"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 6509,
+          "end": 6552,
+          "span_id": "s034"
+        }
+      ]
+    },
+    {
+      "span_id": "s035",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 6678,
+          "end": 6745,
+          "span_id": "s035"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 6746,
+          "end": 6758,
+          "span_id": "s035"
+        }
+      ]
+    },
+    {
+      "span_id": "s036",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عطاء",
+          "name": "عطاء",
+          "role": "SPEAKER",
+          "start": 7286,
+          "end": 7292,
+          "span_id": "s036"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 7316,
+          "end": 7329,
+          "span_id": "s036"
+        }
+      ]
+    },
+    {
+      "span_id": "s037",
+      "markers": []
+    },
+    {
+      "span_id": "s038",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 7508,
+          "end": 7513,
+          "span_id": "s038"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فنزلت",
+          "start": 7578,
+          "end": 7587,
+          "span_id": "s038"
+        }
+      ]
+    },
+    {
+      "span_id": "s039",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عكرمة",
+          "name": "عكرمة",
+          "role": "SPEAKER",
+          "start": 7633,
+          "end": 7642,
+          "span_id": "s039"
+        }
+      ]
+    },
+    {
+      "span_id": "s040",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "نزلت في",
+          "start": 7661,
+          "end": 7673,
+          "span_id": "s040"
+        }
+      ]
+    },
+    {
+      "span_id": "s041",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 8393,
+          "end": 8453,
+          "span_id": "s041"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 8454,
+          "end": 8459,
+          "span_id": "s041"
+        }
+      ]
+    },
+    {
+      "span_id": "s042",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "جابر",
+          "name": "جابر",
+          "role": "SPEAKER",
+          "start": 8599,
+          "end": 8605,
+          "span_id": "s042"
+        }
+      ]
+    },
+    {
+      "span_id": "s043",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "قتادة",
+          "name": "قتادة",
+          "role": "SPEAKER",
+          "start": 8717,
+          "end": 8725,
+          "span_id": "s043"
+        }
+      ]
+    },
+    {
+      "span_id": "s044",
+      "markers": []
+    },
+    {
+      "span_id": "s045",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 8927,
+          "end": 8937,
+          "span_id": "s045"
+        }
+      ]
+    },
+    {
+      "span_id": "s046",
+      "markers": []
+    },
+    {
+      "span_id": "s047",
+      "markers": []
+    },
+    {
+      "span_id": "s048",
+      "markers": []
+    },
+    {
+      "span_id": "s049",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 9291,
+          "end": 9304,
+          "span_id": "s049"
+        }
+      ]
+    },
+    {
+      "span_id": "s050",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 9456,
+          "end": 9473,
+          "span_id": "s050"
+        }
+      ]
+    },
+    {
+      "span_id": "s051",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 9475,
+          "end": 9535,
+          "span_id": "s051"
+        }
+      ]
+    },
+    {
+      "span_id": "s052",
+      "markers": []
+    },
+    {
+      "span_id": "s053",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10071,
+          "end": 10102,
+          "span_id": "s053"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 10129,
+          "end": 10134,
+          "span_id": "s053"
+        }
+      ]
+    },
+    {
+      "span_id": "s054",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10170,
+          "end": 10193,
+          "span_id": "s054"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 10202,
+          "end": 10215,
+          "span_id": "s054"
+        }
+      ]
+    },
+    {
+      "span_id": "s055",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 10353,
+          "end": 10422,
+          "span_id": "s055"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 819,
+      "end": 971,
+      "text": "¬أخرجه الطبري: 18/ 168، وذكره الواحدي ص (381)، وعزاه السيوطي: (6/ 224) أيضا لابن المنذر، وابن أبي حاتم والبيهقي. وانظر: مشكل القرآن لابن قتيبة ص (333).¥",
+      "attached_span_id": "s003",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1502,
+      "end": 1537,
+      "text": "¬الطبري: 18/ 168، الواحدي ص (381).¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2053,
+      "end": 2202,
+      "text": "¬الطبري: 18/ 169، الواحدي ص (381)، وعزاه السيوطي: (6/ 223) لعبد الرزاق، وابن أبي شيبة، وإبراهيم، وعبد بن حميد، وابن المنذر، وابن أبي حاتم، والبيهقي.¥",
+      "attached_span_id": "s009",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2554,
+      "end": 2784,
+      "text": "¬أخرجه الواحدي في أسباب النزول ص (381 - 382) وعزاه السيوطي لعبد بن حميد. وأخرجه البزار وابن أبي حاتم وابن مردويه وابن النجار عن عائشة أيضا، وقال الهيثمي: \"رجال البزار رجال الصحيح\". انظر: الدر المنثور: 6/ 224، مجمع الزوائد: 7/ 83.¥",
+      "attached_span_id": "s010",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3039,
+      "end": 3156,
+      "text": "¬انظر: الطبري 18/ 169، ولم يعزه للحسن، وإنما عزاه لابن زيد، وذكره ابن الجوزي في زاد المسير: 6/ 64 عن الحسن وابن زيد.¥",
+      "attached_span_id": "s014",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3421,
+      "end": 3521,
+      "text": "¬عزاه السيوطي لابن جرير وابن المنذر وابن أبي حاتم والبيهقي عن ابن عباس. انظر: الدر المنثور: 6/ 224.¥",
+      "attached_span_id": "s016",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 3789,
+      "end": 4158,
+      "text": "¬قال ابن قتيبة في \"مشكل القرآن\" ص (333 - 334): في الكلام على الآية الكريمة: \"أراد: ولا على أنفسكم أن تأكوا من أموال عيالكم وأزواجكم\".\nوقال بعضهم: أراد أن تأكلوا من بيوت أولادكم، فنسب بيوت الأولاد إلى الآباء؛ لأن الأولاد كسبهم، وأموالهم كأموالهم. يدلك على هذا: أن الناس لا يتوقون أن يأكلوا من بيوتهم، وأن الله سبحانه عدد القربات وهم أبعد نسبا من الولد، ولم يذكر الولد\".¥",
+      "attached_span_id": "s019",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 4216,
+      "end": 4675,
+      "text": "¬أخرجه ابن ماجه عن جابر، في التجارات، باب ما للرجل من مال ولده، برقم (2291): 2/ 769، قال في الزوائد: \"وإسناده صحيح، ورجاله ثقات على شرط البخاري\"، والطبراني في الأوسط: 1/ 141، والطحاوي في مشكل الآثار: 2/ 230. ومن حديث عمرو بن شعيب عن أبيه عن جده مطولا رواه الإمام أحمد: 2/ 204، وأبو داود في البيوع، وابن ماجه في التجارات وابن الجارود في المنتقى. وانظر: الفتح السماوي للمناوي: 2/ 875 - 876 مع تعليق المحقق، إرواء الغليل: 3/ 323 و 325، كشف الخفاء: 1/ 239 - 240.¥",
+      "attached_span_id": "s020",
+      "grading": [
+        "صحيح",
+        "إسناده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 6256,
+      "end": 6326,
+      "text": "¬ذكره السيوطي في الدر المنثور: (6/ 225) من رواية الثعلبي عن ابن عباس.¥",
+      "attached_span_id": "s032",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7210,
+      "end": 7277,
+      "text": "¬انظر: الطبري 18/ 172، أسباب النزول ص (382)، الدر المنثور: 6/ 225.¥",
+      "attached_span_id": "s035",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7605,
+      "end": 7623,
+      "text": "¬الطبري: 18/ 172.¥",
+      "attached_span_id": "s038",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 7857,
+      "end": 8391,
+      "text": "¬الطبري: 18/ 172، وزاد السيوطي نسبته لابن المنذر، وذكره الواحدي ص (382) عن عكرمة. وقال الطبري: \"وأولى الأقوال في ذلك بالصواب، أن يقال: إن الله وضع الحرج عن المسلمين أن يأكلوا جميعا معا إذا شاءوا، أو أشتاتا متفرقين إذا أرادوا. وجائز أن يكون ذلك نزل بسبب من كان يتخوف من الأغنياء الأكل مع الفقير، وجائز أن يكون نزل بسبب القوم الذين ذكر أنهم كانوا لا يطعمون وحدانا، وبسبب غير ذلك. ولا خبر بشيء من ذلك يقطع العذر، ولا دلالة في ظاهر التنزيل على حقيقة شيء منه، والصواب: التسليم لما دل عليه ظاهر التنزيل، والتوقف فيما لم يقم على صحته دليل\".¥",
+      "attached_span_id": "s040",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8681,
+      "end": 8707,
+      "text": "¬انظر: زاد المسير: 6/ 67.¥",
+      "attached_span_id": "s042",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 8976,
+      "end": 9037,
+      "text": "¬عزاه السيوطي: (6/ 228) لعبد بن حميد وابن أبي حاتم والبيهقي.¥",
+      "attached_span_id": "s045",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9306,
+      "end": 9426,
+      "text": "¬أخرجه الطبري: 18/ 174، وصححه الحاكم على شرط الشيخين: 2/ 401، وزاد السيوطي نسبته لعبد الرزاق وابن المنذر وابن أبي حاتم.¥",
+      "attached_span_id": "s049",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 9637,
+      "end": 10070,
+      "text": "¬قال الطبري: (18/ 175): \"وأولى الأقوال في ذلك بالصواب، قول من قال معناه: فإذا دخلتم بيوتا من بيوت المسلمين فليسلم بعضكم على بعض .. ، لأن الله جل ثناؤه قال: \"فإذا دخلتم بيوتا\" ولم يخصص من ذلك بيتا دون بيت، وقال: \"فسلموا على أنفسكم\" يعني: بعضكم على بعض، فكان معلوما إذ لم يخصص ذلك على بعض البيوت دون بعض، أنه معني به جميعها، مساجدها وغير مساجدها. ومعنى قوله: \"فسلموا على أنفسكم\" نظير قوله: \"ولا تقتلوا أنفسكم\"، وانظر: القرطبي 12/ 318.¥",
+      "attached_span_id": "s052",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

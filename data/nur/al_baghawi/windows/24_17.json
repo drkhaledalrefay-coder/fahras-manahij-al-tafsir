@@ -1,0 +1,46 @@
+{
+  "window_id": "24_17",
+  "tafsir_id": "al_baghawi",
+  "ayah": "24:17",
+  "surah": 24,
+  "ayah_number": 17,
+  "source": "tafsircenter",
+  "source_file": "data/nur/al_baghawi/raw/24_17.txt",
+  "source_sha256": "086f0087f60735790b895454bf02d3333c78f9af5718ba1557ec04fb9089df1e",
+  "window_start": 0,
+  "window_end": 198,
+  "window_text": "{يَعِظُكُمُ اللَّهُ} قَالَ ابْنُ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا: يُحَرِّمُ اللَّهُ عَلَيْكُمُ وَقَالَ مُجَاهِدٌ: يَنْهَاكُمُ اللَّهُ. {أَنْ تَعُودُوا لِمِثْلِهِ أَبَدًا إِنْ كُنْتُمْ مُؤْمِنِينَ}",
+  "span_count": 3,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 67,
+      "text": "{يَعِظُكُمُ اللَّهُ} قَالَ ابْنُ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا:"
+    },
+    {
+      "id": "s002",
+      "start": 67,
+      "end": 115,
+      "text": " يُحَرِّمُ اللَّهُ عَلَيْكُمُ وَقَالَ مُجَاهِدٌ:"
+    },
+    {
+      "id": "s003",
+      "start": 115,
+      "end": 198,
+      "text": " يَنْهَاكُمُ اللَّهُ. {أَنْ تَعُودُوا لِمِثْلِهِ أَبَدًا إِنْ كُنْتُمْ مُؤْمِنِينَ}"
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "all_spans",
+    "start_span_id": "s001",
+    "end_span_id": "s003",
+    "start_index": 0,
+    "end_index": 2,
+    "char_length": 198,
+    "part": null,
+    "part_count": null,
+    "capped_at_110": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "window_id": "24_8_p01",
+  "tafsir_id": "ibn_kathir",
+  "ayah": "24:8",
+  "surah": 24,
+  "ayah_number": 8,
+  "source": "tafsircenter",
+  "source_file": "data/nur/ibn_kathir/raw/24_8.txt",
+  "source_sha256": "795506a7d55113c654c629132444b859e25b73ecded8cd0b09c1e50744c8c14a",
+  "window_start": 0,
+  "window_end": 108,
+  "window_text": "وَيَدْرَأُ عَنْهَا الْعَذَابَ أَنْ تَشْهَدَ أَرْبَعَ شَهَادَاتٍ بِاللَّهِ إِنَّهُ لَمِنَ الْكَاذِبِينَ (8)\r\n",
+  "span_count": 1,
+  "spans": [
+    {
+      "id": "s001",
+      "start": 0,
+      "end": 108,
+      "text": "وَيَدْرَأُ عَنْهَا الْعَذَابَ أَنْ تَشْهَدَ أَرْبَعَ شَهَادَاتٍ بِاللَّهِ إِنَّهُ لَمِنَ الْكَاذِبِينَ (8)\r\n"
+    }
+  ],
+  "apparatus": [],
+  "selection": {
+    "rule": "paragraph_pack_cap_110",
+    "start_span_id": "s001",
+    "end_span_id": "s001",
+    "start_index": 0,
+    "end_index": 0,
+    "char_length": 108,
+    "part": 1,
+    "part_count": 3,
+    "capped_at_110": false
+  }
+}

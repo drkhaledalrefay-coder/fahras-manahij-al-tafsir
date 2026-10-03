@@ -1,0 +1,51 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/nur/al_tabari/raw/24_56.txt",
+  "ayah": "24:56",
+  "surah": 24,
+  "ayah_number": 56,
+  "source_char_length": 494,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 490,
+      "kind": "author"
+    },
+    {
+      "start": 490,
+      "end": 494,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 1,
+    "layout": 2,
+    "apparatus": 0
+  },
+  "char_totals": {
+    "author": 486,
+    "layout": 8,
+    "apparatus": 0
+  },
+  "apparatus_subtype_counts": {},
+  "apparatus_subtype_chars": {},
+  "survey": {
+    "html_tags": {
+      "<br>": 2
+    },
+    "footnote_open": 0,
+    "footnote_close": 0,
+    "footnotes_closed": 0,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

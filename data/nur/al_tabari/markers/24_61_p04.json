@@ -1,0 +1,174 @@
+{
+  "window_id": "24_61_p04",
+  "ayah": "24:61",
+  "span_count": 16,
+  "family_counts": {
+    "QURAN": 7,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s313",
+      "markers": []
+    },
+    {
+      "span_id": "s314",
+      "markers": []
+    },
+    {
+      "span_id": "s315",
+      "markers": []
+    },
+    {
+      "span_id": "s316",
+      "markers": []
+    },
+    {
+      "span_id": "s317",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 23727,
+          "end": 23759,
+          "span_id": "s317"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 23773,
+          "end": 23804,
+          "span_id": "s317"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 23805,
+          "end": 23817,
+          "text": "[النساء: 29]",
+          "via": "apparatus",
+          "span_id": "s317"
+        }
+      ]
+    },
+    {
+      "span_id": "s318",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 23826,
+          "end": 23857,
+          "span_id": "s318"
+        }
+      ]
+    },
+    {
+      "span_id": "s319",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 23864,
+          "end": 23875,
+          "span_id": "s319"
+        }
+      ]
+    },
+    {
+      "span_id": "s320",
+      "markers": []
+    },
+    {
+      "span_id": "s321",
+      "markers": []
+    },
+    {
+      "span_id": "s322",
+      "markers": []
+    },
+    {
+      "span_id": "s323",
+      "markers": []
+    },
+    {
+      "span_id": "s324",
+      "markers": []
+    },
+    {
+      "span_id": "s325",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24249,
+          "end": 24294,
+          "span_id": "s325"
+        }
+      ]
+    },
+    {
+      "span_id": "s326",
+      "markers": []
+    },
+    {
+      "span_id": "s327",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 24500,
+          "end": 24525,
+          "span_id": "s327"
+        }
+      ]
+    },
+    {
+      "span_id": "s328",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 23619,
+      "end": 23634,
+      "text": "¬في م: \"يخصص\".¥",
+      "attached_span_id": "s314",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 24021,
+      "end": 24056,
+      "text": "¬هو الفراء في معاني القرآن 2/ 262.¥",
+      "attached_span_id": "s321",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 24106,
+      "end": 24134,
+      "text": "¬في ت 1، ت 2، ف: \"تفعلونه\".¥",
+      "attached_span_id": "s322",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 24330,
+      "end": 24363,
+      "text": "¬في ص، ت 1، ت 2، ت 3، ف: \"يعمل\".¥",
+      "attached_span_id": "s326",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

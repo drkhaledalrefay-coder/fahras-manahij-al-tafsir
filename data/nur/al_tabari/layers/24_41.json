@@ -1,0 +1,125 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/nur/al_tabari/raw/24_41.txt",
+  "ayah": "24:41",
+  "surah": 24,
+  "ayah_number": 41,
+  "source_char_length": 2973,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 562,
+      "kind": "author"
+    },
+    {
+      "start": 562,
+      "end": 631,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 631,
+      "end": 632,
+      "kind": "author"
+    },
+    {
+      "start": 632,
+      "end": 673,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 673,
+      "end": 1029,
+      "kind": "author"
+    },
+    {
+      "start": 1029,
+      "end": 1033,
+      "kind": "layout"
+    },
+    {
+      "start": 1033,
+      "end": 1186,
+      "kind": "author"
+    },
+    {
+      "start": 1186,
+      "end": 1394,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1394,
+      "end": 2053,
+      "kind": "author"
+    },
+    {
+      "start": 2053,
+      "end": 2057,
+      "kind": "layout"
+    },
+    {
+      "start": 2057,
+      "end": 2539,
+      "kind": "author"
+    },
+    {
+      "start": 2539,
+      "end": 2572,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2572,
+      "end": 2969,
+      "kind": "author"
+    },
+    {
+      "start": 2969,
+      "end": 2973,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 7,
+    "layout": 4,
+    "apparatus": 4
+  },
+  "char_totals": {
+    "author": 2606,
+    "layout": 16,
+    "apparatus": 351
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 1,
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 69,
+    "footnote": 282
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 4
+    },
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[فإن قال قائل: وكيف قيل: {كُلٌّ قَدْ عَلِمَ صَلَاتَهُ وَتَسْبِيحَهُ}]": 1
+    }
+  }
+}

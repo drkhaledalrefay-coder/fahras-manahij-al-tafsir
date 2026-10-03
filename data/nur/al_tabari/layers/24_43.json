@@ -1,0 +1,227 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/nur/al_tabari/raw/24_43.txt",
+  "ayah": "24:43",
+  "surah": 24,
+  "ayah_number": 43,
+  "source_char_length": 5222,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 1028,
+      "kind": "author"
+    },
+    {
+      "start": 1028,
+      "end": 1032,
+      "kind": "layout"
+    },
+    {
+      "start": 1032,
+      "end": 1147,
+      "kind": "author"
+    },
+    {
+      "start": 1147,
+      "end": 1206,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1206,
+      "end": 1363,
+      "kind": "author"
+    },
+    {
+      "start": 1363,
+      "end": 1393,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1393,
+      "end": 1484,
+      "kind": "author"
+    },
+    {
+      "start": 1484,
+      "end": 1588,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1588,
+      "end": 1712,
+      "kind": "author"
+    },
+    {
+      "start": 1712,
+      "end": 1736,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1736,
+      "end": 2053,
+      "kind": "author"
+    },
+    {
+      "start": 2053,
+      "end": 2057,
+      "kind": "layout"
+    },
+    {
+      "start": 2057,
+      "end": 2139,
+      "kind": "author"
+    },
+    {
+      "start": 2139,
+      "end": 2205,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2205,
+      "end": 2243,
+      "kind": "author"
+    },
+    {
+      "start": 2243,
+      "end": 2364,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2364,
+      "end": 2467,
+      "kind": "author"
+    },
+    {
+      "start": 2467,
+      "end": 2515,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2515,
+      "end": 3049,
+      "kind": "author"
+    },
+    {
+      "start": 3049,
+      "end": 3138,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3138,
+      "end": 4101,
+      "kind": "author"
+    },
+    {
+      "start": 4101,
+      "end": 4105,
+      "kind": "layout"
+    },
+    {
+      "start": 4105,
+      "end": 4214,
+      "kind": "author"
+    },
+    {
+      "start": 4214,
+      "end": 4325,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4325,
+      "end": 4465,
+      "kind": "author"
+    },
+    {
+      "start": 4465,
+      "end": 4589,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4589,
+      "end": 4725,
+      "kind": "author"
+    },
+    {
+      "start": 4725,
+      "end": 4739,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4739,
+      "end": 4911,
+      "kind": "author"
+    },
+    {
+      "start": 4911,
+      "end": 4926,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4926,
+      "end": 5125,
+      "kind": "author"
+    },
+    {
+      "start": 5125,
+      "end": 5129,
+      "kind": "layout"
+    },
+    {
+      "start": 5129,
+      "end": 5218,
+      "kind": "author"
+    },
+    {
+      "start": 5218,
+      "end": 5222,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 17,
+    "layout": 6,
+    "apparatus": 12
+  },
+  "char_totals": {
+    "author": 4393,
+    "layout": 24,
+    "apparatus": 805
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 12
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 805
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 7
+    },
+    "footnote_open": 12,
+    "footnote_close": 12,
+    "footnotes_closed": 12,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

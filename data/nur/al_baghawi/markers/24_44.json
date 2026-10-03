@@ -1,0 +1,186 @@
+{
+  "window_id": "24_44",
+  "ayah": "24:44",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 5,
+    "HADITH": 9,
+    "ISNAD": 2,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 97,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 98,
+          "end": 140,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 285,
+          "end": 296,
+          "span_id": "s003"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 285,
+          "end": 538,
+          "stripped": "أخبرنا عبد الواحد المليحي، أخبرنا عبد الله النعيمي، أخبرنا محمد بن يوسف، أخبرنا محمد بن إسماعيل، أخبرنا الحميدي، أخبرنا سفيان، أخبرنا الزهري، عن سعيد",
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 330,
+          "end": 341,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 373,
+          "end": 384,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 409,
+          "end": 420,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 450,
+          "end": 461,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 478,
+          "end": 489,
+          "span_id": "s003"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 501,
+          "end": 512,
+          "span_id": "s003"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 527,
+          "end": 594,
+          "stripped": "عن سعيد بن المسيب، عن أبي هريرة رضي الله",
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 610,
+          "end": 630,
+          "span_id": "s004"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 632,
+          "end": 664,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 926,
+          "end": 943,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 945,
+          "end": 963,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1026,
+          "end": 1060,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 807,
+      "end": 925,
+      "text": "¬أخرجه البخاري في تفسير سورة الجاثية: 8/ 574، ومسلم في الألفاظ من الأدب، باب النهي عن سب الدهر، برقم (2246): 4/ 1762.¥",
+      "attached_span_id": "s005",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 285,
+      "end": 538,
+      "span_id": "s003",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 527,
+      "end": 594,
+      "span_id": "s003",
+      "marker": "عن…عن"
+    }
+  ]
+}

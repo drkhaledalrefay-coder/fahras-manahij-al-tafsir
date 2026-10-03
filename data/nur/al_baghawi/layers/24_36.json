@@ -1,0 +1,82 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/nur/al_baghawi/raw/24_36.txt",
+  "ayah": "24:36",
+  "surah": 24,
+  "ayah_number": 36,
+  "source_char_length": 3811,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 957,
+      "kind": "author"
+    },
+    {
+      "start": 957,
+      "end": 986,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 986,
+      "end": 2499,
+      "kind": "author"
+    },
+    {
+      "start": 2499,
+      "end": 2650,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2650,
+      "end": 2756,
+      "kind": "author"
+    },
+    {
+      "start": 2756,
+      "end": 2829,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2829,
+      "end": 3555,
+      "kind": "author"
+    },
+    {
+      "start": 3555,
+      "end": 3811,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 4
+  },
+  "char_totals": {
+    "author": 3302,
+    "layout": 0,
+    "apparatus": 509
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 4
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 509
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 4,
+    "footnote_close": 4,
+    "footnotes_closed": 4,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

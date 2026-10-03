@@ -1,0 +1,76 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_baghawi",
+  "source_file": "data/nur/al_baghawi/raw/24_22.txt",
+  "ayah": "24:22",
+  "surah": 24,
+  "ayah_number": 22,
+  "source_char_length": 1419,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 490,
+      "kind": "author"
+    },
+    {
+      "start": 490,
+      "end": 504,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 504,
+      "end": 974,
+      "kind": "author"
+    },
+    {
+      "start": 974,
+      "end": 1168,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1168,
+      "end": 1388,
+      "kind": "author"
+    },
+    {
+      "start": 1388,
+      "end": 1418,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1418,
+      "end": 1419,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 1181,
+    "layout": 0,
+    "apparatus": 238
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 3
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 238
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 3,
+    "footnote_close": 3,
+    "footnotes_closed": 3,
+    "bracket_total": 0,
+    "bracket_pattern_classes": {},
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {}
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "window_id": "24_19",
+  "ayah": "24:19",
+  "span_count": 11,
+  "family_counts": {
+    "QURAN": 4,
+    "LUGHA": 3,
+    "HADITH": 5,
+    "ISNAD": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 287,
+          "end": 296,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 298,
+          "end": 397,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 398,
+          "end": 401,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 435,
+          "end": 474,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 475,
+          "end": 478,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 512,
+          "end": 559,
+          "span_id": "s005"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 560,
+          "end": 563,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 611,
+          "end": 616,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 630,
+          "end": 635,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 737,
+          "end": 742,
+          "span_id": "s009"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 766,
+          "end": 795,
+          "stripped": "عن ثوبان، عن النبي - صلى الله",
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "النبي",
+          "role": "SPEAKER",
+          "start": 779,
+          "end": 784,
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 787,
+          "end": 805,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 660,
+      "end": 735,
+      "text": "¬كذا في (ح) و (حم) والمسند، وفي الأصل صحف إلى: \"ميمون بن أبي محمد المراي\".¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 930,
+      "end": 1011,
+      "text": "¬أخرجه الإمام أحمد بسنده ومتنه (المسند 37/ 88 ح 22402)، وقال محققوه: صحيح لغيره.¥",
+      "attached_span_id": "s010",
+      "grading": [
+        "صحيح",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 766,
+      "end": 795,
+      "span_id": "s009",
+      "marker": "عن…عن"
+    }
+  ]
+}

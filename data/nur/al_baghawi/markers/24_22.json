@@ -1,0 +1,199 @@
+{
+  "window_id": "24_22",
+  "ayah": "24:22",
+  "span_count": 11,
+  "family_counts": {
+    "QURAN": 6,
+    "LUGHA": 1,
+    "QIRAAT": 3,
+    "HADITH": 1,
+    "SAHABA": 1,
+    "NUZUL": 2,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 23,
+          "end": 39,
+          "span_id": "s001"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 40,
+          "end": 45,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 117,
+          "end": 122,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 235,
+          "end": 274,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 307,
+          "end": 394,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 546,
+          "end": 575,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 618,
+          "end": 636,
+          "span_id": "s005"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 661,
+          "end": 717,
+          "span_id": "s005"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 727,
+          "end": 732,
+          "span_id": "s005"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأه",
+          "start": 727,
+          "end": 734,
+          "span_id": "s005"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 748,
+          "end": 780,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 1178,
+          "end": 1191,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 1353,
+          "end": 1362,
+          "span_id": "s010"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 1353,
+          "end": 1370,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 490,
+      "end": 504,
+      "text": "¬ساقط من \"أ\".¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 974,
+      "end": 1168,
+      "text": "¬أخرجه البخاري في التفسير: باب: \"لولا إذ سمعتموه قلتم ما يكون لنا أن نتكلم بهذا سبحانك هذا بهتان عظيم\" 8/ 455، ومسلم في التوبة، باب في حديث الإفك وقبول توبة القاذف، برقم (2770): 4/ 2129 - 2136.¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1388,
+      "end": 1418,
+      "text": "¬أخرجه الطبري: 18/ 102 - 103.¥",
+      "attached_span_id": "s010",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": []
+}

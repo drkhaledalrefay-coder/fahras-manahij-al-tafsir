@@ -1,0 +1,68 @@
+{
+  "window_id": "24_56",
+  "ayah": "24:56",
+  "span_count": 4,
+  "family_counts": {
+    "HADITH": 1,
+    "QURAN": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 270,
+          "end": 288,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 409,
+          "end": 422,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 413,
+          "end": 422,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 440,
+          "end": 474,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "verse_ref",
+          "start": 475,
+          "end": 487,
+          "text": "[التوبة: 71]",
+          "via": "apparatus",
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [],
+  "isnad_ranges": []
+}

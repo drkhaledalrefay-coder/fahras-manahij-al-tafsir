@@ -1,0 +1,83 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_saadi",
+  "source_file": "data/nur/al_saadi/raw/24_35.txt",
+  "ayah": "24:35",
+  "surah": 24,
+  "ayah_number": 35,
+  "source_char_length": 2830,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 671,
+      "kind": "author"
+    },
+    {
+      "start": 671,
+      "end": 680,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 680,
+      "end": 1369,
+      "kind": "author"
+    },
+    {
+      "start": 1369,
+      "end": 1374,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1374,
+      "end": 1375,
+      "kind": "author"
+    },
+    {
+      "start": 1375,
+      "end": 1430,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1430,
+      "end": 2830,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 4,
+    "layout": 0,
+    "apparatus": 3
+  },
+  "char_totals": {
+    "author": 2761,
+    "layout": 0,
+    "apparatus": 69
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 2,
+    "footnote": 1
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 14,
+    "footnote": 55
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 1,
+    "footnote_close": 1,
+    "footnotes_closed": 1,
+    "bracket_total": 2,
+    "bracket_pattern_classes": {
+      "other_bracket": 2
+    },
+    "as_markers": {},
+    "verse_refs": {},
+    "other_brackets": {
+      "[النُّور]": 1,
+      "[آخر]": 1
+    }
+  }
+}

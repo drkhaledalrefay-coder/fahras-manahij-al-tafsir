@@ -1,0 +1,200 @@
+{
+  "window_id": "24_50",
+  "ayah": "24:50",
+  "span_count": 10,
+  "family_counts": {
+    "QURAN": 1,
+    "LUGHA": 1,
+    "HADITH": 9,
+    "ISNAD": 1,
+    "TABIIN": 1,
+    "NUZUL": 2,
+    "RAY": 1,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 397,
+          "end": 432,
+          "span_id": "s004"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 433,
+          "end": 436,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 562,
+          "end": 567,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 562,
+          "end": 620,
+          "stripped": "حدثنا أبي، حدثنا موسى بن إسماعيل، حدثنا مبارك، حدثنا الحسن",
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 573,
+          "end": 578,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 596,
+          "end": 601,
+          "span_id": "s006"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 609,
+          "end": 614,
+          "span_id": "s006"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "SPEAKER",
+          "start": 615,
+          "end": 620,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 684,
+          "end": 702,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أن النبي",
+          "start": 724,
+          "end": 732,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 735,
+          "end": 753,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 807,
+          "end": 825,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 855,
+          "end": 860,
+          "span_id": "s008"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 855,
+          "end": 865,
+          "span_id": "s008"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 890,
+          "end": 908,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": []
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "غريب",
+          "start": 1067,
+          "end": 1071,
+          "span_id": "s010"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1003,
+      "end": 1056,
+      "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه، وسنده ضعيف لإرساله.¥",
+      "attached_span_id": "s009",
+      "grading": [
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 562,
+      "end": 620,
+      "span_id": "s006",
+      "marker": "حدثنا…حدثنا"
+    }
+  ]
+}

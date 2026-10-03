@@ -1,0 +1,244 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_63.txt",
+  "ayah": "24:63",
+  "surah": 24,
+  "ayah_number": 63,
+  "source_char_length": 4854,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 423,
+      "kind": "author"
+    },
+    {
+      "start": 423,
+      "end": 528,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 528,
+      "end": 560,
+      "kind": "author"
+    },
+    {
+      "start": 560,
+      "end": 743,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 743,
+      "end": 838,
+      "kind": "author"
+    },
+    {
+      "start": 838,
+      "end": 938,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 938,
+      "end": 1147,
+      "kind": "author"
+    },
+    {
+      "start": 1147,
+      "end": 1235,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1235,
+      "end": 1375,
+      "kind": "author"
+    },
+    {
+      "start": 1375,
+      "end": 1413,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1413,
+      "end": 1547,
+      "kind": "author"
+    },
+    {
+      "start": 1547,
+      "end": 1560,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1560,
+      "end": 1954,
+      "kind": "author"
+    },
+    {
+      "start": 1954,
+      "end": 1970,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1970,
+      "end": 2363,
+      "kind": "author"
+    },
+    {
+      "start": 2363,
+      "end": 2517,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2517,
+      "end": 3047,
+      "kind": "author"
+    },
+    {
+      "start": 3047,
+      "end": 3142,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3142,
+      "end": 3228,
+      "kind": "author"
+    },
+    {
+      "start": 3228,
+      "end": 3281,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3281,
+      "end": 3372,
+      "kind": "author"
+    },
+    {
+      "start": 3372,
+      "end": 3408,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 3408,
+      "end": 3474,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3474,
+      "end": 3568,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 3568,
+      "end": 3636,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3636,
+      "end": 3670,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 3670,
+      "end": 3671,
+      "kind": "author"
+    },
+    {
+      "start": 3671,
+      "end": 3693,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3693,
+      "end": 3701,
+      "kind": "author"
+    },
+    {
+      "start": 3701,
+      "end": 3807,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3807,
+      "end": 4174,
+      "kind": "author"
+    },
+    {
+      "start": 4174,
+      "end": 4218,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4218,
+      "end": 4812,
+      "kind": "author"
+    },
+    {
+      "start": 4812,
+      "end": 4853,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4853,
+      "end": 4854,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 16,
+    "layout": 0,
+    "apparatus": 19
+  },
+  "char_totals": {
+    "author": 3498,
+    "layout": 0,
+    "apparatus": 1356
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 14,
+    "verse_ref": 2,
+    "editor_bracket": 3
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 1163,
+    "verse_ref": 29,
+    "editor_bracket": 164
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 14,
+    "footnote_close": 14,
+    "footnotes_closed": 14,
+    "bracket_total": 3,
+    "bracket_pattern_classes": {
+      "verse_ref": 2,
+      "other_bracket": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[البقرة: 104]": 1,
+      "[الحجرات: 2 - 5]": 1
+    },
+    "other_brackets": {
+      "[يعني: لواذًا عن نبي الله وعن كتابه ¬أخرجه ابن أبي حاتم بسند صحيح من طريق سعيد بن أبي عروبة عن قتادة.¥. وقال سفيان: {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} قال: من الصف ¬أخرجه ابن أبي حاتم بسند جيد من طريق مهران، وهو ابن أبي عمر العطار.¥، وقال مجاهد في الآية: {لِوَاذًا}]": 1
+    }
+  }
+}

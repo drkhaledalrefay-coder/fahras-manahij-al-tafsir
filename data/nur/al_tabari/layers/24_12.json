@@ -1,0 +1,243 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/nur/al_tabari/raw/24_12.txt",
+  "ayah": "24:12",
+  "surah": 24,
+  "ayah_number": 12,
+  "source_char_length": 3199,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 445,
+      "kind": "author"
+    },
+    {
+      "start": 445,
+      "end": 488,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 488,
+      "end": 489,
+      "kind": "author"
+    },
+    {
+      "start": 489,
+      "end": 516,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 516,
+      "end": 1028,
+      "kind": "author"
+    },
+    {
+      "start": 1028,
+      "end": 1032,
+      "kind": "layout"
+    },
+    {
+      "start": 1032,
+      "end": 1080,
+      "kind": "author"
+    },
+    {
+      "start": 1080,
+      "end": 1114,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1114,
+      "end": 1349,
+      "kind": "author"
+    },
+    {
+      "start": 1349,
+      "end": 1579,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1579,
+      "end": 2010,
+      "kind": "author"
+    },
+    {
+      "start": 2010,
+      "end": 2078,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2078,
+      "end": 2079,
+      "kind": "author"
+    },
+    {
+      "start": 2079,
+      "end": 2090,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2090,
+      "end": 2238,
+      "kind": "author"
+    },
+    {
+      "start": 2238,
+      "end": 2258,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2258,
+      "end": 2259,
+      "kind": "author"
+    },
+    {
+      "start": 2259,
+      "end": 2286,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2286,
+      "end": 2344,
+      "kind": "author"
+    },
+    {
+      "start": 2344,
+      "end": 2356,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2356,
+      "end": 2412,
+      "kind": "author"
+    },
+    {
+      "start": 2412,
+      "end": 2423,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2423,
+      "end": 2429,
+      "kind": "author"
+    },
+    {
+      "start": 2429,
+      "end": 2449,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2449,
+      "end": 2467,
+      "kind": "author"
+    },
+    {
+      "start": 2467,
+      "end": 2489,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2489,
+      "end": 2688,
+      "kind": "author"
+    },
+    {
+      "start": 2688,
+      "end": 2718,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2718,
+      "end": 3076,
+      "kind": "author"
+    },
+    {
+      "start": 3076,
+      "end": 3080,
+      "kind": "layout"
+    },
+    {
+      "start": 3080,
+      "end": 3138,
+      "kind": "author"
+    },
+    {
+      "start": 3138,
+      "end": 3193,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3193,
+      "end": 3195,
+      "kind": "author"
+    },
+    {
+      "start": 3195,
+      "end": 3199,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 17,
+    "layout": 4,
+    "apparatus": 14
+  },
+  "char_totals": {
+    "author": 2573,
+    "layout": 16,
+    "apparatus": 610
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 2,
+    "footnote": 9,
+    "verse_ref": 3
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 63,
+    "footnote": 513,
+    "verse_ref": 34
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 5
+    },
+    "footnote_open": 9,
+    "footnote_close": 9,
+    "footnotes_closed": 9,
+    "bracket_total": 5,
+    "bracket_pattern_classes": {
+      "other_bracket": 2,
+      "verse_ref": 3
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[النور: 13]": 1,
+      "[النساء: 29]": 1,
+      "[النور: 61]": 1
+    },
+    "other_brackets": {
+      "[يقولُ: ظنَنْتُم بمن قُرِف بذلك منكم خيرًا]": 1,
+      "[قال لهم: {خَيْرًا}]": 1
+    }
+  }
+}

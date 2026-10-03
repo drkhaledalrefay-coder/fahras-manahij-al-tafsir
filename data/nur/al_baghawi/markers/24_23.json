@@ -1,0 +1,315 @@
+{
+  "window_id": "24_23",
+  "ayah": "24:23",
+  "span_count": 17,
+  "family_counts": {
+    "QURAN": 11,
+    "ISNAD": 2,
+    "LUGHA": 1,
+    "RAY": 1,
+    "HADITH": 3,
+    "SAHABA": 1,
+    "QIRAAT": 1,
+    "NUZUL": 2,
+    "EDITOR": 4
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 0,
+          "end": 138,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 163,
+          "end": 205,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 220,
+          "end": 235,
+          "span_id": "s002"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 236,
+          "end": 310,
+          "stripped": "عن الفواحش، {المؤمنات} والغافلة عن الفاحشة أي:",
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 255,
+          "end": 271,
+          "span_id": "s002"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 305,
+          "end": 310,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 386,
+          "end": 403,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 405,
+          "end": 443,
+          "span_id": "s004"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 496,
+          "end": 522,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "قلت",
+          "start": 619,
+          "end": 624,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 949,
+          "end": 981,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 1029,
+          "end": 1124,
+          "stripped": "عن العوام بن حوشب عن شيخ من بني كاهل عن ابن عباس رضي الله",
+          "span_id": "s009"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "NARRATOR",
+          "start": 1096,
+          "end": 1109,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1194,
+          "end": 1226,
+          "span_id": "s010"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 1338,
+          "end": 1343,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1346,
+          "end": 1427,
+          "span_id": "s011"
+        }
+      ]
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1444,
+          "end": 1470,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1717,
+          "end": 1749,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1842,
+          "end": 1923,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1940,
+          "end": 1973,
+          "span_id": "s016"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل",
+          "start": 1974,
+          "end": 1983,
+          "span_id": "s016"
+        },
+        {
+          "family": "NUZUL",
+          "marker": "فأنزل الله",
+          "start": 1974,
+          "end": 1991,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 758,
+      "end": 891,
+      "text": "¬عزاه السيوطي: (6/ 164) لعبد بن حميد وابن جرير وابن المنذر والطبراني. قال الهيثمي (6/ 79): رواه الطبراني وفيه يحيى الحماني وهو ضعيف.¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "ضعيف"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1539,
+      "end": 1644,
+      "text": "¬قال الهيثمي (6/ 80): \"رواه الطبراني بأسانيد، وفي هذا الإسناد راو لم يسم، وبقية رجاله ثقات، وهو أمثلها\".¥",
+      "attached_span_id": "s012",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1768,
+      "end": 1786,
+      "text": "¬في \"ب\" كذلك حتى.¥",
+      "attached_span_id": "s014",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 2017,
+      "end": 2211,
+      "text": "¬ذكر هذه الأقوال الطبري: 18/ 104 - 105 ثم قال مرجحا: \"وأولى هذه الأقوال في ذلك عندي بالصواب، قول من قال: نزلت هذه الآية في شأن عائشة والحكم بها عام في كل من كان بالصفة التي وصفه الله بها فيها\".¥",
+      "attached_span_id": "s016",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام البغوي"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 236,
+      "end": 310,
+      "span_id": "s002",
+      "marker": "عن…عن"
+    },
+    {
+      "start": 1029,
+      "end": 1124,
+      "span_id": "s009",
+      "marker": "عن…عن"
+    }
+  ]
+}

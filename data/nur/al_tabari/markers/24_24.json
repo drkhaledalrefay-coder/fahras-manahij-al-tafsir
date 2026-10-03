@@ -1,0 +1,218 @@
+{
+  "window_id": "24_24",
+  "ayah": "24:24",
+  "span_count": 16,
+  "family_counts": {
+    "QURAN": 5,
+    "HADITH": 4,
+    "ISNAD": 2,
+    "LUGHA": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 22,
+          "end": 33,
+          "span_id": "s001"
+        }
+      ]
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 35,
+          "end": 138,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 233,
+          "end": 261,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 277,
+          "end": 303,
+          "span_id": "s006"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 317,
+          "end": 360,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 726,
+          "end": 733,
+          "span_id": "s009"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 726,
+          "end": 766,
+          "stripped": "أخبرنا ابن وهب، قال: أخبرنا عمرو، عن",
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "أخبرنا",
+          "start": 749,
+          "end": 756,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 890,
+          "end": 927,
+          "stripped": "عن أبي الهيثم، عن أبي سعيد، عن رسول",
+          "span_id": "s010"
+        },
+        {
+          "family": "HADITH",
+          "marker": "رسول الله",
+          "role": "SPEAKER",
+          "start": 923,
+          "end": 933,
+          "span_id": "s010"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 935,
+          "end": 953,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 1041,
+          "end": 1045,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": []
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": []
+    },
+    {
+      "span_id": "s016",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 767,
+      "end": 880,
+      "text": "¬في ص، ت 1، ت 2، ف: \"بن\". وعمرو هو ابن الحارث، ودراج هو ابن سمعان أبو السمح. وينظر تهذيب الكمال 8/ 477، 21/ 570.¥",
+      "attached_span_id": "s009",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1241,
+      "end": 1274,
+      "text": "¬بعده في ص، ت 1، ت 2، ف: \"الله\".¥",
+      "attached_span_id": "s014",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1285,
+      "end": 1437,
+      "text": "¬أخرجه ابن أبي حاتم في تفسيره 8/ 2558 عن يونس به، وأخرجه أبو يعلى (1392) من طريق دراج به، وعزاه السيوطي في الدر المنثور 5/ 35 إلى ابن مردويه والطبراني.¥",
+      "attached_span_id": "s015",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 726,
+      "end": 766,
+      "span_id": "s009",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 890,
+      "end": 927,
+      "span_id": "s010",
+      "marker": "عن…عن"
+    }
+  ]
+}

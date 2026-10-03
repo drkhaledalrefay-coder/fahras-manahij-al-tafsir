@@ -1,0 +1,102 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_15.txt",
+  "ayah": "24:15",
+  "surah": 24,
+  "ayah_number": 15,
+  "source_char_length": 2039,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 255,
+      "kind": "author"
+    },
+    {
+      "start": 255,
+      "end": 328,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 328,
+      "end": 420,
+      "kind": "author"
+    },
+    {
+      "start": 420,
+      "end": 445,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 445,
+      "end": 496,
+      "kind": "author"
+    },
+    {
+      "start": 496,
+      "end": 601,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 601,
+      "end": 1002,
+      "kind": "author"
+    },
+    {
+      "start": 1002,
+      "end": 1047,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1047,
+      "end": 1881,
+      "kind": "author"
+    },
+    {
+      "start": 1881,
+      "end": 2038,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2038,
+      "end": 2039,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 6,
+    "layout": 0,
+    "apparatus": 5
+  },
+  "char_totals": {
+    "author": 1634,
+    "layout": 0,
+    "apparatus": 405
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 5
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 405
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 5,
+    "footnote_close": 5,
+    "footnotes_closed": 5,
+    "bracket_total": 1,
+    "bracket_pattern_classes": {
+      "verse_ref": 1
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[النور: 15]": 1
+    },
+    "other_brackets": {}
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "window_id": "24_5_p03",
+  "ayah": "24:5",
+  "span_count": 6,
+  "family_counts": {
+    "QURAN": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s218",
+      "markers": []
+    },
+    {
+      "span_id": "s219",
+      "markers": []
+    },
+    {
+      "span_id": "s220",
+      "markers": []
+    },
+    {
+      "span_id": "s221",
+      "markers": []
+    },
+    {
+      "span_id": "s222",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 16751,
+          "end": 16784,
+          "span_id": "s222"
+        }
+      ]
+    },
+    {
+      "span_id": "s223",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 16410,
+      "end": 16424,
+      "text": "¬سقط من: ت 1.¥",
+      "attached_span_id": "s218",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 16481,
+      "end": 16503,
+      "text": "¬بعده في ت 1: \"فيما\".¥",
+      "attached_span_id": "s219",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 16575,
+      "end": 16592,
+      "text": "¬في ت 2: \"فإذا\".¥",
+      "attached_span_id": "s220",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام الطبري"
+    }
+  ],
+  "isnad_ranges": []
+}

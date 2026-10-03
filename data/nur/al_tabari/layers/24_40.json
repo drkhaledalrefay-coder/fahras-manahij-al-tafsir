@@ -1,0 +1,246 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "al_tabari",
+  "source_file": "data/nur/al_tabari/raw/24_40.txt",
+  "ayah": "24:40",
+  "surah": 24,
+  "ayah_number": 40,
+  "source_char_length": 5120,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 4,
+      "kind": "layout"
+    },
+    {
+      "start": 4,
+      "end": 889,
+      "kind": "author"
+    },
+    {
+      "start": 889,
+      "end": 903,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 903,
+      "end": 1028,
+      "kind": "author"
+    },
+    {
+      "start": 1028,
+      "end": 1032,
+      "kind": "layout"
+    },
+    {
+      "start": 1032,
+      "end": 1847,
+      "kind": "author"
+    },
+    {
+      "start": 1847,
+      "end": 1858,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1858,
+      "end": 1949,
+      "kind": "author"
+    },
+    {
+      "start": 1949,
+      "end": 2012,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2012,
+      "end": 2013,
+      "kind": "author"
+    },
+    {
+      "start": 2013,
+      "end": 2026,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2026,
+      "end": 2052,
+      "kind": "author"
+    },
+    {
+      "start": 2052,
+      "end": 2056,
+      "kind": "layout"
+    },
+    {
+      "start": 2056,
+      "end": 2263,
+      "kind": "author"
+    },
+    {
+      "start": 2263,
+      "end": 2432,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2432,
+      "end": 2925,
+      "kind": "author"
+    },
+    {
+      "start": 2925,
+      "end": 3014,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3014,
+      "end": 3076,
+      "kind": "author"
+    },
+    {
+      "start": 3076,
+      "end": 3080,
+      "kind": "layout"
+    },
+    {
+      "start": 3080,
+      "end": 3104,
+      "kind": "author"
+    },
+    {
+      "start": 3104,
+      "end": 3152,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3152,
+      "end": 3514,
+      "kind": "author"
+    },
+    {
+      "start": 3514,
+      "end": 3578,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3578,
+      "end": 3587,
+      "kind": "author"
+    },
+    {
+      "start": 3587,
+      "end": 3606,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3606,
+      "end": 3672,
+      "kind": "author"
+    },
+    {
+      "start": 3672,
+      "end": 3692,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3692,
+      "end": 3840,
+      "kind": "author"
+    },
+    {
+      "start": 3840,
+      "end": 3854,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3854,
+      "end": 4055,
+      "kind": "author"
+    },
+    {
+      "start": 4055,
+      "end": 4067,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 4067,
+      "end": 4100,
+      "kind": "author"
+    },
+    {
+      "start": 4100,
+      "end": 4104,
+      "kind": "layout"
+    },
+    {
+      "start": 4104,
+      "end": 4418,
+      "kind": "author"
+    },
+    {
+      "start": 4418,
+      "end": 4428,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 4428,
+      "end": 5116,
+      "kind": "author"
+    },
+    {
+      "start": 5116,
+      "end": 5120,
+      "kind": "layout"
+    }
+  ],
+  "range_counts": {
+    "author": 18,
+    "layout": 6,
+    "apparatus": 13
+  },
+  "char_totals": {
+    "author": 4550,
+    "layout": 24,
+    "apparatus": 546
+  },
+  "apparatus_subtype_counts": {
+    "footnote": 10,
+    "verse_ref": 3
+  },
+  "apparatus_subtype_chars": {
+    "footnote": 512,
+    "verse_ref": 34
+  },
+  "survey": {
+    "html_tags": {
+      "<br>": 6
+    },
+    "footnote_open": 10,
+    "footnote_close": 10,
+    "footnotes_closed": 10,
+    "bracket_total": 3,
+    "bracket_pattern_classes": {
+      "verse_ref": 3
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[البقرة: 7]": 1,
+      "[الجاثية: 23]": 1,
+      "[فصلت: 48]": 1
+    },
+    "other_brackets": {}
+  }
+}

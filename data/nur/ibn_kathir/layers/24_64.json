@@ -1,0 +1,217 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_64.txt",
+  "ayah": "24:64",
+  "surah": 24,
+  "ayah_number": 64,
+  "source_char_length": 3174,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 434,
+      "kind": "author"
+    },
+    {
+      "start": 434,
+      "end": 445,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 445,
+      "end": 557,
+      "kind": "author"
+    },
+    {
+      "start": 557,
+      "end": 570,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 570,
+      "end": 741,
+      "kind": "author"
+    },
+    {
+      "start": 741,
+      "end": 751,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 751,
+      "end": 904,
+      "kind": "author"
+    },
+    {
+      "start": 904,
+      "end": 913,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 913,
+      "end": 968,
+      "kind": "author"
+    },
+    {
+      "start": 968,
+      "end": 981,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 981,
+      "end": 1358,
+      "kind": "author"
+    },
+    {
+      "start": 1358,
+      "end": 1367,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1367,
+      "end": 1683,
+      "kind": "author"
+    },
+    {
+      "start": 1683,
+      "end": 1689,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 1689,
+      "end": 1761,
+      "kind": "author"
+    },
+    {
+      "start": 1761,
+      "end": 1772,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1772,
+      "end": 1916,
+      "kind": "author"
+    },
+    {
+      "start": 1916,
+      "end": 1924,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 1924,
+      "end": 2010,
+      "kind": "author"
+    },
+    {
+      "start": 2010,
+      "end": 2021,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 2021,
+      "end": 2176,
+      "kind": "author"
+    },
+    {
+      "start": 2176,
+      "end": 2181,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2181,
+      "end": 2435,
+      "kind": "author"
+    },
+    {
+      "start": 2435,
+      "end": 2444,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2444,
+      "end": 2742,
+      "kind": "author"
+    },
+    {
+      "start": 2742,
+      "end": 2751,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 2751,
+      "end": 3008,
+      "kind": "author"
+    },
+    {
+      "start": 3008,
+      "end": 3015,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 3015,
+      "end": 3174,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 15,
+    "layout": 0,
+    "apparatus": 14
+  },
+  "char_totals": {
+    "author": 3043,
+    "layout": 0,
+    "apparatus": 131
+  },
+  "apparatus_subtype_counts": {
+    "verse_ref": 6,
+    "editor_bracket": 8
+  },
+  "apparatus_subtype_chars": {
+    "verse_ref": 67,
+    "editor_bracket": 64
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 0,
+    "footnote_close": 0,
+    "footnotes_closed": 0,
+    "bracket_total": 14,
+    "bracket_pattern_classes": {
+      "verse_ref": 6,
+      "other_bracket": 8
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[النور: 63]": 1,
+      "[الأحزاب: 18]": 1,
+      "[البقرة: 144]": 1,
+      "[الرعد: 33]": 1,
+      "[هود: 5]": 1,
+      "[الرعد: 10]": 1
+    },
+    "other_brackets": {
+      "[المجادلة]": 1,
+      "[الأنعام]": 2,
+      "[الشعراء]": 1,
+      "[يونس]": 1,
+      "[هود]": 1,
+      "[القيامة]": 1,
+      "[الكهف]": 1
+    }
+  }
+}

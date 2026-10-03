@@ -1,0 +1,178 @@
+{
+  "window_id": "24_29",
+  "ayah": "24:29",
+  "span_count": 10,
+  "family_counts": {
+    "QURAN": 5,
+    "TABIIN": 3,
+    "SAHABA": 1,
+    "RAY": 1,
+    "EDITOR": 3
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 149,
+          "end": 160,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 150,
+          "end": 160,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 160,
+          "end": 310,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "ابن جريج",
+          "name": "ابن جريج",
+          "role": "SPEAKER",
+          "start": 490,
+          "end": 498,
+          "span_id": "s004"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عباس",
+          "name": "ابن عباس",
+          "role": "SPEAKER",
+          "start": 504,
+          "end": 512,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 561,
+          "end": 570,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 572,
+          "end": 665,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "عكرمة",
+          "name": "عكرمة",
+          "role": "SPEAKER",
+          "start": 843,
+          "end": 848,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "RAY",
+          "marker": "والله أعلم",
+          "start": 1206,
+          "end": 1216,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "TABIIN",
+          "marker": "زيد بن أسلم",
+          "name": "زيد بن أسلم",
+          "role": "SPEAKER",
+          "start": 1233,
+          "end": 1244,
+          "span_id": "s010"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 666,
+      "end": 829,
+      "text": "¬أخرجه الطبري من طريق ابن جريج به وسنده ضعيف؛ لأن ابن جريج لم يسمع من ابن عباس، وأخرجه ابن الجوزي موصولًا بسند حسن من طريق عكرمة عن ابن عباس (نواسخ القرآن ص 407).¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "حسن",
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 863,
+      "end": 1008,
+      "text": "¬قول عكرمة أخرجه الطبري بسند فيه ابن حميد، ولكنه توبع كما في رواية ابن الجوزي السابقة، وقول الحسن ذكره النحاس بغير سند (الناسخ والمنسوخ 2/ 545).¥",
+      "attached_span_id": "s007",
+      "grading": [
+        "حسن"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1062,
+      "end": 1135,
+      "text": "¬أخرجه النحاس بسند جيد عن محمد بن علي بن الحنفية (المصدر السابق 2/ 548).¥",
+      "attached_span_id": "s008",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}

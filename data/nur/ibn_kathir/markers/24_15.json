@@ -1,0 +1,377 @@
+{
+  "window_id": "24_15",
+  "ayah": "24:15",
+  "span_count": 22,
+  "family_counts": {
+    "QURAN": 9,
+    "TABIIN": 1,
+    "QIRAAT": 3,
+    "SAHABA": 3,
+    "HADITH": 4,
+    "ISNAD": 2,
+    "LUGHA": 3,
+    "EDITOR": 5
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 159,
+          "end": 168,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 170,
+          "end": 207,
+          "span_id": "s002"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "مجاهد",
+          "name": "مجاهد",
+          "role": "SPEAKER",
+          "start": 212,
+          "end": 217,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 387,
+          "end": 390,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "SAHABA",
+          "marker": "عائشة",
+          "name": "عائشة",
+          "role": "SPEAKER",
+          "start": 467,
+          "end": 472,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QIRAAT",
+          "marker": "قراءة",
+          "start": 712,
+          "end": 717,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 806,
+          "end": 811,
+          "span_id": "s009"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "حدثنا…حدثنا",
+          "start": 806,
+          "end": 847,
+          "stripped": "حدثنا أبو سعيد الأشج، حدثنا أبو أسامة، عن",
+          "span_id": "s009"
+        },
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 828,
+          "end": 833,
+          "span_id": "s009"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 845,
+          "end": 886,
+          "stripped": "عن نافع، عن ابن عمر، عن ابن أبي مليكة، عن",
+          "span_id": "s009"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "ابن عمر",
+          "name": "ابن عمر",
+          "role": "NARRATOR",
+          "start": 857,
+          "end": 864,
+          "span_id": "s009"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "عائشة",
+          "name": "عائشة",
+          "role": "NARRATOR",
+          "start": 887,
+          "end": 892,
+          "span_id": "s009"
+        },
+        {
+          "family": "QIRAAT",
+          "marker": "قرأ",
+          "start": 904,
+          "end": 907,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": []
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 1050,
+          "end": 1061,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 1051,
+          "end": 1061,
+          "span_id": "s013"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1063,
+          "end": 1123,
+          "span_id": "s013"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1124,
+          "end": 1127,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1152,
+          "end": 1161,
+          "span_id": "s014"
+        }
+      ]
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1163,
+          "end": 1219,
+          "span_id": "s015"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "أي:",
+          "start": 1220,
+          "end": 1223,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1311,
+          "end": 1329,
+          "span_id": "s016"
+        }
+      ]
+    },
+    {
+      "span_id": "s017",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 1421,
+          "end": 1425,
+          "span_id": "s017"
+        }
+      ]
+    },
+    {
+      "span_id": "s018",
+      "markers": []
+    },
+    {
+      "span_id": "s019",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1666,
+          "end": 1675,
+          "span_id": "s019"
+        },
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1677,
+          "end": 1733,
+          "span_id": "s019"
+        }
+      ]
+    },
+    {
+      "span_id": "s020",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 1736,
+          "end": 1745,
+          "span_id": "s020"
+        }
+      ]
+    },
+    {
+      "span_id": "s021",
+      "markers": []
+    },
+    {
+      "span_id": "s022",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 255,
+      "end": 328,
+      "text": "¬أخرجه آدم ابن أبي إياس والطبري بسند صحيح من طريق ابن أبي نجيح عن مجاهد.¥",
+      "attached_span_id": "s003",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 420,
+      "end": 445,
+      "text": "¬وهي قراءة شاذة تفسيرية.¥",
+      "attached_span_id": "s004",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 496,
+      "end": 601,
+      "text": "¬صحيح البخاري، التفسير، سورة النور، باب {إِذْ تَلَقَّوْنَهُ بِأَلْسِنَتِكُمْ. . .} [النور: 15] (ح 4752).¥",
+      "attached_span_id": "s005",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1002,
+      "end": 1047,
+      "text": "¬أخرجه ابن أبي حاتم بسنده ومتنه، وسنده صحيح.¥",
+      "attached_span_id": "s012",
+      "grading": [
+        "صحيح",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1881,
+      "end": 2038,
+      "text": "¬أخرجاه من حديث أبي هريرة - رضي الله عنه -، صحيح البخاري، الرقاق، باب حفظ اللسان (ح 6478)، وصحيح مسلم، الزهد، باب التكلم بالكلمة يهوي بها في النار (ح 2988).¥",
+      "attached_span_id": "s021",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 806,
+      "end": 847,
+      "span_id": "s009",
+      "marker": "حدثنا…حدثنا"
+    },
+    {
+      "start": 845,
+      "end": 886,
+      "span_id": "s009",
+      "marker": "عن…عن"
+    }
+  ]
+}

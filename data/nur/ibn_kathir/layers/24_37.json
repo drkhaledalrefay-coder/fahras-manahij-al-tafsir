@@ -1,0 +1,222 @@
+{
+  "source": "tafsircenter",
+  "tafsir_id": "ibn_kathir",
+  "source_file": "data/nur/ibn_kathir/raw/24_37.txt",
+  "ayah": "24:37",
+  "surah": 24,
+  "ayah_number": 37,
+  "source_char_length": 4209,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 436,
+      "kind": "author"
+    },
+    {
+      "start": 436,
+      "end": 447,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 447,
+      "end": 649,
+      "kind": "author"
+    },
+    {
+      "start": 649,
+      "end": 657,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 657,
+      "end": 1284,
+      "kind": "author"
+    },
+    {
+      "start": 1284,
+      "end": 1354,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1354,
+      "end": 1629,
+      "kind": "author"
+    },
+    {
+      "start": 1629,
+      "end": 1747,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 1747,
+      "end": 2174,
+      "kind": "author"
+    },
+    {
+      "start": 2174,
+      "end": 2218,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2218,
+      "end": 2488,
+      "kind": "author"
+    },
+    {
+      "start": 2488,
+      "end": 2548,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2548,
+      "end": 2636,
+      "kind": "author"
+    },
+    {
+      "start": 2636,
+      "end": 2775,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2775,
+      "end": 2885,
+      "kind": "author"
+    },
+    {
+      "start": 2885,
+      "end": 2947,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 2947,
+      "end": 3078,
+      "kind": "author"
+    },
+    {
+      "start": 3078,
+      "end": 3132,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3132,
+      "end": 3172,
+      "kind": "author"
+    },
+    {
+      "start": 3172,
+      "end": 3205,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3205,
+      "end": 3239,
+      "kind": "author"
+    },
+    {
+      "start": 3239,
+      "end": 3292,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3292,
+      "end": 3419,
+      "kind": "author"
+    },
+    {
+      "start": 3419,
+      "end": 3480,
+      "kind": "apparatus",
+      "subtype": "footnote"
+    },
+    {
+      "start": 3480,
+      "end": 3729,
+      "kind": "author"
+    },
+    {
+      "start": 3729,
+      "end": 3739,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 3739,
+      "end": 3811,
+      "kind": "author"
+    },
+    {
+      "start": 3811,
+      "end": 3824,
+      "kind": "apparatus",
+      "subtype": "verse_ref"
+    },
+    {
+      "start": 3824,
+      "end": 4199,
+      "kind": "author"
+    },
+    {
+      "start": 4199,
+      "end": 4208,
+      "kind": "apparatus",
+      "subtype": "editor_bracket"
+    },
+    {
+      "start": 4208,
+      "end": 4209,
+      "kind": "author"
+    }
+  ],
+  "range_counts": {
+    "author": 16,
+    "layout": 0,
+    "apparatus": 15
+  },
+  "char_totals": {
+    "author": 3464,
+    "layout": 0,
+    "apparatus": 745
+  },
+  "apparatus_subtype_counts": {
+    "editor_bracket": 3,
+    "footnote": 10,
+    "verse_ref": 2
+  },
+  "apparatus_subtype_chars": {
+    "editor_bracket": 28,
+    "footnote": 694,
+    "verse_ref": 23
+  },
+  "survey": {
+    "html_tags": {},
+    "footnote_open": 10,
+    "footnote_close": 10,
+    "footnotes_closed": 10,
+    "bracket_total": 5,
+    "bracket_pattern_classes": {
+      "other_bracket": 3,
+      "verse_ref": 2
+    },
+    "as_markers": {},
+    "verse_refs": {
+      "[غافر: 18]": 1,
+      "[إبراهيم: 42]": 1
+    },
+    "other_brackets": {
+      "[المنافقون]": 1,
+      "[الجمعة]": 1,
+      "[الإنسان]": 1
+    }
+  }
+}

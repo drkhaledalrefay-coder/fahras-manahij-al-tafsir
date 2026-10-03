@@ -1,0 +1,129 @@
+{
+  "window_id": "24_48",
+  "ayah": "24:48",
+  "span_count": 7,
+  "family_counts": {
+    "QURAN": 4,
+    "LUGHA": 2,
+    "ISNAD": 1,
+    "TABIIN": 1,
+    "EDITOR": 1
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "وقوله تعالى",
+          "start": 104,
+          "end": 115,
+          "span_id": "s002"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 105,
+          "end": 115,
+          "span_id": "s002"
+        }
+      ]
+    },
+    {
+      "span_id": "s003",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "كقول",
+          "start": 295,
+          "end": 299,
+          "span_id": "s003"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "كقوله",
+          "start": 295,
+          "end": 300,
+          "span_id": "s003"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قوله تعالى",
+          "start": 296,
+          "end": 306,
+          "span_id": "s003"
+        }
+      ]
+    },
+    {
+      "span_id": "s004",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 308,
+          "end": 703,
+          "span_id": "s004"
+        }
+      ]
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 749,
+          "end": 801,
+          "stripped": "عن أبي ميمونة، عن أبيه، عن الحسن، عن سمرة مرفوعا:",
+          "span_id": "s005"
+        },
+        {
+          "family": "TABIIN",
+          "marker": "الحسن",
+          "name": "الحسن",
+          "role": "NARRATOR",
+          "start": 776,
+          "end": 781,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": []
+    },
+    {
+      "span_id": "s007",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 848,
+      "end": 995,
+      "text": "¬أخرجه الطبراني من طريق روح به (المعجم الكبير 7/ 225 ح 6939)، وفي سنده روح بن عطاء: ضعيف (مجمع الزوائد 4/ 198)، وفيه عنعنة الحسن البصري عن سَمُرة.¥",
+      "attached_span_id": "s006",
+      "grading": [
+        "حسن",
+        "ضعيف",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 749,
+      "end": 801,
+      "span_id": "s005",
+      "marker": "عن…عن"
+    }
+  ]
+}

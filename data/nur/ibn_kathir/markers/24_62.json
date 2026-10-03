@@ -1,0 +1,133 @@
+{
+  "window_id": "24_62",
+  "ayah": "24:62",
+  "span_count": 10,
+  "family_counts": {
+    "HADITH": 5,
+    "ISNAD": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 915,
+          "end": 920,
+          "span_id": "s005"
+        }
+      ]
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "حدثنا",
+          "start": 946,
+          "end": 951,
+          "span_id": "s006"
+        },
+        {
+          "family": "ISNAD",
+          "marker": "عن…عن",
+          "start": 972,
+          "end": 1009,
+          "stripped": "عن ابن عجلان، عن سعيد المقبري، عن أبي",
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "قال رسول الله",
+          "start": 1038,
+          "end": 1051,
+          "span_id": "s007"
+        },
+        {
+          "family": "HADITH",
+          "marker": "صلى الله عليه وسلم",
+          "start": 1054,
+          "end": 1072,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": []
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "رواه",
+          "start": 1375,
+          "end": 1379,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": []
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1169,
+      "end": 1367,
+      "text": "¬أخرجه أبو داود بسنده ومتنه (السنن، الأدب، باب في السلام إذا قام من المجلس ح 5208)، وقال الألباني: حسن صحيح (صحيح سنن أبي داود ح 4340)، وحسنه السيوطي (الجامع الصغير مع شرح فيض القدير 1/ 305 ح 497).¥",
+      "attached_span_id": "s008",
+      "grading": [
+        "صحيح",
+        "حسن",
+        "سنده"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1446,
+      "end": 1551,
+      "text": "¬سنن الترمذي، الاستئذان، باب ما جاء في التسليم عند القيام وعند القعود (ح 2706)، والسنن الكبرى (ح 10201).¥",
+      "attached_span_id": "s009",
+      "grading": [],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": [
+    {
+      "start": 972,
+      "end": 1009,
+      "span_id": "s006",
+      "marker": "عن…عن"
+    }
+  ]
+}

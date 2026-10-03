@@ -1,0 +1,214 @@
+{
+  "window_id": "24_39",
+  "ayah": "24:39",
+  "span_count": 16,
+  "family_counts": {
+    "LUGHA": 4,
+    "QURAN": 8,
+    "SAHABA": 1,
+    "HADITH": 1,
+    "EDITOR": 2
+  },
+  "spans": [
+    {
+      "span_id": "s001",
+      "markers": []
+    },
+    {
+      "span_id": "s002",
+      "markers": []
+    },
+    {
+      "span_id": "s003",
+      "markers": []
+    },
+    {
+      "span_id": "s004",
+      "markers": []
+    },
+    {
+      "span_id": "s005",
+      "markers": []
+    },
+    {
+      "span_id": "s006",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 727,
+          "end": 731,
+          "span_id": "s006"
+        }
+      ]
+    },
+    {
+      "span_id": "s007",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 974,
+          "end": 997,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 1180,
+          "end": 1193,
+          "span_id": "s007"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 1184,
+          "end": 1193,
+          "span_id": "s007"
+        }
+      ]
+    },
+    {
+      "span_id": "s008",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1195,
+          "end": 1277,
+          "span_id": "s008"
+        }
+      ]
+    },
+    {
+      "span_id": "s009",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 1300,
+          "end": 1377,
+          "span_id": "s009"
+        },
+        {
+          "family": "SAHABA",
+          "marker": "أبي بن كعب",
+          "name": "أبي بن كعب",
+          "role": "SPEAKER",
+          "start": 1391,
+          "end": 1402,
+          "span_id": "s009"
+        }
+      ]
+    },
+    {
+      "span_id": "s010",
+      "markers": [
+        {
+          "family": "HADITH",
+          "marker": "في الصحيح",
+          "start": 1706,
+          "end": 1715,
+          "span_id": "s010"
+        },
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 1723,
+          "end": 1727,
+          "span_id": "s010"
+        }
+      ]
+    },
+    {
+      "span_id": "s011",
+      "markers": []
+    },
+    {
+      "span_id": "s012",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 1798,
+          "end": 1802,
+          "span_id": "s012"
+        }
+      ]
+    },
+    {
+      "span_id": "s013",
+      "markers": [
+        {
+          "family": "LUGHA",
+          "marker": "يقال",
+          "start": 1872,
+          "end": 1876,
+          "span_id": "s013"
+        }
+      ]
+    },
+    {
+      "span_id": "s014",
+      "markers": []
+    },
+    {
+      "span_id": "s015",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "كما قال تعالى",
+          "start": 2196,
+          "end": 2209,
+          "span_id": "s015"
+        },
+        {
+          "family": "QURAN",
+          "marker": "قال تعالى",
+          "start": 2200,
+          "end": 2209,
+          "span_id": "s015"
+        }
+      ]
+    },
+    {
+      "span_id": "s016",
+      "markers": [
+        {
+          "family": "QURAN",
+          "marker": "{…}",
+          "start": 2211,
+          "end": 2249,
+          "span_id": "s016"
+        }
+      ]
+    }
+  ],
+  "editor_footnote_evidence": [
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1437,
+      "end": 1702,
+      "text": "¬قول أُبي أخرجه ابن أبي حاتم بسند جيد من طريق أبي العالية عنه، وقول ابن عباس أخرجه ابن أبي حاتم والطبري بسند ثابت من طريق ابن أبي طلحة عنه، وقول مجاهد أخرجه ابن أبي حاتم والطبري بسند صحيح من طريق ابن أبي نجيح عنه، وقول قتادة أخرجه عبد الرزاق بسند صحيح عن معمر عنه.¥",
+      "attached_span_id": "s009",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    },
+    {
+      "family": "EDITOR",
+      "marker": "editor_footnote",
+      "start": 1958,
+      "end": 2056,
+      "text": "¬صحيح البخاري، التفسير، سورة النساء (ح 4581)، وصحيح مسلم، الإيمان، باب معرفة طريق الرؤية (ح 183).¥",
+      "attached_span_id": "s014",
+      "grading": [
+        "صحيح"
+      ],
+      "label_ar": "حاشية المحقق — ليست من كلام ابن كثير"
+    }
+  ],
+  "isnad_ranges": []
+}
