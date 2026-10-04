@@ -25,7 +25,7 @@ description: فهرسة مناهج التفسير — run the project's two-agen
 
 ## الإجراء
 
-1. **تحقّق قبل أي شيء:** على `main` المحدّث، `python -m pytest -q` و`python src/v2_selftest.py` ← PASS. على فرعك أنت، لا `main`.
+1. **تحقّق قبل أي شيء:** شجرة عمل نظيفة، ثم فرع فريد من `origin/main` (`tagging/nur-<tafsir>-<operator>-<YYYYMMDD>`)، ثم `pip install pytest` و`python -m pytest -q` و`python src/v2_selftest.py` ← PASS. لا عمل على `main`.
 2. **جلسة الطرفية فقط:** `LLM_API_KEY=ollama` و`LLM_BASE_URL=http://localhost:11434/v1` و`PYTHONIOENCODING=utf-8`. لا مفتاح في ملف ولا git ولا محادثة.
 3. **النماذج:** `ollama pull` لعائلتين مختلفتين، ثم `ollama list` وسجّل **الوسم الفعلي**. اسم مجلد الوكيل = `model_slug(model)`: `qwen2.5:32b` ← `qwen2_5_32b`.
 4. **`--dry-run` أولاً** لكل نافذة جديدة: يجب أن يطبع `packet_sha256` وعدد الأجزاء دون شبكة.

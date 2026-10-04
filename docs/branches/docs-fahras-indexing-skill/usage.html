@@ -38,7 +38,8 @@ code{direction:ltr;unicode-bidi:isolate;display:block;background:#10201a;color:#
 </div>
 <div class="steps">
 <div class="step"><div class="num">1</div><h2>حمّل المهارة في الوكيل</h2><p>انسخ مجلد المهارة إلى مجلد مهارات وكيلك (Claude Code أو Codex).</p><code><bdi>Copy-Item -Recurse docs/team/skills/fahras-tafsir-indexing $HOME/.claude/skills/</bdi></code><div class="exp">الناتج المتوقع: يظهر اسم المهارة في قائمة مهارات الوكيل.</div><div class="stop">توقّف إن لم تظهر: تحقّق من المسار قبل أي تشغيل.</div></div>
-<div class="step"><div class="num">2</div><h2>تحقّق ثم افتح فرعك</h2><p>على main المحدّث، ثم فرع خاص بالوسم. لا عمل على main.</p><code><bdi>python -m pytest -q
+<div class="step"><div class="num">2</div><h2>تحقّق ثم افتح فرعك</h2><p>شجرة عمل نظيفة، ثم فرع فريد من origin/main. لا عمل على main.</p><code><bdi>pip install pytest
+python -m pytest -q
 python src/v2_selftest.py</bdi></code><div class="exp">الناتج المتوقع: الاختبارات ناجحة و SELFTEST PASS.</div><div class="stop">توقّف إن فشل أي اختبار: لا تشغيل على كود غير سليم.</div></div>
 <div class="step"><div class="num">3</div><h2>نموذجان من عائلتين</h2><p>اسحب النموذجين وسجّل الوسم الفعلي. اسم مجلد الوكيل يُشتق من اسم النموذج.</p><code><bdi>ollama pull qwen2.5:32b
 ollama pull gemma3:27b
@@ -63,3 +64,4 @@ ollama list</bdi></code><div class="exp">الناتج المتوقع: المجل
 </div>
 </body>
 </html>
+

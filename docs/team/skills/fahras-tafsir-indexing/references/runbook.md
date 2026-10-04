@@ -14,11 +14,13 @@
 ## ١. التحقق والفرع
 
 ```powershell
-git checkout main; git pull
-git checkout -b tagging/nur-sample
+git status                          # يجب أن تكون شجرة العمل نظيفة؛ وإلا توقّف واسأل المشغّل
+git fetch origin
+git switch -c tagging/nur-<tafsir>-<operator>-<YYYYMMDD> origin/main   # اسم فريد لكل تشغيل، لا عمل على main
 pip install -r requirements.txt
+pip install pytest                  # ليست في requirements.txt؛ CI يثبّتها بالطريقة نفسها
 python -m pytest -q
-python src/v2_selftest.py          # يجب: SELFTEST PASS
+python src/v2_selftest.py           # يجب: SELFTEST PASS
 ```
 
 ## ٢. جلسة الطرفية (لا تُحفظ في ملف)
@@ -101,7 +103,7 @@ python src/run_surah.py --db "<path>/quran.db" --tafsir al_tabari --surah 24 --b
 ```powershell
 git add data/nur/al_tabari/moves data/nur/al_tabari/verified data/nur/al_tabari/committee
 git commit -m "data(nur): al_tabari tagged — qwen2.5:32b + gemma3:27b (ollama-local) 2026-10-05"
-git push -u origin tagging/nur-sample
+git push -u origin HEAD              # يدفع فرعك أنت، لا main
 ```
 
 ثم PR ← CI أخضر ← مراجعة. **لا push على `main`.** لا تُرفع `quran.db` أبداً.
