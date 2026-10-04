@@ -273,17 +273,28 @@ def _primary_marker_ok(
 
 
 def _refs_corroborated(refs: dict, evidence_hits: list[dict]) -> bool:
-    """Claimed references count only when evidence markers back them."""
+    """True only when every non-empty claimed reference family is marker-backed.
+
+    Empty refs yield False (no reference credit for has_attr). A mix where one
+    family is backed and another is not yields False (partial credit denied).
+    """
     author_hits = _author_hits(evidence_hits)
-    if refs.get("verses") and _has_family(author_hits, "QURAN"):
-        return True
-    if refs.get("hadith") and _has_family(author_hits, "HADITH"):
-        return True
-    if refs.get("persons") and (
-        _has_speaker(author_hits, "SAHABA") or _has_speaker(author_hits, "TABIIN")
-    ):
-        return True
-    return False
+    claimed_any = False
+    if refs.get("verses"):
+        claimed_any = True
+        if not _has_family(author_hits, "QURAN"):
+            return False
+    if refs.get("hadith"):
+        claimed_any = True
+        if not _has_family(author_hits, "HADITH"):
+            return False
+    if refs.get("persons"):
+        claimed_any = True
+        if not (
+            _has_speaker(author_hits, "SAHABA") or _has_speaker(author_hits, "TABIIN")
+        ):
+            return False
+    return claimed_any
 
 
 def score_move(

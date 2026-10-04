@@ -113,6 +113,19 @@ def run_verifier(base: Path, annotator: str, window_id: str, moves_payload: dict
     return result
 
 
+def _run_verifier_or_fail(
+    base: Path, annotator: str, window_id: str, moves_payload: dict
+) -> int:
+    """Run verifier; on any exception print structured RUN_FAILURE and return 1."""
+    try:
+        run_verifier(base, annotator, window_id, moves_payload)
+        return 0
+    except Exception as e:
+        rec = classify_api.make_failure_record(window_id, "RUN_FAILURE", str(e))
+        print(json.dumps(rec, ensure_ascii=False))
+        return 1
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Classify one tafsir window (API or manual) and verify."
@@ -210,8 +223,7 @@ def main(argv: list[str] | None = None) -> int:
             "manual reply = unverified input, never nominated, specialist review only"
         )
         print(f"wrote moves: {_format_path(path)}")
-        run_verifier(base, annotator, window_id, cleaned)
-        return 0
+        return _run_verifier_or_fail(base, annotator, window_id, cleaned)
 
     if args.api:
         model, base_url = classify_api.resolve_env(model=args.model, base_url=args.base_url)
@@ -243,8 +255,7 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         path = result["path"]
         print(f"wrote moves: {_format_path(path)}")
-        run_verifier(base, result["annotator"], window_id, result["payload"])
-        return 0
+        return _run_verifier_or_fail(base, result["annotator"], window_id, result["payload"])
 
     # No mode: default to dry-run-style packet check
     print(f"packet ok: {_format_path(pkt_path)} ({len(packet.get('spans') or [])} spans)")
