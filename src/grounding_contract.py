@@ -59,3 +59,16 @@ def packet_sha256(packet: dict) -> str:
     """Canonical hash of a packet (key-sorted, UTF-8, no whitespace)."""
     canonical = json.dumps(packet, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+COMMITTEE_THRESHOLD = 85
+COMMITTEE_CAPTION = "أعداد توجيه وليست دقة"
+
+# Committee Chair abstention / referral codes in exact priority order
+COMMITTEE_REASON_CODES: dict[str, str] = {
+    "written_abstain": "امتناع بسبب مكتوب (primary فارغ أو يقين insufficient من المصنّف)",
+    "force_specialist": "إحالة الفاحص — تُحترم (مخرج assign_route عند أي طرف أصلاً specialist)",
+    "agent_disagree": "اختلاف الوكلاء (primary مختلف)",
+    "unclear_bounds": "حدود غير واضحة (non_contiguous_span_ids أو mixed_or_overlap_spans أو تقطيع بلا تقاطع)",
+    "weak_evidence": "دليل ضعيف (يقين weak، أو score.total < 85 عند المصنّف، أو أعلام قاعدة الدليل)",
+}
