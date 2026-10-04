@@ -189,6 +189,22 @@ class TestG3UngroundedClaim(_FixtureBase):
         self.assertEqual(m["rationale_ar"], "اختبار")
         self.assertEqual(m["alternatives"], ["M_QURAN"])
 
+    def test_partial_refs_forged_verses_with_backed_hadith(self) -> None:
+        # Backed hadith must not excuse an unbacked verses claim.
+        self._set_markers(_hadith_markers())
+        move = _perfect_hadith_move(
+            references={
+                "verses": ["99:9"],
+                "hadith": ["Bukhari 1"],
+                "persons": [],
+            },
+        )
+        result = self._verify([move])
+        m = result["moves"][0]
+        self.assertEqual(m["route"], gc.ROUTE_SPECIALIST)
+        self.assertEqual(m["reason_code"], "UNGROUNDED_CLAIM")
+        self.assertGreaterEqual(m["score"]["total"], 75)
+
 
 class TestG4SufficiencyGate(_FixtureBase):
     def test_editor_only_evidence_despite_high_certainty(self) -> None:

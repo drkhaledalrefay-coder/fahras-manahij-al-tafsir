@@ -517,6 +517,65 @@ class TestGroundingIO(unittest.TestCase):
             moves_dir = tmp_base / "moves"
             self.assertFalse(moves_dir.exists() and any(moves_dir.rglob("*.json")))
 
+    def test_verifier_exception_after_api_write_returns_run_failure_no_traceback(self) -> None:
+        """Successful classify write, then missing markers → structured RUN_FAILURE."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_base = Path(tmp) / "base"
+            (tmp_base / "packets").mkdir(parents=True)
+            (tmp_base / "windows").mkdir(parents=True)
+            shutil.copy(PACKET_FIXTURE, tmp_base / "packets" / "2_102.json")
+            # Window present so the failure is specifically the missing markers file.
+            window_stub = {
+                "window_id": "2_102",
+                "ayah": "2:102",
+                "source_file": "fixture",
+                "source_sha256": "0" * 64,
+                "window_start": 0,
+                "window_end": 10,
+                "spans": [
+                    {"id": "s288", "start": 0, "end": 5, "text": "aaaaa"},
+                    {"id": "s289", "start": 5, "end": 10, "text": "bbbbb"},
+                ],
+            }
+            (tmp_base / "windows" / "2_102.json").write_bytes(
+                json.dumps(window_stub, ensure_ascii=False).encode("utf-8")
+            )
+            # Intentionally no markers/2_102.json
+
+            def http_ok(url: str, headers: dict, body: bytes) -> bytes:
+                return _fake_chat_body(_valid_moves_payload())
+
+            buf = io.StringIO()
+            err = io.StringIO()
+            with mock.patch.dict(os.environ, {"LLM_API_KEY": SECRET_KEY}):
+                with mock.patch("classify_api._default_http_post", side_effect=http_ok):
+                    with redirect_stdout(buf), redirect_stderr(err):
+                        ret = run_window.main(
+                            [
+                                "--base",
+                                str(tmp_base),
+                                "--window",
+                                "2_102",
+                                "--api",
+                                "--model",
+                                "ok-then-verify-fail",
+                                "--base-url",
+                                "https://example.test/v1",
+                            ]
+                        )
+
+            self.assertNotEqual(ret, 0)
+            combined = buf.getvalue() + err.getvalue()
+            self.assertNotIn("Traceback", combined)
+            # Last non-empty stdout line must be the structured failure record.
+            lines = [ln for ln in buf.getvalue().splitlines() if ln.strip()]
+            self.assertTrue(lines)
+            rec = json.loads(lines[-1])
+            self.assertEqual(rec["window_id"], "2_102")
+            self.assertEqual(rec["status"], "failed")
+            self.assertEqual(rec["reason_code"], "RUN_FAILURE")
+            self.assertTrue(rec.get("error"))
+
 
 if __name__ == "__main__":
     unittest.main()
