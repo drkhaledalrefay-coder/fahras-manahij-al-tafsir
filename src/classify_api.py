@@ -5,15 +5,21 @@ API key from LLM_API_KEY only. Never copies model text into source fields.
 
 from __future__ import annotations
 
+import copy
 import json
 import os
 import re
+import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Any, Callable
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+import grounding_contract
 
 MOVE_FIELDS = (
     "move_id",
@@ -34,8 +40,37 @@ SPAN_ID_KEYS = ("span_ids", "evidence_span_ids", "author_verdict_span_ids")
 HttpPost = Callable[[str, dict[str, str], bytes], bytes]
 
 
+def make_failure_record(window_id: str, reason_code: str, error: str) -> dict[str, str]:
+    return {
+        "window_id": str(window_id),
+        "status": "failed",
+        "reason_code": str(reason_code),
+        "error": str(error)[:200],
+    }
+
+
 class ClassifyError(Exception):
     """Classification failed after validation / retries."""
+
+    def __init__(
+        self,
+        message: str,
+        *,
+        record: dict[str, Any] | None = None,
+        reason_code: str = "RUN_FAILURE",
+        window_id: str | None = None,
+    ) -> None:
+        super().__init__(message)
+        if record is not None:
+            self.record = record
+        else:
+            self.record = make_failure_record(window_id or "", reason_code, message)
+
+    def __getitem__(self, item: str) -> Any:
+        return self.record[item]
+
+    def get(self, item: str, default: Any = None) -> Any:
+        return self.record.get(item, default)
 
 
 def model_slug(model: str) -> str:
@@ -56,7 +91,7 @@ def extract_json_object(text: str) -> dict:
     """Parse a JSON object from model text (raw or fenced)."""
     raw = (text or "").strip()
     if not raw:
-        raise ClassifyError("empty model reply")
+        raise ClassifyError("empty model reply", reason_code="MODEL_OUTPUT_INVALID")
     try:
         obj = json.loads(raw)
         if isinstance(obj, dict):
@@ -65,15 +100,21 @@ def extract_json_object(text: str) -> dict:
         pass
     fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", raw, re.DOTALL)
     if fence:
-        obj = json.loads(fence.group(1))
-        if isinstance(obj, dict):
-            return obj
+        try:
+            obj = json.loads(fence.group(1))
+            if isinstance(obj, dict):
+                return obj
+        except json.JSONDecodeError:
+            pass
     start, end = raw.find("{"), raw.rfind("}")
     if start >= 0 and end > start:
-        obj = json.loads(raw[start : end + 1])
-        if isinstance(obj, dict):
-            return obj
-    raise ClassifyError("model reply is not a JSON object")
+        try:
+            obj = json.loads(raw[start : end + 1])
+            if isinstance(obj, dict):
+                return obj
+        except json.JSONDecodeError:
+            pass
+    raise ClassifyError("model reply is not a JSON object", reason_code="MODEL_OUTPUT_INVALID")
 
 
 def validate_span_ids(packet: dict, payload: dict) -> list[str]:
@@ -141,6 +182,8 @@ def build_user_prompt(packet: dict, error_feedback: str | None = None) -> str:
     lines.append("")
     lines.append(f"window_id: {packet.get('window_id')}")
     lines.append(f"ayah: {packet.get('ayah')}")
+    h = grounding_contract.packet_sha256(packet)
+    lines.append(f"packet_sha256: {h}")
     lines.append("")
     lines.append("## التعريفات")
     lines.append(json.dumps(packet.get("definitions") or [], ensure_ascii=False, indent=2))
@@ -149,28 +192,40 @@ def build_user_prompt(packet: dict, error_feedback: str | None = None) -> str:
     lines.append(json.dumps(packet.get("certainty_rules") or {}, ensure_ascii=False, indent=2))
     lines.append("")
     lines.append("## مخطط الإخراج المطلوب (JSON فقط)")
-    schema = packet.get("output_schema") or {
-        "window": "<window_id>",
-        "moves": [
-            {
-                "move_id": "m01",
-                "span_ids": ["s001"],
-                "primary": "M_RAY",
-                "secondary": [],
-                "content_tags": [],
-                "certainty": "strong",
-                "evidence_span_ids": ["s001"],
-                "author_verdict_span_ids": [],
-                "references": {"verses": [], "hadith": [], "persons": []},
-                "alternatives": [],
-                "rationale_ar": "≤25 words",
-            }
-        ],
-    }
+    schema = copy.deepcopy(
+        packet.get("output_schema")
+        or {
+            "window": "<window_id>",
+            "moves": [
+                {
+                    "move_id": "m01",
+                    "span_ids": ["s001"],
+                    "primary": "M_RAY",
+                    "secondary": [],
+                    "content_tags": [],
+                    "certainty": "strong",
+                    "evidence_span_ids": ["s001"],
+                    "author_verdict_span_ids": [],
+                    "references": {"verses": [], "hadith": [], "persons": []},
+                    "alternatives": [],
+                    "rationale_ar": "ملاحظة غير مُسنَدة — لا تُعرض دليلاً",
+                }
+            ],
+        }
+    )
+    if isinstance(schema, dict) and isinstance(schema.get("moves"), list):
+        for m in schema["moves"]:
+            if isinstance(m, dict) and "rationale_ar" in m:
+                m["rationale_ar"] = "ملاحظة غير مُسنَدة — لا تُعرض دليلاً"
     lines.append(json.dumps(schema, ensure_ascii=False, indent=2))
     lines.append("")
     lines.append("أعد كائن JSON فقط بالحقلين window و moves.")
     lines.append("لا تنسخ نص المصدر؛ أعد معرّفات spans والوسوم واليقين فقط.")
+    lines.append("حقل rationale_ar اختياري: ملاحظة غير مُسنَدة — لا تُعرض دليلاً.")
+    lines.append(
+        "كل مرجع في references (آيات verses أو أحاديث hadith أو أعلام persons) "
+        "يجب أن يسنده معرّف شاهد في evidence_span_ids."
+    )
     lines.append("")
     lines.append("## الأجزاء المرقّمة (spans)")
     for span in packet.get("spans") or []:
@@ -286,6 +341,7 @@ def classify(
     api_key: str | None = None,
     http_post: HttpPost | None = None,
     dry_run: bool = False,
+    raise_on_failure: bool = True,
 ) -> dict[str, Any]:
     """Send packet to an OpenAI-compatible endpoint; write moves/<slug>/<window>.json.
 
@@ -294,8 +350,17 @@ def classify(
     packet = load_packet(packet_path)
     window_id = str(packet.get("window_id") or Path(packet_path).stem)
     if not packet_span_ids(packet):
-        raise ClassifyError(f"packet has no spans: {packet_path}")
+        rec = make_failure_record(window_id, "RUN_FAILURE", f"packet has no spans: {packet_path}")
+        if raise_on_failure:
+            raise ClassifyError(
+                f"packet has no spans: {packet_path}",
+                record=rec,
+                reason_code="RUN_FAILURE",
+                window_id=window_id,
+            )
+        return rec
 
+    h = grounding_contract.packet_sha256(packet)
     key = api_key if api_key is not None else os.environ.get("LLM_API_KEY", "")
     messages = build_messages(packet)
     result: dict[str, Any] = {
@@ -310,33 +375,96 @@ def classify(
     if dry_run:
         return result
 
-    content = call_chat(
-        base_url=base_url,
-        api_key=key,
-        model=model,
-        messages=messages,
-        http_post=http_post,
-    )
-    payload = extract_json_object(content)
-    errors = validate_span_ids(packet, payload)
-    if errors:
-        feedback = "Invalid span ids:\n- " + "\n- ".join(errors)
-        retry_messages = build_messages(packet, error_feedback=feedback)
+    # 1st attempt: network call
+    try:
         content = call_chat(
             base_url=base_url,
             api_key=key,
             model=model,
-            messages=retry_messages,
+            messages=messages,
             http_post=http_post,
         )
+    except ClassifyError as e:
+        rec = make_failure_record(window_id, "RUN_FAILURE", str(e))
+        if raise_on_failure:
+            raise ClassifyError(
+                str(e), record=rec, reason_code="RUN_FAILURE", window_id=window_id
+            ) from e
+        return rec
+    except Exception as e:
+        rec = make_failure_record(window_id, "RUN_FAILURE", str(e))
+        if raise_on_failure:
+            raise ClassifyError(
+                str(e), record=rec, reason_code="RUN_FAILURE", window_id=window_id
+            ) from e
+        return rec
+
+    # 1st attempt: parse & validate
+    first_error: str | None = None
+    payload: dict | None = None
+    try:
         payload = extract_json_object(content)
         errors = validate_span_ids(packet, payload)
         if errors:
-            raise ClassifyError(
-                "invalid span ids after retry: " + "; ".join(errors[:8])
-            )
+            first_error = "Invalid span ids:\n- " + "\n- ".join(errors)
+    except ClassifyError as e:
+        first_error = f"Invalid JSON reply: {e}"
 
+    if first_error is not None:
+        retry_messages = build_messages(packet, error_feedback=first_error)
+        try:
+            content = call_chat(
+                base_url=base_url,
+                api_key=key,
+                model=model,
+                messages=retry_messages,
+                http_post=http_post,
+            )
+        except ClassifyError as e:
+            rec = make_failure_record(window_id, "RUN_FAILURE", str(e))
+            if raise_on_failure:
+                raise ClassifyError(
+                    str(e), record=rec, reason_code="RUN_FAILURE", window_id=window_id
+                ) from e
+            return rec
+        except Exception as e:
+            rec = make_failure_record(window_id, "RUN_FAILURE", str(e))
+            if raise_on_failure:
+                raise ClassifyError(
+                    str(e), record=rec, reason_code="RUN_FAILURE", window_id=window_id
+                ) from e
+            return rec
+
+        try:
+            payload = extract_json_object(content)
+            errors = validate_span_ids(packet, payload)
+            if errors:
+                err_msg = "invalid span ids after retry: " + "; ".join(errors[:8])
+                rec = make_failure_record(window_id, "MODEL_OUTPUT_INVALID", err_msg)
+                if raise_on_failure:
+                    raise ClassifyError(
+                        err_msg,
+                        record=rec,
+                        reason_code="MODEL_OUTPUT_INVALID",
+                        window_id=window_id,
+                    )
+                return rec
+        except ClassifyError as e:
+            err_msg = f"invalid JSON after retry: {e}"
+            rec = make_failure_record(window_id, "MODEL_OUTPUT_INVALID", err_msg)
+            if raise_on_failure:
+                raise ClassifyError(
+                    err_msg,
+                    record=rec,
+                    reason_code="MODEL_OUTPUT_INVALID",
+                    window_id=window_id,
+                ) from e
+            return rec
+
+    assert payload is not None
     cleaned = sanitize_moves_payload(payload, window_id)
+    cleaned[grounding_contract.PACKET_SHA_FIELD] = h
+    cleaned[grounding_contract.INPUT_ASSURANCE_FIELD] = grounding_contract.INPUT_API_PACKET
     path = write_moves(out_dir, model_slug(model), window_id, cleaned)
     result["path"] = path
     result["payload"] = cleaned
