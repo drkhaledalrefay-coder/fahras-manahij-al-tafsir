@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600, height=900, initial-scale=1.0">
+<title>رئيس اللجنة الحتمي — build/committee-chair</title>
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --border-subtle: #cbd5e1;
+    --primary: #1e3a8a;
+    --primary-light: #eff6ff;
+    --accent-teal: #0f766e;
+    --accent-teal-light: #f0fdfa;
+    --accent-amber: #b45309;
+    --accent-amber-light: #fffbeb;
+    --accent-rose: #be123c;
+    --accent-rose-light: #fff1f2;
+    --accent-indigo: #4338ca;
+    --accent-indigo-light: #eef2ff;
+    --font-ar: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Cairo", Tahoma, Arial, sans-serif;
+    --font-code: "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    background: var(--bg);
+    font-family: var(--font-ar);
+    color: var(--text-primary);
+    line-height: 1.35;
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 12px;
+  }
+
+  .header-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .badge {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    letter-spacing: 0.3px;
+  }
+
+  .badge-branch {
+    background: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid #bfdbfe;
+    font-family: var(--font-code);
+  }
+
+  .badge-tag {
+    background: var(--accent-teal-light);
+    color: var(--accent-teal);
+    border: 1px solid #99f6e4;
+  }
+
+  .title {
+    font-size: 23px;
+    font-weight: 800;
+    color: #0f172a;
+  }
+
+  .subtitle {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+
+  .caption-badge {
+    background: var(--accent-amber-light);
+    color: var(--accent-amber);
+    border: 1px solid #fde68a;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* Flow Diagram */
+  .flow-container {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+
+  .flow-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+
+  .flow-node.agents {
+    background: var(--accent-indigo-light);
+    border-color: #c7d2fe;
+    color: var(--accent-indigo);
+  }
+
+  .flow-node.verifier {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #334155;
+  }
+
+  .flow-node.chair {
+    background: var(--primary-light);
+    border-color: #93c5fd;
+    color: var(--primary);
+  }
+
+  .flow-node.candidate {
+    background: var(--accent-teal-light);
+    border-color: #99f6e4;
+    color: var(--accent-teal);
+  }
+
+  .flow-node.abstain {
+    background: var(--accent-rose-light);
+    border-color: #fecdd3;
+    color: var(--accent-rose);
+  }
+
+  .flow-node.specialist {
+    background: #fef3c7;
+    border-color: #fcd34d;
+    color: #92400e;
+  }
+
+  .flow-node-title {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .flow-node-desc {
+    font-size: 11.5px;
+    opacity: 0.9;
+    margin-top: 2px;
+  }
+
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none;
+  }
+
+  .flow-split {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Main Grid */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1010px 506px;
+    gap: 20px;
+    height: 605px;
+  }
+
+  /* Column 1: Steps */
+  .steps-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .section-heading {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .step-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+
+  .step-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-title {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+
+  .step-grid {
+    display: grid;
+    grid-template-columns: 175px 345px 230px 200px;
+    gap: 10px;
+    font-size: 12px;
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 7px;
+    padding: 6px 10px;
+    align-items: center;
+  }
+
+  .item-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .item-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+
+  .item-val {
+    color: var(--text-secondary);
+    font-size: 11.5px;
+    line-height: 1.3;
+  }
+
+  .code-val {
+    font-family: var(--font-code);
+    background: #e2e8f0;
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: #0f172a;
+    display: inline-block;
+    direction: ltr;
+    text-align: left;
+    white-space: normal;
+    word-break: break-all;
+    line-height: 1.25;
+  }
+
+  .stop-tag {
+    color: var(--accent-rose);
+    font-weight: 700;
+  }
+
+  /* Column 2: Side Cards */
+  .side-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .side-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+
+  /* Codes list */
+  .codes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .code-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+  }
+
+  .code-badge {
+    font-family: var(--font-code);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    direction: ltr;
+    flex-shrink: 0;
+  }
+
+  .c-1 { background: #fee2e2; color: #991b1b; }
+  .c-2 { background: #ffedd5; color: #9a3412; }
+  .c-3 { background: #fef3c7; color: #92400e; }
+  .c-4 { background: #e0e7ff; color: #3730a3; }
+  .c-5 { background: #f3e8ff; color: #6b21a8; }
+
+  .code-desc {
+    color: var(--text-secondary);
+    font-size: 11.5px;
+    flex: 1;
+  }
+
+  /* Exclusions Box */
+  .exclusion-box {
+    border-color: #cbd5e1;
+    background: #ffffff;
+  }
+
+  .exclusion-list {
+    list-style: none;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 11.5px;
+    color: var(--text-secondary);
+  }
+
+  .exclusion-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .exclusion-dot {
+    color: var(--accent-rose);
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  /* Verification Box */
+  .verify-box {
+    border-color: #99f6e4;
+    background: var(--accent-teal-light);
+  }
+
+  .verify-cmd {
+    font-family: var(--font-code);
+    font-size: 11px;
+    background: #ffffff;
+    border: 1px solid #99f6e4;
+    padding: 5px 8px;
+    border-radius: 5px;
+    direction: ltr;
+    text-align: left;
+    color: #0f766e;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .verify-res {
+    font-family: var(--font-code);
+    font-size: 10.5px;
+    color: #047857;
+    margin-top: 4px;
+    font-weight: 700;
+    direction: ltr;
+    text-align: left;
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 2px solid var(--border);
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+
+  .footer-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .footer-branch {
+    font-family: var(--font-code);
+    font-weight: 700;
+    color: var(--primary);
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-titles">
+      <div class="badge-row">
+        <span class="badge badge-branch"><bdi>build/committee-chair</bdi></span>
+        <span class="badge badge-tag">فهرس مناهج التفسير</span>
+        <span class="badge" style="background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd;">تحكيم حتمي بلا استدلال</span>
+      </div>
+      <h1 class="title">رئيس اللجنة الحتمي — تحكيم توافق الوكيلين لترشيح مناهج التفسير</h1>
+      <p class="subtitle">المسار: وكيل ١ (عائلة أ) + وكيل ٢ (عائلة ب) ← الفاحص لكل وكيل (٧٥) ← رئيس اللجنة (٨٥ + ٥ شروط) ← مرشّح للمراجعة | امتناع برمز واحد ← المتخصص يعتمد</p>
+    </div>
+    <div class="caption-badge">
+      <span>أعداد توجيه وليست دقة</span>
+    </div>
+  </div>
+
+  <!-- Flow Diagram -->
+  <div class="flow-container">
+    <div class="flow-node agents">
+      <div class="flow-node-title">وكيل ١ (عائلة أ) + وكيل ٢ (عائلة ب)</div>
+      <div class="flow-node-desc">استقلال العائلتين وتطابق بصمة الحزمة</div>
+    </div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-node verifier">
+      <div class="flow-node-title">الفاحص لكل وكيل (٧٥)</div>
+      <div class="flow-node-desc">فحص حتمي مستقل وسلامة النص الحرفي</div>
+    </div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-node chair">
+      <div class="flow-node-title">رئيس اللجنة (٨٥ + ٥ شروط)</div>
+      <div class="flow-node-desc">تحكيم التوافق وتوحيد مسار القرار</div>
+    </div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-split">
+      <div class="flow-node candidate" style="padding: 3px 10px;">
+        <div class="flow-node-title" style="font-size:12px;">مرشّح للمراجعة</div>
+        <div class="flow-node-desc" style="font-size:10px;">استيفاء الشروط الخمسة للتوافق</div>
+      </div>
+      <div class="flow-node abstain" style="padding: 3px 10px;">
+        <div class="flow-node-title" style="font-size:12px;">امتناع برمز واحد</div>
+        <div class="flow-node-desc" style="font-size:10px;">أسبقية الرموز المغلقة الخمسة</div>
+      </div>
+    </div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-node specialist">
+      <div class="flow-node-title">المتخصص يعتمد</div>
+      <div class="flow-node-desc">الجهة الوحيدة المخوّلة بالاعتماد النهائي</div>
+    </div>
+  </div>
+
+  <!-- Main Grid -->
+  <div class="main-grid">
+
+    <!-- Column 1: 5 Numbered Steps -->
+    <div class="steps-col">
+      <div class="section-heading">
+        <span>الخطوات الإجرائية لتحكيم رئيس اللجنة (٥ خطوات)</span>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">١</div>
+          <div class="step-title">التحقق من استقلال عائلتي النموذجين ومطابقة بصمة الحزمة</div>
+        </div>
+        <div class="step-grid">
+          <div class="item-col">
+            <span class="item-label">لماذا:</span>
+            <span class="item-val">ضمان استقلال الوكيلين وحماية النص ومطابقة مدخلات التشغيل.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الأمر الحقيقي:</span>
+            <span class="code-val" style="font-size:9.5px;">python src/committee_chair.py --base data/nur/al_tabari<br>--proposer qwen2.5-14b-local --reviewer gemma2-9b-local --window 24_35_p01</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الناتج المتوقع:</span>
+            <span class="item-val">تأكيد عائلتين مستقلتين وتطابق بصمة الحزمة <bdi dir="ltr">(packet_sha256)</bdi>.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">توقّف هنا إن:</span>
+            <span class="item-val stop-tag">انتمى النموذجان لعائلة واحدة أو اختلفت بصمة الحزمة.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">٢</div>
+          <div class="step-title">فحص مخرجات الفاحص الحتمي لكل وكيل (عتبة ٧٥)</div>
+        </div>
+        <div class="step-grid">
+          <div class="item-col">
+            <span class="item-label">لماذا:</span>
+            <span class="item-val">احترام نتيجة الفاحص الحتمي؛ إحالة الفاحص تُلزم اللجنة مباشرة.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الإجراء:</span>
+            <span class="item-val">قراءة ملفات <bdi dir="ltr">verified/&lt;annotator&gt;/</bdi> ومطابقة المسارات.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الناتج المتوقع:</span>
+            <span class="item-val">حركات مؤهلة تحمل مسار <bdi dir="ltr">auto_candidate</bdi> لدى الطرفين.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">توقّف هنا إن:</span>
+            <span class="item-val stop-tag">أحال الفاحص أي وكيل لمتخصص (<bdi dir="ltr">force_specialist</bdi>).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">٣</div>
+          <div class="step-title">تحكيم التوافق وتطبيق شروط الترشيح الخمسة وعتبة ٨٥</div>
+        </div>
+        <div class="step-grid">
+          <div class="item-col">
+            <span class="item-label">لماذا:</span>
+            <span class="item-val">تشديد معيار الترشيح بفرض عتبة ٨٥ وتطابق المنهج وخلو الأعلام.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الإجراء:</span>
+            <span class="item-val">تطبيق دالة <bdi dir="ltr">evaluate_move</bdi> الحتمية على كل حركة متداخلة.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الناتج المتوقع:</span>
+            <span class="item-val">ترشيح الحركة بمسار <bdi dir="ltr">auto_candidate</bdi> وخلو مصفوفة الامتناع.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">توقّف هنا إن:</span>
+            <span class="item-val stop-tag">نقصت الدرجة عن ٨٥ أو اختلف المنهج أو رُصد علم دليل.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">٤</div>
+          <div class="step-title">إسناد رمز امتناع مغلق وصياغة عربية محددة لكل إحالة</div>
+        </div>
+        <div class="step-grid">
+          <div class="item-col">
+            <span class="item-label">لماذا:</span>
+            <span class="item-val">إرشاد المتخصص البشري بالسبب الدقيق للامتناع بلا غموض أو تخمين.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الإجراء:</span>
+            <span class="item-val">اختيار الرمز الأسبق من القائمة المغلقة وفق جدول الأسبقية الخماسي.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الناتج المتوقع:</span>
+            <span class="item-val">إسناد رمز واحد حتمي وجملة عربية ثابتة مفسرة لسبب الإحالة.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">توقّف هنا إن:</span>
+            <span class="item-val stop-tag">وُجد أكثر من سبب امتناع؛ يُعتمد الرمز الأسبق ترتيباً.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-card">
+        <div class="step-card-header">
+          <div class="step-num">٥</div>
+          <div class="step-title">تصدير مخرجات اللجنة مع حفظ ملفات الدخل دون أي تعديل</div>
+        </div>
+        <div class="step-grid">
+          <div class="item-col">
+            <span class="item-label">لماذا:</span>
+            <span class="item-val">حفظ قرارات اللجنة لصالح واجهة العرض مع صون سلامة ملفات الفاحص.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">التصدير على المسارين:</span>
+            <span class="code-val" style="font-size:9.5px;">&lt;base&gt;/committee/&lt;window&gt;.json<br>&lt;base&gt;/verified/committee/&lt;window&gt;.json</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">الناتج المتوقع:</span>
+            <span class="item-val"><bdi dir="ltr">Committee Chair: processed 1 window(s)...</bdi> مع بقاء الدخل مطابقاً بالبايت.</span>
+          </div>
+          <div class="item-col">
+            <span class="item-label">توقّف هنا إن:</span>
+            <span class="item-val stop-tag">رُصد أي تعديل أو مساس بملفات الدخل في مجلدات الفاحص.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2: Side Cards -->
+    <div class="side-col">
+
+      <!-- Closed Committee Codes Card -->
+      <div class="side-card">
+        <div class="section-heading">
+          <span>رموز الامتناع المغلقة الخمسة (مرتبة بالأسبقية)</span>
+        </div>
+        <div class="codes-list">
+          <div class="code-item">
+            <span class="code-badge c-1">written_abstain</span>
+            <span class="code-desc">امتناع بسبب مكتوب (primary فارغ أو يقين insufficient).</span>
+          </div>
+          <div class="code-item">
+            <span class="code-badge c-2">force_specialist</span>
+            <span class="code-desc">إحالة الفاحص — تُحترم (مخرج الفاحص specialist أو خلل بصمة).</span>
+          </div>
+          <div class="code-item">
+            <span class="code-badge c-3">agent_disagree</span>
+            <span class="code-desc">اختلاف الوكلاء (المنهج الرئيسي <bdi dir="ltr">primary</bdi> غير متطابق).</span>
+          </div>
+          <div class="code-item">
+            <span class="code-badge c-4">unclear_bounds</span>
+            <span class="code-desc">حدود غير واضحة (انعدام تقاطع، عدم اتصال، أو حركة مكررة).</span>
+          </div>
+          <div class="code-item">
+            <span class="code-badge c-5">weak_evidence</span>
+            <span class="code-desc">دليل ضعيف (يقين weak، درجة دون ٨٥، أو أعلام دليل).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boundaries Box -->
+      <div class="side-card exclusion-box">
+        <div class="section-heading" style="color: var(--accent-rose);">
+          <span>حدود النطاق — ما لا يفعله هذا الفرع</span>
+        </div>
+        <ul class="exclusion-list">
+          <li><span class="exclusion-dot">✕</span> لا يستدعي نماذج لغوية؛ القرار حتمي حسابي خالص دون كلفة استدلال.</li>
+          <li><span class="exclusion-dot">✕</span> لا يمنح اعتماداً نهائياً؛ الاعتماد محجوز حصراً للمتخصص البشري.</li>
+          <li><span class="exclusion-dot">✕</span> لا يعدّل ملفات المدخلات ولا يمس نص التفسير الحرفي المثبت.</li>
+          <li><span class="exclusion-dot">✕</span> لم ندرّب نماذج؛ والعد في النظام إرشادي («أعداد توجيه وليست دقة»).</li>
+        </ul>
+      </div>
+
+      <!-- Verification Box -->
+      <div class="side-card verify-box">
+        <div class="section-heading" style="color: var(--accent-teal);">
+          <span>كيف تعرف أنه يعمل؟ (أمر تحقق واحد)</span>
+        </div>
+        <div class="verify-cmd">python -m unittest tests/test_committee_chair.py</div>
+        <div class="verify-res">Ran 20 tests in 0.153s - OK</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-meta">
+      <span class="footer-branch"><bdi>build/committee-chair</bdi></span>
+      <span>·</span>
+      <span>مِرْقاة · فهرس مناهج التفسير</span>
+      <span>·</span>
+      <span>لجنة محلية على Ollama (وكيلان من عائلتين مختلفتين)</span>
+    </div>
+    <div>
+      <span style="font-weight:700; color:#475569;">أعداد توجيه وليست دقة</span>
+    </div>
+  </div>
+
+</body>
+</html>
