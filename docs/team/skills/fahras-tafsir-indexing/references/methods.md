@@ -1,8 +1,8 @@
-# رموز المناهج (M_*) — من `src/v2_packets.py:30-102` حرفياً
+# رموز المناهج (M_*) — من `src/v2_packets.py` حرفياً
 
 > المصدر الوحيد: الدالة `_definitions_ar` في `src/v2_packets.py`.
 > حقلا `when` لرمزَي `M_ISRAILIYYAT` و`M_RAY` يستخدمان اسم المفسّر (`tafsir_name`) — أدناه الصيغة لاسم عام «المفسّر».
-> مستويات اليقين الأربعة من `_certainty_rules_ar` في `src/v2_packets.py:105-111` في آخر الجدول.
+> مستويات اليقين الأربعة من `_certainty_rules_ar` في `src/v2_packets.py` في آخر الجدول.
 
 | الرمز | الاسم العربي | يُدرج متى (when) | يُستبعد (exclude) | علامات مرشّحة (markers) |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@
 | `M_ISRAILIYYAT` | الإسرائيليات | مادة يعزوها النص لأهل الكتاب أو بني إسرائيل، أو يصنّفها المفسّر كذلك. | غرابة القصة وحدها. | كعب الأحبار، وهب بن منبه، أهل الكتاب، بني إسرائيل، الإسرائيليات |
 | `M_RAY` | الرأي والاجتهاد | استنتاج المفسّر أو ترجيحه التفسيري. | مجرد نقل حكم غيره، أو عزو حديث وتسميته رأياً. | والظاهر، والصحيح، والأقرب، قلت، والله أعلم |
 
-## مستويات اليقين (certainty) — `src/v2_packets.py:105-111`
+## مستويات اليقين (certainty) — `src/v2_packets.py`
 
 | المستوى | القاعدة العربية |
 |---|---|
@@ -28,5 +28,6 @@
 
 ## ملاحظات توجيه للفاحص (`src/v2_verify.py`)
 
-- `M_RAY` يُحال للمتخصص دائماً (`assign_route` — `src/v2_verify.py:540`).
-- `FORCE_SPECIALIST_METHODS = {M_ISRAILIYYAT, M_NUZUL, M_QIRAAT}` (`src/v2_verify.py:59`).
+- `M_RAY` يُحال للمتخصص دائماً (`assign_route`).
+- `FORCE_SPECIALIST_METHODS = {M_ISRAILIYYAT, M_NUZUL, M_QIRAAT}` (`src/v2_verify.py`).
+

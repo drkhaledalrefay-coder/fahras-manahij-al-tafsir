@@ -1,7 +1,9 @@
-# رموز الامتناع/الإحالة (REASON_CODES) — من `src/grounding_contract.py:15-34` حرفياً
+# رموز الامتناع والإحالة
+
+## الطبقة ١ — الفاحص (`REASON_CODES` في `src/grounding_contract.py`)
 
 > المصدر الوحيد: `REASON_CODES` في `src/grounding_contract.py`.
-> القاعدة: كل حركة محالة إلى `specialist` تحمل **رمزاً واحداً**؛ عند تعدد الأسباب يُختار الأول بترتيب هذا الجدول (الأهم أولاً) — `pick_reason` في `src/grounding_contract.py:47-55`.
+> القاعدة: كل حركة محالة إلى `specialist` تحمل **رمزاً واحداً**؛ عند تعدد الأسباب يُختار الأول بترتيب هذا الجدول (الأهم أولاً) — `pick_reason`.
 > عمود «ماذا تفعل» إرشاد تشغيلي، وليس جزءاً من العقد.
 
 | الرمز | النص العربي (من العقد حرفياً) | ماذا تفعل |
@@ -24,3 +26,19 @@
 | `RULE_FLAG` | قاعدة فحص أخرى لم تُجتز | اقرأ اسم القاعدة في `verified/` ثم امتناع. |
 | `LOW_CERTAINTY` | يقين ضعيف أو غير كافٍ | امتناع؛ اليقين الضعيف لا يُرشَّح. |
 | `LOW_SCORE` | الدرجة دون العتبة | امتناع؛ الدرجة مؤشر لا إثبات. |
+
+أين تجده: حقل `reason_code` لكل حركة في `verified/<slug>/<window>.json`، والعدّ في `summary.by_reason`. الحركة المرشّحة `reason_code` فيها `null`.
+
+## الطبقة ٢ — رئيس اللجنة (`COMMITTEE_REASON_CODES`، العتبة `COMMITTEE_THRESHOLD = 85`)
+
+رمز واحد لكل حركة، أول ما ينطبق بهذا الترتيب. عند `force_specialist` يُنسخ رمز الفاحص في `verifier_reason_code`.
+
+| الرمز | النص العربي (من العقد حرفياً) | ماذا تفعل |
+|---|---|---|
+| `written_abstain` | امتناع بسبب مكتوب (primary فارغ أو يقين insufficient من المصنّف) | امتناع صحيح؛ يُعرض للمتخصص كما هو. |
+| `force_specialist` | إحالة الفاحص — تُحترم (مخرج assign_route عند أي طرف أصلاً specialist) | اقرأ `verifier_reason_code` لمعرفة السبب الأصلي. |
+| `agent_disagree` | اختلاف الوكلاء (primary مختلف) | لا ترجيح آلي؛ الحكم الأشد حتى يحسمه المتخصص. |
+| `unclear_bounds` | حدود غير واضحة (non_contiguous_span_ids أو mixed_or_overlap_spans أو تقطيع بلا تقاطع) | الحدود للمتخصص (مدّ/تقليص في واجهة المراجعة). |
+| `weak_evidence` | دليل ضعيف (يقين weak، أو score.total < 85 عند المصنّف، أو أعلام قاعدة الدليل) | امتناع؛ ٨٥ حدّ اللجنة، لا يُخفَّض. |
+
+أين تجده: `committee/<window>.json` (قرار اللجنة وملخص `by_abstention_reason` وعبارة «أعداد توجيه وليست دقة»)، و`verified/committee/<window>.json` (الشكل الذي تقرؤه الواجهة).

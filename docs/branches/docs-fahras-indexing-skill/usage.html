@@ -1,305 +1,65 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8">
-<title>طريقة الاستخدام — مهارة وسم مناهج التفسير</title>
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    width: 1600px;
-    height: 900px;
-    background: #f8fafc;
-    color: #0f172a;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", "Noto Sans", Tahoma, Arial, sans-serif;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 28px 44px;
-    direction: rtl;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 16px;
-  }
-  .title-group h1 {
-    font-size: 27px;
-    font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .title-badge {
-    background: #e0e7ff;
-    color: #3730a3;
-    font-size: 14px;
-    padding: 3px 12px;
-    border-radius: 9999px;
-    font-weight: 600;
-  }
-  .title-group p {
-    font-size: 14.5px;
-    color: #475569;
-  }
-  .header-meta {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .meta-tag {
-    display: inline-block;
-    background: #f1f5f9;
-    border: 1px solid #cbd5e1;
-    color: #334155;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 12.5px;
-    font-weight: 600;
-  }
-
-  .steps-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-    margin: 18px 0;
-    flex: 1;
-  }
-  .step-card {
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 12px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-  }
-  .step-head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .step-number {
-    background: #1e293b;
-    color: #ffffff;
-    width: 28px;
-    height: 28px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    flex-shrink: 0;
-  }
-  .step-title {
-    font-size: 15.5px;
-    font-weight: 700;
-    color: #0f172a;
-    line-height: 1.3;
-  }
-  .step-body {
-    flex: 1;
-    font-size: 12.5px;
-    color: #334155;
-    line-height: 1.5;
-  }
-  .step-desc {
-    margin-bottom: 8px;
-  }
-  .code-block {
-    background: #0f172a;
-    color: #f1f5f9;
-    padding: 8px 10px;
-    border-radius: 6px;
-    font-family: Consolas, "Courier New", monospace;
-    font-size: 11px;
-    line-height: 1.4;
-    direction: ltr;
-    text-align: left;
-    margin: 6px 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-  .warning-box {
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    color: #92400e;
-    padding: 8px 10px;
-    border-radius: 6px;
-    font-size: 11.5px;
-    margin-top: 6px;
-    font-weight: 600;
-    line-height: 1.4;
-  }
-  .info-box {
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    color: #1e40af;
-    padding: 7px 9px;
-    border-radius: 6px;
-    font-size: 11.5px;
-    margin-top: 6px;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 2px solid #e2e8f0;
-    padding-top: 12px;
-    font-size: 14px;
-    color: #475569;
-  }
-  .footer-right {
-    font-weight: 700;
-    color: #0f172a;
-  }
-  .footer-center {
-    font-weight: 800;
-    color: #1e293b;
-    letter-spacing: 0.5px;
-  }
-  .footer-left {
-    color: #64748b;
-    font-size: 13px;
-  }
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1600px;height:900px;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:#f4f1e8;color:#1e2a24;overflow:hidden}
+.wrap{padding:22px 36px 20px 36px;height:900px;display:flex;flex-direction:column}
+h1{font-size:30px;margin-bottom:3px}
+.sub{font-size:15.5px;color:#4a5a52;margin-bottom:10px}
+.layers{display:flex;gap:10px;margin-bottom:10px}.layer{flex:1;background:#fff;border:1px solid #d8d0ba;border-radius:8px;padding:6px 12px;font-size:13.5px}.layer b{color:#1e6b4f}.rule-flow{display:flex;align-items:center;gap:10px;background:#e9e2d2;border:1px solid #c9bfa5;border-radius:8px;padding:6px 14px;font-size:14px;margin-bottom:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1}
+.step{background:#fff;border:1px solid #d8d0ba;border-radius:10px;padding:11px 14px;display:flex;flex-direction:column;gap:6px}
+.step .num{background:#1e6b4f;color:#fff;width:30px;height:30px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700}
+.step h2{font-size:17.5px}
+.step p{font-size:13.5px;line-height:1.55;color:#33403a}
+code{direction:ltr;unicode-bidi:isolate;display:block;background:#10201a;color:#d7f0e2;font-family:Consolas,"Courier New",monospace;font-size:11.8px;border-radius:7px;padding:6px 9px;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word}
+.exp{font-size:12.5px;background:#eef5ef;border:1px solid #bcd4bf;border-radius:7px;padding:5px 9px}
+.stop{font-size:12.5px;background:#fbeede;border:1px solid #d9a45b;border-radius:7px;padding:5px 9px}
+.codes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.codebox{background:#fff;border:1px solid #d8d0ba;border-radius:8px;padding:8px 12px;font-size:13px}
+.codebox b{display:block;font-size:12.5px;color:#1e6b4f;margin-bottom:2px}
+.strips{display:flex;gap:10px;margin-top:10px}
+.strip{flex:1;border-radius:8px;padding:8px 14px;font-size:13.5px}
+.scope{background:#f7e3e3;border:1px solid #cf8a8a}
+.verify{background:#e3efe6;border:1px solid #6fa287}
+.footer{margin-top:10px;display:flex;justify-content:space-between;font-size:13px;color:#5b6a62;border-top:2px solid #1e6b4f;padding-top:6px}
 </style>
 </head>
 <body>
-
-  <header>
-    <div class="title-group">
-      <h1>
-        طريقة الاستخدام — مهارة وسم مناهج التفسير
-        <span class="title-badge">fahras-tafsir-indexing</span>
-      </h1>
-      <p>دليل تشغيل لجنة النماذج المحلية (Ollama) لسورة النور · لم ندرّب نماذج · وكيلان من عائلتين · أعداد توجيه وليست دقة</p>
-    </div>
-    <div class="header-meta">
-      <span class="meta-tag">الفرع: docs/fahras-indexing-skill</span>
-      <span class="meta-tag">الهدف: سورة النور (المرحلة 0)</span>
-    </div>
-  </header>
-
-  <main class="steps-container">
-    <!-- Step 1 -->
-    <section class="step-card">
-      <div class="step-head">
-        <span class="step-number">١</span>
-        <h2 class="step-title">تحميل المهارة في الوكيل</h2>
-      </div>
-      <div class="step-body">
-        <p class="step-desc">لتحميل المهارة في Claude Code أو Codex:</p>
-        <div class="info-box">
-          انسخ مجلد المهارة إلى مجلد مهارات الوكيل، أو وجّه الوكيل مباشرة لقراءة بطاقة المهارة:
-        </div>
-        <div class="code-block">docs/team/skills/fahras-tafsir-indexing/SKILL.md</div>
-        <p class="step-desc" style="margin-top:6px;">يتعرف الوكيل تلقائياً على جداول المناهج العشرة ورموز الامتناع الستة عشر وقواعد العقد المغلق.</p>
-      </div>
-    </section>
-
-    <!-- Step 2 -->
-    <section class="step-card">
-      <div class="step-head">
-        <span class="step-number">٢</span>
-        <h2 class="step-title">تهيئة الطرفية وسحب النماذج</h2>
-      </div>
-      <div class="step-body">
-        <p class="step-desc">متغيرات بيئة الجلسة فقط (PowerShell):</p>
-        <div class="code-block">$env:PYTHONIOENCODING = "utf-8"
-$env:LLM_API_KEY = "ollama"
-$env:LLM_BASE_URL = "http://localhost:11434/v1"</div>
-        <p class="step-desc">سحب نماذج عائلتين مختلفتين وتوثيق الوسم:</p>
-        <div class="code-block">ollama pull qwen2.5:32b
+<div class="wrap">
+<h1>فهرسة مناهج التفسير: مهارة تشغيل الوكيلين</h1>
+<div class="sub">مهارة المشروع (<bdi dir="ltr">fahras-tafsir-indexing</bdi>) لوكلاء مشغّل الذكاء: من عيّنة ٢٤:٣٥ إلى الوسم الجماعي لسورة النور — يفهرس المنهج ولا يفسّر ولا يعتمد</div>
+<div class="rule-flow"><span>السلسلة:</span><span>نافذة مثبّتة ← حزمة وبصمة ← وكيل من عائلة Qwen + وكيل من عائلة أخرى ← الفاحص لكل وكيل ← رئيس اللجنة ← مرشّح للمراجعة أو امتناع برمز واحد ← المتخصص يعتمد</span></div>
+<div class="layers">
+<div class="layer"><b>الطبقة ١ — الفاحص (٧٥):</b> لكل وكيل وحده: شاهد صريح، بوابة الكفاية، بصمة مطابقة، يقين صريح أو قوي، درجة ٧٥ فأكثر، بلا أعلام.</div>
+<div class="layer"><b>الطبقة ٢ — رئيس اللجنة (٨٥):</b> الوكيلان مرشّحان، نفس المنهج، تداخل أجزاء، درجة المصنّف ٨٥ فأكثر، عائلتان مختلفتان. ليستا تعارضاً، ولا واحدة منهما اعتماد.</div>
+</div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h2>حمّل المهارة في الوكيل</h2><p>انسخ مجلد المهارة إلى مجلد مهارات وكيلك (Claude Code أو Codex).</p><code><bdi>Copy-Item -Recurse docs/team/skills/fahras-tafsir-indexing $HOME/.claude/skills/</bdi></code><div class="exp">الناتج المتوقع: يظهر اسم المهارة في قائمة مهارات الوكيل.</div><div class="stop">توقّف إن لم تظهر: تحقّق من المسار قبل أي تشغيل.</div></div>
+<div class="step"><div class="num">2</div><h2>تحقّق ثم افتح فرعك</h2><p>على main المحدّث، ثم فرع خاص بالوسم. لا عمل على main.</p><code><bdi>python -m pytest -q
+python src/v2_selftest.py</bdi></code><div class="exp">الناتج المتوقع: الاختبارات ناجحة و SELFTEST PASS.</div><div class="stop">توقّف إن فشل أي اختبار: لا تشغيل على كود غير سليم.</div></div>
+<div class="step"><div class="num">3</div><h2>نموذجان من عائلتين</h2><p>اسحب النموذجين وسجّل الوسم الفعلي. اسم مجلد الوكيل يُشتق من اسم النموذج.</p><code><bdi>ollama pull qwen2.5:32b
 ollama pull gemma3:27b
-ollama list</div>
-        <div class="info-box">يُسجّل الوسم الفعلي الظاهر في القائمة حرفياً.</div>
-      </div>
-    </section>
-
-    <!-- Step 3 -->
-    <section class="step-card">
-      <div class="step-head">
-        <span class="step-number">٣</span>
-        <h2 class="step-title">الفحص الجاف وعيّنة 24:35</h2>
-      </div>
-      <div class="step-body">
-        <p class="step-desc">فحص سلامة الحزمة محلياً بدون شبكة:</p>
-        <div class="code-block">python src/run_window.py
-  --tafsir al_tabari
-  --window 24_35_p01
-  --base data/nur/al_tabari
-  --dry-run</div>
-        <p class="step-desc">تشغيل العيّنة عبر API للتفاسير الأربعة:</p>
-        <div class="code-block">python src/run_window.py
-  --tafsir al_tabari
-  --window 24_35_p01
-  --base data/nur/al_tabari
-  --api --model qwen2.5:32b</div>
-        <div class="warning-box">🛑 توقّف إلزامي لمراجعة عيّنة النوافذ الأربع قبل أي توسع.</div>
-      </div>
-    </section>
-
-    <!-- Step 4 -->
-    <section class="step-card">
-      <div class="step-head">
-        <span class="step-number">٤</span>
-        <h2 class="step-title">الوسم الجماعي والفحص الحتمي</h2>
-      </div>
-      <div class="step-body">
-        <p class="step-desc">بعد اعتماد العيّنة: تشغيل سورة النور كاملة:</p>
-        <div class="code-block">python src/run_surah.py
-  --db "quran.db"
-  --tafsir al_tabari
-  --surah 24
-  --base data/nur/al_tabari
-  --classify --time-cap 300</div>
-        <p class="step-desc">تشغيل الفاحص الحتمي للتحقق من الشواهد:</p>
-        <div class="code-block">python src/v2_verify.py
-  --base data/nur/al_tabari</div>
-        <div class="info-box">التحقق من الحدود والشواهد؛ كل شك = امتناع وإحالة برمز سبب.</div>
-      </div>
-    </section>
-
-    <!-- Step 5 -->
-    <section class="step-card">
-      <div class="step-head">
-        <span class="step-number">٥</span>
-        <h2 class="step-title">التوثيق والحفظ المنضبط</h2>
-      </div>
-      <div class="step-body">
-        <p class="step-desc">حفظ النتائج المنضبطة:</p>
-        <div class="info-box">
-          • commit واحد لكل تفسير يذكر وسم النموذج الفعلي وتاريخ التشغيل.<br>
-          • العمل على فرع مستقل والرفع عبر PR (ممنوع الدفع إلى main).<br>
-          • ممنوع تعديل ملفات data/** يدوياً.<br>
-          • الاعتماد للمتخصص البشري فقط.
-        </div>
-        <div class="code-block">git status --porcelain data/
-# يجب أن يكون الناتج فارغاً</div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-right">docs/fahras-indexing-skill</div>
-    <div class="footer-center">مِرْقاة · فهرس مناهج التفسير</div>
-    <div class="footer-left">وكيلان من عائلتين · فاحص حتمي · الاعتماد للمتخصص البشري فقط</div>
-  </footer>
-
+ollama list</bdi></code><div class="exp">الناتج المتوقع: المجلدان qwen2_5_32b و gemma3_27b بعد التشغيل.</div><div class="stop">توقّف إن كان النموذجان من العائلة نفسها: الرئيس يرفضهما.</div></div>
+<div class="step"><div class="num">4</div><h2>العيّنة ٢٤:٣٥ بالوكيلين</h2><p>فحص بلا شبكة أولاً، ثم الوكيلان على النافذة نفسها. الفاحص يعمل تلقائياً بعد كل تشغيل.</p><code><bdi>python src/run_window.py --tafsir al_tabari --base data/nur/al_tabari --window 24_35_p01 --api --model qwen2.5:32b</bdi></code><div class="exp">الناتج المتوقع: سطر verifier بعدد المرشّح والمحال.</div><div class="stop">توقّف إن ظهر سجل فشل متكرر: ارفع السياق ولا تعدّل الفاحص.</div></div>
+<div class="step"><div class="num">5</div><h2>رئيس اللجنة ثم المراجعة</h2><p>الرئيس يقرأ مخرجي الوكيلين ولا يعدّلهما. بعد العيّنة: توقّف للمراجعة العمياء والشرعية.</p><code><bdi>python src/committee_chair.py --base data/nur/al_tabari --proposer qwen2_5_32b --reviewer gemma3_27b --window 24_35_p01</bdi></code><div class="exp">الناتج المتوقع: ملف committee للنافذة بقرار ورمز لكل حركة.</div><div class="stop">توقّف إن جاءت كل الحركات اتفاقاً: علامة شك لا نجاح.</div></div>
+<div class="step"><div class="num">6</div><h2>الجماعي والتسجيل</h2><p>بعد قبول العيّنة فقط: حلقة على نوافذ كل تفسير لكل وكيل، ثم الرئيس على الكل، ثم commit لكل تفسير.</p><code><bdi>python src/committee_chair.py --base data/nur/al_tabari --proposer qwen2_5_32b --reviewer gemma3_27b --all</bdi></code><div class="exp">الناتج المتوقع: فرع ثم PR ثم CI أخضر، والرسالة فيها الوسمان الفعليان.</div><div class="stop">توقّف إن طُلب خفض ٧٥ أو ٨٥: القرار لقائد الفريق.</div></div>
+</div>
+<div class="codes">
+<div class="codebox"><b><bdi>EVIDENCE_EMPTY</bdi></b>لا شاهد صريح — لا يولّد الفاحص شاهداً بديلاً</div>
+<div class="codebox"><b><bdi>UNGROUNDED_CLAIM</bdi></b>مرجع أو ادعاء معروض بلا شاهد يسنده</div>
+<div class="codebox"><b><bdi>PACKET_HASH_MISMATCH</bdi></b>بصمة الحزمة في الرد لا تطابق الحزمة الحالية</div>
+<div class="codebox"><b><bdi>agent_disagree</bdi></b>اختلاف الوكلاء (المنهج الرئيسي مختلف)</div>
+<div class="codebox"><b><bdi>unclear_bounds</bdi></b>حدود غير واضحة أو تقطيع بلا تقاطع</div>
+<div class="codebox"><b><bdi>weak_evidence</bdi></b>دليل ضعيف أو درجة المصنّف دون ٨٥</div>
+</div>
+<div class="strips">
+<div class="strip scope">ما لا تفعله المهارة: لا تفسير ولا فتوى، لا اعتماد آلي، لا تعديل على النص المثبّت، لا نسب ولا ادعاء دقة — أعداد توجيه وليست دقة.</div>
+<div class="strip verify">كيف تعرف أنها تعمل: سطر verifier بعد كل نافذة، وملفات verified و committee على القرص، وأي فشل يظهر سجلاً واحداً برمز.</div>
+</div>
+<div class="footer"><span><bdi dir="ltr">docs/fahras-indexing-skill</bdi></span><span>مِرْقاة · فهرس مناهج التفسير</span></div>
+</div>
 </body>
 </html>

@@ -1,55 +1,38 @@
-# تسليم فرع: docs/skill-tagging — مهارة وسم مناهج التفسير
+# تسليم فرع مهارة «فهرسة مناهج التفسير»
 
-## ١) ماذا تغيّر ولماذا
-إضافة مهارة وكيل متخصصة (`tafsir-methods-tagging`) لتعليم مشغّل الذكاء (Ollama) خطوات وسم مناهج التفسير لسورة النور.
-تهدف المهارة لضبط التشغيل بالعيّنة (24:35) أولاً ثم التوقف للمراجعة قبل الوسم الجماعي، ومنع أي تعديل يدوي على النصوص.
+## ماذا تغيّر ولماذا
+مهارة المشروع `fahras-tafsir-indexing` تعلّم أي وكيل (Claude Code أو Codex) تشغيل سلسلة الفهرسة كما بُنيت في #9 (عقد الإسناد) و#10 (رئيس اللجنة): وكيلان من عائلتين، فاحص (٧٥)، رئيس لجنة (٨٥)، امتناع برمز واحد، والاعتماد للمتخصص. يحملها مشغّل الذكاء لوكلائه قبل عيّنة ٢٤:٣٥ والوسم الجماعي لسورة النور.
 
-## ٢) الملفات المتغيرة
-- `docs/team/SKILLS.md`: فهرسة المهارة الجديدة وتحديد نطاق استخدامها.
-- `docs/team/skills/tafsir-methods-tagging/SKILL.md`: بطاقة المهارة والتعليمات والقواعد الصلبة.
-- `docs/team/skills/tafsir-methods-tagging/references/methods.md`: جدول رموز المناهج العشرة ومستويات اليقين.
-- `docs/team/skills/tafsir-methods-tagging/references/reason-codes.md`: جدول رموز الامتناع الستة عشر المغلقة.
-- `docs/team/skills/tafsir-methods-tagging/references/runbook.md`: دفتر التشغيل وأعلام الأوامر الحقيقية.
-- `docs/branches/docs-skill-tagging/`: حزمة الفرع (`HANDOFF.md`, `SKILLS.md`, `usage.html`, `usage.png`).
+## الملفات
+- `docs/team/skills/fahras-tafsir-indexing/SKILL.md`: السلسلة والطبقتان والإجراء والقواعد ونقاط التوقّف.
+- `references/runbook.md`: الأوامر الحرفية (الأعلام من `--help`)، جدول نوافذ العيّنة، حلقة الجماعي، التسجيل.
+- `references/reason-codes.md`: `REASON_CODES` (١٨) و`COMMITTEE_REASON_CODES` (٥) بنصّها العربي الحرفي من العقد، وماذا تفعل عند كل رمز.
+- `references/methods.md`: رموز المناهج `M_*` ومستويات اليقين من `src/v2_packets.py`.
+- `docs/team/SKILLS.md`: سطر الفهرس.
 
-## ٣) طريقة الاستخدام خطوة بخطوة
-١. **تحميل المهارة في الوكيل (Claude Code أو Codex):**
-انسخ مجلد `docs/team/skills/tafsir-methods-tagging` إلى دليل مهارات الوكيل (مثل `.claude/skills/` أو مجلد مهارات الوكيل)، أو وجّه الوكيل مباشرة لقراءة ملف `SKILL.md`.
-٢. **ضبط بيئة الطرفية للجلسة وسحب النماذج (PowerShell):**
-```powershell
-$env:PYTHONIOENCODING = "utf-8"
-$env:LLM_API_KEY = "ollama"
-$env:LLM_BASE_URL = "http://localhost:11434/v1"
-ollama pull qwen2.5:32b
-ollama pull gemma3:27b
-ollama list
-```
-٣. **الفحص الجاف ثم عيّنة الآية 24:35 على التفاسير الأربعة:**
-```powershell
-python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --dry-run
-python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --api --model qwen2.5:32b
-```
-كرر لنوافذ العيّنة (ابن كثير، البغوي، السعدي) ثم **توقّف للمراجعة**.
-٤. **الوسم الجماعي والفحص الحتمي (بعد قبول العيّنة):**
-```powershell
-python src/run_surah.py --db "quran.db" --tafsir al_tabari --surah 24 --base data/nur/al_tabari --classify --time-cap 300
-python src/v2_verify.py --base data/nur/al_tabari
-```
-٥. **الحفظ والتوثيق:** commit واحد لكل تفسير يذكر وسم النموذج الفعلي وتاريخ التشغيل، دون رفع إلى `main`.
-قواعد المنهج: لم ندرّب نماذج خاصة؛ يعمل وكيلان من عائلتين مختلفتين، والأرقام أعداد توجيه وليست دقة.
+## طريقة الاستخدام
+1. انسخ المجلد إلى مجلد مهارات الوكيل:
+   `Copy-Item -Recurse docs/team/skills/fahras-tafsir-indexing $HOME/.claude/skills/`
+2. اطلب من الوكيل: «شغّل عيّنة ٢٤:٣٥ بمهارة فهرسة مناهج التفسير». سيتبع `runbook.md` §٤ ثم يتوقّف للمراجعة.
+3. بعد قبول العيّنة: «شغّل الجماعي على النور». سيتبع `runbook.md` §٥ و§٦.
 
-## ٤) كيف تتحقق بنفسك
-- تشغيل الفحص الذاتي للتأكد من سلامة منطق المطابقة وعقد الإسناد:
-  `python src/v2_selftest.py` ← النتيجة المتوقعة: `SELFTEST PASS`
-- التحقق من عدم المساس بأي نص مصدري:
-  `git status --porcelain data/` ← النتيجة المتوقعة: مخرجات فارغة تماماً.
-- مطابقة الأعلام المستعملة مع مخرجات المساعدة:
-  `python src/run_window.py --help` و `python src/run_surah.py --help` و `python src/v2_verify.py --help`
+## كيف تتحقق بنفسك
+- `python src/run_window.py --tafsir al_tabari --base data/nur/al_tabari --window 24_35_p01 --dry-run` ← يطبع `spans: 102` و`packet_sha256: …`
+- `python src/committee_chair.py --help` ← الأعلام نفسها المذكورة في المهارة
+- البوابات التي اجتازتها المهارة:
+  - رموز `M_*` مطابقة لـ`src/v2_packets.py`.
+  - كل رمز امتناع موجود بنصه الحرفي.
+  - لا علَم خارج `--help`.
+  - `qwen2_5_32b` و`gemma3_27b` يُعرفان عائلتين مختلفتين عند الرئيس.
 
-## ٥) ما لم يُنجز / مخاطر
-- لم يُشغَّل الوسم الفعلي لسورة النور بعد؛ المهارة توفر تعليمات التشغيل للمشغّل البشري على خادم GPU.
-- عتبة الترشيح: الكود يعتمد 75 في `v2_verify.py` بينما الوثيقة تذكر 85؛ يُلتزم بسلوك الكود وتوثيق العتبتين.
-- خطر تشغيل عينات دون توقف للمراجعة، أو استخدام نماذج لم تُوثّق وسومها الدقيقة في `committee.json`.
+## حقائق من الكود مهمة للمشغّل
+- اسم مجلد الوكيل = `model_slug(model)`: `qwen2.5:32b` ← `qwen2_5_32b`. هذا ما يُمرَّر إلى `--proposer`/`--reviewer`.
+- `run_window.py --api` يشغّل الفاحص تلقائياً ويكتب `verified/<slug>/<window>.json`.
+- `run_surah.py` يتطلب `--db` (`quran.db` غير موجود في المستودع) وافتراضيه **السورة ٨**. لذلك تعتمد المهارة حلقة `run_window.py` على `packets/`، ومع `run_surah` تمرّر `--surah 24` صراحة. النموذج فيه من `$env:LLM_MODEL`.
 
-## ٦) التنفيذ والمراجعة
-skill written by Cline (cline-free/muse-spark-1.3-contributor), checked by Claude (codes, reason codes, CLI flags all matched to source); package by Antigravity (gemini-3.8-flash-high).
+## ما لم يُنجز / مخاطر
+- أمثلة النماذج من جدول الذاكرة في خطة الوسم؛ الوسم الفعلي يُسجَّل من `ollama list` على جهاز التشغيل.
+- لم تُشغَّل المهارة على نموذج حقيقي بعد؛ أول تشغيل هو عيّنة ٢٤:٣٥.
+
+## من نفّذ ومن راجع
+المسودة الأولى: Cline (`muse-spark`). الحزمة الأولى: Antigravity. إعادة الكتابة النهائية والحزمة والتحقق من الكود: Claude (المنسّق). المصادر: الكود المدموج في `main` بعد #9 و#10.

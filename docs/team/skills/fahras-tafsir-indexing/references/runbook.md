@@ -1,25 +1,27 @@
-# دفتر التشغيل (Runbook) — مشغّل الذكاء على صندوق GPU مع Ollama
+# دفتر التشغيل — فهرسة مناهج التفسير (Ollama على جهاز المعالج الرسومي)
 
-> المصادر: `docs/TAGGING_PLAN_NUR.md` §3-§4، `docs/HANDOFF.md` §4، ومخرجات `--help` الحقيقية أدناه.
-> كل الأعلام هنا موجودة حرفياً في `--help` — لا تستخدم غيرها.
+كل علَم هنا من `--help` الفعلي. الأوامر بصيغة PowerShell (ويندوز).
 
-## 0. الأعلام الحقيقية (انسخها من `--help`)
+## ٠. الأعلام
 
-**`python src/run_window.py --help`:**
-`--tafsir` · `--base` · `--window` · `--api` · `--manual-out FILE` · `--manual-in FILE` · `--dry-run` · `--model MODEL` · `--base-url BASE_URL`
+| السكربت | الأعلام |
+|---|---|
+| `src/run_window.py` | `--tafsir` · `--base` · `--window` · `--api` \| `--manual-out FILE` \| `--manual-in FILE` · `--dry-run` · `--model` · `--base-url` |
+| `src/v2_verify.py` | `--base` |
+| `src/committee_chair.py` | `--base` · `--proposer` · `--reviewer` · `--window` \| `--all` · `--proposer-tag` · `--reviewer-tag` · `--proposer-quant` · `--reviewer-quant` |
+| `src/run_surah.py` | `--db` (إلزامي) · `--tafsir` · `--surah` (الافتراضي **8**) · `--ayat` · `--base` · `--dry-run` · `--classify` · `--time-cap` |
 
-**`python src/run_surah.py --help`:**
-`--db DB` · `--tafsir {al_tabari,al_saadi,al_baghawi,ibn_kathir}` · `--surah SURAH` · `--ayat AYAT` · `--base BASE` · `--dry-run` · `--classify` · `--time-cap TIME_CAP`
+## ١. التحقق والفرع
 
-**`python src/v2_verify.py --help`:**
-`--base BASE`
+```powershell
+git checkout main; git pull
+git checkout -b tagging/nur-sample
+pip install -r requirements.txt
+python -m pytest -q
+python src/v2_selftest.py          # يجب: SELFTEST PASS
+```
 
-## 1. قبل التشغيل (المرحلة 0)
-
-- لا وسم جماعي على النور قبل دمج المرحلة 0 واجتياز اختباراتها (`docs/TAGGING_PLAN_NUR.md` §2).
-- بعد الدمج شغّل: `python -m pytest -q` (أمر الخطة §4 خطوة 1).
-
-## 2. جلسة الطرفية (PowerShell على Windows — للجلسة فقط)
+## ٢. جلسة الطرفية (لا تُحفظ في ملف)
 
 ```powershell
 $env:PYTHONIOENCODING = "utf-8"
@@ -27,26 +29,25 @@ $env:LLM_API_KEY = "ollama"
 $env:LLM_BASE_URL = "http://localhost:11434/v1"
 ```
 
-- المفتاح في متغير بيئة الجلسة فقط — لا ملف ولا git ولا شات (`docs/TAGGING_PLAN_NUR.md` §3).
-- درجة الحرارة `temperature: 0` للمصنّف والمدقّق وصياغة سبب الامتناع (تُضبط في طلب الـAPI، وليست علماً في CLI).
+## ٣. النماذج — عائلتان مختلفتان
 
-## 3. النماذج: اسحب وسجّل الوسم الفعلي
+| ذاكرة المعالج | المصنّف (المقترِح) | المدقّق (المراجِع) |
+|---|---|---|
+| ٤٨ غيغابايت فأكثر | `qwen2.5:72b` | `llama3.3:70b` أو `gemma3:27b` |
+| **٢٤ غيغابايت (الافتراضي)** | `qwen2.5:32b` | `gemma3:27b` |
+| ١٦ غيغابايت | `qwen2.5:14b` | `gemma3:12b` |
 
 ```powershell
 ollama pull qwen2.5:32b
 ollama pull gemma3:27b
-ollama list
+ollama list                          # سجّل الوسم الفعلي كما يظهر هنا
 ```
 
-- التوصية الافتراضية لذاكرة 24GB: المصنّف `qwen2.5:32b` والمدقّق `gemma3:27b` (`docs/TAGGING_PLAN_NUR.md` §3).
-- البدائل حسب الذاكرة: 48GB ← `qwen2.5:72b` + (`llama3.3:70b` أو `gemma3:27b`)؛ 16GB ← `qwen2.5:14b` + `gemma3:12b`.
-- سجّل **الوسم الفعلي** من `ollama list` في `committee.json` وفي العرض — لا تذكر اسماً لم يُشغَّل فعلاً.
+اسم مجلد الوكيل يُشتق من اسم النموذج (`model_slug`): `qwen2.5:32b` ← `qwen2_5_32b`، و`gemma3:27b` ← `gemma3_27b`. هذا الاسم هو ما يُمرَّر للرئيس.
 
-## 4. العيّنة أولاً: آية النور 24:35 على التفاسير الأربعة ثم توقّف
+## ٤. العيّنة ٢٤:٣٥ — ثم توقّف
 
-معرّفات النوافذ الحقيقية (من `data/nur/<tafsir>/windows/`):
-
-| التفسير | `--base` | `--window` |
+| التفسير | `--base` | النوافذ |
 |---|---|---|
 | الطبري | `data/nur/al_tabari` | `24_35_p01` `24_35_p02` `24_35_p03` `24_35_p04` |
 | ابن كثير | `data/nur/ibn_kathir` | `24_35_p01` `24_35_p02` `24_35_p03` |
@@ -54,29 +55,53 @@ ollama list
 | السعدي | `data/nur/al_saadi` | `24_35` |
 
 ```powershell
-python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --dry-run
-python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --api --model qwen2.5:32b
+# فحص بلا شبكة: يطبع packet_sha256 وعدد الأجزاء
+python src/run_window.py --tafsir al_tabari --base data/nur/al_tabari --window 24_35_p01 --dry-run
+
+# الوكيلان على النافذة نفسها (كل تشغيل يكتب moves/<slug>/ و verified/<slug>/ تلقائياً)
+python src/run_window.py --tafsir al_tabari --base data/nur/al_tabari --window 24_35_p01 --api --model qwen2.5:32b
+python src/run_window.py --tafsir al_tabari --base data/nur/al_tabari --window 24_35_p01 --api --model gemma3:27b
+
+# رئيس اللجنة على النافذة
+python src/committee_chair.py --base data/nur/al_tabari --proposer qwen2_5_32b --reviewer gemma3_27b --window 24_35_p01 --proposer-tag qwen2.5:32b --reviewer-tag gemma3:27b
 ```
 
-- كرر لكل نافذة عيّنة في الجدول (نفس النمط مع `--tafsir` و`--base` و`--window` المناسبة).
-- بلا مفتاح (احتياطي يدوي من `docs/HANDOFF.md` §4):
-  `python src/run_window.py --base data/nur/al_tabari --window 24_35_p01 --dry-run`
-  ثم `--manual-out prompt.txt` وبعد اللصق `--manual-in reply.json` (الناتج `manual_unverified` — لا يُرشَّح أبداً).
-- **توقّف بعد العيّنة** لمراجعة القسم 5 من الخطة قبل أي تشغيل جماعي.
+كرّر لكل صف في الجدول. **توقّف هنا** وسلّم للمراجعة: عيّنة عمياء ومراجعة عدائية، ثم المراجعة الشرعية.
 
-## 5. التشغيل الجماعي (بعد قبول العيّنة فقط)
+**نجاح التشغيل:** سطر `verifier: moves=… auto=… specialist=…`، وملفات `verified/<slug>/<window>.json` و`committee/<window>.json` و`verified/committee/<window>.json`.
+**فشل التشغيل:** سطر JSON فيه `"status": "failed"` و`reason_code` (`RUN_FAILURE` أو `MODEL_OUTPUT_INVALID`)، وخروج بغير صفر، ولا ملف حركات. هذا سلوك مقصود.
+
+## ٥. الجماعي — بعد قبول العيّنة فقط
+
+الطريق الموصى به: حلقة على نوافذ التفسير. لا تحتاج `quran.db`.
 
 ```powershell
+$t = "al_tabari"; $base = "data/nur/$t"
+foreach ($m in "qwen2.5:32b", "gemma3:27b") {
+  Get-ChildItem "$base/packets/*.json" | ForEach-Object {
+    python src/run_window.py --tafsir $t --base $base --window $_.BaseName --api --model $m
+  }
+}
+python src/committee_chair.py --base $base --proposer qwen2_5_32b --reviewer gemma3_27b --all --proposer-tag qwen2.5:32b --reviewer-tag gemma3:27b
+```
+
+كرّر مع `$t` = `ibn_kathir` ثم `al_baghawi` ثم `al_saadi`.
+
+بديل `run_surah.py`: يحتاج `--db` إلى `quran.db` بالبصمة الموثّقة في `docs/TAGGING_PLAN_NUR.md`، ويأخذ النموذج من `$env:LLM_MODEL` لا من علَم. **مرّر `--surah 24` صراحة** لأن الافتراضي ٨.
+
+```powershell
+$env:LLM_MODEL = "qwen2.5:32b"
 python src/run_surah.py --db "<path>/quran.db" --tafsir al_tabari --surah 24 --base data/nur/al_tabari --classify --time-cap 300
 ```
 
-- كرر لكل تفسير (`al_tabari`، `ibn_kathir`، `al_baghawi`، `al_saadi`) مع `--base` المطابق.
-- ثم شغّل المدقّق من العائلة الثانية على نفس الحزم (مثال `--model gemma3:27b`)، ثم الفاحص الحتمي:
-  `python src/v2_verify.py --base data/nur/al_tabari`
-- قاعدة `--ayat`: الصيغ المقبولة `1-20` أو `2,3,4` أو رقم واحد (من `src/run_surah.py`).
+السياق: أطول نوافذ النور طويلة؛ إن تكرر `MODEL_OUTPUT_INVALID` فارفع `num_ctx` في Ollama (مثلاً ١٦٣٨٤).
 
-## 6. التسجيل والفرع
+## ٦. التسجيل
 
-- **commit واحد لكل تفسير** بعد اجتياز البوابات، والرسالة فيها اسم النموذج الفعلي وتاريخ التشغيل.
-- العمل على فرعك ثم PR — **ممنوع الدفع إلى `main`** (`AGENTS.md` القاعدة 8).
-- لا تلمس `data/**/{raw,layers,spans,windows}` ولا `web/*.html` يدوياً ولا `quran.db` (لا يُرفع أبداً).
+```powershell
+git add data/nur/al_tabari/moves data/nur/al_tabari/verified data/nur/al_tabari/committee
+git commit -m "data(nur): al_tabari tagged — qwen2.5:32b + gemma3:27b (ollama-local) 2026-10-05"
+git push -u origin tagging/nur-sample
+```
+
+ثم PR ← CI أخضر ← مراجعة. **لا push على `main`.** لا تُرفع `quran.db` أبداً.
