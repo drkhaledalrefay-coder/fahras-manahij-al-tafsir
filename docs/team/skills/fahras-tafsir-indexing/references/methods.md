@@ -28,5 +28,5 @@
 
 ## ملاحظات توجيه للفاحص (`src/v2_verify.py`)
 
-- `M_RAY` يُحال للمتخصص دائماً (`assign_route` — `src/v2_verify.py:380-381`).
-- `FORCE_SPECIALIST_METHODS = {M_ISRAILIYYAT, M_NUZUL, M_QIRAAT}` (`src/v2_verify.py:49`).
+- `M_RAY` يُحال للمتخصص دائماً (`assign_route` — `src/v2_verify.py:540`).
+- `FORCE_SPECIALIST_METHODS = {M_ISRAILIYYAT, M_NUZUL, M_QIRAAT}` (`src/v2_verify.py:59`).
