@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1600px;height:900px;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:#f4f1e8;color:#1e2a24;overflow:hidden}
+.wrap{padding:22px 36px 20px 36px;height:900px;display:flex;flex-direction:column}
+h1{font-size:30px;margin-bottom:3px}
+.sub{font-size:15.5px;color:#4a5a52;margin-bottom:10px}
+.rule-flow{display:flex;align-items:center;gap:10px;background:#e9e2d2;border:1px solid #c9bfa5;border-radius:8px;padding:6px 14px;font-size:14px;margin-bottom:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1}
+.step{background:#fff;border:1px solid #d8d0ba;border-radius:10px;padding:11px 14px;display:flex;flex-direction:column;gap:6px}
+.step .num{background:#1e6b4f;color:#fff;width:30px;height:30px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700}
+.step h2{font-size:17.5px}
+.step p{font-size:13.5px;line-height:1.55;color:#33403a}
+code{direction:ltr;unicode-bidi:isolate;display:block;background:#10201a;color:#d7f0e2;font-family:Consolas,"Courier New",monospace;font-size:11.8px;border-radius:7px;padding:6px 9px;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word}
+.exp{font-size:12.5px;background:#eef5ef;border:1px solid #bcd4bf;border-radius:7px;padding:5px 9px}
+.stop{font-size:12.5px;background:#fbeede;border:1px solid #d9a45b;border-radius:7px;padding:5px 9px}
+.codes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.codebox{background:#fff;border:1px solid #d8d0ba;border-radius:8px;padding:8px 12px;font-size:13px}
+.codebox b{display:block;font-size:12.5px;color:#1e6b4f;margin-bottom:2px}
+.strips{display:flex;gap:10px;margin-top:10px}
+.strip{flex:1;border-radius:8px;padding:8px 14px;font-size:13.5px}
+.scope{background:#f7e3e3;border:1px solid #cf8a8a}
+.verify{background:#e3efe6;border:1px solid #6fa287}
+.footer{margin-top:10px;display:flex;justify-content:space-between;font-size:13px;color:#5b6a62;border-top:2px solid #1e6b4f;padding-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>عقد الإسناد: من النافذة إلى المراجعة</h1>
+<div class="sub">قاعدة المسابقة: سؤال ← استرجاع ← هل الدليل كافٍ؟ ← نعم: صياغة مسندة / لا: امتناع أو إحالة</div>
+<div class="rule-flow"><span>المسار:</span><span>نافذة مثبّتة ← حزمة وبصمة ← اقتراح بمعرّفات الأجزاء ← فحص حتمي (بوابة الكفاية) ← مرشّح للمراجعة أو امتناع برمز سبب واحد ← المتخصص يعتمد</span></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h2>نافذة مثبّتة وحزمة</h2><p>نص المصدر ثابت بالبصمة؛ الحزمة أجزاء مرقّمة فقط بلا تفسير.</p><code><bdi>python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --dry-run</bdi></code><div class="exp">الناتج المتوقع: عدد الأجزاء وبصمة الحزمة المعروضة.</div><div class="stop">توقّف هنا إن ظهر خطأ في الحزمة قبل أي شبكة.</div></div>
+<div class="step"><div class="num">2</div><h2>اقتراح بمعرّفات الأجزاء</h2><p>النموذج يقترح حدوداً وشواهد بمعرّفات الأجزاء فقط، مربوطاً ببصمة الحزمة.</p><code><bdi>python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --api --model qwen2.5:32b --base-url http://localhost:11434/v1</bdi></code><div class="exp">الناتج المتوقع: مسار ملف الحركات المحفوظ.</div><div class="stop">توقّف هنا إن ظهر سجل فشل بدل مسار الملف.</div></div>
+<div class="step"><div class="num">3</div><h2>بوابة الكفاية الحتمية</h2><p>الفاحص يتحقق من المصدر والحدود وكفاية الشاهد؛ الدرجة مؤشر لا إثبات.</p><code><bdi>python src/v2_verify.py --base data/nur/al_tabari</bdi></code><div class="exp">الناتج المتوقع: مرشّح للمراجعة أو محال للمتخصص.</div><div class="stop">توقّف هنا إن بقيت الحركة عند المتخصص رغم الدرجة العالية.</div></div>
+<div class="step"><div class="num">4</div><h2>سجل الفشل المغلق</h2><p>أي تعذّر تشغيل أو رد فاسد يُسجَّل سجلاً واحداً ولا يُكتب ملف حركات.</p><code><bdi>{"window_id": "24_35_p01", "status": "failed", "reason_code": "RUN_FAILURE"}</bdi></code><div class="exp">الناتج المتوقع: خروج غير صفري مع السجل مطبوعاً.</div><div class="stop">توقّف هنا إن طُبع أثر خطأ خام بدل السجل.</div></div>
+<div class="step"><div class="num">5</div><h2>اليدوي غير مضمون أبداً</h2><p>الرد الملصوق من أي محادثة موسوم غير مضمون المدخل ولا يُرشَّح آلياً.</p><code><bdi>python src/run_window.py --tafsir al_tabari --window 24_35_p01 --base data/nur/al_tabari --manual-in reply.json</bdi></code><div class="exp">الناتج المتوقع: رسالة غير مضمون ومراجعة متخصصة فقط.</div><div class="stop">توقّف هنا إن طُلب ترشيح اليدوي آلياً — ممنوع.</div></div>
+<div class="step"><div class="num">6</div><h2>المتخصص يعتمد</h2><p>كلمة الاعتماد للمتخصص البشري وحده بعد فحص الدلالة والمصدر.</p><code><bdi>python -m pytest tests/test_grounding_verifier.py tests/test_grounding_io.py -q</bdi></code><div class="exp">الناتج المتوقع: خمسة وعشرون اختباراً ناجحاً.</div><div class="stop">توقّف هنا إن فشل أي اختبار قبل التشغيل الجماعي.</div></div>
+</div>
+<div class="codes">
+<div class="codebox"><b><bdi>RUN_FAILURE</bdi></b>تعذّر التشغيل (شبكة/مهلة/خطأ نموذج) — لا اقتراح</div>
+<div class="codebox"><b><bdi>PACKET_HASH_MISMATCH</bdi></b>بصمة الحزمة في الرد لا تطابق الحزمة الحالية</div>
+<div class="codebox"><b><bdi>MANUAL_INPUT_UNVERIFIED</bdi></b>رد يدوي من محادثة خارجية — المدخل غير مضمون</div>
+<div class="codebox"><b><bdi>EVIDENCE_EMPTY</bdi></b>لا شاهد صريح — لا يولّد الفاحص شاهداً بديلاً</div>
+<div class="codebox"><b><bdi>UNGROUNDED_CLAIM</bdi></b>مرجع أو ادعاء معروض بلا شاهد يسنده</div>
+<div class="codebox"><b><bdi>INSUFFICIENT_EVIDENCE</bdi></b>بوابة كفاية الدليل لم تُجتز</div>
+</div>
+<div class="strips">
+<div class="strip scope">ما لا يفعله هذا الفرع: لا تدريب نماذج، لا ترشيح آلي، لا تعديل على بيانات المصدر، لا أرقام دقة.</div>
+<div class="strip verify">كيف تعرف أنه يعمل: شغّل الفحص الذاتي ثم الاختبارات — الناتج المتوقع نجاح كامل بلا فشل.</div>
+</div>
+<div class="footer"><span>build-grounding-contract</span><span>مِرْقاة · فهرس مناهج التفسير</span></div>
+</div>
+</body>
+</html>
