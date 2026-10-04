@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1600px;height:900px;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:#f4f1e8;color:#1e2a24;overflow:hidden}
+.wrap{padding:22px 36px 20px 36px;height:900px;display:flex;flex-direction:column}
+h1{font-size:30px;margin-bottom:3px}
+.sub{font-size:15.5px;color:#4a5a52;margin-bottom:10px}
+.layers{display:flex;gap:10px;margin-bottom:10px}.layer{flex:1;background:#fff;border:1px solid #d8d0ba;border-radius:8px;padding:6px 12px;font-size:13.5px}.layer b{color:#1e6b4f}.rule-flow{display:flex;align-items:center;gap:10px;background:#e9e2d2;border:1px solid #c9bfa5;border-radius:8px;padding:6px 14px;font-size:14px;margin-bottom:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1}
+.step{background:#fff;border:1px solid #d8d0ba;border-radius:10px;padding:11px 14px;display:flex;flex-direction:column;gap:6px}
+.step .num{background:#1e6b4f;color:#fff;width:30px;height:30px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700}
+.step h2{font-size:17.5px}
+.step p{font-size:13.5px;line-height:1.55;color:#33403a}
+code{direction:ltr;unicode-bidi:isolate;display:block;background:#10201a;color:#d7f0e2;font-family:Consolas,"Courier New",monospace;font-size:11.8px;border-radius:7px;padding:6px 9px;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word}
+.exp{font-size:12.5px;background:#eef5ef;border:1px solid #bcd4bf;border-radius:7px;padding:5px 9px}
+.stop{font-size:12.5px;background:#fbeede;border:1px solid #d9a45b;border-radius:7px;padding:5px 9px}
+.codes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.codebox{background:#fff;border:1px solid #d8d0ba;border-radius:8px;padding:8px 12px;font-size:13px}
+.codebox b{display:block;font-size:12.5px;color:#1e6b4f;margin-bottom:2px}
+.strips{display:flex;gap:10px;margin-top:10px}
+.strip{flex:1;border-radius:8px;padding:8px 14px;font-size:13.5px}
+.scope{background:#f7e3e3;border:1px solid #cf8a8a}
+.verify{background:#e3efe6;border:1px solid #6fa287}
+.footer{margin-top:10px;display:flex;justify-content:space-between;font-size:13px;color:#5b6a62;border-top:2px solid #1e6b4f;padding-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>فهرسة مناهج التفسير: مهارة تشغيل الوكيلين</h1>
+<div class="sub">مهارة المشروع (<bdi dir="ltr">fahras-tafsir-indexing</bdi>) لوكلاء مشغّل الذكاء: من عيّنة ٢٤:٣٥ إلى الوسم الجماعي لسورة النور — يفهرس المنهج ولا يفسّر ولا يعتمد</div>
+<div class="rule-flow"><span>السلسلة:</span><span>نافذة مثبّتة ← حزمة وبصمة ← وكيل من عائلة Qwen + وكيل من عائلة أخرى ← الفاحص لكل وكيل ← رئيس اللجنة ← مرشّح للمراجعة أو امتناع برمز واحد ← المتخصص يعتمد</span></div>
+<div class="layers">
+<div class="layer"><b>الطبقة ١ — الفاحص (٧٥):</b> لكل وكيل وحده: شاهد صريح، بوابة الكفاية، بصمة مطابقة، يقين صريح أو قوي، درجة ٧٥ فأكثر، بلا أعلام.</div>
+<div class="layer"><b>الطبقة ٢ — رئيس اللجنة (٨٥):</b> الوكيلان مرشّحان، نفس المنهج، تداخل أجزاء، درجة المصنّف ٨٥ فأكثر، عائلتان مختلفتان. ليستا تعارضاً، ولا واحدة منهما اعتماد.</div>
+</div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h2>حمّل المهارة في الوكيل</h2><p>انسخ مجلد المهارة إلى مجلد مهارات وكيلك (Claude Code أو Codex).</p><code><bdi>Copy-Item -Recurse docs/team/skills/fahras-tafsir-indexing $HOME/.claude/skills/</bdi></code><div class="exp">الناتج المتوقع: يظهر اسم المهارة في قائمة مهارات الوكيل.</div><div class="stop">توقّف إن لم تظهر: تحقّق من المسار قبل أي تشغيل.</div></div>
+<div class="step"><div class="num">2</div><h2>تحقّق ثم افتح فرعك</h2><p>شجرة عمل نظيفة، ثم فرع فريد من origin/main. لا عمل على main.</p><code><bdi>pip install pytest
+python -m pytest -q
+python src/v2_selftest.py</bdi></code><div class="exp">الناتج المتوقع: الاختبارات ناجحة و SELFTEST PASS.</div><div class="stop">توقّف إن فشل أي اختبار: لا تشغيل على كود غير سليم.</div></div>
+<div class="step"><div class="num">3</div><h2>نموذجان من عائلتين</h2><p>اسحب النموذجين وسجّل الوسم الفعلي. اسم مجلد الوكيل يُشتق من اسم النموذج.</p><code><bdi>ollama pull qwen2.5:32b
+ollama pull gemma3:27b
+ollama list</bdi></code><div class="exp">الناتج المتوقع: المجلدان qwen2_5_32b و gemma3_27b بعد التشغيل.</div><div class="stop">توقّف إن كان النموذجان من العائلة نفسها: الرئيس يرفضهما.</div></div>
+<div class="step"><div class="num">4</div><h2>العيّنة ٢٤:٣٥ بالوكيلين</h2><p>فحص بلا شبكة أولاً، ثم الوكيلان على النافذة نفسها. الفاحص يعمل تلقائياً بعد كل تشغيل.</p><code><bdi>python src/run_window.py --tafsir al_tabari --base data/nur/al_tabari --window 24_35_p01 --api --model qwen2.5:32b</bdi></code><div class="exp">الناتج المتوقع: سطر verifier بعدد المرشّح والمحال.</div><div class="stop">توقّف إن ظهر سجل فشل متكرر: ارفع السياق ولا تعدّل الفاحص.</div></div>
+<div class="step"><div class="num">5</div><h2>رئيس اللجنة ثم المراجعة</h2><p>الرئيس يقرأ مخرجي الوكيلين ولا يعدّلهما. بعد العيّنة: توقّف للمراجعة العمياء والشرعية.</p><code><bdi>python src/committee_chair.py --base data/nur/al_tabari --proposer qwen2_5_32b --reviewer gemma3_27b --window 24_35_p01</bdi></code><div class="exp">الناتج المتوقع: ملف committee للنافذة بقرار ورمز لكل حركة.</div><div class="stop">توقّف إن جاءت كل الحركات اتفاقاً: علامة شك لا نجاح.</div></div>
+<div class="step"><div class="num">6</div><h2>الجماعي والتسجيل</h2><p>بعد قبول العيّنة فقط: حلقة على نوافذ كل تفسير لكل وكيل، ثم الرئيس على الكل، ثم commit لكل تفسير.</p><code><bdi>python src/committee_chair.py --base data/nur/al_tabari --proposer qwen2_5_32b --reviewer gemma3_27b --all</bdi></code><div class="exp">الناتج المتوقع: فرع ثم PR ثم CI أخضر، والرسالة فيها الوسمان الفعليان.</div><div class="stop">توقّف إن طُلب خفض ٧٥ أو ٨٥: القرار لقائد الفريق.</div></div>
+</div>
+<div class="codes">
+<div class="codebox"><b><bdi>EVIDENCE_EMPTY</bdi></b>لا شاهد صريح — لا يولّد الفاحص شاهداً بديلاً</div>
+<div class="codebox"><b><bdi>UNGROUNDED_CLAIM</bdi></b>مرجع أو ادعاء معروض بلا شاهد يسنده</div>
+<div class="codebox"><b><bdi>PACKET_HASH_MISMATCH</bdi></b>بصمة الحزمة في الرد لا تطابق الحزمة الحالية</div>
+<div class="codebox"><b><bdi>agent_disagree</bdi></b>اختلاف الوكلاء (المنهج الرئيسي مختلف)</div>
+<div class="codebox"><b><bdi>unclear_bounds</bdi></b>حدود غير واضحة أو تقطيع بلا تقاطع</div>
+<div class="codebox"><b><bdi>weak_evidence</bdi></b>دليل ضعيف أو درجة المصنّف دون ٨٥</div>
+</div>
+<div class="strips">
+<div class="strip scope">ما لا تفعله المهارة: لا تفسير ولا فتوى، لا اعتماد آلي، لا تعديل على النص المثبّت، لا نسب ولا ادعاء دقة — أعداد توجيه وليست دقة.</div>
+<div class="strip verify">كيف تعرف أنها تعمل: سطر verifier بعد كل نافذة، وملفات verified و committee على القرص، وأي فشل يظهر سجلاً واحداً برمز.</div>
+</div>
+<div class="footer"><span><bdi dir="ltr">docs/fahras-indexing-skill</bdi></span><span>مِرْقاة · فهرس مناهج التفسير</span></div>
+</div>
+</body>
+</html>
+
