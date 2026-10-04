@@ -257,16 +257,21 @@ def evaluate_move(
         )
     )
 
+    # Every reviewer move passed in must have actual span overlap with proposer spans
+    all_have_overlap = len(r_list) > 0 and all(
+        bool(p_spans & set(r["span_ids"])) for r in r_list
+    )
+
     # Committee route = "auto_candidate" ONLY if ALL:
     # (1) route auto_candidate in BOTH (proposer and EVERY overlapping reviewer move);
     # (2) same primary (proposer and EVERY overlapping reviewer move);
-    # (3) span overlap (at least one reviewer move, not reused across multiple proposer moves);
+    # (3) span overlap (at least one reviewer move, and EVERY reviewer move has overlap, not reused across multiple proposer moves);
     # (4) proposer score.total >= COMMITTEE_THRESHOLD;
     # (5) no flags on either side (proposer and EVERY overlapping reviewer move).
     is_auto = (
         packet_issue is None
         and not is_reused
-        and len(r_list) > 0
+        and all_have_overlap
         and p_route == ROUTE_AUTO
         and bool(p_primary)
         and p_score >= COMMITTEE_THRESHOLD
@@ -324,6 +329,7 @@ def evaluate_move(
         reason_code = "agent_disagree"
     elif (
         len(r_list) == 0
+        or not all_have_overlap
         or is_reused
         or "non_contiguous_span_ids" in p_flags
         or any("non_contiguous_span_ids" in (r.get("flags") or []) for r in r_list)
@@ -551,7 +557,7 @@ def evaluate_window(
         "by_primary": {},
         "by_certainty": {},
         "by_reason": {},
-        "flag_count": sum(len(m.get("flags") or []) for m in verified_moves),
+        "flag_count": sum(len(m["flags"]) for m in verified_moves if isinstance(m.get("flags"), list)),
     }
     for m in verified_moves:
         key = str(m.get("primary"))

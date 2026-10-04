@@ -55,7 +55,7 @@ def _make_move(
 ) -> dict:
     move: dict = {
         "move_id": move_id,
-        "span_ids": span_ids or ["s001", "s002"],
+        "span_ids": span_ids if span_ids is not None else ["s001", "s002"],
         "start": 0,
         "end": 50,
         "text": "نص تجريبي",
@@ -160,14 +160,30 @@ class TestCommitteeChairNegative(unittest.TestCase):
         """Rule: no overlap -> unclear_bounds."""
         p_move = _make_move(span_ids=["s001", "s002"], score_total=90, route="auto_candidate")
         r_move = _make_move(span_ids=["s003", "s004"], score_total=90, route="auto_candidate")
-        # When passed disjoint reviewer moves
-        decision = committee_chair.evaluate_move(p_move, [])
+        # When passed disjoint reviewer move (must evaluate span overlap inside evaluate_move itself)
+        decision = committee_chair.evaluate_move(p_move, [r_move])
         self.assertEqual(decision["committee_route"], "specialist")
         self.assertEqual(decision["outcome"], "بانتظار المتخصص")
         self.assertEqual(decision["abstention_reasons"], ["unclear_bounds"])
         self.assertIn("حدود غير واضحة", decision["abstention_ar"])
 
-        # Also when reviewer move is None altogether
+        # Direct call with single disjoint move
+        decision_single = committee_chair.evaluate_move(p_move, r_move)
+        self.assertEqual(decision_single["committee_route"], "specialist")
+        self.assertEqual(decision_single["abstention_reasons"], ["unclear_bounds"])
+
+        # Direct call with s001 vs s999 as explicitly requested
+        p_s001 = _make_move(span_ids=["s001"], score_total=90, route="auto_candidate")
+        r_s999 = _make_move(span_ids=["s999"], score_total=90, route="auto_candidate")
+        decision_s999 = committee_chair.evaluate_move(p_s001, r_s999)
+        self.assertEqual(decision_s999["committee_route"], "specialist")
+        self.assertEqual(decision_s999["abstention_reasons"], ["unclear_bounds"])
+
+        # Also when passed empty list or None altogether
+        decision_empty = committee_chair.evaluate_move(p_move, [])
+        self.assertEqual(decision_empty["committee_route"], "specialist")
+        self.assertEqual(decision_empty["abstention_reasons"], ["unclear_bounds"])
+
         decision_none = committee_chair.evaluate_move(p_move, None)
         self.assertEqual(decision_none["committee_route"], "specialist")
         self.assertEqual(decision_none["abstention_reasons"], ["unclear_bounds"])
@@ -304,7 +320,7 @@ class TestCommitteeChairNegative(unittest.TestCase):
             self.assertEqual(p_bytes_before, p_bytes_after)
             self.assertEqual(r_bytes_before, r_bytes_after)
 
-    # --- P1-3: Shape validation tests ---
+    # --- P1-3 & P2: Shape validation tests ---
     def test_shape_validation_flags_missing_yields_specialist(self) -> None:
         """P1-3: flags key missing -> specialist written_abstain, no exception."""
         p_move = _make_move()
@@ -324,6 +340,106 @@ class TestCommitteeChairNegative(unittest.TestCase):
         decision = committee_chair.evaluate_move(p_move, [r_move])
         self.assertEqual(decision["committee_route"], "specialist")
         self.assertEqual(decision["abstention_reasons"], ["written_abstain"])
+
+    def test_shape_validation_bad_route_yields_specialist(self) -> None:
+        """P2: bad route value -> specialist written_abstain, no exception."""
+        p_move = _make_move(route="invalid_route")
+        r_move = _make_move(route="auto_candidate")
+        decision = committee_chair.evaluate_move(p_move, [r_move])
+        self.assertEqual(decision["committee_route"], "specialist")
+        self.assertEqual(decision["abstention_reasons"], ["written_abstain"])
+
+        # Also when reviewer has bad route value
+        p_move_ok = _make_move(route="auto_candidate")
+        r_move_bad = _make_move(route="bad_route_value")
+        decision_r = committee_chair.evaluate_move(p_move_ok, [r_move_bad])
+        self.assertEqual(decision_r["committee_route"], "specialist")
+        self.assertEqual(decision_r["abstention_reasons"], ["written_abstain"])
+
+    def test_shape_validation_empty_span_ids_yields_specialist(self) -> None:
+        """P2: empty span_ids -> specialist written_abstain, no exception."""
+        p_move = _make_move(span_ids=[])
+        r_move = _make_move(span_ids=["s001"])
+        decision = committee_chair.evaluate_move(p_move, [r_move])
+        self.assertEqual(decision["committee_route"], "specialist")
+        self.assertEqual(decision["abstention_reasons"], ["written_abstain"])
+
+        # Also when reviewer has empty span_ids
+        p_move_ok = _make_move(span_ids=["s001"])
+        r_move_empty = _make_move(span_ids=[])
+        decision_r = committee_chair.evaluate_move(p_move_ok, [r_move_empty])
+        self.assertEqual(decision_r["committee_route"], "specialist")
+        self.assertEqual(decision_r["abstention_reasons"], ["written_abstain"])
+
+    def test_shape_validation_reviewer_malformed_moves(self) -> None:
+        """P2: malformed reviewer moves (missing flags, score.total None) -> specialist written_abstain, no exception."""
+        p_move = _make_move()
+
+        # 1. Reviewer move missing flags
+        r_move_no_flags = _make_move()
+        del r_move_no_flags["flags"]
+        d1 = committee_chair.evaluate_move(p_move, [r_move_no_flags])
+        self.assertEqual(d1["committee_route"], "specialist")
+        self.assertEqual(d1["abstention_reasons"], ["written_abstain"])
+
+        # 2. Reviewer move with score.total None
+        r_move_none_score = _make_move()
+        r_move_none_score["score"]["total"] = None
+        d2 = committee_chair.evaluate_move(p_move, [r_move_none_score])
+        self.assertEqual(d2["committee_route"], "specialist")
+        self.assertEqual(d2["abstention_reasons"], ["written_abstain"])
+
+    def test_evaluate_window_with_malformed_moves_emits_specialist_without_exception(self) -> None:
+        """P2: evaluate_window() with malformed reviewer and proposer moves produces verified/committee specialist output without exception."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            p_dir = tmp_path / "verified" / "qwen2.5-14b-local"
+            r_dir = tmp_path / "verified" / "gemma2-9b-local"
+            p_dir.mkdir(parents=True)
+            r_dir.mkdir(parents=True)
+
+            # Proposer move with bad route
+            p_move = _make_move("p01", route="not_a_valid_route")
+            # Reviewer move 1 missing flags
+            r_move1 = _make_move("r01")
+            del r_move1["flags"]
+            # Reviewer move 2 (unmatched) with score.total None
+            r_move2 = _make_move("r02", span_ids=["s099"])
+            r_move2["score"]["total"] = None
+
+            p_data = _make_verified_file("24_1", annotator="qwen2.5-14b-local", moves=[p_move])
+            r_data = _make_verified_file(
+                "24_1", annotator="gemma2-9b-local", moves=[r_move1, r_move2]
+            )
+
+            (p_dir / "24_1.json").write_text(json.dumps(p_data), encoding="utf-8")
+            (r_dir / "24_1.json").write_text(json.dumps(r_data), encoding="utf-8")
+
+            # Must run without raising an exception
+            c_pay, v_pay = committee_chair.evaluate_window(
+                base=tmp_path,
+                proposer="qwen2.5-14b-local",
+                reviewer="gemma2-9b-local",
+                window_id="24_1",
+            )
+
+            # All moves in both files must be specialist
+            self.assertEqual(c_pay["summary"]["auto_candidate"], 0)
+            self.assertGreaterEqual(c_pay["summary"]["specialist"], 1)
+            for m in c_pay["moves"]:
+                self.assertEqual(m["committee_route"], "specialist")
+                self.assertIn("written_abstain", m["abstention_reasons"])
+
+            self.assertEqual(v_pay["summary"]["auto_candidate"], 0)
+            for m in v_pay["moves"]:
+                self.assertEqual(m["route"], "specialist")
+
+            # Verify files on disk
+            v_disk = json.loads(
+                (tmp_path / "verified" / "committee" / "24_1.json").read_text(encoding="utf-8")
+            )
+            for m in v_disk["moves"]:
+                self.assertEqual(m["route"], "specialist")
 
     # --- P1-2: Multi-overlap and reuse tests ---
     def test_multi_overlap_reviewer_split_disagreement_yields_agent_disagree(self) -> None:
