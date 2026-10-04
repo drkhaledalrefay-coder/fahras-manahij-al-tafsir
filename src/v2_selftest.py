@@ -13,11 +13,31 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
-from v2_verify import verify_payload  # noqa: E402
+from grounding_contract import (  # noqa: E402
+    INPUT_API_PACKET,
+    INPUT_ASSURANCE_FIELD,
+    PACKET_SHA_FIELD,
+    packet_sha256,
+)
+from v2_verify import PACKETS_DIR, verify_payload  # noqa: E402
 
 FIXTURE = ROOT / "tests" / "fixtures" / "moves_fixture.json"
 WINDOWS_DIR = ROOT / "data" / "v2" / "windows"
 MARKERS_DIR = ROOT / "data" / "v2" / "markers"
+
+
+def _stamp_packet_binding(payload: dict, window_id: str) -> dict:
+    """Bind an in-memory moves payload to the real packet for this window."""
+    packet_path = PACKETS_DIR / f"{window_id}.json"
+    if not packet_path.is_file():
+        raise SystemExit(
+            f"SELFTEST FAIL: missing packet for window {window_id}: {packet_path}"
+        )
+    packet = json.loads(packet_path.read_bytes().decode("utf-8"))
+    stamped = dict(payload)
+    stamped[PACKET_SHA_FIELD] = packet_sha256(packet)
+    stamped[INPUT_ASSURANCE_FIELD] = INPUT_API_PACKET
+    return stamped
 
 
 def main() -> None:
@@ -38,7 +58,8 @@ def main() -> None:
     if not (MARKERS_DIR / f"{window_id}.json").is_file():
         raise SystemExit(f"run v2_markers.py first — missing markers {window_id}")
 
-    result = verify_payload("fixture", window_id, raw)
+    stamped = _stamp_packet_binding(raw, window_id)
+    result = verify_payload("fixture", window_id, stamped)
     moves = {m["move_id"]: m for m in result["moves"]}
 
     # --- expectations ---
@@ -90,30 +111,48 @@ def main() -> None:
     empty = verify_payload(
         "fixture",
         window_id,
-        {
-            "window": window_id,
-            "moves": [
-                {
-                    "move_id": "m_empty",
-                    "span_ids": [],
-                    "primary": "M_RAY",
-                    "secondary": [],
-                    "content_tags": [],
-                    "certainty": "explicit",
-                    "evidence_span_ids": [],
-                    "author_verdict_span_ids": [],
-                    "references": {"verses": [], "hadith": [], "persons": []},
-                    "alternatives": [],
-                    "rationale_ar": "اختبار سقف بلا دليل.",
-                }
-            ],
-        },
+        _stamp_packet_binding(
+            {
+                "window": window_id,
+                "moves": [
+                    {
+                        "move_id": "m_empty",
+                        "span_ids": [],
+                        "primary": "M_RAY",
+                        "secondary": [],
+                        "content_tags": [],
+                        "certainty": "explicit",
+                        "evidence_span_ids": [],
+                        "author_verdict_span_ids": [],
+                        "references": {"verses": [], "hadith": [], "persons": []},
+                        "alternatives": [],
+                        "rationale_ar": "اختبار سقف بلا دليل.",
+                    }
+                ],
+            },
+            window_id,
+        ),
     )
     m_empty = empty["moves"][0]
     if m_empty["score"]["total"] > 59:
         errors.append(f"empty evidence score cap failed: {m_empty['score']['total']}")
     if m_empty["route"] != "specialist":
         errors.append("empty evidence should route specialist")
+
+    # G7 negative: same grounded payload without packet_sha256 → all specialist.
+    unbound = dict(stamped)
+    unbound.pop(PACKET_SHA_FIELD, None)
+    missing = verify_payload("fixture", window_id, unbound)
+    for m in missing["moves"]:
+        if m["route"] != "specialist":
+            errors.append(
+                f"unbound {m['move_id']} expected specialist got {m['route']}"
+            )
+        if m.get("reason_code") != "PACKET_HASH_MISSING":
+            errors.append(
+                f"unbound {m['move_id']} expected PACKET_HASH_MISSING "
+                f"got {m.get('reason_code')}"
+            )
 
     if errors:
         print("SELFTEST FAIL")
