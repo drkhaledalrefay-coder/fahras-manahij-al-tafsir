@@ -20,6 +20,7 @@ if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
 import classify_api  # noqa: E402
+import grounding_contract  # noqa: E402
 from v2_verify import configure, verify_window  # noqa: E402
 
 TAFSIR_BASES = {
@@ -79,6 +80,10 @@ def write_manual_prompt(packet: dict, out_file: Path) -> Path:
     header = (
         "# مصنّف منهجية التفسير — الصق هذا الملف كاملاً في أي محادثة "
         "(ChatGPT / Claude / Gemini)\n"
+        "# تنبيه: أي رد يدوي يُلصق هنا يُعامل كمدخل غير مضمون (unverified input) "
+        "ولا يُرشّح أبداً للاعتماد الآلي بل يحال للمتخصص فقط.\n"
+        "# Note: Any manual reply pasted back is treated as unverified input "
+        "and will never be nominated for auto-candidate (specialist review only).\n"
         "# أعد كائن JSON فقط (window + moves). لا تنسخ نص المصدر.\n\n"
     )
     out_file.parent.mkdir(parents=True, exist_ok=True)
@@ -106,6 +111,19 @@ def run_verifier(base: Path, annotator: str, window_id: str, moves_payload: dict
         f"flags={summary['flag_count']}"
     )
     return result
+
+
+def _run_verifier_or_fail(
+    base: Path, annotator: str, window_id: str, moves_payload: dict
+) -> int:
+    """Run verifier; on any exception print structured RUN_FAILURE and return 1."""
+    try:
+        run_verifier(base, annotator, window_id, moves_payload)
+        return 0
+    except Exception as e:
+        rec = classify_api.make_failure_record(window_id, "RUN_FAILURE", str(e))
+        print(json.dumps(rec, ensure_ascii=False))
+        return 1
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -180,16 +198,32 @@ def main(argv: list[str] | None = None) -> int:
             reply_path = Path.cwd() / reply_path
         if not reply_path.is_file():
             raise SystemExit(f"manual-in file not found: {reply_path}")
-        payload = load_manual_reply(reply_path)
+        try:
+            payload = load_manual_reply(reply_path)
+        except classify_api.ClassifyError as e:
+            rec = classify_api.make_failure_record(window_id, "MODEL_OUTPUT_INVALID", str(e))
+            print(json.dumps(rec, ensure_ascii=False))
+            return 1
         errors = classify_api.validate_span_ids(packet, payload)
         if errors:
-            raise SystemExit("invalid span ids:\n- " + "\n- ".join(errors))
+            rec = classify_api.make_failure_record(
+                window_id, "MODEL_OUTPUT_INVALID", "invalid span ids: " + "; ".join(errors[:8])
+            )
+            print(json.dumps(rec, ensure_ascii=False))
+            return 1
         annotator = f"manual_{date.today().isoformat()}"
         cleaned = classify_api.sanitize_moves_payload(payload, window_id)
+        cleaned[grounding_contract.INPUT_ASSURANCE_FIELD] = (
+            grounding_contract.INPUT_MANUAL_UNVERIFIED
+        )
+        cleaned[grounding_contract.PACKET_SHA_FIELD] = None
         path = classify_api.write_moves(moves_dir, annotator, window_id, cleaned)
+        print(
+            "مدخل يدوي غير مضمون — لا يُرشّح للاعتماد الآلي، مراجعة متخصصة فقط | "
+            "manual reply = unverified input, never nominated, specialist review only"
+        )
         print(f"wrote moves: {_format_path(path)}")
-        run_verifier(base, annotator, window_id, cleaned)
-        return 0
+        return _run_verifier_or_fail(base, annotator, window_id, cleaned)
 
     if args.api:
         model, base_url = classify_api.resolve_env(model=args.model, base_url=args.base_url)
@@ -208,11 +242,20 @@ def main(argv: list[str] | None = None) -> int:
             print(result["messages"][1]["content"][:1500])
             print("dry-run: no network call")
             return 0
-        result = classify_api.classify(pkt_path, model, base_url, moves_dir)
+        try:
+            result = classify_api.classify(pkt_path, model, base_url, moves_dir)
+        except classify_api.ClassifyError as e:
+            rec = getattr(e, "record", None) or classify_api.make_failure_record(
+                window_id, "RUN_FAILURE", str(e)
+            )
+            print(json.dumps(rec, ensure_ascii=False))
+            return 1
+        if isinstance(result, dict) and result.get("status") == "failed":
+            print(json.dumps(result, ensure_ascii=False))
+            return 1
         path = result["path"]
         print(f"wrote moves: {_format_path(path)}")
-        run_verifier(base, result["annotator"], window_id, result["payload"])
-        return 0
+        return _run_verifier_or_fail(base, result["annotator"], window_id, result["payload"])
 
     # No mode: default to dry-run-style packet check
     print(f"packet ok: {_format_path(pkt_path)} ({len(packet.get('spans') or [])} spans)")
