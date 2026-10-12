@@ -1,151 +1,227 @@
+<!-- living-readme: last-sync 7bc7843 2026-10-12 -->
+
+<p align="center"><img src="docs/images/cover.jpg" alt="Indexing the methods of classical tafsir" width="100%" /></p>
+
 # فهرس مناهج التفسير — نصٌّ موثَّق، ووسومٌ مُراجَعة
+# Tafsir Integrity Index — Verified Text, Reviewed Method Tags
 
-**Tafsir Integrity Index** — a pilot for structuring classical tafsir into verified, tagged units without letting AI alter a single letter of the source.
+[![CI](https://github.com/drkhaledalrefay-coder/fahras-manahij-al-tafsir/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/drkhaledalrefay-coder/fahras-manahij-al-tafsir/actions/workflows/ci.yml)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-2b6cb0.svg)](LICENSE)
+[![Tafsir Text: CC BY 4.0](https://img.shields.io/badge/tafsir%20text-CC%20BY%204.0-5b7f3a.svg)](ATTRIBUTION.md)
 
-> المسار: **04 — أدوات المعرفة والتحقق لتمكين المعرّفين بالإسلام**
-> الحالة: **نموذج تجريبي** على ثلاث آيات. لم يعتمد متخصص أي وحدة بعد.
+**A deterministic pilot for structuring classical Quranic tafsir into verified, tagged units without letting artificial intelligence alter a single letter of the source text.**  
+**نموذج تطبيقي حتمي لفهرسة وتفكيك نصوص التفسير الكلاسيكية إلى وحدات منهجية موثقة، دون السماح للذكاء الاصطناعي بكتابة أو تعديل حرف واحد من النص المصدر.**
 
 ---
 
-## ابدأ من هنا (للزملاء)
+### Dated Status / الحالة الراهنة (as of 2026-10-12 / كما في ١٢ أكتوبر ٢٠٢٦)
 
-1. شغّل الصفحة والاختبارات: قسم «التشغيل» أدناه.
-2. إن كنت تعمل عبر Codex أو Claude: الأداة تقرأ [`AGENTS.md`](AGENTS.md) تلقائياً (Claude عبر [`CLAUDE.md`](CLAUDE.md)). ابدأ كل جلسة بـ «اقرأ AGENTS.md والتزم به».
-3. قواعد العمل والفروع: [`CONTRIBUTING.md`](CONTRIBUTING.md). قبل التسليم: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md).
-4. **المهام التالية بالترتيب:** [`docs/HANDOFF.md`](docs/HANDOFF.md).
-5. حالة المشروع والقرارات المعلّقة (النطاق ومصدر النص): [`docs/AUDIT_2026-10-02.md`](docs/AUDIT_2026-10-02.md).
+* **Pilot Scope / نطاق النموذج:** 3 test passages across 4 classical commentaries: Al-Baqarah 2:255 (Ayat al-Kursi), Al-Baqarah 2:102 (Harut & Marut), and an illustrative passage. Source texts prepared for Imam al-Tabari (d. 310 AH), Ibn Kathir, al-Baghawi, and al-Saadi.
+* **Human Approval Status / حالة الاعتماد البشري:** **Zero units have been approved by a religious specialist to date.** Any unit marked `approved` in repository demonstration files (e.g. `web/index_data.json`) is strictly synthetic test data for format verification, not scientific validation.
+* **Text Integrity / سلامة النص:** **100% of generated units match the pinned source text character-by-character.** Rebuilt directly from deterministic span slices.
+* **Pipeline Maturity / حالة مسار المعالجة:** Multi-model classification, deterministic committee chair (threshold 85), verifier sufficiency gate, and grounding contracts are merged and verified by automated tests in `main`.
 
-## الفكرة
+---
 
-كتب التفسير نصوص طويلة متصلة يختلط فيها الحديث، وقول الصحابي، والشرح اللغوي، والحكم الفقهي، والإسرائيليات.
-نحوّل هذا النص إلى **وحدات صغيرة**، على كل وحدة وسمان:
+## English
 
-1. **مصدر الدليل** — قرآن بقرآن، سنة، صحابة، تابعون، لغة، إعراب، رأي المفسر.
-2. **نوع المحتوى** — أسباب نزول، فقه، بلاغة، شعر، إسرائيليات، فضائل، تخريج، بيان معنى.
+### 1. The Core Idea
 
-**الذكاء الاصطناعي يرتّب ولا يكتب:** لا يكتب حرفاً من النص ولا يفسّر؛ يقترح حدود الوحدات والوسوم فقط، والمتخصص يعتمد.
+Classical tafsir texts are dense, unbroken prose where hadith, Companions' narrations, linguistic grammar, legal deductions, and historical reports intertwine. The Tafsir Integrity Index decomposes this prose into small, structured units tagged along two axes:
+1. **Source of Evidence (مصدر الدليل):** Quran by Quran, Prophetic Sunnah, Companions (Sahabah), Successors (Tabi'un), Arabic language, syntactic analysis (I'rab), or the commentator's reasoned synthesis.
+2. **Content Type (نوع المحتوى):** Occasions of revelation (Asbab al-Nuzul), legal rulings (Fiqh), rhetoric/eloquence (Balagha), poetry citations, Isra'iliyyat, virtues (Fada'il), hadith attribution/grading (Takhrij), or meaning clarification.
 
-## كيف نضمن سلامة النص؟ نقطتا تحكم
+> **Key Guardrail:** The AI structures and classifies; it **never writes**. Models output only span ID boundaries and closed taxonomy codes. Deterministic software rebuilds each unit character-by-character from the pinned source text.
 
-| النقطة | ماذا تفعل |
-|---|---|
-| **(أ) قبول المصدر** | يُنزَّل النص **آلياً** وتُثبَّت بصمته (SHA-256)، ويُفصل كلام المؤلف عن حواشي المحقق، ويُطابَق مع نسخة ثانية مستقلة. |
-| **(ب) بعد الوسم** | يُعاد بناء كل وحدة من النص المثبَّت نفسه وتُطابَق **حرفاً بحرف**، ثم يراجعها المتخصص على شاشة ذات لوحتين — **دون أي مدخل جديد من نموذج**. |
-
-المصنّفون الآليون (النماذج) لا يُرجعون نصاً، بل **أرقام أجزاء** قطّعها الكود (span IDs)، فيستحيل عليهم تغيير حرف من النسخة المصدر؛ بينما يتولى الفاحص الحتمي إعادة بناء النص المطابق من تلك الأجزاء.
-
-## المرجعية العلمية
-
-«تفهرس الأداة منهج المفسر في نصه وتُسند كل شاهد إلى موضعه؛ ولا تستخدم هذه المتون لإصدار شرح مستقل للآيات، بل تقصر أي شرح أو جواب شرعي على مصادر القرون الثلاثة الأولى أو منصة dorar.net/tafseer، مع إظهار المرجع والامتناع عند غياب الدليل.»
-
-- الأيام البناءة يتقدّمها **أبو جعفر الطبري (ت ٣١٠هـ)**؛ ابن كثير والبغوي والسعدي محفوظون **شاهدَين على أنّ الطريقة تعمّم**، لا كمرجعية للبناء.
-- **الاعتماد البشري:** لم يعتمد متخصص أي وحدة من وحدات التجربة بعد؛ وسجل `approved` في المثال توضيحي لا اعتماد.
-
-## نتائج التجربة الأولى (٣ آيات · ١٤٣ جزءاً)
-
-- **سلامة النص:** ١٠٠٪ من الوحدات طابقت النسخة المصدر المثبَّتة حرفاً بحرف — النظام لم يغيّر حرفاً.
-- **اتفاق فاحصَين من عائلتين مختلفتين:** مصدر الدليل ٩٠٫٩٪ · نوع المحتوى ٦٩٫٢٪.
-- **فصل حواشي المحقق** رفع التطابق بين المصدرين: آية الكرسي ٨٧٪ ← ٩٨٪، هاروت وماروت ٨٠٪ ← ٩٥٪.
-- **المطابقة بين نسختين تكشف فروق الرقمنة في أي مصدر**، مثل «القرن» في موضع «القرآن» — ويحسمها المتخصص بالرجوع إلى المطبوع.
-- **الحالات الخلافية** — كخبر كعب الأحبار في هاروت وماروت — تُحال للمتخصص ولا تُحسم آلياً.
-
-> هذه أرقام تجربة أولى صغيرة، لا نسبة دقة نهائية.
-
-## نتائج التشغيل الثاني (Run 2) — أعداد توجيه وليست دقة
-
-أعداد الحركات التي وجّهها الفاحص الحتمي بعد التصنيف الآلي على ثلاث آيات إلى «مرشّح آلي» أو «مختص». **أعداد توجيه وليست دقة.**
-
-| التفسير | المصنّف | حركات | مرشّح آلي | مختص |
-|---|---|---:|---:|---:|
-| الطبري (ت ٣١٠هـ) | DeepSeek (+ MiMo لآية 2:255) | ٣١ | ١٨ | ١٣ |
-| ابن كثير | Codex | ٤٢ | ٢٣ | ١٩ |
-| ابن كثير | DeepSeek | ٤٤ | ٢٦ | ١٨ |
-| البغوي | DeepSeek | ٣٩ | ٢٩ | ١٠ |
-| السعدي | DeepSeek | ٢٤ | ١٥ | ٩ |
-
-## الصفحات
-
-- **`web/fahras.html`** — الصفحة الرئيسية «فهرس مناهج التفسير»: أربعة تفاسير في صفحة واحدة تعمل دون خادم، الطبري متصدِّراً وابن كثير والبغوي والسعدي شاهدَين على تعمّم الطريقة، مع اختيار التفسير والسورة والآية والمعلِّق (النموذج المصنِّف)، وعرض الأصل بجانب الوسوم.
-- **`web/methods.html`** — مرجع ابن كثير **المجمَّد**: صفحة التجربة الأولى كما هي، تُبنى من البيانات نفسها ولا تتبع تغييرات الصفحة الرئيسية.
-
-الرابط الحي: https://claude.ai/artifact/8bBkqH4JwXrJLJpiY1aVAf
-
-## البيانات كواجهة ثابتة (Static API)
-
-| الملف | المحتوى |
-|---|---|
-| `web/index_data.json` | الوحدات، الوسوم، حالة كل وحدة، نتائج المطابقة |
-| `web/reconcile_data.json` | بيانات شاشة المطابقة (آية الكرسي) |
-| `method/taxonomy.md` | دليل الوسوم وتعريفاتها وقواعد الحالات الصعبة |
-
-## التشغيل
-
-الأوامر الكاملة بالترتيب لإعادة بناء كل شيء من المستودع — بما فيها إضافة آيات — في **[`docs/RUN.md`](docs/RUN.md)**.
-
-المتطلبات: Python 3.11+. مسار المعالجة يعتمد على المكتبة القياسية؛ الحزم الإضافية في `requirements.txt` (`jsonschema` للتصدير، و`playwright` لبوابة QA فقط). تُنفَّذ الأوامر من جذر المستودع.
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate          # Windows
-# source .venv/bin/activate     # macOS/Linux
-pip install -r requirements.txt
+```
+Pinned Source Text ──► Spans Cut by Deterministic Code ──► Classifier Model (Proposes Span IDs Only)
+                           │                                          │
+                           ▼                                          ▼
+            Double-Source Reconciler                     Independent Verifier Model (Different Family)
+                           │                                          │
+                           ▼                                          ▼
+                   Verified Baseline ──────────────► Deterministic Committee Chair (Score >= 85)
+                                                                      │
+                                                                      ▼
+                                                       Human Specialist Review Queue
 ```
 
-مسار التشغيل الكامل (v2 / خط الأنابيب المتعدد): انظر [`docs/RUN.md`](docs/RUN.md).
+---
 
-بناء صفحة الفهرس من البيانات المثبّتة في المستودع (لا يحتاج `quran.db`):
+### 2. Two Control Points for Text Integrity
+
+| Control Point | Mechanism | Where Enforced |
+|---|---|---|
+| **Point A: Source Intake** | Source text is downloaded deterministically and pinned by **SHA-256**. Author text is isolated from editor footnotes, and cross-matched character-by-character against an independent secondary source. | `data/raw/manifest.json`<br>`src/reconcile.py`<br>`tests/test_textcore.py` |
+| **Point B: Post-Tagging** | Classifier models never return text; they emit integer span IDs. A deterministic reconstructor rebuilds every unit from the pinned source and checks strict equality before rendering. | `src/v2_verify.py`<br>`src/v2_selftest.py`<br>`tests/test_phase1b_and_rejoin.py` |
+
+---
+
+### 3. Pilot Routing Results (Run 2 — Routing Counts, Not Accuracy)
+
+The following figures represent automated routing decisions by the deterministic checker across 3 verses. They are **routing metrics, not accuracy rates**:
+
+| Tafsir / Commentator | Classifier Model | Total Moves | Automated Candidate (Score ≥ 85) | Directed to Specialist Queue |
+|---|---|---:|---:|---:|
+| **Al-Tabari (d. 310 AH)** | DeepSeek (+ MiMo for 2:255) | 31 | 18 | 13 |
+| **Ibn Kathir** | Codex | 42 | 23 | 19 |
+| **Ibn Kathir** | DeepSeek | 44 | 26 | 18 |
+| **Al-Baghawi** | DeepSeek | 39 | 29 | 10 |
+| **Al-Saadi** | DeepSeek | 24 | 15 | 9 |
+
+---
+
+### 4. Repository Layout
+
+| Directory / File | Description |
+|---|---|
+| `src/` | Core extraction, span partitioning, classification adapter, committee chair, and static site builders |
+| `data/` | Pinned source texts, span boundaries, and model outputs (`data/v2/`, `data/multi/`, `data/raw/`) |
+| `method/` | Methodological taxonomy (`taxonomy.md`), model instructions, and agent prompts |
+| `web/` | Standalone browser reader (`web/fahras.html`) and legacy comparison view (`web/methods.html`) |
+| `docs/` | Engineering audit, AI disclosures, execution guides, and branch handoff documentation |
+| `tests/` | 12 unit and integration test files covering text safety, classification API, and committee chair |
+
+---
+
+### 5. Where to Verify Claims
+
+| Claim / Component | Evidence / Source Code | Verification Command |
+|---|---|---|
+| **Text Integrity (Zero altered letters)** | `src/v2_selftest.py`, `tests/test_textcore.py` | `python src/v2_selftest.py` |
+| **Committee Chair Logic (Threshold 85)** | `src/committee_chair.py`, `tests/test_committee_chair.py` | `python -m unittest tests.test_committee_chair -v` |
+| **Grounding Verifier & Packet Hash** | `src/grounding_verifier.py`, `tests/test_grounding_verifier.py` | `python -m unittest tests.test_grounding_verifier -v` |
+| **Classification API Adapter** | `src/classify_api.py`, `tests/test_classify_api.py` | `python -m unittest tests.test_classify_api -v` |
+| **Export Schema Compliance** | `schema/export.schema.json`, `tests/test_export_approved.py` | `python -m unittest tests.test_export_approved -v` |
+| **Headless Browser Integration** | `deck/qa/qa_runner.py` (Playwright suite) | `python deck/qa/qa_runner.py` |
+| **Prior Work Baseline** | Pinned commit `ec616f4` (documented in repo history) | `git log ec616f4` |
+
+---
+
+### 6. Installation & Execution
+
+#### Prerequisites
+* Python 3.11 or newer
+* Node-free environment (the reader runs as a static zero-dependency web page)
 
 ```bash
+# 1. Clone repository and setup environment
+git clone https://github.com/drkhaledalrefay-coder/fahras-manahij-al-tafsir.git
+cd fahras-manahij-al-tafsir
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+# Linux / macOS
+# source .venv/bin/activate
+
+# 2. Install pinned dependencies
+pip install -r requirements.txt
+
+# 3. Execute test gates
+python src/v2_selftest.py
+python -m unittest discover tests -v
+```
+
+#### Launching the Static Reader
+```bash
+# Build the data index
+python src/build_fahras.py
+
+# Serve locally
+python -m http.server 8791 --directory web
+```
+Open your browser at `http://127.0.0.1:8791/fahras.html`.
+
+---
+
+### 7. AI Disclosure & Scholarly Bounds
+
+* **No models were trained:** All classifications utilize foundation models prompting against strict JSON schemas emitting only span ID selections.
+* **Models Utilized in Repository Data:** DeepSeek v4.1 flash (`moves/deepseek/`), MiMo v2.6 flash (`data/multi/al_tabari/moves/mimo/`), Codex `gpt-6-sol` (`data/v2/moves/codex/`), and Grok (`data/tags/grok/`).
+* **Scholarly Authority:** This tool does not generate tafsir, provide rulings, or arbitrate religious debates. Abu Ja'far al-Tabari (d. 310 AH) is the primary baseline for early exegesis; Ibn Kathir, al-Baghawi, and al-Saadi demonstrate the cross-era generalizability of the tagging taxonomy.
+
+---
+
+### 8. Sources and Licences
+
+* **Code:** MIT License — see [`LICENSE`](LICENSE).
+* **Tafsir Source Texts & Derived Data:** CC BY 4.0 with mandatory attribution to **Tafsir Center for Quranic Studies (مركز تفسير للدراسات القرآنية)** (`tafsircenter/tafsir-mcp-data`). Non-commercial research distribution.
+* **Database Note:** The primary database `quran.db` (~234 MB) is not tracked in git; it is fetched deterministically and verified via `data/raw/manifest.json`.
+
+---
+
+## العربية
+
+### ١. الفكرة الأساسية
+
+كتب التفسير نصوص متصلة زاخرة بالحديث، والأثر، والاستشهاد اللغوي، والترجيح الفقهي، والإسرائيليات. يقوم «فهرس مناهج التفسير» بتفكيك هذا النص إلى وحدات صغيرة محددة، موسومة بمحورين:
+1. **مصدر الدليل:** قرآن بقرآن، سنة، صحابة، تابعون، لغة، إعراب، رأي المفسر واجتهاده.
+2. **نوع المحتوى:** أسباب نزول، فقه، بلاغة، شواهد شعرية، إسرائيليات، فضائل، تخريج، بيان معنى.
+
+> **الضابط الحاكم:** الذكاء الاصطناعي **يرتب ولا يكتب**. لا يولد النموذج أي نص حر، بل يقتصر على إرجاع معرفات الأجزاء (Span IDs) ورموز التصنيف المغلقة، بينما يتولى كود حتمي إعادة بناء النص حرفاً بحرف من النسخة المثبتة ببصمة إلكترونية.
+
+---
+
+### ٢. نقطتا تحكم لضمان سلامة النص
+
+| نقطة التحكم | آلية العمل | موضع التحقق |
+|---|---|---|
+| **(أ) قبول المصدر** | يُنزَّل النص آلياً وتُثبت بصمته الإلكترونية (SHA-256). يُفصل كلام المؤلف عن حواشي المحقق عبر خوارزمية حتمية، ويُطابق مع نسخة ثانية مستقلة كاشفاً فروق الرقمنة. | `data/raw/manifest.json`<br>`src/reconcile.py`<br>`tests/test_textcore.py` |
+| **(ب) ما بعد التصنيف** | يمتنع النموذج عن توليد النص؛ ويُعاد بناء كل وحدة من النص المصدر نفسه وتُطابق حرفاً بحرف قبل العرض على لوحة المراجعة المزدوجة. | `src/v2_verify.py`<br>`src/v2_selftest.py`<br>`tests/test_phase1b_and_rejoin.py` |
+
+---
+
+### ٣. أعداد التوجيه في التشغيل الثاني (Run 2 — أعداد توجيه وليست نسبة دقة)
+
+الأعداد التالية تمثل قرارات التوجيه التي اتخذها الفاحص الحتمي ورئيس اللجنة على ٣ آيات تجريبية، وهي **أعداد توجيه وليست نسب دقة نهائية**:
+
+| التفسير | المصنّف | إجمالي الحركات | مرشّح آلي (درجة ≥ ٨٥) | مُحال لطابور المتخصص |
+|---|---|---:|---:|---:|
+| **الطبري (ت ٣١٠هـ)** | DeepSeek (+ MiMo لآية 2:255) | ٣١ | ١٨ | ١٣ |
+| **ابن كثير** | Codex | ٤٢ | ٢٣ | ١٩ |
+| **ابن كثير** | DeepSeek | ٤٤ | ٢٦ | ١٨ |
+| **البغوي** | DeepSeek | ٣٩ | ٢٩ | ١٠ |
+| **السعدي** | DeepSeek | ٢٤ | ١٥ | ٩ |
+
+---
+
+### ٤. خريطة التحقق من الصحة (Where to Verify)
+
+| الدعوى أو المكون | موضع الدليل في الكود | أمر التحقق الفوري |
+|---|---|---|
+| **سلامة النص (مطابقة حرفية ١٠٠٪)** | `src/v2_selftest.py` و`tests/test_textcore.py` | `python src/v2_selftest.py` |
+| **رئيس اللجنة الحتمي (عتبة ٨٥)** | `src/committee_chair.py` و`tests/test_committee_chair.py` | `python -m unittest tests.test_committee_chair -v` |
+| **عقد التحقق وبصمة الحزمة** | `src/grounding_verifier.py` و`tests/test_grounding_verifier.py` | `python -m unittest tests.test_grounding_verifier -v` |
+| **محول واجهة التصنيف** | `src/classify_api.py` و`tests/test_classify_api.py` | `python -m unittest tests.test_classify_api -v` |
+| **مطابقة مخطط تصدير المعتمد** | `schema/export.schema.json` و`tests/test_export_approved.py` | `python -m unittest tests.test_export_approved -v` |
+| **فحص الواجهة بمتصفح آلي** | `deck/qa/qa_runner.py` (Playwright) | `python deck/qa/qa_runner.py` |
+
+---
+
+### ٥. التشغيل وإعادة البناء
+
+```bash
+# تهيئة البيئة وتثبيت الاعتماديات
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Linux / macOS
+pip install -r requirements.txt
+
+# تشغيل بوابات الاختبار الحتمية
+python src/v2_selftest.py
+python -m unittest discover tests -v
+
+# بناء فهرس البيانات وتشغيل الخادم المحلي
 python src/build_fahras.py
 python -m http.server 8791 --directory web
 ```
+افتح المتصفح على: `http://127.0.0.1:8791/fahras.html`.
 
-ثم افتح http://127.0.0.1:8791/fahras.html
+---
 
-بوابات الجودة، والخادم أعلاه ما زال يعمل على المنفذ 8791:
+### ٦. الإفصاح عن أدوات الذكاء الاصطناعي والمصادر
 
-```bash
-python src/v2_selftest.py
-python -m unittest tests.test_export_approved -v
-python -m unittest tests.test_classify_api
-python -m playwright install chromium
-python deck/qa/qa_runner.py
-```
-
-`qa_runner.py` يفتح http://localhost:8791/fahras.html (Playwright). يستخدم Google Chrome إن وُجد وإلا Chromium المثبَّت أعلاه (أو المسار في `QA_CHROMIUM_EXECUTABLE`)، ويخرج برمز ١ عند أي فحص فاشل. بقية سكربتات `deck/qa/` تتصل بالمنفذ نفسه.
-
-ملف قاعدة البيانات الأصلي `quran.db` (~٢٣٤ م.ب) **غير مرفوع**؛ يُنزَّل من مجموعة بيانات مركز تفسير المفتوحة ويُمرَّر إلى سكربت الاستخراج بوسيلة `--db` (لا مسارات شخصية داخل الكود)، وبصمته في `data/raw/manifest.json`.
-نص المصدر الثاني (quran.com) **غير مرفوع** أيضاً إلى حين التحقق من شروط استخدامه؛ `fetch.py` ينزّله محلياً (بلا وسائط/أعلام — no flags؛ يتطلب اتصالاً بالشبكة؛ ينزّل نحو ٢٣٤ م.ب لـ `quran.db` + نصوص quran.com).
-
-## تشغيل الذكاء الاصطناعي
-
-المفتاح في متغيّر بيئة جلسة الطرفية فقط — لا ملف ولا مستودع: `LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL`.
-
-التسلسل: `--dry-run` ← `--api` ← ثم `python src/build_fahras.py` وإعادة تحميل الصفحة. بلا مفتاح: `--manual-out` ثم `--manual-in`. للعرض من داخل الموقع (المفتاح في بيئة العملية فقط): `python src/demo_server.py` ثم زر «شغّل الذكاء على هذه الآية». التفصيل والأوامر: [`docs/AI_RUN.md`](docs/AI_RUN.md). سكربت العرض الحي: [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md).
-
-## المصادر والتراخيص
-
-- الكود: **MIT** — انظر [`LICENSE`](LICENSE).
-- نص التفسير والبيانات المشتقة منه: **CC BY 4.0** مع **النسب** إلى مركز تفسير للدراسات القرآنية — انظر [`ATTRIBUTION.md`](ATTRIBUTION.md).
-- **غير تجاري:** هذا مستودع بحثي/تعليمي **غير تجاري**، يُنشر مع النسبة الكاملة إلى المصدر؛ وإعادة التوزيع التجاري تطلب إذناً مسبقاً كما يشترط ملف `DATA_SOURCES.md` لدى المركز — التفصيل في [`ATTRIBUTION.md`](ATTRIBUTION.md).
-
-وثائق أخرى: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md) (قائمة التحقق قبل التسليم) · [`docs/AUDIT_2026-10-02.md`](docs/AUDIT_2026-10-02.md) (تدقيق هندسي) · [`docs/RUN.md`](docs/RUN.md) (التشغيل وإعادة البناء) · [`docs/AI_RUN.md`](docs/AI_RUN.md) (تشغيل التصنيف) · [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) (سكربت العرض) · [`docs/AI_DISCLOSURE.md`](docs/AI_DISCLOSURE.md) (الإفصاح عن أدوات الذكاء الاصطناعي) · [`docs/DATA_FORMAT.md`](docs/DATA_FORMAT.md) (صيغة بيانات الوسوم) · [`ATTRIBUTION.md`](ATTRIBUTION.md) (المصادر والتراخيص) · [`CONTRIBUTING.md`](CONTRIBUTING.md) (المساهمة).
-
-## الإفصاح عن أدوات الذكاء الاصطناعي
-
-**لم ندرّب نموذجاً.** التفصيل في **[`docs/AI_DISCLOSURE.md`](docs/AI_DISCLOSURE.md)**. لم يكتب أي نموذج نص التفسير ولم يعدّل حرفاً منه، ولا أصدر شرحاً مستقلاً للآيات. التعليمات محفوظة في `method/agent-briefs/`.
-
-نماذج أنتجت مخرجات محفوظة في المستودع (وسوم بمعرّفات الأجزاء فقط):
-
-| النموذج | أين المخرج |
-|---|---|
-| DeepSeek v4.1 flash | `moves/deepseek/` لابن كثير والطبري والبغوي والسعدي |
-| MiMo v2.6 flash | `data/multi/al_tabari/moves/mimo/` (الطبري، 2:255) |
-| Codex `gpt-6-sol` | مصنّف ابن كثير في `data/v2/moves/codex/` (ووسوم التجربة الأولى في `data/tags/codex/`) |
-| Grok | وسوم التجربة الأولى في `data/tags/grok/` |
-
-أدوات التطوير: Codex، Cursor/Grok، Grok، Gemini/AGY، Claude.
-
-## نسخة البداية
-
-هذا المستودع يوثّق **العمل السابق قبل ٤ أكتوبر ٢٠٢٦** كما تشترط المسابقة.
+* **لم يُدرَّب أي نموذج:** استُخدمت النماذج كمصنفات مقيدة عبر واجهات برمجة التطبيقات باستدعاءات مقيدة بصيغة JSON.
+* **المرجعية العلمية:** لا تُنشئ الأداة شروحاً مستقلة ولا تستنبط أحكاماً؛ يتقدم العمل الإمام أبو جعفر الطبري (ت ٣١٠هـ) كأصل أثري مؤسس، وتُعرض تفاسير ابن كثير والبغوي والسعدي كشواهد على تعميم منهجية الفهرسة.
+* **التراخيص:** الكود متاح تحت رخصة **MIT**. نصوص التفسير والبيانات المشتقة مرخصة برخصة **CC BY 4.0** مع وجوب النسبة لـ **مركز تفسير للدراسات القرآنية**.
